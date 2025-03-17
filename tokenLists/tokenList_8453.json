@@ -222,5 +222,14 @@
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/38039/standard/usdz-image-200x200.png",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xdCf5130274753c8050aB061B1a1DCbf583f5bFd0",
+    "chainId": 8453,
+    "name": "ViciCoin",
+    "symbol": "vcnt",
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
+    "meta": {}
   }
 ]

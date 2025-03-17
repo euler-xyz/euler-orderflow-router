@@ -1055,6 +1055,15 @@
     }
   },
   {
+    "addressInfo": "0x1CE7D9942ff78c328A4181b9F3826fEE6D845A97",
+    "chainId": 1,
+    "name": "YieldFi yToken",
+    "symbol": "YUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -1114,6 +1123,15 @@
     "symbol": "CUSDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x3bE775B699fee916E7De117994358fF8F48e4569",
+    "chainId": 1,
+    "name": "ViciCoin",
+    "symbol": "VCNT",
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
     "meta": {}
   },
   {
