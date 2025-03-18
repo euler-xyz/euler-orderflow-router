@@ -1,5 +1,6 @@
 import type { IFetchService, IProviderService } from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
+import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
@@ -26,6 +27,7 @@ const customSources = {
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
+  kyberswap: new CustomKyberswapQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
