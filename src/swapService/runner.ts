@@ -67,11 +67,11 @@ export async function runPipeline(
     amountOutMin: finalResult.quotes[0].amountOutMin,
     route: finalResult.quotes[0].route,
   })
-  // console.log(
-  //   finalResult.quotes
-  //     .map((q) => q.route.map((r) => r.providerName).join(" "))
-  //     .join(", "),
-  // )
+  console.log(
+    finalResult.quotes
+      .map((q) => q.route.map((r) => r.providerName).join(" "))
+      .join(", "),
+  )
 
   // console.log('finalResult.quotes: ', JSON.stringify(finalResult.quotes, null, 2));
   return finalResult.quotes

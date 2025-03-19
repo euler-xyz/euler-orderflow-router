@@ -71,7 +71,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
           "li-fi",
           "open-ocean",
           "magpie",
-          "0x",
         ],
       },
     },
@@ -86,13 +85,11 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       sourcesFilter: {
         includeSources: [
           "kyberswap",
-          // "paraswap",
           "odos",
           "1inch",
           "li-fi",
           "open-ocean",
           "magpie",
-          "0x",
           "enso",
           "pendle",
         ],
@@ -125,13 +122,11 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       sourcesFilter: {
         includeSources: [
           "kyberswap",
-          // "paraswap",
           "odos",
           "1inch",
           "li-fi",
           "open-ocean",
           "magpie",
-          "0x",
           "enso",
           "pendle",
         ],

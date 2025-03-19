@@ -90,6 +90,7 @@ export class CustomLiFiQuoteSource extends AlwaysValidConfigAndContextSource<
       fromAddress: takeFrom,
       toAddress: recipient ?? takeFrom,
       slippage: String(slippagePercentage / 100), // 1 = 100%
+      denyExchanges: "kyberswap,1inch",
       ...(config.referrer
         ? {
             integrator: config.referrer.name,

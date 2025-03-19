@@ -154,9 +154,27 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
         await response.text(),
       )
     }
+
     const {
-      data: { outAmount, minOutAmount, to, value, data /* estimatedGas */ },
+      data: {
+        outAmount,
+        minOutAmount,
+        to,
+        value,
+        data,
+        rfqDeadline /* estimatedGas */,
+      },
     } = await response.json()
+
+    if (Number(rfqDeadline) > 0) {
+      failed(
+        OPEN_OCEAN_METADATA,
+        chainId,
+        sellToken,
+        buyToken,
+        "RFQ not allowed",
+      )
+    }
 
     return {
       sellAmount: order.sellAmount,
