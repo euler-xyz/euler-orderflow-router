@@ -1,4 +1,11 @@
-import type { IFetchService, IProviderService } from "@balmy/sdk"
+import { LOG_SLOW_QUERY_TIMEOUT_SECONDS } from "@/swapService/config/constants"
+import type {
+  IFetchService,
+  IProviderService,
+  SourceId,
+  SourceListQuoteRequest,
+  SourceListQuoteResponse,
+} from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
@@ -45,5 +52,40 @@ export class CustomSourceList extends LocalSourceList {
       ...customSources,
     }
     delete mutableThis.sources.balmy
+
+    // wrap getQuote in timer
+    const getQuoteSuper = mutableThis.getQuote.bind(this)
+
+    mutableThis.getQuote = async (
+      request: SourceListQuoteRequest,
+      sourceId: SourceId,
+    ): Promise<SourceListQuoteResponse> => {
+      const startTime = process.hrtime()
+      const result = await getQuoteSuper(request, sourceId)
+      const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
+      if (elapsedSeconds > LOG_SLOW_QUERY_TIMEOUT_SECONDS) {
+        const { chainId, sellToken, buyToken, order } = request
+        const requestGist = {
+          chainId,
+          sellToken,
+          buyToken,
+          order,
+        }
+        console.log(
+          `SLOW QUERY: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      }
+      return result
+    }
   }
+}
+
+function parseHrtimeToSeconds(hrtime: [number, number]) {
+  return Number((hrtime[0] + hrtime[1] / 1e9).toFixed(3))
+}
+
+function stringify(obj: object) {
+  return JSON.stringify(obj, (_, v) =>
+    typeof v === "bigint" ? v.toString() : v,
+  )
 }
