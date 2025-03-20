@@ -63,18 +63,43 @@ export class CustomSourceList extends LocalSourceList {
       const startTime = process.hrtime()
       const result = await getQuoteSuper(request, sourceId)
       const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
-      if (elapsedSeconds > LOG_SLOW_QUERY_TIMEOUT_SECONDS) {
-        const { chainId, sellToken, buyToken, order } = request
-        const requestGist = {
-          chainId,
-          sellToken,
-          buyToken,
-          order,
-        }
+      // if (elapsedSeconds > LOG_SLOW_QUERY_TIMEOUT_SECONDS) {
+      //   const { chainId, sellToken, buyToken, order } = request
+      //   const requestGist = {
+      //     chainId,
+      //     sellToken,
+      //     buyToken,
+      //     order,
+      //   }
+      //   console.log(
+      //     `SLOW QUERY: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+      //   )
+      // }
+      const { chainId, sellToken, buyToken, order } = request
+      const requestGist = {
+        chainId,
+        sellToken,
+        buyToken,
+        order,
+      }
+      if (elapsedSeconds > 10) {
         console.log(
-          `SLOW QUERY: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+          `SLOW QUERY [10]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 5) {
+        console.log(
+          `SLOW QUERY [5]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 3) {
+        console.log(
+          `SLOW QUERY [3]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 1) {
+        console.log(
+          `SLOW QUERY [1]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
         )
       }
+
       return result
     }
   }
