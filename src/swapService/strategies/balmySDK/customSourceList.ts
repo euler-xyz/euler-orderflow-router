@@ -1,4 +1,5 @@
 import { LOG_SLOW_QUERY_TIMEOUT_SECONDS } from "@/swapService/config/constants"
+import { parseHrtimeToSeconds } from "@/swapService/utils"
 import type {
   IFetchService,
   IProviderService,
@@ -7,6 +8,7 @@ import type {
   SourceListQuoteResponse,
 } from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
+import { stringify } from "viem"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
@@ -106,14 +108,4 @@ export class CustomSourceList extends LocalSourceList {
       return result
     }
   }
-}
-
-function parseHrtimeToSeconds(hrtime: [number, number]) {
-  return Number((hrtime[0] + hrtime[1] / 1e9).toFixed(3))
-}
-
-function stringify(obj: object) {
-  return JSON.stringify(obj, (_, v) =>
-    typeof v === "bigint" ? v.toString() : v,
-  )
 }

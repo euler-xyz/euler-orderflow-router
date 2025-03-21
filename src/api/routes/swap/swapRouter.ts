@@ -10,7 +10,12 @@ import {
 } from "@/common/utils/httpHandlers"
 import { findSwaps } from "@/swapService/runner"
 import type { SwapParams } from "@/swapService/types"
-import { ApiError, findToken, getSwapper } from "@/swapService/utils"
+import {
+  ApiError,
+  findToken,
+  getSwapper,
+  parseHrtimeToSeconds,
+} from "@/swapService/utils"
 import { StatusCodes } from "http-status-codes"
 import { InvalidAddressError } from "viem"
 import { z } from "zod"
@@ -66,7 +71,28 @@ swapRouter.get(
   validateRequest(getSwapSchema),
   async (req: Request, res: Response) => {
     try {
-      const swaps = await findSwaps(parseRequest(req))
+      const startTime = process.hrtime()
+      const swapParams = parseRequest(req)
+      const swaps = await findSwaps(swapParams)
+      const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
+      console.log("ROUTE EXECUTING")
+      if (elapsedSeconds > 10) {
+        console.log(
+          `SLOW ROUTE [10]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
+        )
+      } else if (elapsedSeconds > 5) {
+        console.log(
+          `SLOW ROUTE [5]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
+        )
+      } else if (elapsedSeconds > 3) {
+        console.log(
+          `SLOW ROUTE [3]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
+        )
+      } else if (elapsedSeconds > 1) {
+        console.log(
+          `SLOW ROUTE [1]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
+        )
+      }
       return handleServiceResponse(
         ServiceResponse.success<SwapResponse>(swaps),
         res,

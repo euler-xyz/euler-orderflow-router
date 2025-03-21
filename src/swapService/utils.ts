@@ -583,3 +583,7 @@ export function promiseWithTimeout(fn: any, timeoutSeconds: number) {
     ),
   ])
 }
+
+export function parseHrtimeToSeconds(hrtime: [number, number]) {
+  return Number((hrtime[0] + hrtime[1] / 1e9).toFixed(3))
+}
