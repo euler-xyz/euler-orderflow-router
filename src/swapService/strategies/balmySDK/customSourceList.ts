@@ -82,6 +82,9 @@ export class CustomSourceList extends LocalSourceList {
         buyToken,
         order,
       }
+      console.log(
+        `QUERY EXECUTING: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+      )
       if (elapsedSeconds > 10) {
         console.log(
           `SLOW QUERY [10]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
