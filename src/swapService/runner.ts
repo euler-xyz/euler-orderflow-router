@@ -1,4 +1,3 @@
-import { SwapResponse } from "@/api/routes/swap/swapModel"
 import { StatusCodes } from "http-status-codes"
 import { isHex } from "viem"
 import { getRoutingConfig } from "./config"
@@ -74,6 +73,7 @@ export async function runPipeline(
   // )
 
   // console.log('finalResult.quotes: ', JSON.stringify(finalResult.quotes, null, 2));
+
   return finalResult.quotes
 }
 
@@ -95,10 +95,3 @@ export async function findSwaps(swapParams: SwapParams) {
 
   return quotes
 }
-
-// TODO timeouts on balmy
-// TODO review and add sources
-// TODO tokenlist, interfaces
-// TODO price impact
-// TODO logging - detect when fallback kicks
-// In wreapper strategy return dust to the original wrapper asset - deposit for EOA owner

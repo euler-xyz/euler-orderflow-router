@@ -1055,6 +1055,38 @@
     }
   },
   {
+    "addressInfo": "0x1CE7D9942ff78c328A4181b9F3826fEE6D845A97",
+    "chainId": 1,
+    "name": "YieldFi yToken",
+    "symbol": "YUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
+    "chainId": 1,
+    "name": "Treehouse ETH",
+    "symbol": "TETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_logo_2_%281%29.png?1726079209",
+    "meta": {
+      "provider": "TREEHOUSE"
+    }
+  },
+  {
+    "addressInfo": "0x8E0789d39db454DBE9f4a77aCEF6dc7c69f6D552",
+    "chainId": 1,
+    "name": "Inception Restaked stETH Symbiotic",
+    "symbol": "INWSTETHS",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52515/large/inwstETHs.png?1733499299",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
+    }
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -1265,6 +1297,24 @@
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
+  },
+  {
+    "addressInfo": "0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F",
+    "chainId": 1,
+    "name": "Ethereal Pre-deposit Vault",
+    "symbol": "eUSDe",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x3bE775B699fee916E7De117994358fF8F48e4569",
+    "chainId": 1,
+    "name": "ViciCoin",
+    "symbol": "VCNT",
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
+    "meta": {}
   },
   {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",

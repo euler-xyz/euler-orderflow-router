@@ -1,5 +1,15 @@
-import type { IFetchService, IProviderService } from "@balmy/sdk"
+import { LOG_SLOW_QUERY_TIMEOUT_SECONDS } from "@/swapService/config/constants"
+import { parseHrtimeToSeconds } from "@/swapService/utils"
+import type {
+  IFetchService,
+  IProviderService,
+  SourceId,
+  SourceListQuoteRequest,
+  SourceListQuoteResponse,
+} from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
+import { stringify } from "viem"
+import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
@@ -26,6 +36,7 @@ const customSources = {
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
+  kyberswap: new CustomKyberswapQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
@@ -43,5 +54,58 @@ export class CustomSourceList extends LocalSourceList {
       ...customSources,
     }
     delete mutableThis.sources.balmy
+
+    // wrap getQuote in timer
+    const getQuoteSuper = mutableThis.getQuote.bind(this)
+
+    mutableThis.getQuote = async (
+      request: SourceListQuoteRequest,
+      sourceId: SourceId,
+    ): Promise<SourceListQuoteResponse> => {
+      const startTime = process.hrtime()
+      const result = await getQuoteSuper(request, sourceId)
+      const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
+      // if (elapsedSeconds > LOG_SLOW_QUERY_TIMEOUT_SECONDS) {
+      //   const { chainId, sellToken, buyToken, order } = request
+      //   const requestGist = {
+      //     chainId,
+      //     sellToken,
+      //     buyToken,
+      //     order,
+      //   }
+      //   console.log(
+      //     `SLOW QUERY: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+      //   )
+      // }
+      const { chainId, sellToken, buyToken, order } = request
+      const requestGist = {
+        chainId,
+        sellToken,
+        buyToken,
+        order,
+      }
+      console.log(
+        `QUERY EXECUTING: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+      )
+      if (elapsedSeconds > 10) {
+        console.log(
+          `SLOW QUERY [10]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 5) {
+        console.log(
+          `SLOW QUERY [5]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 3) {
+        console.log(
+          `SLOW QUERY [3]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      } else if (elapsedSeconds > 1) {
+        console.log(
+          `SLOW QUERY [1]: ${sourceId} ${elapsedSeconds}s ${stringify(requestGist)}`,
+        )
+      }
+
+      return result
+    }
   }
 }
