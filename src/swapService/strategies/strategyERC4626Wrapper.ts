@@ -91,6 +91,13 @@ const defaultConfig: {
       asset: "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
       assetDustEVault: "0x98238Ee86f2c571AD06B0913bef21793dA745F57",
     },
+    {
+      chainId: 43114,
+      protocol: "savUSD",
+      vault: "0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",
+      asset: "0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346",
+      assetDustEVault: "0xa9C92715dfED67a1Eb841c02059D9D0f1d508648",
+    },
   ],
 }
 
