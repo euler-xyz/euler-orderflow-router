@@ -155,7 +155,7 @@
     "decimals": 18,
     "name": "StakeStone Ether",
     "symbol": "STONE",
-    "logoURI": "/tokens/60808/stone.png",
+    "logoURI": "/tokens/60808/stone.svg",
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
@@ -246,5 +246,23 @@
     "meta": {
       "provider": "VEDA"
     }
+  },
+  {
+    "addressInfo": "0xDe1763aFA5eB658CfFFfD16835AfeB47e7aC0B8D",
+    "chainId": 1,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9f395F610Af9ffC98693A0769190446180dc7192",
+    "chainId": 1,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
   }
 ]

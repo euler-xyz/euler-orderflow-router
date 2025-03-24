@@ -1,5 +1,14 @@
 [
   {
+    "addressInfo": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+    "chainId": 80094,
+    "name": "Reservoir Stablecoin",
+    "symbol": "rUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/rusd.webp",
+    "meta": {}
+  },
+  {
     "chainId": 80094,
     "addressInfo": "0x6969696969696969696969696969696969696969",
     "symbol": "WBERA",
@@ -156,21 +165,71 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
-    "chainId": 80094,
-    "name": "Reservoir Stablecoin",
-    "symbol": "rUSD",
-    "decimals": 18,
-    "logoURI": "/tokens/80094/rusd.webp",
-    "meta": {}
-  },
-  {
     "addressInfo": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
     "chainId": 80094,
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39969/large/LBTC_Logo.png?1724959872",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x69f1E971257419B1E9C405A553f252c64A29A30a",
+    "chainId": 80094,
+    "name": "Origami iBGT Auto-Compounder",
+    "symbol": "oriBGT",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/oriBGT.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "9b8da01e-a2d6-427b-95ef-96df8de8d32f"
+    }
+  },
+  {
+    "addressInfo": "0x6fc6545d5cDE268D5C7f1e476D444F39c995120d",
+    "chainId": 80094,
+    "name": "Berachain Staked ETH",
+    "symbol": "beraETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54260/large/beraETH.png?1738952010",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "chainId": 80094,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "chainId": 80094,
+    "name": "Staked USDe",
+    "symbol": "sUSDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "meta": {
+      "provider": "SUSDE"
+    }
+  },
+  {
+    "addressInfo": "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
+    "chainId": 80094,
+    "name": "Nectar",
+    "symbol": "nect",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x5475611Dffb8ef4d697Ae39df9395513b6E947d7",
+    "chainId": 80094,
+    "name": "Savings rUSD",
+    "symbol": "srUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/srusd.png",
     "meta": {}
   }
 ]

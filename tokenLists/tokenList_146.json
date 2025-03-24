@@ -201,5 +201,29 @@
       "isPendlePT": true,
       "pendleMarket": "0xd14117baf6ec5d12be68cd06e763a4b82c9b6d1d"
     }
+  },
+  {
+    "addressInfo": "0x46eb02b9F47634c4fab3110CC7ADc1C6311DfAC1",
+    "chainId": 146,
+    "name": "PT Wrapped OS 29MAY2025",
+    "symbol": "PT-wOS-29MAY2025",
+    "decimals": 18,
+    "logoURI": "/tokens/146/os.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x4e82347bc41cfd5d62cef483c7f0a739a8158963"
+    }
+  },
+  {
+    "addressInfo": "0x420df605D062F8611EFb3F203BF258159b8FfFdE",
+    "chainId": 146,
+    "name": "PT Beets Staked Sonic 29MAY2025",
+    "symbol": "PT-stS-29MAY2025",
+    "decimals": 18,
+    "logoURI": "/tokens/146/sts.webp",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x3aef1d372d0a7a7e482f465bc14a42d78f920392"
+    }
   }
 ]
