@@ -5,6 +5,7 @@ import { pino } from "pino"
 
 import { openAPIRouter } from "@/api-docs/openAPIRouter"
 import { healthCheckRouter } from "@/api/routes/healthCheck/healthCheckRouter"
+import { logRouter } from "@/api/routes/log/logRouter"
 import { swapRouter } from "@/api/routes/swap/swapRouter"
 import errorHandler from "@/common/middleware/errorHandler"
 import rateLimiter from "@/common/middleware/rateLimiter"
@@ -27,6 +28,7 @@ app.use(rateLimiter)
 app.use(requestLogger)
 
 // Routes
+app.use("/log", logRouter)
 app.use("/health-check", healthCheckRouter)
 app.use(swapRouter)
 
