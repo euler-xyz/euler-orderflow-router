@@ -1,0 +1,138 @@
+[
+  {
+    "addressInfo": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+    "chainId": 43114,
+    "name": "AUSD",
+    "symbol": "AUSD",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/39284/standard/Circle_Agora_White_on_Olive_1080px.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+    "chainId": 43114,
+    "name": "Wrapped AVAX",
+    "symbol": "WAVAX",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/wavax.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+    "chainId": 43114,
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+    "chainId": 43114,
+    "name": "USDT",
+    "symbol": "USDT",
+    "decimals": 6,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+    "chainId": 43114,
+    "name": "JoeToken",
+    "symbol": "JOE",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/joe.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
+    "chainId": 43114,
+    "name": "Staked AVAX",
+    "symbol": "sAVAX",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/savax.webp",
+    "meta": {
+      "provider": "SAVAX"
+    }
+  },
+  {
+    "addressInfo": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+    "chainId": 43114,
+    "name": "Wrapped Ether",
+    "symbol": "WETH.e",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x152b9d0FdC40C096757F570A51E494bd4b943E50",
+    "chainId": 43114,
+    "name": "Avalanche Bridged BTC",
+    "symbol": "BTC.b",
+    "decimals": 8,
+    "logoURI": "/tokens/43114/btc.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x68088C91446c7bEa49ea7Dbd3B96Ce62B272DC96",
+    "chainId": 43114,
+    "name": "Staked deUSD",
+    "symbol": "sdeUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/sdeusd.webp",
+    "meta": {
+      "provider": "SDEUSD"
+    }
+  },
+  {
+    "addressInfo": "0xaEb1FA0853c7C98EAb10fcF0EA669aE3d07FBB10",
+    "chainId": 43114,
+    "name": "sBUIDL",
+    "symbol": "sBUIDL",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/sbuidl.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",
+    "chainId": 43114,
+    "name": "savUSD",
+    "symbol": "savUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/savusd.webp",
+    "meta": {
+      "provider": "SAVUSD"
+    }
+  },
+  {
+    "addressInfo": "0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346",
+    "chainId": 43114,
+    "name": "avUSD",
+    "symbol": "avUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/avusd.webp",
+    "meta": {
+      "provider": "SAVUSD"
+    }
+  },
+  {
+    "addressInfo": "0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3",
+    "chainId": 43114,
+    "name": "ggAVAX",
+    "symbol": "ggAVAX",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/ggavax.webp",
+    "meta": {
+      "provider": "GGAVAX"
+    }
+  },
+  {
+    "addressInfo": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
+    "chainId": 43114,
+    "decimals": 18,
+    "name": "SolvBTC Babylon",
+    "symbol": "SolvBTC.BBN",
+    "logoURI": "/tokens/43114/solvBTCBBN.webp",
+    "meta": {}
+  }
+]
