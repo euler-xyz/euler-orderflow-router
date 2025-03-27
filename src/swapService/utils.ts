@@ -99,6 +99,14 @@ export function matchParams(
     )
       return false
   }
+  if (match.trades) {
+    return match.trades.some((trade) => {
+      return (
+        isAddressEqual(trade.tokenIn, swapParams.tokenIn.addressInfo) &&
+        isAddressEqual(trade.tokenOut, swapParams.tokenOut.addressInfo)
+      )
+    })
+  }
 
   return true
 }
@@ -505,6 +513,12 @@ export function encodeTargetDebtAsExactInMulticall(
     }),
   )
 
+  multicallItems.push(...encodeRepayAndSweep(swapParams))
+  return multicallItems
+}
+
+export function encodeRepayAndSweep(swapParams: SwapParams) {
+  const multicallItems = []
   if (!swapParams.noRepayEncoding) {
     // FIXME - workaround for composite repay ERC4626 / over-swap
     const repayAmount =

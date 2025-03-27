@@ -74,6 +74,10 @@ export interface StrategyMatchConfig {
   tokensInOrOut?: Address[]
   excludeTokensInOrOut?: Address[]
   repayVaults?: Address[]
+  trades?: {
+    tokenIn: Address
+    tokenOut: Address
+  }[]
 }
 
 export interface RoutingItem {

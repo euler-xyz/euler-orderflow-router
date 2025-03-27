@@ -27,7 +27,6 @@ import { BINARY_SEARCH_TIMEOUT_SECONDS } from "../config/constants"
 import { type SwapApiResponseMulticallItem, SwapperMode } from "../interface"
 import type { StrategyResult, SwapParams, SwapQuote } from "../types"
 import {
-  SWAPPER_HANDLER_GENERIC,
   adjustForInterest,
   binarySearchQuote,
   buildApiResponseExactInputFromQuote,
@@ -35,9 +34,6 @@ import {
   buildApiResponseVerifyDebtMax,
   calculateEstimatedAmountFrom,
   encodeApproveMulticallItem,
-  encodeDepositMulticallItem,
-  encodeRepayMulticallItem,
-  encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   isExactInRepay,
   matchParams,

@@ -1,5 +1,6 @@
 import { StrategyBalmySDK } from "./strategyBalmySDK"
 import { StrategyCombinedUniswap } from "./strategyCombinedUniswap"
+import { StrategyConnect2 } from "./strategyConnect2"
 import { StrategyCurveLPNG } from "./strategyCurveLPNG"
 import { StrategyERC4626Wrapper } from "./strategyERC4626Wrapper"
 import { StrategyIdleCDOTranche } from "./strategyIdleCDOTranche"
@@ -16,6 +17,7 @@ export {
   StrategyIdleCDOTranche,
   StrategyCurveLPNG,
   StrategyRedirectDepositWrapper,
+  StrategyConnect2,
 }
 
 export const strategies = {
@@ -27,4 +29,5 @@ export const strategies = {
   [StrategyIdleCDOTranche.name()]: StrategyIdleCDOTranche,
   [StrategyCurveLPNG.name()]: StrategyCurveLPNG,
   [StrategyRedirectDepositWrapper.name()]: StrategyRedirectDepositWrapper,
+  [StrategyConnect2.name()]: StrategyConnect2,
 }
