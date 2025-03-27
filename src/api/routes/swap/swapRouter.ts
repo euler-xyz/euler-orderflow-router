@@ -8,6 +8,7 @@ import {
   handleServiceResponse,
   validateRequest,
 } from "@/common/utils/httpHandlers"
+import { log, logProd, logRouteTime } from "@/common/utils/logs"
 import { findSwaps } from "@/swapService/runner"
 import type { SwapParams } from "@/swapService/types"
 import {
@@ -53,7 +54,14 @@ swapRouter.get(
   validateRequest(getSwapSchema),
   async (req: Request, res: Response) => {
     try {
-      const swaps = await findSwaps(parseRequest(req))
+      const swapParams = parseRequest(req)
+
+      const startTime = process.hrtime()
+      const swaps = await findSwaps(swapParams)
+      const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
+
+      logRouteTime(swapParams, elapsedSeconds)
+
       return handleServiceResponse(
         ServiceResponse.success<SwapResponseSingle>(swaps[0]),
         res,
@@ -61,7 +69,7 @@ swapRouter.get(
     } catch (error) {
       return handleServiceResponse(createFailureResponse(req, error), res)
     } finally {
-      console.log("===== SWAP END =====")
+      log("===== SWAP END =====")
     }
   },
 )
@@ -71,28 +79,14 @@ swapRouter.get(
   validateRequest(getSwapSchema),
   async (req: Request, res: Response) => {
     try {
-      const startTime = process.hrtime()
       const swapParams = parseRequest(req)
+
+      const startTime = process.hrtime()
       const swaps = await findSwaps(swapParams)
       const elapsedSeconds = parseHrtimeToSeconds(process.hrtime(startTime))
-      console.log("ROUTE EXECUTING")
-      if (elapsedSeconds > 10) {
-        console.log(
-          `SLOW ROUTE [10]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
-        )
-      } else if (elapsedSeconds > 5) {
-        console.log(
-          `SLOW ROUTE [5]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
-        )
-      } else if (elapsedSeconds > 3) {
-        console.log(
-          `SLOW ROUTE [3]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
-        )
-      } else if (elapsedSeconds > 1) {
-        console.log(
-          `SLOW ROUTE [1]: ${swapParams.swapperMode} ${elapsedSeconds}s`,
-        )
-      }
+
+      logRouteTime(swapParams, elapsedSeconds)
+
       return handleServiceResponse(
         ServiceResponse.success<SwapResponse>(swaps),
         res,
@@ -100,20 +94,20 @@ swapRouter.get(
     } catch (error) {
       return handleServiceResponse(createFailureResponse(req, error), res)
     } finally {
-      console.log("===== SWAPS END =====")
+      log("===== SWAPS END =====")
     }
   },
 )
 
 function createFailureResponse(req: Request, error: any) {
-  console.log(
-    "error: ",
-    error.statusCode,
-    error.message,
-    error.errorMessage,
-    JSON.stringify(error.data),
-    req.url,
-  )
+  logProd({
+    name: "[ERROR]",
+    statusCode: error.statusCode,
+    message: error.message,
+    errorMessage: error.errorMessage,
+    data: error.data,
+    url: req.url,
+  })
   if (error instanceof ApiError) {
     return ServiceResponse.failure(error.message, error.statusCode, error.data)
   }

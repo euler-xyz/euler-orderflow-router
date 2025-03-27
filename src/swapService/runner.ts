@@ -1,3 +1,5 @@
+import { logDev } from "@/common/utils/logs"
+import { log } from "@uniswap/smart-order-router"
 import { StatusCodes } from "http-status-codes"
 import { isHex } from "viem"
 import { getRoutingConfig } from "./config"
@@ -59,7 +61,8 @@ export async function runPipeline(
     )
   }
 
-  console.log("Best quote", {
+  console.log({
+    name: "Best quote",
     amountIn: finalResult.quotes[0].amountIn,
     amountInMax: finalResult.quotes[0].amountInMax,
     amountOut: finalResult.quotes[0].amountOut,

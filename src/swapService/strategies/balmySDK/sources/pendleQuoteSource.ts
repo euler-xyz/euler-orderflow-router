@@ -14,6 +14,7 @@ import {
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
+import { log } from "@uniswap/smart-order-router"
 import qs from "qs"
 import { type Address, getAddress, isAddressEqual } from "viem"
 
@@ -206,7 +207,8 @@ export class CustomPendleQuoteSource
         (await response.text()) || `Failed with status ${response.status}`
 
       if (response.status === 400) {
-        console.log("[PENDLE ERROR]", msg, recipient, url)
+        log({ name: "[PENDLE ERROR]", msg, recipient, url })
+
         if (msg.includes("SY limit exceeded")) {
           soldOutCoolOff[`${buyToken}${chainId}`] = Date.now()
         }
