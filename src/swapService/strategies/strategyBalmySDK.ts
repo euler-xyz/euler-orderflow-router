@@ -296,7 +296,13 @@ export class StrategyBalmySDK {
       sourcesFilter,
     )
 
-    const unitAmountTo = unitQuotes[0].minBuyAmount.amount
+    // Pick a random quote to avoid lock in if one source returns a false quote
+    // FIXME: use unit quotes as initial quotes
+    const unitAmountTo =
+      unitQuotes[Math.floor(Math.random() * unitQuotes.length)].minBuyAmount
+        .amount
+
+    // const unitAmountTo = unitQuotes[0].minBuyAmount.amount
 
     const estimatedAmountIn = calculateEstimatedAmountFrom(
       unitAmountTo,
@@ -306,6 +312,7 @@ export class StrategyBalmySDK {
     )
 
     if (estimatedAmountIn === 0n) throw new Error("quote not found")
+    console.log("estimatedAmountIn: ", estimatedAmountIn)
 
     const overSwapTarget = adjustForInterest(swapParams.amount)
 
