@@ -296,24 +296,6 @@ export class StrategyBalmySDK {
       sourcesFilter,
     )
 
-    // Pick a random quote to avoid lock in if one source returns a false quote
-    // FIXME: use unit quotes as initial quotes
-    const unitAmountTo =
-      unitQuotes[Math.floor(Math.random() * unitQuotes.length)].minBuyAmount
-        .amount
-
-    // const unitAmountTo = unitQuotes[0].minBuyAmount.amount
-
-    const estimatedAmountIn = calculateEstimatedAmountFrom(
-      unitAmountTo,
-      swapParamsExactIn.amount,
-      swapParamsExactIn.tokenIn.decimals,
-      swapParamsExactIn.tokenOut.decimals,
-    )
-
-    if (estimatedAmountIn === 0n) throw new Error("quote not found")
-    console.log("estimatedAmountIn: ", estimatedAmountIn)
-
     const overSwapTarget = adjustForInterest(swapParams.amount)
 
     const shouldContinue = (currentAmountTo: bigint): boolean =>
@@ -322,10 +304,27 @@ export class StrategyBalmySDK {
       (currentAmountTo * 1000n) / overSwapTarget > 1005n
 
     // single run to preselect sources
-    const initialQuotes = await this.#getAllQuotes({
-      ...swapParams,
-      amount: estimatedAmountIn,
-    })
+    const initialQuotes = (
+      await Promise.all(
+        unitQuotes.map((unitQuote) => {
+          const estimatedAmountIn = calculateEstimatedAmountFrom(
+            unitQuote.minBuyAmount.amount,
+            swapParamsExactIn.amount,
+            swapParamsExactIn.tokenIn.decimals,
+            swapParamsExactIn.tokenOut.decimals,
+          )
+          return this.#getAllQuotes(
+            {
+              ...swapParams,
+              amount: estimatedAmountIn,
+            },
+            {
+              includeSources: [unitQuote.source.id],
+            },
+          )
+        }),
+      )
+    ).flat()
 
     const allSettled = await Promise.allSettled(
       initialQuotes.map(async (initialQuote) =>
@@ -342,7 +341,7 @@ export class StrategyBalmySDK {
               }
             },
             overSwapTarget,
-            estimatedAmountIn,
+            initialQuote.sellAmount.amount,
             shouldContinue,
             {
               quote: initialQuote,
@@ -363,7 +362,9 @@ export class StrategyBalmySDK {
     const bestQuotes = allSettled
       .filter((q) => q.status === "fulfilled")
       .map((q) => q.value)
+
     if (bestQuotes.length === 0) throw new Error("Quotes not found")
+
     return bestQuotes
   }
 
