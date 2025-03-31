@@ -105,7 +105,7 @@ const defaultConfig: Config = {
       },
       mRE7YIELD: {
         tokenContract: "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
-        redemptionInstantFeeBps: 50n,
+        redemptionInstantFeeBps: 0n,
         depositorContract: "0xcE0A2953a5d46400Af601a9857235312d1924aC7",
         redeemerContract: "0x5356B8E06589DE894D86B24F4079c629E8565234",
         oracleContract: "0x0a2a51f2f206447dE3E3a80FCf92240244722395",
