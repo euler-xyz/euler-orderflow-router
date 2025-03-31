@@ -1086,6 +1086,17 @@
     }
   },
   {
+    "addressInfo": "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
+    "chainId": 1,
+    "name": "Midas mRe7YIELD",
+    "symbol": "MRE7YIELD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54660/large/mre7yield_logo.png?1740896178",
+    "meta": {
+      "provider": "MIDAS"
+    }
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -1551,6 +1562,30 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x353d0b2efb5b3a7987fb06d30ad6160522d08426"
+    }
+  },
+  {
+    "addressInfo": "0x23E60d1488525bf4685f53b3aa8E676c30321066",
+    "chainId": 1,
+    "name": "PT Wrapped stUSR 25SEP2025",
+    "symbol": "PT-wstUSR-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x09fa04aac9c6d1c6131352ee950cd67ecc6d4fb9"
+    }
+  },
+  {
+    "addressInfo": "0xae4bE3acD95B6a4Ac5A0524ab95dA90c721f6C83",
+    "chainId": 1,
+    "name": "PT Resolv USD 29MAY2025",
+    "symbol": "PT-USR-29MAY2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x35a18cd59a214c9e797e14b1191b700eea251f6a"
     }
   }
 ]

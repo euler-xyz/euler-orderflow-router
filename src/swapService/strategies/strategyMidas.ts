@@ -103,6 +103,16 @@ const defaultConfig: Config = {
         paymentTokenSweepVault: "0xb93d4928f39fbcd6c89a7dfbf0a867e6344561be", // eUSDC-1 escrow
         priceOne: 100000000n,
       },
+      mRE7YIELD: {
+        tokenContract: "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
+        redemptionInstantFeeBps: 50n,
+        depositorContract: "0xcE0A2953a5d46400Af601a9857235312d1924aC7",
+        redeemerContract: "0x5356B8E06589DE894D86B24F4079c629E8565234",
+        oracleContract: "0x0a2a51f2f206447dE3E3a80FCf92240244722395",
+        paymentToken: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+        paymentTokenSweepVault: "0xb93d4928f39fbcd6c89a7dfbf0a867e6344561be", // eUSDC-1 escrow
+        priceOne: 100000000n,
+      },
     },
 
     [base.id]: {

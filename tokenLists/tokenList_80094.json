@@ -230,6 +230,9 @@
     "symbol": "srUSD",
     "decimals": 18,
     "logoURI": "/tokens/80094/srusd.png",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
+    }
   }
 ]
