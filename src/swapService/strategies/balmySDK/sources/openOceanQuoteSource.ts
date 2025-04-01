@@ -72,6 +72,7 @@ const SUPPORTED_CHAINS: Record<
   [Chains.MODE.chainId]: { chainKey: "mode" },
   [146]: { chainKey: "sonic" },
   [80094]: { chainKey: "berachain" },
+  [1923]: { chainKey: "swell" },
 }
 
 const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {

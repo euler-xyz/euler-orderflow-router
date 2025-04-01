@@ -15,7 +15,7 @@ const swellRoutingConfig: ChainRoutingConfig = [
     strategy: StrategyBalmySDK.name(),
     config: {
       sourcesFilter: {
-        includeSources: ["neptune", "li-fi"],
+        includeSources: ["neptune", "li-fi", "open-ocean"],
       },
     },
     match: {},
