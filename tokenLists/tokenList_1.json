@@ -798,7 +798,7 @@
     "name": "sUSDS",
     "symbol": "sUSDS",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/marsfoundation/spark-docs/9b2ece7f8d6d1575549a88bb78654fe68707156f/.gitbook/assets/sUSDS-Coin.svg",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
     "meta": {
       "provider": "SUSDS"
     }
@@ -1586,6 +1586,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x35a18cd59a214c9e797e14b1191b700eea251f6a"
+    }
+  },
+  {
+    "addressInfo": "0x50D2C7992b802Eef16c04FeADAB310f31866a545",
+    "chainId": 1,
+    "name": "PT Ethereal eUSDE 29MAY2025",
+    "symbol": "PT-eUSDE-29MAY2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x85667e484a32d884010cf16427d90049ccf46e97"
     }
   }
 ]
