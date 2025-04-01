@@ -1,0 +1,83 @@
+[
+  {
+    "addressInfo": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
+    "chainId": 1,
+    "name": "First Digital USD",
+    "symbol": "FDUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/31079/large/FDUSD_icon_black.png?1731097953",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "chainId": 56,
+    "name": "Wrapped BNB",
+    "symbol": "WBNB",
+    "decimals": 18,
+    "logoURI": "/tokens/56/wbnb.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+    "chainId": 56,
+    "name": "Binance-Peg BTCB Token",
+    "symbol": "BTCB",
+    "decimals": 18,
+    "logoURI": "/tokens/56/btcb.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+    "chainId": 56,
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x55d398326f99059fF775485246999027B3197955",
+    "chainId": 56,
+    "name": "Binance-Peg BSC-USD",
+    "symbol": "USDT",
+    "decimals": 6,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
+    "chainId": 56,
+    "name": "Wrapped liquid staked Ether 2.0",
+    "symbol": "wstETH",
+    "decimals": 18,
+    "logoURI": "/tokens/56/wsteth.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2117E8b79e8E176A670c9fCf945d4348556bfFad",
+    "chainId": 56,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x5e13d41913aDF18bb2acAe34228E8D21f3c2f2Eb",
+    "chainId": 56,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  }
+]
