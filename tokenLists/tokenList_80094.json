@@ -93,13 +93,15 @@
     "meta": {}
   },
   {
-    "chainId": 80094,
     "addressInfo": "0x9b6761bf2397Bb5a6624a856cC84A3A14Dcd3fe5",
-    "decimals": 18,
-    "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738837562/tokens/feeqqlxk3wq4lp0rym34.png",
+    "chainId": 80094,
+    "name": "Infrared BERA",
     "symbol": "iBERA",
-    "name": "iBERA",
-    "meta": {}
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54671/large/ibera.jpg?1740966414",
+    "meta": {
+      "provider": "INFRARED"
+    }
   },
   {
     "chainId": 80094,
@@ -233,6 +235,36 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
+    }
+  },
+  {
+    "addressInfo": "0x597877Ccf65be938BD214C4c46907669e3E62128",
+    "chainId": 80094,
+    "name": "Staked Nectar",
+    "symbol": "sNECT",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
+    "chainId": 80094,
+    "name": "NECT/USDC/HONEY BurrBear LP",
+    "symbol": "NECT-USDC-HONEY-BurrBear-LP",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/empty-token.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
+    "chainId": 80094,
+    "name": "PT Ethena sUSDE 25SEP2025",
+    "symbol": "PT-sUSDE-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xd8079e0929d67390067529974b116212903cac69"
     }
   }
 ]

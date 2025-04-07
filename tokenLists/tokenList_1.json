@@ -879,6 +879,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x437cc33344a0B27A429f795ff6B469C72698B291",
+    "chainId": 1,
+    "name": "wM",
+    "symbol": "wM",
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x437cc33344a0B27A429f795ff6B469C72698B291.svg",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
     "chainId": 1,
     "name": "First Digital USD",
@@ -1156,7 +1165,9 @@
     "symbol": "CUSDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {}
+    "meta": {
+      "provider": "CUSDO"
+    }
   },
   {
     "addressInfo": "0x4342B77fE3417Bcb09d0A4383301b0DC733C755B",
@@ -1244,15 +1255,6 @@
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
-  },
-  {
-    "addressInfo": "0x437cc33344a0B27A429f795ff6B469C72698B291",
-    "chainId": 1,
-    "name": "wM",
-    "symbol": "wM",
-    "decimals": 6,
-    "logoURI": "/tokens/1/0x437cc33344a0B27A429f795ff6B469C72698B291.svg",
-    "meta": {}
   },
   {
     "addressInfo": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
