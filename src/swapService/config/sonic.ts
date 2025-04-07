@@ -33,6 +33,7 @@ const sonicConfig: ChainRoutingConfig = [
           "0x",
           "magpie",
           "pendle",
+          "enso",
         ],
       },
     },
