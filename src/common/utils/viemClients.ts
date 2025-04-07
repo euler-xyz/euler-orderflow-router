@@ -119,6 +119,10 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     transport: http(RPC_URLS[sonicnetwork.id]),
   }),
   [berachain.id]: createChainConfig(berachain),
+  [chains.bsc.id]: createClient({
+    chain: chains.bsc,
+    transport: http(RPC_URLS[chains.bsc.id]),
+  }),
 })
 
 export const viemClients = createClients()
