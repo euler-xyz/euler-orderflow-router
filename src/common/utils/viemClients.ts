@@ -32,6 +32,27 @@ export const bartio = defineChain({
   },
 })
 
+export const berachain = defineChain({
+  id: 80094,
+  name: "Berachain",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Bera",
+    symbol: "BERA",
+  },
+  blockExplorers: {
+    default: {
+      name: "berascan",
+      url: "https://berascan.com/",
+    },
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.berachain.com"],
+    },
+  },
+})
+
 const sonicnetwork = defineChain({
   id: 146,
   name: "Sonic",
@@ -63,7 +84,7 @@ export const RPC_URLS: Record<number, string> = {
   [chains.arbitrum.id]: process.env.RPC_URL_42161 || "",
   [chains.base.id]: process.env.RPC_URL_8453 || "",
   [bartio.id]: process.env.RPC_URL_80084 || "",
-  [80094]: process.env.RPC_URL_80094 || "",
+  [berachain.id]: process.env.RPC_URL_80094 || "",
   [146]: process.env.RPC_URL_146 || "",
   [chains.foundry.id]: process.env.RPC_URL_31337 || "http://localhost:8545",
 } as const
@@ -97,6 +118,7 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     chain: sonicnetwork,
     transport: http(RPC_URLS[sonicnetwork.id]),
   }),
+  [berachain.id]: createChainConfig(berachain),
 })
 
 export const viemClients = createClients()
