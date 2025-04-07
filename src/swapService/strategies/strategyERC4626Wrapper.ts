@@ -98,6 +98,13 @@ const defaultConfig: {
       asset: "0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346",
       assetDustEVault: "0xa9C92715dfED67a1Eb841c02059D9D0f1d508648",
     },
+    {
+      chainId: 80094,
+      protocol: "sNECT",
+      vault: "0x597877Ccf65be938BD214C4c46907669e3E62128",
+      asset: "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
+      assetDustEVault: "0xb20536709f1002F901ed7fE2271f1804fEe18F09",
+    },
   ],
 }
 
