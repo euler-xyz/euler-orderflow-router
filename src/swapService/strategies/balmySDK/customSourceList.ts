@@ -1,5 +1,4 @@
 import { logQuoteTime } from "@/common/utils/logs"
-import { LOG_SLOW_QUERY_TIMEOUT_SECONDS } from "@/swapService/config/constants"
 import { parseHrtimeToSeconds } from "@/swapService/utils"
 import type {
   IFetchService,
@@ -9,7 +8,7 @@ import type {
   SourceListQuoteResponse,
 } from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
-import { stringify } from "viem"
+import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
@@ -38,6 +37,7 @@ const customSources = {
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
   kyberswap: new CustomKyberswapQuoteSource(),
+  enso: new CustomEnsoQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
