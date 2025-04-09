@@ -231,5 +231,14 @@
     "decimals": 18,
     "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
+    "chainId": 8453,
+    "name": "BRZ",
+    "symbol": "BRZ",
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
+    "meta": {}
   }
 ]
