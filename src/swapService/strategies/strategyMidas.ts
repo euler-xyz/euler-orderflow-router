@@ -787,7 +787,7 @@ export class StrategyMidas {
         (scale * amount * 10_000n * mToken.priceOne) /
           (10_000n - mToken.redemptionInstantFeeBps) /
           mTBILLPriceUSD +
-        1n // +1 fixes rounding issues
+        2n // +2 fixes rounding issues
       amountOut = amount
       amountOutMin = amountOut * scale
     }
