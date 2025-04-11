@@ -304,9 +304,10 @@ export class StrategyBalmySDK {
       (currentAmountTo * 1000n) / overSwapTarget > 1005n
 
     // single run to preselect sources
-    const initialQuotes = (
-      await Promise.all(
-        unitQuotes.map((unitQuote) => {
+    const initialQuotesSettled = await Promise.allSettled(
+      unitQuotes
+        .filter((unitQuote) => unitQuote.minBuyAmount.amount !== 0n)
+        .map((unitQuote) => {
           const estimatedAmountIn = calculateEstimatedAmountFrom(
             unitQuote.minBuyAmount.amount,
             swapParamsExactIn.amount,
@@ -323,8 +324,10 @@ export class StrategyBalmySDK {
             },
           )
         }),
-      )
-    ).flat()
+    )
+    const initialQuotes = initialQuotesSettled
+      .filter((q) => q.status === "fulfilled")
+      .flatMap((q) => q.value)
 
     const allSettled = await Promise.allSettled(
       initialQuotes.map(async (initialQuote) =>
