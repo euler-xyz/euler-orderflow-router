@@ -36,6 +36,10 @@ function loadPipeline(swapParams: SwapParams) {
 export async function runPipeline(
   swapParams: SwapParams,
 ): Promise<SwapApiResponse[]> {
+  if (swapParams.chainId === 43114) {
+    throw new ApiError(StatusCodes.NOT_FOUND, "Swap quote not found", [])
+  }
+
   const pipeline = loadPipeline(swapParams)
 
   const allResults: StrategyResult[] = []
