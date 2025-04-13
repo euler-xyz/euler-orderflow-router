@@ -34,6 +34,7 @@ export const PENDLE_METADATA: QuoteSourceMetadata<PendleSupport> = {
       Chains.BASE.chainId,
       Chains.ARBITRUM.chainId,
       146,
+      80094,
     ],
     swapAndTransfer: true,
     buyOrders: false,
