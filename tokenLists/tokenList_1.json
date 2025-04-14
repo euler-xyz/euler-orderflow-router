@@ -596,7 +596,9 @@
     "symbol": "USDY",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31700/large/usdy_%281%29.png?1696530524",
-    "meta": {}
+    "meta": {
+      "provider": "ONDO"
+    }
   },
   {
     "addressInfo": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -876,7 +878,9 @@
     "symbol": "AUSD",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39284/large/Circle_Agora_White_on_Olive_1080px.png?1722961274",
-    "meta": {}
+    "meta": {
+      "provider": "HASHNOTE"
+    }
   },
   {
     "addressInfo": "0x437cc33344a0B27A429f795ff6B469C72698B291",
@@ -1017,8 +1021,8 @@
   {
     "addressInfo": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
     "chainId": 1,
-    "name": "Wrapped USDM",
-    "symbol": "WUSDM",
+    "name": "Wrapped Mountain Protocol USD",
+    "symbol": "wUSDM",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33785/large/wUSDM_PNG_240px.png?1702981552",
     "meta": {}
@@ -1106,6 +1110,24 @@
     }
   },
   {
+    "addressInfo": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
+    "chainId": 1,
+    "name": "USDtb",
+    "symbol": "USDtb",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52804/large/USDtbSmall.png?1734344946",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
+    "chainId": 1,
+    "name": "Hashnote USYC",
+    "symbol": "USYC",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/51054/large/Hashnote_SDYC_200x200.png?1730370965",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -1157,17 +1179,6 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53750/large/USDO_LOGO-white.png?1737181887",
     "meta": {}
-  },
-  {
-    "addressInfo": "0xaD55aebc9b8c03FC43cd9f62260391c13c23e7c0",
-    "chainId": 1,
-    "name": "Compounding OpenDollar",
-    "symbol": "CUSDO",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {
-      "provider": "CUSDO"
-    }
   },
   {
     "addressInfo": "0x4342B77fE3417Bcb09d0A4383301b0DC733C755B",
@@ -1320,12 +1331,41 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xaD55aebc9b8c03FC43cd9f62260391c13c23e7c0",
+    "chainId": 1,
+    "name": "Compounding OpenDollar",
+    "symbol": "cUSDO",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
+    "meta": {
+      "provider": "CUSDO"
+    }
+  },
+  {
     "addressInfo": "0x3bE775B699fee916E7De117994358fF8F48e4569",
     "chainId": 1,
     "name": "ViciCoin",
     "symbol": "VCNT",
     "decimals": 18,
     "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x07a36C630e3F072637da3445Da733B29958D8cAB",
+    "chainId": 1,
+    "name": "sBUIDL",
+    "symbol": "sBUIDL",
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x07a36C630e3F072637da3445Da733B29958D8cAB.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xdA67B4284609d2d48e5d10cfAc411572727dc1eD",
+    "chainId": 1,
+    "name": "USN",
+    "symbol": "USN",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
     "meta": {}
   },
   {
