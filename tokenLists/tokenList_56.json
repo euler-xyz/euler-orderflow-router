@@ -81,7 +81,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+    "addressInfo": "0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B",
     "chainId": 56,
     "name": "Staked Lista BNB",
     "symbol": "slisBNB",
@@ -98,6 +98,44 @@
     "symbol": "lisUSD",
     "decimals": 18,
     "logoURI": "/tokens/56/lisusd.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "chainId": 56,
+    "name": "Staked USDe",
+    "symbol": "sUSDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "provider": "SUSDE"
+    }
+  },
+  {
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "chainId": 56,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39962/large/usde.png?1724952425",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
+    "chainId": 56,
+    "name": "Resolv USD",
+    "symbol": "USR",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f",
+    "chainId": 56,
+    "name": "YUSD",
+    "symbol": "YUSD",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
     "meta": {}
   }
 ]
