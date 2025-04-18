@@ -129,7 +129,7 @@ function parseRequest(request: Request): SwapParams {
       throw new ApiError(StatusCodes.NOT_FOUND, "Token in not supported")
 
     const tokenOut = findToken(chainId, validatedParams.tokenOut)
-    console.log("tokenOut: ", tokenOut)
+
     if (!tokenOut)
       throw new ApiError(StatusCodes.NOT_FOUND, "Token out not supported")
 

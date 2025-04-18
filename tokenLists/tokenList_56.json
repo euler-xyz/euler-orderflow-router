@@ -31,7 +31,7 @@
     "chainId": 56,
     "name": "USDC",
     "symbol": "USDC",
-    "decimals": 6,
+    "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     "meta": {}
   },
@@ -40,7 +40,7 @@
     "chainId": 56,
     "name": "Binance-Peg BSC-USD",
     "symbol": "USDT",
-    "decimals": 6,
+    "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     "meta": {}
   },
@@ -69,6 +69,24 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7",
+    "chainId": 56,
+    "name": "Solv BTC",
+    "symbol": "SolvBTC",
+    "decimals": 18,
+    "logoURI": "/tokens/56/solvBTC.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "chainId": 56,
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54335/large/wbtc.jpg?1739334808",
     "meta": {}
   },
   {
@@ -137,5 +155,17 @@
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xDD809435ba6c9d6903730f923038801781cA66ce",
+    "chainId": 56,
+    "name": "PT Ethena sUSDE 26JUN2025",
+    "symbol": "PT-sUSDE-26JUN2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x8557d39d4bab2b045ac5c2b7ea66d12139da9af4"
+    }
   }
 ]

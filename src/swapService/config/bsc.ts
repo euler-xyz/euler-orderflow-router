@@ -26,6 +26,7 @@ const bscRoutingConfig: ChainRoutingConfig = [
           "oku",
           "magpie",
           "enso",
+          "pendle",
         ],
       },
     },
