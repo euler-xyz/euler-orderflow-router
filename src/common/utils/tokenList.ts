@@ -33,27 +33,6 @@ const cache: Record<number, TokenListItem[]> = {}
       fs.readFileSync(`${dir}/${file}`).toString(),
     ) as TokenListItem[]
   }
-
-  if (
-    !cache[1923].find((t) =>
-      isAddressEqual(
-        t.addressInfo,
-        "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
-      ),
-    )
-  ) {
-    // TODO add external tokens sources
-    cache[1923].push({
-      addressInfo: "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
-      chainId: 1923,
-      name: "rUSDC",
-      symbol: "rUSDC",
-      decimals: 6,
-      logoURI:
-        "https://assets.coingecko.com/coins/images/55061/standard/rUSDC-_200x200.png?1743524727",
-      meta: {},
-    })
-  }
 })()
 
 export default function getTokenList(chainId: number): TokenListItem[] {
