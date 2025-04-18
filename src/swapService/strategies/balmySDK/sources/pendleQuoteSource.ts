@@ -33,6 +33,7 @@ export const PENDLE_METADATA: QuoteSourceMetadata<PendleSupport> = {
       Chains.MANTLE.chainId,
       Chains.BASE.chainId,
       Chains.ARBITRUM.chainId,
+      Chains.BNB_CHAIN.chainId,
       146,
       80094,
     ],
