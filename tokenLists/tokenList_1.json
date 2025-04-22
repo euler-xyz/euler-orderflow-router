@@ -877,7 +877,7 @@
     "name": "AUSD",
     "symbol": "AUSD",
     "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/39284/large/Circle_Agora_White_on_Olive_1080px.png?1722961274",
+    "logoURI": "/tokens/1/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a.png",
     "meta": {
       "provider": "HASHNOTE"
     }
@@ -1074,7 +1074,9 @@
     "symbol": "YUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
-    "meta": {}
+    "meta": {
+      "provider": "YIELDFI"
+    }
   },
   {
     "addressInfo": "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
@@ -1640,6 +1642,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x85667e484a32d884010cf16427d90049ccf46e97"
+    }
+  },
+  {
+    "addressInfo": "0x933B9FfEE0Ad3Ef8E4DBb52688ea905826D73755",
+    "chainId": 1,
+    "name": "PT Compounding Open Dollar 19JUN2025",
+    "symbol": "PT-cUSDO-19JUN2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xa77c0de4d26b7c97d1d42abd6733201206122e25"
     }
   }
 ]
