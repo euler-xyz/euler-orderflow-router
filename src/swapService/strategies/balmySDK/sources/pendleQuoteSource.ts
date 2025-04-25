@@ -154,7 +154,7 @@ export class CustomPendleQuoteSource
         receiver: recipient || takeFrom,
         slippage: slippagePercentage / 100, // 1 = 100%
         enableAggregator: true,
-        yt: market?.yt.slice(2),
+        yt: market?.yt.split("-")[1],
         amountIn: order.sellAmount.toString(),
         tokenOut: buyToken,
       }
