@@ -19,7 +19,6 @@ import {
   getAddress,
   isAddress,
   isAddressEqual,
-  maxUint256,
   parseAbiParameters,
   parseUnits,
 } from "viem"
@@ -368,7 +367,12 @@ export class StrategyBalmySDK {
 
     if (bestQuotes.length === 0) throw new Error("Quotes not found")
 
-    return bestQuotes
+    return bestQuotes.sort((qa: SwapQuote, qb: SwapQuote) => {
+      // sort by lowest price out/in
+      const a = (qa.amountIn * 10n ** 18n) / qa.amountOut
+      const b = (qb.amountIn * 10n ** 18n) / qb.amountOut
+      return Number(a > b) || -(a < b)
+    })
   }
 
   //   async #binarySearchOverswapQuote(swapParams: SwapParams) {
