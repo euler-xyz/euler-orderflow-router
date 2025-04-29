@@ -731,7 +731,7 @@
   {
     "addressInfo": "0x866A2BF4E572CbcF37D5071A7a58503Bfb36be1b",
     "chainId": 1,
-    "name": "M by M^0",
+    "name": "M by M0",
     "symbol": "M",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40048/large/M_Symbol_256.png?1739323798",
@@ -927,7 +927,7 @@
   {
     "addressInfo": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "chainId": 1,
-    "name": "Gravity",
+    "name": "Gravity (prev. GAL)",
     "symbol": "G",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39200/large/gravity.jpg?1721020647",
@@ -979,7 +979,8 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51055/large/mbtc.png?1729875716",
     "meta": {
-      "provider": "MIDAS"
+      "provider": "DEFILLAMA",
+      "poolId": "37bdb634-87d4-4eca-8b73-343653bd9a25"
     }
   },
   {
@@ -1053,7 +1054,8 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
     "meta": {
-      "provider": "MIDAS"
+      "provider": "DEFILLAMA",
+      "poolId": "d48e9c5a-7c28-4192-ab3d-795b5fbed7be"
     }
   },
   {
@@ -1064,7 +1066,8 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
     "meta": {
-      "provider": "MIDAS"
+      "provider": "DEFILLAMA",
+      "poolId": "0ffd2dc2-72d2-449f-8cac-34a09ce6f323"
     }
   },
   {
@@ -1288,7 +1291,8 @@
     "decimals": 18,
     "logoURI": "/tokens/1/0x2a8c22E3b10036f3AEF5875d04f8441d4188b656.png",
     "meta": {
-      "provider": "MIDAS"
+      "provider": "DEFILLAMA",
+      "poolId": "b50e0e37-2256-466b-9030-168c515a2ca4"
     }
   },
   {
@@ -1369,6 +1373,17 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xE24a3DC889621612422A64E6388927901608B91D",
+    "chainId": 1,
+    "name": "Staked USN",
+    "symbol": "sUSN",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54924/large/sUSN_Logo.png?1742538935",
+    "meta": {
+      "provider": "NOON"
+    }
   },
   {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
