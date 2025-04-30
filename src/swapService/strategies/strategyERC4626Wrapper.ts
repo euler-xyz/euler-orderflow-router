@@ -105,6 +105,13 @@ const defaultConfig: {
       asset: "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
       assetDustEVault: "0xb20536709f1002F901ed7fE2271f1804fEe18F09",
     },
+    {
+      chainId: 80094,
+      protocol: "BB.sNECT",
+      vault: "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
+      asset: "0x597877Ccf65be938BD214C4c46907669e3E62128",
+      assetDustEVault: "0x4a0c6479b628A8D6696B0197AC29495F2E95F46c",
+    },
   ],
 }
 

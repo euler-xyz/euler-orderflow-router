@@ -6,6 +6,7 @@ import {
 } from "../strategies"
 
 const SNECT_BERACHAIN = "0x597877Ccf65be938BD214C4c46907669e3E62128"
+const BB_SNECT_BERACHAIN = "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5"
 
 const berachainRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -20,7 +21,7 @@ const berachainRoutingConfig: ChainRoutingConfig = [
   {
     strategy: StrategyERC4626Wrapper.name(),
     match: {
-      tokensInOrOut: [SNECT_BERACHAIN],
+      tokensInOrOut: [BB_SNECT_BERACHAIN],
     },
   },
   // DEFAULTS
@@ -39,6 +40,14 @@ const berachainRoutingConfig: ChainRoutingConfig = [
       },
     },
     match: {},
+  },
+
+  // FALLBACKS
+  {
+    strategy: StrategyERC4626Wrapper.name(),
+    match: {
+      tokensInOrOut: [SNECT_BERACHAIN],
+    },
   },
 ]
 
