@@ -100,7 +100,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54671/large/ibera.jpg?1740966414",
     "meta": {
-      "provider": "INFRARED"
+      "provider": "IBERA"
     }
   },
   {
@@ -110,7 +110,9 @@
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738837560/tokens/iaynouqgjmryrzl0wcvx.png",
     "symbol": "iBGT",
     "name": "iBGT",
-    "meta": {}
+    "meta": {
+      "provider": "IBGT"
+    }
   },
   {
     "chainId": 80094,
@@ -220,7 +222,7 @@
     "addressInfo": "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
     "chainId": 80094,
     "name": "Nectar",
-    "symbol": "nect",
+    "symbol": "NECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
     "meta": {}
@@ -242,6 +244,15 @@
     "chainId": 80094,
     "name": "Staked Nectar",
     "symbol": "sNECT",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
+    "chainId": 80094,
+    "name": "Beraborrow Staked Nectar",
+    "symbol": "BB.SNECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
     "meta": {}
