@@ -167,5 +167,14 @@
       "isPendlePT": true,
       "pendleMarket": "0x8557d39d4bab2b045ac5c2b7ea66d12139da9af4"
     }
+  },
+  {
+    "addressInfo": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+    "chainId": 56,
+    "name": "World Liberty Financial USD",
+    "symbol": "USD1",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54977/large/30Q2SFVH_400x400.jpg?1742998328",
+    "meta": {}
   }
 ]
