@@ -41,7 +41,6 @@ const berachainRoutingConfig: ChainRoutingConfig = [
     },
     match: {},
   },
-
   // FALLBACKS
   {
     strategy: StrategyERC4626Wrapper.name(),
