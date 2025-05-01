@@ -76,7 +76,7 @@ export class StrategyRedirectDepositWrapper {
 
       const innerSwapParams = {
         ...swapParams,
-        receiver: swapParams.from,
+        // receiver: swapParams.from,
         routingOverride: routing,
       }
 
@@ -84,40 +84,61 @@ export class StrategyRedirectDepositWrapper {
 
       // split target debt repay into swap to Swapper, repay and deposit into escrow vault
       result.quotes = innerSwaps.map((innerSwap) => {
-        const newMulticallItems = innerSwap.swap.multicallItems.flatMap(
-          (item) => {
-            if (
-              item.functionName === "swap" &&
-              item.args[0].mode === String(SwapperMode.TARGET_DEBT)
-            ) {
-              const exactInSwapItemArgs = {
-                ...item.args[0],
-                mode: SwapperMode.EXACT_IN,
-              }
+        // const newMulticallItems = innerSwap.swap.multicallItems.flatMap(
+        //   (item) => {
+        //     if (
+        //       item.functionName === "swap" &&
+        //       item.args[0].mode === String(SwapperMode.TARGET_DEBT)
+        //     ) {
+        //       const exactInSwapItemArgs = {
+        //         ...item.args[0],
+        //         receiver: swapParams.receiver,
+        //         mode: SwapperMode.EXACT_IN,
+        //       }
 
-              const swapItem = encodeSwapMulticallItem(exactInSwapItemArgs)
-              // if target debt is 0, encode repay(max) to repay all debt, otherwise use all of the available Swapper balance
-              const repayAmount =
-                swapParams.targetDebt === 0n ? maxUint256 : maxUint256 - 1n
+        //       const swapItem = encodeSwapMulticallItem(exactInSwapItemArgs)
+        //       // if target debt is 0, encode repay(max) to repay all debt, otherwise use all of the available Swapper balance
+        //       const repayAmount =
+        //         swapParams.targetDebt === 0n ? maxUint256 : maxUint256 - 1n
 
-              const repayItem = encodeRepayMulticallItem(
-                vaultData.asset,
-                swapParams.receiver,
-                repayAmount,
-                swapParams.accountOut,
-              )
-              const depositItem = encodeDepositMulticallItem(
-                vaultData.asset,
-                vaultData.assetDustEVault,
-                5n,
-                swapParams.accountOut,
-              )
+        //       const repayItem = encodeRepayMulticallItem(
+        //         vaultData.asset,
+        //         swapParams.receiver,
+        //         repayAmount,
+        //         swapParams.accountOut,
+        //       )
+        //       console.log('swapParams.receiver: ', swapParams.receiver);
+        //       const depositItem = encodeDepositMulticallItem(
+        //         vaultData.asset,
+        //         vaultData.assetDustEVault,
+        //         5n,
+        //         swapParams.accountOut,
+        //       )
 
-              return [swapItem, repayItem, depositItem]
-            }
-            return item
-          },
-        )
+        //       console.log('repayItem: ', repayItem);
+        //       return [swapItem, repayItem, depositItem]
+        //     }
+        //     return item
+        //   },
+        // )
+
+        const newMulticallItems = innerSwap.swap.multicallItems.map((item) => {
+          // Redirect deposits to receiver (debt vault) to designated vault
+          if (
+            item.functionName === "deposit" &&
+            item.args[1] === swapParams.receiver
+          ) {
+            item.args[1] = vaultData.assetDustEVault
+            item = encodeDepositMulticallItem(
+              item.args[0],
+              vaultData.assetDustEVault,
+              5n,
+              swapParams.accountOut,
+            )
+          }
+
+          return item
+        })
 
         // reencode everything
 
