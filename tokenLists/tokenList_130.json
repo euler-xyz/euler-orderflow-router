@@ -1,18 +1,45 @@
 [
   {
+    "addressInfo": "0x4200000000000000000000000000000000000006",
+    "chainId": 130,
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x078D782b760474a361dDA0AF3839290b0EF57AD6",
     "chainId": 130,
     "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png?1696506694",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     "meta": {}
   },
   {
-    "addressInfo": "0x4200000000000000000000000000000000000006",
+    "addressInfo": "0xc02fE7317D4eb8753a02c35fe019786854A92001",
     "chainId": 130,
-    "name": "WETH",
-    "symbol": "WETH",
+    "name": "Wrapped stETH",
+    "symbol": "WSTETH",
+    "decimals": 18,
+    "logoURI": "https://tokens.1inch.io/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x8f187aA05619a017077f5308904739877ce9eA21",
+    "chainId": 130,
+    "name": "Unichain",
+    "symbol": "UNI",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png?1720676669",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9151434b16b9763660705744891fA906F660EcC5",
+    "chainId": 130,
+    "name": "MOCK",
+    "symbol": "MOCK",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     "meta": {}

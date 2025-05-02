@@ -42,6 +42,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.MANTLE.chainId]: "mantle",
   [Chains.SONIC.chainId]: "sonic",
   [Chains.ZK_SYNC_ERA.chainId]: "zksync",
+  [130]: "unichain",
 }
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {
@@ -92,6 +93,7 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
 
     const url = `https://aggregator-api.kyberswap.com/${chainKey}/api/v1/routes?tokenIn=${sellToken}&tokenOut=${buyToken}&amountIn=${order.sellAmount.toString()}&saveGas=0&gasInclude=true&excludedSources=clipper,hashflow-v3,kyberswap-limit-order,kyberswap-limit-order-v2,mx-trading,native-v1,native-v2`
     const routeResponse = await fetchService.fetch(url, { timeout, headers })
+
     if (!routeResponse.ok) {
       failed(
         KYBERSWAP_METADATA,
@@ -109,7 +111,7 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
     const quote = {
       sellAmount: order.sellAmount,
       buyAmount: BigInt(routeSummary.amountOut),
-      estimatedGas: BigInt(routeSummary.gas),
+      // estimatedGas: BigInt(routeSummary.gas),
       allowanceTarget: calculateAllowanceTarget(sellToken, routerAddress),
       customData: {
         routeSummary,

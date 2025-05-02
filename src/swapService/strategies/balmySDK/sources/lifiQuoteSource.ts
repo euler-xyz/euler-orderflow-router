@@ -48,6 +48,7 @@ const LI_FI_METADATA: QuoteSourceMetadata<LiFiSupport> = {
       Chains.BLAST.chainId,
       Chains.MANTLE.chainId,
       80094, // berachain
+      130, // unichain
     ],
     swapAndTransfer: true,
     buyOrders: true,

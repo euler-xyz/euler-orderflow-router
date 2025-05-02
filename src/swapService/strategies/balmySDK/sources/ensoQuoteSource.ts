@@ -29,6 +29,7 @@ const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
       Chains.AVALANCHE.chainId,
       Chains.SONIC.chainId,
       80094,
+      130,
     ],
     swapAndTransfer: false,
     buyOrders: false,
