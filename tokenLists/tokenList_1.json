@@ -1670,5 +1670,17 @@
       "isPendlePT": true,
       "pendleMarket": "0xa77c0de4d26b7c97d1d42abd6733201206122e25"
     }
+  },
+  {
+    "addressInfo": "0x3b3fB9C57858EF816833dC91565EFcd85D96f634",
+    "chainId": 1,
+    "name": "PT Ethena sUSDE 31JUL2025",
+    "symbol": "PT-sUSDE-31JUL2025",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x4339ffe2b7592dc783ed13cce310531ab366deac"
+    }
   }
 ]
