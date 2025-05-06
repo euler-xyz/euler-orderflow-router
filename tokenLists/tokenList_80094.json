@@ -277,5 +277,26 @@
       "isPendlePT": true,
       "pendleMarket": "0xd8079e0929d67390067529974b116212903cac69"
     }
+  },
+  {
+    "addressInfo": "0xBaadCC2962417C01Af99fb2B7C75706B9bd6Babe",
+    "chainId": 80094,
+    "name": "Liquid BGT",
+    "symbol": "LBGT",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54878/large/lbgt.png?1742327918",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xFace73a169e2CA2934036C8Af9f464b5De9eF0ca",
+    "chainId": 80094,
+    "name": "Staked LBGT",
+    "symbol": "stLBGT",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/empty-token.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "9ccbebab-a66d-4b9e-bf6a-47ea1d638874"
+    }
   }
 ]

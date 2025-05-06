@@ -225,5 +225,17 @@
       "isPendlePT": true,
       "pendleMarket": "0x3aef1d372d0a7a7e482f465bc14a42d78f920392"
     }
+  },
+  {
+    "addressInfo": "0x930441Aa7Ab17654dF5663781CA0C02CC17e6643",
+    "chainId": 146,
+    "name": "PT Aave Sonic USDC 14AUG2025",
+    "symbol": "PT-aSonUSDC-14AUG2025",
+    "decimals": 6,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x3f5ea53d1160177445b1898afbb16da111182418"
+    }
   }
 ]
