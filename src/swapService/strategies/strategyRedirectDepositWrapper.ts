@@ -144,9 +144,15 @@ export class StrategyRedirectDepositWrapper {
 
         const swap = buildApiResponseSwap(swapParams.from, newMulticallItems)
 
-        let debtMax = swapParams.currentDebt - BigInt(innerSwap.amountOutMin)
-        if (debtMax < 0n) debtMax = 0n
-        debtMax = adjustForInterest(debtMax)
+        let debtMax
+        if (swapParams.swapperMode === SwapperMode.TARGET_DEBT) {
+          debtMax = swapParams.targetDebt || 0n
+        } else {
+          debtMax =
+            (swapParams.currentDebt || 0n) - BigInt(innerSwap.amountOutMin)
+          if (debtMax < 0n) debtMax = 0n
+          debtMax = adjustForInterest(debtMax)
+        }
 
         const verify = buildApiResponseVerifyDebtMax(
           swapParams.chainId,
