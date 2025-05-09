@@ -85,6 +85,7 @@ export const RPC_URLS: Record<number, string> = {
   [chains.base.id]: process.env.RPC_URL_8453 || "",
   [bartio.id]: process.env.RPC_URL_80084 || "",
   [berachain.id]: process.env.RPC_URL_80094 || "",
+  [chains.avalanche.id]: process.env.RPC_URL_43114 || "",
   [146]: process.env.RPC_URL_146 || "",
   [chains.foundry.id]: process.env.RPC_URL_31337 || "http://localhost:8545",
 } as const
@@ -122,6 +123,10 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
   [chains.bsc.id]: createClient({
     chain: chains.bsc,
     transport: http(RPC_URLS[chains.bsc.id]),
+  }),
+  [chains.avalanche.id]: createClient({
+    chain: chains.avalanche,
+    transport: http(RPC_URLS[chains.avalanche.id]),
   }),
 })
 
