@@ -3,6 +3,7 @@ import { StrategyCombinedUniswap } from "./strategyCombinedUniswap"
 import { StrategyConnect2 } from "./strategyConnect2"
 import { StrategyCurveLPNG } from "./strategyCurveLPNG"
 import { StrategyERC4626Wrapper } from "./strategyERC4626Wrapper"
+import { StrategyElixir } from "./strategyElixir"
 import { StrategyIdleCDOTranche } from "./strategyIdleCDOTranche"
 import { StrategyMidas } from "./strategyMidas"
 import { StrategyRedirectDepositWrapper } from "./strategyRedirectDepositWrapper"
@@ -18,6 +19,7 @@ export {
   StrategyCurveLPNG,
   StrategyRedirectDepositWrapper,
   StrategyConnect2,
+  StrategyElixir,
 }
 
 export const strategies = {
@@ -30,4 +32,5 @@ export const strategies = {
   [StrategyCurveLPNG.name()]: StrategyCurveLPNG,
   [StrategyRedirectDepositWrapper.name()]: StrategyRedirectDepositWrapper,
   [StrategyConnect2.name()]: StrategyConnect2,
+  [StrategyElixir.name()]: StrategyElixir,
 }
