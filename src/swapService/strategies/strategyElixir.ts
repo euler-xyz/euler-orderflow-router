@@ -18,6 +18,7 @@ import {
   buildApiResponseVerifyDebtMax,
   buildApiResponseVerifySkimMin,
   encodeDepositMulticallItem,
+  encodeRepayAndSweep,
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
@@ -461,20 +462,21 @@ export class StrategyElixir {
     const withdrawAmount = adjustForInterest(swapParams.amount)
 
     const {
-      data: withdrawData,
+      swapMulticallItems: multicallItems,
       amountIn,
       amountOut,
-    } = await encodeWithdraw(
+    } = await encodeUnstakeAssets(
       swapParams,
       vaultData.vault,
       withdrawAmount,
       swapParams.from,
     )
 
-    const multicallItems = encodeTargetDebtAsExactInMulticall(
-      swapParams,
-      withdrawData,
-    )
+    multicallItems.push(...encodeRepayAndSweep(swapParams))
+    // const multicallItems = encodeTargetDebtAsExactInMulticall(
+    //   swapParams,
+    //   withdrawData,
+    // )
     const swap = buildApiResponseSwap(swapParams.from, multicallItems)
 
     const verify = buildApiResponseVerifyDebtMax(
@@ -897,15 +899,15 @@ export async function encodeUnstakeAssets(
     amountOut,
   )
 
-  const abiItemCooldown = {
-    inputs: [{ name: "shares", type: "uint256" }],
+  const abiItem = {
+    inputs: [{ name: "assets", type: "uint256" }],
     name: "cooldownAssets",
     stateMutability: "nonpayable",
     type: "function",
   }
 
   const cooldownData = encodeFunctionData({
-    abi: [abiItemCooldown],
+    abi: [abiItem],
     args: [amountOut],
   })
 
@@ -937,6 +939,7 @@ export async function encodeUnstakeAssets(
       : swapParams.swapperMode === SwapperMode.EXACT_OUT
         ? amountOut
         : swapParams.targetDebt
+
   const swapMulticallItems = []
   swapMulticallItems.push(
     encodeSwapMulticallItem({
@@ -952,7 +955,6 @@ export async function encodeUnstakeAssets(
       data: cooldownSwapData,
     }),
   )
-
   swapMulticallItems.push(
     encodeSwapMulticallItem({
       handler: SWAPPER_HANDLER_GENERIC,
@@ -972,9 +974,100 @@ export async function encodeUnstakeAssets(
     amountIn,
     amountOut,
     swapMulticallItems,
-    // data: swapData,.
+    // data: swapData,
   }
 }
+
+// export async function encodeUnstakeAssets(
+//   swapParams: SwapParams,
+//   vault: Address,
+//   amountOut: bigint,
+//   receiver: Address,
+// ) {
+//   const amountIn = await fetchPreviewWithdraw(
+//     swapParams.chainId,
+//     vault,
+//     amountOut,
+//   )
+
+//   const abiItemCooldown = {
+//     inputs: [{ name: "shares", type: "uint256" }],
+//     name: "cooldownAssets",
+//     stateMutability: "nonpayable",
+//     type: "function",
+//   }
+
+//   const cooldownData = encodeFunctionData({
+//     abi: [abiItemCooldown],
+//     args: [amountOut],
+//   })
+
+//   const cooldownSwapData = encodeAbiParameters(
+//     parseAbiParameters("address, bytes"),
+//     [vault, cooldownData],
+//   )
+
+//   const abiItemUnstake = {
+//     inputs: [{ name: "receiver", type: "address" }],
+//     name: "unstake",
+//     stateMutability: "nonpayable",
+//     type: "function",
+//   }
+
+//   const unstakeData = encodeFunctionData({
+//     abi: [abiItemUnstake],
+//     args: [receiver],
+//   })
+
+//   const unstakeSwapData = encodeAbiParameters(
+//     parseAbiParameters("address, bytes"),
+//     [vault, unstakeData],
+//   )
+
+//   const swapperAmountOut =
+//     swapParams.swapperMode === SwapperMode.EXACT_IN
+//       ? 0n //ignored
+//       : swapParams.swapperMode === SwapperMode.EXACT_OUT
+//         ? amountOut
+//         : swapParams.targetDebt
+//   const swapMulticallItems = []
+//   swapMulticallItems.push(
+//     encodeSwapMulticallItem({
+//       handler: SWAPPER_HANDLER_GENERIC,
+//       mode: BigInt(swapParams.swapperMode),
+//       account: swapParams.accountOut,
+//       tokenIn: swapParams.tokenIn.addressInfo,
+//       tokenOut: swapParams.tokenOut.addressInfo,
+//       vaultIn: swapParams.vaultIn,
+//       accountIn: swapParams.accountIn,
+//       receiver: swapParams.receiver,
+//       amountOut: swapperAmountOut,
+//       data: cooldownSwapData,
+//     }),
+//   )
+
+//   swapMulticallItems.push(
+//     encodeSwapMulticallItem({
+//       handler: SWAPPER_HANDLER_GENERIC,
+//       mode: BigInt(swapParams.swapperMode),
+//       account: swapParams.accountOut,
+//       tokenIn: swapParams.tokenIn.addressInfo,
+//       tokenOut: swapParams.tokenOut.addressInfo,
+//       vaultIn: swapParams.vaultIn,
+//       accountIn: swapParams.accountIn,
+//       receiver: swapParams.receiver,
+//       amountOut: swapperAmountOut,
+//       data: unstakeSwapData,
+//     }),
+//   )
+
+//   return {
+//     amountIn,
+//     amountOut,
+//     swapMulticallItems,
+//     // data: swapData,.
+//   }
+// }
 
 export async function encodeMint(
   swapParams: SwapParams,
