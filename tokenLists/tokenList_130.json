@@ -9,21 +9,36 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xc02fE7317D4eb8753a02c35fe019786854A92001",
+    "chainId": 130,
+    "name": "Wrapped liquid staked Ether 2.0",
+    "symbol": "wstETH",
+    "decimals": 18,
+    "logoURI": "/tokens/8453/wsteth.png",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
+    }
+  },
+  {
+    "addressInfo": "0x7DCC39B4d1C53CB31e1aBc0e358b43987FEF80f7",
+    "chainId": 130,
+    "name": "Wrapped eETH",
+    "symbol": "weETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
+    }
+  },
+  {
     "addressInfo": "0x078D782b760474a361dDA0AF3839290b0EF57AD6",
     "chainId": 130,
     "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0xc02fE7317D4eb8753a02c35fe019786854A92001",
-    "chainId": 130,
-    "name": "Wrapped stETH",
-    "symbol": "WSTETH",
-    "decimals": 18,
-    "logoURI": "https://tokens.1inch.io/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.png",
     "meta": {}
   },
   {
@@ -36,12 +51,42 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "chainId": 130,
+    "name": "Renzo Restaked ETH",
+    "symbol": "ezETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
+    }
+  },
+  {
+    "addressInfo": "0xc3eACf0612346366Db554C991D7858716db09f58",
+    "chainId": 130,
+    "name": "KelpDao Restaked ETH",
+    "symbol": "rsETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x9151434b16b9763660705744891fA906F660EcC5",
     "chainId": 130,
-    "name": "MOCK",
-    "symbol": "MOCK",
-    "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "name": "USDT0",
+    "symbol": "USDT0",
+    "decimals": 6,
+    "logoURI": "/tokens/130/usdt0.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x927B51f251480a681271180DA4de28D44EC4AfB8",
+    "chainId": 130,
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54335/large/wbtc.jpg?1739334808",
     "meta": {}
   }
 ]
