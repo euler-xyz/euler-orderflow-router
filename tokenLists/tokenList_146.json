@@ -5,7 +5,7 @@
     "name": "Sonic USD",
     "symbol": "scUSD",
     "decimals": 6,
-    "logoURI": "/tokens/146/scUSD.png",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53456/large/scusd_%281%29.png?1736404738",
     "meta": {}
   },
   {
@@ -61,7 +61,7 @@
     "name": "Wrapped stkscUSD",
     "symbol": "wstkscUSD",
     "decimals": 6,
-    "logoURI": "/tokens/146/wstkscUSD.png",
+    "logoURI": "/tokens/146/wstkscUSD.svg",
     "meta": {}
   },
   {
@@ -121,16 +121,16 @@
     "name": "Wrapped stkscETH",
     "symbol": "wstkscETH",
     "decimals": 18,
-    "logoURI": "/tokens/146/wstkscETH.png",
+    "logoURI": "/tokens/146/wstkscETH.svg",
     "meta": {}
   },
   {
     "addressInfo": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
     "chainId": 146,
-    "name": "USDC.e",
-    "symbol": "USDC.e",
+    "name": "USDC",
+    "symbol": "USDC",
     "decimals": 6,
-    "logoURI": "/tokens/146/usdc.png",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     "meta": {}
   },
   {
@@ -149,6 +149,44 @@
     "symbol": "SolvBTC.BBN",
     "decimals": 18,
     "logoURI": "/tokens/146/solvBTCBBN.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x3333111A391cC08fa51353E9195526A70b333333",
+    "chainId": 146,
+    "name": "Shadow Liquid Staking Token",
+    "symbol": "x33",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54526/large/shadow_liquid_staking_token17400.jpg?1740148577",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "chainId": 146,
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
+    "meta": {
+      "provider": "YIELDFI"
+    }
+  },
+  {
+    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
+    "chainId": 146,
+    "name": "Stream USD",
+    "symbol": "streamUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/146/sS.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x6202B9f02E30E5e1c62Cc01E4305450E5d83b926",
+    "chainId": 146,
+    "name": "Staked Stream USD",
+    "symbol": "xUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/146/sS.svg",
     "meta": {}
   },
   {
@@ -196,7 +234,7 @@
     "name": "PT Wrapped stkscETH 29MAY2025",
     "symbol": "PT-wstkscETH-29MAY2025",
     "decimals": 18,
-    "logoURI": "/tokens/146/wstkscETH.png",
+    "logoURI": "/tokens/146/wstkscETH.svg",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xd14117baf6ec5d12be68cd06e763a4b82c9b6d1d"
