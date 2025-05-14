@@ -7,6 +7,7 @@ import {
 const WSTKSCUSD_SONIC = "0x9fb76f7ce5FCeAA2C42887ff441D46095E494206"
 const WSTKSCETH_SONIC = "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47"
 const WOS_SONIC = "0x9F0dF7799f6FDAd409300080cfF680f5A23df4b1"
+const YUSD_SONIC = "0x4772D2e014F9fC3a820C444e3313968e9a5C8121"
 
 const sonicConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -18,6 +19,12 @@ const sonicConfig: ChainRoutingConfig = [
     },
   },
   // DEFAULTS
+  {
+    strategy: StrategyERC4626Wrapper.name(),
+    match: {
+      tokensInOrOut: [YUSD_SONIC],
+    },
+  },
   {
     strategy: StrategyBalmySDK.name(),
     config: {
