@@ -39,7 +39,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
 }
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {
-  name: "Magpie",
+  name: "Fly",
   supports: {
     chains: Object.keys(SUPPORTED_CHAINS).map(Number),
     swapAndTransfer: true,
