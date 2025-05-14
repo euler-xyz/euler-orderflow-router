@@ -101,7 +101,7 @@
     "name": "crvUSD",
     "symbol": "CRVUSD",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/30118/large/0xf939e0a03fb07f59a73314e73794be0e57ac1b4e.png?1721097561",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/30118/large/crvusd.jpg?1746670973",
     "meta": {}
   },
   {
@@ -158,7 +158,7 @@
   {
     "addressInfo": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
     "chainId": 1,
-    "name": "Frax",
+    "name": "Legacy Frax Dollar",
     "symbol": "FRAX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13422/large/frax-logo.png?1739780303",
@@ -167,10 +167,10 @@
   {
     "addressInfo": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
     "chainId": 1,
-    "name": "Frax Share",
-    "symbol": "FXS",
+    "name": "Frax (prev. FXS)",
+    "symbol": "FRAX",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/13423/large/Frax_Shares_icon.png?1696513183",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/13423/large/frax.png?1745921071",
     "meta": {}
   },
   {
@@ -856,7 +856,7 @@
   {
     "addressInfo": "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
     "chainId": 1,
-    "name": "Solv Protocol SolvBTC",
+    "name": "Solv Protocol BTC",
     "symbol": "SOLVBTC",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/36800/large/solvBTC.png?1719810684",
@@ -927,7 +927,7 @@
   {
     "addressInfo": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "chainId": 1,
-    "name": "Gravity (prev. GAL)",
+    "name": "Gravity (by Galxe)",
     "symbol": "G",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39200/large/gravity.jpg?1721020647",
@@ -1035,7 +1035,9 @@
     "symbol": "SDEUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52847/large/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
-    "meta": {}
+    "meta": {
+      "provider": "SDEUSD"
+    }
   },
   {
     "addressInfo": "0x97Ad75064b20fb2B2447feD4fa953bF7F007a706",
@@ -1126,11 +1128,32 @@
   {
     "addressInfo": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
     "chainId": 1,
-    "name": "Hashnote USYC",
+    "name": "Circle USYC",
     "symbol": "USYC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51054/large/Hashnote_SDYC_200x200.png?1730370965",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+    "chainId": 1,
+    "name": "Reservoir rUSD",
+    "symbol": "rUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54117/large/rusd_bera2.png?1738311629",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x738d1115B90efa71AE468F1287fc864775e23a31",
+    "chainId": 1,
+    "name": "Reservoir srUSD",
+    "symbol": "srUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54118/large/srUSD.png?1738313910",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
+    }
   },
   {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
@@ -1149,7 +1172,8 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51880/large/USR_LOGO.png?1732098841",
     "meta": {
-      "provider": "RESOLV"
+      "provider": "DEFILLAMA",
+      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
     }
   },
   {
@@ -1158,7 +1182,7 @@
     "name": "Savings crvUSD",
     "symbol": "SCRVUSD",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/51712/large/scrvUSD200x200.png?1731899723",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/51712/large/scrvusd.jpg?1746671018",
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "5fd328af-4203-471b-bd16-1705c726d926"
