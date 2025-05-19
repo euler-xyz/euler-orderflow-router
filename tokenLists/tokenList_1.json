@@ -27,12 +27,12 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+    "addressInfo": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
     "chainId": 1,
-    "name": "Maker",
-    "symbol": "MKR",
+    "name": "Lido Staked Ether",
+    "symbol": "STETH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/1364/large/Mark_Maker.png?1696502423",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/13442/large/steth_logo.png?1696513206",
     "meta": {}
   },
   {
@@ -46,6 +46,15 @@
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
+  },
+  {
+    "addressInfo": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+    "chainId": 1,
+    "name": "Maker",
+    "symbol": "MKR",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/1364/large/Mark_Maker.png?1696502423",
+    "meta": {}
   },
   {
     "addressInfo": "0x111111111117dC0aa78b770fA6A738034120C302",
@@ -63,6 +72,15 @@
     "symbol": "AAVE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12645/large/aave-token-round.png?1720472354",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
+    "chainId": 1,
+    "name": "EURA",
+    "symbol": "EURA",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/19479/large/agEUR-4.png?1710726218",
     "meta": {}
   },
   {
@@ -389,6 +407,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "chainId": 1,
+    "name": "Wrapped Bitcoin",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1696507857",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
     "chainId": 1,
     "name": "Wrapped eETH",
@@ -407,15 +434,6 @@
     "symbol": "YFI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/11849/large/yearn.jpg?1696511720",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
-    "chainId": 1,
-    "name": "EURA",
-    "symbol": "EURA",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/19479/large/agEUR-4.png?1710726218",
     "meta": {}
   },
   {
@@ -599,15 +617,6 @@
     "meta": {
       "provider": "ONDO"
     }
-  },
-  {
-    "addressInfo": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-    "chainId": 1,
-    "name": "Wrapped Bitcoin",
-    "symbol": "WBTC",
-    "decimals": 8,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1696507857",
-    "meta": {}
   },
   {
     "addressInfo": "0x163f8C2467924be0ae7B5347228CABF260318753",
@@ -912,6 +921,15 @@
     }
   },
   {
+    "addressInfo": "0xB1F1ee126e9c96231Cc3d3fAD7C08b4cf873b1f1",
+    "chainId": 1,
+    "name": "Beefy",
+    "symbol": "BIFI",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/12704/large/bifi.png?1698202580",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
     "chainId": 1,
     "name": "Staked USD0",
@@ -993,6 +1011,18 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x2a8c22E3b10036f3AEF5875d04f8441d4188b656",
+    "chainId": 1,
+    "name": "Midas mBASIS",
+    "symbol": "mBASIS",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x2a8c22E3b10036f3AEF5875d04f8441d4188b656.png",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "b50e0e37-2256-466b-9030-168c515a2ca4"
+    }
+  },
+  {
     "addressInfo": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
     "chainId": 1,
     "name": "RLUSD",
@@ -1040,12 +1070,32 @@
     }
   },
   {
+    "addressInfo": "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
+    "chainId": 1,
+    "name": "Resolv Liquidity Provider Token",
+    "symbol": "RLP",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "meta": {
+      "poolId": "2ad8497d-c855-4840-85ad-cdc536b92ced"
+    }
+  },
+  {
     "addressInfo": "0x97Ad75064b20fb2B2447feD4fa953bF7F007a706",
     "chainId": 1,
     "name": "StakeStone Berachain Vault Token",
     "symbol": "BERASTONE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53143/large/beraSTONE.png?1735377526",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
+    "chainId": 1,
+    "name": "OpenEden OpenDollar",
+    "symbol": "USDO",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53750/large/USDO_LOGO-white.png?1737181887",
     "meta": {}
   },
   {
@@ -1201,15 +1251,6 @@
     }
   },
   {
-    "addressInfo": "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
-    "chainId": 1,
-    "name": "OpenEden OpenDollar",
-    "symbol": "USDO",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53750/large/USDO_LOGO-white.png?1737181887",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x4342B77fE3417Bcb09d0A4383301b0DC733C755B",
     "chainId": 1,
     "name": "Swaap USDC-WETH Safeguard",
@@ -1308,18 +1349,6 @@
     }
   },
   {
-    "addressInfo": "0x2a8c22E3b10036f3AEF5875d04f8441d4188b656",
-    "chainId": 1,
-    "name": "Midas mBASIS",
-    "symbol": "mBASIS",
-    "decimals": 18,
-    "logoURI": "/tokens/1/0x2a8c22E3b10036f3AEF5875d04f8441d4188b656.png",
-    "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "b50e0e37-2256-466b-9030-168c515a2ca4"
-    }
-  },
-  {
     "addressInfo": "0x45054c6753b4Bce40C5d54418DabC20b070F85bE",
     "chainId": 1,
     "name": "IdleCDO AA Tranche - idle_Fasanara",
@@ -1327,17 +1356,6 @@
     "decimals": 18,
     "logoURI": "/tokens/1/0x45054c6753b4Bce40C5d54418DabC20b070F85bE.svg",
     "meta": {}
-  },
-  {
-    "addressInfo": "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
-    "chainId": 1,
-    "name": "Resolv Liquidity Provider Token",
-    "symbol": "RLP",
-    "decimals": 18,
-    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
-    "meta": {
-      "poolId": "2ad8497d-c855-4840-85ad-cdc536b92ced"
-    }
   },
   {
     "addressInfo": "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
@@ -1408,6 +1426,15 @@
     "meta": {
       "provider": "NOON"
     }
+  },
+  {
+    "addressInfo": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
+    "chainId": 1,
+    "name": "Syrup USDC",
+    "symbol": "syrupUSDC",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
+    "meta": {}
   },
   {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
