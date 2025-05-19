@@ -1437,6 +1437,33 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x6Bf340dB729d82af1F6443A0Ea0d79647b1c3DDf",
+    "chainId": 1,
+    "name": "Turtle TAC BTC Vault",
+    "symbol": "tacBTC",
+    "decimals": 8,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x294eecec65A0142e84AEdfD8eB2FBEA8c9a9fbad",
+    "chainId": 1,
+    "name": "Turtle TAC ETH Vault",
+    "symbol": "tacETH",
+    "decimals": 18,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x699e04F98dE2Fc395a7dcBf36B48EC837A976490",
+    "chainId": 1,
+    "name": "Turtle TAC USD Vault",
+    "symbol": "tacUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
