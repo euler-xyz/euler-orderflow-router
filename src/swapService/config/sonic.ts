@@ -20,12 +20,6 @@ const sonicConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyERC4626Wrapper.name(),
-    match: {
-      tokensInOrOut: [YUSD_SONIC],
-    },
-  },
-  {
     strategy: StrategyBalmySDK.name(),
     config: {
       sourcesFilter: {
@@ -50,7 +44,7 @@ const sonicConfig: ChainRoutingConfig = [
   {
     strategy: StrategyERC4626Wrapper.name(),
     match: {
-      tokensInOrOut: [WSTKSCUSD_SONIC, WSTKSCETH_SONIC, WOS_SONIC],
+      tokensInOrOut: [WSTKSCUSD_SONIC, WSTKSCETH_SONIC, WOS_SONIC, YUSD_SONIC],
     },
   },
 ]
