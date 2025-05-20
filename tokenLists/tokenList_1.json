@@ -1760,5 +1760,17 @@
       "isPendlePT": true,
       "pendleMarket": "0x4339ffe2b7592dc783ed13cce310531ab366deac"
     }
+  },
+  {
+    "addressInfo": "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
+    "chainId": 1,
+    "name": "PT Syrup USDC 28AUG2025",
+    "symbol": "PT-syrupUSDC-28AUG2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9a63fa80b5ddfd3cab23803fdb93ad2c18f3d5aa"
+    }
   }
 ]
