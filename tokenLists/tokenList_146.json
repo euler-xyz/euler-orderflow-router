@@ -161,17 +161,6 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
-    "chainId": 146,
-    "name": "YieldFi yUSD",
-    "symbol": "yUSD",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
-    "meta": {
-      "provider": "YIELDFI"
-    }
-  },
-  {
     "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
     "chainId": 146,
     "name": "Stream USD",
