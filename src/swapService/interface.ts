@@ -72,6 +72,7 @@ export interface StrategyMatchConfig {
   isPendlePT?: boolean
   notPendlePT?: boolean
   tokensInOrOut?: Address[]
+  tokensIn?: Address[]
   excludeTokensInOrOut?: Address[]
   repayVaults?: Address[]
   trades?: {

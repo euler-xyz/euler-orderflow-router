@@ -62,6 +62,14 @@ export function matchParams(
     )
       return false
   }
+  if (match.tokensIn) {
+    if (
+      !match.tokensIn.some((token: Hex) => {
+        return isAddressEqual(swapParams.tokenIn.addressInfo, token)
+      })
+    )
+      return false
+  }
   if (match.excludeTokensInOrOut) {
     if (
       match.excludeTokensInOrOut.some((token: Hex) => {

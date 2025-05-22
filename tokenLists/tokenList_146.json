@@ -158,16 +158,20 @@
     "symbol": "x33",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54526/large/shadow_liquid_staking_token17400.jpg?1740148577",
-    "meta": {}
+    "meta": {
+      "provider": "SHADOW"
+    }
   },
   {
-    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
+    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
     "chainId": 146,
-    "name": "Stream USD",
-    "symbol": "streamUSD",
-    "decimals": 6,
-    "logoURI": "/tokens/146/sS.svg",
-    "meta": {}
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
+    "meta": {
+      "provider": "YIELDFI"
+    }
   },
   {
     "addressInfo": "0x6202B9f02E30E5e1c62Cc01E4305450E5d83b926",
@@ -175,8 +179,10 @@
     "name": "Staked Stream USD",
     "symbol": "xUSD",
     "decimals": 6,
-    "logoURI": "/tokens/146/sS.svg",
-    "meta": {}
+    "logoURI": "/tokens/146/xusd.svg",
+    "meta": {
+      "provider": "STREAM"
+    }
   },
   {
     "addressInfo": "0x8e15C8D399e86d4FD7B427D42f06c60cDD9397e7",
