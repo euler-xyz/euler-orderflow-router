@@ -118,7 +118,7 @@ export class StrategyCombinedUniswap {
         exactInputQuotes.map(async (exactInputQuote) => {
           const uniswapSwapParams = {
             ...swapParams,
-            amount: swapParams.amount - BigInt(exactInputQuote.amountOutMin),
+            amount: swapParams.amount - BigInt(exactInputQuote.amountOut),
             receiver: swapParams.from,
           }
 
