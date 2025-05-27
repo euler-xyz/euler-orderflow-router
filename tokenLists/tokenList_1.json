@@ -1206,12 +1206,21 @@
     }
   },
   {
+    "addressInfo": "0x7C1156E515aA1A2E851674120074968C905aAF37",
+    "chainId": 1,
+    "name": "Level USD",
+    "symbol": "lvlUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53150/large/lvlusd-logo.png?1735406507",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
     "symbol": "BEAM",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/32417/large/chain-logo.png?1698114384",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/32417/large/cgicon.png?1747892021",
     "meta": {}
   },
   {
@@ -1464,6 +1473,17 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x4737D9b4592B40d51e110b94c9C043c6654067Ae",
+    "chainId": 1,
+    "name": "Staked lvlUSD",
+    "symbol": "slvlUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54094/large/slvlusd.png?1738222536",
+    "meta": {
+      "provider": "LEVEL"
+    }
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
@@ -1483,6 +1503,78 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
     "meta": {
       "poolId": "08d1f13b-5d65-42c5-863d-fcb447dcea75"
+    }
+  },
+  {
+    "addressInfo": "0x7f01d0FCe9BC646389483384C41B4d71c7139f11",
+    "chainId": 1,
+    "name": "PT-mEDGE-31JUL2025",
+    "symbol": "PT-mEDGE-31JUL2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xcbeed3364912bcee868cfa9cff6fe865c85ea094"
+    }
+  },
+  {
+    "addressInfo": "0x1132065009850C72E27B7950C0f9285d1D103589",
+    "chainId": 1,
+    "name": "PT-mMEV-31JUL2025",
+    "symbol": "PT-mMEV-31JUL2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x266728b30c98b24de810e3325adc615486988cb2"
+    }
+  },
+  {
+    "addressInfo": "0x207F7205fd6c4b602Fa792C8b2B60e6006D4a0b8",
+    "chainId": 1,
+    "name": "PT-lvlUSD-25SEP2025",
+    "symbol": "PT-lvlUSD-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53150/large/lvlusd-logo.png?1735406507",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x461bc2ac3f80801bc11b0f20d63b73fef60c8076"
+    }
+  },
+  {
+    "addressInfo": "0x2CA5f2C4300450D53214B00546795c1c07B89acB",
+    "chainId": 1,
+    "name": "PT-slvlUSD-25SEP2025",
+    "symbol": "PT-slvlUSD-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54094/large/slvlusd.png?1738222536",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xc88ff954d42d3e11d43b62523b3357847c29377c"
+    }
+  },
+  {
+    "addressInfo": "0x14Bdc3A3AE09f5518b923b69489CBcAfB238e617",
+    "chainId": 1,
+    "name": "PT-eUSDE-14AUG2025",
+    "symbol": "PT-eUSDE-14AUG2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xe93b4a93e80bd3065b290394264af5d82422ee70"
+    }
+  },
+  {
+    "addressInfo": "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
+    "chainId": 1,
+    "name": "PT Syrup USDC 28AUG2025",
+    "symbol": "PT-syrupUSDC-28AUG2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9a63fa80b5ddfd3cab23803fdb93ad2c18f3d5aa"
     }
   },
   {
@@ -1759,18 +1851,6 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x4339ffe2b7592dc783ed13cce310531ab366deac"
-    }
-  },
-  {
-    "addressInfo": "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
-    "chainId": 1,
-    "name": "PT Syrup USDC 28AUG2025",
-    "symbol": "PT-syrupUSDC-28AUG2025",
-    "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
-    "meta": {
-      "isPendlePT": true,
-      "pendleMarket": "0x9a63fa80b5ddfd3cab23803fdb93ad2c18f3d5aa"
     }
   }
 ]
