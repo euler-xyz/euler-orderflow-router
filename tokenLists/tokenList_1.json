@@ -1506,6 +1506,30 @@
     }
   },
   {
+    "addressInfo": "0x742B4166878Bfd339Db65a29a17E49b81a6B6Aac",
+    "chainId": 1,
+    "name": "PT-RLP-4SEP2025",
+    "symbol": "PT-RLP-4SEP2025",
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x55f06992e4c3ed17df830da37644885c0c34edda"
+    }
+  },
+  {
+    "addressInfo": "0xedCe58C0d14A9Beaa4F053EBdbdb2DF83F211118",
+    "chainId": 1,
+    "name": "PT-USN-31JUL2025",
+    "symbol": "PT-USN-31JUL2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x11f7f8aa7bb5abf819544d502d0f365c4cb0dfeb"
+    }
+  },
+  {
     "addressInfo": "0x7f01d0FCe9BC646389483384C41B4d71c7139f11",
     "chainId": 1,
     "name": "PT-mEDGE-31JUL2025",
