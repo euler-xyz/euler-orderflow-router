@@ -40,6 +40,7 @@ import {
   quoteToRoute,
 } from "../utils"
 import { CustomSourceList } from "./balmySDK/customSourceList"
+import { StubGasPriceSource } from "./balmySDK/stubGasPriceSource"
 import { TokenlistMetadataSource } from "./balmySDK/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
@@ -88,7 +89,15 @@ export class StrategyBalmySDK {
   constructor(match = {}, config?: BalmyStrategyConfig) {
     this.config = { ...defaultConfig, ...(config || {}) }
     const fetchService = buildFetchService()
-    const providerService = buildProviderService()
+    const providerService = buildProviderService({
+      source: {
+        type: "public-rpcs",
+        rpcsPerChain: combinePublicAndPrivateRPCs(),
+        config: {
+          type: "fallback",
+        },
+      },
+    })
 
     const buildParams: BuildParams = {
       quotes: {
@@ -151,6 +160,12 @@ export class StrategyBalmySDK {
           config: {
             type: "fallback",
           },
+        },
+      },
+      gas: {
+        source: {
+          type: "custom",
+          instance: new StubGasPriceSource(providerService),
         },
       },
     } as BuildParams
