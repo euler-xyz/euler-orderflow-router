@@ -270,5 +270,29 @@
       "isPendlePT": true,
       "pendleMarket": "0x3f5ea53d1160177445b1898afbb16da111182418"
     }
+  },
+  {
+    "addressInfo": "0x0Fb682C9692AddCc1769f4D4d938c54420D54fA3",
+    "chainId": 146,
+    "name": "PT-wstkscUSD-18DEC2025",
+    "symbol": "PT-wstkscUSD-18DEC2025",
+    "decimals": 6,
+    "logoURI": "/tokens/146/wstkscUSD.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x004f76045b42ef3e89814b12b37e69da19c8a212"
+    }
+  },
+  {
+    "addressInfo": "0x7e52f587f5B870D4C2cac8559ac4c49742D31a28",
+    "chainId": 146,
+    "name": "PT-wstkscETH-18DEC2025",
+    "symbol": "PT-wstkscETH-18DEC2025",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wstkscETH.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x7e2bcdb749d90aa1e9e7262872ac8b1e062b2c4d"
+    }
   }
 ]

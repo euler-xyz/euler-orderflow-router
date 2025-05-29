@@ -887,9 +887,7 @@
     "symbol": "AUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a.png",
-    "meta": {
-      "provider": "HASHNOTE"
-    }
+    "meta": {}
   },
   {
     "addressInfo": "0x437cc33344a0B27A429f795ff6B469C72698B291",
@@ -1120,17 +1118,6 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "0ffd2dc2-72d2-449f-8cac-34a09ce6f323"
-    }
-  },
-  {
-    "addressInfo": "0x1CE7D9942ff78c328A4181b9F3826fEE6D845A97",
-    "chainId": 1,
-    "name": "YieldFi yToken",
-    "symbol": "YUSD",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
-    "meta": {
-      "provider": "YIELDFI"
     }
   },
   {
