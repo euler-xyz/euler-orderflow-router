@@ -100,6 +100,12 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     },
   },
   {
+    strategy: StrategyRedirectDepositWrapper.name(),
+    match: {
+      repayVaults: [USUAL_USD0_VAULT_MAINNET],
+    },
+  },
+  {
     strategy: StrategyCombinedUniswap.name(),
     match: {
       swapperModes: [SwapperMode.TARGET_DEBT],
@@ -108,13 +114,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     },
   },
   // FALLBACKS
-  // If exact out for Usual's USD0 repay doesn't work, over swap with deposit to escrow
-  {
-    strategy: StrategyRedirectDepositWrapper.name(),
-    match: {
-      repayVaults: [USUAL_USD0_VAULT_MAINNET],
-    },
-  },
   // Binary search overswap for target  debt
   {
     strategy: StrategyBalmySDK.name(),
