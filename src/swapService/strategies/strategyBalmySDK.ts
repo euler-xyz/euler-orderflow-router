@@ -162,12 +162,12 @@ export class StrategyBalmySDK {
           },
         },
       },
-      gas: {
-        source: {
-          type: "custom",
-          instance: new StubGasPriceSource(providerService),
-        },
-      },
+      // gas: {
+      //   source: {
+      //     type: "custom",
+      //     instance: new StubGasPriceSource(providerService),
+      //   },
+      // },
     } as BuildParams
     this.sdk = buildSDK(buildParams)
     this.match = match
