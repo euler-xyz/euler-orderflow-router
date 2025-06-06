@@ -811,7 +811,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
     "meta": {
-      "provider": "SUSDS"
+      "provider": "SPARK"
     }
   },
   {
@@ -1126,7 +1126,7 @@
     "name": "Treehouse ETH",
     "symbol": "TETH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_logo_2_%281%29.png?1726079209",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_Logo_%28Color__No_Background%29.png?1748368386",
     "meta": {
       "provider": "TREEHOUSE"
     }
@@ -1862,6 +1862,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x4339ffe2b7592dc783ed13cce310531ab366deac"
+    }
+  },
+  {
+    "addressInfo": "0x7c5aA3E49d46e582f50287f70695278d962392dF",
+    "chainId": 1,
+    "name": "PT-sUSN-31JUL2025",
+    "symbol": "PT-sUSN-31JUL2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54924/large/sUSN_Logo.png?1742538935",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xdcbc2e70ab9bfdd873a3f92f264d9fcd730680c7"
     }
   }
 ]

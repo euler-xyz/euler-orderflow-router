@@ -175,7 +175,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
     "meta": {
-      "provider": "SUSDS"
+      "provider": "SPARK"
     }
   },
   {
@@ -224,7 +224,10 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33800/standard/Icon___Dark.png",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
   },
   {
     "addressInfo": "0x04D5ddf5f3a8939889F11E97f8c4BB48317F1938",

@@ -89,7 +89,7 @@
     "symbol": "USDT0",
     "name": "Tether USD Coin",
     "decimals": 6,
-    "logoURI": "https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661",
+    "logoURI": "/tokens/130/usdt0.png",
     "meta": {}
   },
   {
@@ -110,9 +110,7 @@
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738837560/tokens/iaynouqgjmryrzl0wcvx.png",
     "symbol": "iBGT",
     "name": "iBGT",
-    "meta": {
-      "provider": "IBGT"
-    }
+    "meta": {}
   },
   {
     "chainId": 80094,
@@ -255,27 +253,9 @@
     "symbol": "BB.SNECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
-    "chainId": 80094,
-    "name": "NECT/USDC/HONEY BurrBear LP",
-    "symbol": "NECT-USDC-HONEY-BurrBear-LP",
-    "decimals": 18,
-    "logoURI": "/tokens/80094/empty-token.svg",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
-    "chainId": 80094,
-    "name": "PT Ethena sUSDE 25SEP2025",
-    "symbol": "PT-sUSDE-25SEP2025",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
     "meta": {
-      "isPendlePT": true,
-      "pendleMarket": "0xd8079e0929d67390067529974b116212903cac69"
+      "provider": "DEFILLAMA",
+      "poolId": "30dd2264-82da-40d1-b28d-87e94fc9c2e7"
     }
   },
   {
@@ -297,6 +277,27 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "9ccbebab-a66d-4b9e-bf6a-47ea1d638874"
+    }
+  },
+  {
+    "addressInfo": "0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
+    "chainId": 80094,
+    "name": "NECT/USDC/HONEY BurrBear LP",
+    "symbol": "NECT-USDC-HONEY-BurrBear-LP",
+    "decimals": 18,
+    "logoURI": "/tokens/80094/empty-token.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
+    "chainId": 80094,
+    "name": "PT Ethena sUSDE 25SEP2025",
+    "symbol": "PT-sUSDE-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xd8079e0929d67390067529974b116212903cac69"
     }
   }
 ]

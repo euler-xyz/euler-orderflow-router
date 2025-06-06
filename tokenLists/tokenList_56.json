@@ -163,7 +163,9 @@
     "symbol": "YUSD",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
-    "meta": {}
+    "meta": {
+      "provider": "AEGIS"
+    }
   },
   {
     "addressInfo": "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",

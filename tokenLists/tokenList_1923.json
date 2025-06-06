@@ -51,7 +51,10 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
   },
   {
     "addressInfo": "0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
@@ -95,9 +98,7 @@
     "symbol": "USDe",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33613/standard/usde.png?1733810059",
-    "meta": {
-      "provider": "USDE"
-    }
+    "meta": {}
   },
   {
     "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -137,6 +138,24 @@
     "symbol": "SWELL",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/28777/standard/swell1.png?1727899715",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1",
+    "chainId": 1923,
+    "name": "wSWELL",
+    "symbol": "wSWELL",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/28777/standard/swell1.png?1727899715",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
+    "chainId": 1923,
+    "name": "Relend Network USDC",
+    "symbol": "rUSDC",
+    "decimals": 6,
+    "logoURI": "/tokens/1923/rusdc.jpg",
     "meta": {}
   },
   {

@@ -1,5 +1,14 @@
 [
   {
+    "addressInfo": "0x1b0e3Da51b2517E09aE74CD31b708e46B9158E8b",
+    "chainId": 130,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x4200000000000000000000000000000000000006",
     "chainId": 130,
     "name": "Wrapped Ether",
@@ -69,7 +78,10 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
   },
   {
     "addressInfo": "0x9151434b16b9763660705744891fA906F660EcC5",
@@ -81,12 +93,32 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x927B51f251480a681271180DA4de28D44EC4AfB8",
+    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
     "chainId": 130,
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54335/large/wbtc.jpg?1739334808",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x14d9143BEcC348920b68D123687045db49a016C6",
+    "chainId": 130,
+    "name": "Spark USDC",
+    "symbol": "sUSDC",
+    "decimals": 18,
+    "logoURI": "/tokens/130/sUSDC.svg",
+    "meta": {
+      "provider": "SPARK"
+    }
+  },
+  {
+    "addressInfo": "0xE9C43e09C5FA733bCC2aEAa96063A4a60147AA09",
+    "chainId": 130,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
   }
 ]
