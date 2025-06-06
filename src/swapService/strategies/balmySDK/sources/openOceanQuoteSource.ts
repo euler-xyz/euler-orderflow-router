@@ -120,7 +120,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
     const legacyGasPrice = eip1159ToLegacy(gasPriceResult)
     const gasPrice = Number.parseFloat(formatUnits(legacyGasPrice, 9))
     const amount = formatUnits(order.sellAmount, sellTokenDataResult.decimals)
-    const { chainKey, nativeAsset } = SUPPORTED_CHAINS[chainId]
+    const { nativeAsset } = SUPPORTED_CHAINS[chainId]
     const native = nativeAsset ?? Addresses.NATIVE_TOKEN
     const queryParams = {
       inTokenAddress: isSameAddress(sellToken, Addresses.NATIVE_TOKEN)
@@ -140,7 +140,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       skipNulls: true,
       arrayFormat: "comma",
     })
-    const url = `https://open-api-pro.openocean.finance/v3/${chainKey}/swap_quote?${queryString}`
+    const url = `https://open-api-pro.openocean.finance/v3/${chainId}/swap_quote?${queryString}`
     const headers: Record<string, string> = {}
     if (config.apiKey) {
       headers["apikey"] = config.apiKey
