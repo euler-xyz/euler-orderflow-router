@@ -21,7 +21,7 @@ const bscRoutingConfig: ChainRoutingConfig = [
           "odos",
           "1inch",
           "li-fi",
-          // "open-ocean", // crazy quotes for wbnb, slisbnb
+          "open-ocean",
           "uniswap",
           "oku",
           "magpie",
