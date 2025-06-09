@@ -32,6 +32,30 @@ export const bartio = defineChain({
   },
 })
 
+export const unichain = defineChain({
+  id: 130,
+  name: "Unichain",
+  nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ["https://mainnet.unichain.org/"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Uniscan",
+      url: "https://uniscan.xyz",
+      apiUrl: "https://api.uniscan.xyz/api",
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: "0xca11bde05977b3631167028862be2a173976ca11",
+      blockCreated: 0,
+    },
+  },
+})
+
 export const berachain = defineChain({
   id: 80094,
   name: "Berachain",
@@ -87,6 +111,7 @@ export const RPC_URLS: Record<number, string> = {
   [berachain.id]: process.env.RPC_URL_80094 || "",
   [chains.avalanche.id]: process.env.RPC_URL_43114 || "",
   [146]: process.env.RPC_URL_146 || "",
+  [130]: process.env.RPC_URL_130 || "",
   [chains.foundry.id]: process.env.RPC_URL_31337 || "http://localhost:8545",
 } as const
 
@@ -128,6 +153,7 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     chain: chains.avalanche,
     transport: http(RPC_URLS[chains.avalanche.id]),
   }),
+  [unichain.id]: createChainConfig(unichain),
 })
 
 export const viemClients = createClients()

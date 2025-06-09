@@ -9,6 +9,7 @@ import defaultRoutingConfig from "./default"
 import mainnetRoutingConfig from "./mainnet"
 import sonicRoutingConfig from "./sonic"
 import swellRoutingConfig from "./swell"
+import unichainRoutingConfig from "./unichain"
 
 const routingConfig: RoutingConfig = {
   [mainnet.id]: mainnetRoutingConfig,
@@ -19,6 +20,7 @@ const routingConfig: RoutingConfig = {
   [80094]: berachainRoutingConfig,
   [60808]: bobRoutingConfig,
   [146]: sonicRoutingConfig,
+  [130]: unichainRoutingConfig,
 }
 
 export const getRoutingConfig = (chainId: number) => {

@@ -140,6 +140,13 @@ const defaultConfig: {
       asset: "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
       assetDustEVault: "0xf524d75b7Fedf6301996A21337FFA45D330e60EF",
     },
+    {
+      chainId: 130,
+      protocol: "sUSDC",
+      vault: "0x14d9143BEcC348920b68D123687045db49a016C6",
+      asset: "0x078D782b760474a361dDA0AF3839290b0EF57AD6",
+      assetDustEVault: "0x2888F098157162EC4a4274F7ad2c69921e95834D",
+    },
   ],
 }
 
