@@ -1843,7 +1843,7 @@
   {
     "addressInfo": "0x933B9FfEE0Ad3Ef8E4DBb52688ea905826D73755",
     "chainId": 1,
-    "name": "PT Compounding Open Dollar 19JUN2025",
+    "name": "PT-cUSDO-19JUN2025",
     "symbol": "PT-cUSDO-19JUN2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
@@ -1874,6 +1874,30 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xdcbc2e70ab9bfdd873a3f92f264d9fcd730680c7"
+    }
+  },
+  {
+    "addressInfo": "0xFfEc096c087C13Cc268497B89A613cACE4DF9A48",
+    "chainId": 1,
+    "name": "PT-USDS-14AUG2025",
+    "symbol": "PT-USDS-14AUG2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xdace1121e10500e9e29d071f01593fd76b000f08"
+    }
+  },
+  {
+    "addressInfo": "0xB10DA2F9147f9cf2B8826877Cd0c95c18A0f42dc",
+    "chainId": 1,
+    "name": "PT-cUSDO-20NOV2025",
+    "symbol": "PT-cUSDO-20NOV2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
     }
   }
 ]
