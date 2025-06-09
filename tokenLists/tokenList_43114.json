@@ -170,5 +170,23 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xDBc5192A6B6FfEe7451301bb4ec312f844F02B4A",
+    "chainId": 43114,
+    "name": "Unity",
+    "symbol": "UTY",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/uty.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x580d5E1399157FD0d58218b7A514b60974F2AB01",
+    "chainId": 43114,
+    "name": "Staked UTY",
+    "symbol": "yUTY",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/yuty.png",
+    "meta": {}
   }
 ]
