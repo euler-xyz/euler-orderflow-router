@@ -398,15 +398,6 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x8E870D67F660D95d5be530380D0eC0bd388289E1",
-    "chainId": 1,
-    "name": "Pax Dollar",
-    "symbol": "USDP",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/6013/large/Pax_Dollar.png?1696506427",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     "chainId": 1,
     "name": "Wrapped Bitcoin",
@@ -605,6 +596,15 @@
     "symbol": "SFRXETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/28285/large/sfrxETH_icon.png?1696527285",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x8E870D67F660D95d5be530380D0eC0bd388289E1",
+    "chainId": 1,
+    "name": "Pax Dollar",
+    "symbol": "USDP",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/6013/large/Pax_Dollar.png?1696506427",
     "meta": {}
   },
   {
@@ -842,15 +842,6 @@
     "symbol": "USDM",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31719/large/usdm.png?1696530540",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0x56072C95FAA701256059aa122697B133aDEd9279",
-    "chainId": 1,
-    "name": "Sky",
-    "symbol": "SKY",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/39925/large/sky.jpg?1724827980",
     "meta": {}
   },
   {
@@ -1430,7 +1421,9 @@
     "symbol": "syrupUSDC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x6Bf340dB729d82af1F6443A0Ea0d79647b1c3DDf",
@@ -1468,6 +1461,26 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/54094/large/slvlusd.png?1738222536",
     "meta": {
       "provider": "LEVEL"
+    }
+  },
+  {
+    "addressInfo": "0x6440f144b7e50D6a8439336510312d2F54beB01D",
+    "chainId": 1,
+    "name": "BOLD Stablecoin",
+    "symbol": "BOLD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56069/large/BOLD_logo.png?1748265087",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11",
+    "chainId": 1,
+    "name": "sBOLD",
+    "symbol": "sBOLD",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
+    "meta": {
+      "provider": "STABLEWATCH"
     }
   },
   {
