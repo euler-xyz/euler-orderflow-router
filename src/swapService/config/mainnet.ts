@@ -36,10 +36,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   },
   // SPECIAL CASE TOKENS
   {
-    strategy: StrategyMidas.name(),
-    match: {}, // supports function will match mTokens
-  },
-  {
     strategy: StrategyIdleCDOTranche.name(),
     match: { tokensInOrOut: [IDLEAATRANCHEFASANARA_MAINNET] },
   },
