@@ -69,6 +69,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
           "li-fi",
           "open-ocean",
           "magpie",
+          "okx",
         ],
       },
     },

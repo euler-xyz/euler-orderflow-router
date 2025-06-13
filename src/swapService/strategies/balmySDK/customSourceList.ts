@@ -15,6 +15,7 @@ import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
 import { CustomOdosQuoteSource } from "./sources/odosQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
+import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
 import { CustomOneInchQuoteSource } from "./sources/oneInchQuoteSource"
 import { CustomOogaboogaQuoteSource } from "./sources/oogaboogaQuoteSource"
 import { CustomOpenOceanQuoteSource } from "./sources/openOceanQuoteSource"
@@ -38,6 +39,7 @@ const customSources = {
   magpie: new CustomMagpieQuoteSource(),
   kyberswap: new CustomKyberswapQuoteSource(),
   enso: new CustomEnsoQuoteSource(),
+  "okx-dex": new CustomOKXDexQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
