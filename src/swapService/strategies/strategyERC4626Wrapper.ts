@@ -106,6 +106,13 @@ const defaultConfig: {
       assetDustEVault: "0x98238Ee86f2c571AD06B0913bef21793dA745F57",
     },
     {
+      chainId: 1,
+      protocol: "sUSP",
+      vault: "0x271C616157e69A43B4977412A64183Cf110Edf16",
+      asset: "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
+      assetDustEVault: "0x15bdfb8701b40E2AC3C7e432801329159A54eBc8",
+    },
+    {
       chainId: 43114,
       protocol: "savUSD",
       vault: "0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",

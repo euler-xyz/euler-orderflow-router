@@ -24,6 +24,7 @@ const IDLEAATRANCHEFASANARA_MAINNET =
 const CUSDOUSDC_CURVELP_MAINNET = "0x90455bd11Ce8a67C57d467e634Dc142b8e4105Aa"
 
 const USUAL_USD0_VAULT_MAINNET = "0xd001f0a15D272542687b2677BA627f48A4333b5d"
+const SUSP_MAINNET = "0x271C616157e69A43B4977412A64183Cf110Edf16"
 
 const mainnetRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -50,8 +51,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
         WSTUSR_MAINNET,
         PT_WSTUSR1740182579,
         EUSDE_MAINNET,
-        // YNETH_MAINNET,
-        // YNETHX_MAINNET,
+        SUSP_MAINNET,
       ],
       excludeTokensInOrOut: [PT_WSTUSR_27MAR2025_MAINNET],
     },
@@ -114,6 +114,10 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     },
   },
   // FALLBACKS
+  {
+    strategy: StrategyMidas.name(),
+    match: {},
+  },
   // Binary search overswap for target  debt
   {
     strategy: StrategyBalmySDK.name(),
