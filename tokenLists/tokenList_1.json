@@ -1912,5 +1912,16 @@
       "isPendlePT": true,
       "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
     }
+  },
+  {
+    "addressInfo": "0x271C616157e69A43B4977412A64183Cf110Edf16",
+    "chainId": 1,
+    "name": "Pareto staked USP",
+    "symbol": "sUSP",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/66569/large/sUSP_icon.png?1749795733",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
