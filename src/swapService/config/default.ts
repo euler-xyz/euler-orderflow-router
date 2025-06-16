@@ -26,6 +26,7 @@ const defaultRoutingConfig: ChainRoutingConfig = [
           "oku",
           "magpie",
           "enso",
+          "okx-dex",
         ],
       },
     },

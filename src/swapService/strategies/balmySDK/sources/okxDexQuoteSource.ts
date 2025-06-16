@@ -229,7 +229,7 @@ async function fetch({
 
   const url = `https://web3.okx.com${path}`
   const response = await fetchService.fetch(url, { timeout, headers })
-  console.log("response: ", response.status)
+
   if (!response.ok) {
     failed(
       OKX_DEX_METADATA,

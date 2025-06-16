@@ -27,7 +27,14 @@ const unichainRoutingConfig: ChainRoutingConfig = [
     strategy: StrategyBalmySDK.name(),
     config: {
       sourcesFilter: {
-        includeSources: ["kyberswap", "li-fi", "open-ocean", "uniswap", "enso"],
+        includeSources: [
+          "kyberswap",
+          "li-fi",
+          "open-ocean",
+          "uniswap",
+          "enso",
+          "okx-dex",
+        ],
       },
     },
     match: {},

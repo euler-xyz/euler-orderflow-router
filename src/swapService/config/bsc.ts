@@ -27,6 +27,7 @@ const bscRoutingConfig: ChainRoutingConfig = [
           "magpie",
           "enso",
           "pendle",
+          "okx-dex",
         ],
       },
     },
