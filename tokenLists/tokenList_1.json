@@ -169,8 +169,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
+      "provider": "RENZO"
     }
   },
   {
@@ -928,7 +927,7 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "55b0893b-1dbb-47fd-9912-5e439cd3d511",
-      "doesNotAutoCompound": true
+      "claimUrl": "https://app.usual.money"
     }
   },
   {
@@ -1484,6 +1483,164 @@
     }
   },
   {
+    "addressInfo": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
+    "chainId": 1,
+    "name": "Pareto synthetic dollar USP",
+    "symbol": "USP",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x271C616157e69A43B4977412A64183Cf110Edf16",
+    "chainId": 1,
+    "name": "Pareto staked USP",
+    "symbol": "sUSP",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/66569/large/sUSP_icon.png?1749795733",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x5C1452F2e4206D2C81DE6Da1BB35Bd8BDD1FebA3",
+    "chainId": 1,
+    "name": "NapierV2-PT-Pareto staked USP@29/7/2025",
+    "symbol": "PT-sUSP@29/7/2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "FIXME"
+    }
+  },
+  {
+    "addressInfo": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
+    "chainId": 1,
+    "name": "$YU",
+    "symbol": "YU",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x076BdA095a434a7B00733115A0D679DE6478d9f8",
+    "chainId": 1,
+    "name": "PT Yala stablecoin 4SEP2025",
+    "symbol": "PT-YU-4SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x23f0decc26eceeafa5cc900f8b47d99ff94ddd2b"
+    }
+  },
+  {
+    "addressInfo": "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+    "chainId": 1,
+    "name": "Dola USD Stablecoin",
+    "symbol": "DOLA",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/14287/large/dola.png?1696513984",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+    "chainId": 1,
+    "name": "Staked DOLA",
+    "symbol": "sDOLA",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/35495/large/sDOLAlogoFINAL.png?1708922289",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x85E30b8b263bC64d94b827ed450F2EdFEE8579dA",
+    "chainId": 1,
+    "name": "USDaf Stablecoin",
+    "symbol": "USDaf",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56060/large/USDaf.png?1748165829",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94",
+    "chainId": 1,
+    "name": "Savings USDaf",
+    "symbol": "sUSDaf",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94.svg",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2",
+    "chainId": 1,
+    "name": "Falcon USD",
+    "symbol": "USDf",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54558/large/ff_200_X_200.png?1740741076",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0",
+    "chainId": 1,
+    "name": "Staked Falcon USD",
+    "symbol": "sUSDf",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0xAB365C0879024481E4ad3b47bd6FeA9c10014FbC",
+    "chainId": 1,
+    "name": "PT-sUSDf-25SEP2025",
+    "symbol": "PT-sUSDf-25SEP2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "FIXME"
+    }
+  },
+  {
+    "addressInfo": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
+    "chainId": 1,
+    "name": "yoETH",
+    "symbol": "yoETH",
+    "decimals": 18,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+    "chainId": 1,
+    "name": "yoBTC",
+    "symbol": "yoBTC",
+    "decimals": 8,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
+    "chainId": 1,
+    "name": "yoUSD",
+    "symbol": "yoUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
@@ -1911,17 +2068,6 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
-    }
-  },
-  {
-    "addressInfo": "0x271C616157e69A43B4977412A64183Cf110Edf16",
-    "chainId": 1,
-    "name": "Pareto staked USP",
-    "symbol": "sUSP",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/66569/large/sUSP_icon.png?1749795733",
-    "meta": {
-      "provider": "STABLEWATCH"
     }
   }
 ]
