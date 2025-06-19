@@ -26,7 +26,7 @@ const baseRoutingConfig: ChainRoutingConfig = [
       sourcesFilter: {
         includeSources: [
           "kyberswap",
-          // "paraswap",
+          "paraswap",
           "odos",
           "1inch",
           "li-fi",

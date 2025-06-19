@@ -86,6 +86,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       sourcesFilter: {
         includeSources: [
           "kyberswap",
+          "paraswap",
           "odos",
           "1inch",
           "li-fi",
@@ -126,6 +127,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     config: {
       sourcesFilter: {
         includeSources: [
+          "paraswap",
           "kyberswap",
           "odos",
           "1inch",
