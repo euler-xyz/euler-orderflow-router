@@ -69,7 +69,7 @@ const queryParams = {
   accountIn: connectedAccount,
   accountOut: connectedAccount,
   slippage: "0.1", // 0.1%
-  deadline: String(Date.now() / 1000 + 10 * 60), // 10 minutes from now
+  deadline: String(Math.floor(Date.now() / 1000) + 10 * 60), // 10 minutes from now
   swapperMode: "2", // target debt mode
   isRepay: "true",
 }
@@ -77,12 +77,12 @@ const queryParams = {
 const { data: response } = await axios.get(
   `${SWAP_API_URL}/swap`,
   {
-    params: requstParams,
+    params: queryParams,
   },
 )
 
 // Encode EVC batch
-const batchItems = 
+const batchItems = [
   // Withdraw collateral to the Swapper contract
   {
     targetContract: collateralVault,
@@ -90,9 +90,9 @@ const batchItems =
     value: 0,
     data: encodeFunctionData({
       abi: EVAULT_ABI,
-      functionName: "withdraw"
+      functionName: "withdraw",
       args: [response.data.amountInMax, response.data.swap.swapperAddress, connectedAccount]
-    }
+    })
   },
   // execute Swapper payload from the API response
   {
@@ -108,7 +108,7 @@ const batchItems =
     value: 0,
     data: response.data.verify.verifierData
   },
-))
+]
 
 const evcBatch = encodeFunctionData({
   abi: EVC_ABI,
