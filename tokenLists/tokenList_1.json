@@ -413,8 +413,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
+      "provider": "ETHERFI"
     }
   },
   {
@@ -1192,6 +1191,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
+    "chainId": 1,
+    "name": "Pareto synthetic dollar USP",
+    "symbol": "USP",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88.png",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -1483,15 +1491,6 @@
     }
   },
   {
-    "addressInfo": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
-    "chainId": 1,
-    "name": "Pareto synthetic dollar USP",
-    "symbol": "USP",
-    "decimals": 18,
-    "logoURI": "/tokens/1/0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88.png",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x271C616157e69A43B4977412A64183Cf110Edf16",
     "chainId": 1,
     "name": "Pareto staked USP",
@@ -1601,10 +1600,10 @@
     "name": "PT-sUSDf-25SEP2025",
     "symbol": "PT-sUSDf-25SEP2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/empty-token.webp",
+    "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
     "meta": {
       "isPendlePT": true,
-      "pendleMarket": "FIXME"
+      "pendleMarket": "0x45f163e583d34b8e276445dd3da9ae077d137d72"
     }
   },
   {
@@ -1641,6 +1640,18 @@
     }
   },
   {
+    "addressInfo": "0x3DB228FE836D99Ccb25Ec4dfdC80ED6d2CDdCB4b",
+    "chainId": 1,
+    "name": "ynUSD Max",
+    "symbol": "ynUSDx",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/66745/large/ynUSDx.png?1750359980",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "bc8b5474-015a-4af5-8d88-3b4b6155b56e"
+    }
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
@@ -1660,6 +1671,18 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
     "meta": {
       "poolId": "08d1f13b-5d65-42c5-863d-fcb447dcea75"
+    }
+  },
+  {
+    "addressInfo": "0x136389D329968bD82efe05F0911Eeb20eE74A138",
+    "chainId": 1,
+    "name": "PT-USD0++-27NOV2025",
+    "symbol": "PT-USD0++-27NOV2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xf8094570485b124b4f2abe98909a87511489c162"
     }
   },
   {
@@ -1884,7 +1907,7 @@
     "name": "PT USD0++ 30JAN2025",
     "symbol": "PT-USD0++-30JAN2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/0x61439b9575278054D69c9176d88FaFaf8319E4b7.svg",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x64506968e80c9ed07bff60c8d9d57474effff2c9"
@@ -1896,7 +1919,7 @@
     "name": "PT USD0++ 27MAR2025",
     "symbol": "PT-USD0++-27MAR2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/0x5BaE9a5D67d1CA5b09B14c91935f635CFBF3b685.svg",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xafdc922d0059147486cc1f0f32e3a2354b0d35cc"
@@ -1908,7 +1931,7 @@
     "name": "PT USD0++ 26JUN2025",
     "symbol": "PT-USD0++-26JUN2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/0xf696FE29Ef85E892b5926313897D178288faA07e.svg",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x048680f64d6dff1748ba6d9a01f578433787e24b"
