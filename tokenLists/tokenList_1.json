@@ -1647,8 +1647,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/66745/large/ynUSDx.png?1750359980",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "bc8b5474-015a-4af5-8d88-3b4b6155b56e"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -1683,6 +1682,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xf8094570485b124b4f2abe98909a87511489c162"
+    }
+  },
+  {
+    "addressInfo": "0x5a5b93F762739fa94F3EcC0b34Af2e56702E7f70",
+    "chainId": 1,
+    "name": "PT-USR-4SEP2025",
+    "symbol": "PT-USR-4SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x33bda865c6815c906e63878357335b28f063936c"
     }
   },
   {

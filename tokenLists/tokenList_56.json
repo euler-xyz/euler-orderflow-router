@@ -18,6 +18,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
+    "chainId": 56,
+    "name": "USDX",
+    "symbol": "USDX",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/50360/large/USDX200px.png?1731906044",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
     "chainId": 56,
     "name": "Wrapped BNB",
@@ -128,26 +137,6 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-    "chainId": 56,
-    "name": "Staked USDe",
-    "symbol": "sUSDe",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
-      "provider": "SUSDE"
-    }
-  },
-  {
-    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-    "chainId": 56,
-    "name": "USDe",
-    "symbol": "USDe",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/39962/large/usde.png?1724952425",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
     "chainId": 56,
     "name": "Resolv USD",
@@ -168,6 +157,26 @@
     }
   },
   {
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "chainId": 56,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39962/large/usde.png?1724952425",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "chainId": 56,
+    "name": "Staked USDe",
+    "symbol": "sUSDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "provider": "SUSDE"
+    }
+  },
+  {
     "addressInfo": "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",
     "chainId": 56,
     "name": "ynBNB MAX",
@@ -177,6 +186,17 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "89818a06-3414-4d9d-a8a6-7c8686a40d2a"
+    }
+  },
+  {
+    "addressInfo": "0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92",
+    "chainId": 56,
+    "name": "sUSDX",
+    "symbol": "sUSDX",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/50836/large/sUSDX200px.png?1731906119",
+    "meta": {
+      "provider": "STABLEWATCH"
     }
   },
   {
