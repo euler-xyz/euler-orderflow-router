@@ -76,8 +76,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
+      "provider": "ETHERFI"
     }
   },
   {
@@ -97,8 +96,7 @@
     "decimals": 18,
     "logoURI": "/tokens/8453/0x7223442cad8e9cA474fC40109ab981608F8c4273.svg",
     "meta": {
-      "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619",
-      "provider": "DEFILLAMA"
+      "provider": "RENZO"
     }
   },
   {
@@ -130,6 +128,39 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
+    "chainId": 1,
+    "name": "yoETH",
+    "symbol": "yoETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54932/large/yoETH.png?1744788591",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+    "chainId": 1,
+    "name": "yoBTC",
+    "symbol": "yoBTC",
+    "decimals": 8,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55189/large/yoBTC.png?1744443242",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
+    "chainId": 1,
+    "name": "yoUSD",
+    "symbol": "yoUSD",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55386/large/yoUSD.png?1745708461",
+    "meta": {
+      "provider": "YO"
+    }
   },
   {
     "addressInfo": "0x5d746848005507DA0b1717C137A10C30AD9ee307",
