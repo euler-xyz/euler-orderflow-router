@@ -294,5 +294,23 @@
       "isPendlePT": true,
       "pendleMarket": "0x7e2bcdb749d90aa1e9e7262872ac8b1e062b2c4d"
     }
+  },
+  {
+    "addressInfo": "0xAaAaaAAac311D0572Bffb4772fe985A750E88805",
+    "chainId": 146,
+    "name": "Wrapped Stability USD",
+    "symbol": "wmetaUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaUSD.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xbbbbbbBBbd0aE69510cE374A86749f8276647B19",
+    "chainId": 146,
+    "name": "Wrapped Stability S",
+    "symbol": "wmetaS",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaS.png",
+    "meta": {}
   }
 ]
