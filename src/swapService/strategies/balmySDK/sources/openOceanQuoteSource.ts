@@ -135,6 +135,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       account: recipient ?? takeFrom,
       referrer: config.referrer?.address,
       enabledDexIds: config.sourceAllowlist,
+      disableRfq: true,
     }
     const queryString = qs.stringify(queryParams, {
       skipNulls: true,
