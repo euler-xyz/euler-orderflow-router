@@ -531,12 +531,10 @@
     "addressInfo": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
     "chainId": 1,
     "name": "pufETH",
-    "symbol": "pufETH",
+    "symbol": "PUFETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35176/large/pufETH-200-200-resolution.png?1707753174",
-    "meta": {
-      "provider": "PUFFER"
-    }
+    "meta": {}
   },
   {
     "addressInfo": "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
@@ -943,10 +941,10 @@
   {
     "addressInfo": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
     "chainId": 1,
-    "name": "Eigenlayer",
+    "name": "EigenCloud (prev. EigenLayer)",
     "symbol": "EIGEN",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/37441/large/eigen.jpg?1728023974",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/37441/large/eigencloud.jpg?1751003565",
     "meta": {}
   },
   {
@@ -1435,41 +1433,6 @@
     }
   },
   {
-    "addressInfo": "0xD7D2802f6b19843ac4DfE25022771FD83b5A7464",
-    "chainId": 1,
-    "name": "xPufETH",
-    "symbol": "xPufETH",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/35176/large/pufETH-200-200-resolution.png?1707753174",
-    "meta": {
-      "provider": "PUFFER"
-    }
-  },
-  {
-    "addressInfo": "0xc824A08dB624942c5E5F330d56530cD1598859fD",
-    "chainId": 1,
-    "name": "High Growth ETH",
-    "symbol": "hgETH",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52281/large/hgETH.png?1732897068",
-    "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "bb925c10-033a-488d-90c1-595001b5656e"
-    }
-  },
-  {
-    "addressInfo": "0x5b1578E2604B91bd7b24F86F0E5EF6C024bB3a14",
-    "chainId": 1,
-    "name": "PT Kelp High Growth ETH 25JUN2026",
-    "symbol": "PT-hgETH-25JUN2026",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52281/large/hgETH.png?1732897068",
-    "meta": {
-      "isPendlePT": true,
-      "pendleMarket": "0x7da97fbfaa3020f856c60eb4ef068079a9023aca"
-    }
-  },
-  {
     "addressInfo": "0x6Bf340dB729d82af1F6443A0Ea0d79647b1c3DDf",
     "chainId": 1,
     "name": "Turtle TAC BTC Vault",
@@ -1641,6 +1604,39 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x45f163e583d34b8e276445dd3da9ae077d137d72"
+    }
+  },
+  {
+    "addressInfo": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
+    "chainId": 1,
+    "name": "yoETH",
+    "symbol": "yoETH",
+    "decimals": 18,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+    "chainId": 1,
+    "name": "yoBTC",
+    "symbol": "yoBTC",
+    "decimals": 8,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
+    }
+  },
+  {
+    "addressInfo": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
+    "chainId": 1,
+    "name": "yoUSD",
+    "symbol": "yoUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {
+      "provider": "YO"
     }
   },
   {
@@ -1994,10 +1990,22 @@
     "name": "PT Ethena USDe 27MAR2025",
     "symbol": "PT-USDe-27MAR2025",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xb451a36c8b6b2eac77ad0737ba732818143a0e25"
+    }
+  },
+  {
+    "addressInfo": "0x917459337CaAC939D41d7493B3999f571D20D667",
+    "chainId": 1,
+    "name": "PT-USDe-31JUL2025",
+    "symbol": "PT-USDe-31JUL2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9df192d13d61609d1852461c4850595e1f56e714"
     }
   },
   {
