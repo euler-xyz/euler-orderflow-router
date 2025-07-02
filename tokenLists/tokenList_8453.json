@@ -57,6 +57,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x102d758f688a4C1C5a80b116bD945d4455460282",
+    "chainId": 8453,
+    "name": "USDT0",
+    "symbol": "USDT0",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
     "chainId": 8453,
     "name": "Wrapped liquid staked Ether 2.0",
