@@ -161,6 +161,27 @@ const defaultConfig: {
       asset: "0x078D782b760474a361dDA0AF3839290b0EF57AD6",
       assetDustEVault: "0x2888F098157162EC4a4274F7ad2c69921e95834D",
     },
+    {
+      chainId: 8453,
+      protocol: "yoUSD",
+      vault: "0x0000000f2eB9f69274678c76222B35eEc7588a65",
+      asset: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      assetDustEVault: "0xD695BD489B1d8ad2214239753b710FE50275623f",
+    },
+    {
+      chainId: 8453,
+      protocol: "yoETH",
+      vault: "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
+      asset: "0x4200000000000000000000000000000000000006",
+      assetDustEVault: "0xa00Ce534859ad1918508D0efa81D8b140cC69eBD",
+    },
+    {
+      chainId: 8453,
+      protocol: "yoBTC",
+      vault: "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+      asset: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      assetDustEVault: "0x9D3010d32F2b0541dEE280Fb7cD98326e042CA20",
+    },
   ],
 }
 
