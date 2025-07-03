@@ -140,6 +140,7 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     transport: http(RPC_URLS[chains.foundry.id]),
   }),
   [chains.arbitrum.id]: createChainConfig(chains.arbitrum),
+  [chains.base.id]: createChainConfig(chains.base),
   [sonicnetwork.id]: createClient({
     chain: sonicnetwork,
     transport: http(RPC_URLS[sonicnetwork.id]),
