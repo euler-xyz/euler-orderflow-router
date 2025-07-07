@@ -19,7 +19,6 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import { parseUnits } from "viem"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.ARBITRUM.chainId]: "arbitrum",
@@ -36,6 +35,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.FANTOM.chainId]: "fantom",
   [Chains.SONIC.chainId]: "sonic",
   80094: "berachain",
+  130: "unichain",
 }
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {
@@ -111,19 +111,19 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
       id: quoteId,
       amountOut,
       targetAddress,
-      fees,
+      // fees,
     } = await quoteResponse.json()
-    const estimatedGasNum: `${number}` | undefined = fees.find(
-      (fee: { type: string; value: `${number}` }) => fee.type === "gas",
-    )?.value
-    const estimatedGas = estimatedGasNum
-      ? parseUnits(estimatedGasNum, 9)
-      : undefined
+    // const estimatedGasNum: `${number}` | undefined = fees.find(
+    //   (fee: { type: string; value: `${number}` }) => fee.type === "gas",
+    // )?.value
+    // const estimatedGas = estimatedGasNum
+    //   ? parseUnits(estimatedGasNum, 9)
+    //   : undefined
 
     const quote = {
       sellAmount: order.sellAmount,
       buyAmount: BigInt(amountOut),
-      estimatedGas,
+      // estimatedGas,
       allowanceTarget: calculateAllowanceTarget(sellToken, targetAddress),
       customData: { quoteId, takeFrom, recipient },
     }
