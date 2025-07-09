@@ -116,7 +116,11 @@ function createFailureResponse(req: Request, error: any) {
 
 function parseRequest(request: Request): SwapParams {
   try {
-    console.log("[INCOMING QUERY]", JSON.stringify(request.query))
+    logProd({
+      name: "INCOMING QUERY",
+      request: request.query,
+    })
+
     const { query: validatedParams } = getSwapSchema.parse(request)
 
     // TODO
