@@ -116,6 +116,28 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xdDb46999F8891663a8F2828d25298f70416d7610",
+    "chainId": 42161,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
+    "name": "Savings USDS",
+    "symbol": "sUSDS",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x940098b108fB7D0a7E374f6eDED7760787464609",
+    "chainId": 42161,
+    "decimals": 18,
+    "logoURI": "/tokens/130/susdc.svg",
+    "name": "Savings USDC",
+    "symbol": "sUSDC",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
     "addressInfo": "0x912CE59144191C1204E64559FE8253a0e49E6548",
     "chainId": 42161,
     "decimals": 18,
@@ -144,5 +166,23 @@
       "isPendlePT": true,
       "pendleMarket": "0x279b44e48226d40ec389129061cb0b56c5c09e46"
     }
+  },
+  {
+    "addressInfo": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
+    "chainId": 42161,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
+    "chainId": 42161,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
   }
 ]
