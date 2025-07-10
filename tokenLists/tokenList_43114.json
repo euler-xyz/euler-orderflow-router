@@ -202,5 +202,14 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
+    "chainId": 43114,
+    "name": "Euro Coin",
+    "symbol": "EURC",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
+    "meta": {}
   }
 ]
