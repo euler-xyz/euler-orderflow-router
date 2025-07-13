@@ -26,6 +26,7 @@ const CUSDOUSDC_CURVELP_MAINNET = "0x90455bd11Ce8a67C57d467e634Dc142b8e4105Aa"
 const USUAL_USD0_VAULT_MAINNET = "0xd001f0a15D272542687b2677BA627f48A4333b5d"
 const SUSP_MAINNET = "0x271C616157e69A43B4977412A64183Cf110Edf16"
 const SUSDF_MAINNET = "0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0"
+const PT_EUSDE_29MAY_MAINNET = "0x50D2C7992b802Eef16c04FeADAB310f31866a545"
 
 const mainnetRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -55,7 +56,10 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
         SUSP_MAINNET,
         SUSDF_MAINNET,
       ],
-      excludeTokensInOrOut: [PT_WSTUSR_27MAR2025_MAINNET],
+      excludeTokensInOrOut: [
+        PT_WSTUSR_27MAR2025_MAINNET,
+        PT_EUSDE_29MAY_MAINNET,
+      ],
     },
   },
   // WUSDL with paraswap
