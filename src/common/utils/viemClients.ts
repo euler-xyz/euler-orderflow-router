@@ -102,6 +102,27 @@ const sonicnetwork = defineChain({
   },
 })
 
+export const tac = defineChain({
+  id: 239,
+  name: "TAC",
+  nativeCurrency: {
+    decimals: 18,
+    name: "TAC",
+    symbol: "TAC",
+  },
+  blockExplorers: {
+    default: {
+      name: "TAC Explorer",
+      url: "https://explorer.tac.build/",
+    },
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.tac.xyz"],
+    },
+  },
+} as const)
+
 export const RPC_URLS: Record<number, string> = {
   [chains.mainnet.id]: process.env.RPC_URL_1 || "",
   [chains.sepolia.id]: process.env.RPC_URL_11155111 || "",
@@ -112,6 +133,7 @@ export const RPC_URLS: Record<number, string> = {
   [chains.avalanche.id]: process.env.RPC_URL_43114 || "",
   [146]: process.env.RPC_URL_146 || "",
   [130]: process.env.RPC_URL_130 || "",
+  [tac.id]: process.env.RPC_URL_239 || "",
   [chains.foundry.id]: process.env.RPC_URL_31337 || "http://localhost:8545",
 } as const
 
@@ -155,6 +177,10 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     transport: http(RPC_URLS[chains.avalanche.id]),
   }),
   [unichain.id]: createChainConfig(unichain),
+  [tac.id]: createClient({
+    chain: tac,
+    transport: http(RPC_URLS[tac.id]),
+  }),
 })
 
 export const viemClients = createClients()
