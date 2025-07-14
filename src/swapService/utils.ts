@@ -277,13 +277,19 @@ export function addInOutDeposits(
       5n, // avoid zero shares error
       swapParams.accountIn,
     ),
-    encodeDepositMulticallItem(
-      swapParams.tokenOut.addressInfo,
-      swapParams.receiver,
-      5n, // avoid zero shares error
-      swapParams.dustAccount,
-    ),
   ]
+
+  if (!swapParams.skipSweepDepositOut) {
+    multicallItems.push(
+      encodeDepositMulticallItem(
+        swapParams.tokenOut.addressInfo,
+        swapParams.receiver,
+        5n, // avoid zero shares error
+        swapParams.dustAccount,
+      ),
+    )
+  }
+
   response.swap = buildApiResponseSwap(swapParams.from, multicallItems)
 
   return response

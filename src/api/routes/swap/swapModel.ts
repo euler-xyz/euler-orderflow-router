@@ -262,6 +262,19 @@ const getSwapSchema = z.object({
       },
       example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
     }),
+    skipSweepDepositOut: z
+      .string()
+      .toLowerCase()
+      .transform((s) => JSON.parse(s))
+      .pipe(z.boolean())
+      .optional()
+      .openapi({
+        param: {
+          description:
+            "Do not add a final deposit of the output token (sweep). Leave the assets in the swapper. Useful if receiver is the Swapper",
+        },
+        example: "false",
+      }),
     routingOverride: z
       .string()
       .transform((s) => JSON.parse(s))
