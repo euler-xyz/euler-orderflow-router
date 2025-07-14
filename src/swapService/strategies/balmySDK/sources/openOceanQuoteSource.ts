@@ -74,6 +74,7 @@ const SUPPORTED_CHAINS: Record<
   [80094]: { chainKey: "berachain" },
   [1923]: { chainKey: "swell" },
   [130]: { chainKey: "unichain" }, // fix gas price
+  [239]: { chainKey: "tac" }, // fix gas price
 }
 
 const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {
