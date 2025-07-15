@@ -312,5 +312,23 @@
     "decimals": 18,
     "logoURI": "/tokens/146/wmetaS.png",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+    "chainId": 146,
+    "name": "RZR",
+    "symbol": "RZR",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaS.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
+    "chainId": 146,
+    "name": "lstRZR",
+    "symbol": "lstRZR",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaS.png",
+    "meta": {}
   }
 ]

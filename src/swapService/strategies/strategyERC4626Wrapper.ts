@@ -182,6 +182,13 @@ const defaultConfig: {
       asset: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
       assetDustEVault: "0x9D3010d32F2b0541dEE280Fb7cD98326e042CA20",
     },
+    {
+      chainId: 146,
+      protocol: "lstRZR",
+      vault: "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
+      asset: "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+      assetDustEVault: "0x8B3779350Ac93eab1bEa44F96167580C1Ae6e846",
+    },
   ],
 }
 
