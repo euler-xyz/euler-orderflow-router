@@ -178,7 +178,7 @@
     "name": "Legacy Frax Dollar",
     "symbol": "FRAX",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/13422/large/frax-logo.png?1739780303",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/13422/large/LFRAX.png?1751911193",
     "meta": {}
   },
   {
@@ -1435,6 +1435,24 @@
     }
   },
   {
+    "addressInfo": "0x282A69142bac47855C3fbE1693FcC4bA3B4d5Ed6",
+    "chainId": 1,
+    "name": "Carrot",
+    "symbol": "CARROT",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54106/large/CARROT__200x200.png?1739002309",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x8A5A5DE9db5770123Ff2145F59e9F20047f0A8EC",
+    "chainId": 1,
+    "name": "Merkl Token Wrapper - Carrot",
+    "symbol": "mtwCARROT",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54106/large/CARROT__200x200.png?1739002309",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xD7D2802f6b19843ac4DfE25022771FD83b5A7464",
     "chainId": 1,
     "name": "xPufETH",
@@ -2119,5 +2137,14 @@
       "isPendlePT": true,
       "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
     }
+  },
+  {
+    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
+    "chainId": 1,
+    "name": "Staked Stream USD",
+    "symbol": "xUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/xusd.jpg",
+    "meta": {}
   }
 ]
