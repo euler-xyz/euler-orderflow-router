@@ -19,6 +19,7 @@ import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
 import { CustomOneInchQuoteSource } from "./sources/oneInchQuoteSource"
 import { CustomOogaboogaQuoteSource } from "./sources/oogaboogaQuoteSource"
 import { CustomOpenOceanQuoteSource } from "./sources/openOceanQuoteSource"
+import { CustomParaswapQuoteSource } from "./sources/paraswapQuoteSource"
 import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
 import { CustomUniswapQuoteSource } from "./sources/uniswapQuoteSource"
 
@@ -40,6 +41,7 @@ const customSources = {
   kyberswap: new CustomKyberswapQuoteSource(),
   enso: new CustomEnsoQuoteSource(),
   "okx-dex": new CustomOKXDexQuoteSource(),
+  paraswap: new CustomParaswapQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",

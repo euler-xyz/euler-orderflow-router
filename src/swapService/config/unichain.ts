@@ -35,6 +35,7 @@ const unichainRoutingConfig: ChainRoutingConfig = [
           "enso",
           "okx-dex",
           "magpie",
+          "paraswap",
         ],
       },
     },
