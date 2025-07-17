@@ -45,29 +45,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     strategy: StrategyCurveLPNG.name(),
     match: { tokensInOrOut: [CUSDOUSDC_CURVELP_MAINNET] },
   },
-  // eUSDe - first try through pendle or kyber. fallback to direct deposit
-  // {
-  //   strategy: StrategyBalmySDK.name(),
-  //   config: {
-  //     sourcesFilter: {
-  //       includeSources: [
-  //         "kyberswap",
-  //         "paraswap",
-  //         "odos",
-  //         "1inch",
-  //         "li-fi",
-  //         "open-ocean",
-  //         "magpie",
-  //         "enso",
-  //         "pendle",
-  //         "okx-dex",
-  //       ],
-  //     },
-  //   },
-  //   match: {
-  //     tokensInOrOut: [EUSDE_MAINNET],
-  //   },
-  // },
   {
     strategy: StrategyERC4626Wrapper.name(),
     match: {

@@ -2146,5 +2146,26 @@
     "decimals": 6,
     "logoURI": "/tokens/1/xusd.jpg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
+    "chainId": 1,
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xD1d0fF7BB555f57A9604CE06bca704ab97A0049A",
+    "chainId": 1,
+    "name": "PT-yUSD-7AUG2025",
+    "symbol": "PT-yUSD-7AUG2025",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x1047a4d2dc60e6652b51e7c63ba276b501ad6bc8"
+    }
   }
 ]
