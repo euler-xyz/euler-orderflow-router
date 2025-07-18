@@ -31,7 +31,7 @@ const sonicConfig: ChainRoutingConfig = [
     config: {
       sourcesFilter: {
         includeSources: [
-          "kyberswap",
+          // "kyberswap",
           "paraswap",
           "odos",
           "1inch",
