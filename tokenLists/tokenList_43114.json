@@ -127,12 +127,13 @@
   {
     "addressInfo": "0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3",
     "chainId": 43114,
-    "name": "ggAVAX",
-    "symbol": "ggAVAX",
+    "name": "Hypha Staked AVAX",
+    "symbol": "stAVAX",
     "decimals": 6,
-    "logoURI": "/tokens/43114/ggavax.webp",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33543/large/stAVAX.png?1750256766",
     "meta": {
-      "provider": "GGAVAX"
+      "provider": "DEFILLAMA",
+      "poolId": "3efc0d84-53c6-4c6a-b1c3-c140502c7f26"
     }
   },
   {
@@ -165,6 +166,15 @@
     }
   },
   {
+    "addressInfo": "0xCF0Eb4ac018C06a16ED5c63484823C7805e7599D",
+    "chainId": 43114,
+    "name": "xUSDC",
+    "symbol": "xUSDC",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/xUSDC.png",
+    "meta": {}
+  },
+  {
     "addressInfo": "0xbc78D84Ba0c46dFe32cf2895a19939c86b81a777",
     "chainId": 43114,
     "decimals": 18,
@@ -181,9 +191,17 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
+      "provider": "ETHERFI"
     }
+  },
+  {
+    "addressInfo": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
+    "chainId": 43114,
+    "name": "Euro Coin",
+    "symbol": "EURC",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
+    "meta": {}
   },
   {
     "addressInfo": "0x9ceeD3A7f753608372eeAb300486cc7c2F38AC68",
@@ -201,15 +219,6 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
-    "chainId": 43114,
-    "name": "Euro Coin",
-    "symbol": "EURC",
-    "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
     "meta": {}
   }
 ]

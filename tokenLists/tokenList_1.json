@@ -2167,5 +2167,29 @@
       "isPendlePT": true,
       "pendleMarket": "0x1047a4d2dc60e6652b51e7c63ba276b501ad6bc8"
     }
+  },
+  {
+    "addressInfo": "0x66526197a4BAf496D97e1004e43c2C374Fb7d2E7",
+    "chainId": 1,
+    "name": "PT sBold 27NOV2025",
+    "symbol": "PT-sBOLD-27NOV2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xe467c5c54748f0125d729280f90ded77c4e720a4"
+    }
+  },
+  {
+    "addressInfo": "0x1Ff893C9071d04F8A965a90FcB0de22406A3eEaa",
+    "chainId": 1,
+    "name": "Principal Token: sBOLD-1765325646",
+    "symbol": "PT-sBOLD-1765325646",
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
+    "meta": {
+      "isSpectraMarket": true,
+      "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
+    }
   }
 ]

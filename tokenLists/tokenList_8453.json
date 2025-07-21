@@ -44,7 +44,7 @@
     "name": "EURC",
     "symbol": "EURC",
     "decimals": 6,
-    "logoURI": "/tokens/8453/eurc.png",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
     "meta": {}
   },
   {
@@ -140,7 +140,7 @@
   },
   {
     "addressInfo": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
-    "chainId": 1,
+    "chainId": 8453,
     "name": "yoETH",
     "symbol": "yoETH",
     "decimals": 18,
@@ -151,7 +151,7 @@
   },
   {
     "addressInfo": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
-    "chainId": 1,
+    "chainId": 8453,
     "name": "yoBTC",
     "symbol": "yoBTC",
     "decimals": 8,
@@ -162,7 +162,7 @@
   },
   {
     "addressInfo": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
-    "chainId": 1,
+    "chainId": 8453,
     "name": "yoUSD",
     "symbol": "yoUSD",
     "decimals": 6,
@@ -229,7 +229,7 @@
   },
   {
     "addressInfo": "0x7FcD174E80f264448ebeE8c88a7C4476AAF58Ea6",
-    "chainId": 1,
+    "chainId": 8453,
     "name": "Wrapped Super OETH",
     "symbol": "wsuperOETHb",
     "decimals": 18,

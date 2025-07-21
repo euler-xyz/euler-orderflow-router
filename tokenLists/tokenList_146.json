@@ -170,7 +170,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
     "meta": {
-      "provider": "YIELDFI"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -182,6 +182,28 @@
     "logoURI": "/tokens/146/xusd.svg",
     "meta": {
       "provider": "STREAM"
+    }
+  },
+  {
+    "addressInfo": "0xAaAaaAAac311D0572Bffb4772fe985A750E88805",
+    "chainId": 146,
+    "name": "Wrapped Stability USD",
+    "symbol": "wmetaUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaUSD.png",
+    "meta": {
+      "provider": "STABILITY"
+    }
+  },
+  {
+    "addressInfo": "0xbbbbbbBBbd0aE69510cE374A86749f8276647B19",
+    "chainId": 146,
+    "name": "Wrapped Stability S",
+    "symbol": "wmetaS",
+    "decimals": 18,
+    "logoURI": "/tokens/146/wmetaS.png",
+    "meta": {
+      "provider": "STABILITY"
     }
   },
   {
@@ -210,6 +232,18 @@
     "decimals": 18,
     "logoURI": "https://sonicscan.org/token/images/beetsstksceth_32.png",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d",
+    "chainId": 146,
+    "name": "PT Beets Staked Sonic 18DEC2025",
+    "symbol": "PT-stS-18DEC2025",
+    "decimals": 18,
+    "logoURI": "/tokens/146/sS.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x7fa648887b2a10cbbf7c54d00d86d0b2a0a37b53"
+    }
   },
   {
     "addressInfo": "0xBe27993204Ec64238F71A527B4c4D5F4949034C3",
@@ -296,39 +330,36 @@
     }
   },
   {
-    "addressInfo": "0xAaAaaAAac311D0572Bffb4772fe985A750E88805",
-    "chainId": 146,
-    "name": "Wrapped Stability USD",
-    "symbol": "wmetaUSD",
-    "decimals": 18,
-    "logoURI": "/tokens/146/wmetaUSD.png",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0xbbbbbbBBbd0aE69510cE374A86749f8276647B19",
-    "chainId": 146,
-    "name": "Wrapped Stability S",
-    "symbol": "wmetaS",
-    "decimals": 18,
-    "logoURI": "/tokens/146/wmetaS.png",
-    "meta": {}
-  },
-  {
     "addressInfo": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
     "chainId": 146,
-    "name": "RZR",
+    "name": "Rezerve.money",
     "symbol": "RZR",
     "decimals": 18,
-    "logoURI": "/tokens/146/wmetaS.png",
+    "logoURI": "/tokens/146/rzr.png",
     "meta": {}
   },
   {
     "addressInfo": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
     "chainId": 146,
-    "name": "lstRZR",
+    "name": "Liquid Staked Rezerve.money",
     "symbol": "lstRZR",
     "decimals": 18,
-    "logoURI": "/tokens/146/wmetaS.png",
-    "meta": {}
+    "logoURI": "/tokens/146/lstRZR.png",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611"
+    }
+  },
+  {
+    "addressInfo": "0x3D75F2BB8aBcDBd1e27443cB5CBCE8A668046C81",
+    "chainId": 146,
+    "name": "HLP0",
+    "symbol": "HLP0",
+    "decimals": 18,
+    "logoURI": "/tokens/146/HLP0.png",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "8e8929d3-9e8d-427c-b899-60b562eacac3"
+    }
   }
 ]
