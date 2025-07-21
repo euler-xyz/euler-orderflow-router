@@ -78,6 +78,13 @@ const defaultConfig: {
       assetDustEVault: "0x7aC81B3172870397496bD30502a07Cc9BfBB25eE",
     },
     {
+      chainId: 1,
+      protocol: "PT-sBOLD-1765325646",
+      vault: "0x1Ff893C9071d04F8A965a90FcB0de22406A3eEaa",
+      asset: "0x6440f144b7e50D6a8439336510312d2F54beB01D",
+      assetDustEVault: "0x194867afacB68e965d4E3EADA7D582fdCB763CAD",
+    },
+    {
       chainId: 146,
       protocol: "wstkscETH",
       vault: "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47",
