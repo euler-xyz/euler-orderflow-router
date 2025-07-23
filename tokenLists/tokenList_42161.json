@@ -184,5 +184,28 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
+    "chainId": 42161,
+    "name": "KelpDao Restaked ETH",
+    "symbol": "rsETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
+  },
+  {
+    "addressInfo": "0xd09ACb80C1E8f2291862c4978A008791c9167003",
+    "chainId": 42161,
+    "name": "Treehouse ETH",
+    "symbol": "TETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_Logo_%28Color__No_Background%29.png?1748368386",
+    "meta": {
+      "provider": "TREEHOUSE"
+    }
   }
 ]

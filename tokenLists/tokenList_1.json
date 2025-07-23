@@ -2191,5 +2191,17 @@
       "isSpectraMarket": true,
       "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
     }
+  },
+  {
+    "addressInfo": "0xd0a4B74A6B62aA2b6C02349463D9041606608F36",
+    "chainId": 1,
+    "name": "PT Terminal USDe 25SEP2025",
+    "symbol": "PT-tUSDe-25SEP2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/tusde.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x07b1711d4af74af661dde3b774741993b79fc59c"
+    }
   }
 ]
