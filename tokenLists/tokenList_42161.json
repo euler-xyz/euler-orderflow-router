@@ -168,24 +168,6 @@
     }
   },
   {
-    "addressInfo": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
-    "chainId": 42161,
-    "name": "EUL",
-    "symbol": "EUL",
-    "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
-  },
-  {
-    "addressInfo": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
-    "chainId": 42161,
-    "name": "Reward EUL",
-    "symbol": "rEUL",
-    "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
     "chainId": 42161,
     "name": "KelpDao Restaked ETH",
@@ -207,5 +189,23 @@
     "meta": {
       "provider": "TREEHOUSE"
     }
+  },
+  {
+    "addressInfo": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
+    "chainId": 42161,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
+    "chainId": 42161,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
   }
 ]

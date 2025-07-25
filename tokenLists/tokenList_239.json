@@ -5,7 +5,7 @@
     "name": "Wrapped TAC",
     "symbol": "WTAC",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/50882/standard/hyperliquid.jpg?1729431300",
+    "logoURI": "https://assets.coingecko.com/coins/images/67357/standard/tac.jpg?1752491437",
     "meta": {}
   },
   {
@@ -92,7 +92,7 @@
     "name": "sUSN",
     "symbol": "sUSN",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
+    "logoURI": "https://assets.coingecko.com/coins/images/54924/standard/sUSN_Logo.png?1742538935",
     "meta": {
       "provider": "NOON"
     }
@@ -161,7 +161,9 @@
     "symbol": "tsTON",
     "decimals": 9,
     "logoURI": "https://assets.coingecko.com/coins/images/35404/standard/icon_%281%29.png?1708499119",
-    "meta": {}
+    "meta": {
+      "provider": "TONSTAKERS"
+    }
   },
   {
     "addressInfo": "0x20512cF15E60242aB5237E0A76c873a338281397",
@@ -170,7 +172,9 @@
     "symbol": "bmTON",
     "decimals": 9,
     "logoURI": "https://assets.coingecko.com/coins/images/55380/standard/IMG_4061.jpeg?1745682979",
-    "meta": {}
+    "meta": {
+      "provider": "BMTON"
+    }
   },
   {
     "addressInfo": "0x27e4Ade13d78Aad45bea31D448f5504031e4871E",

@@ -28,8 +28,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
+      "provider": "ETHERFI"
     }
   },
   {
@@ -40,8 +39,7 @@
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/34753/standard/Ezeth_logo_circle.png?1713496404",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
+      "provider": "RENZO"
     }
   },
   {

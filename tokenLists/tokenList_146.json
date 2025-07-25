@@ -358,8 +358,7 @@
     "decimals": 18,
     "logoURI": "/tokens/146/HLP0.png",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "8e8929d3-9e8d-427c-b899-60b562eacac3"
+      "provider": "HLP0"
     }
   }
 ]
