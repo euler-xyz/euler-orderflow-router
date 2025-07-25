@@ -1202,6 +1202,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
+    "chainId": 1,
+    "name": "Staked Stream USD",
+    "symbol": "xUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/xusd.jpg",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
@@ -2139,15 +2148,6 @@
     }
   },
   {
-    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
-    "chainId": 1,
-    "name": "Staked Stream USD",
-    "symbol": "xUSD",
-    "decimals": 6,
-    "logoURI": "/tokens/1/xusd.jpg",
-    "meta": {}
-  },
-  {
     "addressInfo": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
     "chainId": 1,
     "name": "YieldFi yUSD",
@@ -2190,6 +2190,30 @@
     "meta": {
       "isSpectraMarket": true,
       "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
+    }
+  },
+  {
+    "addressInfo": "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
+    "chainId": 1,
+    "name": "PPT Ethena USDe 25SEP2025",
+    "symbol": "PT-USDe-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x6d98a2b6cdbf44939362a3e99793339ba2016af4"
+    }
+  },
+  {
+    "addressInfo": "0x9F56094C450763769BA0EA9Fe2876070c0fD5F77",
+    "chainId": 1,
+    "name": "PT Ethena sUSDE 25SEP2025",
+    "symbol": "PT-sUSDE-25SEP2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xa36b60a14a1a5247912584768c6e53e1a269a9f7"
     }
   },
   {
