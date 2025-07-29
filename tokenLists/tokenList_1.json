@@ -2227,5 +2227,41 @@
       "isPendlePT": true,
       "pendleMarket": "0x07b1711d4af74af661dde3b774741993b79fc59c"
     }
+  },
+  {
+    "addressInfo": "0x2E3229674085F5490a4cC2558ab96aEDC3ab25D1",
+    "chainId": 1,
+    "name": "PT-mEDGE-30OCT2025",
+    "symbol": "PT-mEDGE-30OCT2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x8322b96f7aff9bf405a5a321c7ca5aac748716e0"
+    }
+  },
+  {
+    "addressInfo": "0x61da65F0534C6A4F4c9757f2979A923c08d6D2aa",
+    "chainId": 1,
+    "name": "PT-mMEV-30OCT2025",
+    "symbol": "PT-mMEV-30OCT2025",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x688b8eea04b9756da290c962bfba988b11fc66df"
+    }
+  },
+  {
+    "addressInfo": "0xeC3b5e45dD278d5AB9CDB31754B54DB314e9D52a",
+    "chainId": 1,
+    "name": "PT-USDf-29JAN2026",
+    "symbol": "PT-USDf-29JAN2026",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54558/large/ff_200_X_200.png?1740741076",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xc65b7a0f8fc97e1d548860d866f4304e039ef016"
+    }
   }
 ]
