@@ -1429,7 +1429,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54924/large/sUSN_Logo.png?1742538935",
     "meta": {
-      "provider": "NOON"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -1680,6 +1680,15 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
+  },
+  {
+    "addressInfo": "0x9FD7466f987Fd4C45a5BBDe22ED8aba5BC8D72d1",
+    "chainId": 1,
+    "name": "hwHLP",
+    "symbol": "hwHLP",
+    "decimals": 6,
+    "logoURI": "/tokens/1/hwhlp.svg",
+    "meta": {}
   },
   {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
@@ -2262,6 +2271,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xc65b7a0f8fc97e1d548860d866f4304e039ef016"
+    }
+  },
+  {
+    "addressInfo": "0x904673592a3FEbB74a30a73161e8C05A200C8961",
+    "chainId": 1,
+    "name": "PT-hwHLP-25SEP2025",
+    "symbol": "PT-hwHLP-25SEP2025",
+    "decimals": 6,
+    "logoURI": "/tokens/1/hwhlp.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x71d4a6bac0fe7210309b6a3807cf2bad13d7c1e1"
     }
   }
 ]
