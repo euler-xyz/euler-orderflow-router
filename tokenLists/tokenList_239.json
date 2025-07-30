@@ -5,7 +5,7 @@
     "name": "Wrapped TAC",
     "symbol": "WTAC",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/50882/standard/hyperliquid.jpg?1729431300",
+    "logoURI": "https://assets.coingecko.com/coins/images/67357/standard/tac.jpg?1752491437",
     "meta": {}
   },
   {
@@ -92,9 +92,9 @@
     "name": "sUSN",
     "symbol": "sUSN",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
+    "logoURI": "https://assets.coingecko.com/coins/images/54924/standard/sUSN_Logo.png?1742538935",
     "meta": {
-      "provider": "NOON"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -161,7 +161,9 @@
     "symbol": "tsTON",
     "decimals": 9,
     "logoURI": "https://assets.coingecko.com/coins/images/35404/standard/icon_%281%29.png?1708499119",
-    "meta": {}
+    "meta": {
+      "provider": "TONSTAKERS"
+    }
   },
   {
     "addressInfo": "0x20512cF15E60242aB5237E0A76c873a338281397",
@@ -170,7 +172,9 @@
     "symbol": "bmTON",
     "decimals": 9,
     "logoURI": "https://assets.coingecko.com/coins/images/55380/standard/IMG_4061.jpeg?1745682979",
-    "meta": {}
+    "meta": {
+      "provider": "BMTON"
+    }
   },
   {
     "addressInfo": "0x27e4Ade13d78Aad45bea31D448f5504031e4871E",
@@ -179,6 +183,36 @@
     "symbol": "WIF",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33566/standard/dogwifhat.jpg?1702499428",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x5448BBf60Ee2edBCd32F032f3294982f4ad1119e",
+    "chainId": 239,
+    "name": "wrsETH",
+    "symbol": "wrsETH",
+    "decimals": 18,
+    "logoURI": "/tokens/239/wrseth.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
+  },
+  {
+    "addressInfo": "0x38C043856A109066d64a60c82e07848a1C58e7Dc",
+    "chainId": 239,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xCf623E50430CCb55214985F9C986a5Fa50aD7686",
+    "chainId": 239,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
   }
 ]
