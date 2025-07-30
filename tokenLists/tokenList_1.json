@@ -1688,7 +1688,9 @@
     "symbol": "hwHLP",
     "decimals": 6,
     "logoURI": "/tokens/1/hwhlp.svg",
-    "meta": {}
+    "meta": {
+      "provider": "HWHLP"
+    }
   },
   {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
