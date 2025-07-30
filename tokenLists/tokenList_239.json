@@ -180,5 +180,35 @@
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33566/standard/dogwifhat.jpg?1702499428",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x5448BBf60Ee2edBCd32F032f3294982f4ad1119e",
+    "chainId": 239,
+    "name": "wrsETH",
+    "symbol": "wrsETH",
+    "decimals": 18,
+    "logoURI": "/tokens/239/wrseth.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
+  },
+  {
+    "addressInfo": "0x38C043856A109066d64a60c82e07848a1C58e7Dc",
+    "chainId": 239,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xCf623E50430CCb55214985F9C986a5Fa50aD7686",
+    "chainId": 239,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
   }
 ]
