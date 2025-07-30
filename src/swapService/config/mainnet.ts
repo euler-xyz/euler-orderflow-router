@@ -50,7 +50,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     match: {
       tokensInOrOut: [
         WSTUSR_MAINNET,
-        EUSDE_MAINNET,
         SUSP_MAINNET,
         SUSDF_MAINNET,
         SUSPS_MAINNET,
@@ -141,6 +140,12 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     },
     match: {
       swapperModes: [SwapperMode.TARGET_DEBT],
+    },
+  },
+  {
+    strategy: StrategyERC4626Wrapper.name(),
+    match: {
+      tokensInOrOut: [EUSDE_MAINNET],
     },
   },
 ]
