@@ -43,6 +43,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.SONIC.chainId]: "sonic",
   [Chains.ZK_SYNC_ERA.chainId]: "zksync",
   [130]: "unichain",
+  [59144]: "linea",
 }
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {

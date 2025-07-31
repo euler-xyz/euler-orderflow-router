@@ -181,6 +181,7 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
     chain: tac,
     transport: http(RPC_URLS[tac.id]),
   }),
+  [chains.linea.id]: createChainConfig(chains.linea),
 })
 
 export const viemClients = createClients()

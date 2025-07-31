@@ -8,6 +8,7 @@ import type {
   SourceListQuoteResponse,
 } from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
+import { CustomZRXQuoteSource } from "./sources/0xMatchaQuoteSource"
 import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
@@ -42,6 +43,7 @@ const customSources = {
   enso: new CustomEnsoQuoteSource(),
   "okx-dex": new CustomOKXDexQuoteSource(),
   paraswap: new CustomParaswapQuoteSource(),
+  "0x": new CustomZRXQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
