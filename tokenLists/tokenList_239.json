@@ -64,8 +64,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
+      "provider": "STABLEWATCH"
     }
   },
   {

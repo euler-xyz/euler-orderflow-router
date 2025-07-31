@@ -1227,8 +1227,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51880/large/USR_LOGO.png?1732098841",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -1571,11 +1570,7 @@
     "name": "NapierV2-PT-Pareto staked USP@29/7/2025",
     "symbol": "PT-sUSP@29/7/2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {
-      "isPendlePT": true,
-      "pendleMarket": "FIXME"
-    }
+    "logoURI": "/tokens/1/empty-token.webp"
   },
   {
     "addressInfo": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
@@ -1689,7 +1684,7 @@
     "decimals": 6,
     "logoURI": "/tokens/1/hwhlp.svg",
     "meta": {
-      "provider": "HWHLP"
+      "provider": "STABLEWATCH"
     }
   },
   {

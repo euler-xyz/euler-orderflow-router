@@ -134,7 +134,7 @@
     "name": "Savings USDC",
     "symbol": "sUSDC",
     "meta": {
-      "provider": "STABLEWATCH"
+      "provider": "SPARK"
     }
   },
   {
