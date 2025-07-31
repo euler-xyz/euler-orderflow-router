@@ -181,7 +181,8 @@
     "decimals": 6,
     "logoURI": "/tokens/146/xusd.svg",
     "meta": {
-      "provider": "STREAM"
+      "provider": "DEFILLAMA",
+      "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
     }
   },
   {
@@ -369,7 +370,8 @@
     "decimals": 8,
     "logoURI": "/tokens/146/xbtc.svg",
     "meta": {
-      "provider": "STREAM"
+      "provider": "DEFILLAMA",
+      "poolId": "69021e5e-7cae-4df4-915e-08a6b349f456"
     }
   },
   {
@@ -380,7 +382,8 @@
     "decimals": 18,
     "logoURI": "/tokens/146/xeth.svg",
     "meta": {
-      "provider": "STREAM"
+      "provider": "DEFILLAMA",
+      "poolId": "24b3096a-488d-4a61-afa6-e5e9be2ce4bf"
     }
   }
 ]
