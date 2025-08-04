@@ -138,7 +138,7 @@
     "chainId": 43114,
     "name": "Hypha Staked AVAX",
     "symbol": "stAVAX",
-    "decimals": 6,
+    "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33543/large/stAVAX.png?1750256766",
     "meta": {
       "provider": "DEFILLAMA",
