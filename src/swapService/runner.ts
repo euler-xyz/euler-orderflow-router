@@ -1,4 +1,4 @@
-import { logDev } from "@/common/utils/logs"
+import { logProd } from "@/common/utils/logs"
 import { log } from "@uniswap/smart-order-router"
 import { StatusCodes } from "http-status-codes"
 import { isHex } from "viem"
@@ -95,6 +95,12 @@ export async function findSwaps(swapParams: SwapParams) {
   for (const quote of quotes) {
     addInOutDeposits(swapParams, quote)
   }
+
+  logProd({
+    name: "[QUOTES FOUND]",
+    swapParams,
+    quotes,
+  })
 
   return quotes
 }
