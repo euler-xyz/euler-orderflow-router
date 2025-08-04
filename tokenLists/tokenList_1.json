@@ -1227,8 +1227,7 @@
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51880/large/USR_LOGO.png?1732098841",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -1572,10 +1571,7 @@
     "symbol": "PT-sUSP@29/7/2025",
     "decimals": 18,
     "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {
-      "isPendlePT": true,
-      "pendleMarket": "FIXME"
-    }
+    "meta": {}
   },
   {
     "addressInfo": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
@@ -1689,7 +1685,7 @@
     "decimals": 6,
     "logoURI": "/tokens/1/hwhlp.svg",
     "meta": {
-      "provider": "HWHLP"
+      "provider": "STABLEWATCH"
     }
   },
   {
@@ -2285,6 +2281,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x71d4a6bac0fe7210309b6a3807cf2bad13d7c1e1"
+    }
+  },
+  {
+    "addressInfo": "0xF3f491e5608f8B8a6Fd9E9d66a4a4036d7FD282C",
+    "chainId": 1,
+    "name": "PT-pUSDe-16OCT2025",
+    "symbol": "PT-pUSDe-16OCT2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/pUSDe.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xf4c449d6a2d1840625211769779ada42857d04dd"
     }
   }
 ]
