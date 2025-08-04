@@ -1570,7 +1570,8 @@
     "name": "NapierV2-PT-Pareto staked USP@29/7/2025",
     "symbol": "PT-sUSP@29/7/2025",
     "decimals": 18,
-    "logoURI": "/tokens/1/empty-token.webp"
+    "logoURI": "/tokens/1/empty-token.webp",
+    "meta": {}
   },
   {
     "addressInfo": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
@@ -2280,6 +2281,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x71d4a6bac0fe7210309b6a3807cf2bad13d7c1e1"
+    }
+  },
+  {
+    "addressInfo": "0xF3f491e5608f8B8a6Fd9E9d66a4a4036d7FD282C",
+    "chainId": 1,
+    "name": "PT-pUSDe-16OCT2025",
+    "symbol": "PT-pUSDe-16OCT2025",
+    "decimals": 18,
+    "logoURI": "/tokens/1/pUSDe.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xf4c449d6a2d1840625211769779ada42857d04dd"
     }
   }
 ]
