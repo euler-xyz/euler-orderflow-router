@@ -2161,7 +2161,9 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0xD1d0fF7BB555f57A9604CE06bca704ab97A0049A",
