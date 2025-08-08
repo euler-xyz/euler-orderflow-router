@@ -78,6 +78,10 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       tokensInOrOut: [WUSDL_MAINNET],
     },
   },
+  {
+    strategy: StrategyMidas.name(),
+    match: {},
+  },
   // DEFAULTS
   {
     strategy: StrategyBalmySDK.name(),
@@ -116,10 +120,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     },
   },
   // FALLBACKS
-  {
-    strategy: StrategyMidas.name(),
-    match: {},
-  },
   // Binary search overswap for target  debt
   {
     strategy: StrategyBalmySDK.name(),
