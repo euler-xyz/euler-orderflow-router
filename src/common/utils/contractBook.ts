@@ -16,6 +16,7 @@ const contractBook: any = {
       [60808]: "0x697Ca30D765c1603890D88AAffBa3BeCCe72059d",
       [239]: "0x5ff07e50D83769861db40C5087753124D389c1c0",
       [chains.arbitrum.id]: "0x6eE488A00A2ef1E2764cD7245F8a77C40060A7C7",
+      [chains.linea.id]: "0x1480Cfff566f27BbB2AEAd6eeABEc4BA068e5405",
     },
   },
   swapVerifier: {
@@ -33,6 +34,7 @@ const contractBook: any = {
       [60808]: "0x296041DbdBC92171293F23c0a31e1574b791060d",
       [239]: "0x5a8610DB17CfF800C8abEb6Da31B9bB1fF51843f",
       [chains.arbitrum.id]: "0x7b16DAaFa76CfeC8C08D7a68aF31949B37ebfdF5",
+      [chains.linea.id]: "0x77C9B0E7Ac0405797F04E5230Ed0A54DB39f98f0",
     },
   },
 }
