@@ -171,7 +171,9 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_200x200.png?1747474691",
     "name": "Staked USDai",
     "symbol": "sUSDai",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
