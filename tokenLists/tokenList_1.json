@@ -714,18 +714,6 @@
     }
   },
   {
-    "addressInfo": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
-    "chainId": 1,
-    "name": "Angle Staked USDA",
-    "symbol": "STUSD",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/34509/large/stUSD_copie.png?1705288386",
-    "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "01e33a85-8bb6-4f30-a11b-7b2a8166e6b7"
-    }
-  },
-  {
     "addressInfo": "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
     "chainId": 1,
     "name": "Origin Ether",
@@ -1613,6 +1601,15 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
+  },
+  {
+    "addressInfo": "0xA62B204099277762d1669d283732dCc1B3AA96CE",
+    "chainId": 1,
+    "name": "pUSDe",
+    "symbol": "pUSDe",
+    "decimals": 18,
+    "logoURI": "/tokens/1/pUSDe.svg",
+    "meta": {}
   },
   {
     "addressInfo": "0x85E30b8b263bC64d94b827ed450F2EdFEE8579dA",
