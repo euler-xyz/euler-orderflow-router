@@ -41,6 +41,7 @@ const ODOS_METADATA: QuoteSourceMetadata<OdosSupport> = {
       Chains.SONIC.chainId,
       239, // tac
       59144, // linea
+      130, // unichain
     ],
     swapAndTransfer: true,
     buyOrders: false,
