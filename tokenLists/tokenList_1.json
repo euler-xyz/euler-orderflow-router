@@ -2175,6 +2175,30 @@
     }
   },
   {
+    "addressInfo": "0x4274cD7277C7bb0806Bd5FE84b9aDAE466a8DA0a",
+    "chainId": 1,
+    "name": "Aegis YUSD",
+    "symbol": "YUSD",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "f91b2168-c279-475c-a98a-673220f4fee7"
+    }
+  },
+  {
+    "addressInfo": "0x61d799b23C938220D27fC03Ad2044A7AA891fE81",
+    "chainId": 1,
+    "name": "PT-sYUSD-4SEP2025",
+    "symbol": "PT-sYUSD-4SEP2025",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x701c3efda4e90be78dd63cc0493d2e9b7d2245a6"
+    }
+  },
+  {
     "addressInfo": "0x66526197a4BAf496D97e1004e43c2C374Fb7d2E7",
     "chainId": 1,
     "name": "PT sBold 27NOV2025",
