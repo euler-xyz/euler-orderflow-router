@@ -153,8 +153,7 @@
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
     "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "f91b2168-c279-475c-a98a-673220f4fee7"
+      "provider": "AEGIS"
     }
   },
   {
