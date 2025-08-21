@@ -1420,18 +1420,6 @@
     }
   },
   {
-    "addressInfo": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
-    "chainId": 1,
-    "name": "Angle Staked USDA",
-    "symbol": "STUSD",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/34509/large/stUSD_copie.png?1705288386",
-    "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "01e33a85-8bb6-4f30-a11b-7b2a8166e6b7"
-    }
-  },
-  {
     "addressInfo": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
     "chainId": 1,
     "name": "Syrup USDC",
@@ -2162,6 +2150,24 @@
       "isPendlePT": true,
       "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
     }
+  },
+  {
+    "addressInfo": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+    "chainId": 1,
+    "name": "Rezerve.money",
+    "symbol": "RZR",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/67679/large/New_Project_%289%29.png?1753503135",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
+    "chainId": 1,
+    "name": "Liquid Staked Rezerve.money",
+    "symbol": "lstRZR",
+    "decimals": 18,
+    "logoURI": "/tokens/146/lstRZR.png",
+    "meta": {}
   },
   {
     "addressInfo": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
