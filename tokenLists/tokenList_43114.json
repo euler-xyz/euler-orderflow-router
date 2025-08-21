@@ -215,6 +215,24 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x3408b22d8895753C9A3e14e4222E981d4E9A599E",
+    "chainId": 43114,
+    "name": "Upshift Avalanche AUSD",
+    "symbol": "upAUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/43114/upausd.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xB2bFb52cfc40584AC4e9e2B36a5B8d6554A56e0b",
+    "chainId": 43114,
+    "name": "Upshift Avalanche AVAX",
+    "symbol": "upAVAX",
+    "decimals": 18,
+    "logoURI": "/tokens/43114/upavax.svg",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x9ceeD3A7f753608372eeAb300486cc7c2F38AC68",
     "chainId": 43114,
     "name": "EUL",
