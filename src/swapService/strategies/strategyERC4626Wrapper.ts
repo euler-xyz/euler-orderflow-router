@@ -92,6 +92,13 @@ const defaultConfig: {
       assetDustEVault: "0x537469D2219Bf28EAc0B1199d142969163309969",
     },
     {
+      chainId: 1,
+      protocol: "lstRZR",
+      vault: "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB",
+      asset: "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+      assetDustEVault: "0x9d289DE828E7616B062818aBCd3f9b0eE6df6e44",
+    },
+    {
       chainId: 146,
       protocol: "wstkscETH",
       vault: "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47",
