@@ -118,5 +118,17 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x94Cac393f3444cEf63a651FfC18497E7e8bd036a",
+    "chainId": 130,
+    "name": "Rocket Pool ETH",
+    "symbol": "rETH",
+    "decimals": 18,
+    "logoURI": "https://tokens.1inch.io/0xae78736cd615f374d3085123a210448e74fc6393.png",
+    "meta": {
+      "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb",
+      "provider": "DEFILLAMA"
+    }
   }
 ]
