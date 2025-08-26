@@ -1698,6 +1698,26 @@
     }
   },
   {
+    "addressInfo": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+    "chainId": 1,
+    "name": "Frax USD",
+    "symbol": "frxUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53963/large/frxUSD.png?1737792154",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xcf62F905562626CfcDD2261162a51fd02Fc9c5b6",
+    "chainId": 1,
+    "name": "Staked Frax USD",
+    "symbol": "sfrxUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53964/large/sfrxUSD.png?1737792232",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
