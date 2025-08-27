@@ -225,6 +225,15 @@
     "meta": {}
   },
   {
+    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "chainId": 60808,
+    "decimals": 8,
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "logoURI": "/tokens/60808/WBTC.svg",
+    "meta": {}
+  },
+  {
     "addressInfo": "0x85008aE6198BC91aC0735CB5497CF125ddAAc528",
     "chainId": 60808,
     "decimals": 18,
