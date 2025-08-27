@@ -132,7 +132,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x78Fea795cBFcC5fFD6Fb5B845a4f53d25C283bDB",
+    "addressInfo": "0xecf21b335B41f9d5A89f6186A99c19a3c467871f",
     "chainId": 60808,
     "decimals": 18,
     "name": "Satoshi Stablecoin",
@@ -217,6 +217,15 @@
   },
   {
     "addressInfo": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
+    "chainId": 60808,
+    "decimals": 8,
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "logoURI": "/tokens/60808/WBTC.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
     "chainId": 60808,
     "decimals": 8,
     "name": "Wrapped BTC",
