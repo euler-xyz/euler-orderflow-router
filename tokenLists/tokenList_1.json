@@ -1718,6 +1718,27 @@
     }
   },
   {
+    "addressInfo": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
+    "chainId": 1,
+    "name": "uniBTC",
+    "symbol": "uniBTC",
+    "decimals": 8,
+    "logoURI": "/tokens/60808/uniBTC.webp",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xa42C63686F45C124f2034152B4BB0CC63CE3Ff52",
+    "chainId": 1,
+    "name": "PT-uniBTC-18DEC2025",
+    "symbol": "PT-uniBTC-18DEC2025",
+    "decimals": 8,
+    "logoURI": "/tokens/60808/uniBTC.webp",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x4c60ab7ce24d4d7268317f44b6dc3d6530864e86"
+    }
+  },
+  {
     "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
