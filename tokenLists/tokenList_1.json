@@ -667,18 +667,6 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9Ba021B0a9b958B5E75cE9f6dff97C7eE52cb3E6",
-    "chainId": 1,
-    "name": "Dinero apxETH",
-    "symbol": "APXETH",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33609/large/apxETH-icon-transbg_72dpi.png?1702512027",
-    "meta": {
-      "provider": "DEFILLAMA",
-      "poolId": "acee1e4d-a73c-4e20-98f7-e87c13d446e4"
-    }
-  },
-  {
     "addressInfo": "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
     "chainId": 1,
     "name": "ETHPlus",
@@ -2225,6 +2213,15 @@
       "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611",
       "apyDuration": "30d"
     }
+  },
+  {
+    "addressInfo": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "chainId": 1,
+    "name": "MetaMask USD",
+    "symbol": "mUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/musd.png",
+    "meta": {}
   },
   {
     "addressInfo": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
