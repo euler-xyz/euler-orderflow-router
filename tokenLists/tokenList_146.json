@@ -348,7 +348,8 @@
     "logoURI": "/tokens/146/lstRZR.png",
     "meta": {
       "provider": "DEFILLAMA",
-      "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611"
+      "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611",
+      "apyDuration": "30d"
     }
   },
   {
