@@ -230,7 +230,7 @@
     "addressInfo": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
     "chainId": 42161,
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_200x200.png?1747469907",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
     "name": "USDai",
     "symbol": "USDai",
     "meta": {}
@@ -239,7 +239,7 @@
     "addressInfo": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
     "chainId": 42161,
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_200x200.png?1747474691",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
     "name": "Staked USDai",
     "symbol": "sUSDai",
     "meta": {
@@ -307,7 +307,7 @@
     "name": "PT-USDai-20NOV2025",
     "symbol": "PT-USDai-20NOV2025",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_200x200.png?1747469907",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x8e101c690390de722163d4dc3f76043bebbbcadd"
@@ -319,7 +319,7 @@
     "name": "PT-sUSDai-20NOV2025",
     "symbol": "PT-sUSDai-20NOV2025",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_200x200.png?1747474691",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x43023675c804a759cbf900da83dbcc97ee2afbe7"
