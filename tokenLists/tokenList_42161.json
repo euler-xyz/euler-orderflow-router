@@ -291,6 +291,17 @@
     }
   },
   {
+    "addressInfo": "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
+    "chainId": 42161,
+    "name": "Rocket Pool ETH",
+    "symbol": "rETH",
+    "decimals": 18,
+    "logoURI": "/tokens/8453/0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c.webp",
+    "meta": {
+      "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
+    }
+  },
+  {
     "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
     "chainId": 42161,
     "name": "Renzo Restaked ETH",
