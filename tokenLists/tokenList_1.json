@@ -1701,7 +1701,9 @@
     "symbol": "TBILL",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30576/large/OE_Logo_200x200_Transparent.png?1696529441",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
