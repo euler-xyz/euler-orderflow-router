@@ -1715,6 +1715,27 @@
     "meta": {}
   },
   {
+    "addressInfo": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+    "chainId": 1,
+    "name": "cap USD",
+    "symbol": "cUSD",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/68272/large/cUSD_ab_500%C3%97500.png?1755232868",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+    "chainId": 1,
+    "name": "Staked cap USD",
+    "symbol": "stcUSD",
+    "decimals": 18,
+    "logoURI": "/tokens/1/stcUSD.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "bf6ca887-e357-49ec-8031-0d1a6141c455"
+    }
+  },
+  {
     "addressInfo": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
     "chainId": 1,
     "name": "uniBTC",
@@ -2396,6 +2417,30 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xf4c449d6a2d1840625211769779ada42857d04dd"
+    }
+  },
+  {
+    "addressInfo": "0xC3c7E5E277d31CD24a3Ac4cC9af3B6770F30eA33",
+    "chainId": 1,
+    "name": "PT Staked cap USD 29JAN2026",
+    "symbol": "PT-stcUSD-29JAN2026",
+    "decimals": 18,
+    "logoURI": "/tokens/1/stcUSD.svg",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xcc781b043933c10a04409b22aada3a3d1a7f29d4"
+    }
+  },
+  {
+    "addressInfo": "0x545A490f9ab534AdF409A2E682bc4098f49952e3",
+    "chainId": 1,
+    "name": "PT cap USD 29JAN2026",
+    "symbol": "PT-cUSD-29JAN2026",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/68272/large/cUSD_ab_500%C3%97500.png?1755232868",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x307c15f808914df5a5dbe17e5608f84953ffa023"
     }
   }
 ]
