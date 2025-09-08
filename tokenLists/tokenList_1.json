@@ -1099,17 +1099,6 @@
     }
   },
   {
-    "addressInfo": "0x8E0789d39db454DBE9f4a77aCEF6dc7c69f6D552",
-    "chainId": 1,
-    "name": "Inception Restaked stETH Symbiotic",
-    "symbol": "INWSTETHS",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52515/large/inwstETHs.png?1733499299",
-    "meta": {
-      "provider": "INCEPTIONLRT"
-    }
-  },
-  {
     "addressInfo": "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
     "chainId": 1,
     "name": "Midas mRe7YIELD",
@@ -1704,6 +1693,26 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
+  },
+  {
+    "addressInfo": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a",
+    "chainId": 1,
+    "name": "OpenEden T-Bills",
+    "symbol": "TBILL",
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/30576/large/OE_Logo_200x200_Transparent.png?1696529441",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+    "chainId": 1,
+    "name": "World Liberty Financial USD",
+    "symbol": "USD1",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54977/large/USD1_1000x1000_transparent.png?1749297002",
+    "meta": {}
   },
   {
     "addressInfo": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
