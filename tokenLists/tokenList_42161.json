@@ -203,7 +203,7 @@
     "name": "Syrup USDC",
     "symbol": "syrupUSDC",
     "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
+    "logoURI": "/tokens/1/syrupUSDC.svg",
     "meta": {
       "provider": "STABLEWATCH"
     }
