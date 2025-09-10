@@ -1414,7 +1414,7 @@
     "name": "Syrup USDC",
     "symbol": "syrupUSDC",
     "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
+    "logoURI": "/tokens/1/syrupUSDC.svg",
     "meta": {
       "provider": "STABLEWATCH"
     }
@@ -1569,6 +1569,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0x23f0decc26eceeafa5cc900f8b47d99ff94ddd2b"
+    }
+  },
+  {
+    "addressInfo": "0xD7158ee345dab25B4fC95266C2bd8d062f243A13",
+    "chainId": 1,
+    "name": "PT Yala stablecoin 4DEC2025",
+    "symbol": "PT-YU-4DEC2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x8585177b041cd3c3fbec607fb620230259cd70db"
     }
   },
   {
@@ -2336,6 +2348,18 @@
     }
   },
   {
+    "addressInfo": "0x62C6E813b9589C3631Ba0Cdb013acdB8544038B7",
+    "chainId": 1,
+    "name": "PT Ethena USDe 27NOV2025",
+    "symbol": "PT-USDe-27NOV2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869"
+    }
+  },
+  {
     "addressInfo": "0x9F56094C450763769BA0EA9Fe2876070c0fD5F77",
     "chainId": 1,
     "name": "PT Ethena sUSDE 25SEP2025",
@@ -2345,6 +2369,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xa36b60a14a1a5247912584768c6e53e1a269a9f7"
+    }
+  },
+  {
+    "addressInfo": "0xe6A934089BBEe34F832060CE98848359883749B3",
+    "chainId": 1,
+    "name": "PT Ethena sUSDE 27NOV2025",
+    "symbol": "PT-sUSDE-27NOV2025",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xb6ac3d5da138918ac4e84441e924a20daa60dbdd"
     }
   },
   {
