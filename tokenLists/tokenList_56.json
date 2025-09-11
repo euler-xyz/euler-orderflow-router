@@ -3,7 +3,7 @@
     "addressInfo": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
     "chainId": 1,
     "name": "First Digital USD",
-    "symbol": "FDUSD",
+    "symbol": "fdusd",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31079/large/FDUSD_icon_black.png?1731097953",
     "meta": {}
@@ -151,7 +151,7 @@
     "name": "Aegis YUSD",
     "symbol": "YUSD",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
+    "logoURI": "https://assets.coingecko.com/coins/images/55085/large/LOGO_YUSD_BLACK.png?1756548564",
     "meta": {
       "provider": "AEGIS"
     }
