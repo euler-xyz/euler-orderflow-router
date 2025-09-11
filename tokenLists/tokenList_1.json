@@ -2478,5 +2478,17 @@
       "isPendlePT": true,
       "pendleMarket": "0x307c15f808914df5a5dbe17e5608f84953ffa023"
     }
+  },
+  {
+    "addressInfo": "0x48E502FBB6Ff2CC687d049150E2C8AdDC765A43a",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
+    "name": "PT Staked Falcon USD 29JAN2026",
+    "symbol": "PT-sUSDF-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xeb5819b31a0378407f43aba2f3e9d16b40aa5ec7"
+    }
   }
 ]
