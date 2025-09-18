@@ -2490,5 +2490,53 @@
       "isPendlePT": true,
       "pendleMarket": "0xeb5819b31a0378407f43aba2f3e9d16b40aa5ec7"
     }
+  },
+  {
+    "addressInfo": "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/tusde.svg",
+    "name": "PT Terminal USDe 18DEC2025",
+    "symbol": "PT-tUSDe-18DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xf342d4bde4ec5b4bba94c17ab4c92ee3792abd5e"
+    }
+  },
+  {
+    "addressInfo": "0xfCeEB7586bab730fA400A5BF3FcF298d0DB4c7e7",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "PT Wrapped stUSR 29JAN2026",
+    "symbol": "PT-wstUSR-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x39c3f8e0e7c6f44dc8f0397feb124517ba82e26e"
+    }
+  },
+  {
+    "addressInfo": "0x23e0D07095DAec91B6Ae016cA9F08222dCc64c49",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "PT Resolv USD 4DEC2025",
+    "symbol": "PT-USR-4DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x10e3e052bdee38c468ad092c87d330b59af6bbeb"
+    }
+  },
+  {
+    "addressInfo": "0x3A70F0C696dcB3A4aB3833cD9726397dD61AC85e",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "name": "PT Resolv Liquidity Provider Token 4DEC2025",
+    "symbol": "PT-RLP-4DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9942a74e6e75cea2db5d068c1e75c9ac687bca06"
+    }
   }
 ]
