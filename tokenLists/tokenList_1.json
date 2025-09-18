@@ -1613,7 +1613,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x85E30b8b263bC64d94b827ed450F2EdFEE8579dA",
+    "addressInfo": "0x9Cf12ccd6020b6888e4D4C4e4c7AcA33c1eB91f8",
     "chainId": 1,
     "name": "USDaf Stablecoin",
     "symbol": "USDaf",
@@ -1622,7 +1622,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94",
+    "addressInfo": "0x89E93172AEF8261Db8437b90c3dCb61545a05317",
     "chainId": 1,
     "name": "Savings USDaf",
     "symbol": "sUSDaf",
