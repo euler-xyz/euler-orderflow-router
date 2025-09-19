@@ -322,7 +322,7 @@
   {
     "addressInfo": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
     "chainId": 1,
-    "name": "sUSD",
+    "name": "Synthetix sUSD",
     "symbol": "SUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/5013/large/sUSD.png?1696505546",
@@ -2522,7 +2522,9 @@
     "logoURI": "/tokens/1/mhyper.svg",
     "name": "Midas Hyperithm",
     "symbol": "mHYPER",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
@@ -2531,7 +2533,9 @@
     "logoURI": "/tokens/1/mapollo.svg",
     "name": "Midas Apollo Crypto",
     "symbol": "mAPOLLO",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8",
@@ -2564,7 +2568,9 @@
     "logoURI": "/tokens/1/mfarm.svg",
     "name": "Midas Farm Capital",
     "symbol": "mFARM",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0xb64C014307622eB15046C66fF71D04258F5963DC",
@@ -2573,7 +2579,9 @@
     "logoURI": "/tokens/1/mevbtc.svg",
     "name": "Bitcoin MEV Capital",
     "symbol": "mevBTC",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
@@ -2582,7 +2590,9 @@
     "logoURI": "/tokens/1/mfone.svg",
     "name": "Midas Fasanara ONE",
     "symbol": "mF-ONE",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
