@@ -286,5 +286,17 @@
     "decimals": 18,
     "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x0177055f7429D3bd6B19f2dd591127DB871A510e",
+    "chainId": 8453,
+    "decimals": 6,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55386/large/yoUSD.png?1745708461",
+    "name": "PT yoVaultUSD 26MAR2026",
+    "symbol": "PT-yoUSD-26MAR2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xa679ce6d07cbe579252f0f9742fc73884b1c611c"
+    }
   }
 ]

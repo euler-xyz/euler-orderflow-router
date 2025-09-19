@@ -322,7 +322,7 @@
   {
     "addressInfo": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
     "chainId": 1,
-    "name": "sUSD",
+    "name": "Synthetix sUSD",
     "symbol": "SUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/5013/large/sUSD.png?1696505546",
@@ -1613,7 +1613,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x85E30b8b263bC64d94b827ed450F2EdFEE8579dA",
+    "addressInfo": "0x9Cf12ccd6020b6888e4D4C4e4c7AcA33c1eB91f8",
     "chainId": 1,
     "name": "USDaf Stablecoin",
     "symbol": "USDaf",
@@ -1622,7 +1622,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94",
+    "addressInfo": "0x89E93172AEF8261Db8437b90c3dCb61545a05317",
     "chainId": 1,
     "name": "Savings USDaf",
     "symbol": "sUSDaf",
@@ -2489,6 +2489,157 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xeb5819b31a0378407f43aba2f3e9d16b40aa5ec7"
+    }
+  },
+  {
+    "addressInfo": "0x9B02ca5685E9C332b158c01459562a161c8e8ADf",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56060/large/USDaf.png?1748165829",
+    "name": "PT USDaf Stablecoin 13NOV2025",
+    "symbol": "PT-USDaf-13NOV2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x8bf03acbf1c2ac2e487c80678de7873c954525d2"
+    }
+  },
+  {
+    "addressInfo": "0xA3CA92a69c6809607837bc3BD6B13e4c1E1e8aE9",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94.svg",
+    "name": "PT Savings USDaf 13NOV2025",
+    "symbol": "PT-sUSDaf-13NOV2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x233f5adf236cab22c5dbdd3333a7efd8267d7aee"
+    }
+  },
+  {
+    "addressInfo": "0x9b5528528656DBC094765E2abB79F293c21191B9",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/mhyper.svg",
+    "name": "Midas Hyperithm",
+    "symbol": "mHYPER",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/mapollo.svg",
+    "name": "Midas Apollo Crypto",
+    "symbol": "mAPOLLO",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/mapollo.svg",
+    "name": "PT Midas Apollo Crypto 20NOV2025",
+    "symbol": "PT-mAPOLLO-20NOV2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x71d857c437c56562a27aa087bc3fe529b35b6948"
+    }
+  },
+  {
+    "addressInfo": "0xE4d30cCF87Cb3E5E637b64A2EE21bD5d3901839A",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/mhyper.svg",
+    "name": "PT Midas Hyperithm 20NOV2025",
+    "symbol": "PT-mHYPER-20NOV2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x3a4204255257698e379245ef94274ef3b2907296"
+    }
+  },
+  {
+    "addressInfo": "0xA19f6e0dF08a7917F2F8A33Db66D0AF31fF5ECA6",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/mfarm.svg",
+    "name": "Midas Farm Capital",
+    "symbol": "mFARM",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0xb64C014307622eB15046C66fF71D04258F5963DC",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/mevbtc.svg",
+    "name": "Bitcoin MEV Capital",
+    "symbol": "mevBTC",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/mfone.svg",
+    "name": "Midas Fasanara ONE",
+    "symbol": "mF-ONE",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/tusde.svg",
+    "name": "PT Terminal USDe 18DEC2025",
+    "symbol": "PT-tUSDe-18DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xf342d4bde4ec5b4bba94c17ab4c92ee3792abd5e"
+    }
+  },
+  {
+    "addressInfo": "0xfCeEB7586bab730fA400A5BF3FcF298d0DB4c7e7",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "PT Wrapped stUSR 29JAN2026",
+    "symbol": "PT-wstUSR-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x39c3f8e0e7c6f44dc8f0397feb124517ba82e26e"
+    }
+  },
+  {
+    "addressInfo": "0x23e0D07095DAec91B6Ae016cA9F08222dCc64c49",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "PT Resolv USD 4DEC2025",
+    "symbol": "PT-USR-4DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x10e3e052bdee38c468ad092c87d330b59af6bbeb"
+    }
+  },
+  {
+    "addressInfo": "0x3A70F0C696dcB3A4aB3833cD9726397dD61AC85e",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "name": "PT Resolv Liquidity Provider Token 4DEC2025",
+    "symbol": "PT-RLP-4DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9942a74e6e75cea2db5d068c1e75c9ac687bca06"
     }
   }
 ]
