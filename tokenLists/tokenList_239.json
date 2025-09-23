@@ -215,5 +215,25 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "chainId": 239,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0xF9775085d726E782E83585033B58606f7731AB18",
+    "chainId": 239,
+    "decimals": 8,
+    "logoURI": "/tokens/60808/uniBTC.webp",
+    "name": "uniBTC",
+    "symbol": "uniBTC",
+    "meta": {}
   }
 ]
