@@ -259,7 +259,9 @@
     "symbol": "PT-USDe-27NOV2025",
     "meta": {
       "isPendlePT": true,
-      "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869"
+      "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869",
+      "isPendleCrossChainPT": true,
+      "pendleCrossChainPTPaired": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
     }
   }
 ]
