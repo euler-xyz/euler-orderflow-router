@@ -249,5 +249,17 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
+    "chainId": 43114,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "name": "PT Ethena USDe 27NOV2025",
+    "symbol": "PT-USDe-27NOV2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869"
+    }
   }
 ]
