@@ -3,6 +3,7 @@ import {
   StrategyBalmySDK,
   StrategyERC4626Wrapper,
   StrategyElixir,
+  StrategyPendleCrossChainPT,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -24,6 +25,10 @@ const avalancheRoutingConfig: ChainRoutingConfig = [
     match: {
       tokensInOrOut: [SDEUSD_AVALANCHE],
     },
+  },
+  {
+    strategy: StrategyPendleCrossChainPT.name(),
+    match: {},
   },
   {
     strategy: StrategyERC4626Wrapper.name(),

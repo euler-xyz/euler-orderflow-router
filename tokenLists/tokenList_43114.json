@@ -249,5 +249,26 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
+    "chainId": 43114,
+    "name": "PT-USDe-27NOV2025",
+    "symbol": "PT-USDe-27NOV2025",
+    "decimals": 18,
+    "logoURI": "",
+    "meta": {
+      "isPendleCrossChainPT": true,
+      "pendleCrossChainPTPaired": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+    }
+  },
+  {
+    "addressInfo": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "chainId": 43114,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
   }
 ]
