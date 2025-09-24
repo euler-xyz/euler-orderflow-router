@@ -29,6 +29,7 @@ const SUPPORTED_CHAINS = [
   Chains.SCROLL,
   { chainId: 59144 }, // linea
   { chainId: 130 }, // unichain
+  { chainId: 9745 }, // plasma
 ]
 
 const ZRX_METADATA: QuoteSourceMetadata<ZRXSupport> = {
