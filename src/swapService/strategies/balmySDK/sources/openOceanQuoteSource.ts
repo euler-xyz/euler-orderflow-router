@@ -134,7 +134,10 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       slippage: slippagePercentage,
       gasPrice: gasPrice,
       account: recipient ?? takeFrom,
-      referrer: config.referrer?.address,
+      referrer:
+        chainId === 239
+          ? process.env.OPENOCEAN_TAC_REFERRER
+          : config.referrer?.address,
       enabledDexIds: config.sourceAllowlist,
       disableRfq: true,
     }

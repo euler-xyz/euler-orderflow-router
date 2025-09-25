@@ -28,6 +28,7 @@ const defaultRoutingConfig: ChainRoutingConfig = [
           "enso",
           "okx-dex",
           "pendle",
+          "0x",
         ],
       },
     },
