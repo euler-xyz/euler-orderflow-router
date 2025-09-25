@@ -175,5 +175,36 @@
       "provider": "DEFILLAMA",
       "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
     }
+  },
+  {
+    "addressInfo": "0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "Resolv USD",
+    "symbol": "USR",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2a52B289bA68bBd02676640aA9F605700c9e5699",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "Wrapped Staked USR",
+    "symbol": "wstUSR",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x35533f54740F1F1aA4179E57bA37039dfa16868B",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "name": "Resolv Liquidity Provider Token",
+    "symbol": "RLP",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
