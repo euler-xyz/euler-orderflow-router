@@ -210,5 +210,14 @@
       "isPendlePT": true,
       "pendleMarket": "0x8557d39d4bab2b045ac5c2b7ea66d12139da9af4"
     }
+  },
+  {
+    "addressInfo": "0x000Ae314E2A2172a039B26378814C252734f556A",
+    "chainId": 56,
+    "name": "Aster",
+    "symbol": "ASTER",
+    "decimals": 18,
+    "logoURI": "/tokens/56/aster.webp",
+    "meta": {}
   }
 ]

@@ -1,0 +1,212 @@
+[
+  {
+    "addressInfo": "0x6100E367285b01F48D07953803A2d8dCA5D19873",
+    "chainId": 9745,
+    "name": "Wrapped XPL",
+    "symbol": "WXPL",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/66489/standard/Plasma-symbol-green-1.png?1755142558",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+    "chainId": 9745,
+    "name": "USDT0",
+    "symbol": "USDT0",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9895D81bB462A195b4922ED7De0e3ACD007c32CB",
+    "chainId": 9745,
+    "name": "WETH",
+    "symbol": "WETH",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+    "chainId": 9745,
+    "name": "weETH",
+    "symbol": "weETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
+    "meta": {
+      "provider": "ETHERFI"
+    }
+  },
+  {
+    "addressInfo": "0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193",
+    "chainId": 9745,
+    "name": "XAUT0",
+    "symbol": "XAUT0",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/66560/standard/XAUt0_Token_Icon_Gold.png?1749747942",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "chainId": 9745,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "chainId": 9745,
+    "name": "sUSDe",
+    "symbol": "sUSDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
+    "chainId": 9745,
+    "name": "ENA",
+    "symbol": "ENA",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/36530/standard/ethena.png?1711701436",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+    "chainId": 9745,
+    "name": "USDai",
+    "symbol": "USDai",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
+    "name": "Staked USDai",
+    "symbol": "sUSDai",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x87e617C7484aDE79FcD90db58BEB82B057facb48",
+    "chainId": 9745,
+    "name": "USDO",
+    "symbol": "USDO",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/38272/standard/USD0LOGO.png?1716962811",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xbEeE5862649eF24c1F1d5e799505F67F1e7bAB9a",
+    "chainId": 9745,
+    "name": "cUSDO",
+    "symbol": "cUSDO",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/53751/standard/cUSDO_logo_white.png?1737182014",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x9eCaf80c1303CCA8791aFBc0AD405c8a35e8d9f1",
+    "chainId": 9745,
+    "name": "KelpDao Restaked ETH",
+    "symbol": "rsETH",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
+  },
+  {
+    "addressInfo": "0xe561FE05C39075312Aa9Bc6af79DdaE981461359",
+    "chainId": 9745,
+    "name": "wrsETH",
+    "symbol": "wrsETH",
+    "decimals": 18,
+    "logoURI": "/tokens/239/wrseth.svg",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
+  },
+  {
+    "addressInfo": "0xC4374775489CB9C56003BF2C9b12495fC64F0771",
+    "chainId": 9745,
+    "name": "Syrup USDT",
+    "symbol": "syrupUSDT",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/54658/standard/SyrupUSDCO.png?1748850129",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0xca632FA58397391C750c13F935DAA61AbBe0BaA6",
+    "chainId": 9745,
+    "name": "EUL",
+    "symbol": "EUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xe2011F2bF6556863c3bacE991Efc8DaC26CD84c2",
+    "chainId": 9745,
+    "name": "Reward EUL",
+    "symbol": "rEUL",
+    "decimals": 18,
+    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x6eAf19b2FC24552925dB245F9Ff613157a7dbb4C",
+    "chainId": 9745,
+    "decimals": 6,
+    "logoURI": "/tokens/146/xusd.svg",
+    "name": "Staked Stream USD",
+    "symbol": "xUSD",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
+    }
+  },
+  {
+    "addressInfo": "0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "Resolv USD",
+    "symbol": "USR",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2a52B289bA68bBd02676640aA9F605700c9e5699",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "Wrapped Staked USR",
+    "symbol": "wstUSR",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x35533f54740F1F1aA4179E57bA37039dfa16868B",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "name": "Resolv Liquidity Provider Token",
+    "symbol": "RLP",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  }
+]
