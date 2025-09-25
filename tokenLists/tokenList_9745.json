@@ -144,7 +144,9 @@
     "symbol": "syrupUSDT",
     "decimals": 6,
     "logoURI": "https://assets.coingecko.com/coins/images/54658/standard/SyrupUSDCO.png?1748850129",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0xca632FA58397391C750c13F935DAA61AbBe0BaA6",
