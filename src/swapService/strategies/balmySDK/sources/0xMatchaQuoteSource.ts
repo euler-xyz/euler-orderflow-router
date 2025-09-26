@@ -93,10 +93,10 @@ export class CustomZRXQuoteSource
       transaction: { data, to, value },
       buyAmount,
       minBuyAmount,
-      issues,
+      // issues,
     } = await response.json()
 
-    const allowanceTarget = issues?.allowance?.spender ?? Addresses.ZERO_ADDRESS
+    // const allowanceTarget = issues?.allowance?.spender ?? Addresses.ZERO_ADDRESS
 
     return {
       sellAmount: order.sellAmount,
@@ -104,7 +104,7 @@ export class CustomZRXQuoteSource
       buyAmount: BigInt(buyAmount),
       minBuyAmount: BigInt(minBuyAmount),
       // estimatedGas: BigInt(gas ?? 0),
-      allowanceTarget: calculateAllowanceTarget(sellToken, allowanceTarget),
+      // allowanceTarget: calculateAllowanceTarget(sellToken, allowanceTarget),
       customData: {
         tx: {
           calldata: data,
