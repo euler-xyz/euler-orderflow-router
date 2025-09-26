@@ -145,5 +145,14 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
+    "chainId": 59144,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/68507/large/linea-logo.jpeg?1756025484",
+    "name": "Linea",
+    "symbol": "LINEA",
+    "meta": {}
   }
 ]
