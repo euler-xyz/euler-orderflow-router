@@ -298,5 +298,17 @@
       "isPendlePT": true,
       "pendleMarket": "0xa679ce6d07cbe579252f0f9742fc73884b1c611c"
     }
+  },
+  {
+    "addressInfo": "0x1A5c5eA50717a2ea0e4F7036FB289349DEaAB58b",
+    "chainId": 8453,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54932/large/yoETH.png?1744788591",
+    "name": "PT yoVaultETH 26MAR2026",
+    "symbol": "PT-yoETH-26MAR2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x5d6e67fce4ad099363d062815b784d281460c49b"
+    }
   }
 ]

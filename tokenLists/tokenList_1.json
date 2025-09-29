@@ -2638,5 +2638,29 @@
       "isPendlePT": true,
       "pendleMarket": "0x9942a74e6e75cea2db5d068c1e75c9ac687bca06"
     }
+  },
+  {
+    "addressInfo": "0x12fd502e2052CaFB41eccC5B596023d9978057d6",
+    "chainId": 1,
+    "decimals": 8,
+    "logoURI": "/tokens/1/xbtc.svg",
+    "name": "Staked Stream BTC",
+    "symbol": "xBTC",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "69021e5e-7cae-4df4-915e-08a6b349f456"
+    }
+  },
+  {
+    "addressInfo": "0x7E586fBaF3084C0be7aB5C82C04FfD7592723153",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/xeth.svg",
+    "name": "Staked Stream ETH",
+    "symbol": "xETH",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "24b3096a-488d-4a61-afa6-e5e9be2ce4bf"
+    }
   }
 ]
