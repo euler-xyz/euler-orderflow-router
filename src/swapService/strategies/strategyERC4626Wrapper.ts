@@ -93,6 +93,13 @@ const defaultConfig: {
     },
     {
       chainId: 1,
+      protocol: "stcUSD",
+      vault: "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      asset: "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      assetDustEVault: "0xe0695883730ddd5eb322A601e08890c301fFcc71",
+    },
+    {
+      chainId: 1,
       protocol: "lstRZR",
       vault: "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB",
       asset: "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
