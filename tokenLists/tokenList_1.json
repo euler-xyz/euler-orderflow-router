@@ -2662,5 +2662,25 @@
       "provider": "DEFILLAMA",
       "poolId": "24b3096a-488d-4a61-afa6-e5e9be2ce4bf"
     }
+  },
+  {
+    "addressInfo": "0x7743e50F534a7f9F1791DdE7dCD89F7783Eefc39",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/fxsave.svg",
+    "name": "f(x) USD Saving",
+    "symbol": "fxSAVE",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x085780639CC2cACd35E474e71f4d000e2405d8f6",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/fxusd.svg",
+    "name": "f(x) USD",
+    "symbol": "fxUSD",
+    "meta": {}
   }
 ]
