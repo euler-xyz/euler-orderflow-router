@@ -36,6 +36,7 @@ export const PENDLE_METADATA: QuoteSourceMetadata<PendleSupport> = {
       Chains.BNB_CHAIN.chainId,
       146,
       80094,
+      9745,
     ],
     swapAndTransfer: true,
     buyOrders: false,
