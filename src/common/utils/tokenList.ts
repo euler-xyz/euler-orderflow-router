@@ -12,6 +12,8 @@ export type TokenListItem = {
     poolId?: string
     isPendlePT?: boolean
     pendleMarket?: string
+    isPendleCrossChainPT?: boolean
+    pendleCrossChainPTPaired?: string
   }
 }
 

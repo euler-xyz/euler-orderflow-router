@@ -253,6 +253,7 @@
   {
     "addressInfo": "0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
     "chainId": 43114,
+
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "name": "PT Ethena USDe 27NOV2025",
@@ -263,5 +264,14 @@
       "isPendleCrossChainPT": true,
       "pendleCrossChainPTPaired": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
     }
+  },
+  {
+    "addressInfo": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "chainId": 43114,
+    "name": "USDe",
+    "symbol": "USDe",
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "meta": {}
   }
 ]
