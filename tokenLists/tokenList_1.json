@@ -2682,5 +2682,17 @@
     "name": "f(x) USD",
     "symbol": "fxUSD",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xBA1EDF4A4C7eB8Cb0DaE0594326179f9c7D909D2",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/xusd.jpg",
+    "name": "PT xUSD 18DEC2025",
+    "symbol": "PT-xUSD-18DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xa549ea12e9bef89c604183404a929d78a4941eb8"
+    }
   }
 ]
