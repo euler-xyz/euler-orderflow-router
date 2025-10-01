@@ -216,7 +216,10 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "name": "PT Ethena USDe 15JAN2026",
     "symbol": "PT-USDe-15JAN2026",
-    "meta": {}
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xfd3eb62302fa3cbc3c7e59e887b92dbbc814285d"
+    }
   },
   {
     "addressInfo": "0x02FCC4989B4C9D435b7ceD3fE1Ba4CF77BBb5Dd8",
@@ -225,7 +228,10 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
     "name": "PT Ethena sUSDE 15JAN2026",
     "symbol": "PT-sUSDE-15JAN2026",
-    "meta": {}
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xe06c3b972ba630ccf3392cecdbe070690b4e6b55"
+    }
   },
   {
     "addressInfo": "0x8dFb9A39dFab16bFFE77f15544B5bf03e377e419",
@@ -234,7 +240,10 @@
     "logoURI": "https://assets.coingecko.com/coins/images/54658/standard/SyrupUSDCO.png?1748850129",
     "name": "PT Syrup USDT 29JAN2026",
     "symbol": "PT-syrupUSDT-29JAN2026",
-    "meta": {}
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x18d89b23d2875590c502cd3eac8f448f3ccf9999"
+    }
   },
   {
     "addressInfo": "0xD516188daf64EFa04a8d60872F891f2cC811A561",
@@ -243,7 +252,10 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
     "name": "PT USDai 19MAR2026",
     "symbol": "PT-USDai-19MAR2026",
-    "meta": {}
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x15735f2f53c5cd25a57dff83b11c93eceaf72073"
+    }
   },
   {
     "addressInfo": "0xedac81b27790e0728f54dEa3B7718e5437E85353",
@@ -252,6 +264,9 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
     "name": "PT Staked USDai 19MAR2026",
     "symbol": "PT-sUSDai-19MAR2026",
-    "meta": {}
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x0d7d9abee602c7f0a242ea7e200e47c372acba84"
+    }
   }
 ]
