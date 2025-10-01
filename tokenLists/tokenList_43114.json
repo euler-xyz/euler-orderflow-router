@@ -253,7 +253,6 @@
   {
     "addressInfo": "0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
     "chainId": 43114,
-
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "name": "PT Ethena USDe 27NOV2025",
@@ -266,12 +265,15 @@
     }
   },
   {
-    "addressInfo": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "addressInfo": "0x7bFd4CA2a6Cf3A3fDDd645D10B323031afe47FF0",
     "chainId": 43114,
-    "name": "USDe",
-    "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {}
+    "logoURI": "/tokens/239/wrseth.svg",
+    "name": "wrsETH",
+    "symbol": "wrsETH",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
+    }
   }
 ]
