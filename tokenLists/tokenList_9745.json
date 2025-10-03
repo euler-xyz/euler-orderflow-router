@@ -297,5 +297,16 @@
     "name": "deUSD",
     "symbol": "deUSD",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x5f264836CE02496CcF55D7F9AA5Cb34e34319DB5",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/1/fxsave.svg",
+    "name": "Plasma fxSAVE",
+    "symbol": "pfxSAVE",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
