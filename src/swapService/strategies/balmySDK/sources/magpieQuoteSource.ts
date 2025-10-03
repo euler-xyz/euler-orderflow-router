@@ -36,6 +36,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.SONIC.chainId]: "sonic",
   80094: "berachain",
   130: "unichain",
+  9745: "plasma",
 }
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {
