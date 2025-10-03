@@ -268,5 +268,14 @@
       "isPendlePT": true,
       "pendleMarket": "0x0d7d9abee602c7f0a242ea7e200e47c372acba84"
     }
+  },
+  {
+    "addressInfo": "0x29AD7fE4516909b9e498B5a65339e54791293234",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/67504/large/metronome_msusd.png?1753015705",
+    "name": "Metronome Synth USD",
+    "symbol": "msUSD",
+    "meta": {}
   }
 ]
