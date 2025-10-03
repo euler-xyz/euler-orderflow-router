@@ -268,5 +268,34 @@
       "isPendlePT": true,
       "pendleMarket": "0x0d7d9abee602c7f0a242ea7e200e47c372acba84"
     }
+  },
+  {
+    "addressInfo": "0x29AD7fE4516909b9e498B5a65339e54791293234",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/67504/large/metronome_msusd.png?1753015705",
+    "name": "Metronome Synth USD",
+    "symbol": "msUSD",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x7884A8457f0E63e82C89A87fE48E8Ba8223DB069",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52847/large/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
+    "name": "Staked deUSD",
+    "symbol": "sdeUSD",
+    "meta": {
+      "provider": "SDEUSD"
+    }
+  },
+  {
+    "addressInfo": "0x4ac60586C3e245fF5593cf99241395bf42509274",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39494/large/deUSD_Logo_%281%29.png?1723689002",
+    "name": "deUSD",
+    "symbol": "deUSD",
+    "meta": {}
   }
 ]
