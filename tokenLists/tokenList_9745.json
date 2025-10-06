@@ -306,7 +306,7 @@
     "name": "Plasma fxSAVE",
     "symbol": "pfxSAVE",
     "meta": {
-      "provider": "STABLEWATCH"
+      "provider": "LAGOON"
     }
   }
 ]
