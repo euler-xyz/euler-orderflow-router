@@ -195,7 +195,9 @@
     "symbol": "thBILL",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
