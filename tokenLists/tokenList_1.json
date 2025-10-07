@@ -1173,7 +1173,10 @@
     "symbol": "xUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/xusd.jpg",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
+    }
   },
   {
     "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
