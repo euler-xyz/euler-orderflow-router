@@ -316,7 +316,9 @@
     "logoURI": "/tokens/9745/splUSD.svg",
     "name": "Staked Plasma USD",
     "symbol": "splUSD",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
