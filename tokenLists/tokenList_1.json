@@ -2581,7 +2581,9 @@
     "logoURI": "/tokens/1/mevbtc.svg",
     "name": "Bitcoin MEV Capital",
     "symbol": "mevBTC",
-    "meta": {}
+    "meta": {
+      "provider": "MIDAS"
+    }
   },
   {
     "addressInfo": "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
