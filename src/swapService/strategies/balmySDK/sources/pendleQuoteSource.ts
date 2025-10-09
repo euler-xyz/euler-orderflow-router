@@ -180,13 +180,22 @@ export class CustomPendleQuoteSource
         )
       }
       // swap
-      const queryParams = {
+      const queryParams: any = {
         receiver: recipient || takeFrom,
         slippage: slippagePercentage / 100, // 1 = 100%
         enableAggregator: true,
         tokenIn: sellToken,
         tokenOut: buyToken,
         amountIn: order.sellAmount.toString(),
+      }
+
+      if (
+        isAddressEqual(
+          tokenIn.addressInfo,
+          "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
+        )
+      ) {
+        queryParams.aggregators = "paraswap"
       }
 
       const queryString = qs.stringify(queryParams, {
@@ -197,7 +206,7 @@ export class CustomPendleQuoteSource
       const pendleMarket =
         tokenIn?.meta?.pendleMarket || tokenOut?.meta?.pendleMarket
 
-      url = `${getUrl()}/sdk/${chainId}/markets/${pendleMarket}/swap?${queryString}`
+      url = `${getUrl(2)}/sdk/${chainId}/markets/${pendleMarket}/swap?${queryString}`
     }
 
     const response = await fetchService.fetch(url, {
@@ -277,8 +286,8 @@ export class CustomPendleQuoteSource
   }
 }
 
-function getUrl() {
-  return "https://api-v2.pendle.finance/core/v1"
+function getUrl(v = 1) {
+  return `https://api-v2.pendle.finance/core/v${v}`
 }
 
 function getHeaders(config: PendleConfig) {
