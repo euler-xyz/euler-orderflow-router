@@ -313,16 +313,18 @@
     "addressInfo": "0x616185600989Bf8339b58aC9e539d49536598343",
     "chainId": 9745,
     "decimals": 18,
-    "logoURI": "/tokens/9475/splUSD.svg",
+    "logoURI": "/tokens/9745/splUSD.svg",
     "name": "Staked Plasma USD",
     "symbol": "splUSD",
-    "meta": {}
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   },
   {
     "addressInfo": "0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
     "chainId": 9745,
     "decimals": 18,
-    "logoURI": "/tokens/9475/plUSD.svg",
+    "logoURI": "/tokens/9745/plUSD.svg",
     "name": "Plasma USD",
     "symbol": "plUSD",
     "meta": {}

@@ -275,5 +275,16 @@
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
+  },
+  {
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "chainId": 43114,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
+    "name": "Staked USDe",
+    "symbol": "sUSDe",
+    "meta": {
+      "provider": "SUSDE"
+    }
   }
 ]
