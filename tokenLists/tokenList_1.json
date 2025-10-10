@@ -59,10 +59,10 @@
   {
     "addressInfo": "0x111111111117dC0aa78b770fA6A738034120C302",
     "chainId": 1,
-    "name": "1inch",
+    "name": "1INCH",
     "symbol": "1INCH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/13469/large/1inch-token.png?1696513230",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/13469/large/1inch-logo.jpeg?1759404663",
     "meta": {}
   },
   {
@@ -223,7 +223,7 @@
     "name": "Chainlink",
     "symbol": "LINK",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1696502009",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
     "meta": {}
   },
   {
@@ -304,7 +304,7 @@
   {
     "addressInfo": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
     "chainId": 1,
-    "name": "Synthetix Network",
+    "name": "Synthetix",
     "symbol": "SNX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/3406/large/SNX.png?1696504103",
@@ -2698,6 +2698,18 @@
     "meta": {
       "isPendlePT": true,
       "pendleMarket": "0xa549ea12e9bef89c604183404a929d78a4941eb8"
+    }
+  },
+  {
+    "addressInfo": "0x3E7736d0b1Ed0F6A0A555355b72c2C2d416564E1",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/mfarm.svg",
+    "name": "PT Midas mFARM 11DEC2025",
+    "symbol": "PT-mFARM-11DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x56649da435f9a9a57ee9c4c06b728e4ba84fcc6b"
     }
   }
 ]
