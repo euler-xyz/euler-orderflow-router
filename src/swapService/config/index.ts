@@ -1,5 +1,6 @@
-import { avalanche, base, bsc, mainnet } from "viem/chains"
+import { arbitrum, avalanche, base, bsc, mainnet } from "viem/chains"
 import type { RoutingConfig } from "../interface"
+import arbitrumRoutingConfig from "./arbitrum"
 import avalancheRoutingConfig from "./avalanche"
 import baseRoutingConfig from "./base"
 import berachainRoutingConfig from "./berachain"
@@ -16,6 +17,7 @@ const routingConfig: RoutingConfig = {
   [base.id]: baseRoutingConfig,
   [avalanche.id]: avalancheRoutingConfig,
   [bsc.id]: bscRoutingConfig,
+  [arbitrum.id]: arbitrumRoutingConfig,
   [1923]: swellRoutingConfig,
   [80094]: berachainRoutingConfig,
   [60808]: bobRoutingConfig,
