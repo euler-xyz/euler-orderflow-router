@@ -219,5 +219,14 @@
     "decimals": 18,
     "logoURI": "/tokens/56/aster.webp",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "chainId": 56,
+    "name": "MetaMask USD",
+    "symbol": "mUSD",
+    "decimals": 6,
+    "logoURI": "/tokens/1/musd.png",
+    "meta": {}
   }
 ]

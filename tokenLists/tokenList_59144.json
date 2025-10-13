@@ -154,5 +154,28 @@
     "name": "Linea",
     "symbol": "LINEA",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x4809010926aec940b550D34a46A52739f996D75D",
+    "chainId": 59144,
+    "decimals": 18,
+    "name": "Wrapped Savings rUSD",
+    "symbol": "wsrUSD",
+    "logoURI": "https://coin-images.coingecko.com/coins/images/54118/large/srUSD.png?1738313910",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
+    }
+  },
+  {
+    "addressInfo": "0xe4eEB461Ad1e4ef8b8EF71a33694CCD84Af051C4",
+    "chainId": 59144,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/68282/large/rex33.png?1755242075",
+    "name": "Etherex Liquid Staking Token",
+    "symbol": "REX33",
+    "meta": {
+      "provider": "ETHEREX"
+    }
   }
 ]
