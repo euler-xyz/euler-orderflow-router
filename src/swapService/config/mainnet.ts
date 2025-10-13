@@ -60,7 +60,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
         PUSDE_MAINNET,
         LSTRZR_MAINNET,
         STCUSD_MAINNET,
-        EUSDE_MAINNET,
+        // EUSDE_MAINNET,
       ],
       excludeTokensInOrOut: [
         PT_WSTUSR_27MAR2025_MAINNET,
