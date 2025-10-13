@@ -189,14 +189,14 @@ export class CustomPendleQuoteSource
         amountIn: order.sellAmount.toString(),
       }
 
-      if (
-        isAddressEqual(
-          tokenIn.addressInfo,
-          "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
-        )
-      ) {
-        queryParams.aggregators = "paraswap"
-      }
+      // if (
+      //   isAddressEqual(
+      //     tokenIn.addressInfo,
+      //     "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
+      //   )
+      // ) {
+      //   queryParams.aggregators = "paraswap"
+      // }
 
       const queryString = qs.stringify(queryParams, {
         skipNulls: true,
