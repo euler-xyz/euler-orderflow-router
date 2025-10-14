@@ -367,5 +367,16 @@
       "isPendlePT": true,
       "pendleMarket": "0x4ed09847377c30aa4e74ad071e719c5814ad9ead"
     }
+  },
+  {
+    "addressInfo": "0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9",
+    "chainId": 42161,
+    "decimals": 15,
+    "logoURI": "/tokens/42161/autoUSDai.svg",
+    "name": "autoUSDai",
+    "symbol": "autoUSDai",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]

@@ -177,5 +177,16 @@
     "meta": {
       "provider": "ETHEREX"
     }
+  },
+  {
+    "addressInfo": "0x4e559dBCCbe87De66c6a9F3f25231096F24c2e28",
+    "chainId": 59144,
+    "decimals": 18,
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
