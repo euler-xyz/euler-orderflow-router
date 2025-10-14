@@ -17,7 +17,6 @@ import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
 import {
   SWAPPER_HANDLER_GENERIC,
-  adjustForInterest,
   buildApiResponseSwap,
   buildApiResponseVerifyDebtMax,
   buildApiResponseVerifySkimMin,
@@ -121,6 +120,16 @@ const defaultConfig: Config = {
         oracleContract: "0x65df7299A9010E399A38d6B7159d25239cDF039b",
         paymentToken: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
         paymentTokenSweepVault: "0xb93d4928f39fbcd6c89a7dfbf0a867e6344561be", // eUSDC-1 escrow
+        priceOne: 100000000n,
+      },
+      mevBTC: {
+        tokenContract: "0xb64C014307622eB15046C66fF71D04258F5963DC",
+        redemptionInstantFeeBps: 50n,
+        depositorContract: "0xA6d60A71844bc134f4303F5E40169D817b491E37",
+        redeemerContract: "0x2d7d5b1706653796602617350571B3F8999B950c",
+        oracleContract: "0xffd462e0602Dd9FF3F038fd4e77a533f8c474b65",
+        paymentToken: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", // WBTC
+        paymentTokenSweepVault: "0x598513C77236Bd5821CCC7bc3E3a585F3FeC9fb1", // eWBTC-1 escrow
         priceOne: 100000000n,
       },
     },
