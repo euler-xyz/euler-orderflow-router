@@ -328,5 +328,36 @@
     "name": "Plasma USD",
     "symbol": "plUSD",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xC8A8DF9B210243c55D31c73090F06787aD0A1Bf6",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/9745/syzusd.svg",
+    "name": "Staked Yuzu USD",
+    "symbol": "syzUSD",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x6695c0f8706C5ACe3Bdf8995073179cCA47926dc",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/9745/yzusd.svg",
+    "name": "Yuzu USD",
+    "symbol": "yzUSD",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xEbFC8C2Fe73C431Ef2A371AeA9132110aaB50DCa",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/9745/yzpp.svg",
+    "name": "Yuzu Protection Pool",
+    "symbol": "yzPP",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
