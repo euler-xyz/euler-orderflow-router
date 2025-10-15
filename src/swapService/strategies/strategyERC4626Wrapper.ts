@@ -155,6 +155,20 @@ const defaultConfig: {
       assetDustEVault: "0xF31280f6E33Aa53Ea23E1982B2071b688e3a9cA2",
     },
     {
+      chainId: 1,
+      protocol: "srUSDe",
+      vault: "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003",
+      asset: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      assetDustEVault: "0x537469D2219Bf28EAc0B1199d142969163309969",
+    },
+    {
+      chainId: 1,
+      protocol: "jrUSDe",
+      vault: "0xC58D044404d8B14e953C115E67823784dEA53d8F",
+      asset: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      assetDustEVault: "0x537469D2219Bf28EAc0B1199d142969163309969",
+    },
+    {
       chainId: 43114,
       protocol: "savUSD",
       vault: "0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",
