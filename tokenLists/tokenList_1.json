@@ -2711,5 +2711,51 @@
       "isPendlePT": true,
       "pendleMarket": "0x56649da435f9a9a57ee9c4c06b728e4ba84fcc6b"
     }
+  },
+  {
+    "addressInfo": "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/srUSDe.svg",
+    "name": "Strata Senior USDe",
+    "symbol": "srUSDe",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/srUSDe.svg",
+    "name": "PT Strata Senior USDe 15JAN2026",
+    "symbol": "PT-srUSDe-15JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xa83174f1dd8475378abca9d676dad3ce97409e0a"
+    }
+  },
+  {
+    "addressInfo": "0xC58D044404d8B14e953C115E67823784dEA53d8F",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/jrUSDe.svg",
+    "name": "Strata Junior USDe",
+    "symbol": "jrUSDe",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x53F3373F0D811902405f91eB0d5cc3957887220D",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/jrUSDe.svg",
+    "name": "PT Strata Junior USDe 15JAN2026",
+    "symbol": "PT-jrUSDe-15JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x41264f35ef7ef8c4905ca98052e8d7480f12859e"
+    }
   }
 ]

@@ -62,7 +62,10 @@
     "symbol": "wstkscUSD",
     "decimals": 6,
     "logoURI": "/tokens/146/wstkscUSD.svg",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "4755c634-2e97-4547-be2b-0989e373cccb"
+    }
   },
   {
     "addressInfo": "0x0C4E186Eae8aCAA7F7de1315D5AD174BE39Ec987",
@@ -122,7 +125,10 @@
     "symbol": "wstkscETH",
     "decimals": 18,
     "logoURI": "/tokens/146/wstkscETH.svg",
-    "meta": {}
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "505e1ca5-9986-45e1-b013-ff6b902678fc"
+    }
   },
   {
     "addressInfo": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
