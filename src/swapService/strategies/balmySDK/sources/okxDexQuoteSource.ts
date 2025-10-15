@@ -44,6 +44,10 @@ const SUPPORTED_CHAINS = [
     chainId: 130,
     name: "Unichain",
   },
+  {
+    chainId: 9745,
+    name: "Plasma",
+  },
 ]
 
 const OKX_DEX_METADATA: QuoteSourceMetadata<OKXDexSupport> = {
