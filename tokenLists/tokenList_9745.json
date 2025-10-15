@@ -371,5 +371,16 @@
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
     }
+  },
+  {
+    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "chainId": 9745,
+    "decimals": 18,
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
   }
 ]
