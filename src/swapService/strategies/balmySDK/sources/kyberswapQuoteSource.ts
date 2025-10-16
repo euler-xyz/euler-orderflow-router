@@ -94,7 +94,9 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
       : undefined
 
     const url = `https://aggregator-api.kyberswap.com/${chainKey}/api/v1/routes?tokenIn=${sellToken}&tokenOut=${buyToken}&amountIn=${order.sellAmount.toString()}&saveGas=0&gasInclude=true&excludedSources=clipper,hashflow-v3,kyberswap-limit-order,kyberswap-limit-order-v2,mx-trading,native-v1,native-v2`
+    console.log("url: ", url)
     const routeResponse = await fetchService.fetch(url, { timeout, headers })
+    console.log("routeResponse: ", routeResponse)
 
     if (!routeResponse.ok) {
       failed(

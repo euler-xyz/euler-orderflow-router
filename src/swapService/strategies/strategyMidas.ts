@@ -157,6 +157,19 @@ const defaultConfig: Config = {
         priceOne: 100000000n,
       },
     },
+    [9745]: {
+      //plasma
+      mHYPER: {
+        tokenContract: "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
+        redemptionInstantFeeBps: 50n,
+        depositorContract: "0xa603cf264aDEB8E7f0f063C116929ADAC2D4286E",
+        redeemerContract: "0x880661F9b412065D616890cA458dcCd0146cb77C",
+        oracleContract: "0xfC3E47c4Da8F3a01ac76c3C5ecfBfC302e1A08F0",
+        paymentToken: "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb", // USDT0
+        paymentTokenSweepVault: "0x9F562699511351bA3d0cf3d0DF1502e776517ef3",
+        priceOne: 100000000n,
+      },
+    },
   },
 }
 

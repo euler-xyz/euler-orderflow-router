@@ -8,6 +8,7 @@ import bobRoutingConfig from "./bob"
 import bscRoutingConfig from "./bsc"
 import defaultRoutingConfig from "./default"
 import mainnetRoutingConfig from "./mainnet"
+import plasmaRoutingConfig from "./plasma"
 import sonicRoutingConfig from "./sonic"
 import swellRoutingConfig from "./swell"
 import unichainRoutingConfig from "./unichain"
@@ -23,6 +24,7 @@ const routingConfig: RoutingConfig = {
   [60808]: bobRoutingConfig,
   [146]: sonicRoutingConfig,
   [130]: unichainRoutingConfig,
+  [9745]: plasmaRoutingConfig,
 }
 
 export const getRoutingConfig = (chainId: number) => {
