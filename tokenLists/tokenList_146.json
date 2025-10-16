@@ -63,7 +63,8 @@
     "decimals": 6,
     "logoURI": "/tokens/146/wstkscUSD.svg",
     "meta": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "4755c634-2e97-4547-be2b-0989e373cccb"
     }
   },
   {

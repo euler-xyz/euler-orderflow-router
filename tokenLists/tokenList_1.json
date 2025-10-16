@@ -2757,14 +2757,5 @@
       "isPendlePT": true,
       "pendleMarket": "0x41264f35ef7ef8c4905ca98052e8d7480f12859e"
     }
-  },
-  {
-    "addressInfo": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
-    "chainId": 1,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/35087/large/W_Token_%283%29.png?1758122686",
-    "name": "Wormhole Token",
-    "symbol": "W",
-    "meta": {}
   }
 ]

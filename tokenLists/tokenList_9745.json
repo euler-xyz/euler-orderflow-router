@@ -382,27 +382,5 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
-  },
-  {
-    "addressInfo": "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
-    "chainId": 9745,
-    "decimals": 18,
-    "logoURI": "/tokens/1/mfarm.svg",
-    "name": "Midas Hyperithm",
-    "symbol": "mHYPER",
-    "meta": {
-      "provider": "MIDAS"
-    }
-  },
-  {
-    "addressInfo": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
-    "chainId": 9745,
-    "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
-    "name": "thBILL",
-    "symbol": "thBILL",
-    "meta": {
-      "provider": "STABLEWATCH"
-    }
   }
 ]
