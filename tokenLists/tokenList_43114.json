@@ -286,5 +286,14 @@
     "meta": {
       "provider": "SUSDE"
     }
+  },
+  {
+    "addressInfo": "0x468BbabAEf852C134b584382C0fef83F2954Cd5c",
+    "chainId": 43114,
+    "decimals": 8,
+    "logoURI": "/tokens/43114/empty-token.svg",
+    "name": "xBTC.b",
+    "symbol": "xBTC.b",
+    "meta": {}
   }
 ]

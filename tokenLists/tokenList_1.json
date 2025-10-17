@@ -2766,5 +2766,37 @@
     "name": "Wormhole Token",
     "symbol": "W",
     "meta": {}
+  },
+  {
+    "addressInfo": "0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/iusd.svg",
+    "name": "Staked infiniFi USD",
+    "symbol": "siUSD",
+    "meta": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "addressInfo": "0x48f9e38f3070AD8945DFEae3FA70987722E3D89c",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/iusd.svg",
+    "name": "infiniFi USD",
+    "symbol": "iUSD",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x12b004719fb632f1E7c010c6F5D6009Fb4258442",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "/tokens/1/iusd.svg",
+    "name": "Locked iUSD - 1 weeks",
+    "symbol": "liUSD-1w",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "fef01bce-008a-43b0-85f9-5377a56411c4"
+    }
   }
 ]
