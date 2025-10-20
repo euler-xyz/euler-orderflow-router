@@ -1,6 +1,4 @@
-import type { TokenListItem } from "@/common/utils/tokenList"
 import { findToken } from "@/swapService/utils"
-import { Chains, type IFetchService } from "@balmy/sdk"
 import type {
   BuildTxParams,
   IQuoteSource,
@@ -16,32 +14,19 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import { log } from "@uniswap/smart-order-router"
 import qs from "qs"
-import { type Address, getAddress, isAddressEqual } from "viem"
+import { getAddress } from "viem"
+import pendleAggregators from "./pendle/pendleAggregators.json"
 
 const soldOutCoolOff: Record<string, number> = {}
 
 const SOLD_OUT_COOL_OFF_TIME = 60 * 60 * 1000
 
 // https://api-v2.pendle.finance/core/docs#/Chains/ChainsController_getSupportedChainIds
-export const PENDLE_METADATA: QuoteSourceMetadata<PendleSupport> = {
-  name: "Pendle",
-  supports: {
-    chains: [
-      Chains.ETHEREUM.chainId,
-      Chains.OPTIMISM.chainId,
-      Chains.BNB_CHAIN.chainId,
-      Chains.MANTLE.chainId,
-      Chains.BASE.chainId,
-      Chains.ARBITRUM.chainId,
-      Chains.BNB_CHAIN.chainId,
-      146,
-      80094,
-      9745,
-    ],
-    swapAndTransfer: true,
-    buyOrders: false,
-  },
-  logoURI: "",
+export const AGGREGATOR_NAMES: Record<string, string> = {
+  kyberswap: "KyberSwap",
+  odos: "Odos",
+  paraswap: "Velora",
+  okx: "OKX",
 }
 type PendleSupport = { buyOrders: false; swapAndTransfer: true }
 type CustomOrAPIKeyConfig =
@@ -50,30 +35,30 @@ type CustomOrAPIKeyConfig =
 type PendleConfig = CustomOrAPIKeyConfig
 type PendleData = { tx: SourceQuoteTransaction }
 
-type ExpiredMarketsCache = {
-  [chainId: number]: {
-    lastUpdated: number
-    markets: {
-      name: string
-      address: Address
-      expiry: string
-      pt: string
-      yt: string
-      sy: string
-      underlyingAsset: string
-    }[]
-  }
-}
-
-const todayUTC = () => new Date().setUTCHours(0, 0, 0, 0)
-
 export class CustomPendleQuoteSource
   implements IQuoteSource<PendleSupport, PendleConfig, PendleData>
 {
-  private expiredMarketsCache: ExpiredMarketsCache = {}
+  private aggregator: string
 
+  constructor(_aggregator: string) {
+    this.aggregator = _aggregator
+  }
   getMetadata() {
-    return PENDLE_METADATA
+    const metadata = {
+      name: `Pendle ${AGGREGATOR_NAMES[this.aggregator] || this.aggregator}`,
+      supports: {
+        chains: Object.keys(pendleAggregators)
+          .filter((chainId) =>
+            pendleAggregators[chainId].includes(this.aggregator),
+          )
+          .map(Number),
+        swapAndTransfer: true,
+        buyOrders: false,
+      },
+      logoURI: "",
+    } as QuoteSourceMetadata<PendleSupport>
+
+    return metadata
   }
 
   async quote(
@@ -119,99 +104,52 @@ export class CustomPendleQuoteSource
   }: QuoteParams<PendleSupport, PendleConfig>) {
     const tokenIn = findToken(chainId, getAddress(sellToken))
     const tokenOut = findToken(chainId, getAddress(buyToken))
+
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
-    if (!tokenIn.meta?.isPendlePT && !tokenOut.meta?.isPendlePT) {
-      failed(PENDLE_METADATA, chainId, sellToken, buyToken, "Not PT tokens")
-    }
-    let url
-    if (tokenIn.meta?.isPendlePT && tokenOut.meta?.isPendlePT) {
-      // rollover
-      const queryParams = {
-        receiver: recipient || takeFrom,
-        slippage: slippagePercentage / 100, // 1 = 100%
-        dstMarket: tokenOut.meta.pendleMarket,
-        ptAmount: order.sellAmount.toString(),
-      }
-
-      const queryString = qs.stringify(queryParams, {
-        skipNulls: true,
-        arrayFormat: "comma",
-      })
-
-      const pendleMarket = tokenIn.meta.pendleMarket
-      url = `${getUrl()}/sdk/${chainId}/markets/${pendleMarket}/roll-over-pt?${queryString}`
-    } else if (
-      tokenIn.meta?.isPendlePT &&
-      !!(await this.getExpiredMarket(fetchService, chainId, tokenIn, timeout))
+    if (
+      !tokenIn.meta?.isPendleLP &&
+      !tokenOut.meta?.isPendleLP &&
+      !tokenIn.meta?.isPendlePT &&
+      !tokenOut.meta?.isPendlePT
     ) {
-      // redeem expired PT
-      const market = await this.getExpiredMarket(
-        fetchService,
+      failed(
+        this.getMetadata(),
         chainId,
-        tokenIn,
-        timeout,
+        sellToken,
+        buyToken,
+        "Not Pendle tokens",
       )
-      const queryParams = {
-        receiver: recipient || takeFrom,
-        slippage: slippagePercentage / 100, // 1 = 100%
-        enableAggregator: true,
-        yt: market?.yt.split("-")[1],
-        amountIn: order.sellAmount.toString(),
-        tokenOut: buyToken,
-      }
-
-      const queryString = qs.stringify(queryParams, {
-        skipNulls: true,
-        arrayFormat: "comma",
-      })
-
-      url = `${getUrl()}/sdk/${chainId}/redeem?${queryString}`
-    } else {
-      if (
-        Date.now() - soldOutCoolOff[`${buyToken}${chainId}`] <
-        SOLD_OUT_COOL_OFF_TIME
-      ) {
-        failed(
-          PENDLE_METADATA,
-          chainId,
-          sellToken,
-          buyToken,
-          "Sold out cool off",
-        )
-      }
-      // swap
-      const queryParams: any = {
-        receiver: recipient || takeFrom,
-        slippage: slippagePercentage / 100, // 1 = 100%
-        enableAggregator: true,
-        tokenIn: sellToken,
-        tokenOut: buyToken,
-        amountIn: order.sellAmount.toString(),
-      }
-
-      if (
-        isAddressEqual(
-          tokenIn.addressInfo,
-          "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
-        ) &&
-        isAddressEqual(
-          tokenOut.addressInfo,
-          "0xF3f491e5608f8B8a6Fd9E9d66a4a4036d7FD282C",
-        )
-      ) {
-        queryParams.aggregators = "paraswap"
-      }
-
-      const queryString = qs.stringify(queryParams, {
-        skipNulls: true,
-        arrayFormat: "comma",
-      })
-
-      const pendleMarket =
-        tokenIn?.meta?.pendleMarket || tokenOut?.meta?.pendleMarket
-
-      url = `${getUrl(2)}/sdk/${chainId}/markets/${pendleMarket}/swap?${queryString}`
     }
+    if (
+      Date.now() - soldOutCoolOff[`${buyToken}${chainId}`] <
+      SOLD_OUT_COOL_OFF_TIME
+    ) {
+      failed(
+        this.getMetadata(),
+        chainId,
+        sellToken,
+        buyToken,
+        "Sold out cool off",
+      )
+    }
+
+    // swap
+    const queryParams: any = {
+      receiver: recipient || takeFrom,
+      slippage: slippagePercentage / 100, // 1 = 100%
+      enableAggregator: true,
+      tokensIn: sellToken,
+      tokensOut: buyToken,
+      amountsIn: order.sellAmount.toString(),
+      aggregators: this.aggregator,
+    }
+
+    const queryString = qs.stringify(queryParams, {
+      skipNulls: true,
+      arrayFormat: "comma",
+    })
+
+    const url = `https://api-v2.pendle.finance/core/v2/sdk/${chainId}/convert?${queryString}`
 
     const response = await fetchService.fetch(url, {
       timeout,
@@ -230,51 +168,16 @@ export class CustomPendleQuoteSource
         }
       }
 
-      failed(PENDLE_METADATA, chainId, sellToken, buyToken, msg)
+      failed(this.getMetadata(), chainId, sellToken, buyToken, msg)
     }
 
-    const {
-      data: { amountOut, amountPtOut },
-      tx: { to, data },
-    } = await response.json()
-    const dstAmount = amountOut || amountPtOut
+    const { routes } = await response.json()
+
+    const dstAmount = routes[0].outputs[0].amount
+    const to = routes[0].tx.to
+    const data = routes[0].tx.data
 
     return { dstAmount, to, data }
-  }
-
-  private async getExpiredMarket(
-    fetchService: IFetchService,
-    chainId: number,
-    token: TokenListItem,
-    timeout?: string,
-  ) {
-    if (
-      !this.expiredMarketsCache[chainId] ||
-      this.expiredMarketsCache[chainId].lastUpdated !== todayUTC()
-    ) {
-      this.expiredMarketsCache[chainId] = {
-        markets: [],
-        lastUpdated: -1,
-      }
-
-      const url = `${getUrl()}/${chainId}/markets/inactive`
-      const response = await fetchService.fetch(url, {
-        timeout: timeout as any,
-      })
-
-      if (response.ok) {
-        const { markets } = await response.json()
-
-        this.expiredMarketsCache[chainId] = {
-          markets,
-          lastUpdated: todayUTC(),
-        }
-      }
-    }
-
-    return this.expiredMarketsCache[chainId].markets.find((m) =>
-      isAddressEqual(m.address, token.meta?.pendleMarket as Address),
-    )
   }
 
   isConfigAndContextValidForQuoting(
@@ -288,10 +191,6 @@ export class CustomPendleQuoteSource
   ): config is PendleConfig {
     return true
   }
-}
-
-function getUrl(v = 1) {
-  return `https://api-v2.pendle.finance/core/v${v}`
 }
 
 function getHeaders(config: PendleConfig) {

@@ -40,7 +40,7 @@ import {
   quoteToRoute,
 } from "../utils"
 import { CustomSourceList } from "./balmySDK/customSourceList"
-import { StubGasPriceSource } from "./balmySDK/stubGasPriceSource"
+import pendleAggregators from "./balmySDK/sources/pendle/pendleAggregators.json"
 import { TokenlistMetadataSource } from "./balmySDK/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
@@ -87,6 +87,16 @@ export class StrategyBalmySDK {
   private readonly sdk
 
   constructor(match = {}, config?: BalmyStrategyConfig) {
+    const allPendleAggregators = [
+      ...new Set(Object.values(pendleAggregators).flat()),
+    ]
+
+    if (config?.sourcesFilter?.includeSources?.includes("pendle")) {
+      config.sourcesFilter.includeSources.push(
+        ...allPendleAggregators.map((aggregator) => `pendle-${aggregator}`),
+      )
+    }
+
     this.config = { ...defaultConfig, ...(config || {}) }
     const fetchService = buildFetchService()
     const providerService = buildProviderService({
@@ -144,6 +154,12 @@ export class StrategyBalmySDK {
             enso: {
               apiKey: String(process.env.ENSO_API_KEY),
             },
+            ...Object.fromEntries(
+              allPendleAggregators.map((aggregator) => [
+                `pendle-${aggregator}`,
+                { apiKey: String(process.env.PENDLE_API_KEY) },
+              ]),
+            ),
           },
         },
       },

@@ -2,6 +2,7 @@ import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
   StrategyBalmySDK,
   StrategyMidas,
+  StrategyPendleLP,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -17,6 +18,10 @@ const plasmaRoutingConfig: ChainRoutingConfig = [
   {
     strategy: StrategyMidas.name(),
     match: {}, // supports function will match mTokens
+  },
+  {
+    strategy: StrategyPendleLP.name(),
+    match: {}, // supports function will match Pendle LP
   },
   // DEFAULTS
   {
@@ -36,6 +41,7 @@ const plasmaRoutingConfig: ChainRoutingConfig = [
           "enso",
           "okx-dex",
           "pendle",
+          "pendle-lp",
           "0x",
         ],
       },

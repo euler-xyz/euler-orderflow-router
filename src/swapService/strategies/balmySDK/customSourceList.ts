@@ -24,6 +24,8 @@ import { CustomParaswapQuoteSource } from "./sources/paraswapQuoteSource"
 import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
 import { CustomUniswapQuoteSource } from "./sources/uniswapQuoteSource"
 
+import pendleAggregators from "./sources/pendle/pendleAggregators.json"
+
 type ConstructorParameters = {
   providerService: IProviderService
   fetchService: IFetchService
@@ -32,7 +34,6 @@ type ConstructorParameters = {
 const customSources = {
   "1inch": new CustomOneInchQuoteSource(),
   "li-fi": new CustomLiFiQuoteSource(),
-  pendle: new CustomPendleQuoteSource(),
   "open-ocean": new CustomOpenOceanQuoteSource(),
   neptune: new CustomNeptuneQuoteSource(),
   odos: new CustomOdosQuoteSource(),
@@ -55,10 +56,21 @@ export class CustomSourceList extends LocalSourceList {
   constructor({ providerService, fetchService }: ConstructorParameters) {
     super({ providerService, fetchService })
 
+    const allPendleAggregators = [
+      ...new Set(Object.values(pendleAggregators).flat()),
+    ]
+    const pendleSources = Object.fromEntries(
+      allPendleAggregators.map((aggregator) => [
+        `pendle-${aggregator}`,
+        new CustomPendleQuoteSource(aggregator),
+      ]),
+    )
+
     const mutableThis = this as any
     mutableThis.sources = {
       ...mutableThis.sources,
       ...customSources,
+      ...pendleSources,
     }
     delete mutableThis.sources.balmy
 

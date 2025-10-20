@@ -20,7 +20,8 @@
     "doppler:login": "./scripts/dopplerLogin.sh",
     "doppler:syncdev": "TOKEN=dev ./scripts/dopplerSync.sh",
     "doppler:syncstg": "TOKEN=stg ./scripts/dopplerSync.sh",
-    "doppler:syncprd": "TOKEN=prd ./scripts/dopplerSync.sh"
+    "doppler:syncprd": "TOKEN=prd ./scripts/dopplerSync.sh",
+    "generate-config": "node scripts/generateConfig.js"
   },
   "packageManager": "pnpm@8.15.3",
   "dependencies": {

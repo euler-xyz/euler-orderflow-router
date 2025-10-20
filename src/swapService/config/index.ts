@@ -13,7 +13,7 @@ import sonicRoutingConfig from "./sonic"
 import swellRoutingConfig from "./swell"
 import unichainRoutingConfig from "./unichain"
 
-const routingConfig: RoutingConfig = {
+export const routingConfig: RoutingConfig = {
   [mainnet.id]: mainnetRoutingConfig,
   [base.id]: baseRoutingConfig,
   [avalanche.id]: avalancheRoutingConfig,

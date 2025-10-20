@@ -14,6 +14,8 @@ export type TokenListItem = {
     pendleMarket?: string
     isPendleCrossChainPT?: boolean
     pendleCrossChainPTPaired?: string
+    isPendleLP?: boolean
+    isPendleWrappedLP?: boolean
   }
 }
 
