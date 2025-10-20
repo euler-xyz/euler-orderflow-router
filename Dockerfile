@@ -15,6 +15,7 @@ WORKDIR /app
 COPY . .
 
 RUN pnpm i
+RUN pnpm run generate-config
 RUN pnpm run build
 
 # Expose the application port
