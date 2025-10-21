@@ -322,5 +322,14 @@
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
+  },
+  {
+    "addressInfo": "0x7D214438D0F27AfCcC23B3d1e1a53906aCE5CFEa",
+    "chainId": 8453,
+    "decimals": 18,
+    "logoURI": "/tokens/8453/reusd.svg",
+    "name": "Re Protocol reUSD",
+    "symbol": "reUSD",
+    "meta": {}
   }
 ]
