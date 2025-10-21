@@ -2742,7 +2742,9 @@
     "logoURI": "/tokens/1/jrUSDe.svg",
     "name": "Strata Junior USDe",
     "symbol": "jrUSDe",
-    "meta": {}
+    "meta": {
+      "provider": "ZERO"
+    }
   },
   {
     "addressInfo": "0x53F3373F0D811902405f91eB0d5cc3957887220D",
