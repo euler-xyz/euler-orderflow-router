@@ -2742,7 +2742,9 @@
     "logoURI": "/tokens/1/jrUSDe.svg",
     "name": "Strata Junior USDe",
     "symbol": "jrUSDe",
-    "meta": {}
+    "meta": {
+      "provider": "ZERO"
+    }
   },
   {
     "addressInfo": "0x53F3373F0D811902405f91eB0d5cc3957887220D",
@@ -2798,15 +2800,15 @@
     }
   },
   {
-    "addressInfo": "0x7e840326632058e5c31327bb1e6ffd70679573ab",
+    "addressInfo": "0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
     "chainId": 1,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/35087/large/W_Token_%283%29.png?1758122686",
-    "name": "Principal Token: sw-stkGHO(GHO) 2026/01/31",
-    "symbol": "PT-sw-stkGHO(GHO)-2026/01/31",
+    "decimals": 6,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "name": "PT Autonomous Liquidity USD 11DEC2025",
+    "symbol": "PT-alUSD-11DEC2025",
     "meta": {
-      "isSpectraPT": true,
-      "spectraPool": "0xfda98290209f6747fb24078cef8d3088b0c2801f"
+      "isPendlePT": true,
+      "pendleMarket": "0x233062c1de76a38a4f41ab7c32e7bdb80a1dfc02"
     }
   }
 ]
