@@ -2798,5 +2798,17 @@
       "provider": "DEFILLAMA",
       "poolId": "fef01bce-008a-43b0-85f9-5377a56411c4"
     }
+  },
+  {
+    "addressInfo": "0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "/tokens/1/empty-token.webp",
+    "name": "PT Autonomous Liquidity USD 11DEC2025",
+    "symbol": "PT-alUSD-11DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x233062c1de76a38a4f41ab7c32e7bdb80a1dfc02"
+    }
   }
 ]
