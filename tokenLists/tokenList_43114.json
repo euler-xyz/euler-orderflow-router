@@ -295,5 +295,14 @@
     "name": "xBTC.b",
     "symbol": "xBTC.b",
     "meta": {}
+  },
+  {
+    "addressInfo": "0x8835A2F66A7AaCCB297Cb985831A616B75e2E16c",
+    "chainId": 43114,
+    "decimals": 6,
+    "logoURI": "/tokens/43114/europ.png",
+    "name": "EURØP",
+    "symbol": "EUROP",
+    "meta": {}
   }
 ]

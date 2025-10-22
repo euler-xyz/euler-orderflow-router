@@ -2333,7 +2333,7 @@
     "decimals": 18,
     "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
     "meta": {
-      "isSpectraPT": true,
+      "isSpectraMarket": true,
       "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
     }
   },
