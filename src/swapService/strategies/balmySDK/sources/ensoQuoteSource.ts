@@ -30,6 +30,7 @@ const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
       Chains.SONIC.chainId,
       80094,
       130,
+      9745,
     ],
     swapAndTransfer: false,
     buyOrders: false,
