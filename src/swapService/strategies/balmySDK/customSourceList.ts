@@ -22,6 +22,7 @@ import { CustomOogaboogaQuoteSource } from "./sources/oogaboogaQuoteSource"
 import { CustomOpenOceanQuoteSource } from "./sources/openOceanQuoteSource"
 import { CustomParaswapQuoteSource } from "./sources/paraswapQuoteSource"
 import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
+import { CustomSpectraQuoteSource } from "./sources/spectraQuoteSource"
 import { CustomUniswapQuoteSource } from "./sources/uniswapQuoteSource"
 
 import pendleAggregators from "./sources/pendle/pendleAggregators.json"
@@ -45,6 +46,7 @@ const customSources = {
   "okx-dex": new CustomOKXDexQuoteSource(),
   paraswap: new CustomParaswapQuoteSource(),
   "0x": new CustomZRXQuoteSource(),
+  spectra: new CustomSpectraQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
