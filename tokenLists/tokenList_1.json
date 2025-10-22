@@ -2333,7 +2333,7 @@
     "decimals": 18,
     "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
     "meta": {
-      "isSpectraMarket": true,
+      "isSpectraPT": true,
       "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
     }
   },
@@ -2795,6 +2795,18 @@
     "meta": {
       "provider": "DEFILLAMA",
       "poolId": "fef01bce-008a-43b0-85f9-5377a56411c4"
+    }
+  },
+  {
+    "addressInfo": "0x7e840326632058e5c31327bb1e6ffd70679573ab",
+    "chainId": 1,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/35087/large/W_Token_%283%29.png?1758122686",
+    "name": "Principal Token: sw-stkGHO(GHO) 2026/01/31",
+    "symbol": "PT-sw-stkGHO(GHO)-2026/01/31",
+    "meta": {
+      "isSpectraPT": true,
+      "spectraPool": "0xfda98290209f6747fb24078cef8d3088b0c2801f"
     }
   }
 ]
