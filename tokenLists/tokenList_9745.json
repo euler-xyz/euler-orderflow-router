@@ -404,5 +404,17 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
+  },
+  {
+    "addressInfo": "0x48F119b3fCA8244274531f2e06B74AC4B1F5fe58",
+    "chainId": 9745,
+    "decimals": 6,
+    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
+    "name": "PT Resolv Liquidity Provider Token 26FEB2026",
+    "symbol": "PT-RLP-26FEB2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x23280356de3a7aec0b0710cd9b902ac8f431368c"
+    }
   }
 ]
