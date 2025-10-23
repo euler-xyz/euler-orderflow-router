@@ -416,5 +416,29 @@
       "isPendlePT": true,
       "pendleMarket": "0x23280356de3a7aec0b0710cd9b902ac8f431368c"
     }
+  },
+  {
+    "addressInfo": "0xFFaF49f320b8Ae1Bb9Ea596197040077a3666105",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
+    "name": "PT Wrapped Staked USR 26FEB2026",
+    "symbol": "PT-wstUSR-26FEB2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x23180d15651fe6e4415ce27b212cf8e5d2deda96"
+    }
+  },
+  {
+    "addressInfo": "0xceA23aB8FdE0b90e4D08EB68e8876E43933721D2",
+    "chainId": 9745,
+    "decimals": 6,
+    "logoURI": "/tokens/1/mhyper.svg",
+    "name": "PT Midas Hyperithm 29JAN2026",
+    "symbol": "PT-mHYPER-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xca2d052fcedbf532ca8cef2d3d1d84a041a258f7"
+    }
   }
 ]
