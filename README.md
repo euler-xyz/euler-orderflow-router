@@ -154,5 +154,5 @@ const pipeline = [
   },
 ]
 ```
-
+ 
 Additionally there is a script to generate auxiliary config files, executed by `pnpm run generate-config`. Currently it fetches the list of supported [Pendle aggregators](./src/swapService/strategies/balmySDK/sources/pendle/pendleAggregators.json) for all chains
