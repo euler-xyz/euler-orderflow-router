@@ -440,5 +440,17 @@
       "isPendlePT": true,
       "pendleMarket": "0xca2d052fcedbf532ca8cef2d3d1d84a041a258f7"
     }
+  },
+  {
+    "addressInfo": "0xA6C55E31154d39bb0Aa3CA2FF9F7665BDA4e47FC",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "/tokens/9745/splUSD.svg",
+    "name": "PT Staked Plasma USD 29JAN2026",
+    "symbol": "PT-splUSD-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0x9d0676ec013cb50b7bf9b291c22b618e9fe86832"
+    }
   }
 ]
