@@ -378,5 +378,23 @@
     "meta": {
       "provider": "STABLEWATCH"
     }
+  },
+  {
+    "addressInfo": "0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36",
+    "chainId": 42161,
+    "decimals": 18,
+    "logoURI": "/tokens/42161/yusnd.svg",
+    "name": "Yearn USND",
+    "symbol": "yUSND",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
+    "chainId": 42161,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/67378/large/USND200.png?1752596582",
+    "name": "US Nerite Dollar",
+    "symbol": "USND",
+    "meta": {}
   }
 ]
