@@ -44,8 +44,8 @@ export async function fetchLiFiExactInQuote(
   const params = new URLSearchParams({
     fromChain: chainKey,
     toChain: chainKey,
-    fromToken: swapParams.tokenIn.addressInfo,
-    toToken: swapParams.tokenOut.addressInfo,
+    fromToken: swapParams.tokenIn.address,
+    toToken: swapParams.tokenOut.address,
     fromAddress: swapParams.from || getSwapper(swapParams.chainId),
     toAddress: swapParams.receiver,
     fromAmount: String(swapParams.amount),
@@ -93,8 +93,8 @@ export async function fetchLiFiExactOutQuote(
   const params = new URLSearchParams({
     fromChain: chainKey,
     toChain: chainKey,
-    fromToken: swapParams.tokenIn.addressInfo,
-    toToken: swapParams.tokenOut.addressInfo,
+    fromToken: swapParams.tokenIn.address,
+    toToken: swapParams.tokenOut.address,
     fromAddress: swapParams.from,
     toAddress: swapParams.receiver,
     toAmount: String(swapParams.amount),

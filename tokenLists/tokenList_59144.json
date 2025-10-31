@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+    "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
     "chainId": 59144,
     "name": "Wrapped ETH",
     "symbol": "WETH",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+    "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
     "chainId": 59144,
     "name": "USDC",
     "symbol": "USDC",
@@ -18,7 +18,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+    "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
     "chainId": 59144,
     "name": "Tether USD",
     "symbol": "USDT",
@@ -27,7 +27,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4",
+    "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4",
     "chainId": 59144,
     "name": "Wrapped Bitcoin",
     "symbol": "WBTC",
@@ -36,7 +36,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
     "chainId": 59144,
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
@@ -47,7 +47,7 @@
     }
   },
   {
-    "addressInfo": "0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6",
+    "address": "0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6",
     "chainId": 59144,
     "name": "Wrapped eETH",
     "symbol": "weETH",
@@ -58,7 +58,7 @@
     }
   },
   {
-    "addressInfo": "0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F",
+    "address": "0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F",
     "chainId": 59144,
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "addressInfo": "0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5",
+    "address": "0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5",
     "chainId": 59144,
     "name": "Dai Stablecoin",
     "symbol": "DAI",
@@ -79,7 +79,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 59144,
     "name": "USDe",
     "symbol": "USDe",
@@ -88,7 +88,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 59144,
     "name": "sUSDe",
     "symbol": "sUSDe",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "addressInfo": "0xD2671165570f41BBB3B0097893300b6EB6101E6C",
+    "address": "0xD2671165570f41BBB3B0097893300b6EB6101E6C",
     "chainId": 59144,
     "name": "wrsETH",
     "symbol": "wrsETH",
@@ -111,7 +111,7 @@
     }
   },
   {
-    "addressInfo": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "address": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
     "chainId": 59144,
     "name": "MetaMask USD",
     "symbol": "mUSD",
@@ -120,7 +120,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3ff47c5Bf409C86533FE1f4907524d304062428D",
+    "address": "0x3ff47c5Bf409C86533FE1f4907524d304062428D",
     "chainId": 59144,
     "name": "Monerium EURe",
     "symbol": "EURe",
@@ -129,7 +129,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3eBd0148BADAb9388936E4472C4415D5700478A5",
+    "address": "0x3eBd0148BADAb9388936E4472C4415D5700478A5",
     "chainId": 59144,
     "name": "Euler",
     "symbol": "EUL",
@@ -138,7 +138,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xe15C5F31cd7B767883F5654CDD3aFac28966B0a9",
+    "address": "0xe15C5F31cd7B767883F5654CDD3aFac28966B0a9",
     "chainId": 59144,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -147,7 +147,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
+    "address": "0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
     "chainId": 59144,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/68507/large/linea-logo.jpeg?1756025484",
@@ -156,7 +156,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x4809010926aec940b550D34a46A52739f996D75D",
+    "address": "0x4809010926aec940b550D34a46A52739f996D75D",
     "chainId": 59144,
     "decimals": 18,
     "name": "Wrapped Savings rUSD",
@@ -168,7 +168,7 @@
     }
   },
   {
-    "addressInfo": "0xe4eEB461Ad1e4ef8b8EF71a33694CCD84Af051C4",
+    "address": "0xe4eEB461Ad1e4ef8b8EF71a33694CCD84Af051C4",
     "chainId": 59144,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/68282/large/rex33.png?1755242075",
@@ -179,7 +179,7 @@
     }
   },
   {
-    "addressInfo": "0x4e559dBCCbe87De66c6a9F3f25231096F24c2e28",
+    "address": "0x4e559dBCCbe87De66c6a9F3f25231096F24c2e28",
     "chainId": 59144,
     "decimals": 18,
     "name": "YieldFi yUSD",

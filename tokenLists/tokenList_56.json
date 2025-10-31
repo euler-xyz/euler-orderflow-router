@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
+    "address": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
     "chainId": 1,
     "name": "First Digital USD",
     "symbol": "FDUSD",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+    "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
     "chainId": 56,
     "name": "World Liberty Financial USD",
     "symbol": "USD1",
@@ -18,7 +18,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
+    "address": "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
     "chainId": 56,
     "name": "USDX",
     "symbol": "USDX",
@@ -27,7 +27,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
     "chainId": 56,
     "name": "Wrapped BNB",
     "symbol": "WBNB",
@@ -36,7 +36,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+    "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
     "chainId": 56,
     "name": "Binance-Peg BTCB Token",
     "symbol": "BTCB",
@@ -45,7 +45,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+    "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
     "chainId": 56,
     "name": "USDC",
     "symbol": "USDC",
@@ -54,7 +54,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x55d398326f99059fF775485246999027B3197955",
+    "address": "0x55d398326f99059fF775485246999027B3197955",
     "chainId": 56,
     "name": "Binance-Peg BSC-USD",
     "symbol": "USDT",
@@ -63,7 +63,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+    "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
@@ -72,7 +72,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
+    "address": "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
     "chainId": 56,
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
@@ -81,7 +81,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2117E8b79e8E176A670c9fCf945d4348556bfFad",
+    "address": "0x2117E8b79e8E176A670c9fCf945d4348556bfFad",
     "chainId": 56,
     "name": "EUL",
     "symbol": "EUL",
@@ -90,7 +90,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7",
+    "address": "0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7",
     "chainId": 56,
     "name": "Solv BTC",
     "symbol": "SolvBTC",
@@ -99,7 +99,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
     "chainId": 56,
     "name": "Wrapped BTC",
     "symbol": "WBTC",
@@ -108,7 +108,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x5e13d41913aDF18bb2acAe34228E8D21f3c2f2Eb",
+    "address": "0x5e13d41913aDF18bb2acAe34228E8D21f3c2f2Eb",
     "chainId": 56,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -117,7 +117,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B",
+    "address": "0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B",
     "chainId": 56,
     "name": "Staked Lista BNB",
     "symbol": "slisBNB",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "addressInfo": "0x0782b6d8c4551B9760e74c0545a9bCD90bdc41E5",
+    "address": "0x0782b6d8c4551B9760e74c0545a9bCD90bdc41E5",
     "chainId": 56,
     "name": "Lista USD",
     "symbol": "lisUSD",
@@ -137,7 +137,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
+    "address": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
     "chainId": 56,
     "name": "Resolv USD",
     "symbol": "USR",
@@ -146,7 +146,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f",
+    "address": "0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f",
     "chainId": 56,
     "name": "Aegis YUSD",
     "symbol": "YUSD",
@@ -157,7 +157,7 @@
     }
   },
   {
-    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 56,
     "name": "USDe",
     "symbol": "USDe",
@@ -166,7 +166,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 56,
     "name": "Staked USDe",
     "symbol": "sUSDe",
@@ -177,7 +177,7 @@
     }
   },
   {
-    "addressInfo": "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",
+    "address": "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",
     "chainId": 56,
     "name": "ynBNB MAX",
     "symbol": "ynBNBx",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "addressInfo": "0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92",
+    "address": "0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92",
     "chainId": 56,
     "name": "sUSDX",
     "symbol": "sUSDX",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "addressInfo": "0xDD809435ba6c9d6903730f923038801781cA66ce",
+    "address": "0xDD809435ba6c9d6903730f923038801781cA66ce",
     "chainId": 56,
     "name": "PT Ethena sUSDE 26JUN2025",
     "symbol": "PT-sUSDE-26JUN2025",
@@ -212,7 +212,7 @@
     }
   },
   {
-    "addressInfo": "0x000Ae314E2A2172a039B26378814C252734f556A",
+    "address": "0x000Ae314E2A2172a039B26378814C252734f556A",
     "chainId": 56,
     "name": "Aster",
     "symbol": "ASTER",
@@ -221,7 +221,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "address": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
     "chainId": 56,
     "name": "MetaMask USD",
     "symbol": "mUSD",

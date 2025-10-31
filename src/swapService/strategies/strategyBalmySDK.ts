@@ -253,7 +253,7 @@ export class StrategyBalmySDK {
       if (quote.allowanceTarget) {
         multicallItems.push(
           encodeApproveMulticallItem(
-            swapParams.tokenIn.addressInfo,
+            swapParams.tokenIn.address,
             quote.allowanceTarget,
           ),
         )
@@ -508,8 +508,8 @@ export class StrategyBalmySDK {
   ): QuoteRequest {
     return {
       chainId: swapParams.chainId,
-      sellToken: swapParams.tokenIn.addressInfo,
-      buyToken: swapParams.tokenOut.addressInfo,
+      sellToken: swapParams.tokenIn.address,
+      buyToken: swapParams.tokenOut.address,
       order: {
         ...(swapParams.swapperMode === SwapperMode.EXACT_IN
           ? { type: "sell", sellAmount: swapParams.amount }

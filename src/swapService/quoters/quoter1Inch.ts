@@ -6,8 +6,8 @@ export async function fetch1InchQuote(
   swapParams: SwapParams,
 ): Promise<SwapQuote> {
   const params = new URLSearchParams({
-    src: swapParams.tokenIn.addressInfo,
-    dst: swapParams.tokenOut.addressInfo,
+    src: swapParams.tokenIn.address,
+    dst: swapParams.tokenOut.address,
     amount: String(swapParams.amount),
     from: swapParams.from || getSwapper(swapParams.chainId),
     origin: swapParams.origin,

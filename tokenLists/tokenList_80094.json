@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+    "address": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
     "chainId": 80094,
     "name": "Reservoir Stablecoin",
     "symbol": "rUSD",
@@ -10,7 +10,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x6969696969696969696969696969696969696969",
+    "address": "0x6969696969696969696969696969696969696969",
     "symbol": "WBERA",
     "name": "Wrapped Berachain Token",
     "decimals": 18,
@@ -19,7 +19,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
+    "address": "0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
     "symbol": "WETH",
     "name": "WETH",
     "decimals": 18,
@@ -28,7 +28,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
     "symbol": "WBTC",
     "name": "WBTC",
     "decimals": 8,
@@ -37,7 +37,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
+    "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
     "symbol": "HONEY",
     "name": "Honey",
     "decimals": 18,
@@ -46,7 +46,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x549943e04f40284185054145c6E4e9568C1D3241",
+    "address": "0x549943e04f40284185054145c6E4e9568C1D3241",
     "symbol": "USDC.e",
     "name": "Bridged USDC (Stargate)",
     "decimals": 6,
@@ -55,7 +55,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0xEc901DA9c68E90798BbBb74c11406A32A70652C3",
+    "address": "0xEc901DA9c68E90798BbBb74c11406A32A70652C3",
     "decimals": 18,
     "name": "StakeStone Ether",
     "symbol": "STONE",
@@ -67,7 +67,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x688e72142674041f8f6Af4c808a4045cA1D6aC82",
+    "address": "0x688e72142674041f8f6Af4c808a4045cA1D6aC82",
     "symbol": "BYUSD",
     "name": "BYUSD",
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738732576/tokens/y6wa21vehnappbe2cruf.png",
@@ -76,7 +76,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x656b95E550C07a9ffe548bd4085c72418Ceb1dba",
+    "address": "0x656b95E550C07a9ffe548bd4085c72418Ceb1dba",
     "symbol": "BGT",
     "name": "Bera Governance Token",
     "decimals": 18,
@@ -85,7 +85,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+    "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
     "symbol": "USDT0",
     "name": "Tether USD Coin",
     "decimals": 6,
@@ -93,7 +93,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9b6761bf2397Bb5a6624a856cC84A3A14Dcd3fe5",
+    "address": "0x9b6761bf2397Bb5a6624a856cC84A3A14Dcd3fe5",
     "chainId": 80094,
     "name": "Infrared BERA",
     "symbol": "iBERA",
@@ -105,7 +105,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0xac03CABA51e17c86c921E1f6CBFBdC91F8BB2E6b",
+    "address": "0xac03CABA51e17c86c921E1f6CBFBdC91F8BB2E6b",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738837560/tokens/iaynouqgjmryrzl0wcvx.png",
     "symbol": "iBGT",
@@ -114,7 +114,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x6d4223DAE2a8744a85a6d44e97f3F61679f87ee6",
+    "address": "0x6d4223DAE2a8744a85a6d44e97f3F61679f87ee6",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1739455325/tokens/luha7bssovccqq4jigdh.png",
     "symbol": "USDbr",
@@ -123,7 +123,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0xFaF4c16847bD0ebaC546C49a9C9c6b81abd4b08C",
+    "address": "0xFaF4c16847bD0ebaC546C49a9C9c6b81abd4b08C",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1739455320/tokens/yxqyrtpt4x6ldudyxktd.png",
     "symbol": "NOME",
@@ -132,7 +132,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0xDAd7898717AdE066E1114E6bdbFaFd8A6F378B7b",
+    "address": "0xDAd7898717AdE066E1114E6bdbFaFd8A6F378B7b",
     "symbol": "AZT",
     "name": "AZEx Token",
     "decimals": 18,
@@ -141,7 +141,7 @@
   },
   {
     "chainId": 80094,
-    "addressInfo": "0x6FF4D64976428025Cdcc3354EF53b5D19637481e",
+    "address": "0x6FF4D64976428025Cdcc3354EF53b5D19637481e",
     "symbol": "ARTIO",
     "name": "Artio",
     "decimals": 18,
@@ -149,7 +149,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xEb9b5f4EB023aE754fF59A04c9C038D58606DAC6",
+    "address": "0xEb9b5f4EB023aE754fF59A04c9C038D58606DAC6",
     "chainId": 80094,
     "name": "EUL",
     "symbol": "EUL",
@@ -158,7 +158,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x56C44d2F484A61ce92Fa0BCc849feB37aBfeB59C",
+    "address": "0x56C44d2F484A61ce92Fa0BCc849feB37aBfeB59C",
     "chainId": 80094,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -167,7 +167,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
     "chainId": 80094,
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
@@ -176,7 +176,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x69f1E971257419B1E9C405A553f252c64A29A30a",
+    "address": "0x69f1E971257419B1E9C405A553f252c64A29A30a",
     "chainId": 80094,
     "name": "Origami iBGT Auto-Compounder",
     "symbol": "oriBGT",
@@ -188,7 +188,7 @@
     }
   },
   {
-    "addressInfo": "0x6fc6545d5cDE268D5C7f1e476D444F39c995120d",
+    "address": "0x6fc6545d5cDE268D5C7f1e476D444F39c995120d",
     "chainId": 80094,
     "name": "Berachain Staked ETH",
     "symbol": "beraETH",
@@ -197,7 +197,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 80094,
     "name": "USDe",
     "symbol": "USDe",
@@ -206,7 +206,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 80094,
     "name": "Staked USDe",
     "symbol": "sUSDe",
@@ -217,7 +217,7 @@
     }
   },
   {
-    "addressInfo": "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
+    "address": "0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
     "chainId": 80094,
     "name": "Nectar",
     "symbol": "NECT",
@@ -226,7 +226,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x5475611Dffb8ef4d697Ae39df9395513b6E947d7",
+    "address": "0x5475611Dffb8ef4d697Ae39df9395513b6E947d7",
     "chainId": 80094,
     "name": "Savings rUSD",
     "symbol": "srUSD",
@@ -238,7 +238,7 @@
     }
   },
   {
-    "addressInfo": "0x597877Ccf65be938BD214C4c46907669e3E62128",
+    "address": "0x597877Ccf65be938BD214C4c46907669e3E62128",
     "chainId": 80094,
     "name": "Staked Nectar",
     "symbol": "sNECT",
@@ -247,7 +247,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
+    "address": "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
     "chainId": 80094,
     "name": "Beraborrow Staked Nectar",
     "symbol": "BB.SNECT",
@@ -259,7 +259,7 @@
     }
   },
   {
-    "addressInfo": "0xBaadCC2962417C01Af99fb2B7C75706B9bd6Babe",
+    "address": "0xBaadCC2962417C01Af99fb2B7C75706B9bd6Babe",
     "chainId": 80094,
     "name": "Liquid BGT",
     "symbol": "LBGT",
@@ -268,7 +268,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xFace73a169e2CA2934036C8Af9f464b5De9eF0ca",
+    "address": "0xFace73a169e2CA2934036C8Af9f464b5De9eF0ca",
     "chainId": 80094,
     "name": "Staked LBGT",
     "symbol": "stLBGT",
@@ -280,7 +280,7 @@
     }
   },
   {
-    "addressInfo": "0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
+    "address": "0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
     "chainId": 80094,
     "name": "NECT/USDC/HONEY BurrBear LP",
     "symbol": "NECT-USDC-HONEY-BurrBear-LP",
@@ -289,7 +289,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
+    "address": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
     "chainId": 80094,
     "name": "PT Ethena sUSDE 25SEP2025",
     "symbol": "PT-sUSDE-25SEP2025",

@@ -98,7 +98,7 @@ export class StrategyPendleLP {
   ): Promise<SwapApiResponse[]> {
     const unwrapMulticallItem = await encodeUnwrapDirect(
       swapParams,
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.amount,
       swapParams.from,
     )
@@ -169,8 +169,8 @@ export class StrategyPendleLP {
         // Swapper.deposit will deposit all of available balance into the wrapper, and move the wrapper straight to receiver, where it can be skimmed
         const { swapMulticallItem: wrapMulticallItem } = encodeWrapWithTool(
           swapParams,
-          tokenOut.addressInfo,
-          swapParams.tokenOut.addressInfo,
+          tokenOut.address,
+          swapParams.tokenOut.address,
           swapParams.receiver,
         )
 
@@ -235,7 +235,7 @@ export class StrategyPendleLP {
         }
         const unwrapMulticallItem = await encodeUnwrapDirect(
           unwrapSwapParams,
-          swapParams.tokenIn.addressInfo,
+          swapParams.tokenIn.address,
           BigInt(innerQuote.amountIn),
           swapParams.from,
         )
@@ -296,8 +296,8 @@ export class StrategyPendleLP {
 
     const { data: wrapData } = await encodeWrapWithTool(
       wrapSwapParams,
-      lpToken.addressInfo,
-      swapParams.tokenOut.addressInfo,
+      lpToken.address,
+      swapParams.tokenOut.address,
       swapParams.from,
     )
 
@@ -391,8 +391,8 @@ export async function encodeUnwrapDirect(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,
@@ -442,8 +442,8 @@ export function encodeWrapWithTool(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,

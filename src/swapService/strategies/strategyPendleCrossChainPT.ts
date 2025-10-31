@@ -75,7 +75,7 @@ export class StrategyPendleCrossChainPT {
         case SwapperMode.EXACT_IN: {
           if (
             isAddressEqual(
-              swapParams.tokenOut.addressInfo,
+              swapParams.tokenOut.address,
               getAddress(swapParams.tokenIn.meta.pendleCrossChainPTPaired),
             )
           ) {
@@ -88,7 +88,7 @@ export class StrategyPendleCrossChainPT {
         case SwapperMode.TARGET_DEBT: {
           if (
             isAddressEqual(
-              swapParams.tokenOut.addressInfo,
+              swapParams.tokenOut.address,
               getAddress(swapParams.tokenIn.meta.pendleCrossChainPTPaired),
             )
           ) {
@@ -349,7 +349,7 @@ async function fetchAndEncodePTQuote(
 ) {
   const queryParams = {
     receiver,
-    pt: swapParams.tokenIn.addressInfo,
+    pt: swapParams.tokenIn.address,
     token: swapParams.tokenIn.meta?.pendleCrossChainPTPaired,
     exactAmountType,
     exactAmount: amount,
@@ -389,8 +389,8 @@ async function fetchAndEncodePTQuote(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,

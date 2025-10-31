@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0x4200000000000000000000000000000000000006",
+    "address": "0x4200000000000000000000000000000000000006",
     "chainId": 1923,
     "name": "Wrapped Ether",
     "symbol": "WETH",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
+    "address": "0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
     "chainId": 1923,
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
@@ -21,7 +21,7 @@
     }
   },
   {
-    "addressInfo": "0xA6cB988942610f6731e664379D15fFcfBf282b44",
+    "address": "0xA6cB988942610f6731e664379D15fFcfBf282b44",
     "chainId": 1923,
     "name": "Wrapped eETH",
     "symbol": "weETH",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
     "chainId": 1923,
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "addressInfo": "0xc3eACf0612346366Db554C991D7858716db09f58",
+    "address": "0xc3eACf0612346366Db554C991D7858716db09f58",
     "chainId": 1923,
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "addressInfo": "0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
+    "address": "0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
     "chainId": 1923,
     "name": "swETH",
     "symbol": "swETH",
@@ -69,7 +69,7 @@
     }
   },
   {
-    "addressInfo": "0x18d33689AE5d02649a859A1CF16c9f0563975258",
+    "address": "0x18d33689AE5d02649a859A1CF16c9f0563975258",
     "chainId": 1923,
     "name": "rswETH",
     "symbol": "rswETH",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "addressInfo": "0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7",
+    "address": "0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7",
     "chainId": 1923,
     "name": "Renzo Restaked LST",
     "symbol": "pzETH",
@@ -92,7 +92,7 @@
     }
   },
   {
-    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 1923,
     "name": "USDe",
     "symbol": "USDe",
@@ -101,7 +101,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 1923,
     "name": "Staked USDe",
     "symbol": "sUSDe",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "addressInfo": "0x1cf7b5f266A0F39d6f9408B90340E3E71dF8BF7B",
+    "address": "0x1cf7b5f266A0F39d6f9408B90340E3E71dF8BF7B",
     "chainId": 1923,
     "name": "swBTC",
     "symbol": "swBTC",
@@ -123,7 +123,7 @@
     }
   },
   {
-    "addressInfo": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
+    "address": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
     "chainId": 1923,
     "name": "ENA",
     "symbol": "ENA",
@@ -132,7 +132,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2826D136F5630adA89C1678b64A61620Aab77Aea",
+    "address": "0x2826D136F5630adA89C1678b64A61620Aab77Aea",
     "chainId": 1923,
     "name": "Swell Governance Token",
     "symbol": "SWELL",
@@ -141,7 +141,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1",
+    "address": "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1",
     "chainId": 1923,
     "name": "wSWELL",
     "symbol": "wSWELL",
@@ -150,7 +150,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
+    "address": "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
     "chainId": 1923,
     "name": "Relend Network USDC",
     "symbol": "rUSDC",
@@ -159,7 +159,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x80ccFBec4b8c82265abdc226Ad3Df84C0726E7A3",
+    "address": "0x80ccFBec4b8c82265abdc226Ad3Df84C0726E7A3",
     "chainId": 1923,
     "name": "EUL",
     "symbol": "EUL",
@@ -168,7 +168,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x021694af083d67950Ac994E63e0a70C30D913836",
+    "address": "0x021694af083d67950Ac994E63e0a70C30D913836",
     "chainId": 1923,
     "name": "Reward EUL",
     "symbol": "rEUL",

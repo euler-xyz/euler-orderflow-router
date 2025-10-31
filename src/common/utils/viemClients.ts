@@ -152,16 +152,18 @@ export const plasma = defineChain({
 
 export const RPC_URLS: Record<number, string> = {
   [chains.mainnet.id]: process.env.RPC_URL_1 || "",
-  [chains.sepolia.id]: process.env.RPC_URL_11155111 || "",
   [chains.arbitrum.id]: process.env.RPC_URL_42161 || "",
   [chains.base.id]: process.env.RPC_URL_8453 || "",
-  [bartio.id]: process.env.RPC_URL_80084 || "",
   [berachain.id]: process.env.RPC_URL_80094 || "",
   [chains.avalanche.id]: process.env.RPC_URL_43114 || "",
-  [146]: process.env.RPC_URL_146 || "",
-  [130]: process.env.RPC_URL_130 || "",
+  [chains.bsc.id]: process.env.RPC_URL_56 || "",
+  [chains.linea.id]: process.env.RPC_URL_56 || "",
+  [sonicnetwork.id]: process.env.RPC_URL_146 || "",
+  [unichain.id]: process.env.RPC_URL_130 || "",
+  [60808]: process.env.RPC_URL_130 || "", //bob
+  [1923]: process.env.RPC_URL_130 || "", //swell
   [tac.id]: process.env.RPC_URL_239 || "",
-  [chains.foundry.id]: process.env.RPC_URL_31337 || "http://localhost:8545",
+  [plasma.id]: process.env.RPC_URL_9745 || "",
 } as const
 
 export const createHttp = (chainId: number) =>
@@ -178,16 +180,7 @@ export function createChainConfig(chain: Chain) {
 }
 
 export const createClients = (): Record<number, Client<Transport, Chain>> => ({
-  [bartio.id]: createChainConfig(bartio),
   [chains.mainnet.id]: createChainConfig(chains.mainnet),
-  [chains.sepolia.id]: createClient({
-    chain: chains.sepolia,
-    transport: http(RPC_URLS[chains.sepolia.id]),
-  }),
-  [chains.foundry.id]: createClient({
-    chain: chains.foundry,
-    transport: http(RPC_URLS[chains.foundry.id]),
-  }),
   [chains.arbitrum.id]: createChainConfig(chains.arbitrum),
   [chains.base.id]: createChainConfig(chains.base),
   [sonicnetwork.id]: createClient({
@@ -207,6 +200,10 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
   [tac.id]: createClient({
     chain: tac,
     transport: http(RPC_URLS[tac.id]),
+  }),
+  [plasma.id]: createClient({
+    chain: plasma,
+    transport: http(RPC_URLS[plasma.id]),
   }),
   [chains.linea.id]: createChainConfig(chains.linea),
 })

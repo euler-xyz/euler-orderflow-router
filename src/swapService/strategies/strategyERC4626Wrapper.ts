@@ -267,8 +267,8 @@ export class StrategyERC4626Wrapper {
       this.config.supportedVaults.some(
         (v) =>
           v.chainId === swapParams.chainId &&
-          (isAddressEqual(v.vault, swapParams.tokenIn.addressInfo) ||
-            isAddressEqual(v.vault, swapParams.tokenOut.addressInfo)),
+          (isAddressEqual(v.vault, swapParams.tokenIn.address) ||
+            isAddressEqual(v.vault, swapParams.tokenOut.address)),
       )
     )
   }
@@ -285,11 +285,11 @@ export class StrategyERC4626Wrapper {
     try {
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
-          if (this.isSupportedVault(swapParams.tokenIn.addressInfo)) {
+          if (this.isSupportedVault(swapParams.tokenIn.address)) {
             if (
               this.isSupportedVaultUnderlying({
-                vault: swapParams.tokenIn.addressInfo,
-                underlying: swapParams.tokenOut.addressInfo,
+                vault: swapParams.tokenIn.address,
+                underlying: swapParams.tokenOut.address,
               })
             ) {
               result.quotes = [
@@ -301,8 +301,8 @@ export class StrategyERC4626Wrapper {
           } else {
             if (
               this.isSupportedVaultUnderlying({
-                vault: swapParams.tokenOut.addressInfo,
-                underlying: swapParams.tokenIn.addressInfo,
+                vault: swapParams.tokenOut.address,
+                underlying: swapParams.tokenIn.address,
               })
             ) {
               result.quotes =
@@ -314,11 +314,11 @@ export class StrategyERC4626Wrapper {
           break
         }
         case SwapperMode.TARGET_DEBT: {
-          if (this.isSupportedVault(swapParams.tokenIn.addressInfo)) {
+          if (this.isSupportedVault(swapParams.tokenIn.address)) {
             if (
               this.isSupportedVaultUnderlying({
-                vault: swapParams.tokenIn.addressInfo,
-                underlying: swapParams.tokenOut.addressInfo,
+                vault: swapParams.tokenIn.address,
+                underlying: swapParams.tokenOut.address,
               })
             ) {
               result.quotes =
@@ -329,8 +329,8 @@ export class StrategyERC4626Wrapper {
           } else {
             if (
               this.isSupportedVaultUnderlying({
-                vault: swapParams.tokenOut.addressInfo,
-                underlying: swapParams.tokenIn.addressInfo,
+                vault: swapParams.tokenOut.address,
+                underlying: swapParams.tokenIn.address,
               })
             ) {
               result.quotes =
@@ -361,7 +361,7 @@ export class StrategyERC4626Wrapper {
       amountOut: redeemAmountOut,
     } = await encodeRedeem(
       swapParams,
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.amount,
       swapParams.receiver,
     )
@@ -391,7 +391,7 @@ export class StrategyERC4626Wrapper {
       slippage: 0,
       route: [
         {
-          providerName: this.getSupportedVault(swapParams.tokenIn.addressInfo)
+          providerName: this.getSupportedVault(swapParams.tokenIn.address)
             .protocol,
         },
       ],
@@ -408,12 +408,12 @@ export class StrategyERC4626Wrapper {
       amountOut: redeemAmountOut,
     } = await encodeRedeem(
       swapParams,
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.amount,
       swapParams.from,
     )
 
-    const vaultData = this.getSupportedVault(swapParams.tokenIn.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
     const tokenIn = findToken(swapParams.chainId, vaultData.asset)
 
     if (!tokenIn) throw new Error("Inner token not found")
@@ -464,7 +464,7 @@ export class StrategyERC4626Wrapper {
   async exactInFromUnderlyingToVault(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const vaultData = this.getSupportedVault(swapParams.tokenOut.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
 
     const amountOut = await fetchPreviewDeposit(
       swapParams.chainId,
@@ -514,7 +514,7 @@ export class StrategyERC4626Wrapper {
   async exactInFromAnyToVault(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const vaultData = this.getSupportedVault(swapParams.tokenOut.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
     const tokenOut = findToken(swapParams.chainId, vaultData.asset)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -583,7 +583,7 @@ export class StrategyERC4626Wrapper {
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
     // TODO expects dust - add to dust list
-    const vaultData = this.getSupportedVault(swapParams.tokenIn.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
     const withdrawAmount = adjustForInterest(swapParams.amount)
 
     const {
@@ -635,7 +635,7 @@ export class StrategyERC4626Wrapper {
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
     // TODO expects dust out - add to dust list
-    const vaultData = this.getSupportedVault(swapParams.tokenIn.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
     const tokenIn = findToken(swapParams.chainId, vaultData.asset)
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -703,7 +703,7 @@ export class StrategyERC4626Wrapper {
   async targetDebtFromUnderlyingToVault(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const vaultData = this.getSupportedVault(swapParams.tokenOut.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
 
     const mintAmount = adjustForInterest(swapParams.amount)
 
@@ -757,7 +757,7 @@ export class StrategyERC4626Wrapper {
   async targetDebtFromAnyToVault(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const vaultData = this.getSupportedVault(swapParams.tokenOut.addressInfo)
+    const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
 
     const mintAmount = adjustForInterest(swapParams.amount)
     const tokenIn = findToken(swapParams.chainId, vaultData.asset)
@@ -904,8 +904,8 @@ export async function encodeRedeem(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,
@@ -964,8 +964,8 @@ export async function encodeWithdraw(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,
@@ -1020,8 +1020,8 @@ export async function encodeMint(
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,

@@ -37,8 +37,8 @@ export async function fetchKyberswapQuote(
   skipBuild?: boolean,
 ): Promise<SwapQuote> {
   const params = new URLSearchParams({
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     amountIn: swapParams.amount.toString(),
     gasInclude: "true",
   })

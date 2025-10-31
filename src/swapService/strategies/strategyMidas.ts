@@ -194,14 +194,8 @@ export class StrategyMidas {
     return (
       !isExactInRepay(swapParams) &&
       !!(
-        this.findMTokenConfig(
-          swapParams.chainId,
-          swapParams.tokenIn.addressInfo,
-        ) ||
-        this.findMTokenConfig(
-          swapParams.chainId,
-          swapParams.tokenOut.addressInfo,
-        )
+        this.findMTokenConfig(swapParams.chainId, swapParams.tokenIn.address) ||
+        this.findMTokenConfig(swapParams.chainId, swapParams.tokenOut.address)
       )
     )
   }
@@ -220,12 +214,9 @@ export class StrategyMidas {
     try {
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
-          if (isMToken(mToken, swapParams.tokenIn.addressInfo)) {
+          if (isMToken(mToken, swapParams.tokenIn.address)) {
             if (
-              isAddressEqual(
-                swapParams.tokenOut.addressInfo,
-                mToken.paymentToken,
-              )
+              isAddressEqual(swapParams.tokenOut.address, mToken.paymentToken)
             ) {
               result.quotes =
                 await this.exactInFromMTokenToPaymentToken(swapParams)
@@ -234,10 +225,7 @@ export class StrategyMidas {
             }
           } else {
             if (
-              isAddressEqual(
-                swapParams.tokenIn.addressInfo,
-                mToken.paymentToken,
-              )
+              isAddressEqual(swapParams.tokenIn.address, mToken.paymentToken)
             ) {
               result.quotes =
                 await this.exactInFromPaymentTokenToMToken(swapParams)
@@ -248,12 +236,9 @@ export class StrategyMidas {
           break
         }
         case SwapperMode.TARGET_DEBT: {
-          if (isMToken(mToken, swapParams.tokenIn.addressInfo)) {
+          if (isMToken(mToken, swapParams.tokenIn.address)) {
             if (
-              isAddressEqual(
-                swapParams.tokenOut.addressInfo,
-                mToken.paymentToken,
-              )
+              isAddressEqual(swapParams.tokenOut.address, mToken.paymentToken)
             ) {
               result.quotes =
                 await this.targetDebtFromMTokenToPaymentToken(swapParams)
@@ -262,10 +247,7 @@ export class StrategyMidas {
             }
           } else {
             if (
-              isAddressEqual(
-                swapParams.tokenIn.addressInfo,
-                mToken.paymentToken,
-              )
+              isAddressEqual(swapParams.tokenIn.address, mToken.paymentToken)
             ) {
               result.quotes =
                 await this.targetDebtFromPaymentTokenToMToken(swapParams)
@@ -856,8 +838,8 @@ export class StrategyMidas {
       handler: SWAPPER_HANDLER_GENERIC,
       mode: BigInt(swapParams.swapperMode),
       account: swapParams.accountOut,
-      tokenIn: swapParams.tokenIn.addressInfo,
-      tokenOut: swapParams.tokenOut.addressInfo,
+      tokenIn: swapParams.tokenIn.address,
+      tokenOut: swapParams.tokenOut.address,
       vaultIn: swapParams.vaultIn,
       accountIn: swapParams.accountIn,
       receiver: swapParams.receiver,
@@ -976,11 +958,8 @@ export class StrategyMidas {
 
   getMToken(swapParams: SwapParams): MTokenConfig {
     const mToken =
-      this.findMTokenConfig(
-        swapParams.chainId,
-        swapParams.tokenIn.addressInfo,
-      ) ||
-      this.findMTokenConfig(swapParams.chainId, swapParams.tokenOut.addressInfo)
+      this.findMTokenConfig(swapParams.chainId, swapParams.tokenIn.address) ||
+      this.findMTokenConfig(swapParams.chainId, swapParams.tokenOut.address)
     if (!mToken) throw new Error("MToken not found")
 
     return mToken

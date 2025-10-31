@@ -38,7 +38,7 @@ export const SWAPPER_HANDLER_UNISWAP_V3 = stringToHex("UniswapV3", {
 
 export const findToken = (chainId: number, tokenAddress: Address) => {
   const token = getTokenList(chainId).find((t: TokenListItem) =>
-    isAddressEqual(t.addressInfo, tokenAddress),
+    isAddressEqual(t.address, tokenAddress),
   )
   return token
 }
@@ -55,8 +55,8 @@ export function matchParams(
     if (
       !match.tokensInOrOut.some((token: Hex) => {
         return (
-          isAddressEqual(swapParams.tokenIn.addressInfo, token) ||
-          isAddressEqual(swapParams.tokenOut.addressInfo, token)
+          isAddressEqual(swapParams.tokenIn.address, token) ||
+          isAddressEqual(swapParams.tokenOut.address, token)
         )
       })
     )
@@ -65,7 +65,7 @@ export function matchParams(
   if (match.tokensIn) {
     if (
       !match.tokensIn.some((token: Hex) => {
-        return isAddressEqual(swapParams.tokenIn.addressInfo, token)
+        return isAddressEqual(swapParams.tokenIn.address, token)
       })
     )
       return false
@@ -74,8 +74,8 @@ export function matchParams(
     if (
       match.excludeTokensInOrOut.some((token: Hex) => {
         return (
-          isAddressEqual(swapParams.tokenIn.addressInfo, token) ||
-          isAddressEqual(swapParams.tokenOut.addressInfo, token)
+          isAddressEqual(swapParams.tokenIn.address, token) ||
+          isAddressEqual(swapParams.tokenOut.address, token)
         )
       })
     )
@@ -110,8 +110,8 @@ export function matchParams(
   if (match.trades) {
     return match.trades.some((trade) => {
       return (
-        isAddressEqual(trade.tokenIn, swapParams.tokenIn.addressInfo) &&
-        isAddressEqual(trade.tokenOut, swapParams.tokenOut.addressInfo)
+        isAddressEqual(trade.tokenIn, swapParams.tokenIn.address) &&
+        isAddressEqual(trade.tokenOut, swapParams.tokenOut.address)
       )
     })
   }
@@ -206,7 +206,7 @@ export function buildApiResponseExactInputFromQuote(
   if (quote.allowanceTarget) {
     multicallItems.push(
       encodeApproveMulticallItem(
-        swapParams.tokenIn.addressInfo,
+        swapParams.tokenIn.address,
         quote.allowanceTarget,
       ),
     )
@@ -217,8 +217,8 @@ export function buildApiResponseExactInputFromQuote(
       handler: SWAPPER_HANDLER_GENERIC,
       mode: BigInt(SwapperMode.EXACT_IN),
       account: swapParams.accountOut,
-      tokenIn: swapParams.tokenIn.addressInfo,
-      tokenOut: swapParams.tokenOut.addressInfo,
+      tokenIn: swapParams.tokenIn.address,
+      tokenOut: swapParams.tokenOut.address,
       vaultIn: swapParams.vaultIn,
       accountIn: swapParams.accountIn,
       receiver: swapParams.receiver,
@@ -230,7 +230,7 @@ export function buildApiResponseExactInputFromQuote(
   if (quote.shouldTransferToReceiver) {
     multicallItems.push(
       encodeSweepMulticallItem(
-        swapParams.tokenOut.addressInfo,
+        swapParams.tokenOut.address,
         0n,
         swapParams.receiver,
       ),
@@ -272,7 +272,7 @@ export function addInOutDeposits(
   const multicallItems = [
     ...response.swap.multicallItems,
     encodeDepositMulticallItem(
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.vaultIn,
       5n, // avoid zero shares error
       swapParams.accountIn,
@@ -282,7 +282,7 @@ export function addInOutDeposits(
   if (!swapParams.skipSweepDepositOut) {
     multicallItems.push(
       encodeDepositMulticallItem(
-        swapParams.tokenOut.addressInfo,
+        swapParams.tokenOut.address,
         swapParams.receiver,
         5n, // avoid zero shares error
         swapParams.dustAccount,
@@ -517,8 +517,8 @@ export function encodeTargetDebtAsExactInMulticall(
       handler: SWAPPER_HANDLER_GENERIC,
       mode: BigInt(SwapperMode.EXACT_IN),
       account: swapParams.accountOut,
-      tokenIn: swapParams.tokenIn.addressInfo,
-      tokenOut: swapParams.tokenOut.addressInfo,
+      tokenIn: swapParams.tokenIn.address,
+      tokenOut: swapParams.tokenOut.address,
       vaultIn: swapParams.vaultIn,
       accountIn: swapParams.accountIn,
       receiver: swapParams.receiver,
@@ -540,13 +540,13 @@ export function encodeRepayAndSweep(swapParams: SwapParams) {
 
     multicallItems.push(
       encodeRepayMulticallItem(
-        swapParams.tokenOut.addressInfo,
+        swapParams.tokenOut.address,
         swapParams.receiver,
         repayAmount,
         swapParams.accountOut,
       ),
       encodeDepositMulticallItem(
-        swapParams.tokenOut.addressInfo,
+        swapParams.tokenOut.address,
         swapParams.receiver,
         5n,
         swapParams.dustAccount,
@@ -556,7 +556,7 @@ export function encodeRepayAndSweep(swapParams: SwapParams) {
 
   multicallItems.push(
     encodeDepositMulticallItem(
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.vaultIn,
       5n,
       swapParams.accountIn,

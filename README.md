@@ -156,3 +156,6 @@ const pipeline = [
 ```
  
 Additionally there is a script to generate auxiliary config files, executed by `pnpm run generate-config`. Currently it fetches the list of supported [Pendle aggregators](./src/swapService/strategies/balmySDK/sources/pendle/pendleAggregators.json) for all chains
+
+## Tokenlists
+The router relies on tokenlists for all swapped tokens. They can be fetched from `TOKENLIST_URL` or read from JSON files in `tokenLists` folder if the configuration is missing. Note the files are not updated currently. Please reach out on [Euler discord](https://discord.com/invite/pTTnr7b4mT) if you need access to the tokenlist endpoint.

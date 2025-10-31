@@ -36,7 +36,7 @@ export async function fetchUniswapQuote(
 
   const baseCurrency = new Token(
     swapParams.chainId,
-    swapParams.tokenOut.addressInfo,
+    swapParams.tokenOut.address,
     swapParams.tokenOut.decimals,
     swapParams.tokenOut.symbol,
     swapParams.tokenOut.name,
@@ -44,7 +44,7 @@ export async function fetchUniswapQuote(
 
   const quoteCurrency = new Token(
     swapParams.chainId,
-    swapParams.tokenIn.addressInfo,
+    swapParams.tokenIn.address,
     swapParams.tokenIn.decimals,
     swapParams.tokenIn.symbol,
     swapParams.tokenIn.name,

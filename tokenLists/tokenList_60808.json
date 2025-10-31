@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0xa669e059fDcbDFC532A2edd658eb2922799EEDb8",
+    "address": "0xa669e059fDcbDFC532A2edd658eb2922799EEDb8",
     "chainId": 60808,
     "name": "ALEX",
     "symbol": "ALEX",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xe75D0fB2C24A55cA1e3F96781a2bCC7bdba058F0",
+    "address": "0xe75D0fB2C24A55cA1e3F96781a2bCC7bdba058F0",
     "chainId": 60808,
     "name": "USDC.e",
     "symbol": "USDC.e",
@@ -18,7 +18,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x6c851F501a3F24E29A8E39a29591cddf09369080",
+    "address": "0x6c851F501a3F24E29A8E39a29591cddf09369080",
     "chainId": 60808,
     "name": "DAI",
     "symbol": "DAI",
@@ -27,7 +27,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xf3107eEC1e6F067552C035FD87199e1A5169CB20",
+    "address": "0xf3107eEC1e6F067552C035FD87199e1A5169CB20",
     "chainId": 60808,
     "name": "eDLLR",
     "symbol": "eDLLR",
@@ -36,7 +36,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x4200000000000000000000000000000000000006",
+    "address": "0x4200000000000000000000000000000000000006",
     "chainId": 60808,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
@@ -45,7 +45,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xc4a20a608616F18aA631316eEDa9Fb62d089361e",
+    "address": "0xc4a20a608616F18aA631316eEDa9Fb62d089361e",
     "chainId": 60808,
     "decimals": 18,
     "name": "Frax",
@@ -54,7 +54,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x4124CBBDE250a1a4bF94740491E79AB6a2eC0321",
+    "address": "0x4124CBBDE250a1a4bF94740491E79AB6a2eC0321",
     "chainId": 60808,
     "decimals": 18,
     "name": "Frax Ether",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "addressInfo": "0x15e35B19AD29C512103EaABb55154Ef0Ee6ca661",
+    "address": "0x15e35B19AD29C512103EaABb55154Ef0Ee6ca661",
     "chainId": 60808,
     "decimals": 18,
     "name": "Frax Share",
@@ -75,7 +75,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+    "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
     "chainId": 60808,
     "decimals": 8,
     "name": "Ignition FBTC",
@@ -84,7 +84,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xA45d4121b3D47719FF57a947A9d961539Ba33204",
+    "address": "0xA45d4121b3D47719FF57a947A9d961539Ba33204",
     "chainId": 60808,
     "decimals": 8,
     "name": "Lombard Staked Bitcoin",
@@ -93,7 +93,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x1fCca65fb6Ae3b2758b9b2B394CB227eAE404e1E",
+    "address": "0x1fCca65fb6Ae3b2758b9b2B394CB227eAE404e1E",
     "chainId": 60808,
     "decimals": 8,
     "name": "pumpBTC",
@@ -102,7 +102,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xB5686c4f60904Ec2BDA6277d6FE1F7cAa8D1b41a",
+    "address": "0xB5686c4f60904Ec2BDA6277d6FE1F7cAa8D1b41a",
     "chainId": 60808,
     "decimals": 18,
     "name": "Rocket Pool ETH",
@@ -114,7 +114,7 @@
     }
   },
   {
-    "addressInfo": "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
+    "address": "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
     "chainId": 60808,
     "decimals": 18,
     "name": "Solv BTC",
@@ -123,7 +123,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
+    "address": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
     "chainId": 60808,
     "decimals": 18,
     "name": "SolvBTC Babylon",
@@ -132,7 +132,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xecf21b335B41f9d5A89f6186A99c19a3c467871f",
+    "address": "0xecf21b335B41f9d5A89f6186A99c19a3c467871f",
     "chainId": 60808,
     "decimals": 18,
     "name": "Satoshi Stablecoin",
@@ -141,7 +141,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xba20a5e63eeEFfFA6fD365E7e540628F8fC61474",
+    "address": "0xba20a5e63eeEFfFA6fD365E7e540628F8fC61474",
     "chainId": 60808,
     "decimals": 18,
     "name": "SOV",
@@ -150,7 +150,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x96147A9Ae9a42d7Da551fD2322ca15B71032F342",
+    "address": "0x96147A9Ae9a42d7Da551fD2322ca15B71032F342",
     "chainId": 60808,
     "decimals": 18,
     "name": "StakeStone Ether",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "addressInfo": "0xb7eae04B995B3b365040dEE99795112ADD43afa0",
+    "address": "0xb7eae04B995B3b365040dEE99795112ADD43afa0",
     "chainId": 60808,
     "decimals": 18,
     "name": "Staked FRAX",
@@ -171,7 +171,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x249d2952D1C678843e7cD7bF654EfCeC52f2F9E8",
+    "address": "0x249d2952D1C678843e7cD7bF654EfCeC52f2F9E8",
     "chainId": 60808,
     "decimals": 18,
     "name": "Staked Frax Ether",
@@ -180,7 +180,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x05D032ac25d322df992303dCa074EE7392C117b9",
+    "address": "0x05D032ac25d322df992303dCa074EE7392C117b9",
     "chainId": 60808,
     "decimals": 6,
     "name": "Tether USD",
@@ -189,7 +189,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xf7EF136751D7496021858c048FFA4f978C27831A",
+    "address": "0xf7EF136751D7496021858c048FFA4f978C27831A",
     "chainId": 60808,
     "decimals": 18,
     "name": "Threshold USD",
@@ -198,7 +198,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2",
+    "address": "0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2",
     "chainId": 60808,
     "decimals": 18,
     "name": "tBTC v2",
@@ -207,7 +207,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x236f8c0a61dA474dB21B693fB2ea7AAB0c803894",
+    "address": "0x236f8c0a61dA474dB21B693fB2ea7AAB0c803894",
     "chainId": 60808,
     "decimals": 8,
     "name": "uniBTC",
@@ -216,7 +216,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
+    "address": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
     "chainId": 60808,
     "decimals": 8,
     "name": "Wrapped BTC",
@@ -225,7 +225,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
     "chainId": 60808,
     "decimals": 8,
     "name": "Wrapped BTC",
@@ -234,7 +234,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x85008aE6198BC91aC0735CB5497CF125ddAAc528",
+    "address": "0x85008aE6198BC91aC0735CB5497CF125ddAAc528",
     "chainId": 60808,
     "decimals": 18,
     "name": "Wrapped liquid staked Ether 2.0",
@@ -246,7 +246,7 @@
     }
   },
   {
-    "addressInfo": "0x9998e05030Aee3Af9AD3df35A34F5C51e1628779",
+    "address": "0x9998e05030Aee3Af9AD3df35A34F5C51e1628779",
     "chainId": 60808,
     "decimals": 8,
     "name": "Hybrid Bitcoin",
@@ -257,7 +257,7 @@
     }
   },
   {
-    "addressInfo": "0xDe1763aFA5eB658CfFFfD16835AfeB47e7aC0B8D",
+    "address": "0xDe1763aFA5eB658CfFFfD16835AfeB47e7aC0B8D",
     "chainId": 60808,
     "name": "EUL",
     "symbol": "EUL",
@@ -266,7 +266,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9f395F610Af9ffC98693A0769190446180dc7192",
+    "address": "0x9f395F610Af9ffC98693A0769190446180dc7192",
     "chainId": 60808,
     "name": "Reward EUL",
     "symbol": "rEUL",

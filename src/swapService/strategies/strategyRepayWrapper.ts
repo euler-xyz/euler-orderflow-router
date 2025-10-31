@@ -47,7 +47,7 @@ export class StrategyRepayWrapper {
 
       result.quotes = innerSwaps.map((innerSwap) => {
         const repayAndDepositMulticallItem = encodeRepayAndDepositMulticallItem(
-          swapParams.tokenOut.addressInfo,
+          swapParams.tokenOut.address,
           swapParams.receiver,
           maxUint256 - 1n, // this will set repay amount to available balance in the swapper. If it's more than debt, the tx will revert
           swapParams.accountOut,

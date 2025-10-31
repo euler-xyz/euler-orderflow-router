@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0xd3DCe716f3eF535C5Ff8d041c1A41C3bd89b97aE",
+    "address": "0xd3DCe716f3eF535C5Ff8d041c1A41C3bd89b97aE",
     "chainId": 146,
     "name": "Sonic USD",
     "symbol": "scUSD",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3bcE5CB273F0F148010BbEa2470e7b5df84C7812",
+    "address": "0x3bcE5CB273F0F148010BbEa2470e7b5df84C7812",
     "chainId": 146,
     "name": "Sonic ETH",
     "symbol": "scETH",
@@ -18,7 +18,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x79bbF4508B1391af3A0F4B30bb5FC4aa9ab0E07C",
+    "address": "0x79bbF4508B1391af3A0F4B30bb5FC4aa9ab0E07C",
     "chainId": 1,
     "name": "Hey Anon",
     "symbol": "ANON",
@@ -27,7 +27,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+    "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
     "chainId": 146,
     "name": "Token Wrapped Sonic",
     "symbol": "wS",
@@ -36,7 +36,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xE5DA20F15420aD15DE0fa650600aFc998bbE3955",
+    "address": "0xE5DA20F15420aD15DE0fa650600aFc998bbE3955",
     "chainId": 146,
     "name": "Beets Staked Sonic",
     "symbol": "stS",
@@ -47,7 +47,7 @@
     }
   },
   {
-    "addressInfo": "0x50c42dEAcD8Fc9773493ED674b675bE577f2634b",
+    "address": "0x50c42dEAcD8Fc9773493ED674b675bE577f2634b",
     "chainId": 146,
     "name": "Wrapped Ether",
     "symbol": "WETH",
@@ -56,7 +56,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x9fb76f7ce5FCeAA2C42887ff441D46095E494206",
+    "address": "0x9fb76f7ce5FCeAA2C42887ff441D46095E494206",
     "chainId": 146,
     "name": "Wrapped stkscUSD",
     "symbol": "wstkscUSD",
@@ -67,7 +67,7 @@
     }
   },
   {
-    "addressInfo": "0x0C4E186Eae8aCAA7F7de1315D5AD174BE39Ec987",
+    "address": "0x0C4E186Eae8aCAA7F7de1315D5AD174BE39Ec987",
     "chainId": 146,
     "name": "Angles Staked Sonic",
     "symbol": "anS",
@@ -76,7 +76,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xfA85Fe5A8F5560e9039C04f2b0a90dE1415aBD70",
+    "address": "0xfA85Fe5A8F5560e9039C04f2b0a90dE1415aBD70",
     "chainId": 146,
     "name": "Wrapped Angles Staked Sonic",
     "symbol": "wanS",
@@ -85,7 +85,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x6BA47940f738175d3F8C22Aa8EE8606eaAe45eb2",
+    "address": "0x6BA47940f738175d3F8C22Aa8EE8606eaAe45eb2",
     "chainId": 146,
     "name": "SupraFi Staked Sonic",
     "symbol": "sS",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "addressInfo": "0xb1e25689D55734FD3ffFc939c4C3Eb52DFf8A794",
+    "address": "0xb1e25689D55734FD3ffFc939c4C3Eb52DFf8A794",
     "chainId": 146,
     "name": "Origin Sonic",
     "symbol": "OS",
@@ -107,7 +107,7 @@
     }
   },
   {
-    "addressInfo": "0x9F0dF7799f6FDAd409300080cfF680f5A23df4b1",
+    "address": "0x9F0dF7799f6FDAd409300080cfF680f5A23df4b1",
     "chainId": 146,
     "name": "Wrapped Origin Sonic",
     "symbol": "wOS",
@@ -118,7 +118,7 @@
     }
   },
   {
-    "addressInfo": "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47",
+    "address": "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47",
     "chainId": 146,
     "name": "Wrapped stkscETH",
     "symbol": "wstkscETH",
@@ -130,7 +130,7 @@
     }
   },
   {
-    "addressInfo": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+    "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
     "chainId": 146,
     "name": "USDC",
     "symbol": "USDC",
@@ -139,7 +139,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
+    "address": "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
     "chainId": 146,
     "name": "Solv BTC",
     "symbol": "SolvBTC",
@@ -148,7 +148,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
+    "address": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
     "chainId": 146,
     "name": "SolvBTC Babylon",
     "symbol": "SolvBTC.BBN",
@@ -157,7 +157,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3333111A391cC08fa51353E9195526A70b333333",
+    "address": "0x3333111A391cC08fa51353E9195526A70b333333",
     "chainId": 146,
     "name": "Shadow Liquid Staking Token",
     "symbol": "x33",
@@ -168,7 +168,7 @@
     }
   },
   {
-    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "address": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
     "chainId": 146,
     "name": "YieldFi yUSD",
     "symbol": "yUSD",
@@ -179,7 +179,7 @@
     }
   },
   {
-    "addressInfo": "0x6202B9f02E30E5e1c62Cc01E4305450E5d83b926",
+    "address": "0x6202B9f02E30E5e1c62Cc01E4305450E5d83b926",
     "chainId": 146,
     "name": "Staked Stream USD",
     "symbol": "xUSD",
@@ -191,7 +191,7 @@
     }
   },
   {
-    "addressInfo": "0xAaAaaAAac311D0572Bffb4772fe985A750E88805",
+    "address": "0xAaAaaAAac311D0572Bffb4772fe985A750E88805",
     "chainId": 146,
     "name": "Wrapped Stability USD",
     "symbol": "wmetaUSD",
@@ -202,7 +202,7 @@
     }
   },
   {
-    "addressInfo": "0xbbbbbbBBbd0aE69510cE374A86749f8276647B19",
+    "address": "0xbbbbbbBBbd0aE69510cE374A86749f8276647B19",
     "chainId": 146,
     "name": "Wrapped Stability S",
     "symbol": "wmetaS",
@@ -213,7 +213,7 @@
     }
   },
   {
-    "addressInfo": "0x8e15C8D399e86d4FD7B427D42f06c60cDD9397e7",
+    "address": "0x8e15C8D399e86d4FD7B427D42f06c60cDD9397e7",
     "chainId": 146,
     "name": "EUL",
     "symbol": "EUL",
@@ -222,7 +222,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x09E6cab47B7199b9d3839A2C40654f246d518a80",
+    "address": "0x09E6cab47B7199b9d3839A2C40654f246d518a80",
     "chainId": 146,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -231,7 +231,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x455d5f11Fea33A8fa9D3e285930b478B6bF85265",
+    "address": "0x455d5f11Fea33A8fa9D3e285930b478B6bF85265",
     "chainId": 146,
     "name": "Staked Sonic ETH",
     "symbol": "stkscETH",
@@ -240,7 +240,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d",
+    "address": "0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d",
     "chainId": 146,
     "name": "PT Beets Staked Sonic 18DEC2025",
     "symbol": "PT-stS-18DEC2025",
@@ -252,7 +252,7 @@
     }
   },
   {
-    "addressInfo": "0xBe27993204Ec64238F71A527B4c4D5F4949034C3",
+    "address": "0xBe27993204Ec64238F71A527B4c4D5F4949034C3",
     "chainId": 146,
     "name": "PT Wrapped stkscUSD 29MAY2025",
     "symbol": "PT-wstkscUSD-29MAY2025",
@@ -264,7 +264,7 @@
     }
   },
   {
-    "addressInfo": "0xa2161E75EDf50d70544e6588788A5732A3105c00",
+    "address": "0xa2161E75EDf50d70544e6588788A5732A3105c00",
     "chainId": 146,
     "name": "PT Wrapped stkscETH 29MAY2025",
     "symbol": "PT-wstkscETH-29MAY2025",
@@ -276,7 +276,7 @@
     }
   },
   {
-    "addressInfo": "0x46eb02b9F47634c4fab3110CC7ADc1C6311DfAC1",
+    "address": "0x46eb02b9F47634c4fab3110CC7ADc1C6311DfAC1",
     "chainId": 146,
     "name": "PT Wrapped OS 29MAY2025",
     "symbol": "PT-wOS-29MAY2025",
@@ -288,7 +288,7 @@
     }
   },
   {
-    "addressInfo": "0x420df605D062F8611EFb3F203BF258159b8FfFdE",
+    "address": "0x420df605D062F8611EFb3F203BF258159b8FfFdE",
     "chainId": 146,
     "name": "PT Beets Staked Sonic 29MAY2025",
     "symbol": "PT-stS-29MAY2025",
@@ -300,7 +300,7 @@
     }
   },
   {
-    "addressInfo": "0x930441Aa7Ab17654dF5663781CA0C02CC17e6643",
+    "address": "0x930441Aa7Ab17654dF5663781CA0C02CC17e6643",
     "chainId": 146,
     "name": "PT Aave Sonic USDC 14AUG2025",
     "symbol": "PT-aSonUSDC-14AUG2025",
@@ -312,7 +312,7 @@
     }
   },
   {
-    "addressInfo": "0x0Fb682C9692AddCc1769f4D4d938c54420D54fA3",
+    "address": "0x0Fb682C9692AddCc1769f4D4d938c54420D54fA3",
     "chainId": 146,
     "name": "PT-wstkscUSD-18DEC2025",
     "symbol": "PT-wstkscUSD-18DEC2025",
@@ -324,7 +324,7 @@
     }
   },
   {
-    "addressInfo": "0x7e52f587f5B870D4C2cac8559ac4c49742D31a28",
+    "address": "0x7e52f587f5B870D4C2cac8559ac4c49742D31a28",
     "chainId": 146,
     "name": "PT-wstkscETH-18DEC2025",
     "symbol": "PT-wstkscETH-18DEC2025",
@@ -336,7 +336,7 @@
     }
   },
   {
-    "addressInfo": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+    "address": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
     "chainId": 146,
     "name": "Rezerve.money",
     "symbol": "RZR",
@@ -345,7 +345,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
+    "address": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
     "chainId": 146,
     "name": "Liquid Staked Rezerve.money",
     "symbol": "lstRZR",
@@ -357,7 +357,7 @@
     }
   },
   {
-    "addressInfo": "0x3D75F2BB8aBcDBd1e27443cB5CBCE8A668046C81",
+    "address": "0x3D75F2BB8aBcDBd1e27443cB5CBCE8A668046C81",
     "chainId": 146,
     "name": "HLP0",
     "symbol": "HLP0",
@@ -368,7 +368,7 @@
     }
   },
   {
-    "addressInfo": "0xB88fF15ae5f82c791e637b27337909BcF8065270",
+    "address": "0xB88fF15ae5f82c791e637b27337909BcF8065270",
     "chainId": 146,
     "name": "Staked Stream BTC",
     "symbol": "xBTC",
@@ -380,7 +380,7 @@
     }
   },
   {
-    "addressInfo": "0x16af6b1315471Dc306D47e9CcEfEd6e5996285B6",
+    "address": "0x16af6b1315471Dc306D47e9CcEfEd6e5996285B6",
     "chainId": 146,
     "name": "Staked Stream ETH",
     "symbol": "xETH",

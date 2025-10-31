@@ -72,7 +72,7 @@ export class StrategyIdleCDOTranche {
           swapParams.swapperMode === SwapperMode.EXACT_IN &&
           v.chainId === swapParams.chainId &&
           // only deposits into the tranche are possible atomically
-          isAddressEqual(v.aaTranche, swapParams.tokenOut.addressInfo) &&
+          isAddressEqual(v.aaTranche, swapParams.tokenOut.address) &&
           swapParams.receiver === v.aaTrancheVault,
       )
     )
@@ -90,13 +90,13 @@ export class StrategyIdleCDOTranche {
     try {
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
-          if (this.isSupportedTranche(swapParams.tokenIn.addressInfo)) {
+          if (this.isSupportedTranche(swapParams.tokenIn.address)) {
             throw new Error("Not supported")
           }
           if (
             this.isSupportedTrancheUnderlying({
-              aaTranche: swapParams.tokenOut.addressInfo,
-              underlying: swapParams.tokenIn.addressInfo,
+              aaTranche: swapParams.tokenOut.address,
+              underlying: swapParams.tokenIn.address,
             })
           ) {
             result.quotes =
@@ -121,9 +121,7 @@ export class StrategyIdleCDOTranche {
   async exactInFromUnderlyingToTranche(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const trancheData = this.getSupportedTranche(
-      swapParams.tokenOut.addressInfo,
-    )
+    const trancheData = this.getSupportedTranche(swapParams.tokenOut.address)
 
     const amountOut = await this.getDepositAmountOut(
       swapParams.chainId,
@@ -173,9 +171,7 @@ export class StrategyIdleCDOTranche {
   async exactInFromAnyToTranche(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const trancheData = this.getSupportedTranche(
-      swapParams.tokenOut.addressInfo,
-    )
+    const trancheData = this.getSupportedTranche(swapParams.tokenOut.address)
     const tokenOut = findToken(swapParams.chainId, trancheData.underlying)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -254,7 +250,7 @@ export class StrategyIdleCDOTranche {
       handler: SWAPPER_HANDLER_GENERIC,
       mode: BigInt(swapParams.swapperMode),
       account: swapParams.accountOut,
-      tokenIn: swapParams.tokenIn.addressInfo,
+      tokenIn: swapParams.tokenIn.address,
       tokenOut: tranche,
       vaultIn: swapParams.vaultIn,
       accountIn: swapParams.accountIn,

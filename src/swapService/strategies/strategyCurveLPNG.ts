@@ -69,8 +69,8 @@ export class StrategyCurveLPNG {
       this.config.supportedPools.some(
         (v) =>
           v.chainId === swapParams.chainId &&
-          (isAddressEqual(v.lp, swapParams.tokenIn.addressInfo) ||
-            isAddressEqual(v.lp, swapParams.tokenOut.addressInfo)),
+          (isAddressEqual(v.lp, swapParams.tokenIn.address) ||
+            isAddressEqual(v.lp, swapParams.tokenOut.address)),
       )
     )
   }
@@ -87,11 +87,11 @@ export class StrategyCurveLPNG {
     try {
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
-          if (this.isSupportedLP(swapParams.tokenIn.addressInfo)) {
+          if (this.isSupportedLP(swapParams.tokenIn.address)) {
             if (
               this.isSupportedLPAsset({
-                lp: swapParams.tokenIn.addressInfo,
-                asset: swapParams.tokenOut.addressInfo,
+                lp: swapParams.tokenIn.address,
+                asset: swapParams.tokenOut.address,
               })
             ) {
               result.quotes = await this.exactInFromLPToAsset(swapParams)
@@ -101,8 +101,8 @@ export class StrategyCurveLPNG {
           } else {
             if (
               this.isSupportedLPAsset({
-                lp: swapParams.tokenOut.addressInfo,
-                asset: swapParams.tokenIn.addressInfo,
+                lp: swapParams.tokenOut.address,
+                asset: swapParams.tokenIn.address,
               })
             ) {
               result.quotes = await this.exactInFromAssetToLP(swapParams)
@@ -113,11 +113,11 @@ export class StrategyCurveLPNG {
           break
         }
         case SwapperMode.TARGET_DEBT: {
-          if (this.isSupportedLP(swapParams.tokenIn.addressInfo)) {
+          if (this.isSupportedLP(swapParams.tokenIn.address)) {
             if (
               this.isSupportedLPAsset({
-                lp: swapParams.tokenIn.addressInfo,
-                asset: swapParams.tokenOut.addressInfo,
+                lp: swapParams.tokenIn.address,
+                asset: swapParams.tokenOut.address,
               })
             ) {
               result.quotes = await this.targetDebtFromLPToAsset(swapParams)
@@ -144,9 +144,9 @@ export class StrategyCurveLPNG {
   async exactInFromLPToAsset(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const lpData = this.getSupportedLP(swapParams.tokenIn.addressInfo)
+    const lpData = this.getSupportedLP(swapParams.tokenIn.address)
     const assetIndex = lpData.assets.findIndex((a) =>
-      isAddressEqual(a, swapParams.tokenOut.addressInfo),
+      isAddressEqual(a, swapParams.tokenOut.address),
     )
 
     const amountOut = await fetchCalcWithdrawOneCoin(
@@ -201,10 +201,10 @@ export class StrategyCurveLPNG {
   async exactInFromAssetToLP(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const lpData = this.getSupportedLP(swapParams.tokenOut.addressInfo)
+    const lpData = this.getSupportedLP(swapParams.tokenOut.address)
     const amounts = this.getAmounts(
       lpData,
-      swapParams.tokenIn.addressInfo,
+      swapParams.tokenIn.address,
       swapParams.amount,
     )
 
@@ -252,11 +252,11 @@ export class StrategyCurveLPNG {
   async targetDebtFromLPToAsset(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    const lpData = this.getSupportedLP(swapParams.tokenIn.addressInfo)
+    const lpData = this.getSupportedLP(swapParams.tokenIn.address)
     const amountOut = adjustForInterest(swapParams.amount)
     const amounts = this.getAmounts(
       lpData,
-      swapParams.tokenOut.addressInfo,
+      swapParams.tokenOut.address,
       amountOut,
     )
 
@@ -390,8 +390,8 @@ const encodeAddLiquidityMulticallItem = async (
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,
@@ -448,8 +448,8 @@ const encodeRemoveLiquidityOneCoinMulticallItem = (
     handler: SWAPPER_HANDLER_GENERIC,
     mode: BigInt(swapParams.swapperMode),
     account: swapParams.accountOut,
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     vaultIn: swapParams.vaultIn,
     accountIn: swapParams.accountIn,
     receiver: swapParams.receiver,

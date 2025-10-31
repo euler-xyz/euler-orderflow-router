@@ -1,6 +1,6 @@
 [
   {
-    "addressInfo": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
     "chainId": 1,
     "name": "Coinbase Wrapped BTC",
     "symbol": "CBBTC",
@@ -9,7 +9,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xDD629E5241CbC5919847783e6C96B2De4754e438",
+    "address": "0xDD629E5241CbC5919847783e6C96B2De4754e438",
     "chainId": 1,
     "name": "Midas mTBILL",
     "symbol": "MTBILL",
@@ -18,7 +18,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+    "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
     "chainId": 8453,
     "name": "Coinbase Wrapped Staked ETH",
     "symbol": "cbETH",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "addressInfo": "0x4200000000000000000000000000000000000006",
+    "address": "0x4200000000000000000000000000000000000006",
     "chainId": 8453,
     "name": "Wrapped Ether",
     "symbol": "WETH",
@@ -39,7 +39,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+    "address": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
     "chainId": 8453,
     "name": "EURC",
     "symbol": "EURC",
@@ -48,7 +48,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "chainId": 8453,
     "name": "USDC",
     "symbol": "USDC",
@@ -57,7 +57,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x102d758f688a4C1C5a80b116bD945d4455460282",
+    "address": "0x102d758f688a4C1C5a80b116bD945d4455460282",
     "chainId": 8453,
     "name": "USDT0",
     "symbol": "USDT0",
@@ -66,7 +66,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+    "address": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
     "chainId": 8453,
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
@@ -78,7 +78,7 @@
     }
   },
   {
-    "addressInfo": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+    "address": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
     "chainId": 8453,
     "name": "Wrapped eETH",
     "symbol": "weETH",
@@ -89,7 +89,7 @@
     }
   },
   {
-    "addressInfo": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
     "chainId": 8453,
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
@@ -98,7 +98,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
     "chainId": 8453,
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
@@ -109,7 +109,7 @@
     }
   },
   {
-    "addressInfo": "0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c",
+    "address": "0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c",
     "chainId": 8453,
     "name": "Rocket Pool ETH",
     "symbol": "rETH",
@@ -121,7 +121,7 @@
     }
   },
   {
-    "addressInfo": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+    "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
     "chainId": 8453,
     "name": "Aerodrome",
     "symbol": "AERO",
@@ -130,7 +130,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+    "address": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
     "chainId": 8453,
     "name": "Resolv USD",
     "symbol": "USR",
@@ -139,7 +139,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
+    "address": "0x3A43AEC53490CB9Fa922847385D82fe25d0E9De7",
     "chainId": 8453,
     "name": "yoETH",
     "symbol": "yoETH",
@@ -150,7 +150,7 @@
     }
   },
   {
-    "addressInfo": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+    "address": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
     "chainId": 8453,
     "name": "yoBTC",
     "symbol": "yoBTC",
@@ -161,7 +161,7 @@
     }
   },
   {
-    "addressInfo": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
+    "address": "0x0000000f2eB9f69274678c76222B35eEc7588a65",
     "chainId": 8453,
     "name": "yoUSD",
     "symbol": "yoUSD",
@@ -172,7 +172,7 @@
     }
   },
   {
-    "addressInfo": "0x5d746848005507DA0b1717C137A10C30AD9ee307",
+    "address": "0x5d746848005507DA0b1717C137A10C30AD9ee307",
     "chainId": 8453,
     "name": "PT Lombard LBTC 29MAY2025",
     "symbol": "PT-LBTC-29MAY2025",
@@ -184,7 +184,7 @@
     }
   },
   {
-    "addressInfo": "0xec443e7E0e745348E500084892C89218B3ba4683",
+    "address": "0xec443e7E0e745348E500084892C89218B3ba4683",
     "chainId": 8453,
     "name": "PT Resolv USD 24APR2025",
     "symbol": "PT-USR-24APR2025",
@@ -196,7 +196,7 @@
     }
   },
   {
-    "addressInfo": "0xa6F0A4D18B6f6DdD408936e81b7b3A8BEFA18e77",
+    "address": "0xa6F0A4D18B6f6DdD408936e81b7b3A8BEFA18e77",
     "chainId": 8453,
     "name": "PT Resolv USD 25SEP2025",
     "symbol": "PT-USR-25SEP2025",
@@ -208,7 +208,7 @@
     }
   },
   {
-    "addressInfo": "0x5875eEE11Cf8398102FdAd704C9E96607675467a",
+    "address": "0x5875eEE11Cf8398102FdAd704C9E96607675467a",
     "chainId": 8453,
     "name": "sUSDS",
     "symbol": "sUSDS",
@@ -219,7 +219,7 @@
     }
   },
   {
-    "addressInfo": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
+    "address": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
     "chainId": 8453,
     "name": "USDS",
     "symbol": "USDS",
@@ -228,7 +228,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x7FcD174E80f264448ebeE8c88a7C4476AAF58Ea6",
+    "address": "0x7FcD174E80f264448ebeE8c88a7C4476AAF58Ea6",
     "chainId": 8453,
     "name": "Wrapped Super OETH",
     "symbol": "wsuperOETHb",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "addressInfo": "0xa153Ad732F831a79b5575Fa02e793EC4E99181b0",
+    "address": "0xa153Ad732F831a79b5575Fa02e793EC4E99181b0",
     "chainId": 8453,
     "name": "EUL",
     "symbol": "EUL",
@@ -249,7 +249,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xE08e1f00D388E201e48842E53fA96195568e6813",
+    "address": "0xE08e1f00D388E201e48842E53fA96195568e6813",
     "chainId": 8453,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -258,7 +258,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x1Bc71130A0e39942a7658878169764Bbd8A45993",
+    "address": "0x1Bc71130A0e39942a7658878169764Bbd8A45993",
     "chainId": 8453,
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "addressInfo": "0x04D5ddf5f3a8939889F11E97f8c4BB48317F1938",
+    "address": "0x04D5ddf5f3a8939889F11E97f8c4BB48317F1938",
     "chainId": 8453,
     "name": "USDz",
     "symbol": "USDz",
@@ -279,7 +279,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0xdCf5130274753c8050aB061B1a1DCbf583f5bFd0",
+    "address": "0xdCf5130274753c8050aB061B1a1DCbf583f5bFd0",
     "chainId": 8453,
     "name": "ViciCoin",
     "symbol": "vcnt",
@@ -288,7 +288,7 @@
     "meta": {}
   },
   {
-    "addressInfo": "0x0177055f7429D3bd6B19f2dd591127DB871A510e",
+    "address": "0x0177055f7429D3bd6B19f2dd591127DB871A510e",
     "chainId": 8453,
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55386/large/yoUSD.png?1745708461",
@@ -300,7 +300,7 @@
     }
   },
   {
-    "addressInfo": "0x1A5c5eA50717a2ea0e4F7036FB289349DEaAB58b",
+    "address": "0x1A5c5eA50717a2ea0e4F7036FB289349DEaAB58b",
     "chainId": 8453,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54932/large/yoETH.png?1744788591",
@@ -312,7 +312,7 @@
     }
   },
   {
-    "addressInfo": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
+    "address": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
     "chainId": 8453,
     "decimals": 18,
     "logoURI": "/tokens/239/wrseth.svg",
@@ -324,7 +324,7 @@
     }
   },
   {
-    "addressInfo": "0x7D214438D0F27AfCcC23B3d1e1a53906aCE5CFEa",
+    "address": "0x7D214438D0F27AfCcC23B3d1e1a53906aCE5CFEa",
     "chainId": 8453,
     "decimals": 18,
     "logoURI": "/tokens/8453/reusd.svg",

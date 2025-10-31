@@ -16,8 +16,8 @@ export async function fetchPendleQuote(swapParams: SwapParams) {
     receiver: swapParams.receiver,
     slippage: String(swapParams.slippage / 100), // 1 = 100%
     enableAggregator: "true",
-    tokenIn: swapParams.tokenIn.addressInfo,
-    tokenOut: swapParams.tokenOut.addressInfo,
+    tokenIn: swapParams.tokenIn.address,
+    tokenOut: swapParams.tokenOut.address,
     amountIn: String(swapParams.amount),
   })
 

@@ -28,7 +28,7 @@ export class TokenlistMetadataSource
     const allTokens = getAllTokenLists()
     for (const { chainId, token } of params.tokens) {
       const tokenListItem = allTokens[chainId]?.find((t) =>
-        isAddressEqual(t.addressInfo, token as Address),
+        isAddressEqual(t.address, token as Address),
       )
       if (tokenListItem) {
         if (!result[chainId]) result[chainId] = {}
