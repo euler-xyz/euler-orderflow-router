@@ -6,7 +6,7 @@
     "symbol": "FDUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31079/large/FDUSD_icon_black.png?1731097953",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
@@ -15,7 +15,7 @@
     "symbol": "USD1",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54977/large/USD1_1000x1000_transparent.png?1749297002",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
@@ -24,7 +24,7 @@
     "symbol": "USDX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/50360/large/USDX200px.png?1731906044",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
@@ -33,7 +33,7 @@
     "symbol": "WBNB",
     "decimals": 18,
     "logoURI": "/tokens/56/wbnb.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
@@ -42,7 +42,7 @@
     "symbol": "BTCB",
     "decimals": 18,
     "logoURI": "/tokens/56/btcb.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
@@ -51,7 +51,7 @@
     "symbol": "USDC",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x55d398326f99059fF775485246999027B3197955",
@@ -60,7 +60,7 @@
     "symbol": "USDT",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
@@ -69,7 +69,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     "name": "Wrapped Ether",
     "symbol": "WETH",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
@@ -78,7 +78,7 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "/tokens/56/wsteth.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2117E8b79e8E176A670c9fCf945d4348556bfFad",
@@ -87,7 +87,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7",
@@ -96,7 +96,7 @@
     "symbol": "SolvBTC",
     "decimals": 18,
     "logoURI": "/tokens/56/solvBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
@@ -105,7 +105,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54335/large/wbtc.jpg?1739334808",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5e13d41913aDF18bb2acAe34228E8D21f3c2f2Eb",
@@ -114,7 +114,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B",
@@ -123,7 +123,7 @@
     "symbol": "slisBNB",
     "decimals": 18,
     "logoURI": "/tokens/56/slisbnb.svg",
-    "meta": {
+    "metadata": {
       "provider": "LISTADAO"
     }
   },
@@ -134,7 +134,7 @@
     "symbol": "lisUSD",
     "decimals": 18,
     "logoURI": "/tokens/56/lisusd.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
@@ -143,7 +143,7 @@
     "symbol": "USR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f",
@@ -152,7 +152,7 @@
     "symbol": "YUSD",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/large/LOGO_YUSD_BLACK.png?1756548564",
-    "meta": {
+    "metadata": {
       "provider": "AEGIS"
     }
   },
@@ -163,7 +163,7 @@
     "symbol": "USDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39962/large/usde.png?1724952425",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -172,7 +172,7 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -183,7 +183,7 @@
     "symbol": "ynBNBx",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53305/large/ynBNBx.png?1736066110",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "89818a06-3414-4d9d-a8a6-7c8686a40d2a"
     }
@@ -195,7 +195,7 @@
     "symbol": "sUSDX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/50836/large/sUSDX200px.png?1731906119",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -206,7 +206,7 @@
     "symbol": "PT-sUSDE-26JUN2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x8557d39d4bab2b045ac5c2b7ea66d12139da9af4"
     }
@@ -218,7 +218,7 @@
     "symbol": "ASTER",
     "decimals": 18,
     "logoURI": "/tokens/56/aster.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
@@ -227,6 +227,6 @@
     "symbol": "mUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/musd.png",
-    "meta": {}
+    "metadata": {}
   }
 ]

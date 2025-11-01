@@ -6,7 +6,7 @@
     "symbol": "scUSD",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53456/large/scusd_%281%29.png?1736404738",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3bcE5CB273F0F148010BbEa2470e7b5df84C7812",
@@ -15,7 +15,7 @@
     "symbol": "scETH",
     "decimals": 18,
     "logoURI": "/tokens/146/scETH.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x79bbF4508B1391af3A0F4B30bb5FC4aa9ab0E07C",
@@ -24,7 +24,7 @@
     "symbol": "ANON",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52961/large/AAI__ANON_SQ_Wb_250x250.png?1740500195",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
@@ -33,7 +33,7 @@
     "symbol": "wS",
     "decimals": 18,
     "logoURI": "/tokens/146/s.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE5DA20F15420aD15DE0fa650600aFc998bbE3955",
@@ -42,7 +42,7 @@
     "symbol": "stS",
     "decimals": 18,
     "logoURI": "/tokens/146/sts.webp",
-    "meta": {
+    "metadata": {
       "provider": "STS"
     }
   },
@@ -53,7 +53,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9fb76f7ce5FCeAA2C42887ff441D46095E494206",
@@ -62,7 +62,7 @@
     "symbol": "wstkscUSD",
     "decimals": 6,
     "logoURI": "/tokens/146/wstkscUSD.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -73,7 +73,7 @@
     "symbol": "anS",
     "decimals": 18,
     "logoURI": "/tokens/146/anS.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xfA85Fe5A8F5560e9039C04f2b0a90dE1415aBD70",
@@ -82,7 +82,7 @@
     "symbol": "wanS",
     "decimals": 18,
     "logoURI": "/tokens/146/wanS.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6BA47940f738175d3F8C22Aa8EE8606eaAe45eb2",
@@ -91,7 +91,7 @@
     "symbol": "sS",
     "decimals": 18,
     "logoURI": "/tokens/146/sS.svg",
-    "meta": {
+    "metadata": {
       "provider": "SUPRAFI"
     }
   },
@@ -102,7 +102,7 @@
     "symbol": "OS",
     "decimals": 18,
     "logoURI": "/tokens/146/os.svg",
-    "meta": {
+    "metadata": {
       "provider": "ORIGIN"
     }
   },
@@ -113,7 +113,7 @@
     "symbol": "wOS",
     "decimals": 18,
     "logoURI": "/tokens/146/wos.webp",
-    "meta": {
+    "metadata": {
       "provider": "ORIGIN"
     }
   },
@@ -124,7 +124,7 @@
     "symbol": "wstkscETH",
     "decimals": 18,
     "logoURI": "/tokens/146/wstkscETH.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "505e1ca5-9986-45e1-b013-ff6b902678fc"
     }
@@ -136,7 +136,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
@@ -145,7 +145,7 @@
     "symbol": "SolvBTC",
     "decimals": 18,
     "logoURI": "/tokens/146/solvBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
@@ -154,7 +154,7 @@
     "symbol": "SolvBTC.BBN",
     "decimals": 18,
     "logoURI": "/tokens/146/solvBTCBBN.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3333111A391cC08fa51353E9195526A70b333333",
@@ -163,7 +163,7 @@
     "symbol": "x33",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54526/large/shadow_liquid_staking_token17400.jpg?1740148577",
-    "meta": {
+    "metadata": {
       "provider": "SHADOW"
     }
   },
@@ -174,7 +174,7 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53607/large/yUSD.png?1739862886",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -185,7 +185,7 @@
     "symbol": "xUSD",
     "decimals": 6,
     "logoURI": "/tokens/146/xusd.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
     }
@@ -197,7 +197,7 @@
     "symbol": "wmetaUSD",
     "decimals": 18,
     "logoURI": "/tokens/146/wmetaUSD.png",
-    "meta": {
+    "metadata": {
       "provider": "STABILITY"
     }
   },
@@ -208,7 +208,7 @@
     "symbol": "wmetaS",
     "decimals": 18,
     "logoURI": "/tokens/146/wmetaS.png",
-    "meta": {
+    "metadata": {
       "provider": "STABILITY"
     }
   },
@@ -219,7 +219,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x09E6cab47B7199b9d3839A2C40654f246d518a80",
@@ -228,7 +228,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x455d5f11Fea33A8fa9D3e285930b478B6bF85265",
@@ -237,7 +237,7 @@
     "symbol": "stkscETH",
     "decimals": 18,
     "logoURI": "https://sonicscan.org/token/images/beetsstksceth_32.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d",
@@ -246,7 +246,7 @@
     "symbol": "PT-stS-18DEC2025",
     "decimals": 18,
     "logoURI": "/tokens/146/sS.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x7fa648887b2a10cbbf7c54d00d86d0b2a0a37b53"
     }
@@ -258,7 +258,7 @@
     "symbol": "PT-wstkscUSD-29MAY2025",
     "decimals": 6,
     "logoURI": "/tokens/146/scUSD.png",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x6e4e95fab7db1f0524b4b0a05f0b9c96380b7dfa"
     }
@@ -270,7 +270,7 @@
     "symbol": "PT-wstkscETH-29MAY2025",
     "decimals": 18,
     "logoURI": "/tokens/146/wstkscETH.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xd14117baf6ec5d12be68cd06e763a4b82c9b6d1d"
     }
@@ -282,7 +282,7 @@
     "symbol": "PT-wOS-29MAY2025",
     "decimals": 18,
     "logoURI": "/tokens/146/os.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4e82347bc41cfd5d62cef483c7f0a739a8158963"
     }
@@ -294,7 +294,7 @@
     "symbol": "PT-stS-29MAY2025",
     "decimals": 18,
     "logoURI": "/tokens/146/sts.webp",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x3aef1d372d0a7a7e482f465bc14a42d78f920392"
     }
@@ -306,7 +306,7 @@
     "symbol": "PT-aSonUSDC-14AUG2025",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x3f5ea53d1160177445b1898afbb16da111182418"
     }
@@ -318,7 +318,7 @@
     "symbol": "PT-wstkscUSD-18DEC2025",
     "decimals": 6,
     "logoURI": "/tokens/146/wstkscUSD.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x004f76045b42ef3e89814b12b37e69da19c8a212"
     }
@@ -330,7 +330,7 @@
     "symbol": "PT-wstkscETH-18DEC2025",
     "decimals": 18,
     "logoURI": "/tokens/146/wstkscETH.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x7e2bcdb749d90aa1e9e7262872ac8b1e062b2c4d"
     }
@@ -342,7 +342,7 @@
     "symbol": "RZR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67679/large/New_Project_%289%29.png?1753503135",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x67A298e5B65dB2b4616E05C3b455E017275f53cB",
@@ -351,7 +351,7 @@
     "symbol": "lstRZR",
     "decimals": 18,
     "logoURI": "/tokens/146/lstRZR.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611"
     }
@@ -363,7 +363,7 @@
     "symbol": "HLP0",
     "decimals": 18,
     "logoURI": "/tokens/146/HLP0.png",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -374,7 +374,7 @@
     "symbol": "xBTC",
     "decimals": 8,
     "logoURI": "/tokens/146/xbtc.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "69021e5e-7cae-4df4-915e-08a6b349f456"
     }
@@ -386,7 +386,7 @@
     "symbol": "xETH",
     "decimals": 18,
     "logoURI": "/tokens/146/xeth.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "24b3096a-488d-4a61-afa6-e5e9be2ce4bf"
     }

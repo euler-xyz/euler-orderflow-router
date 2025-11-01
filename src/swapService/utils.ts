@@ -86,15 +86,15 @@ export function matchParams(
   }
   if (match.isPendlePT) {
     if (
-      !swapParams.tokenIn.meta?.isPendlePT &&
-      !swapParams.tokenOut.meta?.isPendlePT
+      !swapParams.tokenIn.metadata?.isPendlePT &&
+      !swapParams.tokenOut.metadata?.isPendlePT
     )
       return false
   }
   if (match.notPendlePT) {
     if (
-      swapParams.tokenIn.meta?.isPendlePT ||
-      swapParams.tokenOut.meta?.isPendlePT
+      swapParams.tokenIn.metadata?.isPendlePT ||
+      swapParams.tokenOut.metadata?.isPendlePT
     )
       return false
   }

@@ -55,7 +55,7 @@ export class StrategyPendleCrossChainPT {
   async supports(swapParams: SwapParams) {
     return (
       !isExactInRepay(swapParams) &&
-      Boolean(swapParams.tokenIn.meta?.isPendleCrossChainPT)
+      Boolean(swapParams.tokenIn.metadata?.isPendleCrossChainPT)
     )
   }
 
@@ -67,7 +67,7 @@ export class StrategyPendleCrossChainPT {
     }
 
     if (!result.supports || !result.match) return result
-    if (!swapParams.tokenIn.meta?.pendleCrossChainPTPaired)
+    if (!swapParams.tokenIn.metadata?.pendleCrossChainPTPaired)
       throw new Error("Missing token metadata") // type assertion
 
     try {
@@ -76,7 +76,7 @@ export class StrategyPendleCrossChainPT {
           if (
             isAddressEqual(
               swapParams.tokenOut.address,
-              getAddress(swapParams.tokenIn.meta.pendleCrossChainPTPaired),
+              getAddress(swapParams.tokenIn.metadata.pendleCrossChainPTPaired),
             )
           ) {
             result.quotes = [await this.exactInFromPTToUnderlying(swapParams)]
@@ -89,7 +89,7 @@ export class StrategyPendleCrossChainPT {
           if (
             isAddressEqual(
               swapParams.tokenOut.address,
-              getAddress(swapParams.tokenIn.meta.pendleCrossChainPTPaired),
+              getAddress(swapParams.tokenIn.metadata.pendleCrossChainPTPaired),
             )
           ) {
             result.quotes = await this.targetDebtFromPTToUnderlying(swapParams)
@@ -163,10 +163,10 @@ export class StrategyPendleCrossChainPT {
         swapParams.receiver,
       )
 
-    if (!swapParams.tokenIn.meta?.pendleCrossChainPTPaired)
+    if (!swapParams.tokenIn.metadata?.pendleCrossChainPTPaired)
       throw new Error("Missing token metadata")
     const pairedAsset = getAddress(
-      swapParams.tokenIn.meta.pendleCrossChainPTPaired,
+      swapParams.tokenIn.metadata.pendleCrossChainPTPaired,
     )
     const tokenIn = findToken(swapParams.chainId, pairedAsset)
 
@@ -264,10 +264,10 @@ export class StrategyPendleCrossChainPT {
   async targetDebtFromPTToAny(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    if (!swapParams.tokenIn.meta?.pendleCrossChainPTPaired)
+    if (!swapParams.tokenIn.metadata?.pendleCrossChainPTPaired)
       throw new Error("Missing token metadata")
     const pairedAsset = getAddress(
-      swapParams.tokenIn.meta.pendleCrossChainPTPaired,
+      swapParams.tokenIn.metadata.pendleCrossChainPTPaired,
     )
     const tokenIn = findToken(swapParams.chainId, pairedAsset)
     if (!tokenIn) throw new Error("Inner token not found")
@@ -350,7 +350,7 @@ async function fetchAndEncodePTQuote(
   const queryParams = {
     receiver,
     pt: swapParams.tokenIn.address,
-    token: swapParams.tokenIn.meta?.pendleCrossChainPTPaired,
+    token: swapParams.tokenIn.metadata?.pendleCrossChainPTPaired,
     exactAmountType,
     exactAmount: amount,
   }

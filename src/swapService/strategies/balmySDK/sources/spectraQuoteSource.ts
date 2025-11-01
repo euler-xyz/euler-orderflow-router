@@ -109,7 +109,7 @@ export class CustomSpectraQuoteSource
     const tokenIn = findToken(chainId, getAddress(sellToken))
     const tokenOut = findToken(chainId, getAddress(buyToken))
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
-    if (!tokenIn.meta?.isSpectraPT && !tokenOut.meta?.isSpectraPT) {
+    if (!tokenIn.metadata?.isSpectraPT && !tokenOut.metadata?.isSpectraPT) {
       failed(
         SPECTRA_METADATA,
         chainId,
@@ -119,11 +119,11 @@ export class CustomSpectraQuoteSource
       )
     }
     let url
-    if (tokenIn.meta?.isSpectraPT && tokenOut.meta?.isSpectraPT) {
+    if (tokenIn.metadata?.isSpectraPT && tokenOut.metadata?.isSpectraPT) {
       // rollover
       failed(SPECTRA_METADATA, chainId, sellToken, buyToken, "Not supported")
     } else if (
-      tokenIn.meta?.isSpectraPT &&
+      tokenIn.metadata?.isSpectraPT &&
       (await this.isExpiredMarket(fetchService, chainId, tokenIn, timeout))
     ) {
       // redeem expired PT
@@ -151,7 +151,7 @@ export class CustomSpectraQuoteSource
       const queryString = qs.stringify(queryParams)
 
       const spectraMarket =
-        tokenIn?.meta?.spectraPool || tokenOut?.meta?.spectraPool
+        tokenIn?.metadata?.spectraPool || tokenOut?.metadata?.spectraPool
 
       url = `${getUrl(chainId)}/pools/${spectraMarket}/swap?${queryString}`
     }
@@ -210,7 +210,7 @@ export class CustomSpectraQuoteSource
     }
 
     return !!this.expiredPoolsCache[chainId].pools.find((p) =>
-      isAddressEqual(p as Address, token.meta?.spectraPool as Address),
+      isAddressEqual(p as Address, token.metadata?.spectraPool as Address),
     )
   }
 

@@ -9,7 +9,7 @@ export type TokenListItem = {
   logoURI: string
   name: string
   symbol: string
-  meta?: {
+  metadata?: {
     poolId?: string
     isPendlePT?: boolean
     pendleMarket?: string

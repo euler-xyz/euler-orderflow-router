@@ -6,7 +6,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -15,7 +15,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png?1696506694",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
@@ -24,7 +24,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
@@ -33,7 +33,7 @@
     "symbol": "STETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13442/large/steth_logo.png?1696513206",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -42,7 +42,7 @@
     "symbol": "WSTETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/18834/large/wstETH.png?1696518295",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -54,7 +54,7 @@
     "symbol": "MKR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/1364/large/Mark_Maker.png?1696502423",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x111111111117dC0aa78b770fA6A738034120C302",
@@ -63,7 +63,7 @@
     "symbol": "1INCH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13469/large/1inch-logo.jpeg?1759404663",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
@@ -72,7 +72,7 @@
     "symbol": "AAVE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12645/large/aave-token-round.png?1720472354",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
@@ -81,7 +81,7 @@
     "symbol": "EURA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/19479/large/agEUR-4.png?1710726218",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xba100000625a3754423978a60c9317c58a424e3D",
@@ -90,7 +90,7 @@
     "symbol": "BAL",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/11683/large/Balancer.png?1696511572",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
@@ -99,7 +99,7 @@
     "symbol": "CBETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/27008/large/cbeth.png?1709186989",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "0f45d730-b279-4629-8e11-ccb5cc3038b4"
     }
@@ -111,7 +111,7 @@
     "symbol": "CRV",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12124/large/Curve.png?1696511967",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
@@ -120,7 +120,7 @@
     "symbol": "CRVUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30118/large/crvusd.jpg?1746670973",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
@@ -129,7 +129,7 @@
     "symbol": "CVX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/15585/large/convex.png?1696515221",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
@@ -138,7 +138,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/9956/large/Badge_Dai.png?1696509996",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
@@ -147,7 +147,7 @@
     "symbol": "ENS",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/19785/large/ENS.jpg?1727872989",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
@@ -156,7 +156,7 @@
     "symbol": "ETHX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30870/large/staderx.png?1696529717",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "90bfb3c2-5d35-4959-a275-ba5085b08aa3"
     }
@@ -168,7 +168,7 @@
     "symbol": "EZETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -179,7 +179,7 @@
     "symbol": "FRAX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13422/large/LFRAX.png?1751911193",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
@@ -188,7 +188,7 @@
     "symbol": "FRAX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13423/large/frax.png?1745921071",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
@@ -197,7 +197,7 @@
     "symbol": "GHO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30663/large/gho-token-logo.png?1720517092",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
@@ -206,7 +206,7 @@
     "symbol": "GRT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13397/large/Graph_Token.png?1696513159",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
@@ -215,7 +215,7 @@
     "symbol": "LDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/13573/large/Lido_DAO.png?1696513326",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
@@ -224,7 +224,7 @@
     "symbol": "LINK",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/877/large/Chainlink_Logo_500.png?1760023405",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
@@ -233,7 +233,7 @@
     "symbol": "LUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/14666/large/Group_3.png?1696514341",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xd5F7838F5C461fefF7FE49ea5ebaF7728bB0ADfa",
@@ -242,7 +242,7 @@
     "symbol": "METH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33345/large/symbol_transparent_bg.png?1701697066",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "b9f2f00a-ba96-4589-a171-dde979a23d87"
     }
@@ -254,7 +254,7 @@
     "symbol": "PYUSD",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Logo_%282%29.png?1696530039",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
@@ -263,7 +263,7 @@
     "symbol": "RDNT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/26536/large/Radiant-Logo-200x200.png?1696525610",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xae78736Cd615f374D3085123A210448E74Fc6393",
@@ -272,7 +272,7 @@
     "symbol": "RETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/20764/large/reth.png?1696520159",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
     }
@@ -284,7 +284,7 @@
     "symbol": "RSETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -296,7 +296,7 @@
     "symbol": "RSWETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34489/large/rswETH_Icon.png?1706865484",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "eff9b43c-a80d-4bfc-9f9e-55e02a8ef619"
     }
@@ -308,7 +308,7 @@
     "symbol": "SNX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/3406/large/SNX.png?1696504103",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
@@ -317,7 +317,7 @@
     "symbol": "STG",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/24413/large/STG_LOGO.png?1696523595",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
@@ -326,7 +326,7 @@
     "symbol": "SUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/5013/large/sUSD.png?1696505546",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
@@ -335,7 +335,7 @@
     "symbol": "SUSDE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -346,7 +346,7 @@
     "symbol": "SUSHI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12271/large/512x512_Logo_no_chop.png?1696512101",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf951E335afb289353dc249e82926178EaC7DEd78",
@@ -355,7 +355,7 @@
     "symbol": "SWETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30326/large/_lB7zEtS_400x400.jpg?1696529227",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "ca2acc2d-6246-44aa-ae91-8725b2c62c7c"
     }
@@ -367,7 +367,7 @@
     "symbol": "TBTC",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/11224/large/0x18084fba666a33d37592fa2633fd49a74dd93a88.png?1696511155",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0000000000085d4780B73119b644AE5ecd22b376",
@@ -376,7 +376,7 @@
     "symbol": "TUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/3449/large/tusd.png?1696504140",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
@@ -385,7 +385,7 @@
     "symbol": "UNI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12504/large/uniswap-logo.png?1720676669",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
@@ -394,7 +394,7 @@
     "symbol": "USDE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -403,7 +403,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1696507857",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
@@ -412,7 +412,7 @@
     "symbol": "WEETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "meta": {
+    "metadata": {
       "provider": "ETHERFI"
     }
   },
@@ -423,7 +423,7 @@
     "symbol": "YFI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/11849/large/yearn.jpg?1696511720",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
@@ -432,7 +432,7 @@
     "symbol": "ENA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/36530/large/ethena.png?1711701436",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
@@ -441,7 +441,7 @@
     "symbol": "ETHFI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35958/large/etherfi.jpeg?1710254562",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
@@ -450,7 +450,7 @@
     "symbol": "EURC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5E8422345238F34275888049021821E8E08CAa1f",
@@ -459,7 +459,7 @@
     "symbol": "FRXETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/28284/large/frxETH_icon.png?1696527284",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "77020688-e1f9-443c-9388-e51ace15cc32"
     }
@@ -471,7 +471,7 @@
     "symbol": "GNO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/662/large/logo_square_simple_300px.png?1696501854",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
@@ -480,7 +480,7 @@
     "symbol": "ILV",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/14468/large/logo-200x200.png?1696514154",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
@@ -489,7 +489,7 @@
     "symbol": "LQTY",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/14665/large/logo_V2.png?1725437146",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
@@ -498,7 +498,7 @@
     "symbol": "MNT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30980/large/Mantle-Logo-mark.png?1739213200",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
@@ -507,7 +507,7 @@
     "symbol": "ONDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/26580/large/ONDO.png?1696525656",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
@@ -516,7 +516,7 @@
     "symbol": "PAXG",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/9519/large/paxgold.png?1696509604",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x808507121B80c02388fAd14726482e061B8da827",
@@ -525,7 +525,7 @@
     "symbol": "PENDLE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/15069/large/Pendle_Logo_Normal-03.png?1696514728",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
@@ -534,7 +534,7 @@
     "symbol": "pufETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35176/large/pufETH-200-200-resolution.png?1707753174",
-    "meta": {
+    "metadata": {
       "provider": "PUFFER"
     }
   },
@@ -545,7 +545,7 @@
     "symbol": "PXETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33608/large/pxETH-icon-transbg_72dpi.png?1702512024",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "acee1e4d-a73c-4e20-98f7-e87c13d446e4"
     }
@@ -557,7 +557,7 @@
     "symbol": "RPL",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/2090/large/rocket_pool_%28RPL%29.png?1696503058",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x320623b8E4fF03373931769A31Fc52A4E78B5d70",
@@ -566,7 +566,7 @@
     "symbol": "RSR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/8365/large/RSR_Blue_Circle_1000.png?1721777856",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
@@ -575,7 +575,7 @@
     "symbol": "SAFE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/27032/large/Artboard_1_copy_8circle-1.png?1696526084",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
@@ -584,7 +584,7 @@
     "symbol": "SDAI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/32254/large/sdai.png?1697015278",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "c8a24fee-ec00-4f38-86c0-9f6daebc4225"
     }
@@ -596,7 +596,7 @@
     "symbol": "SFRXETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/28285/large/sfrxETH_icon.png?1696527285",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8E870D67F660D95d5be530380D0eC0bd388289E1",
@@ -605,7 +605,7 @@
     "symbol": "USDP",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/6013/large/Pax_Dollar.png?1696506427",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x96F6eF951840721AdBF46Ac996b59E0235CB985C",
@@ -614,7 +614,7 @@
     "symbol": "USDY",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31700/large/usdy_%281%29.png?1696530524",
-    "meta": {
+    "metadata": {
       "provider": "ONDO"
     }
   },
@@ -625,7 +625,7 @@
     "symbol": "WLD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696529903",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
@@ -634,7 +634,7 @@
     "symbol": "WOO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12921/large/WOO_Logos_2023_Profile_Pic_WOO.png?1696512709",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
@@ -643,7 +643,7 @@
     "symbol": "XAUT",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/10481/large/Tether_Gold.png?1696510471",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
@@ -652,7 +652,7 @@
     "symbol": "OSETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33117/large/Frame_27513839.png?1700732599",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "4d01599c-69ae-41a3-bae1-5fab896f04c8"
     }
@@ -664,7 +664,7 @@
     "symbol": "EUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/28445/large/0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f.png?1696527441",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
@@ -673,7 +673,7 @@
     "symbol": "ETH+",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/38061/large/ETH__Logo.png?1716440789",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "4e6cd326-72d5-4680-8d2f-3481d50e8bb1"
     }
@@ -685,7 +685,7 @@
     "symbol": "PZETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39124/large/200x200.png?1720629607",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -696,7 +696,7 @@
     "symbol": "WOETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/29734/large/woeth-200x200.png?1714796686",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "423681e3-4787-40ce-ae43-e9f67c5269b3"
     }
@@ -708,7 +708,7 @@
     "symbol": "OETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/29733/large/OETH.png?1696528663",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "423681e3-4787-40ce-ae43-e9f67c5269b3"
     }
@@ -720,7 +720,7 @@
     "symbol": "M",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40048/large/M_Symbol_256.png?1739323798",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
@@ -729,7 +729,7 @@
     "symbol": "USDA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34510/large/agUSD-coingecko.png?1705288392",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xe1B4d34E8754600962Cd944B535180Bd758E6c2e",
@@ -738,7 +738,7 @@
     "symbol": "AGETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39677/large/Icon___Dark.png?1723610897",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x09db87A538BD693E9d08544577d5cCfAA6373A48",
@@ -747,7 +747,7 @@
     "symbol": "YNETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/37798/large/ynETH-YieldNest.png?1715589941",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "44dd4153-aa9f-4616-9a88-e6803c86b995"
     }
@@ -759,7 +759,7 @@
     "symbol": "USD0",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/38272/large/USD0LOGO.png?1716962811",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
@@ -768,7 +768,7 @@
     "symbol": "cbBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40143/large/cbbtc.webp?1726136727",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
@@ -777,7 +777,7 @@
     "symbol": "USDS",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
@@ -786,7 +786,7 @@
     "symbol": "sUSDS",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
-    "meta": {
+    "metadata": {
       "provider": "SPARK"
     }
   },
@@ -797,7 +797,7 @@
     "symbol": "USD3",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/38073/large/usd3%28200_x_200_px%29.png?1716449060",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "9c4e675e-7615-4d60-90ef-03d58c66b476"
     }
@@ -809,7 +809,7 @@
     "symbol": "LBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39969/large/LBTC_Logo.png?1724959872",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
@@ -818,7 +818,7 @@
     "symbol": "USDM",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31719/large/usdm.png?1696530540",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
@@ -827,7 +827,7 @@
     "symbol": "EBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/50411/large/eBTC.png?1727664788",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
@@ -836,7 +836,7 @@
     "symbol": "SOLVBTC",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/36800/large/solvBTC.png?1719810684",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2C537E5624e4af88A7ae4060C022609376C8D0EB",
@@ -845,7 +845,7 @@
     "symbol": "TRYB",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/10119/large/JBs9jiXO_400x400.jpg?1696510144",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
@@ -854,7 +854,7 @@
     "symbol": "AUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x437cc33344a0B27A429f795ff6B469C72698B291",
@@ -863,7 +863,7 @@
     "symbol": "wM",
     "decimals": 6,
     "logoURI": "/tokens/1/0x437cc33344a0B27A429f795ff6B469C72698B291.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
@@ -872,7 +872,7 @@
     "symbol": "FDUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/31079/large/FDUSD_icon_black.png?1731097953",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xDD629E5241CbC5919847783e6C96B2De4754e438",
@@ -881,7 +881,7 @@
     "symbol": "MTBILL",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/37839/large/mTBILL_token.png?1728417279",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -892,7 +892,7 @@
     "symbol": "BIFI",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/12704/large/bifi.png?1698202580",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
@@ -901,7 +901,7 @@
     "symbol": "USD0++",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "55b0893b-1dbb-47fd-9912-5e439cd3d511",
       "claimUrl": "https://app.usual.money"
@@ -914,7 +914,7 @@
     "symbol": "G",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39200/large/gravity.jpg?1721020647",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
@@ -923,7 +923,7 @@
     "symbol": "EIGEN",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/37441/large/eigencloud.jpg?1751003565",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766",
@@ -932,7 +932,7 @@
     "symbol": "STRK",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/26433/large/starknet.png?1696525507",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xF469fBD2abcd6B9de8E169d128226C0Fc90a012e",
@@ -941,7 +941,7 @@
     "symbol": "PUMPBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39232/large/200pxPumpBTCLogo.png?1721227861",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xbdC7c08592Ee4aa51D06C27Ee23D5087D65aDbcD",
@@ -950,7 +950,7 @@
     "symbol": "USDL",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/38484/large/USDL-Token-200px.png?1725022887",
-    "meta": {
+    "metadata": {
       "provider": "USDL"
     }
   },
@@ -961,7 +961,7 @@
     "symbol": "MBTC",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51055/large/mbtc.png?1729875716",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "37bdb634-87d4-4eca-8b73-343653bd9a25"
     }
@@ -973,7 +973,7 @@
     "symbol": "USR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2a8c22E3b10036f3AEF5875d04f8441d4188b656",
@@ -982,7 +982,7 @@
     "symbol": "mBASIS",
     "decimals": 18,
     "logoURI": "/tokens/1/0x2a8c22E3b10036f3AEF5875d04f8441d4188b656.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "b50e0e37-2256-466b-9030-168c515a2ca4"
     }
@@ -994,7 +994,7 @@
     "symbol": "RLUSD",
     "decimals": 18,
     "logoURI": "/tokens/1/0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x15700B564Ca08D9439C58cA5053166E8317aa138",
@@ -1003,7 +1003,7 @@
     "symbol": "DEUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39494/large/deUSD_Logo_%281%29.png?1723689002",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8A60E489004Ca22d775C5F2c657598278d17D9c2",
@@ -1012,7 +1012,7 @@
     "symbol": "USDA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51599/large/SUSDA.png?1731604761",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
@@ -1021,7 +1021,7 @@
     "symbol": "wUSDM",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33785/large/wUSDM_PNG_240px.png?1702981552",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
@@ -1030,7 +1030,7 @@
     "symbol": "SDEUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52847/large/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
-    "meta": {
+    "metadata": {
       "provider": "SDEUSD"
     }
   },
@@ -1041,7 +1041,7 @@
     "symbol": "RLP",
     "decimals": 18,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1052,7 +1052,7 @@
     "symbol": "BERASTONE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53143/large/beraSTONE.png?1735377526",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
@@ -1061,7 +1061,7 @@
     "symbol": "USDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53750/large/USDO_LOGO-white.png?1737181887",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xbB51E2a15A9158EBE2b0Ceb8678511e063AB7a55",
@@ -1070,7 +1070,7 @@
     "symbol": "MEDGE",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "d48e9c5a-7c28-4192-ab3d-795b5fbed7be"
     }
@@ -1082,7 +1082,7 @@
     "symbol": "MMEV",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "0ffd2dc2-72d2-449f-8cac-34a09ce6f323"
     }
@@ -1094,7 +1094,7 @@
     "symbol": "TETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_Logo_%28Color__No_Background%29.png?1748368386",
-    "meta": {
+    "metadata": {
       "provider": "TREEHOUSE"
     }
   },
@@ -1105,7 +1105,7 @@
     "symbol": "MRE7YIELD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54660/large/mre7yield_logo.png?1740896178",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -1116,7 +1116,7 @@
     "symbol": "USDtb",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52804/large/USDtbSmall.png?1734344946",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
@@ -1125,7 +1125,7 @@
     "symbol": "USYC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51054/large/Hashnote_SDYC_200x200.png?1730370965",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
@@ -1134,7 +1134,7 @@
     "symbol": "rUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54117/large/rusd_bera2.png?1738311629",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x738d1115B90efa71AE468F1287fc864775e23a31",
@@ -1143,7 +1143,7 @@
     "symbol": "srUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54118/large/srUSD.png?1738313910",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
     }
@@ -1155,7 +1155,7 @@
     "symbol": "lvlUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53150/large/lvlusd-logo.png?1735406507",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
@@ -1164,7 +1164,7 @@
     "symbol": "USP",
     "decimals": 18,
     "logoURI": "/tokens/1/0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
@@ -1173,7 +1173,7 @@
     "symbol": "xUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/xusd.jpg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
     }
@@ -1185,7 +1185,7 @@
     "symbol": "BEAM",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/32417/large/cgicon.png?1747892021",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
@@ -1194,7 +1194,7 @@
     "symbol": "WSTUSR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51880/large/USR_LOGO.png?1732098841",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1205,7 +1205,7 @@
     "symbol": "SCRVUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51712/large/scrvusd.jpg?1746671018",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "5fd328af-4203-471b-bd16-1705c726d926"
     }
@@ -1217,7 +1217,7 @@
     "symbol": "YNETHX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/51623/large/ynETHx.png?1731659494",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e3c59895-d6ad-4634-b257-f599f1a1a4a0"
     }
@@ -1229,7 +1229,7 @@
     "symbol": "s-USDC-WETH-Sa",
     "decimals": 18,
     "logoURI": "/tokens/1/swaap.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x315a892a4d02c5c1169d5F0e4f7Cb4130Cc0d138",
@@ -1238,7 +1238,7 @@
     "symbol": "s-WETH-USDT-Sa",
     "decimals": 18,
     "logoURI": "/tokens/1/swaap.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf5Ca5a74c6F9fc23880865D8702EaEda6e1f38b1",
@@ -1247,7 +1247,7 @@
     "symbol": "s-wstETH-WETH-Sa",
     "decimals": 18,
     "logoURI": "/tokens/1/swaap.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xaC4E8D8B3a48C3451d4d0E4a84e6E5Ac52579D05",
@@ -1256,7 +1256,7 @@
     "symbol": "s-USDC-USDT-Sa",
     "decimals": 18,
     "logoURI": "/tokens/1/swaap.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
@@ -1265,7 +1265,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf3e621395fc714B90dA337AA9108771597b4E696",
@@ -1274,7 +1274,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x64047dD3288276d70A4F8B5Df54668c8403f877F",
@@ -1283,7 +1283,7 @@
     "symbol": "amphrBTC",
     "decimals": 18,
     "logoURI": "https://app.amphor.io/_next/static/media/amphrBTC.130f98c0.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5fD13359Ba15A84B76f7F87568309040176167cd",
@@ -1292,7 +1292,7 @@
     "symbol": "amphrETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/c52e53a7599932b9063c6dc4383fbedc8e3e8ae8/src/assets/images/tokens/0x5fd13359ba15a84b76f7f87568309040176167cd.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -1304,7 +1304,7 @@
     "symbol": "rstETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/c52e53a7599932b9063c6dc4383fbedc8e3e8ae8/src/assets/images/tokens/0x7a4effd87c2f3c55ca251080b1343b605f327e3a.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -1316,7 +1316,7 @@
     "symbol": "wUSDL",
     "decimals": 18,
     "logoURI": "/tokens/1/0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559.png",
-    "meta": {
+    "metadata": {
       "provider": "USDL"
     }
   },
@@ -1327,7 +1327,7 @@
     "symbol": "AA_idle_Fasanara",
     "decimals": 18,
     "logoURI": "/tokens/1/0x45054c6753b4Bce40C5d54418DabC20b070F85bE.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
@@ -1336,7 +1336,7 @@
     "symbol": "STEAKLRT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39410/large/Steakhouse_logo-05.jpg?1722053893",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -1348,7 +1348,7 @@
     "symbol": "eUSDe",
     "decimals": 18,
     "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xaD55aebc9b8c03FC43cd9f62260391c13c23e7c0",
@@ -1357,7 +1357,7 @@
     "symbol": "cUSDO",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {
+    "metadata": {
       "provider": "CUSDO"
     }
   },
@@ -1368,7 +1368,7 @@
     "symbol": "VCNT",
     "decimals": 18,
     "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28656.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x07a36C630e3F072637da3445Da733B29958D8cAB",
@@ -1377,7 +1377,7 @@
     "symbol": "sBUIDL",
     "decimals": 6,
     "logoURI": "/tokens/1/0x07a36C630e3F072637da3445Da733B29958D8cAB.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xdA67B4284609d2d48e5d10cfAc411572727dc1eD",
@@ -1386,7 +1386,7 @@
     "symbol": "USN",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE24a3DC889621612422A64E6388927901608B91D",
@@ -1395,7 +1395,7 @@
     "symbol": "sUSN",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54924/large/sUSN_Logo.png?1742538935",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1406,7 +1406,7 @@
     "symbol": "STUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34509/large/stUSD_copie.png?1705288386",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "01e33a85-8bb6-4f30-a11b-7b2a8166e6b7"
     }
@@ -1418,7 +1418,7 @@
     "symbol": "syrupUSDC",
     "decimals": 6,
     "logoURI": "/tokens/1/syrupUSDC.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1429,7 +1429,7 @@
     "symbol": "CARROT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54106/large/CARROT__200x200.png?1739002309",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8A5A5DE9db5770123Ff2145F59e9F20047f0A8EC",
@@ -1438,7 +1438,7 @@
     "symbol": "mtwCARROT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54106/large/CARROT__200x200.png?1739002309",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xD7D2802f6b19843ac4DfE25022771FD83b5A7464",
@@ -1447,7 +1447,7 @@
     "symbol": "xPufETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35176/large/pufETH-200-200-resolution.png?1707753174",
-    "meta": {
+    "metadata": {
       "provider": "PUFFER"
     }
   },
@@ -1458,7 +1458,7 @@
     "symbol": "hgETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52281/large/hgETH.png?1732897068",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "bb925c10-033a-488d-90c1-595001b5656e"
     }
@@ -1470,7 +1470,7 @@
     "symbol": "PT-hgETH-25JUN2026",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52281/large/hgETH.png?1732897068",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x7da97fbfaa3020f856c60eb4ef068079a9023aca"
     }
@@ -1482,7 +1482,7 @@
     "symbol": "tacBTC",
     "decimals": 8,
     "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x294eecec65A0142e84AEdfD8eB2FBEA8c9a9fbad",
@@ -1491,7 +1491,7 @@
     "symbol": "tacETH",
     "decimals": 18,
     "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x699e04F98dE2Fc395a7dcBf36B48EC837A976490",
@@ -1500,7 +1500,7 @@
     "symbol": "tacUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4737D9b4592B40d51e110b94c9C043c6654067Ae",
@@ -1509,7 +1509,7 @@
     "symbol": "slvlUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54094/large/slvlusd.png?1738222536",
-    "meta": {
+    "metadata": {
       "provider": "LEVEL"
     }
   },
@@ -1520,7 +1520,7 @@
     "symbol": "BOLD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56069/large/BOLD_logo.png?1748265087",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11",
@@ -1529,7 +1529,7 @@
     "symbol": "sBOLD",
     "decimals": 18,
     "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1540,7 +1540,7 @@
     "symbol": "sUSP",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/66569/large/sUSP_icon.png?1749795733",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1551,7 +1551,7 @@
     "symbol": "PT-sUSP@29/7/2025",
     "decimals": 18,
     "logoURI": "/tokens/1/empty-token.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
@@ -1560,7 +1560,7 @@
     "symbol": "YU",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x076BdA095a434a7B00733115A0D679DE6478d9f8",
@@ -1569,7 +1569,7 @@
     "symbol": "PT-YU-4SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x23f0decc26eceeafa5cc900f8b47d99ff94ddd2b"
     }
@@ -1581,7 +1581,7 @@
     "symbol": "PT-YU-4DEC2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56070/large/YU.png?1748275951",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x8585177b041cd3c3fbec607fb620230259cd70db"
     }
@@ -1593,7 +1593,7 @@
     "symbol": "DOLA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/14287/large/dola.png?1696513984",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xb45ad160634c528Cc3D2926d9807104FA3157305",
@@ -1602,7 +1602,7 @@
     "symbol": "sDOLA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35495/large/sDOLAlogoFINAL.png?1708922289",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1613,7 +1613,7 @@
     "symbol": "pUSDe",
     "decimals": 18,
     "logoURI": "/tokens/1/pUSDe.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9Cf12ccd6020b6888e4D4C4e4c7AcA33c1eB91f8",
@@ -1622,7 +1622,7 @@
     "symbol": "USDaf",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56060/large/USDaf.png?1748165829",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x89E93172AEF8261Db8437b90c3dCb61545a05317",
@@ -1631,7 +1631,7 @@
     "symbol": "sUSDaf",
     "decimals": 18,
     "logoURI": "/tokens/1/0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1642,7 +1642,7 @@
     "symbol": "USDf",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54558/large/ff_200_X_200.png?1740741076",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0",
@@ -1651,7 +1651,7 @@
     "symbol": "sUSDf",
     "decimals": 18,
     "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1662,7 +1662,7 @@
     "symbol": "PT-sUSDf-25SEP2025",
     "decimals": 18,
     "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x45f163e583d34b8e276445dd3da9ae077d137d72"
     }
@@ -1674,7 +1674,7 @@
     "symbol": "ynUSDx",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/66745/large/ynUSDx.png?1750359980",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1685,7 +1685,7 @@
     "symbol": "hwHLP",
     "decimals": 6,
     "logoURI": "/tokens/1/hwhlp.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1696,7 +1696,7 @@
     "symbol": "frxUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53963/large/frxUSD.png?1737792154",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xcf62F905562626CfcDD2261162a51fd02Fc9c5b6",
@@ -1705,7 +1705,7 @@
     "symbol": "sfrxUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53964/large/sfrxUSD.png?1737792232",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1716,7 +1716,7 @@
     "symbol": "TBILL",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/30576/large/OE_Logo_200x200_Transparent.png?1696529441",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -1727,7 +1727,7 @@
     "symbol": "USD1",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54977/large/USD1_1000x1000_transparent.png?1749297002",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
@@ -1736,7 +1736,7 @@
     "symbol": "cUSD",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/68272/large/cUSD_ab_500%C3%97500.png?1755232868",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
@@ -1745,7 +1745,7 @@
     "symbol": "stcUSD",
     "decimals": 18,
     "logoURI": "/tokens/1/stcUSD.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "bf6ca887-e357-49ec-8031-0d1a6141c455"
     }
@@ -1757,7 +1757,7 @@
     "symbol": "uniBTC",
     "decimals": 8,
     "logoURI": "/tokens/60808/uniBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xa42C63686F45C124f2034152B4BB0CC63CE3Ff52",
@@ -1766,7 +1766,7 @@
     "symbol": "PT-uniBTC-18DEC2025",
     "decimals": 8,
     "logoURI": "/tokens/60808/uniBTC.webp",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4c60ab7ce24d4d7268317f44b6dc3d6530864e86"
     }
@@ -1778,7 +1778,7 @@
     "symbol": "USRUSDC-Curve-LP",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "poolId": "6258d8cc-e618-4165-9385-7775168369b2"
     }
   },
@@ -1789,7 +1789,7 @@
     "symbol": "cUSDOUSDC-Curve-LP",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {
+    "metadata": {
       "poolId": "08d1f13b-5d65-42c5-863d-fcb447dcea75"
     }
   },
@@ -1800,7 +1800,7 @@
     "symbol": "PT-USD0++-27NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xf8094570485b124b4f2abe98909a87511489c162"
     }
@@ -1812,7 +1812,7 @@
     "symbol": "PT-USR-4SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x33bda865c6815c906e63878357335b28f063936c"
     }
@@ -1824,7 +1824,7 @@
     "symbol": "PT-RLP-4SEP2025",
     "decimals": 6,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x55f06992e4c3ed17df830da37644885c0c34edda"
     }
@@ -1836,7 +1836,7 @@
     "symbol": "PT-USN-31JUL2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53948/large/image_%289%29.png?1737788246",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x11f7f8aa7bb5abf819544d502d0f365c4cb0dfeb"
     }
@@ -1848,7 +1848,7 @@
     "symbol": "PT-mEDGE-31JUL2025",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xcbeed3364912bcee868cfa9cff6fe865c85ea094"
     }
@@ -1860,7 +1860,7 @@
     "symbol": "PT-mMEV-31JUL2025",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x266728b30c98b24de810e3325adc615486988cb2"
     }
@@ -1872,7 +1872,7 @@
     "symbol": "PT-lvlUSD-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53150/large/lvlusd-logo.png?1735406507",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x461bc2ac3f80801bc11b0f20d63b73fef60c8076"
     }
@@ -1884,7 +1884,7 @@
     "symbol": "PT-slvlUSD-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54094/large/slvlusd.png?1738222536",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xc88ff954d42d3e11d43b62523b3357847c29377c"
     }
@@ -1896,7 +1896,7 @@
     "symbol": "PT-eUSDE-14AUG2025",
     "decimals": 18,
     "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xe93b4a93e80bd3065b290394264af5d82422ee70"
     }
@@ -1908,7 +1908,7 @@
     "symbol": "PT-syrupUSDC-28AUG2025",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54658/large/syrup_logo-_200x200.jpg?1740895597",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x9a63fa80b5ddfd3cab23803fdb93ad2c18f3d5aa"
     }
@@ -1920,7 +1920,7 @@
     "symbol": "PT-sUSDE-27MAR2025",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xcdd26eb5eb2ce0f203a84553853667ae69ca29ce"
     }
@@ -1932,7 +1932,7 @@
     "symbol": "PT-sUSDE-26DEC2024",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xa0ab94debb3cc9a7ea77f3205ba4ab23276fed08"
     }
@@ -1944,7 +1944,7 @@
     "symbol": "PT-sUSDE-24OCT2024",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xbbf399db59a845066aafce9ae55e68c505fa97b7"
     }
@@ -1956,7 +1956,7 @@
     "symbol": "PT-LBTC-27MAR2025",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39969/large/LBTC_Logo.png?1724959872",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x70b70ac0445c3ef04e314dfda6caafd825428221"
     }
@@ -1968,7 +1968,7 @@
     "symbol": "PT-EBTC-26DEC2024",
     "decimals": 8,
     "logoURI": "/tokens/1/0xB997B3418935A1Df0F914Ee901ec83927c1509A0.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x36d3ca43ae7939645c306e26603ce16e39a89192"
     }
@@ -1980,7 +1980,7 @@
     "symbol": "PT-cornLBTC-26DEC2024",
     "decimals": 8,
     "logoURI": "/tokens/1/0x332A8ee60EdFf0a11CF3994b1b846BBC27d3DcD6.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xCaE62858DB831272A03768f5844cbe1B40bB381f"
     }
@@ -1992,7 +1992,7 @@
     "symbol": "PT-corn-eBTC-27MAR2025",
     "decimals": 8,
     "logoURI": "/tokens/1/0x44A7876cA99460ef3218bf08b5f52E2dbE199566.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x2C71Ead7ac9AE53D05F8664e77031d4F9ebA064B"
     }
@@ -2004,7 +2004,7 @@
     "symbol": "PT-pumpBTC-27MAR2025",
     "decimals": 8,
     "logoURI": "/tokens/1/0x997Ec6Bf18a30Ef01ed8D9c90718C7726a213527.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xf8208fb52ba80075af09840a683143c22dc5b4dd"
     }
@@ -2016,7 +2016,7 @@
     "symbol": "PT-corn-pumpBTC-26DEC2024",
     "decimals": 8,
     "logoURI": "/tokens/1/0xa76f0C6e5f286bFF151b891d2A0245077F1Ad74c.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xf8208fb52ba80075af09840a683143c22dc5b4dd"
     }
@@ -2028,7 +2028,7 @@
     "symbol": "PT-corn-SolvBTC.BBN-26DEC2024",
     "decimals": 8,
     "logoURI": "/tokens/1/0x23e479ddcda990E8523494895759bD98cD2fDBF6.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xeb4d3057738b9ed930f451be473c1ccc42988384"
     }
@@ -2040,7 +2040,7 @@
     "symbol": "PT-USD0++-30JAN2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x64506968e80c9ed07bff60c8d9d57474effff2c9"
     }
@@ -2052,7 +2052,7 @@
     "symbol": "PT-USD0++-27MAR2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xafdc922d0059147486cc1f0f32e3a2354b0d35cc"
     }
@@ -2064,7 +2064,7 @@
     "symbol": "PT-USD0++-26JUN2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39169/large/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x048680f64d6dff1748ba6d9a01f578433787e24b"
     }
@@ -2076,7 +2076,7 @@
     "symbol": "PT-agETH-26DEC2024",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39677/large/Icon___Dark.png?1723610897",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x6010676bc2534652ad1ef5fa8073dcf9ad7ebfbe"
     }
@@ -2088,7 +2088,7 @@
     "symbol": "PT-rsETH-26DEC2024",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x84a50177a84dad50fdbf665dfbfb39914b52dff2"
     }
@@ -2100,7 +2100,7 @@
     "symbol": "PT-sUSDE-29MAY2025",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xb162b764044697cf03617c2efbcb1f42e31e4766"
     }
@@ -2112,7 +2112,7 @@
     "symbol": "PT-USDe-27MAR2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xb451a36c8b6b2eac77ad0737ba732818143a0e25"
     }
@@ -2124,7 +2124,7 @@
     "symbol": "PT-USDe-31JUL2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x9df192d13d61609d1852461c4850595e1f56e714"
     }
@@ -2136,7 +2136,7 @@
     "symbol": "PT-wstUSR-27MAR2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x353d0b2efb5b3a7987fb06d30ad6160522d08426"
     }
@@ -2148,7 +2148,7 @@
     "symbol": "PT-wstUSR-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x09fa04aac9c6d1c6131352ee950cd67ecc6d4fb9"
     }
@@ -2160,7 +2160,7 @@
     "symbol": "PT-USR-29MAY2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x35a18cd59a214c9e797e14b1191b700eea251f6a"
     }
@@ -2172,7 +2172,7 @@
     "symbol": "PT-eUSDE-29MAY2025",
     "decimals": 18,
     "logoURI": "/tokens/1/0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x85667e484a32d884010cf16427d90049ccf46e97"
     }
@@ -2184,7 +2184,7 @@
     "symbol": "PT-cUSDO-19JUN2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xa77c0de4d26b7c97d1d42abd6733201206122e25"
     }
@@ -2196,7 +2196,7 @@
     "symbol": "PT-sUSDE-31JUL2025",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4339ffe2b7592dc783ed13cce310531ab366deac"
     }
@@ -2208,7 +2208,7 @@
     "symbol": "PT-sUSN-31JUL2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54924/large/sUSN_Logo.png?1742538935",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xdcbc2e70ab9bfdd873a3f92f264d9fcd730680c7"
     }
@@ -2220,7 +2220,7 @@
     "symbol": "PT-USDS-14AUG2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xdace1121e10500e9e29d071f01593fd76b000f08"
     }
@@ -2232,7 +2232,7 @@
     "symbol": "PT-cUSDO-20NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/53751/large/cUSDO_logo_white.png?1737182014",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x3f53eb4c57c7e7118be8566bcd503ea502639581"
     }
@@ -2244,7 +2244,7 @@
     "symbol": "RZR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67679/large/New_Project_%289%29.png?1753503135",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB",
@@ -2253,7 +2253,7 @@
     "symbol": "lstRZR",
     "decimals": 18,
     "logoURI": "/tokens/146/lstRZR.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "104b3467-bba3-4923-851d-aa9e6ff47611"
     }
@@ -2265,7 +2265,7 @@
     "symbol": "mUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/musd.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
@@ -2274,7 +2274,7 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -2285,7 +2285,7 @@
     "symbol": "PT-yUSD-7AUG2025",
     "decimals": 6,
     "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x1047a4d2dc60e6652b51e7c63ba276b501ad6bc8"
     }
@@ -2297,7 +2297,7 @@
     "symbol": "YUSD",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/large/LOGO_YUSD_BLACK.png?1756548564",
-    "meta": {
+    "metadata": {
       "provider": "AEGIS"
     }
   },
@@ -2308,7 +2308,7 @@
     "symbol": "PT-sYUSD-4SEP2025",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/55085/standard/Figma_Group_2087326928.png?1743664857",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x701c3efda4e90be78dd63cc0493d2e9b7d2245a6"
     }
@@ -2320,7 +2320,7 @@
     "symbol": "PT-sBOLD-27NOV2025",
     "decimals": 18,
     "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xe467c5c54748f0125d729280f90ded77c4e720a4"
     }
@@ -2332,7 +2332,7 @@
     "symbol": "PT-sBOLD-1765325646",
     "decimals": 18,
     "logoURI": "/tokens/1/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11.svg",
-    "meta": {
+    "metadata": {
       "isSpectraPT": true,
       "spectraPool": "0x593a8a7c12d8111e12945ff167389662a02b5ece"
     }
@@ -2344,7 +2344,7 @@
     "symbol": "PT-USDe-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x6d98a2b6cdbf44939362a3e99793339ba2016af4"
     }
@@ -2356,7 +2356,7 @@
     "symbol": "PT-USDe-27NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869"
     }
@@ -2368,7 +2368,7 @@
     "symbol": "PT-sUSDE-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xa36b60a14a1a5247912584768c6e53e1a269a9f7"
     }
@@ -2380,7 +2380,7 @@
     "symbol": "PT-sUSDE-27NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xb6ac3d5da138918ac4e84441e924a20daa60dbdd"
     }
@@ -2392,7 +2392,7 @@
     "symbol": "PT-tUSDe-25SEP2025",
     "decimals": 18,
     "logoURI": "/tokens/1/tusde.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x07b1711d4af74af661dde3b774741993b79fc59c"
     }
@@ -2404,7 +2404,7 @@
     "symbol": "PT-mEDGE-30OCT2025",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54591/large/medge_logo.png?1740565725",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x8322b96f7aff9bf405a5a321c7ca5aac748716e0"
     }
@@ -2416,7 +2416,7 @@
     "symbol": "PT-mMEV-30OCT2025",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54592/large/mmev_logo.png?1740565795",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x688b8eea04b9756da290c962bfba988b11fc66df"
     }
@@ -2428,7 +2428,7 @@
     "symbol": "PT-USDf-29JAN2026",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54558/large/ff_200_X_200.png?1740741076",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xc65b7a0f8fc97e1d548860d866f4304e039ef016"
     }
@@ -2440,7 +2440,7 @@
     "symbol": "PT-hwHLP-25SEP2025",
     "decimals": 6,
     "logoURI": "/tokens/1/hwhlp.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x71d4a6bac0fe7210309b6a3807cf2bad13d7c1e1"
     }
@@ -2452,7 +2452,7 @@
     "symbol": "PT-pUSDe-16OCT2025",
     "decimals": 18,
     "logoURI": "/tokens/1/pUSDe.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xf4c449d6a2d1840625211769779ada42857d04dd"
     }
@@ -2464,7 +2464,7 @@
     "symbol": "PT-stcUSD-29JAN2026",
     "decimals": 18,
     "logoURI": "/tokens/1/stcUSD.svg",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xcc781b043933c10a04409b22aada3a3d1a7f29d4"
     }
@@ -2476,7 +2476,7 @@
     "symbol": "PT-cUSD-29JAN2026",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/68272/large/cUSD_ab_500%C3%97500.png?1755232868",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x307c15f808914df5a5dbe17e5608f84953ffa023"
     }
@@ -2488,7 +2488,7 @@
     "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
     "name": "PT Staked Falcon USD 29JAN2026",
     "symbol": "PT-sUSDF-29JAN2026",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xeb5819b31a0378407f43aba2f3e9d16b40aa5ec7"
     }
@@ -2500,7 +2500,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/56060/large/USDaf.png?1748165829",
     "name": "PT USDaf Stablecoin 13NOV2025",
     "symbol": "PT-USDaf-13NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x8bf03acbf1c2ac2e487c80678de7873c954525d2"
     }
@@ -2512,7 +2512,7 @@
     "logoURI": "/tokens/1/0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94.svg",
     "name": "PT Savings USDaf 13NOV2025",
     "symbol": "PT-sUSDaf-13NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x233f5adf236cab22c5dbdd3333a7efd8267d7aee"
     }
@@ -2524,7 +2524,7 @@
     "logoURI": "/tokens/1/mhyper.svg",
     "name": "Midas Hyperithm",
     "symbol": "mHYPER",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -2535,7 +2535,7 @@
     "logoURI": "/tokens/1/mapollo.svg",
     "name": "Midas Apollo Crypto",
     "symbol": "mAPOLLO",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -2546,7 +2546,7 @@
     "logoURI": "/tokens/1/mapollo.svg",
     "name": "PT Midas Apollo Crypto 20NOV2025",
     "symbol": "PT-mAPOLLO-20NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x71d857c437c56562a27aa087bc3fe529b35b6948"
     }
@@ -2558,7 +2558,7 @@
     "logoURI": "/tokens/1/mhyper.svg",
     "name": "PT Midas Hyperithm 20NOV2025",
     "symbol": "PT-mHYPER-20NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x3a4204255257698e379245ef94274ef3b2907296"
     }
@@ -2570,7 +2570,7 @@
     "logoURI": "/tokens/1/mfarm.svg",
     "name": "Midas Farm Capital",
     "symbol": "mFARM",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -2581,7 +2581,7 @@
     "logoURI": "/tokens/1/mevbtc.svg",
     "name": "Bitcoin MEV Capital",
     "symbol": "mevBTC",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -2592,7 +2592,7 @@
     "logoURI": "/tokens/1/mfone.svg",
     "name": "Midas Fasanara ONE",
     "symbol": "mF-ONE",
-    "meta": {
+    "metadata": {
       "provider": "MIDAS"
     }
   },
@@ -2603,7 +2603,7 @@
     "logoURI": "/tokens/1/tusde.svg",
     "name": "PT Terminal USDe 18DEC2025",
     "symbol": "PT-tUSDe-18DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xf342d4bde4ec5b4bba94c17ab4c92ee3792abd5e"
     }
@@ -2615,7 +2615,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
     "name": "PT Wrapped stUSR 29JAN2026",
     "symbol": "PT-wstUSR-29JAN2026",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x39c3f8e0e7c6f44dc8f0397feb124517ba82e26e"
     }
@@ -2627,7 +2627,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
     "name": "PT Resolv USD 4DEC2025",
     "symbol": "PT-USR-4DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x10e3e052bdee38c468ad092c87d330b59af6bbeb"
     }
@@ -2639,7 +2639,7 @@
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
     "name": "PT Resolv Liquidity Provider Token 4DEC2025",
     "symbol": "PT-RLP-4DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x9942a74e6e75cea2db5d068c1e75c9ac687bca06"
     }
@@ -2651,7 +2651,7 @@
     "logoURI": "/tokens/1/xbtc.svg",
     "name": "Staked Stream BTC",
     "symbol": "xBTC",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "69021e5e-7cae-4df4-915e-08a6b349f456"
     }
@@ -2663,7 +2663,7 @@
     "logoURI": "/tokens/1/xeth.svg",
     "name": "Staked Stream ETH",
     "symbol": "xETH",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "24b3096a-488d-4a61-afa6-e5e9be2ce4bf"
     }
@@ -2675,7 +2675,7 @@
     "logoURI": "/tokens/1/fxsave.svg",
     "name": "f(x) USD Saving",
     "symbol": "fxSAVE",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -2686,7 +2686,7 @@
     "logoURI": "/tokens/1/fxusd.svg",
     "name": "f(x) USD",
     "symbol": "fxUSD",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xBA1EDF4A4C7eB8Cb0DaE0594326179f9c7D909D2",
@@ -2695,7 +2695,7 @@
     "logoURI": "/tokens/1/xusd.jpg",
     "name": "PT xUSD 18DEC2025",
     "symbol": "PT-xUSD-18DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xa549ea12e9bef89c604183404a929d78a4941eb8"
     }
@@ -2707,7 +2707,7 @@
     "logoURI": "/tokens/1/mfarm.svg",
     "name": "PT Midas mFARM 11DEC2025",
     "symbol": "PT-mFARM-11DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x56649da435f9a9a57ee9c4c06b728e4ba84fcc6b"
     }
@@ -2719,7 +2719,7 @@
     "logoURI": "/tokens/1/srUSDe.svg",
     "name": "Strata Senior USDe",
     "symbol": "srUSDe",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -2730,7 +2730,7 @@
     "logoURI": "/tokens/1/srUSDe.svg",
     "name": "PT Strata Senior USDe 15JAN2026",
     "symbol": "PT-srUSDe-15JAN2026",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xa83174f1dd8475378abca9d676dad3ce97409e0a"
     }
@@ -2742,7 +2742,7 @@
     "logoURI": "/tokens/1/jrUSDe.svg",
     "name": "Strata Junior USDe",
     "symbol": "jrUSDe",
-    "meta": {
+    "metadata": {
       "provider": "ZERO"
     }
   },
@@ -2753,7 +2753,7 @@
     "logoURI": "/tokens/1/jrUSDe.svg",
     "name": "PT Strata Junior USDe 15JAN2026",
     "symbol": "PT-jrUSDe-15JAN2026",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x41264f35ef7ef8c4905ca98052e8d7480f12859e"
     }
@@ -2765,7 +2765,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/35087/large/W_Token_%283%29.png?1758122686",
     "name": "Wormhole Token",
     "symbol": "W",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
@@ -2774,7 +2774,7 @@
     "logoURI": "/tokens/1/iusd.svg",
     "name": "Staked infiniFi USD",
     "symbol": "siUSD",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -2785,7 +2785,7 @@
     "logoURI": "/tokens/1/iusd.svg",
     "name": "infiniFi USD",
     "symbol": "iUSD",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x12b004719fb632f1E7c010c6F5D6009Fb4258442",
@@ -2794,7 +2794,7 @@
     "logoURI": "/tokens/1/iusd.svg",
     "name": "Locked iUSD - 1 weeks",
     "symbol": "liUSD-1w",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "fef01bce-008a-43b0-85f9-5377a56411c4"
     }
@@ -2806,7 +2806,7 @@
     "logoURI": "https://token-images.euler.finance/1/0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
     "name": "PT Autonomous Liquidity USD 11DEC2025",
     "symbol": "PT-alUSD-11DEC2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x233062c1de76a38a4f41ab7c32e7bdb80a1dfc02"
     }

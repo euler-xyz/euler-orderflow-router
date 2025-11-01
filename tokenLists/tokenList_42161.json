@@ -6,7 +6,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
     "name": "Dai Stablecoin",
     "symbol": "DAI",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
@@ -15,7 +15,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     "name": "Wrapped Ether",
     "symbol": "WETH",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -24,7 +24,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     "name": "USDCoin",
     "symbol": "USDC",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
@@ -33,7 +33,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
     "name": "Wrapped eETH",
     "symbol": "weETH",
-    "meta": {
+    "metadata": {
       "provider": "ETHERFI"
     }
   },
@@ -44,7 +44,7 @@
     "logoURI": "https://assets.coingecko.com/coins/images/32036/large/stEUR-x4.png?1696530832",
     "name": "Staked agEUR",
     "symbol": "stEUR",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "789970a7-7ddd-4580-b86b-fe0c3844881e"
     }
@@ -56,7 +56,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
     "name": "Aave Arbitrum WBTC",
     "symbol": "aArbWBTC",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xEa3DD1a16f331fcd9B46Eb54C5b5AdcDb228FD84",
@@ -65,7 +65,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     "name": "MockUSDCoin",
     "symbol": "MUSDC",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
@@ -74,7 +74,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
     "name": "Wrapped BTC",
     "symbol": "WBTC",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5979D7b546E38E414F7E9822514be443A4800529",
@@ -83,7 +83,7 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "https://tokens.1inch.io/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -95,7 +95,7 @@
     "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uni.jpg?1696512319",
     "name": "Uniswap",
     "symbol": "UNI",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
@@ -104,7 +104,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
     "name": "Chainlink Token",
     "symbol": "LINK",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
@@ -113,7 +113,7 @@
     "logoURI": "https://assets.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
     "name": "USDT0",
     "symbol": "USDT0",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6491c05A82219b8D1479057361ff1654749b876b",
@@ -122,7 +122,7 @@
     "symbol": "USDS",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xdDb46999F8891663a8F2828d25298f70416d7610",
@@ -131,7 +131,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
     "name": "Savings USDS",
     "symbol": "sUSDS",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -142,7 +142,7 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -153,7 +153,7 @@
     "logoURI": "/tokens/130/susdc.svg",
     "name": "Savings USDC",
     "symbol": "sUSDC",
-    "meta": {
+    "metadata": {
       "provider": "SPARK"
     }
   },
@@ -164,7 +164,7 @@
     "symbol": "USR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x66CFbD79257dC5217903A36293120282548E2254",
@@ -173,7 +173,7 @@
     "symbol": "wstUSR",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -184,7 +184,7 @@
     "symbol": "RLP",
     "decimals": 18,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -195,7 +195,7 @@
     "symbol": "thBILL",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -206,7 +206,7 @@
     "symbol": "syrupUSDC",
     "decimals": 6,
     "logoURI": "/tokens/1/syrupUSDC.svg",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -217,7 +217,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0x912CE59144191C1204E64559FE8253a0e49E6548/logo.png",
     "name": "Arbitrum",
     "symbol": "ARB",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
@@ -226,7 +226,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "name": "USDe",
     "symbol": "USDe",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
@@ -235,7 +235,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
     "name": "USDai",
     "symbol": "USDai",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
@@ -244,7 +244,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
     "name": "Staked USDai",
     "symbol": "sUSDai",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -255,7 +255,7 @@
     "logoURI": "https://arbiscan.io//token/images/Curvefi_32.png",
     "name": "Curve DAO Token",
     "symbol": "CRV",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x22e9aD26eA0e65a7073571d5D7172ff6336084AD",
@@ -264,7 +264,7 @@
     "logoURI": "https://assets.coingecko.com/coins/images/28477/large/uniETH_200.png?1696527471",
     "name": "PT Bedrock uniETH 26DEC2024",
     "symbol": "PT-uniETH-26DEC2024",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x279b44e48226d40ec389129061cb0b56c5c09e46"
     }
@@ -276,7 +276,7 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -288,7 +288,7 @@
     "symbol": "TETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_Logo_%28Color__No_Background%29.png?1748368386",
-    "meta": {
+    "metadata": {
       "provider": "TREEHOUSE"
     }
   },
@@ -299,7 +299,7 @@
     "symbol": "rETH",
     "decimals": 18,
     "logoURI": "/tokens/8453/0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c.webp",
-    "meta": {
+    "metadata": {
       "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
     }
   },
@@ -310,7 +310,7 @@
     "symbol": "ezETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -321,7 +321,7 @@
     "symbol": "PT-USDai-20NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x8e101c690390de722163d4dc3f76043bebbbcadd"
     }
@@ -333,7 +333,7 @@
     "symbol": "PT-sUSDai-20NOV2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x43023675c804a759cbf900da83dbcc97ee2afbe7"
     }
@@ -345,7 +345,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
@@ -354,7 +354,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5a791652f3b140d357df072d355a98ab754877D1",
@@ -363,7 +363,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
     "name": "PT thBILL 27NOV2025",
     "symbol": "PT-thBILL-27NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4ed09847377c30aa4e74ad071e719c5814ad9ead"
     }
@@ -375,7 +375,7 @@
     "logoURI": "/tokens/42161/autoUSDai.svg",
     "name": "autoUSDai",
     "symbol": "autoUSDai",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   },
@@ -386,7 +386,7 @@
     "logoURI": "/tokens/42161/yusnd.svg",
     "name": "Yearn USND",
     "symbol": "yUSND",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
@@ -395,6 +395,6 @@
     "logoURI": "https://assets.coingecko.com/coins/images/67378/large/USND200.png?1752596582",
     "name": "US Nerite Dollar",
     "symbol": "USND",
-    "meta": {}
+    "metadata": {}
   }
 ]

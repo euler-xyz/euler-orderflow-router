@@ -6,7 +6,7 @@
     "symbol": "AUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
@@ -15,7 +15,7 @@
     "symbol": "WAVAX",
     "decimals": 18,
     "logoURI": "/tokens/43114/wavax.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
@@ -24,7 +24,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
@@ -33,7 +33,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
@@ -42,7 +42,7 @@
     "symbol": "JOE",
     "decimals": 18,
     "logoURI": "/tokens/43114/joe.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
@@ -51,7 +51,7 @@
     "symbol": "sAVAX",
     "decimals": 18,
     "logoURI": "/tokens/43114/savax.webp",
-    "meta": {
+    "metadata": {
       "provider": "SAVAX"
     }
   },
@@ -62,7 +62,7 @@
     "symbol": "WETH.e",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x152b9d0FdC40C096757F570A51E494bd4b943E50",
@@ -71,7 +71,7 @@
     "symbol": "BTC.b",
     "decimals": 8,
     "logoURI": "/tokens/43114/btc.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x50b7545627a5162F82A992c33b87aDc75187B218",
@@ -80,7 +80,7 @@
     "symbol": "WBTC.e",
     "decimals": 8,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB57B25851fE2311CC3fE511c8F10E868932e0680",
@@ -89,7 +89,7 @@
     "name": "Elixir deUSD",
     "symbol": "deUSD",
     "logoURI": "/tokens/43114/deusd.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x68088C91446c7bEa49ea7Dbd3B96Ce62B272DC96",
@@ -98,7 +98,7 @@
     "symbol": "sdeUSD",
     "decimals": 18,
     "logoURI": "/tokens/43114/sdeusd.png",
-    "meta": {
+    "metadata": {
       "provider": "SDEUSD"
     }
   },
@@ -109,7 +109,7 @@
     "symbol": "sBUIDL",
     "decimals": 6,
     "logoURI": "/tokens/43114/sbuidl.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",
@@ -118,7 +118,7 @@
     "symbol": "savUSD",
     "decimals": 18,
     "logoURI": "/tokens/43114/savusd.webp",
-    "meta": {
+    "metadata": {
       "provider": "SAVUSD"
     }
   },
@@ -129,7 +129,7 @@
     "symbol": "avUSD",
     "decimals": 18,
     "logoURI": "/tokens/43114/avusd.webp",
-    "meta": {
+    "metadata": {
       "provider": "AVUSD"
     }
   },
@@ -140,7 +140,7 @@
     "symbol": "stAVAX",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33543/large/stAVAX.png?1750256766",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "3efc0d84-53c6-4c6a-b1c3-c140502c7f26"
     }
@@ -152,7 +152,7 @@
     "name": "SolvBTC Babylon",
     "symbol": "SolvBTC.BBN",
     "logoURI": "/tokens/43114/solvBTCBBN.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xDBc5192A6B6FfEe7451301bb4ec312f844F02B4A",
@@ -161,7 +161,7 @@
     "symbol": "UTY",
     "decimals": 18,
     "logoURI": "/tokens/43114/uty.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x580d5E1399157FD0d58218b7A514b60974F2AB01",
@@ -170,7 +170,7 @@
     "symbol": "yUTY",
     "decimals": 18,
     "logoURI": "/tokens/43114/yuty.png",
-    "meta": {
+    "metadata": {
       "provider": "XSY"
     }
   },
@@ -181,7 +181,7 @@
     "symbol": "xUSDC",
     "decimals": 6,
     "logoURI": "/tokens/43114/xUSDC.png",
-    "meta": {
+    "metadata": {
       "provider": "MULTIPLI"
     }
   },
@@ -192,7 +192,7 @@
     "name": "Solv BTC",
     "symbol": "SolvBTC",
     "logoURI": "/tokens/60808/solvBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
@@ -201,7 +201,7 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "meta": {
+    "metadata": {
       "provider": "ETHERFI"
     }
   },
@@ -212,7 +212,7 @@
     "symbol": "EURC",
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/26045/large/euro.png?1696525125",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3408b22d8895753C9A3e14e4222E981d4E9A599E",
@@ -221,7 +221,7 @@
     "symbol": "upAUSD",
     "decimals": 6,
     "logoURI": "/tokens/43114/upausd.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB2bFb52cfc40584AC4e9e2B36a5B8d6554A56e0b",
@@ -230,7 +230,7 @@
     "symbol": "upAVAX",
     "decimals": 18,
     "logoURI": "/tokens/43114/upavax.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9ceeD3A7f753608372eeAb300486cc7c2F38AC68",
@@ -239,7 +239,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2e3b32730B4F6b6502BdAa9122df3B026eDE5391",
@@ -248,7 +248,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
@@ -257,7 +257,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
     "name": "PT Ethena USDe 27NOV2025",
     "symbol": "PT-USDe-27NOV2025",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x4eaa571eafcd96f51728756bd7f396459bb9b869",
       "isPendleCrossChainPT": true,
@@ -271,7 +271,7 @@
     "logoURI": "/tokens/239/wrseth.svg",
     "name": "wrsETH",
     "symbol": "wrsETH",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -283,7 +283,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
     "name": "Staked USDe",
     "symbol": "sUSDe",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -294,7 +294,7 @@
     "logoURI": "/tokens/43114/empty-token.svg",
     "name": "xBTC.b",
     "symbol": "xBTC.b",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8835A2F66A7AaCCB297Cb985831A616B75e2E16c",
@@ -303,6 +303,6 @@
     "logoURI": "/tokens/43114/europ.png",
     "name": "EURØP",
     "symbol": "EUROP",
-    "meta": {}
+    "metadata": {}
   }
 ]

@@ -6,7 +6,7 @@
     "symbol": "rUSD",
     "decimals": 18,
     "logoURI": "/tokens/80094/rusd.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -15,7 +15,7 @@
     "name": "Wrapped Berachain Token",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/raw/upload/v1717773645/src/assets/wbera.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -24,7 +24,7 @@
     "name": "WETH",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/raw/upload/v1717773645/src/assets/eth.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -33,7 +33,7 @@
     "name": "WBTC",
     "decimals": 8,
     "logoURI": "https://res.cloudinary.com/duv0g402y/raw/upload/v1717773645/src/assets/btc.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -42,7 +42,7 @@
     "name": "Honey",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/raw/upload/v1717773645/src/assets/honey.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -51,7 +51,7 @@
     "name": "Bridged USDC (Stargate)",
     "decimals": 6,
     "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -60,7 +60,7 @@
     "name": "StakeStone Ether",
     "symbol": "STONE",
     "logoURI": "/tokens/80094/stone.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
     }
@@ -72,7 +72,7 @@
     "name": "BYUSD",
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738732576/tokens/y6wa21vehnappbe2cruf.png",
     "decimals": 6,
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -81,7 +81,7 @@
     "name": "Bera Governance Token",
     "decimals": 18,
     "logoURI": "https://res.cloudinary.com/duv0g402y/raw/upload/v1717773645/src/assets/bgt.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -90,7 +90,7 @@
     "name": "Tether USD Coin",
     "decimals": 6,
     "logoURI": "/tokens/130/usdt0.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9b6761bf2397Bb5a6624a856cC84A3A14Dcd3fe5",
@@ -99,7 +99,7 @@
     "symbol": "iBERA",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54671/large/ibera.jpg?1740966414",
-    "meta": {
+    "metadata": {
       "provider": "IBERA"
     }
   },
@@ -110,7 +110,7 @@
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1738837560/tokens/iaynouqgjmryrzl0wcvx.png",
     "symbol": "iBGT",
     "name": "iBGT",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -119,7 +119,7 @@
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1739455325/tokens/luha7bssovccqq4jigdh.png",
     "symbol": "USDbr",
     "name": "USDbr",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -128,7 +128,7 @@
     "logoURI": "https://res.cloudinary.com/duv0g402y/image/upload/v1739455320/tokens/yxqyrtpt4x6ldudyxktd.png",
     "symbol": "NOME",
     "name": "NOME",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -137,7 +137,7 @@
     "name": "AZEx Token",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/berachain/metadata/refs/heads/main/src/assets/tokens/0xDAd7898717AdE066E1114E6bdbFaFd8A6F378B7b.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "chainId": 80094,
@@ -146,7 +146,7 @@
     "name": "Artio",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/berachain/metadata/refs/heads/main/src/assets/tokens/0x6ff4d64976428025cdcc3354ef53b5d19637481e.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xEb9b5f4EB023aE754fF59A04c9C038D58606DAC6",
@@ -155,7 +155,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x56C44d2F484A61ce92Fa0BCc849feB37aBfeB59C",
@@ -164,7 +164,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
@@ -173,7 +173,7 @@
     "symbol": "LBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39969/large/LBTC_Logo.png?1724959872",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x69f1E971257419B1E9C405A553f252c64A29A30a",
@@ -182,7 +182,7 @@
     "symbol": "oriBGT",
     "decimals": 18,
     "logoURI": "/tokens/80094/oriBGT.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "9b8da01e-a2d6-427b-95ef-96df8de8d32f"
     }
@@ -194,7 +194,7 @@
     "symbol": "beraETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54260/large/beraETH.png?1738952010",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
@@ -203,7 +203,7 @@
     "symbol": "USDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -212,7 +212,7 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -223,7 +223,7 @@
     "symbol": "NECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5475611Dffb8ef4d697Ae39df9395513b6E947d7",
@@ -232,7 +232,7 @@
     "symbol": "srUSD",
     "decimals": 18,
     "logoURI": "/tokens/80094/srusd.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
     }
@@ -244,7 +244,7 @@
     "symbol": "sNECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
@@ -253,7 +253,7 @@
     "symbol": "BB.SNECT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54231/large/NECT_%281%29.png?1738861282",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "30dd2264-82da-40d1-b28d-87e94fc9c2e7"
     }
@@ -265,7 +265,7 @@
     "symbol": "LBGT",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54878/large/lbgt.png?1742327918",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xFace73a169e2CA2934036C8Af9f464b5De9eF0ca",
@@ -274,7 +274,7 @@
     "symbol": "stLBGT",
     "decimals": 18,
     "logoURI": "/tokens/80094/empty-token.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "9ccbebab-a66d-4b9e-bf6a-47ea1d638874"
     }
@@ -286,7 +286,7 @@
     "symbol": "NECT-USDC-HONEY-BurrBear-LP",
     "decimals": 18,
     "logoURI": "/tokens/80094/empty-token.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2719e657ec3B3CbE521a18E640CA55799836376f",
@@ -295,7 +295,7 @@
     "symbol": "PT-sUSDE-25SEP2025",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0xd8079e0929d67390067529974b116212903cac69"
     }

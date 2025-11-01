@@ -6,7 +6,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4200000000000000000000000000000000000006",
@@ -15,7 +15,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xc02fE7317D4eb8753a02c35fe019786854A92001",
@@ -24,7 +24,7 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "/tokens/8453/wsteth.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -36,7 +36,7 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "meta": {
+    "metadata": {
       "provider": "ETHERFI"
     }
   },
@@ -47,7 +47,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x8f187aA05619a017077f5308904739877ce9eA21",
@@ -56,7 +56,7 @@
     "symbol": "UNI",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png?1720676669",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
@@ -65,7 +65,7 @@
     "symbol": "ezETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -76,7 +76,7 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -88,7 +88,7 @@
     "symbol": "USDT0",
     "decimals": 6,
     "logoURI": "/tokens/130/usdt0.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
@@ -97,7 +97,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://coin-images.coingecko.com/coins/images/54335/large/wbtc.jpg?1739334808",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x14d9143BEcC348920b68D123687045db49a016C6",
@@ -106,7 +106,7 @@
     "symbol": "sUSDC",
     "decimals": 18,
     "logoURI": "/tokens/130/susdc.svg",
-    "meta": {
+    "metadata": {
       "provider": "SPARK"
     }
   },
@@ -117,7 +117,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x94Cac393f3444cEf63a651FfC18497E7e8bd036a",
@@ -126,7 +126,7 @@
     "symbol": "rETH",
     "decimals": 18,
     "logoURI": "https://tokens.1inch.io/0xae78736cd615f374d3085123a210448e74fc6393.png",
-    "meta": {
+    "metadata": {
       "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb",
       "provider": "DEFILLAMA"
     }

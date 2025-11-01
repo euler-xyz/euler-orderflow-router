@@ -45,8 +45,8 @@ export class StrategyPendleLP {
     return (
       !isExactInRepay(swapParams) &&
       Boolean(
-        swapParams.tokenIn.meta?.isPendleWrappedLP ||
-          swapParams.tokenOut.meta?.isPendleWrappedLP,
+        swapParams.tokenIn.metadata?.isPendleWrappedLP ||
+          swapParams.tokenOut.metadata?.isPendleWrappedLP,
       )
     )
   }
@@ -66,7 +66,7 @@ export class StrategyPendleLP {
 
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
-          if (swapParams.tokenIn.meta?.isPendleWrappedLP) {
+          if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.exactInFromWrappedLPToAny(swapParams)
           } else {
             result.quotes = await this.exactInFromAnyToWrappedLP(swapParams)
@@ -74,7 +74,7 @@ export class StrategyPendleLP {
           break
         }
         case SwapperMode.TARGET_DEBT: {
-          if (swapParams.tokenIn.meta?.isPendleWrappedLP) {
+          if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.targetDebtFromWrappedLPToAny(swapParams)
           } else {
             result.quotes = await this.targetDebtFromAnyToWrappedLP(swapParams)
@@ -103,11 +103,11 @@ export class StrategyPendleLP {
       swapParams.from,
     )
 
-    if (!swapParams.tokenIn.meta?.pendleMarket)
+    if (!swapParams.tokenIn.metadata?.pendleMarket)
       throw new Error("Missing input pendle market")
     const tokenIn = findToken(
       swapParams.chainId,
-      getAddress(swapParams.tokenIn.meta.pendleMarket),
+      getAddress(swapParams.tokenIn.metadata.pendleMarket),
     )
 
     if (!tokenIn) throw new Error("Inner token not found")
@@ -149,12 +149,12 @@ export class StrategyPendleLP {
   async exactInFromAnyToWrappedLP(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    if (!swapParams.tokenOut.meta?.pendleMarket)
+    if (!swapParams.tokenOut.metadata?.pendleMarket)
       throw new Error("Missing output pendle market")
 
     const tokenOut = findToken(
       swapParams.chainId,
-      getAddress(swapParams.tokenOut.meta?.pendleMarket),
+      getAddress(swapParams.tokenOut.metadata?.pendleMarket),
     )
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -211,11 +211,11 @@ export class StrategyPendleLP {
   async targetDebtFromWrappedLPToAny(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    if (!swapParams.tokenIn.meta?.pendleMarket)
+    if (!swapParams.tokenIn.metadata?.pendleMarket)
       throw new Error("Missing input pendle market")
     const tokenIn = findToken(
       swapParams.chainId,
-      getAddress(swapParams.tokenIn.meta.pendleMarket),
+      getAddress(swapParams.tokenIn.metadata.pendleMarket),
     )
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -279,11 +279,11 @@ export class StrategyPendleLP {
   async targetDebtFromAnyToWrappedLP(
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
-    if (!swapParams.tokenOut.meta?.pendleMarket)
+    if (!swapParams.tokenOut.metadata?.pendleMarket)
       throw new Error("Missing output pendle market")
     const lpToken = findToken(
       swapParams.chainId,
-      getAddress(swapParams.tokenOut.meta?.pendleMarket),
+      getAddress(swapParams.tokenOut.metadata?.pendleMarket),
     )
     if (!lpToken) throw new Error("LP token in not found")
 

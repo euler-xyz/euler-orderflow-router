@@ -39,8 +39,8 @@
 //       !isExactInRepay(swapParams) &&
 //       this.config.chainsSupported.includes(swapParams.chainId) &&
 //       Boolean(
-//         swapParams.tokenIn.meta?.isPendlePT ||
-//           swapParams.tokenOut.meta?.isPendlePT,
+//         swapParams.tokenIn.metadata?.isPendlePT ||
+//           swapParams.tokenOut.metadata?.isPendlePT,
 //       )
 //     )
 //   }

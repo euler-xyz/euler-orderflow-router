@@ -9,8 +9,8 @@ import {
 
 export async function fetchPendleQuote(swapParams: SwapParams) {
   const pendleMarket =
-    swapParams.tokenIn.meta?.pendleMarket ||
-    swapParams.tokenOut.meta?.pendleMarket
+    swapParams.tokenIn.metadata?.pendleMarket ||
+    swapParams.tokenOut.metadata?.pendleMarket
 
   const params = new URLSearchParams({
     receiver: swapParams.receiver,

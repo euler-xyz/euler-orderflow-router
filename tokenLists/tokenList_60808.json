@@ -6,7 +6,7 @@
     "symbol": "ALEX",
     "decimals": 18,
     "logoURI": "/tokens/60808/alex.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xe75D0fB2C24A55cA1e3F96781a2bCC7bdba058F0",
@@ -15,7 +15,7 @@
     "symbol": "USDC.e",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x6c851F501a3F24E29A8E39a29591cddf09369080",
@@ -24,7 +24,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "logoURI": "/tokens/60808/dai.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf3107eEC1e6F067552C035FD87199e1A5169CB20",
@@ -33,7 +33,7 @@
     "symbol": "eDLLR",
     "decimals": 18,
     "logoURI": "/tokens/60808/edllr.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4200000000000000000000000000000000000006",
@@ -42,7 +42,7 @@
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     "name": "Wrapped Ether",
     "symbol": "WETH",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xc4a20a608616F18aA631316eEDa9Fb62d089361e",
@@ -51,7 +51,7 @@
     "name": "Frax",
     "symbol": "FRAX",
     "logoURI": "/tokens/60808/frax.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4124CBBDE250a1a4bF94740491E79AB6a2eC0321",
@@ -60,7 +60,7 @@
     "name": "Frax Ether",
     "symbol": "frxETH",
     "logoURI": "/tokens/60808/frxETH.webp",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "77020688-e1f9-443c-9388-e51ace15cc32"
     }
@@ -72,7 +72,7 @@
     "name": "Frax Share",
     "symbol": "FXS",
     "logoURI": "/tokens/60808/fxs.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
@@ -81,7 +81,7 @@
     "name": "Ignition FBTC",
     "symbol": "FBTC",
     "logoURI": "/tokens/60808/fbtc.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xA45d4121b3D47719FF57a947A9d961539Ba33204",
@@ -90,7 +90,7 @@
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "logoURI": "/tokens/60808/lbtc.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1fCca65fb6Ae3b2758b9b2B394CB227eAE404e1E",
@@ -99,7 +99,7 @@
     "name": "pumpBTC",
     "symbol": "pumpBTC",
     "logoURI": "/tokens/60808/pumpBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xB5686c4f60904Ec2BDA6277d6FE1F7cAa8D1b41a",
@@ -108,7 +108,7 @@
     "name": "Rocket Pool ETH",
     "symbol": "rETH",
     "logoURI": "/tokens/60808/reth.webp",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
     }
@@ -120,7 +120,7 @@
     "name": "Solv BTC",
     "symbol": "SolvBTC",
     "logoURI": "/tokens/60808/solvBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xCC0966D8418d412c599A6421b760a847eB169A8c",
@@ -129,7 +129,7 @@
     "name": "SolvBTC Babylon",
     "symbol": "SolvBTC.BBN",
     "logoURI": "/tokens/60808/solvBTC_BBN.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xecf21b335B41f9d5A89f6186A99c19a3c467871f",
@@ -138,7 +138,7 @@
     "name": "Satoshi Stablecoin",
     "symbol": "satUSD",
     "logoURI": "/tokens/60808/satUSD.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xba20a5e63eeEFfFA6fD365E7e540628F8fC61474",
@@ -147,7 +147,7 @@
     "name": "SOV",
     "symbol": "SOV",
     "logoURI": "/tokens/60808/sov.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x96147A9Ae9a42d7Da551fD2322ca15B71032F342",
@@ -156,7 +156,7 @@
     "name": "StakeStone Ether",
     "symbol": "STONE",
     "logoURI": "/tokens/60808/stone.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
     }
@@ -168,7 +168,7 @@
     "name": "Staked FRAX",
     "symbol": "sFRAX",
     "logoURI": "/tokens/60808/sFRAX.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x249d2952D1C678843e7cD7bF654EfCeC52f2F9E8",
@@ -177,7 +177,7 @@
     "name": "Staked Frax Ether",
     "symbol": "sfrxETH",
     "logoURI": "/tokens/60808/sfrxETH.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x05D032ac25d322df992303dCa074EE7392C117b9",
@@ -186,7 +186,7 @@
     "name": "Tether USD",
     "symbol": "USDT",
     "logoURI": "/tokens/60808/usdt.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xf7EF136751D7496021858c048FFA4f978C27831A",
@@ -195,7 +195,7 @@
     "name": "Threshold USD",
     "symbol": "thUSD",
     "logoURI": "/tokens/60808/thUSD.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2",
@@ -204,7 +204,7 @@
     "name": "tBTC v2",
     "symbol": "tBTC",
     "logoURI": "/tokens/60808/tBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x236f8c0a61dA474dB21B693fB2ea7AAB0c803894",
@@ -213,7 +213,7 @@
     "name": "uniBTC",
     "symbol": "uniBTC",
     "logoURI": "/tokens/60808/uniBTC.webp",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
@@ -222,7 +222,7 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "logoURI": "/tokens/60808/WBTC.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
@@ -231,7 +231,7 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "logoURI": "/tokens/60808/WBTC.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x85008aE6198BC91aC0735CB5497CF125ddAAc528",
@@ -240,7 +240,7 @@
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
     "logoURI": "/tokens/60808/wstETH.webp",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
     }
@@ -252,7 +252,7 @@
     "name": "Hybrid Bitcoin",
     "symbol": "HybridBTC.pendle",
     "logoURI": "/tokens/60808/hybridBTC.jpg",
-    "meta": {
+    "metadata": {
       "provider": "VEDA"
     }
   },
@@ -263,7 +263,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9f395F610Af9ffC98693A0769190446180dc7192",
@@ -272,6 +272,6 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   }
 ]

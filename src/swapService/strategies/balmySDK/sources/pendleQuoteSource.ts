@@ -104,13 +104,12 @@ export class CustomPendleQuoteSource
   }: QuoteParams<PendleSupport, PendleConfig>) {
     const tokenIn = findToken(chainId, getAddress(sellToken))
     const tokenOut = findToken(chainId, getAddress(buyToken))
-
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
     if (
-      !tokenIn.meta?.isPendleLP &&
-      !tokenOut.meta?.isPendleLP &&
-      !tokenIn.meta?.isPendlePT &&
-      !tokenOut.meta?.isPendlePT
+      !tokenIn.metadata?.isPendleLP &&
+      !tokenOut.metadata?.isPendleLP &&
+      !tokenIn.metadata?.isPendlePT &&
+      !tokenOut.metadata?.isPendlePT
     ) {
       failed(
         this.getMetadata(),
@@ -132,7 +131,6 @@ export class CustomPendleQuoteSource
         "Sold out cool off",
       )
     }
-
     // swap
     const queryParams: any = {
       receiver: recipient || takeFrom,
@@ -143,12 +141,10 @@ export class CustomPendleQuoteSource
       amountsIn: order.sellAmount.toString(),
       aggregators: this.aggregator,
     }
-
     const queryString = qs.stringify(queryParams, {
       skipNulls: true,
       arrayFormat: "comma",
     })
-
     const url = `https://api-v2.pendle.finance/core/v2/sdk/${chainId}/convert?${queryString}`
 
     const response = await fetchService.fetch(url, {

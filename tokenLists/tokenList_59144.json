@@ -6,7 +6,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
@@ -15,7 +15,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
@@ -24,7 +24,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4",
@@ -33,7 +33,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
@@ -42,7 +42,7 @@
     "symbol": "ezETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -53,7 +53,7 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "meta": {
+    "metadata": {
       "provider": "ETHERFI"
     }
   },
@@ -64,7 +64,7 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "https://tokens.1inch.io/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -76,7 +76,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
@@ -85,7 +85,7 @@
     "symbol": "USDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39962/large/usde.png?1724952425",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -94,7 +94,7 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -105,7 +105,7 @@
     "symbol": "wrsETH",
     "decimals": 18,
     "logoURI": "/tokens/239/wrseth.svg",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -117,7 +117,7 @@
     "symbol": "mUSD",
     "decimals": 6,
     "logoURI": "/tokens/1/musd.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3ff47c5Bf409C86533FE1f4907524d304062428D",
@@ -126,7 +126,7 @@
     "symbol": "EURe",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/54303/standard/eure.jpg?1739167959",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x3eBd0148BADAb9388936E4472C4415D5700478A5",
@@ -135,7 +135,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xe15C5F31cd7B767883F5654CDD3aFac28966B0a9",
@@ -144,7 +144,7 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
@@ -153,7 +153,7 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/68507/large/linea-logo.jpeg?1756025484",
     "name": "Linea",
     "symbol": "LINEA",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x4809010926aec940b550D34a46A52739f996D75D",
@@ -162,7 +162,7 @@
     "name": "Wrapped Savings rUSD",
     "symbol": "wsrUSD",
     "logoURI": "https://coin-images.coingecko.com/coins/images/54118/large/srUSD.png?1738313910",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
     }
@@ -174,7 +174,7 @@
     "logoURI": "https://assets.coingecko.com/coins/images/68282/large/rex33.png?1755242075",
     "name": "Etherex Liquid Staking Token",
     "symbol": "REX33",
-    "meta": {
+    "metadata": {
       "provider": "ETHEREX"
     }
   },
@@ -185,7 +185,7 @@
     "name": "YieldFi yUSD",
     "symbol": "yUSD",
     "logoURI": "https://assets.coingecko.com/coins/images/53607/standard/yUSD.png?1739862886",
-    "meta": {
+    "metadata": {
       "provider": "STABLEWATCH"
     }
   }

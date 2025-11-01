@@ -6,7 +6,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
@@ -15,7 +15,7 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "/tokens/1923/wsteth.png",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
@@ -27,7 +27,7 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "46bd2bdf-6d92-4066-b482-e885ee172264"
     }
@@ -39,7 +39,7 @@
     "symbol": "ezETH",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/34753/standard/Ezeth_logo_circle.png?1713496404",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
     }
@@ -51,7 +51,7 @@
     "symbol": "rsETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
@@ -63,7 +63,7 @@
     "symbol": "swETH",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/30326/standard/_lB7zEtS_400x400.jpg?1696529227",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "ca2acc2d-6246-44aa-ae91-8725b2c62c7c"
     }
@@ -75,7 +75,7 @@
     "symbol": "rswETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/34489/large/rswETH_Icon.png?1706865484",
-    "meta": {
+    "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "eff9b43c-a80d-4bfc-9f9e-55e02a8ef619"
     }
@@ -87,7 +87,7 @@
     "symbol": "pzETH",
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39124/large/200x200.png?1720629607",
-    "meta": {
+    "metadata": {
       "provider": "RENZO"
     }
   },
@@ -98,7 +98,7 @@
     "symbol": "USDe",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33613/standard/usde.png?1733810059",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -107,7 +107,7 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
-    "meta": {
+    "metadata": {
       "provider": "SUSDE"
     }
   },
@@ -118,7 +118,7 @@
     "symbol": "swBTC",
     "decimals": 8,
     "logoURI": "https://assets.coingecko.com/coins/images/39682/standard/swBTC200x200.png?1723652322",
-    "meta": {
+    "metadata": {
       "provider": "SWELL_SWBTC"
     }
   },
@@ -129,7 +129,7 @@
     "symbol": "ENA",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/36530/standard/ethena.png?1711701436",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x2826D136F5630adA89C1678b64A61620Aab77Aea",
@@ -138,7 +138,7 @@
     "symbol": "SWELL",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/28777/standard/swell1.png?1727899715",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1",
@@ -147,7 +147,7 @@
     "symbol": "wSWELL",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/28777/standard/swell1.png?1727899715",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
@@ -156,7 +156,7 @@
     "symbol": "rUSDC",
     "decimals": 6,
     "logoURI": "/tokens/1923/rusdc.jpg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x80ccFBec4b8c82265abdc226Ad3Df84C0726E7A3",
@@ -165,7 +165,7 @@
     "symbol": "EUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   },
   {
     "address": "0x021694af083d67950Ac994E63e0a70C30D913836",
@@ -174,6 +174,6 @@
     "symbol": "rEUL",
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "meta": {}
+    "metadata": {}
   }
 ]
