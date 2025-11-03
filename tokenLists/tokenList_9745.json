@@ -1,6 +1,6 @@
 [
   {
-    "address": "0x6100E367285b01F48D07953803A2d8dCA5D19873",
+    "addressInfo": "0x6100E367285b01F48D07953803A2d8dCA5D19873",
     "chainId": 9745,
     "name": "Wrapped XPL",
     "symbol": "WXPL",
@@ -9,7 +9,7 @@
     "metadata": {}
   },
   {
-    "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+    "addressInfo": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
     "chainId": 9745,
     "name": "USDT0",
     "symbol": "USDT0",
@@ -18,7 +18,7 @@
     "metadata": {}
   },
   {
-    "address": "0x9895D81bB462A195b4922ED7De0e3ACD007c32CB",
+    "addressInfo": "0x9895D81bB462A195b4922ED7De0e3ACD007c32CB",
     "chainId": 9745,
     "name": "WETH",
     "symbol": "WETH",
@@ -27,7 +27,7 @@
     "metadata": {}
   },
   {
-    "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+    "addressInfo": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
     "chainId": 9745,
     "name": "weETH",
     "symbol": "weETH",
@@ -38,7 +38,7 @@
     }
   },
   {
-    "address": "0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193",
+    "addressInfo": "0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193",
     "chainId": 9745,
     "name": "XAUT0",
     "symbol": "XAUT0",
@@ -47,7 +47,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 9745,
     "name": "USDe",
     "symbol": "USDe",
@@ -56,7 +56,7 @@
     "metadata": {}
   },
   {
-    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 9745,
     "name": "sUSDe",
     "symbol": "sUSDe",
@@ -67,7 +67,7 @@
     }
   },
   {
-    "address": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
+    "addressInfo": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
     "chainId": 9745,
     "name": "ENA",
     "symbol": "ENA",
@@ -76,7 +76,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+    "addressInfo": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
     "chainId": 9745,
     "name": "USDai",
     "symbol": "USDai",
@@ -85,7 +85,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
+    "addressInfo": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "address": "0x87e617C7484aDE79FcD90db58BEB82B057facb48",
+    "addressInfo": "0x87e617C7484aDE79FcD90db58BEB82B057facb48",
     "chainId": 9745,
     "name": "USDO",
     "symbol": "USDO",
@@ -105,7 +105,7 @@
     "metadata": {}
   },
   {
-    "address": "0xbEeE5862649eF24c1F1d5e799505F67F1e7bAB9a",
+    "addressInfo": "0xbEeE5862649eF24c1F1d5e799505F67F1e7bAB9a",
     "chainId": 9745,
     "name": "cUSDO",
     "symbol": "cUSDO",
@@ -114,7 +114,7 @@
     "metadata": {}
   },
   {
-    "address": "0x9eCaf80c1303CCA8791aFBc0AD405c8a35e8d9f1",
+    "addressInfo": "0x9eCaf80c1303CCA8791aFBc0AD405c8a35e8d9f1",
     "chainId": 9745,
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
@@ -126,7 +126,7 @@
     }
   },
   {
-    "address": "0xe561FE05C39075312Aa9Bc6af79DdaE981461359",
+    "addressInfo": "0xe561FE05C39075312Aa9Bc6af79DdaE981461359",
     "chainId": 9745,
     "name": "wrsETH",
     "symbol": "wrsETH",
@@ -138,7 +138,7 @@
     }
   },
   {
-    "address": "0xC4374775489CB9C56003BF2C9b12495fC64F0771",
+    "addressInfo": "0xC4374775489CB9C56003BF2C9b12495fC64F0771",
     "chainId": 9745,
     "name": "Syrup USDT",
     "symbol": "syrupUSDT",
@@ -149,7 +149,7 @@
     }
   },
   {
-    "address": "0xca632FA58397391C750c13F935DAA61AbBe0BaA6",
+    "addressInfo": "0xca632FA58397391C750c13F935DAA61AbBe0BaA6",
     "chainId": 9745,
     "name": "EUL",
     "symbol": "EUL",
@@ -158,7 +158,7 @@
     "metadata": {}
   },
   {
-    "address": "0xe2011F2bF6556863c3bacE991Efc8DaC26CD84c2",
+    "addressInfo": "0xe2011F2bF6556863c3bacE991Efc8DaC26CD84c2",
     "chainId": 9745,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -167,7 +167,7 @@
     "metadata": {}
   },
   {
-    "address": "0x6eAf19b2FC24552925dB245F9Ff613157a7dbb4C",
+    "addressInfo": "0x6eAf19b2FC24552925dB245F9Ff613157a7dbb4C",
     "chainId": 9745,
     "decimals": 6,
     "logoURI": "/tokens/146/xusd.svg",
@@ -179,7 +179,7 @@
     }
   },
   {
-    "address": "0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
+    "addressInfo": "0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
@@ -188,7 +188,7 @@
     "metadata": {}
   },
   {
-    "address": "0x2a52B289bA68bBd02676640aA9F605700c9e5699",
+    "addressInfo": "0x2a52B289bA68bBd02676640aA9F605700c9e5699",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
@@ -199,7 +199,7 @@
     }
   },
   {
-    "address": "0x35533f54740F1F1aA4179E57bA37039dfa16868B",
+    "addressInfo": "0x35533f54740F1F1aA4179E57bA37039dfa16868B",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
@@ -210,7 +210,7 @@
     }
   },
   {
-    "address": "0x93B544c330F60A2aa05ceD87aEEffB8D38FD8c9a",
+    "addressInfo": "0x93B544c330F60A2aa05ceD87aEEffB8D38FD8c9a",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
@@ -222,7 +222,7 @@
     }
   },
   {
-    "address": "0x02FCC4989B4C9D435b7ceD3fE1Ba4CF77BBb5Dd8",
+    "addressInfo": "0x02FCC4989B4C9D435b7ceD3fE1Ba4CF77BBb5Dd8",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33669/large/sUSDe-Symbol-Color.png?1716307680",
@@ -234,7 +234,7 @@
     }
   },
   {
-    "address": "0x8dFb9A39dFab16bFFE77f15544B5bf03e377e419",
+    "addressInfo": "0x8dFb9A39dFab16bFFE77f15544B5bf03e377e419",
     "chainId": 9745,
     "decimals": 6,
     "logoURI": "https://assets.coingecko.com/coins/images/54658/standard/SyrupUSDCO.png?1748850129",
@@ -246,7 +246,7 @@
     }
   },
   {
-    "address": "0xD516188daf64EFa04a8d60872F891f2cC811A561",
+    "addressInfo": "0xD516188daf64EFa04a8d60872F891f2cC811A561",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
@@ -258,7 +258,7 @@
     }
   },
   {
-    "address": "0xedac81b27790e0728f54dEa3B7718e5437E85353",
+    "addressInfo": "0xedac81b27790e0728f54dEa3B7718e5437E85353",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "address": "0x29AD7fE4516909b9e498B5a65339e54791293234",
+    "addressInfo": "0x29AD7fE4516909b9e498B5a65339e54791293234",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/67504/large/metronome_msusd.png?1753015705",
@@ -279,7 +279,7 @@
     "metadata": {}
   },
   {
-    "address": "0x7884A8457f0E63e82C89A87fE48E8Ba8223DB069",
+    "addressInfo": "0x7884A8457f0E63e82C89A87fE48E8Ba8223DB069",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52847/large/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
@@ -290,7 +290,7 @@
     }
   },
   {
-    "address": "0x4ac60586C3e245fF5593cf99241395bf42509274",
+    "addressInfo": "0x4ac60586C3e245fF5593cf99241395bf42509274",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/39494/large/deUSD_Logo_%281%29.png?1723689002",
@@ -299,7 +299,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5f264836CE02496CcF55D7F9AA5Cb34e34319DB5",
+    "addressInfo": "0x5f264836CE02496CcF55D7F9AA5Cb34e34319DB5",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/1/fxsave.svg",
@@ -310,7 +310,7 @@
     }
   },
   {
-    "address": "0x616185600989Bf8339b58aC9e539d49536598343",
+    "addressInfo": "0x616185600989Bf8339b58aC9e539d49536598343",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/splUSD.svg",
@@ -321,7 +321,7 @@
     }
   },
   {
-    "address": "0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
+    "addressInfo": "0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/plUSD.svg",
@@ -330,7 +330,7 @@
     "metadata": {}
   },
   {
-    "address": "0xC8A8DF9B210243c55D31c73090F06787aD0A1Bf6",
+    "addressInfo": "0xC8A8DF9B210243c55D31c73090F06787aD0A1Bf6",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/syzusd.svg",
@@ -341,7 +341,7 @@
     }
   },
   {
-    "address": "0x6695c0f8706C5ACe3Bdf8995073179cCA47926dc",
+    "addressInfo": "0x6695c0f8706C5ACe3Bdf8995073179cCA47926dc",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/yzusd.svg",
@@ -350,7 +350,7 @@
     "metadata": {}
   },
   {
-    "address": "0xEbFC8C2Fe73C431Ef2A371AeA9132110aaB50DCa",
+    "addressInfo": "0xEbFC8C2Fe73C431Ef2A371AeA9132110aaB50DCa",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/yzpp.svg",
@@ -361,7 +361,7 @@
     }
   },
   {
-    "address": "0x4809010926aec940b550D34a46A52739f996D75D",
+    "addressInfo": "0x4809010926aec940b550D34a46A52739f996D75D",
     "chainId": 9745,
     "decimals": 18,
     "name": "Wrapped Savings rUSD",
@@ -373,7 +373,7 @@
     }
   },
   {
-    "address": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "addressInfo": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
     "chainId": 9745,
     "decimals": 18,
     "name": "YieldFi yUSD",
@@ -384,7 +384,7 @@
     }
   },
   {
-    "address": "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
+    "addressInfo": "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/1/mhyper.svg",
@@ -395,7 +395,7 @@
     }
   },
   {
-    "address": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
+    "addressInfo": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
     "chainId": 9745,
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
@@ -406,7 +406,7 @@
     }
   },
   {
-    "address": "0x48F119b3fCA8244274531f2e06B74AC4B1F5fe58",
+    "addressInfo": "0x48F119b3fCA8244274531f2e06B74AC4B1F5fe58",
     "chainId": 9745,
     "decimals": 6,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
@@ -418,7 +418,7 @@
     }
   },
   {
-    "address": "0xFFaF49f320b8Ae1Bb9Ea596197040077a3666105",
+    "addressInfo": "0xFFaF49f320b8Ae1Bb9Ea596197040077a3666105",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
@@ -430,7 +430,7 @@
     }
   },
   {
-    "address": "0xceA23aB8FdE0b90e4D08EB68e8876E43933721D2",
+    "addressInfo": "0xceA23aB8FdE0b90e4D08EB68e8876E43933721D2",
     "chainId": 9745,
     "decimals": 6,
     "logoURI": "/tokens/1/mhyper.svg",
@@ -442,7 +442,7 @@
     }
   },
   {
-    "address": "0xA6C55E31154d39bb0Aa3CA2FF9F7665BDA4e47FC",
+    "addressInfo": "0xA6C55E31154d39bb0Aa3CA2FF9F7665BDA4e47FC",
     "chainId": 9745,
     "decimals": 18,
     "logoURI": "/tokens/9745/splUSD.svg",
@@ -451,6 +451,45 @@
     "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x9d0676ec013cb50b7bf9b291c22b618e9fe86832"
+    }
+  },
+  {
+    "addressInfo": "0xFFc953FEB92768E633a2530EF0a85F6334e1f7C6",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-USDe-15JAN2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2139f45Ce853BBa998eC8D17d294d422b6FA4a6e",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-sUSDE-15JAN2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x25835DdAC2CA6e9806c7244e9a19924641e247DF",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-USDai-19MAR2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xF4F447E6AFa04c9D11Ef0e2fC0d7f19C24Ee55de",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/128x128/38249.png",
+    "name": "YieldFi vyUSD",
+    "symbol": "vyUSD",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "aba6b15d-8554-4b9b-9489-88b8d2035fc9"
     }
   }
 ]
