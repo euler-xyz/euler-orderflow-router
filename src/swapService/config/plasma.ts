@@ -1,10 +1,15 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
   StrategyBalmySDK,
+  StrategyElixir,
   StrategyMidas,
   StrategyPendleLP,
+  StrategyRedirectDepositWrapper,
   StrategyRepayWrapper,
 } from "../strategies"
+
+const ELIXIR_USDT_VAULT = "0x3799251bD81925cfcCF2992F10Af27A4e62Bf3F7"
+const SDEUSD_PLASMA = "0x7884A8457f0E63e82C89A87fE48E8Ba8223DB069"
 
 const plasmaRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -13,6 +18,18 @@ const plasmaRoutingConfig: ChainRoutingConfig = [
     match: {
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
+    },
+  },
+  {
+    strategy: StrategyRedirectDepositWrapper.name(),
+    match: {
+      repayVaults: [ELIXIR_USDT_VAULT],
+    },
+  },
+  {
+    strategy: StrategyElixir.name(),
+    match: {
+      tokensInOrOut: [SDEUSD_PLASMA],
     },
   },
   {

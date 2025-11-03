@@ -41,6 +41,12 @@ const defaultConfig: {
       asset: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       assetDustEVault: "0x2343b4bCB96EC35D8653Fb154461fc673CB20a7e",
     },
+    {
+      chainId: 9745,
+      vault: "0x3799251bD81925cfcCF2992F10Af27A4e62Bf3F7",
+      asset: "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      assetDustEVault: "0x9F562699511351bA3d0cf3d0DF1502e776517ef3",
+    },
   ],
 }
 
