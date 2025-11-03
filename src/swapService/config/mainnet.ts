@@ -35,6 +35,8 @@ const SRUSDE_MAINNET = "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003"
 const JRUSDE_MAINNET = "0xC58D044404d8B14e953C115E67823784dEA53d8F"
 const PT_SRUSDE_MAINNET = "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c"
 const PT_JRUSDE_MAINNET = "0x53F3373F0D811902405f91eB0d5cc3957887220D"
+const MHYPER_USDC_VAULT_MAINNET = "0x8aFF4fe319c30475D27eC623D7d44bD5eCFe9616"
+const MHYPER_USDT_VAULT_MAINNET = "0xFa827C231062FA549143dF3C1b3584a016642630"
 
 const mainnetRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -101,6 +103,12 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   {
     strategy: StrategyMidas.name(),
     match: {},
+  },
+  {
+    strategy: StrategyRedirectDepositWrapper.name(),
+    match: {
+      repayVaults: [MHYPER_USDC_VAULT_MAINNET, MHYPER_USDT_VAULT_MAINNET],
+    },
   },
   // DEFAULTS
   {
