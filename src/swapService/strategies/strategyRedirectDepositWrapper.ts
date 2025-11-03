@@ -47,6 +47,18 @@ const defaultConfig: {
       asset: "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
       assetDustEVault: "0x9F562699511351bA3d0cf3d0DF1502e776517ef3",
     },
+    {
+      chainId: 9745,
+      vault: "0xF90Cf999dE728A582e154F926876b70e93a747B7",
+      asset: "0x29AD7fE4516909b9e498B5a65339e54791293234",
+      assetDustEVault: "0xee9f40cAdf545EcCFEAA55f5AEC9ccd12c17D00C",
+    },
+    {
+      chainId: 9745,
+      vault: "0x27934d4879fc28a74703726eDae15F757E45A48a",
+      asset: "0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
+      assetDustEVault: "0x27975E0b4E14506c2794Aace29E63F52a0a4f3C8",
+    },
   ],
 }
 
