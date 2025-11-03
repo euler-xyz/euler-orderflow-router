@@ -452,5 +452,44 @@
       "isPendlePT": true,
       "pendleMarket": "0x9d0676ec013cb50b7bf9b291c22b618e9fe86832"
     }
+  },
+  {
+    "addressInfo": "0xFFc953FEB92768E633a2530EF0a85F6334e1f7C6",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-USDe-15JAN2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x2139f45Ce853BBa998eC8D17d294d422b6FA4a6e",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-sUSDE-15JAN2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0x25835DdAC2CA6e9806c7244e9a19924641e247DF",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
+    "name": "Pendle Market Wrapped",
+    "symbol": "WLP-USDai-19MAR2026",
+    "meta": {}
+  },
+  {
+    "addressInfo": "0xF4F447E6AFa04c9D11Ef0e2fC0d7f19C24Ee55de",
+    "chainId": 9745,
+    "decimals": 18,
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/128x128/38249.png",
+    "name": "YieldFi vyUSD",
+    "symbol": "vyUSD",
+    "meta": {
+      "provider": "DEFILLAMA",
+      "poolId": "aba6b15d-8554-4b9b-9489-88b8d2035fc9"
+    }
   }
 ]

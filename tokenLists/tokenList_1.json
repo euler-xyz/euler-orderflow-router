@@ -2810,5 +2810,41 @@
       "isPendlePT": true,
       "pendleMarket": "0x233062c1de76a38a4f41ab7c32e7bdb80a1dfc02"
     }
+  },
+  {
+    "addressInfo": "0x9a34eB848C06d438d8747060A383dd13cFf33317",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x9a34eB848C06d438d8747060A383dd13cFf33317",
+    "name": "PT Midas mEDGE 29JAN2026",
+    "symbol": "PT-mEDGE-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xaf5669e4ed9a999667cd2b810878022cf54866d1"
+    }
+  },
+  {
+    "addressInfo": "0x2c543181871718C05bB191B8CE8F2A6538D72762",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x2c543181871718C05bB191B8CE8F2A6538D72762",
+    "name": "PT Midas MEV 29JAN2026",
+    "symbol": "PT-mMEV-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xfe8acf962f9a67d67b858819acee296dfda878dd"
+    }
+  },
+  {
+    "addressInfo": "0x41d49208a7E61EEd06b3504262C54E7C5fF04bFc",
+    "chainId": 1,
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/1/0x41d49208a7E61EEd06b3504262C54E7C5fF04bFc",
+    "name": "PT Bitcoin MEV Capital 25DEC2025",
+    "symbol": "PT-mevBTC-25DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xb1f73a26c8992fc6e6f7a0788e6e7dfb7a0a8f90"
+    }
   }
 ]
