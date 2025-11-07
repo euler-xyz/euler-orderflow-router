@@ -132,6 +132,16 @@ const defaultConfig: Config = {
         paymentTokenSweepVault: "0x598513C77236Bd5821CCC7bc3E3a585F3FeC9fb1", // eWBTC-1 escrow
         priceOne: 100000000n,
       },
+      mAPOLLO: {
+        tokenContract: "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
+        redemptionInstantFeeBps: 50n,
+        depositorContract: "0xc21511EDd1E6eCdc36e8aD4c82117033e50D5921",
+        redeemerContract: "0x5aeA6D35ED7B3B7aE78694B7da2Ee880756Af5C0",
+        oracleContract: "0x84303e5568C7B167fa4fEBc6253CDdfe12b7Ee4B",
+        paymentToken: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+        paymentTokenSweepVault: "0xb93d4928f39fbcd6c89a7dfbf0a867e6344561be", // eWBTC-1 escrow
+        priceOne: 100000000n,
+      },
     },
 
     [base.id]: {
