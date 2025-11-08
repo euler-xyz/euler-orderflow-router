@@ -10,6 +10,7 @@ import { StrategyPendleCrossChainPT } from "./strategyPendleCrossChainPT"
 import { StrategyPendleLP } from "./strategyPendleLP"
 import { StrategyRedirectDepositWrapper } from "./strategyRedirectDepositWrapper"
 import { StrategyRepayWrapper } from "./strategyRepayWrapper"
+import { StrategyStrata } from "./strategyStrata"
 
 export {
   StrategyCombinedUniswap,
@@ -24,6 +25,7 @@ export {
   StrategyElixir,
   StrategyPendleCrossChainPT,
   StrategyPendleLP,
+  StrategyStrata,
 }
 
 export const strategies = {
@@ -39,4 +41,5 @@ export const strategies = {
   [StrategyElixir.name()]: StrategyElixir,
   [StrategyPendleCrossChainPT.name()]: StrategyPendleCrossChainPT,
   [StrategyPendleLP.name()]: StrategyPendleLP,
+  [StrategyStrata.name()]: StrategyStrata,
 }

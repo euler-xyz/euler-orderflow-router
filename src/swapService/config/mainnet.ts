@@ -8,6 +8,7 @@ import {
   StrategyMidas,
   StrategyRedirectDepositWrapper,
   StrategyRepayWrapper,
+  StrategyStrata,
 } from "../strategies"
 
 const SUSDS_MAINNET = "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
@@ -31,8 +32,6 @@ const PUSDE_MAINNET = "0xA62B204099277762d1669d283732dCc1B3AA96CE"
 const LSTRZR_MAINNET = "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB"
 const STCUSD_MAINNET = "0x88887bE419578051FF9F4eb6C858A951921D8888"
 
-const SRUSDE_MAINNET = "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003"
-const JRUSDE_MAINNET = "0xC58D044404d8B14e953C115E67823784dEA53d8F"
 const PT_SRUSDE_MAINNET = "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c"
 const PT_JRUSDE_MAINNET = "0x53F3373F0D811902405f91eB0d5cc3957887220D"
 const MHYPER_USDC_VAULT_MAINNET = "0x8aFF4fe319c30475D27eC623D7d44bD5eCFe9616"
@@ -57,6 +56,10 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     match: { tokensInOrOut: [CUSDOUSDC_CURVELP_MAINNET] },
   },
   {
+    strategy: StrategyStrata.name(),
+    match: {},
+  },
+  {
     strategy: StrategyERC4626Wrapper.name(),
     match: {
       tokensInOrOut: [
@@ -67,8 +70,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
         PUSDE_MAINNET,
         LSTRZR_MAINNET,
         STCUSD_MAINNET,
-        SRUSDE_MAINNET,
-        JRUSDE_MAINNET,
         // EUSDE_MAINNET,
       ],
       excludeTokensInOrOut: [
