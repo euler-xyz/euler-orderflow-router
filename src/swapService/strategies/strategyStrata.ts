@@ -487,18 +487,18 @@ export class StrategyStrata {
         )
 
         // sweep intermediate asset, just in case
-        // const sweepMulticallItem = encodeDepositMulticallItem(
-        //   vaultData.asset,
-        //   vaultData.vault,
-        //   0n,
-        //   vaultData.assetDustEVault,
-        // )
+        const sweepMulticallItem = encodeDepositMulticallItem(
+          vaultData.asset,
+          vaultData.vault,
+          0n,
+          vaultData.assetDustEVault,
+        )
 
         // repay or exact out will return unused input, which is the intermediate asset
         const multicallItems = [
           withdrawMulticallItem,
           ...innerQuote.swap.multicallItems,
-          // sweepMulticallItem,
+          sweepMulticallItem,
         ]
 
         const swap = buildApiResponseSwap(swapParams.from, multicallItems)
