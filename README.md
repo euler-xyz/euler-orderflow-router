@@ -19,7 +19,7 @@ pnpm run doppler:syncprd # production
 ## Running
 
 Dev server
-```
+``` 
 pnpm run dev
 ```
 
