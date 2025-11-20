@@ -54,7 +54,6 @@ const loadTokenlistsFromFiles = () => {
 
   Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
-      if (chainId === "1") return
       const response = await fetch(`${tokenlistURL}?chainId=${chainId}`)
       if (!response.ok) {
         throw new Error(`Failed fetching tokenlist for chain ${chainId}`)
