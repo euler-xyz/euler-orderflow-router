@@ -45,6 +45,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [130]: "unichain",
   [59144]: "linea",
   [9745]: "plasma",
+  [143]: "monad",
 }
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {

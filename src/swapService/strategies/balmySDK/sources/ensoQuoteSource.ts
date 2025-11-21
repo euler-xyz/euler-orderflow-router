@@ -31,6 +31,7 @@ const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
       80094,
       130,
       9745,
+      143, // monad
     ],
     swapAndTransfer: false,
     buyOrders: false,

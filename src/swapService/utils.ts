@@ -115,6 +115,14 @@ export function matchParams(
       )
     })
   }
+  if (match.excludeTrades) {
+    return !match.excludeTrades.some((trade) => {
+      return (
+        isAddressEqual(trade.tokenIn, swapParams.tokenIn.address) &&
+        isAddressEqual(trade.tokenOut, swapParams.tokenOut.address)
+      )
+    })
+  }
 
   return true
 }

@@ -37,6 +37,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   80094: "berachain",
   130: "unichain",
   9745: "plasma",
+  143: "monad",
 }
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {

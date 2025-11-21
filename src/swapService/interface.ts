@@ -79,6 +79,10 @@ export interface StrategyMatchConfig {
     tokenIn: Address
     tokenOut: Address
   }[]
+  excludeTrades?: {
+    tokenIn: Address
+    tokenOut: Address
+  }[]
 }
 
 export interface RoutingItem {

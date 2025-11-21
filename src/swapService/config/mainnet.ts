@@ -103,7 +103,15 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   },
   {
     strategy: StrategyMidas.name(),
-    match: {},
+    match: {
+      excludeTrades: [
+        {
+          // TODO detect PT pairs dynamically
+          tokenIn: "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8", // PT-mAPOLLO-20NOV2025
+          tokenOut: "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05", // mAPOLLO
+        },
+      ],
+    },
   },
   {
     strategy: StrategyRedirectDepositWrapper.name(),

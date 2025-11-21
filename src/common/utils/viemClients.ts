@@ -164,6 +164,7 @@ export const RPC_URLS: Record<number, string> = {
   [1923]: process.env.RPC_URL_130 || "", //swell
   [tac.id]: process.env.RPC_URL_239 || "",
   [plasma.id]: process.env.RPC_URL_9745 || "",
+  // [143]: process.env.RPC_URL_143 || "", // monad
 } as const
 
 export const createHttp = (chainId: number) =>
