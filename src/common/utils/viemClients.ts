@@ -11,27 +11,6 @@ import {
 } from "viem"
 import * as chains from "viem/chains"
 
-export const bartio = defineChain({
-  id: 8008_4,
-  name: "Bartio Testnet",
-  nativeCurrency: {
-    decimals: 18,
-    name: "Bera",
-    symbol: "BERA",
-  },
-  blockExplorers: {
-    default: {
-      name: "Bartio",
-      url: "https://bartio.beratrail.io/",
-    },
-  },
-  rpcUrls: {
-    default: {
-      http: ["https://bartio.rpc.berachain.com/"],
-    },
-  },
-})
-
 export const unichain = defineChain({
   id: 130,
   name: "Unichain",
