@@ -142,6 +142,7 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
       config: { timeout },
       customData: { quoteId },
     },
+    config,
   }: BuildTxParams<MagpieConfig, MagpieData>): Promise<SourceQuoteTransaction> {
     const transactionQueryParams = {
       quoteId,
@@ -151,9 +152,14 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
       skipNulls: true,
       arrayFormat: "comma",
     })
+    const headers: Record<string, string> = {}
+    if (config.apiKey) {
+      headers["apikey"] = config.apiKey
+    }
     const transactionUrl = `https://api.magpiefi.xyz/aggregator/transaction?${transactionQueryString}`
     const transactionResponse = await fetchService.fetch(transactionUrl, {
       timeout,
+      headers,
     })
     if (!transactionResponse.ok) {
       failed(

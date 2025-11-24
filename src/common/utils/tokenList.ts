@@ -56,7 +56,13 @@ const loadTokenlistsFromFiles = () => {
     Object.keys(RPC_URLS).map(async (chainId) => {
       const response = await fetch(`${tokenlistURL}?chainId=${chainId}`)
       if (!response.ok) {
-        throw new Error(`Failed fetching tokenlist for chain ${chainId}`)
+        cache[Number(chainId)] = []
+        return
+      }
+      const res = await response.json()
+      if (!res.success) {
+        cache[Number(chainId)] = []
+        return
       }
       cache[Number(chainId)] = (await response.json()) as TokenListItem[]
     }),
