@@ -95,7 +95,6 @@ export class CustomEnsoQuoteSource
     }
 
     const response = await fetchService.fetch(url, { timeout, headers })
-    console.log("response: ", response)
 
     if (!response.ok) {
       failed(ENSO_METADATA, chainId, sellToken, buyToken, await response.text())
