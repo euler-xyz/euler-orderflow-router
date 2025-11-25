@@ -8,7 +8,7 @@ Install npm packages
 ```
 pnpm i
 ```
- 
+
 Copy `.env.template` to `.env` and set configuration. Alternatively use:
 ```
 pnpm run doppler:syncdev # local development
