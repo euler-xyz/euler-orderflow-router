@@ -64,7 +64,7 @@ const loadTokenlistsFromFiles = () => {
         cache[Number(chainId)] = []
         return
       }
-      cache[Number(chainId)] = (await response.json()) as TokenListItem[]
+      cache[Number(chainId)] = res as TokenListItem[]
     }),
   )
 
