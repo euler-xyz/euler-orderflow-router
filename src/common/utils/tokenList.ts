@@ -69,7 +69,10 @@ const loadTokenlistsFromFiles = () => {
     }),
   )
 
-  // setTimeout(buildCache, Number(process.env.TOKENLIST_CACHE_TIMEOUT_SECONDS || 10) * 1000)
+  setTimeout(
+    buildCache,
+    Number(process.env.TOKENLIST_CACHE_TIMEOUT_SECONDS || 5 * 60) * 1000,
+  )
 })()
 
 export default function getTokenList(chainId: number): TokenListItem[] {
