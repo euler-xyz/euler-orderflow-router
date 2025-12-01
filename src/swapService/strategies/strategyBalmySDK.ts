@@ -95,6 +95,8 @@ export class StrategyBalmySDK {
       config.sourcesFilter.includeSources.push(
         ...allPendleAggregators.map((aggregator) => `pendle-${aggregator}`),
       )
+      config.sourcesFilter.includeSources =
+        config.sourcesFilter.includeSources.filter((s) => s !== "pendle")
     }
 
     this.config = { ...defaultConfig, ...(config || {}) }
@@ -127,9 +129,9 @@ export class StrategyBalmySDK {
             "li-fi": {
               apiKey: String(process.env.LIFI_API_KEY),
             },
-            pendle: {
-              apiKey: String(process.env.PENDLE_API_KEY),
-            },
+            // pendle: {
+            //   apiKey: String(process.env.PENDLE_API_KEY),
+            // },
             "open-ocean": {
               apiKey: String(process.env.OPENOCEAN_API_KEY),
             },
@@ -195,6 +197,10 @@ export class StrategyBalmySDK {
       (this.sdk.quoteService.supportedChains().includes(swapParams.chainId) ||
         swapParams.chainId === 1923) // TODO fix!
     )
+  }
+
+  async providers(): Promise<string[]> {
+    return this.config.sourcesFilter?.includeSources || []
   }
 
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {

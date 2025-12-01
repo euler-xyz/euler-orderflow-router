@@ -273,6 +273,10 @@ export class StrategyERC4626Wrapper {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyERC4626Wrapper.name(),

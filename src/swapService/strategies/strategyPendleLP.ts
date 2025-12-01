@@ -51,6 +51,10 @@ export class StrategyPendleLP {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return [] // relies on providers of underlying strategies
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyPendleLP.name(),

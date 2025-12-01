@@ -27,6 +27,10 @@ export class StrategyRepayWrapper {
     return swapParams.swapperMode === SwapperMode.EXACT_IN && swapParams.isRepay
   }
 
+  async providers(): Promise<string[]> {
+    return [] // relies on providers of underlying strategies
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyRepayWrapper.name(),

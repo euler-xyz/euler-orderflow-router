@@ -12,12 +12,12 @@ import { strategies } from "./strategies/index"
 import type { StrategyResult, SwapParams } from "./types"
 import { ApiError, addInOutDeposits } from "./utils"
 
-function loadPipeline(swapParams: SwapParams) {
+function loadPipeline(chainId: number, routingOverride?: ChainRoutingConfig) {
   let routing: ChainRoutingConfig
-  if (swapParams.routingOverride) {
-    routing = swapParams.routingOverride
+  if (routingOverride) {
+    routing = routingOverride
   } else {
-    routing = getRoutingConfig(swapParams.chainId)
+    routing = getRoutingConfig(chainId)
     if (!routing)
       throw new ApiError(
         StatusCodes.NOT_FOUND,
@@ -36,7 +36,7 @@ function loadPipeline(swapParams: SwapParams) {
 export async function runPipeline(
   swapParams: SwapParams,
 ): Promise<SwapApiResponse[]> {
-  const pipeline = loadPipeline(swapParams)
+  const pipeline = loadPipeline(swapParams.chainId, swapParams.routingOverride)
 
   const allResults: StrategyResult[] = []
   for (const strategy of pipeline) {
@@ -103,4 +103,16 @@ export async function findSwaps(swapParams: SwapParams) {
   })
 
   return quotes
+}
+
+export async function reflectProviders(chainId: number) {
+  const pipeline = loadPipeline(chainId)
+
+  return [
+    ...new Set(
+      (
+        await Promise.all(pipeline.map((strategy) => strategy.providers()))
+      ).flat(),
+    ),
+  ]
 }

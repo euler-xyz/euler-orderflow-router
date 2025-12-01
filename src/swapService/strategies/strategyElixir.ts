@@ -78,6 +78,10 @@ export class StrategyElixir {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyElixir.name(),
