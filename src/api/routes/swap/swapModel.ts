@@ -8,6 +8,7 @@ extendZodWithOpenApi(z)
 export type Meta = z.infer<typeof metaSchema>
 export type SwapResponseSingle = z.infer<typeof swapResponseSchemaSingle>
 export type SwapResponse = z.infer<typeof swapResponseSchema>
+export type ProvidersResponse = z.infer<typeof providersResponseSchema>
 
 const addressSchema = z
   .string()
@@ -343,4 +344,26 @@ const swapResponseSchemaSingle = z.object({
 
 const swapResponseSchema = z.array(swapResponseSchemaSingle)
 
-export { getSwapSchema, swapResponseSchemaSingle, swapResponseSchema }
+const getProvidersSchema = z.object({
+  query: z.object({
+    chainId: z
+      .string()
+      .transform(Number)
+      .pipe(z.number().int().positive())
+      .openapi({ example: "1", param: { description: "Chain id" } }),
+  }),
+})
+
+const providersResponseSchema = z
+  .array(z.string())
+  .openapi({
+    description: "Array of providers for use with `swapWithProvider` endpoint",
+  })
+
+export {
+  getSwapSchema,
+  swapResponseSchemaSingle,
+  swapResponseSchema,
+  getProvidersSchema,
+  providersResponseSchema,
+}
