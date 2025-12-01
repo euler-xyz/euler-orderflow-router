@@ -47,6 +47,10 @@ export class StrategyConnect2 {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return [] // TODO
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyConnect2.name(),

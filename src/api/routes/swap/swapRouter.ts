@@ -9,7 +9,7 @@ import {
   validateRequest,
 } from "@/common/utils/httpHandlers"
 import { log, logProd, logRouteTime } from "@/common/utils/logs"
-import { findSwaps } from "@/swapService/runner"
+import { findSwaps, reflectProviders } from "@/swapService/runner"
 import type { SwapParams } from "@/swapService/types"
 import {
   ApiError,
@@ -21,9 +21,12 @@ import { StatusCodes } from "http-status-codes"
 import { InvalidAddressError } from "viem"
 import { z } from "zod"
 import {
+  type ProvidersResponse,
   type SwapResponse,
   type SwapResponseSingle,
+  getProvidersSchema,
   getSwapSchema,
+  providersResponseSchema,
   swapResponseSchema,
   swapResponseSchemaSingle,
 } from "./swapModel"
@@ -48,6 +51,35 @@ swapRegistry.registerPath({
   request: { query: getSwapSchema.shape.query },
   responses: createApiResponse(swapResponseSchema, "Success"),
 })
+
+swapRegistry.register("Providers", providersResponseSchema)
+swapRegistry.registerPath({
+  method: "get",
+  path: "/providers",
+  tags: ["Get providers available for the queried chain"],
+  request: { query: getProvidersSchema.shape.query },
+  responses: createApiResponse(providersResponseSchema, "Success"),
+})
+
+swapRouter.get(
+  "/providers",
+  validateRequest(getProvidersSchema),
+  async (req: Request, res: Response) => {
+    try {
+      const {
+        query: { chainId },
+      } = getProvidersSchema.parse(req)
+      const providers = await reflectProviders(chainId)
+
+      return handleServiceResponse(
+        ServiceResponse.success<ProvidersResponse>(providers),
+        res,
+      )
+    } catch (error) {
+      return handleServiceResponse(createFailureResponse(req, error), res)
+    }
+  },
+)
 
 swapRouter.get(
   "/swap",

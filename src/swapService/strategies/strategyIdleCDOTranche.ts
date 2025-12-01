@@ -78,6 +78,10 @@ export class StrategyIdleCDOTranche {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyIdleCDOTranche.name(),
