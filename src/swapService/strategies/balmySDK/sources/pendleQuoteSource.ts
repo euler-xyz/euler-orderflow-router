@@ -33,7 +33,7 @@ type CustomOrAPIKeyConfig =
   | { customUrl: string; apiKey?: undefined }
   | { customUrl?: undefined; apiKey: string }
 type PendleConfig = CustomOrAPIKeyConfig
-type PendleData = { tx: SourceQuoteTransaction }
+type PendleData = { tx: SourceQuoteTransaction; pendleAggregator: string }
 
 export class CustomPendleQuoteSource
   implements IQuoteSource<PendleSupport, PendleConfig, PendleData>
@@ -64,7 +64,7 @@ export class CustomPendleQuoteSource
   async quote(
     params: QuoteParams<PendleSupport, PendleConfig>,
   ): Promise<SourceQuoteResponse<PendleData>> {
-    const { dstAmount, to, data } = await this.getQuote(params)
+    const { dstAmount, to, data, aggregator } = await this.getQuote(params)
     const quote = {
       sellAmount: params.request.order.sellAmount,
       buyAmount: BigInt(dstAmount),
@@ -74,6 +74,7 @@ export class CustomPendleQuoteSource
           to,
           calldata: data,
         },
+        pendleAggregator: aggregator,
       },
     }
 
@@ -166,14 +167,14 @@ export class CustomPendleQuoteSource
 
       failed(this.getMetadata(), chainId, sellToken, buyToken, msg)
     }
-
     const { routes } = await response.json()
 
     const dstAmount = routes[0].outputs[0].amount
     const to = routes[0].tx.to
     const data = routes[0].tx.data
+    const aggregator = routes[0].data.aggregatorType
 
-    return { dstAmount, to, data }
+    return { dstAmount, to, data, aggregator }
   }
 
   isConfigAndContextValidForQuoting(

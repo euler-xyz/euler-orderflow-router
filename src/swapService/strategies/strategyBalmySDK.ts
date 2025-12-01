@@ -548,7 +548,10 @@ export class StrategyBalmySDK {
       amountOut: sdkQuote.buyAmount.amount,
       amountOutMin: sdkQuote.minBuyAmount.amount,
       data,
-      protocol: sdkQuote.source.name,
+      protocol:
+        sdkQuote.customData.pendleAggregator === "VOID"
+          ? "Pendle"
+          : sdkQuote.source.name,
       shouldTransferToReceiver,
       allowanceTarget,
     }
