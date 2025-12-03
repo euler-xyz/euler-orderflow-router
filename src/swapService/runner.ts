@@ -12,7 +12,12 @@ import { strategies } from "./strategies/index"
 import type { StrategyResult, SwapParams } from "./types"
 import { ApiError, addInOutDeposits } from "./utils"
 
-function loadPipeline(chainId: number, routingOverride?: ChainRoutingConfig) {
+// provider is needed in construction by balmy strategy which doesn't filter providers during the quote
+function loadPipeline(
+  chainId: number,
+  routingOverride?: ChainRoutingConfig,
+  provider?: string,
+) {
   let routing: ChainRoutingConfig
   if (routingOverride) {
     routing = routingOverride
@@ -29,6 +34,7 @@ function loadPipeline(chainId: number, routingOverride?: ChainRoutingConfig) {
     return new strategies[routingItem.strategy](
       routingItem.match,
       routingItem.config,
+      provider,
     )
   })
 }
@@ -36,7 +42,11 @@ function loadPipeline(chainId: number, routingOverride?: ChainRoutingConfig) {
 export async function runPipeline(
   swapParams: SwapParams,
 ): Promise<SwapApiResponse[]> {
-  const pipeline = loadPipeline(swapParams.chainId, swapParams.routingOverride)
+  const pipeline = loadPipeline(
+    swapParams.chainId,
+    swapParams.routingOverride,
+    swapParams.provider,
+  )
 
   const allResults: StrategyResult[] = []
   for (const strategy of pipeline) {

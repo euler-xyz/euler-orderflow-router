@@ -128,7 +128,7 @@ const swapApiResponseSwapSchema = z.object({
     description: "Swapper contract address",
   }),
   swapperData: hexSchema.openapi({
-    description: "Already encodedd Swapper multicall payload",
+    description: "Already encoded Swapper multicall payload",
   }),
   multicallItems: z
     .array(swapApiResponseMulticallItemSchema)
@@ -284,6 +284,15 @@ const getSwapSchema = z.object({
       .openapi({
         param: { description: "Optional override of the pipeline config" },
       }),
+    provider: z
+      .string()
+      .optional()
+      .openapi({
+        param: {
+          description:
+            "Preselected provider of the quote. See `providers` endpoint",
+        },
+      }),
   }),
 })
 
@@ -354,11 +363,9 @@ const getProvidersSchema = z.object({
   }),
 })
 
-const providersResponseSchema = z
-  .array(z.string())
-  .openapi({
-    description: "Array of providers for use with `swapWithProvider` endpoint",
-  })
+const providersResponseSchema = z.array(z.string()).openapi({
+  description: "Array of providers for use with `swapWithProvider` endpoint",
+})
 
 export {
   getSwapSchema,
