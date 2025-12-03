@@ -664,6 +664,10 @@ export function isExactInRepay(swapParams: SwapParams) {
   return swapParams.swapperMode === SwapperMode.EXACT_IN && swapParams.isRepay
 }
 
+export function includesCustomProvider(swapParams: SwapParams) {
+  return !swapParams.provider || swapParams.provider === "custom"
+}
+
 export function promiseWithTimeout(fn: any, timeoutSeconds: number) {
   return Promise.race([
     fn(),
