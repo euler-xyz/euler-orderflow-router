@@ -17,6 +17,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -73,7 +74,9 @@ export class StrategyPendleLP {
           if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.exactInFromWrappedLPToAny(swapParams)
           } else {
-            result.quotes = await this.exactInFromAnyToWrappedLP(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.exactInFromAnyToWrappedLP(swapParams)
+              : []
           }
           break
         }
@@ -81,7 +84,9 @@ export class StrategyPendleLP {
           if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.targetDebtFromWrappedLPToAny(swapParams)
           } else {
-            result.quotes = await this.targetDebtFromAnyToWrappedLP(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.targetDebtFromAnyToWrappedLP(swapParams)
+              : []
           }
           break
         }

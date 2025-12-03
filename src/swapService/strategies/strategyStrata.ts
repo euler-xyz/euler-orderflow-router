@@ -95,6 +95,11 @@ export class StrategyStrata {
 
     if (!result.supports || !result.match) return result
 
+    if (this.isDirectSwap(swapParams) && !includesCustomProvider(swapParams)) {
+      result.quotes = [] // this ends the pipeline and returns empty results
+      return result
+    }
+
     try {
       switch (swapParams.swapperMode) {
         case SwapperMode.EXACT_IN: {
@@ -684,6 +689,19 @@ export class StrategyStrata {
       isAddressEqual(v.vault, vault),
     )?.asset
     return !!asset && isAddressEqual(asset, underlying)
+  }
+
+  isDirectSwap(swapParams: SwapParams) {
+    return (
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenIn.address,
+        underlying: swapParams.tokenOut.address,
+      }) ||
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenOut.address,
+        underlying: swapParams.tokenIn.address,
+      })
+    )
   }
 
   getSupportedVault(vault: Address) {
