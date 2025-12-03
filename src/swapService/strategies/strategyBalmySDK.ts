@@ -86,20 +86,37 @@ export class StrategyBalmySDK {
 
   private readonly sdk
 
-  constructor(match = {}, config?: BalmyStrategyConfig) {
+  constructor(match = {}, config?: BalmyStrategyConfig, provider?: string) {
     const allPendleAggregators = [
       ...new Set(Object.values(pendleAggregators).flat()),
     ]
 
-    if (config?.sourcesFilter?.includeSources?.includes("pendle")) {
-      config.sourcesFilter.includeSources.push(
+    let configClone = structuredClone(config)
+
+    if (configClone?.sourcesFilter?.includeSources?.includes("pendle")) {
+      configClone.sourcesFilter.includeSources.push(
         ...allPendleAggregators.map((aggregator) => `pendle-${aggregator}`),
       )
-      config.sourcesFilter.includeSources =
-        config.sourcesFilter.includeSources.filter((s) => s !== "pendle")
+      configClone.sourcesFilter.includeSources =
+        configClone.sourcesFilter.includeSources.filter((s) => s !== "pendle")
     }
 
-    this.config = { ...defaultConfig, ...(config || {}) }
+    if (provider) {
+      if (!configClone) configClone = {} as BalmyStrategyConfig
+      if (configClone.sourcesFilter?.excludeSources?.includes(provider)) {
+        configClone.sourcesFilter = { includeSources: [] }
+      } else {
+        configClone.sourcesFilter = {
+          includeSources: configClone.sourcesFilter?.includeSources
+            ? configClone.sourcesFilter.includeSources.filter(
+                (s) => s === provider,
+              )
+            : [provider],
+        }
+      }
+    }
+
+    this.config = { ...defaultConfig, ...(configClone || {}) }
     const fetchService = buildFetchService()
     const providerService = buildProviderService({
       source: {
@@ -129,9 +146,6 @@ export class StrategyBalmySDK {
             "li-fi": {
               apiKey: String(process.env.LIFI_API_KEY),
             },
-            // pendle: {
-            //   apiKey: String(process.env.PENDLE_API_KEY),
-            // },
             "open-ocean": {
               apiKey: String(process.env.OPENOCEAN_API_KEY),
             },
@@ -195,7 +209,9 @@ export class StrategyBalmySDK {
     return (
       !isExactInRepay(swapParams) &&
       (this.sdk.quoteService.supportedChains().includes(swapParams.chainId) ||
-        swapParams.chainId === 1923) // TODO fix!
+        swapParams.chainId === 1923) && // TODO fix!
+      (!this.config.sourcesFilter?.includeSources ||
+        this.config.sourcesFilter.includeSources.length > 0)
     )
   }
 

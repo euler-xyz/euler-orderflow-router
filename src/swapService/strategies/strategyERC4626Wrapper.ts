@@ -21,6 +21,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -285,6 +286,11 @@ export class StrategyERC4626Wrapper {
     }
 
     if (!result.supports || !result.match) return result
+
+    if (this.isDirectSwap(swapParams) && !includesCustomProvider(swapParams)) {
+      result.quotes = [] // this ends the pipeline and returns empty results
+      return result
+    }
 
     try {
       switch (swapParams.swapperMode) {
@@ -861,6 +867,19 @@ export class StrategyERC4626Wrapper {
     if (!supportedVault) throw new Error("Vault not supported")
 
     return supportedVault
+  }
+
+  isDirectSwap(swapParams: SwapParams) {
+    return (
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenIn.address,
+        underlying: swapParams.tokenOut.address,
+      }) ||
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenOut.address,
+        underlying: swapParams.tokenIn.address,
+      })
+    )
   }
 }
 
