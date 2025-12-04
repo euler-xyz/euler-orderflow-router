@@ -287,8 +287,12 @@ export class StrategyERC4626Wrapper {
 
     if (!result.supports || !result.match) return result
 
+    // if the swap is between a vault and it's asset, which is handled directly,
+    // only proceed if the provider is not set (all providers) or it's the "custom" provider.
+    // Otherwise return an empty result, which will end the pipeline and return 404.
+    // Without this, the client would receive duplicate internal quotes
     if (this.isDirectSwap(swapParams) && !includesCustomProvider(swapParams)) {
-      result.quotes = [] // this ends the pipeline and returns empty results
+      result.quotes = []
       return result
     }
 
