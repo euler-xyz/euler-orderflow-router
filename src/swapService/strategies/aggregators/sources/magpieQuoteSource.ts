@@ -19,6 +19,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import * as chains from "viem/chains"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.ARBITRUM.chainId]: "arbitrum",
@@ -34,10 +35,10 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.METIS_ANDROMEDA.chainId]: "metis",
   [Chains.FANTOM.chainId]: "fantom",
   [Chains.SONIC.chainId]: "sonic",
-  80094: "berachain",
-  130: "unichain",
-  9745: "plasma",
-  143: "monad",
+  [chains.berachain.id]: "berachain",
+  [chains.unichain.id]: "unichain",
+  [chains.plasma.id]: "plasma",
+  [chains.monad.id]: "monad",
 }
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {

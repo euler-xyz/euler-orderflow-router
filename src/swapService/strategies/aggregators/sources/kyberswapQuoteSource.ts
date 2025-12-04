@@ -20,6 +20,7 @@ import {
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
+import * as chains from "viem/chains"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.ARBITRUM.chainId]: "arbitrum",
@@ -42,10 +43,9 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.MANTLE.chainId]: "mantle",
   [Chains.SONIC.chainId]: "sonic",
   [Chains.ZK_SYNC_ERA.chainId]: "zksync",
-  [130]: "unichain",
-  [59144]: "linea",
-  [9745]: "plasma",
-  [143]: "monad",
+  [chains.unichain.id]: "unichain",
+  [chains.plasma.id]: "plasma",
+  [chains.monad.id]: "monad",
 }
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {

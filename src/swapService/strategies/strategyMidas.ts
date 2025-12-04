@@ -10,7 +10,7 @@ import {
   publicActions,
   stringToHex,
 } from "viem"
-import { base, mainnet } from "viem/chains"
+import { base, mainnet, plasma } from "viem/chains"
 import { SwapperMode } from "../interface"
 import type { SwapApiResponse } from "../interface"
 import { runPipeline } from "../runner"
@@ -168,7 +168,7 @@ const defaultConfig: Config = {
         priceOne: 100000000n,
       },
     },
-    [9745]: {
+    [plasma.id]: {
       //plasma
       mHYPER: {
         tokenContract: "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
