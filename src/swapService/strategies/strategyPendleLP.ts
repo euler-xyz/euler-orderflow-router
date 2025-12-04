@@ -5,7 +5,7 @@ import {
   getAddress,
   parseAbiParameters,
 } from "viem"
-import { mainnet } from "viem/chains"
+import { mainnet, plasma } from "viem/chains"
 import { type SwapApiResponse, SwapperMode } from "../interface"
 import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
@@ -24,7 +24,7 @@ import {
 
 const WRAPPER_TOOL: Record<number, Address> = {
   [mainnet.id]: getAddress("0x09cc0ccaf92382E6EcD04246329d7249113c68EB"),
-  [9745]: getAddress("0x94976c190B94C1B110Ef3Ac9f774131e8490E62d"),
+  [plasma.id]: getAddress("0x94976c190B94C1B110Ef3Ac9f774131e8490E62d"),
 }
 
 const WRAPPER_PROVIDER_NAME = "Pendle LP Wrapper"

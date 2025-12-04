@@ -19,6 +19,7 @@ import type {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/types"
 import { failed } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import * as chains from "viem/chains"
 
 // https://www.okx.com/web3/build/docs/waas/okx-waas-supported-networks
 const SUPPORTED_CHAINS = [
@@ -41,11 +42,11 @@ const SUPPORTED_CHAINS = [
   Chains.ZK_SYNC_ERA,
   Chains.SONIC,
   {
-    chainId: 130,
+    chainId: chains.unichain.id,
     name: "Unichain",
   },
   {
-    chainId: 9745,
+    chainId: chains.plasma.id,
     name: "Plasma",
   },
 ]

@@ -1,4 +1,4 @@
-import { arbitrum, avalanche, base, bsc, mainnet } from "viem/chains"
+import * as chains from "viem/chains"
 import type { RoutingConfig } from "../interface"
 import arbitrumRoutingConfig from "./arbitrum"
 import avalancheRoutingConfig from "./avalanche"
@@ -14,17 +14,17 @@ import swellRoutingConfig from "./swell"
 import unichainRoutingConfig from "./unichain"
 
 export const routingConfig: RoutingConfig = {
-  [mainnet.id]: mainnetRoutingConfig,
-  [base.id]: baseRoutingConfig,
-  [avalanche.id]: avalancheRoutingConfig,
-  [bsc.id]: bscRoutingConfig,
-  [arbitrum.id]: arbitrumRoutingConfig,
-  [1923]: swellRoutingConfig,
-  [80094]: berachainRoutingConfig,
-  [60808]: bobRoutingConfig,
-  [146]: sonicRoutingConfig,
-  [130]: unichainRoutingConfig,
-  [9745]: plasmaRoutingConfig,
+  [chains.mainnet.id]: mainnetRoutingConfig,
+  [chains.base.id]: baseRoutingConfig,
+  [chains.avalanche.id]: avalancheRoutingConfig,
+  [chains.bsc.id]: bscRoutingConfig,
+  [chains.arbitrum.id]: arbitrumRoutingConfig,
+  [chains.swellchain.id]: swellRoutingConfig,
+  [chains.berachain.id]: berachainRoutingConfig,
+  [chains.bob.id]: bobRoutingConfig,
+  [chains.sonic.id]: sonicRoutingConfig,
+  [chains.unichain.id]: unichainRoutingConfig,
+  [chains.plasma.id]: plasmaRoutingConfig,
 }
 
 export const getRoutingConfig = (chainId: number) => {

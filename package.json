@@ -44,7 +44,7 @@
     "pino-http": "10.3.0",
     "qs": "^6.13.1",
     "swagger-ui-express": "5.0.1",
-    "viem": "^2.21.53",
+    "viem": "^2.41.2",
     "zod": "3.23.8"
   },
   "lint-staged": {
