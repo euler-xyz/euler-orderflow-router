@@ -1,5 +1,5 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
-import { StrategyBalmySDK, StrategyRepayWrapper } from "../strategies"
+import { StrategyAggregators, StrategyRepayWrapper } from "../strategies"
 
 const bobRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -12,13 +12,7 @@ const bobRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: ["oku_bob_icecreamswap", "oku_bob_uniswap"],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
 ]
 

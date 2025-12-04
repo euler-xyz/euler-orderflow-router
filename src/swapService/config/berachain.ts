@@ -1,6 +1,6 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyRepayWrapper,
 } from "../strategies"
@@ -26,20 +26,7 @@ const berachainRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "oogabooga",
-          "li-fi",
-          "magpie",
-          "open-ocean",
-          "enso",
-          "pendle",
-        ],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
   // FALLBACKS
   {

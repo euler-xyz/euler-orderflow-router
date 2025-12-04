@@ -1,6 +1,6 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyElixir,
   StrategyPendleCrossChainPT,
@@ -28,7 +28,6 @@ const avalancheRoutingConfig: ChainRoutingConfig = [
   },
   {
     strategy: StrategyPendleCrossChainPT.name(),
-    match: {},
   },
   {
     strategy: StrategyERC4626Wrapper.name(),
@@ -38,24 +37,7 @@ const avalancheRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "kyberswap",
-          "paraswap",
-          "odos",
-          "1inch",
-          "li-fi",
-          "open-ocean",
-          "uniswap",
-          "oku",
-          "magpie",
-          "enso",
-        ],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
 ]
 

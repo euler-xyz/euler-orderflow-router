@@ -121,7 +121,9 @@ export async function reflectProviders(chainId: number) {
   return [
     ...new Set(
       (
-        await Promise.all(pipeline.map((strategy) => strategy.providers()))
+        await Promise.all(
+          pipeline.map((strategy) => strategy.providers(chainId)),
+        )
       ).flat(),
     ),
   ]

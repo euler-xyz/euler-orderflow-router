@@ -1,6 +1,6 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyRepayWrapper,
 } from "../strategies"
@@ -24,24 +24,7 @@ const unichainRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "kyberswap",
-          "li-fi",
-          "open-ocean",
-          "uniswap",
-          "enso",
-          "okx-dex",
-          "magpie",
-          "paraswap",
-          "odos",
-          "0x",
-        ],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
 ]
 

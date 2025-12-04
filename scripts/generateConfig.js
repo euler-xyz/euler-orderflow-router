@@ -3,7 +3,7 @@ const path = require("node:path")
 
 const PENDLE_CONFIG_PATH = path.join(
   __dirname,
-  "../src/swapService/strategies/balmySDK/sources/pendle/pendleAggregators.json",
+  "../src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json",
 )
 
 async function run() {

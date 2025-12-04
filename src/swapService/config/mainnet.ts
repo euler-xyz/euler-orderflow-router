@@ -1,6 +1,6 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyCombinedUniswap,
   StrategyCurveLPNG,
   StrategyERC4626Wrapper,
@@ -57,7 +57,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   },
   {
     strategy: StrategyStrata.name(),
-    match: {},
   },
   {
     strategy: StrategyERC4626Wrapper.name(),
@@ -80,27 +79,6 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       ],
     },
   },
-  // WUSDL with paraswap
-  {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "kyberswap",
-          "paraswap",
-          "odos",
-          "1inch",
-          "li-fi",
-          "open-ocean",
-          "magpie",
-          "okx-dex",
-        ],
-      },
-    },
-    match: {
-      tokensInOrOut: [WUSDL_MAINNET],
-    },
-  },
   {
     strategy: StrategyMidas.name(),
     match: {
@@ -121,25 +99,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "kyberswap",
-          "paraswap",
-          "odos",
-          "1inch",
-          "li-fi",
-          "open-ocean",
-          "magpie",
-          "enso",
-          "pendle",
-          "okx-dex",
-          "0x",
-          "spectra",
-        ],
-      },
-    },
+    strategy: StrategyAggregators.name(),
     match: {
       swapperModes: [SwapperMode.EXACT_IN],
     },
@@ -161,24 +121,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   // FALLBACKS
   // Binary search overswap for target  debt
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "paraswap",
-          "kyberswap",
-          "odos",
-          "1inch",
-          "li-fi",
-          "open-ocean",
-          "magpie",
-          "enso",
-          "pendle",
-          "0x",
-          "spectra",
-        ],
-      },
-    },
+    strategy: StrategyAggregators.name(),
     match: {
       swapperModes: [SwapperMode.TARGET_DEBT],
     },

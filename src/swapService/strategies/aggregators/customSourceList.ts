@@ -70,11 +70,9 @@ export class CustomSourceList extends LocalSourceList {
 
     const mutableThis = this as any
     mutableThis.sources = {
-      ...mutableThis.sources,
       ...customSources,
       ...pendleSources,
     }
-    delete mutableThis.sources.balmy
 
     // wrap getQuote in timer
     const getQuoteSuper = mutableThis.getQuote.bind(this)
