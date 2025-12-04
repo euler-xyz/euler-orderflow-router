@@ -87,7 +87,7 @@ export interface StrategyMatchConfig {
 
 export interface RoutingItem {
   strategy: string
-  match: StrategyMatchConfig
+  match?: StrategyMatchConfig
   config?: StrategyConfig
 }
 

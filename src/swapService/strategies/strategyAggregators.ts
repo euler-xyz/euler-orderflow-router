@@ -1,6 +1,7 @@
 import {
   type BuildParams,
   type Chain,
+  ChainId,
   type QuoteRequest,
   type QuoteResponse,
   type QuoteResponseWithTx,
@@ -39,9 +40,9 @@ import {
   promiseWithTimeout,
   quoteToRoute,
 } from "../utils"
-import { CustomSourceList } from "./balmySDK/customSourceList"
-import pendleAggregators from "./balmySDK/sources/pendle/pendleAggregators.json"
-import { TokenlistMetadataSource } from "./balmySDK/tokenlistMetadataSource"
+import { CustomSourceList } from "./aggregators/customSourceList"
+import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
+import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
 const DEFAULT_TIMEOUT = "30000"
@@ -77,9 +78,9 @@ export const defaultConfig: BalmyStrategyConfig = {
   sourcesFilter: undefined,
 }
 
-export class StrategyBalmySDK {
+export class StrategyAggregators {
   static name() {
-    return "balmy_sdk"
+    return "aggregators"
   }
   readonly match
   readonly config
@@ -215,13 +216,23 @@ export class StrategyBalmySDK {
     )
   }
 
-  async providers(): Promise<string[]> {
-    return this.config.sourcesFilter?.includeSources || []
+  async providers(chainId: number): Promise<string[]> {
+    let sourcesInChain = Object.keys(
+      this.sdk.quoteService.supportedSourcesInChain({ chainId }),
+    )
+    const excludeSources = this.config.sourcesFilter?.excludeSources
+    const includeSources = this.config.sourcesFilter?.includeSources
+    if (excludeSources) {
+      sourcesInChain = sourcesInChain.filter((s) => !excludeSources.includes(s))
+    } else if (includeSources) {
+      sourcesInChain = sourcesInChain.filter((s) => includeSources.includes(s))
+    }
+    return sourcesInChain
   }
 
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
-      strategy: StrategyBalmySDK.name(),
+      strategy: StrategyAggregators.name(),
       supports: await this.supports(swapParams),
       match: matchParams(swapParams, this.match),
     }
