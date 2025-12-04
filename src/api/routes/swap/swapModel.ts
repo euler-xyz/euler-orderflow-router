@@ -364,7 +364,7 @@ const getProvidersSchema = z.object({
 })
 
 const providersResponseSchema = z.array(z.string()).openapi({
-  description: "Array of providers for use with `swapWithProvider` endpoint",
+  description: "Array of available providers",
 })
 
 export {
