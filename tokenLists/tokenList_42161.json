@@ -1,6 +1,6 @@
 [
   {
-    "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    "addressInfo": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
@@ -9,7 +9,7 @@
     "metadata": {}
   },
   {
-    "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+    "addressInfo": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
@@ -18,7 +18,7 @@
     "metadata": {}
   },
   {
-    "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+    "addressInfo": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     "chainId": 42161,
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
@@ -27,7 +27,7 @@
     "metadata": {}
   },
   {
-    "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
+    "addressInfo": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
@@ -38,7 +38,7 @@
     }
   },
   {
-    "address": "0x004626A008B1aCdC4c74ab51644093b155e59A23",
+    "addressInfo": "0x004626A008B1aCdC4c74ab51644093b155e59A23",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/32036/large/stEUR-x4.png?1696530832",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "address": "0x078f358208685046a11C85e8ad32895DED33A249",
+    "addressInfo": "0x078f358208685046a11C85e8ad32895DED33A249",
     "chainId": 42161,
     "decimals": 8,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
@@ -59,7 +59,7 @@
     "metadata": {}
   },
   {
-    "address": "0xEa3DD1a16f331fcd9B46Eb54C5b5AdcDb228FD84",
+    "addressInfo": "0xEa3DD1a16f331fcd9B46Eb54C5b5AdcDb228FD84",
     "chainId": 42161,
     "decimals": 6,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
@@ -68,7 +68,7 @@
     "metadata": {}
   },
   {
-    "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    "addressInfo": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
     "chainId": 42161,
     "decimals": 8,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
@@ -77,7 +77,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5979D7b546E38E414F7E9822514be443A4800529",
+    "addressInfo": "0x5979D7b546E38E414F7E9822514be443A4800529",
     "chainId": 42161,
     "name": "WrappedliquidstakedEther2.0",
     "symbol": "wstETH",
@@ -89,7 +89,7 @@
     }
   },
   {
-    "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    "addressInfo": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uni.jpg?1696512319",
@@ -98,7 +98,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+    "addressInfo": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
@@ -107,7 +107,7 @@
     "metadata": {}
   },
   {
-    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    "addressInfo": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
     "chainId": 42161,
     "decimals": 6,
     "logoURI": "https://assets.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
@@ -116,7 +116,7 @@
     "metadata": {}
   },
   {
-    "address": "0x6491c05A82219b8D1479057361ff1654749b876b",
+    "addressInfo": "0x6491c05A82219b8D1479057361ff1654749b876b",
     "chainId": 42161,
     "name": "USDS",
     "symbol": "USDS",
@@ -125,7 +125,7 @@
     "metadata": {}
   },
   {
-    "address": "0xdDb46999F8891663a8F2828d25298f70416d7610",
+    "addressInfo": "0xdDb46999F8891663a8F2828d25298f70416d7610",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
@@ -136,7 +136,7 @@
     }
   },
   {
-    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "addressInfo": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "chainId": 42161,
     "name": "Staked USDe",
     "symbol": "sUSDe",
@@ -147,7 +147,7 @@
     }
   },
   {
-    "address": "0x940098b108fB7D0a7E374f6eDED7760787464609",
+    "addressInfo": "0x940098b108fB7D0a7E374f6eDED7760787464609",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "/tokens/130/susdc.svg",
@@ -158,7 +158,7 @@
     }
   },
   {
-    "address": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
+    "addressInfo": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
     "chainId": 42161,
     "name": "Resolv USD",
     "symbol": "USR",
@@ -167,7 +167,7 @@
     "metadata": {}
   },
   {
-    "address": "0x66CFbD79257dC5217903A36293120282548E2254",
+    "addressInfo": "0x66CFbD79257dC5217903A36293120282548E2254",
     "chainId": 42161,
     "name": "wstUSR",
     "symbol": "wstUSR",
@@ -178,7 +178,7 @@
     }
   },
   {
-    "address": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+    "addressInfo": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
     "chainId": 42161,
     "name": "Resolv Liquidity Provider Token",
     "symbol": "RLP",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "address": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
+    "addressInfo": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
     "chainId": 42161,
     "name": "thBILL",
     "symbol": "thBILL",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "address": "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
+    "addressInfo": "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
     "chainId": 42161,
     "name": "Syrup USDC",
     "symbol": "syrupUSDC",
@@ -211,7 +211,7 @@
     }
   },
   {
-    "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    "addressInfo": "0x912CE59144191C1204E64559FE8253a0e49E6548",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0x912CE59144191C1204E64559FE8253a0e49E6548/logo.png",
@@ -220,7 +220,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "addressInfo": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
@@ -229,7 +229,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+    "addressInfo": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
@@ -238,7 +238,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
+    "addressInfo": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
@@ -249,7 +249,7 @@
     }
   },
   {
-    "address": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+    "addressInfo": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://arbiscan.io//token/images/Curvefi_32.png",
@@ -258,7 +258,7 @@
     "metadata": {}
   },
   {
-    "address": "0x22e9aD26eA0e65a7073571d5D7172ff6336084AD",
+    "addressInfo": "0x22e9aD26eA0e65a7073571d5D7172ff6336084AD",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/28477/large/uniETH_200.png?1696527471",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "address": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
+    "addressInfo": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
     "chainId": 42161,
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
@@ -282,7 +282,7 @@
     }
   },
   {
-    "address": "0xd09ACb80C1E8f2291862c4978A008791c9167003",
+    "addressInfo": "0xd09ACb80C1E8f2291862c4978A008791c9167003",
     "chainId": 42161,
     "name": "Treehouse ETH",
     "symbol": "TETH",
@@ -293,7 +293,7 @@
     }
   },
   {
-    "address": "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
+    "addressInfo": "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
     "chainId": 42161,
     "name": "Rocket Pool ETH",
     "symbol": "rETH",
@@ -304,7 +304,7 @@
     }
   },
   {
-    "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "addressInfo": "0x2416092f143378750bb29b79eD961ab195CcEea5",
     "chainId": 42161,
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
@@ -315,7 +315,7 @@
     }
   },
   {
-    "address": "0x8b4Ca42bB3B1d789859f106222CF7DC5EEd48CCb",
+    "addressInfo": "0x8b4Ca42bB3B1d789859f106222CF7DC5EEd48CCb",
     "chainId": 42161,
     "name": "PT-USDai-20NOV2025",
     "symbol": "PT-USDai-20NOV2025",
@@ -327,7 +327,7 @@
     }
   },
   {
-    "address": "0x936F210d277bf489A3211CeF9AB4BC47a7B69C96",
+    "addressInfo": "0x936F210d277bf489A3211CeF9AB4BC47a7B69C96",
     "chainId": 42161,
     "name": "PT-sUSDai-20NOV2025",
     "symbol": "PT-sUSDai-20NOV2025",
@@ -339,7 +339,7 @@
     }
   },
   {
-    "address": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
+    "addressInfo": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
     "chainId": 42161,
     "name": "EUL",
     "symbol": "EUL",
@@ -348,7 +348,7 @@
     "metadata": {}
   },
   {
-    "address": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
+    "addressInfo": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
     "chainId": 42161,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -357,7 +357,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5a791652f3b140d357df072d355a98ab754877D1",
+    "addressInfo": "0x5a791652f3b140d357df072d355a98ab754877D1",
     "chainId": 42161,
     "decimals": 6,
     "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
@@ -369,7 +369,7 @@
     }
   },
   {
-    "address": "0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9",
+    "addressInfo": "0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9",
     "chainId": 42161,
     "decimals": 15,
     "logoURI": "/tokens/42161/autoUSDai.svg",
@@ -380,7 +380,7 @@
     }
   },
   {
-    "address": "0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36",
+    "addressInfo": "0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "/tokens/42161/yusnd.svg",
@@ -389,7 +389,7 @@
     "metadata": {}
   },
   {
-    "address": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
+    "addressInfo": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
     "chainId": 42161,
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/67378/large/USND200.png?1752596582",

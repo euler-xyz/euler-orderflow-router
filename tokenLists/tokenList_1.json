@@ -1,6 +1,6 @@
 [
   {
-    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "addressInfo": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "chainId": 1,
     "name": "WETH",
     "symbol": "WETH",
@@ -9,7 +9,7 @@
     "metadata": {}
   },
   {
-    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "addressInfo": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
     "chainId": 1,
     "name": "USDC",
     "symbol": "USDC",
@@ -18,7 +18,7 @@
     "metadata": {}
   },
   {
-    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "addressInfo": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "chainId": 1,
     "name": "Tether",
     "symbol": "USDT",
@@ -27,7 +27,7 @@
     "metadata": {}
   },
   {
-    "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+    "addressInfo": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
     "chainId": 1,
     "name": "Lido Staked Ether",
     "symbol": "STETH",
@@ -36,7 +36,7 @@
     "metadata": {}
   },
   {
-    "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+    "addressInfo": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
     "chainId": 1,
     "name": "Wrapped stETH",
     "symbol": "WSTETH",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+    "addressInfo": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
     "chainId": 1,
     "name": "Maker",
     "symbol": "MKR",
@@ -57,7 +57,7 @@
     "metadata": {}
   },
   {
-    "address": "0x111111111117dC0aa78b770fA6A738034120C302",
+    "addressInfo": "0x111111111117dC0aa78b770fA6A738034120C302",
     "chainId": 1,
     "name": "1INCH",
     "symbol": "1INCH",
@@ -66,7 +66,7 @@
     "metadata": {}
   },
   {
-    "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    "addressInfo": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
     "chainId": 1,
     "name": "Aave",
     "symbol": "AAVE",
@@ -75,7 +75,7 @@
     "metadata": {}
   },
   {
-    "address": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
+    "addressInfo": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
     "chainId": 1,
     "name": "EURA",
     "symbol": "EURA",
@@ -84,7 +84,7 @@
     "metadata": {}
   },
   {
-    "address": "0xba100000625a3754423978a60c9317c58a424e3D",
+    "addressInfo": "0xba100000625a3754423978a60c9317c58a424e3D",
     "chainId": 1,
     "name": "Balancer",
     "symbol": "BAL",
@@ -93,7 +93,7 @@
     "metadata": {}
   },
   {
-    "address": "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+    "addressInfo": "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
     "chainId": 1,
     "name": "Coinbase Wrapped Staked ETH",
     "symbol": "CBETH",
@@ -105,7 +105,7 @@
     }
   },
   {
-    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+    "addressInfo": "0xD533a949740bb3306d119CC777fa900bA034cd52",
     "chainId": 1,
     "name": "Curve DAO",
     "symbol": "CRV",
@@ -114,7 +114,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+    "addressInfo": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
     "chainId": 1,
     "name": "crvUSD",
     "symbol": "CRVUSD",
@@ -123,7 +123,7 @@
     "metadata": {}
   },
   {
-    "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "addressInfo": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
     "chainId": 1,
     "name": "Convex Finance",
     "symbol": "CVX",
@@ -132,7 +132,7 @@
     "metadata": {}
   },
   {
-    "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "addressInfo": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
     "chainId": 1,
     "name": "Dai",
     "symbol": "DAI",
@@ -141,7 +141,7 @@
     "metadata": {}
   },
   {
-    "address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+    "addressInfo": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
     "chainId": 1,
     "name": "Ethereum Name Service",
     "symbol": "ENS",
@@ -150,7 +150,7 @@
     "metadata": {}
   },
   {
-    "address": "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+    "addressInfo": "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
     "chainId": 1,
     "name": "Stader ETHx",
     "symbol": "ETHX",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+    "addressInfo": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
     "chainId": 1,
     "name": "Renzo Restaked ETH",
     "symbol": "EZETH",
@@ -173,7 +173,7 @@
     }
   },
   {
-    "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
+    "addressInfo": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
     "chainId": 1,
     "name": "Legacy Frax Dollar",
     "symbol": "FRAX",
@@ -182,7 +182,7 @@
     "metadata": {}
   },
   {
-    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+    "addressInfo": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
     "chainId": 1,
     "name": "Frax (prev. FXS)",
     "symbol": "FRAX",
@@ -191,7 +191,7 @@
     "metadata": {}
   },
   {
-    "address": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+    "addressInfo": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
     "chainId": 1,
     "name": "GHO",
     "symbol": "GHO",
@@ -200,7 +200,7 @@
     "metadata": {}
   },
   {
-    "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+    "addressInfo": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
     "chainId": 1,
     "name": "The Graph",
     "symbol": "GRT",
@@ -209,7 +209,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+    "addressInfo": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
     "chainId": 1,
     "name": "Lido DAO",
     "symbol": "LDO",
@@ -218,7 +218,7 @@
     "metadata": {}
   },
   {
-    "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    "addressInfo": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
     "chainId": 1,
     "name": "Chainlink",
     "symbol": "LINK",
@@ -227,7 +227,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
+    "addressInfo": "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
     "chainId": 1,
     "name": "Liquity USD",
     "symbol": "LUSD",
@@ -236,7 +236,7 @@
     "metadata": {}
   },
   {
-    "address": "0xd5F7838F5C461fefF7FE49ea5ebaF7728bB0ADfa",
+    "addressInfo": "0xd5F7838F5C461fefF7FE49ea5ebaF7728bB0ADfa",
     "chainId": 1,
     "name": "Mantle Staked Ether",
     "symbol": "METH",
@@ -248,7 +248,7 @@
     }
   },
   {
-    "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+    "addressInfo": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
     "chainId": 1,
     "name": "PayPal USD",
     "symbol": "PYUSD",
@@ -257,7 +257,7 @@
     "metadata": {}
   },
   {
-    "address": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
+    "addressInfo": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
     "chainId": 1,
     "name": "Radiant Capital",
     "symbol": "RDNT",
@@ -266,7 +266,7 @@
     "metadata": {}
   },
   {
-    "address": "0xae78736Cd615f374D3085123A210448E74Fc6393",
+    "addressInfo": "0xae78736Cd615f374D3085123A210448E74Fc6393",
     "chainId": 1,
     "name": "Rocket Pool ETH",
     "symbol": "RETH",
@@ -278,7 +278,7 @@
     }
   },
   {
-    "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+    "addressInfo": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
     "chainId": 1,
     "name": "Kelp DAO Restaked ETH",
     "symbol": "RSETH",
@@ -290,7 +290,7 @@
     }
   },
   {
-    "address": "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
+    "addressInfo": "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
     "chainId": 1,
     "name": "Restaked Swell ETH",
     "symbol": "RSWETH",
@@ -302,7 +302,7 @@
     }
   },
   {
-    "address": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+    "addressInfo": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
     "chainId": 1,
     "name": "Synthetix",
     "symbol": "SNX",
@@ -311,7 +311,7 @@
     "metadata": {}
   },
   {
-    "address": "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
+    "addressInfo": "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
     "chainId": 1,
     "name": "Stargate Finance",
     "symbol": "STG",
@@ -320,7 +320,7 @@
     "metadata": {}
   },
   {
-    "address": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
+    "addressInfo": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
     "chainId": 1,
     "name": "Synthetix sUSD",
     "symbol": "SUSD",
@@ -329,7 +329,7 @@
     "metadata": {}
   },
   {
-    "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+    "addressInfo": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
     "chainId": 1,
     "name": "Ethena Staked USDe",
     "symbol": "SUSDE",
@@ -340,7 +340,7 @@
     }
   },
   {
-    "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+    "addressInfo": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
     "chainId": 1,
     "name": "Sushi",
     "symbol": "SUSHI",
@@ -349,7 +349,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf951E335afb289353dc249e82926178EaC7DEd78",
+    "addressInfo": "0xf951E335afb289353dc249e82926178EaC7DEd78",
     "chainId": 1,
     "name": "Swell Ethereum",
     "symbol": "SWETH",
@@ -361,7 +361,7 @@
     }
   },
   {
-    "address": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+    "addressInfo": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
     "chainId": 1,
     "name": "tBTC",
     "symbol": "TBTC",
@@ -370,7 +370,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0000000000085d4780B73119b644AE5ecd22b376",
+    "addressInfo": "0x0000000000085d4780B73119b644AE5ecd22b376",
     "chainId": 1,
     "name": "TrueUSD",
     "symbol": "TUSD",
@@ -379,7 +379,7 @@
     "metadata": {}
   },
   {
-    "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "addressInfo": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
     "chainId": 1,
     "name": "Uniswap",
     "symbol": "UNI",
@@ -388,7 +388,7 @@
     "metadata": {}
   },
   {
-    "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+    "addressInfo": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
     "chainId": 1,
     "name": "Ethena USDe",
     "symbol": "USDE",
@@ -397,7 +397,7 @@
     "metadata": {}
   },
   {
-    "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "addressInfo": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     "chainId": 1,
     "name": "Wrapped Bitcoin",
     "symbol": "WBTC",
@@ -406,7 +406,7 @@
     "metadata": {}
   },
   {
-    "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+    "addressInfo": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
     "chainId": 1,
     "name": "Wrapped eETH",
     "symbol": "WEETH",
@@ -417,7 +417,7 @@
     }
   },
   {
-    "address": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
+    "addressInfo": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
     "chainId": 1,
     "name": "yearn.finance",
     "symbol": "YFI",
@@ -426,7 +426,7 @@
     "metadata": {}
   },
   {
-    "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+    "addressInfo": "0x57e114B691Db790C35207b2e685D4A43181e6061",
     "chainId": 1,
     "name": "Ethena",
     "symbol": "ENA",
@@ -435,7 +435,7 @@
     "metadata": {}
   },
   {
-    "address": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
+    "addressInfo": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
     "chainId": 1,
     "name": "Ether.fi",
     "symbol": "ETHFI",
@@ -444,7 +444,7 @@
     "metadata": {}
   },
   {
-    "address": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+    "addressInfo": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
     "chainId": 1,
     "name": "EURC",
     "symbol": "EURC",
@@ -453,7 +453,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5E8422345238F34275888049021821E8E08CAa1f",
+    "addressInfo": "0x5E8422345238F34275888049021821E8E08CAa1f",
     "chainId": 1,
     "name": "Frax Ether",
     "symbol": "FRXETH",
@@ -465,7 +465,7 @@
     }
   },
   {
-    "address": "0x6810e776880C02933D47DB1b9fc05908e5386b96",
+    "addressInfo": "0x6810e776880C02933D47DB1b9fc05908e5386b96",
     "chainId": 1,
     "name": "Gnosis",
     "symbol": "GNO",
@@ -474,7 +474,7 @@
     "metadata": {}
   },
   {
-    "address": "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
+    "addressInfo": "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
     "chainId": 1,
     "name": "Illuvium",
     "symbol": "ILV",
@@ -483,7 +483,7 @@
     "metadata": {}
   },
   {
-    "address": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
+    "addressInfo": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
     "chainId": 1,
     "name": "Liquity",
     "symbol": "LQTY",
@@ -492,7 +492,7 @@
     "metadata": {}
   },
   {
-    "address": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
+    "addressInfo": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
     "chainId": 1,
     "name": "Mantle",
     "symbol": "MNT",
@@ -501,7 +501,7 @@
     "metadata": {}
   },
   {
-    "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+    "addressInfo": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
     "chainId": 1,
     "name": "Ondo",
     "symbol": "ONDO",
@@ -510,7 +510,7 @@
     "metadata": {}
   },
   {
-    "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+    "addressInfo": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
     "chainId": 1,
     "name": "PAX Gold",
     "symbol": "PAXG",
@@ -519,7 +519,7 @@
     "metadata": {}
   },
   {
-    "address": "0x808507121B80c02388fAd14726482e061B8da827",
+    "addressInfo": "0x808507121B80c02388fAd14726482e061B8da827",
     "chainId": 1,
     "name": "Pendle",
     "symbol": "PENDLE",
@@ -528,7 +528,7 @@
     "metadata": {}
   },
   {
-    "address": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
+    "addressInfo": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
     "chainId": 1,
     "name": "pufETH",
     "symbol": "pufETH",
@@ -539,7 +539,7 @@
     }
   },
   {
-    "address": "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+    "addressInfo": "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
     "chainId": 1,
     "name": "Dinero Staked ETH",
     "symbol": "PXETH",
@@ -551,7 +551,7 @@
     }
   },
   {
-    "address": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
+    "addressInfo": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
     "chainId": 1,
     "name": "Rocket Pool",
     "symbol": "RPL",
@@ -560,7 +560,7 @@
     "metadata": {}
   },
   {
-    "address": "0x320623b8E4fF03373931769A31Fc52A4E78B5d70",
+    "addressInfo": "0x320623b8E4fF03373931769A31Fc52A4E78B5d70",
     "chainId": 1,
     "name": "Reserve Rights",
     "symbol": "RSR",
@@ -569,7 +569,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
+    "addressInfo": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
     "chainId": 1,
     "name": "Safe",
     "symbol": "SAFE",
@@ -578,7 +578,7 @@
     "metadata": {}
   },
   {
-    "address": "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+    "addressInfo": "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     "chainId": 1,
     "name": "Savings Dai",
     "symbol": "SDAI",
@@ -590,7 +590,7 @@
     }
   },
   {
-    "address": "0xac3E018457B222d93114458476f3E3416Abbe38F",
+    "addressInfo": "0xac3E018457B222d93114458476f3E3416Abbe38F",
     "chainId": 1,
     "name": "Staked Frax Ether",
     "symbol": "SFRXETH",
@@ -599,7 +599,7 @@
     "metadata": {}
   },
   {
-    "address": "0x8E870D67F660D95d5be530380D0eC0bd388289E1",
+    "addressInfo": "0x8E870D67F660D95d5be530380D0eC0bd388289E1",
     "chainId": 1,
     "name": "Pax Dollar",
     "symbol": "USDP",
@@ -608,7 +608,7 @@
     "metadata": {}
   },
   {
-    "address": "0x96F6eF951840721AdBF46Ac996b59E0235CB985C",
+    "addressInfo": "0x96F6eF951840721AdBF46Ac996b59E0235CB985C",
     "chainId": 1,
     "name": "Ondo US Dollar Yield",
     "symbol": "USDY",
@@ -619,7 +619,7 @@
     }
   },
   {
-    "address": "0x163f8C2467924be0ae7B5347228CABF260318753",
+    "addressInfo": "0x163f8C2467924be0ae7B5347228CABF260318753",
     "chainId": 1,
     "name": "Worldcoin",
     "symbol": "WLD",
@@ -628,7 +628,7 @@
     "metadata": {}
   },
   {
-    "address": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
+    "addressInfo": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
     "chainId": 1,
     "name": "WOO",
     "symbol": "WOO",
@@ -637,7 +637,7 @@
     "metadata": {}
   },
   {
-    "address": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+    "addressInfo": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
     "chainId": 1,
     "name": "Tether Gold",
     "symbol": "XAUT",
@@ -646,7 +646,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+    "addressInfo": "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
     "chainId": 1,
     "name": "StakeWise Staked ETH",
     "symbol": "OSETH",
@@ -658,7 +658,7 @@
     }
   },
   {
-    "address": "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
+    "addressInfo": "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
     "chainId": 1,
     "name": "Electronic USD",
     "symbol": "EUSD",
@@ -667,7 +667,7 @@
     "metadata": {}
   },
   {
-    "address": "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
+    "addressInfo": "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
     "chainId": 1,
     "name": "ETHPlus",
     "symbol": "ETH+",
@@ -679,7 +679,7 @@
     }
   },
   {
-    "address": "0x8c9532a60E0E7C6BbD2B2c1303F63aCE1c3E9811",
+    "addressInfo": "0x8c9532a60E0E7C6BbD2B2c1303F63aCE1c3E9811",
     "chainId": 1,
     "name": "Renzo Restaked LST",
     "symbol": "PZETH",
@@ -690,7 +690,7 @@
     }
   },
   {
-    "address": "0xDcEe70654261AF21C44c093C300eD3Bb97b78192",
+    "addressInfo": "0xDcEe70654261AF21C44c093C300eD3Bb97b78192",
     "chainId": 1,
     "name": "Wrapped OETH",
     "symbol": "WOETH",
@@ -702,7 +702,7 @@
     }
   },
   {
-    "address": "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
+    "addressInfo": "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
     "chainId": 1,
     "name": "Origin Ether",
     "symbol": "OETH",
@@ -714,7 +714,7 @@
     }
   },
   {
-    "address": "0x866A2BF4E572CbcF37D5071A7a58503Bfb36be1b",
+    "addressInfo": "0x866A2BF4E572CbcF37D5071A7a58503Bfb36be1b",
     "chainId": 1,
     "name": "M by M0",
     "symbol": "M",
@@ -723,7 +723,7 @@
     "metadata": {}
   },
   {
-    "address": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
+    "addressInfo": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
     "chainId": 1,
     "name": "USDA",
     "symbol": "USDA",
@@ -732,7 +732,7 @@
     "metadata": {}
   },
   {
-    "address": "0xe1B4d34E8754600962Cd944B535180Bd758E6c2e",
+    "addressInfo": "0xe1B4d34E8754600962Cd944B535180Bd758E6c2e",
     "chainId": 1,
     "name": "Kelp Gain",
     "symbol": "AGETH",
@@ -741,7 +741,7 @@
     "metadata": {}
   },
   {
-    "address": "0x09db87A538BD693E9d08544577d5cCfAA6373A48",
+    "addressInfo": "0x09db87A538BD693E9d08544577d5cCfAA6373A48",
     "chainId": 1,
     "name": "YieldNest Restaked ETH",
     "symbol": "YNETH",
@@ -753,7 +753,7 @@
     }
   },
   {
-    "address": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
+    "addressInfo": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
     "chainId": 1,
     "name": "Usual USD",
     "symbol": "USD0",
@@ -762,7 +762,7 @@
     "metadata": {}
   },
   {
-    "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    "addressInfo": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
     "chainId": 1,
     "name": "Coinbase Wrapped BTC",
     "symbol": "cbBTC",
@@ -771,7 +771,7 @@
     "metadata": {}
   },
   {
-    "address": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+    "addressInfo": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
     "chainId": 1,
     "name": "USDS",
     "symbol": "USDS",
@@ -780,7 +780,7 @@
     "metadata": {}
   },
   {
-    "address": "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
+    "addressInfo": "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
     "chainId": 1,
     "name": "sUSDS",
     "symbol": "sUSDS",
@@ -791,7 +791,7 @@
     }
   },
   {
-    "address": "0x0d86883FAf4FfD7aEb116390af37746F45b6f378",
+    "addressInfo": "0x0d86883FAf4FfD7aEb116390af37746F45b6f378",
     "chainId": 1,
     "name": "Web 3 Dollar",
     "symbol": "USD3",
@@ -803,7 +803,7 @@
     }
   },
   {
-    "address": "0x8236a87084f8B84306f72007F36F2618A5634494",
+    "addressInfo": "0x8236a87084f8B84306f72007F36F2618A5634494",
     "chainId": 1,
     "name": "Lombard Staked BTC",
     "symbol": "LBTC",
@@ -812,7 +812,7 @@
     "metadata": {}
   },
   {
-    "address": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
+    "addressInfo": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
     "chainId": 1,
     "name": "Mountain Protocol USD",
     "symbol": "USDM",
@@ -821,7 +821,7 @@
     "metadata": {}
   },
   {
-    "address": "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+    "addressInfo": "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
     "chainId": 1,
     "name": "Ether.fi Staked BTC",
     "symbol": "EBTC",
@@ -830,7 +830,7 @@
     "metadata": {}
   },
   {
-    "address": "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
+    "addressInfo": "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
     "chainId": 1,
     "name": "Solv Protocol BTC",
     "symbol": "SOLVBTC",
@@ -839,7 +839,7 @@
     "metadata": {}
   },
   {
-    "address": "0x2C537E5624e4af88A7ae4060C022609376C8D0EB",
+    "addressInfo": "0x2C537E5624e4af88A7ae4060C022609376C8D0EB",
     "chainId": 1,
     "name": "BiLira",
     "symbol": "TRYB",
@@ -848,7 +848,7 @@
     "metadata": {}
   },
   {
-    "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+    "addressInfo": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
     "chainId": 1,
     "name": "AUSD",
     "symbol": "AUSD",
@@ -857,7 +857,7 @@
     "metadata": {}
   },
   {
-    "address": "0x437cc33344a0B27A429f795ff6B469C72698B291",
+    "addressInfo": "0x437cc33344a0B27A429f795ff6B469C72698B291",
     "chainId": 1,
     "name": "wM",
     "symbol": "wM",
@@ -866,7 +866,7 @@
     "metadata": {}
   },
   {
-    "address": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
+    "addressInfo": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
     "chainId": 1,
     "name": "First Digital USD",
     "symbol": "FDUSD",
@@ -875,7 +875,7 @@
     "metadata": {}
   },
   {
-    "address": "0xDD629E5241CbC5919847783e6C96B2De4754e438",
+    "addressInfo": "0xDD629E5241CbC5919847783e6C96B2De4754e438",
     "chainId": 1,
     "name": "Midas mTBILL",
     "symbol": "MTBILL",
@@ -886,7 +886,7 @@
     }
   },
   {
-    "address": "0xB1F1ee126e9c96231Cc3d3fAD7C08b4cf873b1f1",
+    "addressInfo": "0xB1F1ee126e9c96231Cc3d3fAD7C08b4cf873b1f1",
     "chainId": 1,
     "name": "Beefy",
     "symbol": "BIFI",
@@ -895,7 +895,7 @@
     "metadata": {}
   },
   {
-    "address": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
+    "addressInfo": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
     "chainId": 1,
     "name": "Staked USD0",
     "symbol": "USD0++",
@@ -908,7 +908,7 @@
     }
   },
   {
-    "address": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
+    "addressInfo": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "chainId": 1,
     "name": "Gravity (by Galxe)",
     "symbol": "G",
@@ -917,7 +917,7 @@
     "metadata": {}
   },
   {
-    "address": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
+    "addressInfo": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
     "chainId": 1,
     "name": "EigenCloud (prev. EigenLayer)",
     "symbol": "EIGEN",
@@ -926,7 +926,7 @@
     "metadata": {}
   },
   {
-    "address": "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766",
+    "addressInfo": "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766",
     "chainId": 1,
     "name": "Starknet",
     "symbol": "STRK",
@@ -935,7 +935,7 @@
     "metadata": {}
   },
   {
-    "address": "0xF469fBD2abcd6B9de8E169d128226C0Fc90a012e",
+    "addressInfo": "0xF469fBD2abcd6B9de8E169d128226C0Fc90a012e",
     "chainId": 1,
     "name": "pumpBTC",
     "symbol": "PUMPBTC",
@@ -944,7 +944,7 @@
     "metadata": {}
   },
   {
-    "address": "0xbdC7c08592Ee4aa51D06C27Ee23D5087D65aDbcD",
+    "addressInfo": "0xbdC7c08592Ee4aa51D06C27Ee23D5087D65aDbcD",
     "chainId": 1,
     "name": "Lift Dollar",
     "symbol": "USDL",
@@ -955,7 +955,7 @@
     }
   },
   {
-    "address": "0x007115416AB6c266329a03B09a8aa39aC2eF7d9d",
+    "addressInfo": "0x007115416AB6c266329a03B09a8aa39aC2eF7d9d",
     "chainId": 1,
     "name": "Midas mBTC",
     "symbol": "MBTC",
@@ -967,7 +967,7 @@
     }
   },
   {
-    "address": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+    "addressInfo": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
     "chainId": 1,
     "name": "Resolv USR",
     "symbol": "USR",
@@ -976,7 +976,7 @@
     "metadata": {}
   },
   {
-    "address": "0x2a8c22E3b10036f3AEF5875d04f8441d4188b656",
+    "addressInfo": "0x2a8c22E3b10036f3AEF5875d04f8441d4188b656",
     "chainId": 1,
     "name": "Midas mBASIS",
     "symbol": "mBASIS",
@@ -988,7 +988,7 @@
     }
   },
   {
-    "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+    "addressInfo": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
     "chainId": 1,
     "name": "RLUSD",
     "symbol": "RLUSD",
@@ -997,7 +997,7 @@
     "metadata": {}
   },
   {
-    "address": "0x15700B564Ca08D9439C58cA5053166E8317aa138",
+    "addressInfo": "0x15700B564Ca08D9439C58cA5053166E8317aa138",
     "chainId": 1,
     "name": "Elixir deUSD",
     "symbol": "DEUSD",
@@ -1006,7 +1006,7 @@
     "metadata": {}
   },
   {
-    "address": "0x8A60E489004Ca22d775C5F2c657598278d17D9c2",
+    "addressInfo": "0x8A60E489004Ca22d775C5F2c657598278d17D9c2",
     "chainId": 1,
     "name": "USDa",
     "symbol": "USDA",
@@ -1015,7 +1015,7 @@
     "metadata": {}
   },
   {
-    "address": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
+    "addressInfo": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
     "chainId": 1,
     "name": "Wrapped Mountain Protocol USD",
     "symbol": "wUSDM",
@@ -1024,7 +1024,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
+    "addressInfo": "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
     "chainId": 1,
     "name": "Elixir Staked deUSD",
     "symbol": "SDEUSD",
@@ -1035,7 +1035,7 @@
     }
   },
   {
-    "address": "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
+    "addressInfo": "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
     "chainId": 1,
     "name": "Resolv Liquidity Provider Token",
     "symbol": "RLP",
@@ -1046,7 +1046,7 @@
     }
   },
   {
-    "address": "0x97Ad75064b20fb2B2447feD4fa953bF7F007a706",
+    "addressInfo": "0x97Ad75064b20fb2B2447feD4fa953bF7F007a706",
     "chainId": 1,
     "name": "StakeStone Berachain Vault Token",
     "symbol": "BERASTONE",
@@ -1055,7 +1055,7 @@
     "metadata": {}
   },
   {
-    "address": "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
+    "addressInfo": "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
     "chainId": 1,
     "name": "OpenEden OpenDollar",
     "symbol": "USDO",
@@ -1064,7 +1064,7 @@
     "metadata": {}
   },
   {
-    "address": "0xbB51E2a15A9158EBE2b0Ceb8678511e063AB7a55",
+    "addressInfo": "0xbB51E2a15A9158EBE2b0Ceb8678511e063AB7a55",
     "chainId": 1,
     "name": "Midas mEDGE",
     "symbol": "MEDGE",
@@ -1076,7 +1076,7 @@
     }
   },
   {
-    "address": "0x030b69280892c888670EDCDCD8B69Fd8026A0BF3",
+    "addressInfo": "0x030b69280892c888670EDCDCD8B69Fd8026A0BF3",
     "chainId": 1,
     "name": "Midas mMEV",
     "symbol": "MMEV",
@@ -1088,7 +1088,7 @@
     }
   },
   {
-    "address": "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
+    "addressInfo": "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
     "chainId": 1,
     "name": "Treehouse ETH",
     "symbol": "TETH",
@@ -1099,7 +1099,7 @@
     }
   },
   {
-    "address": "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
+    "addressInfo": "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
     "chainId": 1,
     "name": "Midas mRe7YIELD",
     "symbol": "MRE7YIELD",
@@ -1110,7 +1110,7 @@
     }
   },
   {
-    "address": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
+    "addressInfo": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
     "chainId": 1,
     "name": "USDtb",
     "symbol": "USDtb",
@@ -1119,7 +1119,7 @@
     "metadata": {}
   },
   {
-    "address": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
+    "addressInfo": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
     "chainId": 1,
     "name": "Circle USYC",
     "symbol": "USYC",
@@ -1128,7 +1128,7 @@
     "metadata": {}
   },
   {
-    "address": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+    "addressInfo": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
     "chainId": 1,
     "name": "Reservoir rUSD",
     "symbol": "rUSD",
@@ -1137,7 +1137,7 @@
     "metadata": {}
   },
   {
-    "address": "0x738d1115B90efa71AE468F1287fc864775e23a31",
+    "addressInfo": "0x738d1115B90efa71AE468F1287fc864775e23a31",
     "chainId": 1,
     "name": "Reservoir srUSD",
     "symbol": "srUSD",
@@ -1149,7 +1149,7 @@
     }
   },
   {
-    "address": "0x7C1156E515aA1A2E851674120074968C905aAF37",
+    "addressInfo": "0x7C1156E515aA1A2E851674120074968C905aAF37",
     "chainId": 1,
     "name": "Level USD",
     "symbol": "lvlUSD",
@@ -1158,7 +1158,7 @@
     "metadata": {}
   },
   {
-    "address": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
+    "addressInfo": "0x97cCC1C046d067ab945d3CF3CC6920D3b1E54c88",
     "chainId": 1,
     "name": "Pareto synthetic dollar USP",
     "symbol": "USP",
@@ -1167,7 +1167,7 @@
     "metadata": {}
   },
   {
-    "address": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
+    "addressInfo": "0xE2Fc85BfB48C4cF147921fBE110cf92Ef9f26F94",
     "chainId": 1,
     "name": "Staked Stream USD",
     "symbol": "xUSD",
@@ -1179,7 +1179,7 @@
     }
   },
   {
-    "address": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
+    "addressInfo": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
     "chainId": 1,
     "name": "Beam",
     "symbol": "BEAM",
@@ -1188,7 +1188,7 @@
     "metadata": {}
   },
   {
-    "address": "0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
+    "addressInfo": "0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
     "chainId": 1,
     "name": "Resolv wstUSR",
     "symbol": "WSTUSR",
@@ -1199,7 +1199,7 @@
     }
   },
   {
-    "address": "0x0655977FEb2f289A4aB78af67BAB0d17aAb84367",
+    "addressInfo": "0x0655977FEb2f289A4aB78af67BAB0d17aAb84367",
     "chainId": 1,
     "name": "Savings crvUSD",
     "symbol": "SCRVUSD",
@@ -1211,7 +1211,7 @@
     }
   },
   {
-    "address": "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
+    "addressInfo": "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
     "chainId": 1,
     "name": "ynETH MAX",
     "symbol": "YNETHX",
@@ -1223,7 +1223,7 @@
     }
   },
   {
-    "address": "0x4342B77fE3417Bcb09d0A4383301b0DC733C755B",
+    "addressInfo": "0x4342B77fE3417Bcb09d0A4383301b0DC733C755B",
     "chainId": 1,
     "name": "Swaap USDC-WETH Safeguard",
     "symbol": "s-USDC-WETH-Sa",
@@ -1232,7 +1232,7 @@
     "metadata": {}
   },
   {
-    "address": "0x315a892a4d02c5c1169d5F0e4f7Cb4130Cc0d138",
+    "addressInfo": "0x315a892a4d02c5c1169d5F0e4f7Cb4130Cc0d138",
     "chainId": 1,
     "name": "Swaap WETH-USDT Safeguard",
     "symbol": "s-WETH-USDT-Sa",
@@ -1241,7 +1241,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf5Ca5a74c6F9fc23880865D8702EaEda6e1f38b1",
+    "addressInfo": "0xf5Ca5a74c6F9fc23880865D8702EaEda6e1f38b1",
     "chainId": 1,
     "name": "Swaap wstETH-WETH Safeguard",
     "symbol": "s-wstETH-WETH-Sa",
@@ -1250,7 +1250,7 @@
     "metadata": {}
   },
   {
-    "address": "0xaC4E8D8B3a48C3451d4d0E4a84e6E5Ac52579D05",
+    "addressInfo": "0xaC4E8D8B3a48C3451d4d0E4a84e6E5Ac52579D05",
     "chainId": 1,
     "name": "Swaap USDC-USDT Safeguard",
     "symbol": "s-USDC-USDT-Sa",
@@ -1259,7 +1259,7 @@
     "metadata": {}
   },
   {
-    "address": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "addressInfo": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
     "chainId": 1,
     "name": "EUL",
     "symbol": "EUL",
@@ -1268,7 +1268,7 @@
     "metadata": {}
   },
   {
-    "address": "0xf3e621395fc714B90dA337AA9108771597b4E696",
+    "addressInfo": "0xf3e621395fc714B90dA337AA9108771597b4E696",
     "chainId": 1,
     "name": "Reward EUL",
     "symbol": "rEUL",
@@ -1277,7 +1277,7 @@
     "metadata": {}
   },
   {
-    "address": "0x64047dD3288276d70A4F8B5Df54668c8403f877F",
+    "addressInfo": "0x64047dD3288276d70A4F8B5Df54668c8403f877F",
     "chainId": 1,
     "name": "Amphor Restaked BTC",
     "symbol": "amphrBTC",
@@ -1286,7 +1286,7 @@
     "metadata": {}
   },
   {
-    "address": "0x5fD13359Ba15A84B76f7F87568309040176167cd",
+    "addressInfo": "0x5fD13359Ba15A84B76f7F87568309040176167cd",
     "chainId": 1,
     "name": "Amphor Restaked ETH",
     "symbol": "amphrETH",
@@ -1298,7 +1298,7 @@
     }
   },
   {
-    "address": "0x7a4EffD87C2f3C55CA251080b1343b605f327E3a",
+    "addressInfo": "0x7a4EffD87C2f3C55CA251080b1343b605f327E3a",
     "chainId": 1,
     "name": "Restaking Vault ETH",
     "symbol": "rstETH",
@@ -1310,7 +1310,7 @@
     }
   },
   {
-    "address": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
+    "addressInfo": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
     "chainId": 1,
     "name": "Wrapped USDL",
     "symbol": "wUSDL",
@@ -1321,7 +1321,7 @@
     }
   },
   {
-    "address": "0x45054c6753b4Bce40C5d54418DabC20b070F85bE",
+    "addressInfo": "0x45054c6753b4Bce40C5d54418DabC20b070F85bE",
     "chainId": 1,
     "name": "IdleCDO AA Tranche - idle_Fasanara",
     "symbol": "AA_idle_Fasanara",
@@ -1330,7 +1330,7 @@
     "metadata": {}
   },
   {
-    "address": "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
+    "addressInfo": "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
     "chainId": 1,
     "name": "Steakhouse Resteaking Vault",
     "symbol": "STEAKLRT",
@@ -1342,7 +1342,7 @@
     }
   },
   {
-    "address": "0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F",
+    "addressInfo": "0x90D2af7d622ca3141efA4d8f1F24d86E5974Cc8F",
     "chainId": 1,
     "name": "Ethereal Pre-deposit Vault",
     "symbol": "eUSDe",
@@ -1351,7 +1351,7 @@
     "metadata": {}
   },
   {
-    "address": "0xaD55aebc9b8c03FC43cd9f62260391c13c23e7c0",
+    "addressInfo": "0xaD55aebc9b8c03FC43cd9f62260391c13c23e7c0",
     "chainId": 1,
     "name": "Compounding OpenDollar",
     "symbol": "cUSDO",
@@ -1362,7 +1362,7 @@
     }
   },
   {
-    "address": "0x3bE775B699fee916E7De117994358fF8F48e4569",
+    "addressInfo": "0x3bE775B699fee916E7De117994358fF8F48e4569",
     "chainId": 1,
     "name": "ViciCoin",
     "symbol": "VCNT",
@@ -1371,7 +1371,7 @@
     "metadata": {}
   },
   {
-    "address": "0x07a36C630e3F072637da3445Da733B29958D8cAB",
+    "addressInfo": "0x07a36C630e3F072637da3445Da733B29958D8cAB",
     "chainId": 1,
     "name": "sBUIDL",
     "symbol": "sBUIDL",
@@ -1380,7 +1380,7 @@
     "metadata": {}
   },
   {
-    "address": "0xdA67B4284609d2d48e5d10cfAc411572727dc1eD",
+    "addressInfo": "0xdA67B4284609d2d48e5d10cfAc411572727dc1eD",
     "chainId": 1,
     "name": "USN",
     "symbol": "USN",
@@ -1389,7 +1389,7 @@
     "metadata": {}
   },
   {
-    "address": "0xE24a3DC889621612422A64E6388927901608B91D",
+    "addressInfo": "0xE24a3DC889621612422A64E6388927901608B91D",
     "chainId": 1,
     "name": "Staked USN",
     "symbol": "sUSN",
@@ -1400,7 +1400,7 @@
     }
   },
   {
-    "address": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
+    "addressInfo": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
     "chainId": 1,
     "name": "Angle Staked USDA",
     "symbol": "STUSD",
@@ -1412,7 +1412,7 @@
     }
   },
   {
-    "address": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
+    "addressInfo": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
     "chainId": 1,
     "name": "Syrup USDC",
     "symbol": "syrupUSDC",
@@ -1423,7 +1423,7 @@
     }
   },
   {
-    "address": "0x282A69142bac47855C3fbE1693FcC4bA3B4d5Ed6",
+    "addressInfo": "0x282A69142bac47855C3fbE1693FcC4bA3B4d5Ed6",
     "chainId": 1,
     "name": "Carrot",
     "symbol": "CARROT",
@@ -1432,7 +1432,7 @@
     "metadata": {}
   },
   {
-    "address": "0x8A5A5DE9db5770123Ff2145F59e9F20047f0A8EC",
+    "addressInfo": "0x8A5A5DE9db5770123Ff2145F59e9F20047f0A8EC",
     "chainId": 1,
     "name": "Merkl Token Wrapper - Carrot",
     "symbol": "mtwCARROT",
@@ -1441,7 +1441,7 @@
     "metadata": {}
   },
   {
-    "address": "0xD7D2802f6b19843ac4DfE25022771FD83b5A7464",
+    "addressInfo": "0xD7D2802f6b19843ac4DfE25022771FD83b5A7464",
     "chainId": 1,
     "name": "xPufETH",
     "symbol": "xPufETH",
@@ -1452,7 +1452,7 @@
     }
   },
   {
-    "address": "0xc824A08dB624942c5E5F330d56530cD1598859fD",
+    "addressInfo": "0xc824A08dB624942c5E5F330d56530cD1598859fD",
     "chainId": 1,
     "name": "High Growth ETH",
     "symbol": "hgETH",
@@ -1464,7 +1464,7 @@
     }
   },
   {
-    "address": "0x5b1578E2604B91bd7b24F86F0E5EF6C024bB3a14",
+    "addressInfo": "0x5b1578E2604B91bd7b24F86F0E5EF6C024bB3a14",
     "chainId": 1,
     "name": "PT Kelp High Growth ETH 25JUN2026",
     "symbol": "PT-hgETH-25JUN2026",
@@ -1476,7 +1476,7 @@
     }
   },
   {
-    "address": "0x6Bf340dB729d82af1F6443A0Ea0d79647b1c3DDf",
+    "addressInfo": "0x6Bf340dB729d82af1F6443A0Ea0d79647b1c3DDf",
     "chainId": 1,
     "name": "Turtle TAC BTC Vault",
     "symbol": "tacBTC",
@@ -1485,7 +1485,7 @@
     "metadata": {}
   },
   {
-    "address": "0x294eecec65A0142e84AEdfD8eB2FBEA8c9a9fbad",
+    "addressInfo": "0x294eecec65A0142e84AEdfD8eB2FBEA8c9a9fbad",
     "chainId": 1,
     "name": "Turtle TAC ETH Vault",
     "symbol": "tacETH",
@@ -1494,7 +1494,7 @@
     "metadata": {}
   },
   {
-    "address": "0x699e04F98dE2Fc395a7dcBf36B48EC837A976490",
+    "addressInfo": "0x699e04F98dE2Fc395a7dcBf36B48EC837A976490",
     "chainId": 1,
     "name": "Turtle TAC USD Vault",
     "symbol": "tacUSD",
@@ -1503,7 +1503,7 @@
     "metadata": {}
   },
   {
-    "address": "0x4737D9b4592B40d51e110b94c9C043c6654067Ae",
+    "addressInfo": "0x4737D9b4592B40d51e110b94c9C043c6654067Ae",
     "chainId": 1,
     "name": "Staked lvlUSD",
     "symbol": "slvlUSD",
@@ -1514,7 +1514,7 @@
     }
   },
   {
-    "address": "0x6440f144b7e50D6a8439336510312d2F54beB01D",
+    "addressInfo": "0x6440f144b7e50D6a8439336510312d2F54beB01D",
     "chainId": 1,
     "name": "BOLD Stablecoin",
     "symbol": "BOLD",
@@ -1523,7 +1523,7 @@
     "metadata": {}
   },
   {
-    "address": "0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11",
+    "addressInfo": "0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11",
     "chainId": 1,
     "name": "sBOLD",
     "symbol": "sBOLD",
@@ -1534,7 +1534,7 @@
     }
   },
   {
-    "address": "0x271C616157e69A43B4977412A64183Cf110Edf16",
+    "addressInfo": "0x271C616157e69A43B4977412A64183Cf110Edf16",
     "chainId": 1,
     "name": "Pareto staked USP",
     "symbol": "sUSP",
@@ -1545,7 +1545,7 @@
     }
   },
   {
-    "address": "0x5C1452F2e4206D2C81DE6Da1BB35Bd8BDD1FebA3",
+    "addressInfo": "0x5C1452F2e4206D2C81DE6Da1BB35Bd8BDD1FebA3",
     "chainId": 1,
     "name": "NapierV2-PT-Pareto staked USP@29/7/2025",
     "symbol": "PT-sUSP@29/7/2025",
@@ -1554,7 +1554,7 @@
     "metadata": {}
   },
   {
-    "address": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
+    "addressInfo": "0xE868084cf08F3c3db11f4B73a95473762d9463f7",
     "chainId": 1,
     "name": "$YU",
     "symbol": "YU",
@@ -1563,7 +1563,7 @@
     "metadata": {}
   },
   {
-    "address": "0x076BdA095a434a7B00733115A0D679DE6478d9f8",
+    "addressInfo": "0x076BdA095a434a7B00733115A0D679DE6478d9f8",
     "chainId": 1,
     "name": "PT Yala stablecoin 4SEP2025",
     "symbol": "PT-YU-4SEP2025",
@@ -1575,7 +1575,7 @@
     }
   },
   {
-    "address": "0xD7158ee345dab25B4fC95266C2bd8d062f243A13",
+    "addressInfo": "0xD7158ee345dab25B4fC95266C2bd8d062f243A13",
     "chainId": 1,
     "name": "PT Yala stablecoin 4DEC2025",
     "symbol": "PT-YU-4DEC2025",
@@ -1587,7 +1587,7 @@
     }
   },
   {
-    "address": "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+    "addressInfo": "0x865377367054516e17014CcdED1e7d814EDC9ce4",
     "chainId": 1,
     "name": "Dola USD Stablecoin",
     "symbol": "DOLA",
@@ -1596,7 +1596,7 @@
     "metadata": {}
   },
   {
-    "address": "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+    "addressInfo": "0xb45ad160634c528Cc3D2926d9807104FA3157305",
     "chainId": 1,
     "name": "Staked DOLA",
     "symbol": "sDOLA",
@@ -1607,7 +1607,7 @@
     }
   },
   {
-    "address": "0xA62B204099277762d1669d283732dCc1B3AA96CE",
+    "addressInfo": "0xA62B204099277762d1669d283732dCc1B3AA96CE",
     "chainId": 1,
     "name": "pUSDe",
     "symbol": "pUSDe",
@@ -1616,7 +1616,7 @@
     "metadata": {}
   },
   {
-    "address": "0x9Cf12ccd6020b6888e4D4C4e4c7AcA33c1eB91f8",
+    "addressInfo": "0x9Cf12ccd6020b6888e4D4C4e4c7AcA33c1eB91f8",
     "chainId": 1,
     "name": "USDaf Stablecoin",
     "symbol": "USDaf",
@@ -1625,7 +1625,7 @@
     "metadata": {}
   },
   {
-    "address": "0x89E93172AEF8261Db8437b90c3dCb61545a05317",
+    "addressInfo": "0x89E93172AEF8261Db8437b90c3dCb61545a05317",
     "chainId": 1,
     "name": "Savings USDaf",
     "symbol": "sUSDaf",
@@ -1636,7 +1636,7 @@
     }
   },
   {
-    "address": "0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2",
+    "addressInfo": "0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2",
     "chainId": 1,
     "name": "Falcon USD",
     "symbol": "USDf",
@@ -1645,7 +1645,7 @@
     "metadata": {}
   },
   {
-    "address": "0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0",
+    "addressInfo": "0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0",
     "chainId": 1,
     "name": "Staked Falcon USD",
     "symbol": "sUSDf",
@@ -1656,7 +1656,7 @@
     }
   },
   {
-    "address": "0xAB365C0879024481E4ad3b47bd6FeA9c10014FbC",
+    "addressInfo": "0xAB365C0879024481E4ad3b47bd6FeA9c10014FbC",
     "chainId": 1,
     "name": "PT-sUSDf-25SEP2025",
     "symbol": "PT-sUSDf-25SEP2025",
@@ -1668,7 +1668,7 @@
     }
   },
   {
-    "address": "0x3DB228FE836D99Ccb25Ec4dfdC80ED6d2CDdCB4b",
+    "addressInfo": "0x3DB228FE836D99Ccb25Ec4dfdC80ED6d2CDdCB4b",
     "chainId": 1,
     "name": "ynUSD Max",
     "symbol": "ynUSDx",
@@ -1679,7 +1679,7 @@
     }
   },
   {
-    "address": "0x9FD7466f987Fd4C45a5BBDe22ED8aba5BC8D72d1",
+    "addressInfo": "0x9FD7466f987Fd4C45a5BBDe22ED8aba5BC8D72d1",
     "chainId": 1,
     "name": "hwHLP",
     "symbol": "hwHLP",
@@ -1690,7 +1690,7 @@
     }
   },
   {
-    "address": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+    "addressInfo": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
     "chainId": 1,
     "name": "Frax USD",
     "symbol": "frxUSD",
@@ -1699,7 +1699,7 @@
     "metadata": {}
   },
   {
-    "address": "0xcf62F905562626CfcDD2261162a51fd02Fc9c5b6",
+    "addressInfo": "0xcf62F905562626CfcDD2261162a51fd02Fc9c5b6",
     "chainId": 1,
     "name": "Staked Frax USD",
     "symbol": "sfrxUSD",
@@ -1710,7 +1710,7 @@
     }
   },
   {
-    "address": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a",
+    "addressInfo": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a",
     "chainId": 1,
     "name": "OpenEden T-Bills",
     "symbol": "TBILL",
@@ -1721,7 +1721,7 @@
     }
   },
   {
-    "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+    "addressInfo": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
     "chainId": 1,
     "name": "World Liberty Financial USD",
     "symbol": "USD1",
@@ -1730,7 +1730,7 @@
     "metadata": {}
   },
   {
-    "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+    "addressInfo": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
     "chainId": 1,
     "name": "cap USD",
     "symbol": "cUSD",
@@ -1739,7 +1739,7 @@
     "metadata": {}
   },
   {
-    "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+    "addressInfo": "0x88887bE419578051FF9F4eb6C858A951921D8888",
     "chainId": 1,
     "name": "Staked cap USD",
     "symbol": "stcUSD",
@@ -1751,7 +1751,7 @@
     }
   },
   {
-    "address": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
+    "addressInfo": "0x004E9C3EF86bc1ca1f0bB5C7662861Ee93350568",
     "chainId": 1,
     "name": "uniBTC",
     "symbol": "uniBTC",
@@ -1760,7 +1760,7 @@
     "metadata": {}
   },
   {
-    "address": "0xa42C63686F45C124f2034152B4BB0CC63CE3Ff52",
+    "addressInfo": "0xa42C63686F45C124f2034152B4BB0CC63CE3Ff52",
     "chainId": 1,
     "name": "PT-uniBTC-18DEC2025",
     "symbol": "PT-uniBTC-18DEC2025",
@@ -1772,7 +1772,7 @@
     }
   },
   {
-    "address": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
+    "addressInfo": "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     "chainId": 1,
     "name": "Curve USR/USDC",
     "symbol": "USRUSDC-Curve-LP",
@@ -1783,7 +1783,7 @@
     }
   },
   {
-    "address": "0x90455bd11Ce8a67C57d467e634Dc142b8e4105Aa",
+    "addressInfo": "0x90455bd11Ce8a67C57d467e634Dc142b8e4105Aa",
     "chainId": 1,
     "name": "Curve cUSDO/USDC",
     "symbol": "cUSDOUSDC-Curve-LP",
@@ -1794,7 +1794,7 @@
     }
   },
   {
-    "address": "0x136389D329968bD82efe05F0911Eeb20eE74A138",
+    "addressInfo": "0x136389D329968bD82efe05F0911Eeb20eE74A138",
     "chainId": 1,
     "name": "PT-USD0++-27NOV2025",
     "symbol": "PT-USD0++-27NOV2025",
@@ -1806,7 +1806,7 @@
     }
   },
   {
-    "address": "0x5a5b93F762739fa94F3EcC0b34Af2e56702E7f70",
+    "addressInfo": "0x5a5b93F762739fa94F3EcC0b34Af2e56702E7f70",
     "chainId": 1,
     "name": "PT-USR-4SEP2025",
     "symbol": "PT-USR-4SEP2025",
@@ -1818,7 +1818,7 @@
     }
   },
   {
-    "address": "0x742B4166878Bfd339Db65a29a17E49b81a6B6Aac",
+    "addressInfo": "0x742B4166878Bfd339Db65a29a17E49b81a6B6Aac",
     "chainId": 1,
     "name": "PT-RLP-4SEP2025",
     "symbol": "PT-RLP-4SEP2025",
@@ -1830,7 +1830,7 @@
     }
   },
   {
-    "address": "0xedCe58C0d14A9Beaa4F053EBdbdb2DF83F211118",
+    "addressInfo": "0xedCe58C0d14A9Beaa4F053EBdbdb2DF83F211118",
     "chainId": 1,
     "name": "PT-USN-31JUL2025",
     "symbol": "PT-USN-31JUL2025",
@@ -1842,7 +1842,7 @@
     }
   },
   {
-    "address": "0x7f01d0FCe9BC646389483384C41B4d71c7139f11",
+    "addressInfo": "0x7f01d0FCe9BC646389483384C41B4d71c7139f11",
     "chainId": 1,
     "name": "PT-mEDGE-31JUL2025",
     "symbol": "PT-mEDGE-31JUL2025",
@@ -1854,7 +1854,7 @@
     }
   },
   {
-    "address": "0x1132065009850C72E27B7950C0f9285d1D103589",
+    "addressInfo": "0x1132065009850C72E27B7950C0f9285d1D103589",
     "chainId": 1,
     "name": "PT-mMEV-31JUL2025",
     "symbol": "PT-mMEV-31JUL2025",
@@ -1866,7 +1866,7 @@
     }
   },
   {
-    "address": "0x207F7205fd6c4b602Fa792C8b2B60e6006D4a0b8",
+    "addressInfo": "0x207F7205fd6c4b602Fa792C8b2B60e6006D4a0b8",
     "chainId": 1,
     "name": "PT-lvlUSD-25SEP2025",
     "symbol": "PT-lvlUSD-25SEP2025",
@@ -1878,7 +1878,7 @@
     }
   },
   {
-    "address": "0x2CA5f2C4300450D53214B00546795c1c07B89acB",
+    "addressInfo": "0x2CA5f2C4300450D53214B00546795c1c07B89acB",
     "chainId": 1,
     "name": "PT-slvlUSD-25SEP2025",
     "symbol": "PT-slvlUSD-25SEP2025",
@@ -1890,7 +1890,7 @@
     }
   },
   {
-    "address": "0x14Bdc3A3AE09f5518b923b69489CBcAfB238e617",
+    "addressInfo": "0x14Bdc3A3AE09f5518b923b69489CBcAfB238e617",
     "chainId": 1,
     "name": "PT-eUSDE-14AUG2025",
     "symbol": "PT-eUSDE-14AUG2025",
@@ -1902,7 +1902,7 @@
     }
   },
   {
-    "address": "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
+    "addressInfo": "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
     "chainId": 1,
     "name": "PT Syrup USDC 28AUG2025",
     "symbol": "PT-syrupUSDC-28AUG2025",
@@ -1914,7 +1914,7 @@
     }
   },
   {
-    "address": "0xE00bd3Df25fb187d6ABBB620b3dfd19839947b81",
+    "addressInfo": "0xE00bd3Df25fb187d6ABBB620b3dfd19839947b81",
     "chainId": 1,
     "name": "PT Ethena sUSDE 27MAR2025",
     "symbol": "PT-sUSDE-27MAR2025",
@@ -1926,7 +1926,7 @@
     }
   },
   {
-    "address": "0xEe9085fC268F6727d5D4293dBABccF901ffDCC29",
+    "addressInfo": "0xEe9085fC268F6727d5D4293dBABccF901ffDCC29",
     "chainId": 1,
     "name": "PT Ethena sUSDE 26DEC2024",
     "symbol": "PT-sUSDE-26DEC2024",
@@ -1938,7 +1938,7 @@
     }
   },
   {
-    "address": "0xAE5099C39f023C91d3dd55244CAFB36225B0850E",
+    "addressInfo": "0xAE5099C39f023C91d3dd55244CAFB36225B0850E",
     "chainId": 1,
     "name": "PT Ethena sUSDE 24OCT2024",
     "symbol": "PT-sUSDE-24OCT2024",
@@ -1950,7 +1950,7 @@
     }
   },
   {
-    "address": "0xEc5a52C685CC3Ad79a6a347aBACe330d69e0b1eD",
+    "addressInfo": "0xEc5a52C685CC3Ad79a6a347aBACe330d69e0b1eD",
     "chainId": 1,
     "name": "PT Lombard LBTC 27MAR2025",
     "symbol": "PT-LBTC-27MAR2025",
@@ -1962,7 +1962,7 @@
     }
   },
   {
-    "address": "0xB997B3418935A1Df0F914Ee901ec83927c1509A0",
+    "addressInfo": "0xB997B3418935A1Df0F914Ee901ec83927c1509A0",
     "chainId": 1,
     "name": "PT ether.fi eBTC 26DEC2024",
     "symbol": "PT-EBTC-26DEC2024",
@@ -1974,7 +1974,7 @@
     }
   },
   {
-    "address": "0x332A8ee60EdFf0a11CF3994b1b846BBC27d3DcD6",
+    "addressInfo": "0x332A8ee60EdFf0a11CF3994b1b846BBC27d3DcD6",
     "chainId": 1,
     "name": "PT Corn Lombard LBTC 26DEC2024",
     "symbol": "PT-cornLBTC-26DEC2024",
@@ -1986,7 +1986,7 @@
     }
   },
   {
-    "address": "0x44A7876cA99460ef3218bf08b5f52E2dbE199566",
+    "addressInfo": "0x44A7876cA99460ef3218bf08b5f52E2dbE199566",
     "chainId": 1,
     "name": "PT Corn ether.fi eBTC 27MAR2025",
     "symbol": "PT-corn-eBTC-27MAR2025",
@@ -1998,7 +1998,7 @@
     }
   },
   {
-    "address": "0x997Ec6Bf18a30Ef01ed8D9c90718C7726a213527",
+    "addressInfo": "0x997Ec6Bf18a30Ef01ed8D9c90718C7726a213527",
     "chainId": 1,
     "name": "PT pumpBTC 27MAR2025",
     "symbol": "PT-pumpBTC-27MAR2025",
@@ -2010,7 +2010,7 @@
     }
   },
   {
-    "address": "0xa76f0C6e5f286bFF151b891d2A0245077F1Ad74c",
+    "addressInfo": "0xa76f0C6e5f286bFF151b891d2A0245077F1Ad74c",
     "chainId": 1,
     "name": "PT Corn pumpBTC 26DEC2024",
     "symbol": "PT-corn-pumpBTC-26DEC2024",
@@ -2022,7 +2022,7 @@
     }
   },
   {
-    "address": "0x23e479ddcda990E8523494895759bD98cD2fDBF6",
+    "addressInfo": "0x23e479ddcda990E8523494895759bD98cD2fDBF6",
     "chainId": 1,
     "name": "PT Corn SolvBTC Babylon 26DEC2024",
     "symbol": "PT-corn-SolvBTC.BBN-26DEC2024",
@@ -2034,7 +2034,7 @@
     }
   },
   {
-    "address": "0x61439b9575278054D69c9176d88FaFaf8319E4b7",
+    "addressInfo": "0x61439b9575278054D69c9176d88FaFaf8319E4b7",
     "chainId": 1,
     "name": "PT USD0++ 30JAN2025",
     "symbol": "PT-USD0++-30JAN2025",
@@ -2046,7 +2046,7 @@
     }
   },
   {
-    "address": "0x5BaE9a5D67d1CA5b09B14c91935f635CFBF3b685",
+    "addressInfo": "0x5BaE9a5D67d1CA5b09B14c91935f635CFBF3b685",
     "chainId": 1,
     "name": "PT USD0++ 27MAR2025",
     "symbol": "PT-USD0++-27MAR2025",
@@ -2058,7 +2058,7 @@
     }
   },
   {
-    "address": "0xf696FE29Ef85E892b5926313897D178288faA07e",
+    "addressInfo": "0xf696FE29Ef85E892b5926313897D178288faA07e",
     "chainId": 1,
     "name": "PT USD0++ 26JUN2025",
     "symbol": "PT-USD0++-26JUN2025",
@@ -2070,7 +2070,7 @@
     }
   },
   {
-    "address": "0x7aa68E84bCD8d1B4C9e10B1e565DB993f68a3E09",
+    "addressInfo": "0x7aa68E84bCD8d1B4C9e10B1e565DB993f68a3E09",
     "chainId": 1,
     "name": "PT Kelp Gain 26DEC2024",
     "symbol": "PT-agETH-26DEC2024",
@@ -2082,7 +2082,7 @@
     }
   },
   {
-    "address": "0xB07b9fDd62DC478E521E8bDe3630a777725B0eB4",
+    "addressInfo": "0xB07b9fDd62DC478E521E8bDe3630a777725B0eB4",
     "chainId": 1,
     "name": "PT Kelp rsETH 26DEC2024",
     "symbol": "PT-rsETH-26DEC2024",
@@ -2094,7 +2094,7 @@
     }
   },
   {
-    "address": "0xb7de5dFCb74d25c2f21841fbd6230355C50d9308",
+    "addressInfo": "0xb7de5dFCb74d25c2f21841fbd6230355C50d9308",
     "chainId": 1,
     "name": "PT Ethena sUSDE 29MAY2025",
     "symbol": "PT-sUSDE-29MAY2025",
@@ -2106,7 +2106,7 @@
     }
   },
   {
-    "address": "0x8A47b431A7D947c6a3ED6E42d501803615a97EAa",
+    "addressInfo": "0x8A47b431A7D947c6a3ED6E42d501803615a97EAa",
     "chainId": 1,
     "name": "PT Ethena USDe 27MAR2025",
     "symbol": "PT-USDe-27MAR2025",
@@ -2118,7 +2118,7 @@
     }
   },
   {
-    "address": "0x917459337CaAC939D41d7493B3999f571D20D667",
+    "addressInfo": "0x917459337CaAC939D41d7493B3999f571D20D667",
     "chainId": 1,
     "name": "PT-USDe-31JUL2025",
     "symbol": "PT-USDe-31JUL2025",
@@ -2130,7 +2130,7 @@
     }
   },
   {
-    "address": "0xA8c8861b5ccF8CCe0ade6811CD2A7A7d3222B0B8",
+    "addressInfo": "0xA8c8861b5ccF8CCe0ade6811CD2A7A7d3222B0B8",
     "chainId": 1,
     "name": "PT Wrapped stUSR 27MAR2025",
     "symbol": "PT-wstUSR-27MAR2025",
@@ -2142,7 +2142,7 @@
     }
   },
   {
-    "address": "0x23E60d1488525bf4685f53b3aa8E676c30321066",
+    "addressInfo": "0x23E60d1488525bf4685f53b3aa8E676c30321066",
     "chainId": 1,
     "name": "PT Wrapped stUSR 25SEP2025",
     "symbol": "PT-wstUSR-25SEP2025",
@@ -2154,7 +2154,7 @@
     }
   },
   {
-    "address": "0xae4bE3acD95B6a4Ac5A0524ab95dA90c721f6C83",
+    "addressInfo": "0xae4bE3acD95B6a4Ac5A0524ab95dA90c721f6C83",
     "chainId": 1,
     "name": "PT Resolv USD 29MAY2025",
     "symbol": "PT-USR-29MAY2025",
@@ -2166,7 +2166,7 @@
     }
   },
   {
-    "address": "0x50D2C7992b802Eef16c04FeADAB310f31866a545",
+    "addressInfo": "0x50D2C7992b802Eef16c04FeADAB310f31866a545",
     "chainId": 1,
     "name": "PT Ethereal eUSDE 29MAY2025",
     "symbol": "PT-eUSDE-29MAY2025",
@@ -2178,7 +2178,7 @@
     }
   },
   {
-    "address": "0x933B9FfEE0Ad3Ef8E4DBb52688ea905826D73755",
+    "addressInfo": "0x933B9FfEE0Ad3Ef8E4DBb52688ea905826D73755",
     "chainId": 1,
     "name": "PT-cUSDO-19JUN2025",
     "symbol": "PT-cUSDO-19JUN2025",
@@ -2190,7 +2190,7 @@
     }
   },
   {
-    "address": "0x3b3fB9C57858EF816833dC91565EFcd85D96f634",
+    "addressInfo": "0x3b3fB9C57858EF816833dC91565EFcd85D96f634",
     "chainId": 1,
     "name": "PT Ethena sUSDE 31JUL2025",
     "symbol": "PT-sUSDE-31JUL2025",
@@ -2202,7 +2202,7 @@
     }
   },
   {
-    "address": "0x7c5aA3E49d46e582f50287f70695278d962392dF",
+    "addressInfo": "0x7c5aA3E49d46e582f50287f70695278d962392dF",
     "chainId": 1,
     "name": "PT-sUSN-31JUL2025",
     "symbol": "PT-sUSN-31JUL2025",
@@ -2214,7 +2214,7 @@
     }
   },
   {
-    "address": "0xFfEc096c087C13Cc268497B89A613cACE4DF9A48",
+    "addressInfo": "0xFfEc096c087C13Cc268497B89A613cACE4DF9A48",
     "chainId": 1,
     "name": "PT-USDS-14AUG2025",
     "symbol": "PT-USDS-14AUG2025",
@@ -2226,7 +2226,7 @@
     }
   },
   {
-    "address": "0xB10DA2F9147f9cf2B8826877Cd0c95c18A0f42dc",
+    "addressInfo": "0xB10DA2F9147f9cf2B8826877Cd0c95c18A0f42dc",
     "chainId": 1,
     "name": "PT-cUSDO-20NOV2025",
     "symbol": "PT-cUSDO-20NOV2025",
@@ -2238,7 +2238,7 @@
     }
   },
   {
-    "address": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
+    "addressInfo": "0xb4444468e444f89e1c2CAc2F1D3ee7e336cBD1f5",
     "chainId": 1,
     "name": "Rezerve.money",
     "symbol": "RZR",
@@ -2247,7 +2247,7 @@
     "metadata": {}
   },
   {
-    "address": "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB",
+    "addressInfo": "0xB33f4B9C6f0624EdeAE8881c97381837760D52CB",
     "chainId": 1,
     "name": "Liquid Staked Rezerve.money",
     "symbol": "lstRZR",
@@ -2259,7 +2259,7 @@
     }
   },
   {
-    "address": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "addressInfo": "0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
     "chainId": 1,
     "name": "MetaMask USD",
     "symbol": "mUSD",
@@ -2268,7 +2268,7 @@
     "metadata": {}
   },
   {
-    "address": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
+    "addressInfo": "0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
     "chainId": 1,
     "name": "YieldFi yUSD",
     "symbol": "yUSD",
@@ -2279,7 +2279,7 @@
     }
   },
   {
-    "address": "0xD1d0fF7BB555f57A9604CE06bca704ab97A0049A",
+    "addressInfo": "0xD1d0fF7BB555f57A9604CE06bca704ab97A0049A",
     "chainId": 1,
     "name": "PT-yUSD-7AUG2025",
     "symbol": "PT-yUSD-7AUG2025",
@@ -2291,7 +2291,7 @@
     }
   },
   {
-    "address": "0x4274cD7277C7bb0806Bd5FE84b9aDAE466a8DA0a",
+    "addressInfo": "0x4274cD7277C7bb0806Bd5FE84b9aDAE466a8DA0a",
     "chainId": 1,
     "name": "Aegis YUSD",
     "symbol": "YUSD",
@@ -2302,7 +2302,7 @@
     }
   },
   {
-    "address": "0x61d799b23C938220D27fC03Ad2044A7AA891fE81",
+    "addressInfo": "0x61d799b23C938220D27fC03Ad2044A7AA891fE81",
     "chainId": 1,
     "name": "PT-sYUSD-4SEP2025",
     "symbol": "PT-sYUSD-4SEP2025",
@@ -2314,7 +2314,7 @@
     }
   },
   {
-    "address": "0x66526197a4BAf496D97e1004e43c2C374Fb7d2E7",
+    "addressInfo": "0x66526197a4BAf496D97e1004e43c2C374Fb7d2E7",
     "chainId": 1,
     "name": "PT sBold 27NOV2025",
     "symbol": "PT-sBOLD-27NOV2025",
@@ -2326,7 +2326,7 @@
     }
   },
   {
-    "address": "0x1Ff893C9071d04F8A965a90FcB0de22406A3eEaa",
+    "addressInfo": "0x1Ff893C9071d04F8A965a90FcB0de22406A3eEaa",
     "chainId": 1,
     "name": "Principal Token: sBOLD-1765325646",
     "symbol": "PT-sBOLD-1765325646",
@@ -2338,7 +2338,7 @@
     }
   },
   {
-    "address": "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
+    "addressInfo": "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
     "chainId": 1,
     "name": "PPT Ethena USDe 25SEP2025",
     "symbol": "PT-USDe-25SEP2025",
@@ -2350,7 +2350,7 @@
     }
   },
   {
-    "address": "0x62C6E813b9589C3631Ba0Cdb013acdB8544038B7",
+    "addressInfo": "0x62C6E813b9589C3631Ba0Cdb013acdB8544038B7",
     "chainId": 1,
     "name": "PT Ethena USDe 27NOV2025",
     "symbol": "PT-USDe-27NOV2025",
@@ -2362,7 +2362,7 @@
     }
   },
   {
-    "address": "0x9F56094C450763769BA0EA9Fe2876070c0fD5F77",
+    "addressInfo": "0x9F56094C450763769BA0EA9Fe2876070c0fD5F77",
     "chainId": 1,
     "name": "PT Ethena sUSDE 25SEP2025",
     "symbol": "PT-sUSDE-25SEP2025",
@@ -2374,7 +2374,7 @@
     }
   },
   {
-    "address": "0xe6A934089BBEe34F832060CE98848359883749B3",
+    "addressInfo": "0xe6A934089BBEe34F832060CE98848359883749B3",
     "chainId": 1,
     "name": "PT Ethena sUSDE 27NOV2025",
     "symbol": "PT-sUSDE-27NOV2025",
@@ -2386,7 +2386,7 @@
     }
   },
   {
-    "address": "0xd0a4B74A6B62aA2b6C02349463D9041606608F36",
+    "addressInfo": "0xd0a4B74A6B62aA2b6C02349463D9041606608F36",
     "chainId": 1,
     "name": "PT Terminal USDe 25SEP2025",
     "symbol": "PT-tUSDe-25SEP2025",
@@ -2398,7 +2398,7 @@
     }
   },
   {
-    "address": "0x2E3229674085F5490a4cC2558ab96aEDC3ab25D1",
+    "addressInfo": "0x2E3229674085F5490a4cC2558ab96aEDC3ab25D1",
     "chainId": 1,
     "name": "PT-mEDGE-30OCT2025",
     "symbol": "PT-mEDGE-30OCT2025",
@@ -2410,7 +2410,7 @@
     }
   },
   {
-    "address": "0x61da65F0534C6A4F4c9757f2979A923c08d6D2aa",
+    "addressInfo": "0x61da65F0534C6A4F4c9757f2979A923c08d6D2aa",
     "chainId": 1,
     "name": "PT-mMEV-30OCT2025",
     "symbol": "PT-mMEV-30OCT2025",
@@ -2422,7 +2422,7 @@
     }
   },
   {
-    "address": "0xeC3b5e45dD278d5AB9CDB31754B54DB314e9D52a",
+    "addressInfo": "0xeC3b5e45dD278d5AB9CDB31754B54DB314e9D52a",
     "chainId": 1,
     "name": "PT-USDf-29JAN2026",
     "symbol": "PT-USDf-29JAN2026",
@@ -2434,7 +2434,7 @@
     }
   },
   {
-    "address": "0x904673592a3FEbB74a30a73161e8C05A200C8961",
+    "addressInfo": "0x904673592a3FEbB74a30a73161e8C05A200C8961",
     "chainId": 1,
     "name": "PT-hwHLP-25SEP2025",
     "symbol": "PT-hwHLP-25SEP2025",
@@ -2446,7 +2446,7 @@
     }
   },
   {
-    "address": "0xF3f491e5608f8B8a6Fd9E9d66a4a4036d7FD282C",
+    "addressInfo": "0xF3f491e5608f8B8a6Fd9E9d66a4a4036d7FD282C",
     "chainId": 1,
     "name": "PT-pUSDe-16OCT2025",
     "symbol": "PT-pUSDe-16OCT2025",
@@ -2458,7 +2458,7 @@
     }
   },
   {
-    "address": "0xC3c7E5E277d31CD24a3Ac4cC9af3B6770F30eA33",
+    "addressInfo": "0xC3c7E5E277d31CD24a3Ac4cC9af3B6770F30eA33",
     "chainId": 1,
     "name": "PT Staked cap USD 29JAN2026",
     "symbol": "PT-stcUSD-29JAN2026",
@@ -2470,7 +2470,7 @@
     }
   },
   {
-    "address": "0x545A490f9ab534AdF409A2E682bc4098f49952e3",
+    "addressInfo": "0x545A490f9ab534AdF409A2E682bc4098f49952e3",
     "chainId": 1,
     "name": "PT cap USD 29JAN2026",
     "symbol": "PT-cUSD-29JAN2026",
@@ -2482,7 +2482,7 @@
     }
   },
   {
-    "address": "0x48E502FBB6Ff2CC687d049150E2C8AdDC765A43a",
+    "addressInfo": "0x48E502FBB6Ff2CC687d049150E2C8AdDC765A43a",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0.svg",
@@ -2494,7 +2494,7 @@
     }
   },
   {
-    "address": "0x9B02ca5685E9C332b158c01459562a161c8e8ADf",
+    "addressInfo": "0x9B02ca5685E9C332b158c01459562a161c8e8ADf",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/56060/large/USDaf.png?1748165829",
@@ -2506,7 +2506,7 @@
     }
   },
   {
-    "address": "0xA3CA92a69c6809607837bc3BD6B13e4c1E1e8aE9",
+    "addressInfo": "0xA3CA92a69c6809607837bc3BD6B13e4c1E1e8aE9",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/0x0aBd93dA8387B5Ef0511a2859d85D84fe4519e94.svg",
@@ -2518,7 +2518,7 @@
     }
   },
   {
-    "address": "0x9b5528528656DBC094765E2abB79F293c21191B9",
+    "addressInfo": "0x9b5528528656DBC094765E2abB79F293c21191B9",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/mhyper.svg",
@@ -2529,7 +2529,7 @@
     }
   },
   {
-    "address": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
+    "addressInfo": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/mapollo.svg",
@@ -2540,7 +2540,7 @@
     }
   },
   {
-    "address": "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8",
+    "addressInfo": "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "/tokens/1/mapollo.svg",
@@ -2552,7 +2552,7 @@
     }
   },
   {
-    "address": "0xE4d30cCF87Cb3E5E637b64A2EE21bD5d3901839A",
+    "addressInfo": "0xE4d30cCF87Cb3E5E637b64A2EE21bD5d3901839A",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "/tokens/1/mhyper.svg",
@@ -2564,7 +2564,7 @@
     }
   },
   {
-    "address": "0xA19f6e0dF08a7917F2F8A33Db66D0AF31fF5ECA6",
+    "addressInfo": "0xA19f6e0dF08a7917F2F8A33Db66D0AF31fF5ECA6",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/mfarm.svg",
@@ -2575,7 +2575,7 @@
     }
   },
   {
-    "address": "0xb64C014307622eB15046C66fF71D04258F5963DC",
+    "addressInfo": "0xb64C014307622eB15046C66fF71D04258F5963DC",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/mevbtc.svg",
@@ -2586,7 +2586,7 @@
     }
   },
   {
-    "address": "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
+    "addressInfo": "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/mfone.svg",
@@ -2597,7 +2597,7 @@
     }
   },
   {
-    "address": "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
+    "addressInfo": "0x1135b22d6e8FD0809392478eEDcd8c107dB6aF9D",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/tusde.svg",
@@ -2609,7 +2609,7 @@
     }
   },
   {
-    "address": "0xfCeEB7586bab730fA400A5BF3FcF298d0DB4c7e7",
+    "addressInfo": "0xfCeEB7586bab730fA400A5BF3FcF298d0DB4c7e7",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
@@ -2621,7 +2621,7 @@
     }
   },
   {
-    "address": "0x23e0D07095DAec91B6Ae016cA9F08222dCc64c49",
+    "addressInfo": "0x23e0D07095DAec91B6Ae016cA9F08222dCc64c49",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
@@ -2633,7 +2633,7 @@
     }
   },
   {
-    "address": "0x3A70F0C696dcB3A4aB3833cD9726397dD61AC85e",
+    "addressInfo": "0x3A70F0C696dcB3A4aB3833cD9726397dD61AC85e",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
@@ -2645,7 +2645,7 @@
     }
   },
   {
-    "address": "0x12fd502e2052CaFB41eccC5B596023d9978057d6",
+    "addressInfo": "0x12fd502e2052CaFB41eccC5B596023d9978057d6",
     "chainId": 1,
     "decimals": 8,
     "logoURI": "/tokens/1/xbtc.svg",
@@ -2657,7 +2657,7 @@
     }
   },
   {
-    "address": "0x7E586fBaF3084C0be7aB5C82C04FfD7592723153",
+    "addressInfo": "0x7E586fBaF3084C0be7aB5C82C04FfD7592723153",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/xeth.svg",
@@ -2669,7 +2669,7 @@
     }
   },
   {
-    "address": "0x7743e50F534a7f9F1791DdE7dCD89F7783Eefc39",
+    "addressInfo": "0x7743e50F534a7f9F1791DdE7dCD89F7783Eefc39",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/fxsave.svg",
@@ -2680,7 +2680,7 @@
     }
   },
   {
-    "address": "0x085780639CC2cACd35E474e71f4d000e2405d8f6",
+    "addressInfo": "0x085780639CC2cACd35E474e71f4d000e2405d8f6",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/fxusd.svg",
@@ -2689,7 +2689,7 @@
     "metadata": {}
   },
   {
-    "address": "0xBA1EDF4A4C7eB8Cb0DaE0594326179f9c7D909D2",
+    "addressInfo": "0xBA1EDF4A4C7eB8Cb0DaE0594326179f9c7D909D2",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "/tokens/1/xusd.jpg",
@@ -2701,7 +2701,7 @@
     }
   },
   {
-    "address": "0x3E7736d0b1Ed0F6A0A555355b72c2C2d416564E1",
+    "addressInfo": "0x3E7736d0b1Ed0F6A0A555355b72c2C2d416564E1",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "/tokens/1/mfarm.svg",
@@ -2713,7 +2713,7 @@
     }
   },
   {
-    "address": "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003",
+    "addressInfo": "0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/srUSDe.svg",
@@ -2724,7 +2724,7 @@
     }
   },
   {
-    "address": "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c",
+    "addressInfo": "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/srUSDe.svg",
@@ -2736,7 +2736,7 @@
     }
   },
   {
-    "address": "0xC58D044404d8B14e953C115E67823784dEA53d8F",
+    "addressInfo": "0xC58D044404d8B14e953C115E67823784dEA53d8F",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/jrUSDe.svg",
@@ -2747,7 +2747,7 @@
     }
   },
   {
-    "address": "0x53F3373F0D811902405f91eB0d5cc3957887220D",
+    "addressInfo": "0x53F3373F0D811902405f91eB0d5cc3957887220D",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/jrUSDe.svg",
@@ -2759,7 +2759,7 @@
     }
   },
   {
-    "address": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
+    "addressInfo": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "https://coin-images.coingecko.com/coins/images/35087/large/W_Token_%283%29.png?1758122686",
@@ -2768,7 +2768,7 @@
     "metadata": {}
   },
   {
-    "address": "0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
+    "addressInfo": "0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/iusd.svg",
@@ -2779,7 +2779,7 @@
     }
   },
   {
-    "address": "0x48f9e38f3070AD8945DFEae3FA70987722E3D89c",
+    "addressInfo": "0x48f9e38f3070AD8945DFEae3FA70987722E3D89c",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/iusd.svg",
@@ -2788,7 +2788,7 @@
     "metadata": {}
   },
   {
-    "address": "0x12b004719fb632f1E7c010c6F5D6009Fb4258442",
+    "addressInfo": "0x12b004719fb632f1E7c010c6F5D6009Fb4258442",
     "chainId": 1,
     "decimals": 18,
     "logoURI": "/tokens/1/iusd.svg",
@@ -2800,7 +2800,7 @@
     }
   },
   {
-    "address": "0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
+    "addressInfo": "0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
     "chainId": 1,
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/1/0xd2E230f71CA8DB211067BC4070A94D268b313fA3",
@@ -2809,6 +2809,42 @@
     "metadata": {
       "isPendlePT": true,
       "pendleMarket": "0x233062c1de76a38a4f41ab7c32e7bdb80a1dfc02"
+    }
+  },
+  {
+    "addressInfo": "0x9a34eB848C06d438d8747060A383dd13cFf33317",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x9a34eB848C06d438d8747060A383dd13cFf33317",
+    "name": "PT Midas mEDGE 29JAN2026",
+    "symbol": "PT-mEDGE-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xaf5669e4ed9a999667cd2b810878022cf54866d1"
+    }
+  },
+  {
+    "addressInfo": "0x2c543181871718C05bB191B8CE8F2A6538D72762",
+    "chainId": 1,
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x2c543181871718C05bB191B8CE8F2A6538D72762",
+    "name": "PT Midas MEV 29JAN2026",
+    "symbol": "PT-mMEV-29JAN2026",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xfe8acf962f9a67d67b858819acee296dfda878dd"
+    }
+  },
+  {
+    "addressInfo": "0x41d49208a7E61EEd06b3504262C54E7C5fF04bFc",
+    "chainId": 1,
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/1/0x41d49208a7E61EEd06b3504262C54E7C5fF04bFc",
+    "name": "PT Bitcoin MEV Capital 25DEC2025",
+    "symbol": "PT-mevBTC-25DEC2025",
+    "meta": {
+      "isPendlePT": true,
+      "pendleMarket": "0xb1f73a26c8992fc6e6f7a0788e6e7dfb7a0a8f90"
     }
   }
 ]
