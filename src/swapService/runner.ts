@@ -63,7 +63,12 @@ export async function runPipeline(
       StatusCodes.NOT_FOUND,
       "Pipeline empty or result not found",
     )
-  if (!finalResult.quotes || finalResult.quotes.length === 0) {
+
+  // empty results when provider is set is a valid response
+  if (
+    !finalResult.quotes ||
+    (finalResult.quotes.length === 0 && !swapParams.provider)
+  ) {
     throw new ApiError(
       StatusCodes.NOT_FOUND,
       "Swap quote not found",
@@ -71,14 +76,18 @@ export async function runPipeline(
     )
   }
 
-  console.log({
-    name: "Best quote",
-    amountIn: finalResult.quotes[0].amountIn,
-    amountInMax: finalResult.quotes[0].amountInMax,
-    amountOut: finalResult.quotes[0].amountOut,
-    amountOutMin: finalResult.quotes[0].amountOutMin,
-    route: finalResult.quotes[0].route,
-  })
+  if (finalResult.quotes.length) {
+    console.log({
+      name: "Best quote",
+      amountIn: finalResult.quotes[0].amountIn,
+      amountInMax: finalResult.quotes[0].amountInMax,
+      amountOut: finalResult.quotes[0].amountOut,
+      amountOutMin: finalResult.quotes[0].amountOutMin,
+      route: finalResult.quotes[0].route,
+    })
+  } else {
+    console.log("Empty results []")
+  }
   // console.log(
   //   finalResult.quotes
   //     .map((q) => q.route.map((r) => r.providerName).join(" "))
@@ -93,13 +102,14 @@ export async function runPipeline(
 export async function findSwaps(swapParams: SwapParams) {
   // GLOBAL CHECKS
   let quotes = await runPipeline(swapParams)
+  const origQuoteLenght = quotes.length
 
   // make sure verify item includes at least a function selector
   quotes = quotes.filter(
     (q) => isHex(q.verify.verifierData) && q.verify.verifierData.length >= 10,
   )
 
-  if (quotes.length === 0)
+  if (origQuoteLenght > 0 && quotes.length === 0)
     throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, "Invalid quotes")
 
   for (const quote of quotes) {
