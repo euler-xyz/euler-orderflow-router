@@ -21,7 +21,7 @@
     "name": "Wrapped MON",
     "symbol": "WMON",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A"
   },
   {
     "chainId": 143,
@@ -29,7 +29,7 @@
     "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x754704Bc059F8C67012fEd69BC8A327a5aafb603?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x754704Bc059F8C67012fEd69BC8A327a5aafb603"
   },
   {
     "chainId": 143,
@@ -37,7 +37,7 @@
     "name": "AUSD",
     "symbol": "AUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a"
   },
   {
     "chainId": 143,
@@ -45,7 +45,7 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242"
   },
   {
     "chainId": 143,
@@ -53,7 +53,7 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
   },
   {
     "chainId": 143,
@@ -61,7 +61,7 @@
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0xecAc9C5F704e954931349Da37F60E39f515c11c1?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0xecAc9C5F704e954931349Da37F60E39f515c11c1"
   },
   {
     "chainId": 143,
@@ -69,7 +69,7 @@
     "name": "Bitcoin",
     "symbol": "BTC.b",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072"
   },
   {
     "chainId": 143,
@@ -77,7 +77,7 @@
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x10Aeaf63194db8d453d4D85a06E5eFE1dd0b5417?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x10Aeaf63194db8d453d4D85a06E5eFE1dd0b5417"
   },
   {
     "chainId": 143,
@@ -85,7 +85,7 @@
     "name": "gMON",
     "symbol": "gMON",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081"
   },
   {
     "chainId": 143,
@@ -93,7 +93,7 @@
     "name": "ShMonad",
     "symbol": "shMON",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x1B68626dCa36c7fE922fD2d55E4f631d962dE19c?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x1B68626dCa36c7fE922fD2d55E4f631d962dE19c"
   },
   {
     "chainId": 143,
@@ -101,7 +101,7 @@
     "name": "Kintsu Staked Monad",
     "symbol": "sMON",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xA3227C5969757783154C60bF0bC1944180ed81B9?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0xA3227C5969757783154C60bF0bC1944180ed81B9"
   },
   {
     "chainId": 143,
@@ -109,7 +109,7 @@
     "name": "USDT0",
     "symbol": "USDT0",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0xe7cd86e13AC4309349F30B3435a9d337750fC82D?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0xe7cd86e13AC4309349F30B3435a9d337750fC82D"
   },
   {
     "chainId": 143,
@@ -117,6 +117,6 @@
     "name": "XAUt0",
     "symbol": "XAUt0",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x01bFF41798a0BcF287b996046Ca68b395DbC1071?v=490330"
+    "logoURI": "https://token-images.euler.finance/143/0x01bFF41798a0BcF287b996046Ca68b395DbC1071"
   }
 ]

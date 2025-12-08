@@ -21,7 +21,7 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x4200000000000000000000000000000000000006?v=490330"
+    "logoURI": "https://token-images.euler.finance/1923/0x4200000000000000000000000000000000000006"
   },
   {
     "chainId": 1923,
@@ -29,7 +29,7 @@
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
@@ -41,7 +41,7 @@
     "name": "Wrapped eETH",
     "symbol": "weETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0xA6cB988942610f6731e664379D15fFcfBf282b44?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0xA6cB988942610f6731e664379D15fFcfBf282b44",
     "metadata": {
       "provider": "ETHERFI"
     }
@@ -52,7 +52,7 @@
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x2416092f143378750bb29b79eD961ab195CcEea5?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0x2416092f143378750bb29b79eD961ab195CcEea5",
     "metadata": {
       "provider": "RENZO"
     }
@@ -63,7 +63,7 @@
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0xc3eACf0612346366Db554C991D7858716db09f58?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0xc3eACf0612346366Db554C991D7858716db09f58",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
@@ -75,7 +75,7 @@
     "name": "swETH",
     "symbol": "swETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "ca2acc2d-6246-44aa-ae91-8725b2c62c7c"
@@ -87,7 +87,7 @@
     "name": "rswETH",
     "symbol": "rswETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x18d33689AE5d02649a859A1CF16c9f0563975258?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0x18d33689AE5d02649a859A1CF16c9f0563975258",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "eff9b43c-a80d-4bfc-9f9e-55e02a8ef619"
@@ -99,7 +99,7 @@
     "name": "Renzo Restaked LST",
     "symbol": "pzETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7?v=490330",
+    "logoURI": "https://token-images.euler.finance/1923/0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7",
     "metadata": {
       "provider": "RENZO"
     }
@@ -110,7 +110,7 @@
     "name": "Relend Network USDC",
     "symbol": "rUSDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/1923/0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D?v=490330"
+    "logoURI": "https://token-images.euler.finance/1923/0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D"
   },
   {
     "chainId": 1923,
@@ -118,7 +118,7 @@
     "name": "EVK Vault eWETH-1",
     "symbol": "eWETH-1",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x49C077B74292aA8F589d39034Bf9C1Ed1825a608?v=490330"
+    "logoURI": "https://token-images.euler.finance/1923/0x49C077B74292aA8F589d39034Bf9C1Ed1825a608"
   },
   {
     "chainId": 1923,
@@ -126,6 +126,6 @@
     "name": "USD Stable",
     "symbol": "USDs",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x7fA65bb90fCEc0FA82e009E65AA3736c376C2572?v=490330"
+    "logoURI": "https://token-images.euler.finance/1923/0x7fA65bb90fCEc0FA82e009E65AA3736c376C2572"
   }
 ]

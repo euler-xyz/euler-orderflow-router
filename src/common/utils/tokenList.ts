@@ -79,7 +79,9 @@ export async function buildCache() {
       if (res.success === "false") {
         throw new Error(JSON.stringify(res))
       }
-
+      for (const t of res) {
+        t.logoURI = t.logoURI.replace(/([?&])v=[^&]*/g, "")
+      }
       cache[Number(chainId)] = res as TokenListItem[]
     }),
   ).catch((err) => {

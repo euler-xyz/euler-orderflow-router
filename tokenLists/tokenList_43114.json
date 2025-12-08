@@ -21,7 +21,7 @@
     "name": "MockERC20",
     "symbol": "MOCK",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x66f9E7C1a356Aed33551a31a7f58D222aC4c87A9?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x66f9E7C1a356Aed33551a31a7f58D222aC4c87A9"
   },
   {
     "chainId": 43114,
@@ -29,7 +29,7 @@
     "name": "Wrapped AVAX",
     "symbol": "WAVAX",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7"
   },
   {
     "chainId": 43114,
@@ -37,7 +37,7 @@
     "name": "TetherToken",
     "symbol": "USDt",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7"
   },
   {
     "chainId": 43114,
@@ -45,7 +45,7 @@
     "name": "USD Coin",
     "symbol": "USDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E"
   },
   {
     "chainId": 43114,
@@ -53,7 +53,7 @@
     "name": "Bitcoin",
     "symbol": "BTC.b",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/43114/0x152b9d0FdC40C096757F570A51E494bd4b943E50?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x152b9d0FdC40C096757F570A51E494bd4b943E50"
   },
   {
     "chainId": 43114,
@@ -61,7 +61,7 @@
     "name": "SolvBTC Babylon",
     "symbol": "SolvBTC.BBN",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xCC0966D8418d412c599A6421b760a847eB169A8c?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xCC0966D8418d412c599A6421b760a847eB169A8c"
   },
   {
     "chainId": 43114,
@@ -69,7 +69,7 @@
     "name": "Wrapped Ether",
     "symbol": "WETH.e",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB"
   },
   {
     "chainId": 43114,
@@ -77,7 +77,7 @@
     "name": "Staked AVAX",
     "symbol": "sAVAX",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
     "metadata": {
       "provider": "SAVAX"
     }
@@ -88,7 +88,7 @@
     "name": "GoGoPool Liquid Staking Token",
     "symbol": "ggAVAX",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "3efc0d84-53c6-4c6a-b1c3-c140502c7f26"
@@ -100,7 +100,7 @@
     "name": "AUSD",
     "symbol": "AUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a"
   },
   {
     "chainId": 43114,
@@ -108,7 +108,7 @@
     "name": "avUSD",
     "symbol": "avUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346",
     "metadata": {
       "provider": "AVUSD"
     }
@@ -119,7 +119,7 @@
     "name": "Staked avUSD",
     "symbol": "savUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x06d47F3fb376649c3A9Dafe069B3D6E35572219E?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x06d47F3fb376649c3A9Dafe069B3D6E35572219E",
     "metadata": {
       "provider": "SAVUSD"
     }
@@ -130,7 +130,7 @@
     "name": "sBUIDL",
     "symbol": "sBUIDL",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0xaEb1FA0853c7C98EAb10fcF0EA669aE3d07FBB10?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xaEb1FA0853c7C98EAb10fcF0EA669aE3d07FBB10"
   },
   {
     "chainId": 43114,
@@ -138,7 +138,7 @@
     "name": "BlackRock USD Institutional Digital Liquidity Fund",
     "symbol": "BUIDL",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x53FC82f14F009009b440a706e31c9021E1196A2F?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x53FC82f14F009009b440a706e31c9021E1196A2F"
   },
   {
     "chainId": 43114,
@@ -146,7 +146,7 @@
     "name": "Staked deUSD",
     "symbol": "sdeUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x68088C91446c7bEa49ea7Dbd3B96Ce62B272DC96?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x68088C91446c7bEa49ea7Dbd3B96Ce62B272DC96",
     "metadata": {
       "provider": "SDEUSD"
     }
@@ -157,7 +157,7 @@
     "name": "deUSD",
     "symbol": "deUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xB57B25851fE2311CC3fE511c8F10E868932e0680?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xB57B25851fE2311CC3fE511c8F10E868932e0680"
   },
   {
     "chainId": 43114,
@@ -165,7 +165,7 @@
     "name": "Unity",
     "symbol": "UTY",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xDBc5192A6B6FfEe7451301bb4ec312f844F02B4A?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xDBc5192A6B6FfEe7451301bb4ec312f844F02B4A"
   },
   {
     "chainId": 43114,
@@ -173,7 +173,7 @@
     "name": "Staked UTY",
     "symbol": "yUTY",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x580d5E1399157FD0d58218b7A514b60974F2AB01?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x580d5E1399157FD0d58218b7A514b60974F2AB01",
     "metadata": {
       "provider": "XSY"
     }
@@ -184,7 +184,7 @@
     "name": "xUSDC",
     "symbol": "xUSDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0xA39986F96B80d04e8d7AeAaF47175F47C23FD0f4?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xA39986F96B80d04e8d7AeAaF47175F47C23FD0f4"
   },
   {
     "chainId": 43114,
@@ -192,7 +192,7 @@
     "name": "Solv BTC",
     "symbol": "SolvBTC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xbc78D84Ba0c46dFe32cf2895a19939c86b81a777?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xbc78D84Ba0c46dFe32cf2895a19939c86b81a777"
   },
   {
     "chainId": 43114,
@@ -200,7 +200,7 @@
     "name": "Wrapped eETH",
     "symbol": "weETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xA3D68b74bF0528fdD07263c60d6488749044914b?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0xA3D68b74bF0528fdD07263c60d6488749044914b",
     "metadata": {
       "provider": "ETHERFI"
     }
@@ -211,7 +211,7 @@
     "name": "Euro Coin",
     "symbol": "EURC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD"
   },
   {
     "chainId": 43114,
@@ -219,7 +219,7 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC.e",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/43114/0x50b7545627a5162F82A992c33b87aDc75187B218?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x50b7545627a5162F82A992c33b87aDc75187B218"
   },
   {
     "chainId": 43114,
@@ -227,7 +227,7 @@
     "name": "xUSDC",
     "symbol": "xUSDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x7Dc0496016d88c3EbA6d54D1514F24B3C9872894?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x7Dc0496016d88c3EbA6d54D1514F24B3C9872894"
   },
   {
     "chainId": 43114,
@@ -235,7 +235,7 @@
     "name": "xUSDC",
     "symbol": "xUSDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0xCF0Eb4ac018C06a16ED5c63484823C7805e7599D?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0xCF0Eb4ac018C06a16ED5c63484823C7805e7599D",
     "metadata": {
       "provider": "MULTIPLI"
     }
@@ -246,7 +246,7 @@
     "name": "Upshift Avalanche AUSD",
     "symbol": "upAUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x3408b22d8895753C9A3e14e4222E981d4E9A599E?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x3408b22d8895753C9A3e14e4222E981d4E9A599E"
   },
   {
     "chainId": 43114,
@@ -254,7 +254,7 @@
     "name": "Upshift Avalanche AVAX",
     "symbol": "upAVAX",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xB2bFb52cfc40584AC4e9e2B36a5B8d6554A56e0b?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xB2bFb52cfc40584AC4e9e2B36a5B8d6554A56e0b"
   },
   {
     "chainId": 43114,
@@ -262,7 +262,7 @@
     "name": "PT Ethena USDe 25SEP2025",
     "symbol": "PT-USDe-25SEP2025",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0xB4205a645c7e920BD8504181B1D7f2c5C955C3e7?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0xB4205a645c7e920BD8504181B1D7f2c5C955C3e7"
   },
   {
     "chainId": 43114,
@@ -270,7 +270,7 @@
     "name": "PT Ethena USDe 27NOV2025",
     "symbol": "PT-USDe-27NOV2025",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x9Da7f8c0D6e3F247AFFDf92c3DDDd83c1E248E14",
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -285,7 +285,7 @@
     "name": "USDe",
     "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34"
   },
   {
     "chainId": 43114,
@@ -293,7 +293,7 @@
     "name": "EVK Vault eUSDC-2",
     "symbol": "eUSDC-2",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x39dE0f00189306062D79eDEC6DcA5bb6bFd108f9?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x39dE0f00189306062D79eDEC6DcA5bb6bFd108f9"
   },
   {
     "chainId": 43114,
@@ -301,7 +301,7 @@
     "name": "Staked USDe",
     "symbol": "sUSDe",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "metadata": {
       "provider": "SUSDE"
     }
@@ -312,7 +312,7 @@
     "name": "rsETHWrapper",
     "symbol": "wrsETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x7bFd4CA2a6Cf3A3fDDd645D10B323031afe47FF0?v=490330",
+    "logoURI": "https://token-images.euler.finance/43114/0x7bFd4CA2a6Cf3A3fDDd645D10B323031afe47FF0",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
@@ -324,7 +324,7 @@
     "name": "xBTC.b",
     "symbol": "xBTC.b",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/43114/0x468BbabAEf852C134b584382C0fef83F2954Cd5c?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x468BbabAEf852C134b584382C0fef83F2954Cd5c"
   },
   {
     "chainId": 43114,
@@ -332,7 +332,7 @@
     "name": "EURØP",
     "symbol": "EUROP",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/43114/0x8835A2F66A7AaCCB297Cb985831A616B75e2E16c?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x8835A2F66A7AaCCB297Cb985831A616B75e2E16c"
   },
   {
     "chainId": 43114,
@@ -340,6 +340,6 @@
     "name": "Staked avBTC",
     "symbol": "savBTC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/43114/0x649342c6bff544d82DF1B2bA3C93e0C22cDeBa84?v=490330"
+    "logoURI": "https://token-images.euler.finance/43114/0x649342c6bff544d82DF1B2bA3C93e0C22cDeBa84"
   }
 ]
