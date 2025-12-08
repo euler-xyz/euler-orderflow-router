@@ -1,400 +1,412 @@
 [
   {
-    "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     "chainId": 42161,
+    "address": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
+    "name": "EUL",
+    "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-    "name": "Dai Stablecoin",
-    "symbol": "DAI",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
   },
   {
-    "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
     "chainId": 42161,
+    "address": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
+    "name": "rEUL",
+    "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "name": "Wrapped Ether",
-    "symbol": "WETH",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
   },
   {
-    "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     "chainId": 42161,
-    "decimals": 6,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "name": "USDCoin",
-    "symbol": "USDC",
-    "metadata": {}
-  },
-  {
-    "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33033/large/weETH.png?1701438396",
-    "name": "Wrapped eETH",
-    "symbol": "weETH",
-    "metadata": {
-      "provider": "ETHERFI"
-    }
-  },
-  {
     "address": "0x004626A008B1aCdC4c74ab51644093b155e59A23",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/32036/large/stEUR-x4.png?1696530832",
-    "name": "Staked agEUR",
+    "name": "Staked EURA",
     "symbol": "stEUR",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x004626A008B1aCdC4c74ab51644093b155e59A23?v=490330",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "789970a7-7ddd-4580-b86b-fe0c3844881e"
     }
   },
   {
-    "address": "0x078f358208685046a11C85e8ad32895DED33A249",
     "chainId": 42161,
-    "decimals": 8,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+    "address": "0x00CBcF7B3d37844e44b888Bc747bDd75FCf4E555",
+    "name": "xPet.tech Token",
+    "symbol": "XPET",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x00CBcF7B3d37844e44b888Bc747bDd75FCf4E555?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x078f358208685046a11C85e8ad32895DED33A249",
     "name": "Aave Arbitrum WBTC",
     "symbol": "aArbWBTC",
-    "metadata": {}
-  },
-  {
-    "address": "0xEa3DD1a16f331fcd9B46Eb54C5b5AdcDb228FD84",
-    "chainId": 42161,
-    "decimals": 6,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    "name": "MockUSDCoin",
-    "symbol": "MUSDC",
-    "metadata": {}
-  },
-  {
-    "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-    "chainId": 42161,
     "decimals": 8,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
-    "name": "Wrapped BTC",
-    "symbol": "WBTC",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/42161/0x078f358208685046a11C85e8ad32895DED33A249?v=490330"
   },
   {
-    "address": "0x5979D7b546E38E414F7E9822514be443A4800529",
     "chainId": 42161,
-    "name": "WrappedliquidstakedEther2.0",
+    "address": "0x050C24dBf1eEc17babE5fc585F06116A259CC77A",
+    "name": "iBTC",
+    "symbol": "IBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/42161/0x050C24dBf1eEc17babE5fc585F06116A259CC77A?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8",
+    "name": "Balancer",
+    "symbol": "BAL",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0xaf88d065e77c8cC2239327C5EDb3A432268e5831?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    "name": "USD₮0",
+    "symbol": "USD₮0",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x82aF49447D8a07e3bd95BD0d56f35241523fBab1?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x5979D7b546E38E414F7E9822514be443A4800529",
+    "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
     "decimals": 18,
-    "logoURI": "https://tokens.1inch.io/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.png",
+    "logoURI": "https://token-images.euler.finance/42161/0x5979D7b546E38E414F7E9822514be443A4800529?v=490330",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
     }
   },
   {
-    "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
     "chainId": 42161,
+    "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
+    "name": "Wrapped eETH",
+    "symbol": "weETH",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uni.jpg?1696512319",
-    "name": "Uniswap",
-    "symbol": "UNI",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/42161/0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe?v=490330",
+    "metadata": {
+      "provider": "ETHERFI"
+    }
   },
   {
-    "address": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
     "chainId": 42161,
+    "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/42161/0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    "name": "Arbitrum",
+    "symbol": "ARB",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
-    "name": "Chainlink Token",
-    "symbol": "LINK",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/42161/0x912CE59144191C1204E64559FE8253a0e49E6548?v=490330"
   },
   {
-    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
     "chainId": 42161,
-    "decimals": 6,
-    "logoURI": "https://assets.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
-    "name": "USDT0",
-    "symbol": "USDT0",
-    "metadata": {}
-  },
-  {
-    "address": "0x6491c05A82219b8D1479057361ff1654749b876b",
-    "chainId": 42161,
-    "name": "USDS",
-    "symbol": "USDS",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683",
-    "metadata": {}
-  },
-  {
     "address": "0xdDb46999F8891663a8F2828d25298f70416d7610",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52721/large/sUSDS_Coin.png?1734086971",
     "name": "Savings USDS",
     "symbol": "sUSDS",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-    "chainId": 42161,
-    "name": "Staked USDe",
-    "symbol": "sUSDe",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/52911/large/susde.jpg?1734676195",
+    "logoURI": "https://token-images.euler.finance/42161/0xdDb46999F8891663a8F2828d25298f70416d7610?v=490330",
     "metadata": {
       "provider": "STABLEWATCH"
     }
   },
   {
+    "chainId": 42161,
     "address": "0x940098b108fB7D0a7E374f6eDED7760787464609",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "/tokens/130/susdc.svg",
-    "name": "Savings USDC",
+    "name": "Spark USDC Vault",
     "symbol": "sUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x940098b108fB7D0a7E374f6eDED7760787464609?v=490330",
     "metadata": {
       "provider": "SPARK"
     }
   },
   {
-    "address": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
     "chainId": 42161,
-    "name": "Resolv USD",
-    "symbol": "USR",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "metadata": {}
-  },
-  {
-    "address": "0x66CFbD79257dC5217903A36293120282548E2254",
-    "chainId": 42161,
-    "name": "wstUSR",
-    "symbol": "wstUSR",
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/40008/large/USR_LOGO.png?1725222638",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
-    "chainId": 42161,
-    "name": "Resolv Liquidity Provider Token",
-    "symbol": "RLP",
-    "decimals": 18,
-    "logoURI": "/tokens/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96.webp",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
-    "chainId": 42161,
-    "name": "thBILL",
-    "symbol": "thBILL",
-    "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
-    "chainId": 42161,
-    "name": "Syrup USDC",
-    "symbol": "syrupUSDC",
-    "decimals": 6,
-    "logoURI": "/tokens/1/syrupUSDC.svg",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/assets/0x912CE59144191C1204E64559FE8253a0e49E6548/logo.png",
-    "name": "Arbitrum",
-    "symbol": "ARB",
-    "metadata": {}
-  },
-  {
-    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33613/large/usde.png?1733810059",
-    "name": "USDe",
-    "symbol": "USDe",
-    "metadata": {}
-  },
-  {
-    "address": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
-    "name": "USDai",
-    "symbol": "USDai",
-    "metadata": {}
-  },
-  {
-    "address": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
-    "name": "Staked USDai",
-    "symbol": "sUSDai",
-    "metadata": {
-      "provider": "STABLEWATCH"
-    }
-  },
-  {
-    "address": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://arbiscan.io//token/images/Curvefi_32.png",
-    "name": "Curve DAO Token",
-    "symbol": "CRV",
-    "metadata": {}
-  },
-  {
-    "address": "0x22e9aD26eA0e65a7073571d5D7172ff6336084AD",
-    "chainId": 42161,
-    "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/28477/large/uniETH_200.png?1696527471",
-    "name": "PT Bedrock uniETH 26DEC2024",
-    "symbol": "PT-uniETH-26DEC2024",
-    "metadata": {
-      "isPendlePT": true,
-      "pendleMarket": "0x279b44e48226d40ec389129061cb0b56c5c09e46"
-    }
-  },
-  {
     "address": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
-    "chainId": 42161,
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/33800/large/Icon___Dark.png?1702991855",
+    "logoURI": "https://token-images.euler.finance/42161/0x4186BFC76E2E237523CBC30FD220FE055156b41F?v=490330",
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
     }
   },
   {
-    "address": "0xd09ACb80C1E8f2291862c4978A008791c9167003",
     "chainId": 42161,
+    "address": "0xd09ACb80C1E8f2291862c4978A008791c9167003",
     "name": "Treehouse ETH",
-    "symbol": "TETH",
+    "symbol": "tETH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/40155/large/tETH_Logo_%28Color__No_Background%29.png?1748368386",
+    "logoURI": "https://token-images.euler.finance/42161/0xd09ACb80C1E8f2291862c4978A008791c9167003?v=490330",
     "metadata": {
       "provider": "TREEHOUSE"
     }
   },
   {
-    "address": "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
     "chainId": 42161,
-    "name": "Rocket Pool ETH",
-    "symbol": "rETH",
-    "decimals": 18,
-    "logoURI": "/tokens/8453/0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c.webp",
-    "metadata": {
-      "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
-    }
-  },
-  {
     "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
-    "chainId": 42161,
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/34753/large/Ezeth_logo_circle.png?1713496404",
+    "logoURI": "https://token-images.euler.finance/42161/0x2416092f143378750bb29b79eD961ab195CcEea5?v=490330",
     "metadata": {
       "provider": "RENZO"
     }
   },
   {
-    "address": "0x8b4Ca42bB3B1d789859f106222CF7DC5EEd48CCb",
     "chainId": 42161,
-    "name": "PT-USDai-20NOV2025",
-    "symbol": "PT-USDai-20NOV2025",
+    "address": "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+    "name": "USDai",
+    "symbol": "USDai",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55857/large/USDai_Token_Full_Glyph.png?1755229050",
-    "metadata": {
-      "isPendlePT": true,
-      "pendleMarket": "0x8e101c690390de722163d4dc3f76043bebbbcadd"
-    }
+    "logoURI": "https://token-images.euler.finance/42161/0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF?v=490330"
   },
   {
-    "address": "0x936F210d277bf489A3211CeF9AB4BC47a7B69C96",
     "chainId": 42161,
-    "name": "PT-sUSDai-20NOV2025",
-    "symbol": "PT-sUSDai-20NOV2025",
+    "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "name": "USDe",
+    "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/55861/large/sUSDai_Token_Full_Glyph.png?1755229072",
-    "metadata": {
-      "isPendlePT": true,
-      "pendleMarket": "0x43023675c804a759cbf900da83dbcc97ee2afbe7"
-    }
+    "logoURI": "https://token-images.euler.finance/42161/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34?v=490330"
   },
   {
-    "address": "0x462cD9E0247b2e63831c3189aE738E5E9a5a4b64",
     "chainId": 42161,
-    "name": "EUL",
-    "symbol": "EUL",
+    "address": "0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
+    "name": "Staked USDai",
+    "symbol": "sUSDai",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "metadata": {}
-  },
-  {
-    "address": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
-    "chainId": 42161,
-    "name": "Reward EUL",
-    "symbol": "rEUL",
-    "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EUL.svg",
-    "metadata": {}
-  },
-  {
-    "address": "0x5a791652f3b140d357df072d355a98ab754877D1",
-    "chainId": 42161,
-    "decimals": 6,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/67650/large/thBILL.png?1753401034",
-    "name": "PT thBILL 27NOV2025",
-    "symbol": "PT-thBILL-27NOV2025",
-    "metadata": {
-      "isPendlePT": true,
-      "pendleMarket": "0x4ed09847377c30aa4e74ad071e719c5814ad9ead"
-    }
-  },
-  {
-    "address": "0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9",
-    "chainId": 42161,
-    "decimals": 15,
-    "logoURI": "/tokens/42161/autoUSDai.svg",
-    "name": "autoUSDai",
-    "symbol": "autoUSDai",
+    "logoURI": "https://token-images.euler.finance/42161/0x0B2b2B2076d95dda7817e785989fE353fe955ef9?v=490330",
     "metadata": {
       "provider": "STABLEWATCH"
     }
   },
   {
-    "address": "0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36",
     "chainId": 42161,
+    "address": "0x6491c05A82219b8D1479057361ff1654749b876b",
+    "name": "USDS Stablecoin",
+    "symbol": "USDS",
     "decimals": 18,
-    "logoURI": "/tokens/42161/yusnd.svg",
-    "name": "Yearn USND",
-    "symbol": "yUSND",
-    "metadata": {}
+    "logoURI": "https://token-images.euler.finance/42161/0x6491c05A82219b8D1479057361ff1654749b876b?v=490330"
   },
   {
-    "address": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
     "chainId": 42161,
+    "address": "0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
+    "name": "Resolv USD",
+    "symbol": "USR",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/67378/large/USND200.png?1752596582",
+    "logoURI": "https://token-images.euler.finance/42161/0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a",
+    "name": "thBILL",
+    "symbol": "thBILL",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0xfDD22Ce6D1F66bc0Ec89b20BF16CcB6670F55A5a?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "name": "Staked USDe",
+    "symbol": "sUSDe",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
+    "name": "Syrup USDC",
+    "symbol": "syrupUSDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0x41CA7586cC1311807B4605fBB748a3B8862b42b5?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x66CFbD79257dC5217903A36293120282548E2254",
+    "name": "Wrapped Staked USR",
+    "symbol": "wstUSR",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x66CFbD79257dC5217903A36293120282548E2254?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+    "name": "Resolv Liquidity Provider Token",
+    "symbol": "RLP",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x8b4Ca42bB3B1d789859f106222CF7DC5EEd48CCb",
+    "name": "PT USDai 20NOV2025",
+    "symbol": "PT-USDai-20NOV2025",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x8b4Ca42bB3B1d789859f106222CF7DC5EEd48CCb?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x8E101C690390De722163d4dC3F76043beBBbCadd"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x936F210d277bf489A3211CeF9AB4BC47a7B69C96",
+    "name": "PT Staked USDai 20NOV2025",
+    "symbol": "PT-sUSDai-20NOV2025",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x936F210d277bf489A3211CeF9AB4BC47a7B69C96?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x43023675c804A759cBf900Da83DBcc97ee2afbe7"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
+    "name": "Rocket Pool ETH",
+    "symbol": "rETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8?v=490330",
+    "metadata": {
+      "provider": "DEFILLAMA",
+      "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x5a791652f3b140d357df072d355a98ab754877D1",
+    "name": "PT thBILL 27NOV2025",
+    "symbol": "PT-thBILL-27NOV2025",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0x5a791652f3b140d357df072d355a98ab754877D1?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x4ED09847377c30AA4E74Ad071E719c5814AD9EaD"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "name": "YieldFi yUSD",
+    "symbol": "yUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x4772D2e014F9fC3a820C444e3313968e9a5C8121?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9",
+    "name": "autoUSDai",
+    "symbol": "autoUSDai",
+    "decimals": 15,
+    "logoURI": "https://token-images.euler.finance/42161/0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9?v=490330",
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36",
+    "name": "Yearn USND",
+    "symbol": "yUSND",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x252b965400862d94BDa35FeCF7Ee0f204a53Cc36?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49",
     "name": "US Nerite Dollar",
     "symbol": "USND",
-    "metadata": {}
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x4ecf61a6c2FaB8A047CEB3B3B263B401763e9D49?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x5B2C615E22272234AACF187632a0531cA1243279",
+    "name": "PT USDai 19FEB2026",
+    "symbol": "PT-USDai-19FEB2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x5B2C615E22272234AACF187632a0531cA1243279?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x3308574370f19eA639f4671838e01Cfb77d8db70"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+    "name": "PT Staked USDai 19FEB2026",
+    "symbol": "PT-sUSDai-19FEB2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x2092Fa5d02276B3136A50F3C2C3a6Ed45413183E"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x76cE01F0Ef25AA66cC5F1E546a005e4A63B25609",
+    "name": "Re Protocol Deposit Token",
+    "symbol": "reUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x76cE01F0Ef25AA66cC5F1E546a005e4A63B25609?v=490330"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+    "name": "PT thBILL 19FEB2026",
+    "symbol": "PT-thBILL-19FEB2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4?v=490330",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0xfAD63f0a2Ff618EdDE23561dfF212EDfeddBE89d"
+    }
   }
 ]

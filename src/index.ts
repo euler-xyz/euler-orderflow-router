@@ -1,4 +1,7 @@
 import { app, logger } from "@/server"
+import { initTokenlistCache } from "./common/utils/tokenList"
+
+initTokenlistCache()
 
 const server = app.listen(process.env.PORT, () => {
   const { NODE_ENV, PORT } = process.env

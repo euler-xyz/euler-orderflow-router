@@ -42,38 +42,58 @@ const loadTokenlistsFromFiles = () => {
     ) as TokenListItem[]
   }
 }
-;(function buildCache() {
+
+const writeTokenListsToFiles = () => {
+  let dir = `${__dirname}/../tokenLists`
+  try {
+    fs.readdirSync(dir)
+  } catch {
+    dir = `${__dirname}/../../../tokenLists`
+  }
+  for (const [chainId, tokenlist] of Object.entries(cache)) {
+    fs.writeFileSync(
+      `${dir}/tokenList_${chainId}.json`,
+      JSON.stringify(tokenlist, null, 2),
+    )
+  }
+}
+
+export async function buildCache() {
   const tokenlistURL = process.env.TOKENLIST_URL
   if (!tokenlistURL) {
     console.warn(
       "Missing TOKENLIST_URL configuration. Falling back to static files",
     )
     loadTokenlistsFromFiles()
-    return
+    return cache
   }
 
-  Promise.all(
+  await Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
       const response = await fetch(`${tokenlistURL}?chainId=${chainId}`)
+
       if (!response.ok) {
-        cache[Number(chainId)] = []
-        return
+        throw new Error(`${response.status} ${response.statusText}`)
       }
       const res = await response.json()
       if (res.success === "false") {
-        cache[Number(chainId)] = []
-        return
+        throw new Error(JSON.stringify(res))
       }
 
       cache[Number(chainId)] = res as TokenListItem[]
     }),
-  )
+  ).catch((err) => {
+    console.log(`Error fetching tokenlists ${err}`)
+    loadTokenlistsFromFiles()
+  })
 
-  setTimeout(
-    buildCache,
-    Number(process.env.TOKENLIST_CACHE_TIMEOUT_SECONDS || 5 * 60) * 1000,
-  )
-})()
+  try {
+    writeTokenListsToFiles()
+  } catch (err) {
+    console.log(`Error writing tokenlists, ${err}`)
+  }
+  return cache
+}
 
 export default function getTokenList(chainId: number): TokenListItem[] {
   return cache[chainId] || []
@@ -81,4 +101,12 @@ export default function getTokenList(chainId: number): TokenListItem[] {
 
 export function getAllTokenLists() {
   return cache
+}
+
+export function initTokenlistCache() {
+  buildCache()
+  setInterval(
+    buildCache,
+    Number(process.env.TOKENLIST_CACHE_TIMEOUT_SECONDS || 5 * 60) * 1000,
+  )
 }
