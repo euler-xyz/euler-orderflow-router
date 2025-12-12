@@ -55,7 +55,6 @@ export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
       accounts: { takeFrom, recipient },
       config: { slippagePercentage, timeout },
     },
-    config,
   }: QuoteParams<CoWSupport, CoWConfig>): Promise<
     SourceQuoteResponse<CoWData>
   > {
@@ -107,6 +106,7 @@ export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
       sellAmount,
       buyAmount,
       allowanceTarget: zeroAddress,
+      estimatedGas: 0n,
       customData: {},
     }
 

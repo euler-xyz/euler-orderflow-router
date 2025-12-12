@@ -119,6 +119,7 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
     let {
       quote: quoteAmount,
       methodParameters: { calldata },
+      gasUseEstimate,
     } = await response.json()
 
     const sellAmount =
@@ -147,11 +148,13 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
 
       // Update calldata and gas estimate
       calldata = multicallData!
+      gasUseEstimate = BigInt(gasUseEstimate) + 12_500n;
     }
 
     const quote = {
       sellAmount,
       buyAmount,
+      estimatedGas: BigInt(gasUseEstimate),
       allowanceTarget: calculateAllowanceTarget(sellToken, router),
       customData: {
         tx: {

@@ -114,7 +114,7 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
     const quote = {
       sellAmount: order.sellAmount,
       buyAmount: BigInt(routeSummary.amountOut),
-      // estimatedGas: BigInt(routeSummary.gas),
+      estimatedGas: BigInt(routeSummary.gas),
       allowanceTarget: calculateAllowanceTarget(sellToken, routerAddress),
       customData: {
         routeSummary,

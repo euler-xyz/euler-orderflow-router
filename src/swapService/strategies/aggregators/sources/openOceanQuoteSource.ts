@@ -172,7 +172,8 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
         to,
         value,
         data,
-        rfqDeadline /* estimatedGas */,
+        rfqDeadline,
+        estimatedGas,
       },
     } = await response.json()
 
@@ -192,7 +193,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       buyAmount: BigInt(outAmount),
       minBuyAmount: BigInt(minOutAmount),
       type: "sell",
-      // estimatedGas: BigInt(estimatedGas), // TODO fix unknown chains handling in SDK
+      estimatedGas: BigInt(estimatedGas),
       allowanceTarget: calculateAllowanceTarget(sellToken, to),
       customData: {
         tx: {

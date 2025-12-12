@@ -103,7 +103,7 @@ export class CustomEnsoQuoteSource
 
     const {
       amountOut,
-      // gas,
+      gas,
       tx: { data, to, value },
     } = await response.json()
 
@@ -111,7 +111,7 @@ export class CustomEnsoQuoteSource
       sellAmount: order.sellAmount,
       buyAmount: BigInt(amountOut),
       allowanceTarget: calculateAllowanceTarget(sellToken, to),
-      // estimatedGas: BigInt(gas),
+      estimatedGas: BigInt(gas),
       customData: {
         tx: {
           calldata: data,

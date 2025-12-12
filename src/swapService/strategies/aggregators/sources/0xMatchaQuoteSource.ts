@@ -91,7 +91,7 @@ export class CustomZRXQuoteSource
       failed(ZRX_METADATA, chainId, sellToken, buyToken, await response.text())
     }
     const {
-      transaction: { data, to, value },
+      transaction: { data, to, value, gas },
       buyAmount,
       minBuyAmount,
       // issues,
@@ -104,7 +104,7 @@ export class CustomZRXQuoteSource
       maxSellAmount: order.sellAmount,
       buyAmount: BigInt(buyAmount),
       minBuyAmount: BigInt(minBuyAmount),
-      // estimatedGas: BigInt(gas ?? 0),
+      estimatedGas: BigInt(gas ?? 0),
       // allowanceTarget: calculateAllowanceTarget(sellToken, allowanceTarget),
       customData: {
         tx: {

@@ -107,7 +107,7 @@ export class CustomParaswapQuoteSource extends AlwaysValidConfigAndContextSource
     const quote = {
       sellAmount: BigInt(priceRoute.srcAmount),
       buyAmount: BigInt(priceRoute.destAmount),
-      // estimatedGas: BigInt(priceRoute.gasCost),
+      estimatedGas: BigInt(priceRoute.gasCost),
       allowanceTarget: calculateAllowanceTarget(
         sellToken,
         priceRoute.tokenTransferProxy,

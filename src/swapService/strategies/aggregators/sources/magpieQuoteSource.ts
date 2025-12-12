@@ -19,6 +19,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import { parseUnits } from "viem"
 import * as chains from "viem/chains"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
@@ -114,19 +115,19 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
       id: quoteId,
       amountOut,
       targetAddress,
-      // fees,
+      fees,
     } = await quoteResponse.json()
-    // const estimatedGasNum: `${number}` | undefined = fees.find(
-    //   (fee: { type: string; value: `${number}` }) => fee.type === "gas",
-    // )?.value
-    // const estimatedGas = estimatedGasNum
-    //   ? parseUnits(estimatedGasNum, 9)
-    //   : undefined
+    const estimatedGasNum: `${number}` | undefined = fees.find(
+      (fee: { type: string; value: `${number}` }) => fee.type === "gas",
+    )?.value
+    const estimatedGas = estimatedGasNum
+      ? parseUnits(estimatedGasNum, 9)
+      : undefined
 
     const quote = {
       sellAmount: order.sellAmount,
       buyAmount: BigInt(amountOut),
-      // estimatedGas,
+      estimatedGas,
       allowanceTarget: calculateAllowanceTarget(sellToken, targetAddress),
       customData: { quoteId, takeFrom, recipient },
     }
