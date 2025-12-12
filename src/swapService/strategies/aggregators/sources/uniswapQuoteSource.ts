@@ -148,7 +148,7 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
 
       // Update calldata and gas estimate
       calldata = multicallData!
-      gasUseEstimate = BigInt(gasUseEstimate) + 12_500n;
+      gasUseEstimate = BigInt(gasUseEstimate) + 12_500n
     }
 
     const quote = {

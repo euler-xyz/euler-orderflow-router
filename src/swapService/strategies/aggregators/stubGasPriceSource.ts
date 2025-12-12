@@ -26,8 +26,6 @@ export class StubGasPriceSource implements IGasPriceSource<GasValues> {
   }
 
   getGasPrice<Requirements extends FieldsRequirements<GasValues>>() {
-    console.log("GET GAS PRICE");
-    console.trace();
     return Promise.resolve({
       standard: {
         maxFeePerGas: 0,

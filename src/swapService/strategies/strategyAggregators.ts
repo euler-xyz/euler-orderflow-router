@@ -42,8 +42,8 @@ import {
 } from "../utils"
 import { CustomSourceList } from "./aggregators/customSourceList"
 import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
-import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
+import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
 const DEFAULT_TIMEOUT = "30000"
