@@ -1,0 +1,65 @@
+diff --git a/dist/chains.js b/dist/chains.js
+index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1013f70fe 100644
+--- a/dist/chains.js
++++ b/dist/chains.js
+@@ -566,6 +566,60 @@ exports.Chains = {
+         explorer: 'https://goerli.basescan.org/',
+         testnet: true,
+     },
++    UNICHAIN: {
++        chainId: 130,
++        name: 'Unichain',
++        ids: ['unichain'],
++        nativeCurrency: { symbol: 'ETH', name: 'Ethereum' },
++        wToken: '0x4200000000000000000000000000000000000006',
++        publicRPCs: ['https://0xrpc.io/uni', 'https://unichain-mainnet.gateway.tatum.io'],
++        explorer: 'https://unichain.blockscout.com/',
++    },
++    MONAD: {
++        chainId: 143,
++        name: 'Monad',
++        ids: ['monad'],
++        nativeCurrency: { symbol: 'MON', name: 'Monad' },
++        wToken: '0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A',
++        publicRPCs: ['https://monad-mainnet.drpc.org', 'https://rpc3.monad.xyz'],
++        explorer: 'https://monadscan.com/',
++    },
++    TAC: {
++        chainId: 239,
++        name: 'TAC',
++        ids: ['tac'],
++        nativeCurrency: { symbol: 'TAC', name: 'TAC' },
++        wToken: '0xB63B9f0eb4A6E6f191529D71d4D88cc8900Df2C9',
++        publicRPCs: ['https://rpc.ankr.com/tac', 'https://rpc.tac.build'],
++        explorer: 'https://explorer.tac.build/',
++    },
++    SWELL: {
++        chainId: 1923,
++        name: 'Swellchain',
++        ids: ['swell'],
++        nativeCurrency: { symbol: 'ETH', name: 'Ethereum' },
++        wToken: '0x4200000000000000000000000000000000000006',
++        publicRPCs: ['https://rpc.ankr.com/swell'],
++        explorer: 'https://explorer.swellnetwork.io/',
++    },
++    PLASMA: {
++        chainId: 9745,
++        name: 'Plasma',
++        ids: ['plasma'],
++        nativeCurrency: { symbol: 'XPL', name: 'Plasma' },
++        wToken: '0x6100E367285b01F48D07953803A2d8dCA5D19873',
++        publicRPCs: ['https://rpc.plasma.to', 'https://plasma.drpc.org'],
++        explorer: 'https://plasmascan.to/',
++    },
++    BOB: {
++        chainId: 60808,
++        name: 'BOB',
++        ids: ['bob'],
++        nativeCurrency: { symbol: 'ETH', name: 'Ethereum' },
++        wToken: '0x4200000000000000000000000000000000000006',
++        publicRPCs: ['https://bob.drpc.org', 'https://rpc.gobob.xyz'],
++        explorer: 'https://explorer.gobob.xyz/',
++    },
+ };
+ function getAllChains() {
+     return Object.values(exports.Chains);
