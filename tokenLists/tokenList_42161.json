@@ -130,7 +130,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0xdDb46999F8891663a8F2828d25298f70416d7610",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "d8c4eff5-c8a9-46fc-a888-057c4c668e72"
     }
   },
   {
@@ -240,7 +241,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "66985a81-9c51-46ca-9977-42b4fe7bc6df"
     }
   },
   {
@@ -251,7 +253,8 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/42161/0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "43641cf5-a92e-416b-bce9-27113d3c0db6"
     }
   },
   {
@@ -262,7 +265,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0x66CFbD79257dC5217903A36293120282548E2254",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
     }
   },
   {
@@ -273,7 +277,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "2ad8497d-c855-4840-85ad-cdc536b92ced"
     }
   },
   {
