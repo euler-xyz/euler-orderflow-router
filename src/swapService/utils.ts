@@ -267,6 +267,7 @@ export function buildApiResponseExactInputFromQuote(
     tokenIn: swapParams.tokenIn,
     tokenOut: swapParams.tokenOut,
     slippage: swapParams.slippage,
+    estimatedGas: quote.estimatedGas?.toString(),
     route: quoteToRoute(quote),
     swap,
     verify,

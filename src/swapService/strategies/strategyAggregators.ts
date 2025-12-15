@@ -588,6 +588,7 @@ export class StrategyAggregators {
           : sdkQuote.source.name,
       shouldTransferToReceiver,
       allowanceTarget,
+      estimatedGas: sdkQuote.gas?.estimatedGas,
     }
   }
 }

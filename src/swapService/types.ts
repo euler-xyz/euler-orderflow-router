@@ -41,6 +41,7 @@ export interface SwapQuote {
   protocol: string
   shouldTransferToReceiver?: boolean
   allowanceTarget?: Address
+  estimatedGas?: bigint
 }
 
 export interface StrategyResult {

@@ -35,6 +35,7 @@ export interface SwapApiResponse {
   swap: SwapApiResponseSwap
   verify: SwapApiResponseVerify
   route: SwapRouteItem[]
+  estimatedGas?: string
 }
 
 export interface SwapApiResponseSwap {
