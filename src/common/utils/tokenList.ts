@@ -77,7 +77,6 @@ export async function buildCache() {
       const response = await fetch(`${url}?chainId=${chainId}`)
 
       if (!response.ok) {
-        console.log(chainId);
         throw new Error(`${response.status} ${response.statusText}`)
       }
       const res = await response.json()
