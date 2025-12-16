@@ -263,7 +263,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/146/0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "7c43e890-cefc-48d1-bf80-203cdb7dfe4f"
     }
   },
   {

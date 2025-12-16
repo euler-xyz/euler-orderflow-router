@@ -70,9 +70,14 @@ export async function buildCache() {
 
   await Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
-      const response = await fetch(`${tokenlistURL}?chainId=${chainId}`)
+      let url = tokenlistURL
+      if (chainId === "80094") {
+        url = "https://indexer-main-erpc.euler.finance/v1/tokens"
+      }
+      const response = await fetch(`${url}?chainId=${chainId}`)
 
       if (!response.ok) {
+        console.log(chainId);
         throw new Error(`${response.status} ${response.statusText}`)
       }
       const res = await response.json()

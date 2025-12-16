@@ -830,7 +830,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
     }
   },
   {
@@ -1055,7 +1056,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x4956b52aE2fF65D74CA2d61207523288e4528f96",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "2ad8497d-c855-4840-85ad-cdc536b92ced"
     }
   },
   {
@@ -1416,7 +1418,8 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/1/0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "43641cf5-a92e-416b-bce9-27113d3c0db6"
     }
   },
   {
@@ -1648,7 +1651,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xc8CF6D7991f15525488b2A83Df53468D682Ba4B0",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "0f67a08c-3f24-4a4b-963e-541f5a5c0364"
     }
   },
   {
@@ -1680,7 +1684,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xb45ad160634c528Cc3D2926d9807104FA3157305",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "bf0f95c9-bc46-467d-9762-1d80ff50cd74"
     }
   },
   {
@@ -1850,7 +1855,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x19Ebd191f7A24ECE672ba13A302212b5eF7F35cb",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "7c43e890-cefc-48d1-bf80-203cdb7dfe4f"
     }
   },
   {
@@ -1952,7 +1958,8 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/1/0x9FD7466f987Fd4C45a5BBDe22ED8aba5BC8D72d1",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "5de6008f-1be1-4ce6-b5f5-025bec262bc1"
     }
   },
   {
@@ -2049,7 +2056,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xcf62F905562626CfcDD2261162a51fd02Fc9c5b6",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "42523cca-14b0-44f6-95fb-4781069520a5"
     }
   },
   {
@@ -2433,7 +2441,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "8fa2e60e-365a-41fc-8d50-fadde5041f94"
     }
   },
   {
@@ -2499,7 +2508,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x3d7d6fdf07EE548B939A80edbc9B2256d0cdc003",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "843be062-d836-43ef-9670-c78d6ecb60bf"
     }
   },
   {
@@ -2523,7 +2533,8 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xC58D044404d8B14e953C115E67823784dEA53d8F",
     "metadata": {
-      "provider": "STABLEWATCH"
+      "provider": "DEFILLAMA",
+      "poolId": "8352355c-5ad7-45c5-aca2-628de224f8d8"
     }
   },
   {
@@ -2674,5 +2685,37 @@
       "isPendlePT": true,
       "pendleMarket": "0xcd9573442af27a2d050dc6ee199A6b2F98354907"
     }
+  },
+  {
+    "chainId": 1,
+    "address": "0x66bCF6151D5558AfB47c38B20663589843156078",
+    "name": "Locked iUSD - 4 weeks",
+    "symbol": "liUSD-4w",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x66bCF6151D5558AfB47c38B20663589843156078"
+  },
+  {
+    "chainId": 1,
+    "address": "0xf68b95b7e851170c0e5123a3249dD1Ca46215085",
+    "name": "Locked iUSD - 8 weeks",
+    "symbol": "liUSD-8w",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xf68b95b7e851170c0e5123a3249dD1Ca46215085"
+  },
+  {
+    "chainId": 1,
+    "address": "0x4ba01f22827018b4772CD326C7627FB4956A7C00",
+    "name": "msUSD",
+    "symbol": "msUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x4ba01f22827018b4772CD326C7627FB4956A7C00"
+  },
+  {
+    "chainId": 1,
+    "address": "0x890A5122Aa1dA30fEC4286DE7904Ff808F0bd74A",
+    "name": "msY",
+    "symbol": "msY",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x890A5122Aa1dA30fEC4286DE7904Ff808F0bd74A"
   }
 ]
