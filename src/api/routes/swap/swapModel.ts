@@ -339,7 +339,8 @@ const swapResponseSchemaSingle = z.object({
     description: "Actual allowed slippage. Can be lower than requested.",
   }),
   estimatedGas: z.string().optional().openapi({
-    description: "Estimated gas cost of the swap (without processing like deposit, repay etc.)",
+    description:
+      "Estimated gas cost of the swap (without processing like deposit, repay etc.)",
   }),
   swap: swapApiResponseSwapSchema.openapi({
     description:

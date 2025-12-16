@@ -2701,5 +2701,21 @@
     "symbol": "liUSD-8w",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xf68b95b7e851170c0e5123a3249dD1Ca46215085"
+  },
+  {
+    "chainId": 1,
+    "address": "0x4ba01f22827018b4772CD326C7627FB4956A7C00",
+    "name": "msUSD",
+    "symbol": "msUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x4ba01f22827018b4772CD326C7627FB4956A7C00"
+  },
+  {
+    "chainId": 1,
+    "address": "0x890A5122Aa1dA30fEC4286DE7904Ff808F0bd74A",
+    "name": "msY",
+    "symbol": "msY",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x890A5122Aa1dA30fEC4286DE7904Ff808F0bd74A"
   }
 ]
