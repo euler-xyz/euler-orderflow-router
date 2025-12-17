@@ -12,6 +12,7 @@ import plasmaRoutingConfig from "./plasma"
 import sonicRoutingConfig from "./sonic"
 import swellRoutingConfig from "./swell"
 import unichainRoutingConfig from "./unichain"
+import hyperevmRoutingConfig from "./hyperevm"
 
 export const routingConfig: RoutingConfig = {
   [mainnet.id]: mainnetRoutingConfig,
@@ -25,6 +26,7 @@ export const routingConfig: RoutingConfig = {
   [146]: sonicRoutingConfig,
   [130]: unichainRoutingConfig,
   [9745]: plasmaRoutingConfig,
+  [999]: hyperevmRoutingConfig,
 }
 
 export const getRoutingConfig = (chainId: number) => {

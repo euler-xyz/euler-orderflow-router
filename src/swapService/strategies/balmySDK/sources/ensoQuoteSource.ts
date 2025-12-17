@@ -1,3 +1,4 @@
+import { hyperEvm } from "@/swapService/config"
 import { Chains } from "@balmy/sdk"
 import type {
   BuildTxParams,
@@ -32,6 +33,7 @@ const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
       130,
       9745,
       143, // monad
+      999, // hyperEvm
     ],
     swapAndTransfer: false,
     buyOrders: false,
@@ -45,8 +47,7 @@ type EnsoConfig = {
 }
 type EnsoData = { tx: SourceQuoteTransaction }
 export class CustomEnsoQuoteSource
-  implements IQuoteSource<EnsoSupport, EnsoConfig, EnsoData>
-{
+  implements IQuoteSource<EnsoSupport, EnsoConfig, EnsoData> {
   getMetadata() {
     return ENSO_METADATA
   }
