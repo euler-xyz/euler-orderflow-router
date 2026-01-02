@@ -1,3 +1,4 @@
+import { log } from "@/common/utils/logs"
 import { findToken } from "@/swapService/utils"
 import type {
   BuildTxParams,
@@ -12,14 +13,13 @@ import {
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
-import { log } from "@uniswap/smart-order-router"
 import qs from "qs"
 import { getAddress } from "viem"
 import pendleAggregators from "./pendle/pendleAggregators.json"
 
-const soldOutCoolOff: Record<string, number> = {}
+// const soldOutCoolOff: Record<string, number> = {}
 
-const SOLD_OUT_COOL_OFF_TIME = 60 * 60 * 1000
+// const SOLD_OUT_COOL_OFF_TIME = 60 * 60 * 1000
 
 // https://api-v2.pendle.finance/core/docs#/Chains/ChainsController_getSupportedChainIds
 export const AGGREGATOR_NAMES: Record<string, string> = {
@@ -36,8 +36,7 @@ type PendleConfig = CustomOrAPIKeyConfig
 type PendleData = { tx: SourceQuoteTransaction; pendleAggregator: string }
 
 export class CustomPendleQuoteSource
-  implements IQuoteSource<PendleSupport, PendleConfig, PendleData>
-{
+  implements IQuoteSource<PendleSupport, PendleConfig, PendleData> {
   private aggregator: string
 
   constructor(_aggregator: string) {
@@ -49,7 +48,9 @@ export class CustomPendleQuoteSource
       supports: {
         chains: Object.keys(pendleAggregators)
           .filter((chainId) =>
-            pendleAggregators[chainId].includes(this.aggregator),
+            pendleAggregators[
+              chainId as keyof typeof pendleAggregators
+            ].includes(this.aggregator),
           )
           .map(Number),
         swapAndTransfer: true,
@@ -64,7 +65,7 @@ export class CustomPendleQuoteSource
   async quote(
     params: QuoteParams<PendleSupport, PendleConfig>,
   ): Promise<SourceQuoteResponse<PendleData>> {
-    const { dstAmount, to, data, aggregator } = await this.getQuote(params)
+    const { dstAmount, to, data } = await this.getQuote(params)
     const quote = {
       sellAmount: params.request.order.sellAmount,
       buyAmount: BigInt(dstAmount),
@@ -74,7 +75,7 @@ export class CustomPendleQuoteSource
           to,
           calldata: data,
         },
-        pendleAggregator: aggregator,
+        pendleAggregator: this.aggregator,
       },
     }
 
@@ -110,7 +111,8 @@ export class CustomPendleQuoteSource
       !tokenIn.metadata?.isPendleLP &&
       !tokenOut.metadata?.isPendleLP &&
       !tokenIn.metadata?.isPendlePT &&
-      !tokenOut.metadata?.isPendlePT
+      !tokenOut.metadata?.isPendlePT &&
+      !tokenIn.metadata?.isPendleCrossChainPT
     ) {
       failed(
         this.getMetadata(),
@@ -120,20 +122,71 @@ export class CustomPendleQuoteSource
         "Not Pendle tokens",
       )
     }
-    if (
-      Date.now() - soldOutCoolOff[`${buyToken}${chainId}`] <
-      SOLD_OUT_COOL_OFF_TIME
-    ) {
-      failed(
-        this.getMetadata(),
-        chainId,
-        sellToken,
-        buyToken,
-        "Sold out cool off",
-      )
+    // if (
+    //   Date.now() - soldOutCoolOff[`${buyToken}${chainId}`] <
+    //   SOLD_OUT_COOL_OFF_TIME
+    // ) {
+    //   failed(
+    //     this.getMetadata(),
+    //     chainId,
+    //     sellToken,
+    //     buyToken,
+    //     "Sold out cool off",
+    //   )
+    // }
+    let queryParams: any
+    let url: string
+
+    const handlePendleErrorResponse = async (response: Response) => {
+      const msg =
+        (await response.text()) || `Failed with status ${response.status}`
+
+      if (response.status === 400) {
+        log({ name: "[PENDLE ERROR]", msg, recipient, url })
+
+        // if (msg.includes("SY limit exceeded")) {
+        //   soldOutCoolOff[`${buyToken}${chainId}`] = Date.now()
+        // }
+      }
+
+      failed(this.getMetadata(), chainId, sellToken, buyToken, msg)
+    }
+
+    if (tokenIn.metadata?.isPendleCrossChainPT) {
+      queryParams = {
+        receiver: recipient || takeFrom,
+        slippage: slippagePercentage / 100, // 1 = 100%
+        enableAggregator: true,
+        aggregators: this.aggregator,
+        pt: sellToken,
+        exactPtIn: order.sellAmount.toString(),
+        tokenOut: buyToken,
+      }
+
+      const queryString = qs.stringify(queryParams, {
+        skipNulls: true,
+        arrayFormat: "comma",
+      })
+      url = `https://api-v2.pendle.finance/core/v2/sdk/${chainId}/swap-pt-cross-chain?${queryString}`
+
+      const response = await fetchService.fetch(url, {
+        timeout,
+        headers: getHeaders(config),
+      })
+
+      if (!response.ok) {
+        await handlePendleErrorResponse(response)
+      }
+      const responseData = await response.json()
+
+      const dstAmount = responseData.data.netTokenOut
+      const to = responseData.tx.to
+      const data = responseData.tx.data
+
+      return { dstAmount, to, data, aggregator: this.aggregator }
     }
     // swap
-    const queryParams: any = {
+    queryParams = {
       receiver: recipient || takeFrom,
       slippage: slippagePercentage / 100, // 1 = 100%
       enableAggregator: true,
@@ -146,7 +199,7 @@ export class CustomPendleQuoteSource
       skipNulls: true,
       arrayFormat: "comma",
     })
-    const url = `https://api-v2.pendle.finance/core/v2/sdk/${chainId}/convert?${queryString}`
+    url = `https://api-v2.pendle.finance/core/v2/sdk/${chainId}/convert?${queryString}`
 
     const response = await fetchService.fetch(url, {
       timeout,
@@ -154,18 +207,7 @@ export class CustomPendleQuoteSource
     })
 
     if (!response.ok) {
-      const msg =
-        (await response.text()) || `Failed with status ${response.status}`
-
-      if (response.status === 400) {
-        log({ name: "[PENDLE ERROR]", msg, recipient, url })
-
-        if (msg.includes("SY limit exceeded")) {
-          soldOutCoolOff[`${buyToken}${chainId}`] = Date.now()
-        }
-      }
-
-      failed(this.getMetadata(), chainId, sellToken, buyToken, msg)
+      await handlePendleErrorResponse(response)
     }
     const { routes } = await response.json()
 

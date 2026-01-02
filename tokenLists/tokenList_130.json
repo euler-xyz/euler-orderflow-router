@@ -283,5 +283,17 @@
       "provider": "DEFILLAMA",
       "poolId": "d4b3c522-6127-4b89-bedf-83641cdcd2eb"
     }
+  },
+  {
+    "chainId": 130,
+    "address": "0xB6168F597Cd37A232cb7CB94CD1786Be20eAD156",
+    "name": "PT cap USD 29JAN2026 (ETH)",
+    "symbol": "PT-cUSD-29JAN2026-(ETH)",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/130/0xB6168F597Cd37A232cb7CB94CD1786Be20eAD156",
+    "metadata": {
+      "isPendleCrossChainPT": true,
+      "pendleCrossChainPTPaired": "0x078d782b760474a361dda0af3839290b0ef57ad6"
+    }
   }
 ]

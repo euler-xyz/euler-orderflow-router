@@ -63,7 +63,8 @@ type OKXDexConfig = { apiKey: string; secretKey: string; passphrase: string }
 type OKXDexSupport = { buyOrders: false; swapAndTransfer: true }
 type OKXDexData = { tx: SourceQuoteTransaction }
 export class CustomOKXDexQuoteSource
-  implements IQuoteSource<OKXDexSupport, OKXDexConfig> {
+  implements IQuoteSource<OKXDexSupport, OKXDexConfig>
+{
   getMetadata() {
     return OKX_DEX_METADATA
   }

@@ -38,6 +38,7 @@ const unichainRoutingConfig: ChainRoutingConfig = [
           "paraswap",
           "odos",
           "0x",
+          "pendle",
         ],
       },
     },

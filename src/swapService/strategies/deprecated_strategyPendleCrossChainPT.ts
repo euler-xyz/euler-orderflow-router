@@ -39,6 +39,8 @@ const dustDepositVaults: [
   },
 ]
 
+// DEPRECATED IN FAVOR OF QUOTE SOURCE IN AGGREGATORS
+
 // Strategy handling Pendle cross chain PT swaps on spoke chains. Only from PT to any.
 export class StrategyPendleCrossChainPT {
   static name() {

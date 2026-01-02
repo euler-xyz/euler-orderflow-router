@@ -441,5 +441,13 @@
     "symbol": "WLP-USDai-19MAR2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x25835DdAC2CA6e9806c7244e9a19924641e247DF"
+  },
+  {
+    "chainId": 9745,
+    "address": "0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a",
+    "name": "EURØP",
+    "symbol": "EUROP",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/9745/0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a"
   }
 ]
