@@ -36,7 +36,8 @@ type PendleConfig = CustomOrAPIKeyConfig
 type PendleData = { tx: SourceQuoteTransaction; pendleAggregator: string }
 
 export class CustomPendleQuoteSource
-  implements IQuoteSource<PendleSupport, PendleConfig, PendleData> {
+  implements IQuoteSource<PendleSupport, PendleConfig, PendleData>
+{
   private aggregator: string
 
   constructor(_aggregator: string) {
