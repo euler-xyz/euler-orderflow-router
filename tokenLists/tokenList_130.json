@@ -292,6 +292,9 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/130/0xB6168F597Cd37A232cb7CB94CD1786Be20eAD156",
     "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x307c15f808914df5a5dbe17e5608f84953ffa023",
       "isPendleCrossChainPT": true,
       "pendleCrossChainPTPaired": "0x078d782b760474a361dda0af3839290b0ef57ad6"
     }

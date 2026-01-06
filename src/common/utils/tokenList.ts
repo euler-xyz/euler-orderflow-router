@@ -87,20 +87,6 @@ export async function buildCache() {
         t.logoURI = t.logoURI.replace(/([?&])v=[^&]*/g, "")
       }
       cache[Number(chainId)] = res as TokenListItem[]
-
-      // TODO REMOVE
-      if (chainId === "130") {
-        const cusd = cache[Number(chainId)].find(
-          (t) => t.address === "0xB6168F597Cd37A232cb7CB94CD1786Be20eAD156",
-        )
-        if (cusd) {
-          cusd.metadata = {
-            isPendleCrossChainPT: true,
-            pendleCrossChainPTPaired:
-              "0x078d782b760474a361dda0af3839290b0ef57ad6",
-          }
-        }
-      }
     }),
   ).catch((err) => {
     console.log(`Error fetching tokenlists ${err}`)
