@@ -245,6 +245,13 @@ const defaultConfig: {
       asset: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       assetDustEVault: "0xC078756d5722166Ba6B51121bFB7bd6388C29F4E",
     },
+    {
+      chainId: 56,
+      protocol: "ynBNBx",
+      vault: "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",
+      asset: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      assetDustEVault: "0x7d05D5cC437A61d038528a0dd7ce54d1B1Fb8565",
+    },
   ],
 }
 

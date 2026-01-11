@@ -1,5 +1,11 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
-import { StrategyBalmySDK, StrategyRepayWrapper } from "../strategies"
+import {
+  StrategyBalmySDK,
+  StrategyERC4626Wrapper,
+  StrategyRepayWrapper,
+} from "../strategies"
+
+const YNBNBX_BSC = "0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F"
 
 const bscRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -8,6 +14,12 @@ const bscRoutingConfig: ChainRoutingConfig = [
     match: {
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
+    },
+  },
+  {
+    strategy: StrategyERC4626Wrapper.name(),
+    match: {
+      tokensInOrOut: [YNBNBX_BSC],
     },
   },
   // DEFAULTS

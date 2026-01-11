@@ -602,6 +602,7 @@ export async function binarySearchQuote(
         amount: amountFrom,
       })))
 
+    console.log("amountTo: ", amountTo)
     if (prevAmountTo && prevAmountTo === amountTo)
       throw new Error("Binary search quote not improving")
     prevAmountTo = amountTo
