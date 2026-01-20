@@ -413,5 +413,13 @@
       "isPendlePT": true,
       "pendleMarket": "0xfAD63f0a2Ff618EdDE23561dfF212EDfeddBE89d"
     }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x5e021bf2ca47a17887D41f43AF811912D572e4a2",
+    "name": "ELITE",
+    "symbol": "ELIT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x5e021bf2ca47a17887D41f43AF811912D572e4a2"
   }
 ]
