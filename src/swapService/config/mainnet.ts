@@ -134,7 +134,7 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
           "magpie",
           "enso",
           "pendle",
-          "okx-dex",
+          // "okx-dex",
           "0x",
           "spectra",
         ],
