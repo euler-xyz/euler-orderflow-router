@@ -147,9 +147,9 @@ const getSwapSchema = z.object({
       example: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     }),
     tokenOut: addressSchema.openapi({
-      param: { description: "Address of the asset to buy" },
-      example: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-    }),
+        param: { description: "Address of the asset to buy" },
+        example: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      }),
     receiver: addressSchema.openapi({
       param: {
         description:
@@ -293,7 +293,10 @@ const getSwapSchema = z.object({
             "Preselected provider of the quote. See `providers` endpoint",
         },
       }),
-  }),
+  }).refine(
+    (data) => data.tokenIn.toLowerCase() !== data.tokenOut.toLowerCase(),
+    { message: "tokenOut must be different from tokenIn", path: ["tokenOut"] }
+  ),
 })
 
 const swapResponseSchemaSingle = z.object({

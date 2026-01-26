@@ -413,5 +413,45 @@
       "isPendlePT": true,
       "pendleMarket": "0xfAD63f0a2Ff618EdDE23561dfF212EDfeddBE89d"
     }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x5e021bf2ca47a17887D41f43AF811912D572e4a2",
+    "name": "ELITE",
+    "symbol": "ELIT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x5e021bf2ca47a17887D41f43AF811912D572e4a2"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+    "name": "Frax",
+    "symbol": "FRAX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F"
+  },
+  {
+    "chainId": 42161,
+    "address": "0xE4D5c6aE46ADFAF04313081e8C0052A30b6Dd724",
+    "name": "Pyth Network",
+    "symbol": "PYTH",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0xE4D5c6aE46ADFAF04313081e8C0052A30b6Dd724"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+    "name": "Pendle",
+    "symbol": "PENDLE",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8"
+  },
+  {
+    "chainId": 42161,
+    "address": "0x6E6a3D8F1AfFAc703B1aEF1F43B8D2321bE40043",
+    "name": "Olympus",
+    "symbol": "OHM",
+    "decimals": 9,
+    "logoURI": "https://token-images.euler.finance/42161/0x6E6a3D8F1AfFAc703B1aEF1F43B8D2321bE40043"
   }
 ]

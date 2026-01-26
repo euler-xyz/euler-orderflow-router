@@ -2717,5 +2717,39 @@
     "symbol": "msY",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x890A5122Aa1dA30fEC4286DE7904Ff808F0bd74A"
+  },
+  {
+    "chainId": 1,
+    "address": "0x9Bf45ab47747F4B4dD09B3C2c73953484b4eB375",
+    "name": "PT Strata Senior USDe 2APR2026",
+    "symbol": "PT-srUSDe-2APR2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x9Bf45ab47747F4B4dD09B3C2c73953484b4eB375",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0xAFB7d6d1e9BcA5B675aDC9b4f52F0CDfDdec9654"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0xd0609Ac13000d88B0BEbf5Bb21074916eDd92Bb1",
+    "name": "PT Strata Junior USDe 2APR2026",
+    "symbol": "PT-jrUSDe-2APR2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xd0609Ac13000d88B0BEbf5Bb21074916eDd92Bb1",
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0xfAbEEFC5369aA5270B401f4Ee062D17fb5f1EC2A"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0x4B86093042484C2AC65F372bf788FECCDc62891E",
+    "name": "Wrapped gmUSD",
+    "symbol": "wgmUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x4B86093042484C2AC65F372bf788FECCDc62891E"
   }
 ]

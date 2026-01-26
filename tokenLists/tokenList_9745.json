@@ -441,5 +441,29 @@
     "symbol": "WLP-USDai-19MAR2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x25835DdAC2CA6e9806c7244e9a19924641e247DF"
+  },
+  {
+    "chainId": 9745,
+    "address": "0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a",
+    "name": "EURØP",
+    "symbol": "EUROP",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/9745/0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a"
+  },
+  {
+    "chainId": 9745,
+    "address": "0xE556ABa6fe6036275Ec1f87eda296BE72C811BCE",
+    "name": "Neutrl USD",
+    "symbol": "NUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/9745/0xE556ABa6fe6036275Ec1f87eda296BE72C811BCE"
+  },
+  {
+    "chainId": 9745,
+    "address": "0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313",
+    "name": "Staked NUSD",
+    "symbol": "sNUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/9745/0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313"
   }
 ]
