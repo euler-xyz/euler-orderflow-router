@@ -41,6 +41,7 @@ import {
 } from "../utils"
 import { CustomSourceList } from "./balmySDK/customSourceList"
 import pendleAggregators from "./balmySDK/sources/pendle/pendleAggregators.json"
+import { StubPriceSource } from "./balmySDK/stubPriceSource"
 import { TokenlistMetadataSource } from "./balmySDK/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
@@ -184,6 +185,12 @@ export class StrategyBalmySDK {
       //     instance: new StubGasPriceSource(providerService),
       //   },
       // },
+      price: {
+        source: {
+          type: "custom",
+          instance: new StubPriceSource(providerService),
+        },
+      },
     } as BuildParams
     this.sdk = buildSDK(buildParams)
     this.match = match

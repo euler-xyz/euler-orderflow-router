@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 9745,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 9745,
@@ -21,7 +27,10 @@
     "name": "USDT0",
     "symbol": "USDT0",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/9745/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb"
+    "logoURI": "https://token-images.euler.finance/9745/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -29,7 +38,8 @@
     "name": "Wrapped XPL",
     "symbol": "WXPL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x6100E367285b01F48D07953803A2d8dCA5D19873"
+    "logoURI": "https://token-images.euler.finance/9745/0x6100E367285b01F48D07953803A2d8dCA5D19873",
+    "groups": []
   },
   {
     "chainId": 9745,
@@ -37,7 +47,10 @@
     "name": "WETH",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x9895D81bB462A195b4922ED7De0e3ACD007c32CB"
+    "logoURI": "https://token-images.euler.finance/9745/0x9895D81bB462A195b4922ED7De0e3ACD007c32CB",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 9745,
@@ -46,6 +59,9 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xA3D68b74bF0528fdD07263c60d6488749044914b",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "ETHERFI"
     }
@@ -57,6 +73,9 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -67,7 +86,10 @@
     "name": "USDe",
     "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34"
+    "logoURI": "https://token-images.euler.finance/9745/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -76,6 +98,9 @@
     "symbol": "sUSDai",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x0B2b2B2076d95dda7817e785989fE353fe955ef9",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -86,7 +111,10 @@
     "name": "USDai",
     "symbol": "USDai",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF"
+    "logoURI": "https://token-images.euler.finance/9745/0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -95,6 +123,9 @@
     "symbol": "xUSD",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/9745/0x6eAf19b2FC24552925dB245F9Ff613157a7dbb4C",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "b7daea94-6378-4eeb-8d10-52beebadf77b"
@@ -106,7 +137,8 @@
     "name": "XAUt0",
     "symbol": "XAUt0",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/9745/0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193"
+    "logoURI": "https://token-images.euler.finance/9745/0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193",
+    "groups": []
   },
   {
     "chainId": 9745,
@@ -115,6 +147,7 @@
     "symbol": "syrupUSDT",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/9745/0xC4374775489CB9C56003BF2C9b12495fC64F0771",
+    "groups": [],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "8edfdf02-cdbb-43f7-bca6-954e5fe56813"
@@ -127,6 +160,9 @@
     "symbol": "wstUSR",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x2a52B289bA68bBd02676640aA9F605700c9e5699",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "0aedb3f6-9298-49de-8bb0-2f611a4df784"
@@ -138,7 +174,10 @@
     "name": "Resolv USD",
     "symbol": "USR",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0xb1b385542B6E80F77B94393Ba8342c3Af699f15c"
+    "logoURI": "https://token-images.euler.finance/9745/0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -147,6 +186,9 @@
     "symbol": "RLP",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x35533f54740F1F1aA4179E57bA37039dfa16868B",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -157,7 +199,8 @@
     "name": "ENA",
     "symbol": "ENA",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x58538e6A46E07434d7E7375Bc268D3cb839C0133"
+    "logoURI": "https://token-images.euler.finance/9745/0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
+    "groups": []
   },
   {
     "chainId": 9745,
@@ -165,7 +208,10 @@
     "name": "Metronome Synth USD",
     "symbol": "msUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x29AD7fE4516909b9e498B5a65339e54791293234"
+    "logoURI": "https://token-images.euler.finance/9745/0x29AD7fE4516909b9e498B5a65339e54791293234",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -174,6 +220,9 @@
     "symbol": "pfxSAVE",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x5f264836CE02496CcF55D7F9AA5Cb34e34319DB5",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "LAGOON"
     }
@@ -185,6 +234,9 @@
     "symbol": "PT-USDe-15JAN2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x93B544c330F60A2aa05ceD87aEEffB8D38FD8c9a",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -198,6 +250,9 @@
     "symbol": "PT-sUSDE-15JAN2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x02FCC4989B4C9D435b7ceD3fE1Ba4CF77BBb5Dd8",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -211,6 +266,9 @@
     "symbol": "PT-syrupUSDT-29JAN2026",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/9745/0x8dFb9A39dFab16bFFE77f15544B5bf03e377e419",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -224,6 +282,9 @@
     "symbol": "PT-USDai-19MAR2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xD516188daf64EFa04a8d60872F891f2cC811A561",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -237,6 +298,9 @@
     "symbol": "PT-sUSDai-19MAR2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xedac81b27790e0728f54dEa3B7718e5437E85353",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -250,6 +314,9 @@
     "symbol": "sdeUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x7884A8457f0E63e82C89A87fE48E8Ba8223DB069",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "SDEUSD"
     }
@@ -260,7 +327,10 @@
     "name": "deUSD",
     "symbol": "deUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x4ac60586C3e245fF5593cf99241395bf42509274"
+    "logoURI": "https://token-images.euler.finance/9745/0x4ac60586C3e245fF5593cf99241395bf42509274",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -269,6 +339,9 @@
     "symbol": "splUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x616185600989Bf8339b58aC9e539d49536598343",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -279,7 +352,10 @@
     "name": "Plasma USD",
     "symbol": "plUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD"
+    "logoURI": "https://token-images.euler.finance/9745/0xf91c31299E998C5127Bc5F11e4a657FC0cF358CD",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -287,7 +363,10 @@
     "name": "Staked avUSD",
     "symbol": "savUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0xA29420057F3e3B9512D4786df135Da1674BD74D4"
+    "logoURI": "https://token-images.euler.finance/9745/0xA29420057F3e3B9512D4786df135Da1674BD74D4",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -295,7 +374,10 @@
     "name": "Yuzu USD",
     "symbol": "yzUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x6695c0f8706C5ACe3Bdf8995073179cCA47926dc"
+    "logoURI": "https://token-images.euler.finance/9745/0x6695c0f8706C5ACe3Bdf8995073179cCA47926dc",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -304,6 +386,9 @@
     "symbol": "syzUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xC8A8DF9B210243c55D31c73090F06787aD0A1Bf6",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -315,6 +400,7 @@
     "symbol": "yzPP",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xEbFC8C2Fe73C431Ef2A371AeA9132110aaB50DCa",
+    "groups": [],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -326,6 +412,9 @@
     "symbol": "wsrUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x4809010926aec940b550D34a46A52739f996D75D",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
@@ -338,6 +427,9 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "7c43e890-cefc-48d1-bf80-203cdb7dfe4f"
@@ -350,6 +442,9 @@
     "symbol": "mHYPER",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "MIDAS"
     }
@@ -360,7 +455,10 @@
     "name": "Pendle Market Wrapped",
     "symbol": "WLP-USDe-15JAN2026",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0xFFc953FEB92768E633a2530EF0a85F6334e1f7C6"
+    "logoURI": "https://token-images.euler.finance/9745/0xFFc953FEB92768E633a2530EF0a85F6334e1f7C6",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -369,6 +467,9 @@
     "symbol": "PT-splUSD-29JAN2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xA6C55E31154d39bb0Aa3CA2FF9F7665BDA4e47FC",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -382,6 +483,9 @@
     "symbol": "PT-RLP-26FEB2026",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/9745/0x48F119b3fCA8244274531f2e06B74AC4B1F5fe58",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -395,6 +499,9 @@
     "symbol": "PT-wstUSR-26FEB2026",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xFFaF49f320b8Ae1Bb9Ea596197040077a3666105",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -408,6 +515,9 @@
     "symbol": "PT-mHYPER-29JAN2026",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/9745/0xceA23aB8FdE0b90e4D08EB68e8876E43933721D2",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -421,6 +531,9 @@
     "symbol": "vyUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0xF4F447E6AFa04c9D11Ef0e2fC0d7f19C24Ee55de",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "aba6b15d-8554-4b9b-9489-88b8d2035fc9"
@@ -432,7 +545,10 @@
     "name": "Pendle Market Wrapped",
     "symbol": "WLP-sUSDE-15JAN2026",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x2139f45Ce853BBa998eC8D17d294d422b6FA4a6e"
+    "logoURI": "https://token-images.euler.finance/9745/0x2139f45Ce853BBa998eC8D17d294d422b6FA4a6e",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -440,7 +556,10 @@
     "name": "Pendle Market Wrapped",
     "symbol": "WLP-USDai-19MAR2026",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x25835DdAC2CA6e9806c7244e9a19924641e247DF"
+    "logoURI": "https://token-images.euler.finance/9745/0x25835DdAC2CA6e9806c7244e9a19924641e247DF",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 9745,
@@ -448,7 +567,10 @@
     "name": "EURØP",
     "symbol": "EUROP",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/9745/0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a"
+    "logoURI": "https://token-images.euler.finance/9745/0x98658Bd74EF231158Cadc21d8AbA733a4E947e6a",
+    "groups": [
+      "EUR"
+    ]
   },
   {
     "chainId": 9745,
@@ -456,7 +578,8 @@
     "name": "Neutrl USD",
     "symbol": "NUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0xE556ABa6fe6036275Ec1f87eda296BE72C811BCE"
+    "logoURI": "https://token-images.euler.finance/9745/0xE556ABa6fe6036275Ec1f87eda296BE72C811BCE",
+    "groups": []
   },
   {
     "chainId": 9745,
@@ -464,6 +587,7 @@
     "name": "Staked NUSD",
     "symbol": "sNUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/9745/0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313"
+    "logoURI": "https://token-images.euler.finance/9745/0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313",
+    "groups": []
   }
 ]

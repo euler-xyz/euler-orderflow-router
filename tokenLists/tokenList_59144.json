@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 59144,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 59144,
@@ -21,7 +27,10 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/59144/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f"
+    "logoURI": "https://token-images.euler.finance/59144/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 59144,
@@ -30,6 +39,9 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
@@ -42,6 +54,9 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "ETHERFI"
     }
@@ -53,6 +68,9 @@
     "symbol": "ezETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "RENZO"
     }
@@ -64,6 +82,9 @@
     "symbol": "wrsETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0xD2671165570f41BBB3B0097893300b6EB6101E6C",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
@@ -75,7 +96,8 @@
     "name": "EVK Vault eWETH-5",
     "symbol": "eWETH-5",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/59144/0xF29ac58e23904Ce3057afe2F9c430c87703DA982"
+    "logoURI": "https://token-images.euler.finance/59144/0xF29ac58e23904Ce3057afe2F9c430c87703DA982",
+    "groups": []
   },
   {
     "chainId": 59144,
@@ -83,7 +105,10 @@
     "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/59144/0x176211869cA2b568f2A7D4EE941E073a821EE1ff"
+    "logoURI": "https://token-images.euler.finance/59144/0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 59144,
@@ -91,7 +116,10 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/59144/0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4"
+    "logoURI": "https://token-images.euler.finance/59144/0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 59144,
@@ -99,7 +127,10 @@
     "name": "Tether USD",
     "symbol": "USDT",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/59144/0xA219439258ca9da29E9Cc4cE5596924745e12B93"
+    "logoURI": "https://token-images.euler.finance/59144/0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 59144,
@@ -107,7 +138,10 @@
     "name": "MetaMask USD",
     "symbol": "mUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/59144/0xacA92E438df0B2401fF60dA7E4337B687a2435DA"
+    "logoURI": "https://token-images.euler.finance/59144/0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 59144,
@@ -115,7 +149,8 @@
     "name": "Linea",
     "symbol": "LINEA",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/59144/0x1789e0043623282D5DCc7F213d703C6D8BAfBB04"
+    "logoURI": "https://token-images.euler.finance/59144/0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
+    "groups": []
   },
   {
     "chainId": 59144,
@@ -124,6 +159,9 @@
     "symbol": "wsrUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0x4809010926aec940b550D34a46A52739f996D75D",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
@@ -136,6 +174,7 @@
     "symbol": "REX33",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0xe4eEB461Ad1e4ef8b8EF71a33694CCD84Af051C4",
+    "groups": [],
     "metadata": {
       "provider": "ETHEREX"
     }
@@ -147,6 +186,9 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/59144/0x4e559dBCCbe87De66c6a9F3f25231096F24c2e28",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "7c43e890-cefc-48d1-bf80-203cdb7dfe4f"
@@ -158,7 +200,10 @@
     "name": "Staked deUSD",
     "symbol": "sdeUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/59144/0x3FB52887B61224823EDD3680ecA0A2fDbA7DE4D1"
+    "logoURI": "https://token-images.euler.finance/59144/0x3FB52887B61224823EDD3680ecA0A2fDbA7DE4D1",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 59144,
@@ -166,6 +211,9 @@
     "name": "deUSD",
     "symbol": "deUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/59144/0xB728946DD750c60C75C40f434c38E2F5aFe48a01"
+    "logoURI": "https://token-images.euler.finance/59144/0xB728946DD750c60C75C40f434c38E2F5aFe48a01",
+    "groups": [
+      "USD"
+    ]
   }
 ]

@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 56,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 56,
@@ -21,7 +27,8 @@
     "name": "MockERC20",
     "symbol": "MOCK",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0xFB0d7a36998aae560E791C86a54c5c0036770258"
+    "logoURI": "https://token-images.euler.finance/56/0xFB0d7a36998aae560E791C86a54c5c0036770258",
+    "groups": []
   },
   {
     "chainId": 56,
@@ -29,7 +36,10 @@
     "name": "Wrapped BNB",
     "symbol": "WBNB",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+    "logoURI": "https://token-images.euler.finance/56/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "groups": [
+      "BSC"
+    ]
   },
   {
     "chainId": 56,
@@ -37,7 +47,10 @@
     "name": "Staked Lista BNB",
     "symbol": "slisBNB",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0xD9EdEba7f3580f5E22821A52fc1ba8508F4e34D0"
+    "logoURI": "https://token-images.euler.finance/56/0xD9EdEba7f3580f5E22821A52fc1ba8508F4e34D0",
+    "groups": [
+      "BSC"
+    ]
   },
   {
     "chainId": 56,
@@ -45,7 +58,8 @@
     "name": "Ethereum Token",
     "symbol": "ETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x2170Ed0880ac9A755fd29B2688956BD959F933F8"
+    "logoURI": "https://token-images.euler.finance/56/0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+    "groups": []
   },
   {
     "chainId": 56,
@@ -53,7 +67,10 @@
     "name": "Tether USD",
     "symbol": "USDT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x55d398326f99059fF775485246999027B3197955"
+    "logoURI": "https://token-images.euler.finance/56/0x55d398326f99059fF775485246999027B3197955",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -61,7 +78,10 @@
     "name": "Lista USD",
     "symbol": "lisUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x0782b6d8c4551B9760e74c0545a9bCD90bdc41E5"
+    "logoURI": "https://token-images.euler.finance/56/0x0782b6d8c4551B9760e74c0545a9bCD90bdc41E5",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -69,7 +89,10 @@
     "name": "USD Coin",
     "symbol": "USDC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
+    "logoURI": "https://token-images.euler.finance/56/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -77,7 +100,10 @@
     "name": "BTCB Token",
     "symbol": "BTCB",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c"
+    "logoURI": "https://token-images.euler.finance/56/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 56,
@@ -85,7 +111,10 @@
     "name": "USDe",
     "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34"
+    "logoURI": "https://token-images.euler.finance/56/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -94,6 +123,9 @@
     "symbol": "PT-sUSDE-26JUN2025",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0xDD809435ba6c9d6903730f923038801781cA66ce",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -107,6 +139,9 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "SUSDE"
     }
@@ -118,6 +153,9 @@
     "symbol": "slisBNB",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0xB0b84D294e0C75A6abe60171b70edEb2EFd14A1B",
+    "groups": [
+      "BSC"
+    ],
     "metadata": {
       "provider": "LISTADAO"
     }
@@ -128,7 +166,10 @@
     "name": "Resolv USD",
     "symbol": "USR",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9"
+    "logoURI": "https://token-images.euler.finance/56/0x2492D0006411Af6C8bbb1c8afc1B0197350a79e9",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -137,6 +178,9 @@
     "symbol": "YUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "AEGIS"
     }
@@ -147,7 +191,10 @@
     "name": "Solv BTC",
     "symbol": "SolvBTC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7"
+    "logoURI": "https://token-images.euler.finance/56/0x4aae823a6a0b376De6A78e74eCC5b079d38cBCf7",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 56,
@@ -155,7 +202,10 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/56/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
+    "logoURI": "https://token-images.euler.finance/56/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 56,
@@ -163,7 +213,8 @@
     "name": "YieldNest: BNB Liquid Restaking",
     "symbol": "ynBNB",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x304B5845b9114182ECb4495Be4C91a273b74B509"
+    "logoURI": "https://token-images.euler.finance/56/0x304B5845b9114182ECb4495Be4C91a273b74B509",
+    "groups": []
   },
   {
     "chainId": 56,
@@ -171,7 +222,10 @@
     "name": "World Liberty Financial USD",
     "symbol": "USD1",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d"
+    "logoURI": "https://token-images.euler.finance/56/0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -180,6 +234,7 @@
     "symbol": "PT-USR-27NOV2025",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0x4a3846d069B800343D53e72B80a644Bb496D9aB2",
+    "groups": [],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -193,6 +248,9 @@
     "symbol": "ynBNBx",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0x32C830f5c34122C6afB8aE87ABA541B7900a2C5F",
+    "groups": [
+      "BSC"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "89818a06-3414-4d9d-a8a6-7c8686a40d2a"
@@ -204,7 +262,10 @@
     "name": "USDX",
     "symbol": "USDX",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef"
+    "logoURI": "https://token-images.euler.finance/56/0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 56,
@@ -213,6 +274,9 @@
     "symbol": "sUSDX",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -223,7 +287,8 @@
     "name": "EVK Vault eUSDT-5",
     "symbol": "eUSDT-5",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0xca522ECab584b5430ADb946edEE4224A63628362"
+    "logoURI": "https://token-images.euler.finance/56/0xca522ECab584b5430ADb946edEE4224A63628362",
+    "groups": []
   },
   {
     "chainId": 56,
@@ -231,7 +296,8 @@
     "name": "Aster",
     "symbol": "ASTER",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/56/0x000Ae314E2A2172a039B26378814C252734f556A"
+    "logoURI": "https://token-images.euler.finance/56/0x000Ae314E2A2172a039B26378814C252734f556A",
+    "groups": []
   },
   {
     "chainId": 56,
@@ -239,6 +305,9 @@
     "name": "MetaMask USD",
     "symbol": "mUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/56/0xacA92E438df0B2401fF60dA7E4337B687a2435DA"
+    "logoURI": "https://token-images.euler.finance/56/0xacA92E438df0B2401fF60dA7E4337B687a2435DA",
+    "groups": [
+      "USD"
+    ]
   }
 ]
