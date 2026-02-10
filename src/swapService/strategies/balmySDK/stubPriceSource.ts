@@ -1,4 +1,10 @@
-import type { ChainId, IProviderService, TimeString, Timestamp, TokenAddress } from "@balmy/sdk"
+import type {
+  ChainId,
+  IProviderService,
+  TimeString,
+  Timestamp,
+  TokenAddress,
+} from "@balmy/sdk"
 import type {
   IPriceSource,
   PriceInput,
@@ -45,7 +51,9 @@ export class StubPriceSource implements IPriceSource {
     tokens: { chainId: ChainId; token: TokenAddress; timestamp: Timestamp }[]
     searchWidth: TimeString | undefined
     config: { timeout?: TimeString } | undefined
-  }): Promise<Record<ChainId, Record<TokenAddress, Record<Timestamp, PriceResult>>>> {
+  }): Promise<
+    Record<ChainId, Record<TokenAddress, Record<Timestamp, PriceResult>>>
+  > {
     return {}
   }
 
