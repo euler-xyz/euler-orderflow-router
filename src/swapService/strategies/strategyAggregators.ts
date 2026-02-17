@@ -43,8 +43,8 @@ import {
 import { CustomSourceList } from "./aggregators/customSourceList"
 import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
 import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
-import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 import { StubPriceSource } from "./aggregators/stubPriceSource"
+import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
 const DEFAULT_TIMEOUT = "30000"
@@ -53,13 +53,13 @@ const BINARY_SEARCH_EXCLUDE_SOURCES: any = [] // paraswap is rate limited and fa
 
 type SourcesFilter =
   | Either<
-    {
-      includeSources: SourceId[]
-    },
-    {
-      excludeSources: SourceId[]
-    }
-  >
+      {
+        includeSources: SourceId[]
+      },
+      {
+        excludeSources: SourceId[]
+      }
+    >
   | undefined
 
 export type BalmyStrategyConfig = {
@@ -112,8 +112,8 @@ export class StrategyAggregators {
         configClone.sourcesFilter = {
           includeSources: configClone.sourcesFilter?.includeSources
             ? configClone.sourcesFilter.includeSources.filter(
-              (s) => s === provider,
-            )
+                (s) => s === provider,
+              )
             : [provider],
         }
       }
@@ -578,7 +578,7 @@ export class StrategyAggregators {
       !sources[sdkQuote.source.id].supports.swapAndTransfer
     const allowanceTarget =
       isAddress(sdkQuote.source.allowanceTarget) &&
-        !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
+      !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
         ? getAddress(sdkQuote.source.allowanceTarget)
         : undefined
 
