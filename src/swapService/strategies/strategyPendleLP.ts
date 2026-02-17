@@ -5,7 +5,7 @@ import {
   getAddress,
   parseAbiParameters,
 } from "viem"
-import { mainnet } from "viem/chains"
+import { mainnet, plasma } from "viem/chains"
 import { type SwapApiResponse, SwapperMode } from "../interface"
 import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
@@ -17,13 +17,14 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
 
 const WRAPPER_TOOL: Record<number, Address> = {
   [mainnet.id]: getAddress("0x09cc0ccaf92382E6EcD04246329d7249113c68EB"),
-  [9745]: getAddress("0x94976c190B94C1B110Ef3Ac9f774131e8490E62d"),
+  [plasma.id]: getAddress("0x94976c190B94C1B110Ef3Ac9f774131e8490E62d"),
 }
 
 const WRAPPER_PROVIDER_NAME = "Pendle LP Wrapper"
@@ -51,6 +52,10 @@ export class StrategyPendleLP {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return [] // relies on providers of underlying strategies
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyPendleLP.name(),
@@ -69,7 +74,9 @@ export class StrategyPendleLP {
           if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.exactInFromWrappedLPToAny(swapParams)
           } else {
-            result.quotes = await this.exactInFromAnyToWrappedLP(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.exactInFromAnyToWrappedLP(swapParams)
+              : []
           }
           break
         }
@@ -77,7 +84,9 @@ export class StrategyPendleLP {
           if (swapParams.tokenIn.metadata?.isPendleWrappedLP) {
             result.quotes = await this.targetDebtFromWrappedLPToAny(swapParams)
           } else {
-            result.quotes = await this.targetDebtFromAnyToWrappedLP(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.targetDebtFromAnyToWrappedLP(swapParams)
+              : []
           }
           break
         }

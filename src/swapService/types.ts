@@ -28,6 +28,7 @@ export interface SwapParams {
   onlyFixedInputExactOut?: boolean // only fetch quotes where amountIn is fixed and not subject to slippage
   noRepayEncoding?: boolean // FIXME workaround for composite repays (ERC4626 strategy / overswap)
   skipSweepDepositOut?: boolean // don't add the final deposit of the bought asset (sweep), leave the assets in Swapper
+  provider?: string // preselected provider
 }
 
 export interface SwapQuote {
@@ -40,6 +41,7 @@ export interface SwapQuote {
   protocol: string
   shouldTransferToReceiver?: boolean
   allowanceTarget?: Address
+  estimatedGas?: bigint
 }
 
 export interface StrategyResult {

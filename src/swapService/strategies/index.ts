@@ -1,4 +1,4 @@
-import { StrategyBalmySDK } from "./strategyBalmySDK"
+import { StrategyAggregators } from "./StrategyAggregators"
 import { StrategyCombinedUniswap } from "./strategyCombinedUniswap"
 import { StrategyConnect2 } from "./strategyConnect2"
 import { StrategyCurveLPNG } from "./strategyCurveLPNG"
@@ -15,7 +15,7 @@ export {
   StrategyCombinedUniswap,
   StrategyMidas,
   StrategyRepayWrapper,
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyIdleCDOTranche,
   StrategyCurveLPNG,
@@ -30,7 +30,7 @@ export const strategies = {
   [StrategyMidas.name()]: StrategyMidas,
   [StrategyCombinedUniswap.name()]: StrategyCombinedUniswap,
   [StrategyRepayWrapper.name()]: StrategyRepayWrapper,
-  [StrategyBalmySDK.name()]: StrategyBalmySDK,
+  [StrategyAggregators.name()]: StrategyAggregators,
   [StrategyERC4626Wrapper.name()]: StrategyERC4626Wrapper,
   [StrategyIdleCDOTranche.name()]: StrategyIdleCDOTranche,
   [StrategyCurveLPNG.name()]: StrategyCurveLPNG,

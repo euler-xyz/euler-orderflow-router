@@ -14,6 +14,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import * as chains from "viem/chains"
 
 const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
   name: "Enso",
@@ -28,10 +29,10 @@ const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
       Chains.ARBITRUM.chainId,
       Chains.AVALANCHE.chainId,
       Chains.SONIC.chainId,
-      80094,
-      130,
-      9745,
-      143, // monad
+      chains.berachain.id,
+      chains.unichain.id,
+      chains.plasma.id,
+      chains.monad.id,
     ],
     swapAndTransfer: false,
     buyOrders: false,
@@ -102,7 +103,7 @@ export class CustomEnsoQuoteSource
 
     const {
       amountOut,
-      // gas,
+      gas,
       tx: { data, to, value },
     } = await response.json()
 
@@ -110,7 +111,7 @@ export class CustomEnsoQuoteSource
       sellAmount: order.sellAmount,
       buyAmount: BigInt(amountOut),
       allowanceTarget: calculateAllowanceTarget(sellToken, to),
-      // estimatedGas: BigInt(gas),
+      estimatedGas: BigInt(gas),
       customData: {
         tx: {
           calldata: data,

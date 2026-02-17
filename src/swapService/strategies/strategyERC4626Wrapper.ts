@@ -21,6 +21,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -280,6 +281,10 @@ export class StrategyERC4626Wrapper {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyERC4626Wrapper.name(),
@@ -288,6 +293,15 @@ export class StrategyERC4626Wrapper {
     }
 
     if (!result.supports || !result.match) return result
+
+    // if the swap is between a vault and it's asset, which is handled directly,
+    // only proceed if the provider is not set (all providers) or it's the "custom" provider.
+    // Otherwise return an empty result, which will end the pipeline and return 404.
+    // Without this, the client would receive duplicate internal quotes
+    if (this.isDirectSwap(swapParams) && !includesCustomProvider(swapParams)) {
+      result.quotes = []
+      return result
+    }
 
     try {
       switch (swapParams.swapperMode) {
@@ -864,6 +878,19 @@ export class StrategyERC4626Wrapper {
     if (!supportedVault) throw new Error("Vault not supported")
 
     return supportedVault
+  }
+
+  isDirectSwap(swapParams: SwapParams) {
+    return (
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenIn.address,
+        underlying: swapParams.tokenOut.address,
+      }) ||
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenOut.address,
+        underlying: swapParams.tokenIn.address,
+      })
+    )
   }
 }
 

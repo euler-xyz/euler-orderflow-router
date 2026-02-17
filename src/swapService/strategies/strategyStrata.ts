@@ -21,6 +21,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -81,6 +82,10 @@ export class StrategyStrata {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyStrata.name(),
@@ -89,6 +94,11 @@ export class StrategyStrata {
     }
 
     if (!result.supports || !result.match) return result
+
+    if (this.isDirectSwap(swapParams) && !includesCustomProvider(swapParams)) {
+      result.quotes = [] // this ends the pipeline and returns empty results
+      return result
+    }
 
     try {
       switch (swapParams.swapperMode) {
@@ -679,6 +689,19 @@ export class StrategyStrata {
       isAddressEqual(v.vault, vault),
     )?.asset
     return !!asset && isAddressEqual(asset, underlying)
+  }
+
+  isDirectSwap(swapParams: SwapParams) {
+    return (
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenIn.address,
+        underlying: swapParams.tokenOut.address,
+      }) ||
+      this.isSupportedVaultUnderlying({
+        vault: swapParams.tokenOut.address,
+        underlying: swapParams.tokenIn.address,
+      })
+    )
   }
 
   getSupportedVault(vault: Address) {

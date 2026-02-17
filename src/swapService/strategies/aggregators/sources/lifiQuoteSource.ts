@@ -130,15 +130,15 @@ export class CustomLiFiQuoteSource extends AlwaysValidConfigAndContextSource<
         toAmountMin,
         toAmount,
         fromAmount,
-        // gasCosts,
+        gasCosts,
       },
       transactionRequest: { to, data, value },
     } = await response.json()
 
-    // const estimatedGas = (gasCosts as { estimate: bigint }[]).reduce(
-    //   (accum, { estimate }) => accum + BigInt(estimate),
-    //   0n,
-    // )
+    const estimatedGas = (gasCosts as { estimate: bigint }[]).reduce(
+      (accum, { estimate }) => accum + BigInt(estimate),
+      0n,
+    )
 
     return {
       sellAmount: fromAmount,
@@ -146,7 +146,7 @@ export class CustomLiFiQuoteSource extends AlwaysValidConfigAndContextSource<
       buyAmount: BigInt(toAmount),
       minBuyAmount: BigInt(toAmountMin),
       type: order.type,
-      // estimatedGas, // TODO fix handling in SDK for unkown chains
+      estimatedGas,
       allowanceTarget: calculateAllowanceTarget(sellToken, approvalAddress),
       customData: {
         tx: {

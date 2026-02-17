@@ -2,7 +2,7 @@ import { type Hex, parseUnits } from "viem"
 import * as chains from "viem/chains"
 import { SwapperMode } from "../interface"
 import type { SwapApiResponse } from "../interface"
-import { fetchUniswapQuote } from "../quoters"
+import { fetchUniswapQuote } from "../quoters/quoterUniswap"
 import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
 import {
@@ -51,6 +51,10 @@ export class StrategyCombinedUniswap {
       swapParams.swapperMode === SwapperMode.TARGET_DEBT &&
       !swapParams.onlyFixedInputExactOut
     )
+  }
+
+  async providers(): Promise<string[]> {
+    return [] // relies on providers of underlying strategies
   }
 
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {

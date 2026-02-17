@@ -20,6 +20,7 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
 import { formatUnits } from "viem"
+import * as chains from "viem/chains"
 
 // https://docs.openocean.finance/dev/supported-chains
 const SUPPORTED_CHAINS: Record<
@@ -70,13 +71,13 @@ const SUPPORTED_CHAINS: Record<
   [Chains.BLAST.chainId]: { chainKey: "blast" },
   [Chains.ROOTSTOCK.chainId]: { chainKey: "rootstock" },
   [Chains.MODE.chainId]: { chainKey: "mode" },
-  [146]: { chainKey: "sonic" },
-  [80094]: { chainKey: "berachain" },
-  [1923]: { chainKey: "swell" },
-  [130]: { chainKey: "unichain" }, // fix gas price
-  [239]: { chainKey: "tac" }, // fix gas price
-  [9745]: { chainKey: "plasma" },
-  [143]: { chainKey: "monad" },
+  [chains.sonic.id]: { chainKey: "sonic" },
+  [chains.berachain.id]: { chainKey: "berachain" },
+  [chains.swellchain.id]: { chainKey: "swell" },
+  [chains.unichain.id]: { chainKey: "unichain" }, // fix gas price
+  [chains.tac.id]: { chainKey: "tac" }, // fix gas price
+  [chains.plasma.id]: { chainKey: "plasma" },
+  [chains.monad.id]: { chainKey: "monad" },
 }
 
 const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {
@@ -171,7 +172,8 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
         to,
         value,
         data,
-        rfqDeadline /* estimatedGas */,
+        rfqDeadline,
+        estimatedGas,
       },
     } = await response.json()
 
@@ -191,7 +193,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       buyAmount: BigInt(outAmount),
       minBuyAmount: BigInt(minOutAmount),
       type: "sell",
-      // estimatedGas: BigInt(estimatedGas), // TODO fix unknown chains handling in SDK
+      estimatedGas: BigInt(estimatedGas),
       allowanceTarget: calculateAllowanceTarget(sellToken, to),
       customData: {
         tx: {

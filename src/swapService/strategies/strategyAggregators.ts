@@ -1,6 +1,7 @@
 import {
   type BuildParams,
   type Chain,
+  ChainId,
   type QuoteRequest,
   type QuoteResponse,
   type QuoteResponseWithTx,
@@ -39,10 +40,11 @@ import {
   promiseWithTimeout,
   quoteToRoute,
 } from "../utils"
-import { CustomSourceList } from "./balmySDK/customSourceList"
-import pendleAggregators from "./balmySDK/sources/pendle/pendleAggregators.json"
-import { StubPriceSource } from "./balmySDK/stubPriceSource"
-import { TokenlistMetadataSource } from "./balmySDK/tokenlistMetadataSource"
+import { CustomSourceList } from "./aggregators/customSourceList"
+import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
+import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
+import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
+import { StubPriceSource } from "./aggregators/stubPriceSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
 const DEFAULT_TIMEOUT = "30000"
@@ -51,13 +53,13 @@ const BINARY_SEARCH_EXCLUDE_SOURCES: any = [] // paraswap is rate limited and fa
 
 type SourcesFilter =
   | Either<
-      {
-        includeSources: SourceId[]
-      },
-      {
-        excludeSources: SourceId[]
-      }
-    >
+    {
+      includeSources: SourceId[]
+    },
+    {
+      excludeSources: SourceId[]
+    }
+  >
   | undefined
 
 export type BalmyStrategyConfig = {
@@ -78,27 +80,46 @@ export const defaultConfig: BalmyStrategyConfig = {
   sourcesFilter: undefined,
 }
 
-export class StrategyBalmySDK {
+export class StrategyAggregators {
   static name() {
-    return "balmy_sdk"
+    return "aggregators"
   }
   readonly match
   readonly config
 
   private readonly sdk
 
-  constructor(match = {}, config?: BalmyStrategyConfig) {
+  constructor(match = {}, config?: BalmyStrategyConfig, provider?: string) {
     const allPendleAggregators = [
       ...new Set(Object.values(pendleAggregators).flat()),
     ]
 
-    if (config?.sourcesFilter?.includeSources?.includes("pendle")) {
-      config.sourcesFilter.includeSources.push(
+    let configClone = structuredClone(config)
+
+    if (configClone?.sourcesFilter?.includeSources?.includes("pendle")) {
+      configClone.sourcesFilter.includeSources.push(
         ...allPendleAggregators.map((aggregator) => `pendle-${aggregator}`),
       )
+      configClone.sourcesFilter.includeSources =
+        configClone.sourcesFilter.includeSources.filter((s) => s !== "pendle")
     }
 
-    this.config = { ...defaultConfig, ...(config || {}) }
+    if (provider) {
+      if (!configClone) configClone = {} as BalmyStrategyConfig
+      if (configClone.sourcesFilter?.excludeSources?.includes(provider)) {
+        configClone.sourcesFilter = { includeSources: [] }
+      } else {
+        configClone.sourcesFilter = {
+          includeSources: configClone.sourcesFilter?.includeSources
+            ? configClone.sourcesFilter.includeSources.filter(
+              (s) => s === provider,
+            )
+            : [provider],
+        }
+      }
+    }
+
+    this.config = { ...defaultConfig, ...(configClone || {}) }
     const fetchService = buildFetchService()
     const providerService = buildProviderService({
       source: {
@@ -127,9 +148,6 @@ export class StrategyBalmySDK {
             },
             "li-fi": {
               apiKey: String(process.env.LIFI_API_KEY),
-            },
-            pendle: {
-              apiKey: String(process.env.PENDLE_API_KEY),
             },
             "open-ocean": {
               apiKey: String(process.env.OPENOCEAN_API_KEY),
@@ -179,16 +197,16 @@ export class StrategyBalmySDK {
           },
         },
       },
-      // gas: {
-      //   source: {
-      //     type: "custom",
-      //     instance: new StubGasPriceSource(providerService),
-      //   },
-      // },
       price: {
         source: {
           type: "custom",
           instance: new StubPriceSource(providerService),
+        },
+      },
+      gas: {
+        source: {
+          type: "custom",
+          instance: new StubGasPriceSource(providerService),
         },
       },
     } as BuildParams
@@ -200,13 +218,29 @@ export class StrategyBalmySDK {
     return (
       !isExactInRepay(swapParams) &&
       (this.sdk.quoteService.supportedChains().includes(swapParams.chainId) ||
-        swapParams.chainId === 1923) // TODO fix!
+        swapParams.chainId === 1923) && // TODO fix!
+      (!this.config.sourcesFilter?.includeSources ||
+        this.config.sourcesFilter.includeSources.length > 0)
     )
+  }
+
+  async providers(chainId: number): Promise<string[]> {
+    let sourcesInChain = Object.keys(
+      this.sdk.quoteService.supportedSourcesInChain({ chainId }),
+    )
+    const excludeSources = this.config.sourcesFilter?.excludeSources
+    const includeSources = this.config.sourcesFilter?.includeSources
+    if (excludeSources) {
+      sourcesInChain = sourcesInChain.filter((s) => !excludeSources.includes(s))
+    } else if (includeSources) {
+      sourcesInChain = sourcesInChain.filter((s) => includeSources.includes(s))
+    }
+    return sourcesInChain
   }
 
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
-      strategy: StrategyBalmySDK.name(),
+      strategy: StrategyAggregators.name(),
       supports: await this.supports(swapParams),
       match: matchParams(swapParams, this.match),
     }
@@ -544,7 +578,7 @@ export class StrategyBalmySDK {
       !sources[sdkQuote.source.id].supports.swapAndTransfer
     const allowanceTarget =
       isAddress(sdkQuote.source.allowanceTarget) &&
-      !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
+        !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
         ? getAddress(sdkQuote.source.allowanceTarget)
         : undefined
 
@@ -561,6 +595,7 @@ export class StrategyBalmySDK {
           : sdkQuote.source.name,
       shouldTransferToReceiver,
       allowanceTarget,
+      estimatedGas: sdkQuote.gas?.estimatedGas,
     }
   }
 }

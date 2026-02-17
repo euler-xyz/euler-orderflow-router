@@ -1,5 +1,5 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
-import { StrategyBalmySDK, StrategyRepayWrapper } from "../strategies"
+import { StrategyAggregators, StrategyRepayWrapper } from "../strategies"
 
 const swellRoutingConfig: ChainRoutingConfig = [
   // WRAPPERS
@@ -12,13 +12,7 @@ const swellRoutingConfig: ChainRoutingConfig = [
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: ["neptune", "li-fi", "open-ocean"],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
 ]
 

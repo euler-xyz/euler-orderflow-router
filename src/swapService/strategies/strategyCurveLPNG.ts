@@ -17,6 +17,7 @@ import {
   buildApiResponseVerifyDebtMax,
   buildApiResponseVerifySkimMin,
   encodeSwapMulticallItem,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -66,6 +67,7 @@ export class StrategyCurveLPNG {
   async supports(swapParams: SwapParams) {
     return (
       !isExactInRepay(swapParams) &&
+      includesCustomProvider(swapParams) && // strategy is not running the pipeline, only direct interactions
       this.config.supportedPools.some(
         (v) =>
           v.chainId === swapParams.chainId &&
@@ -73,6 +75,10 @@ export class StrategyCurveLPNG {
             isAddressEqual(v.lp, swapParams.tokenOut.address)),
       )
     )
+  }
+
+  async providers(): Promise<string[]> {
+    return ["custom"]
   }
 
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {

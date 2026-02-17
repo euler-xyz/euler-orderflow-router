@@ -9,6 +9,7 @@ import type {
 } from "@balmy/sdk"
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
 import { CustomZRXQuoteSource } from "./sources/0xMatchaQuoteSource"
+import { CustomCoWQuoteSource } from "./sources/cowQuoteSource"
 import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
@@ -46,6 +47,7 @@ const customSources = {
   "okx-dex": new CustomOKXDexQuoteSource(),
   paraswap: new CustomParaswapQuoteSource(),
   "0x": new CustomZRXQuoteSource(),
+  cow: new CustomCoWQuoteSource(),
   spectra: new CustomSpectraQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
@@ -70,11 +72,9 @@ export class CustomSourceList extends LocalSourceList {
 
     const mutableThis = this as any
     mutableThis.sources = {
-      ...mutableThis.sources,
       ...customSources,
       ...pendleSources,
     }
-    delete mutableThis.sources.balmy
 
     // wrap getQuote in timer
     const getQuoteSuper = mutableThis.getQuote.bind(this)

@@ -1,6 +1,6 @@
 import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
-  StrategyBalmySDK,
+  StrategyAggregators,
   StrategyElixir,
   StrategyMidas,
   StrategyPendleLP,
@@ -40,36 +40,13 @@ const plasmaRoutingConfig: ChainRoutingConfig = [
   },
   {
     strategy: StrategyMidas.name(),
-    match: {}, // supports function will match mTokens
   },
   {
     strategy: StrategyPendleLP.name(),
-    match: {}, // supports function will match Pendle LP
   },
   // DEFAULTS
   {
-    strategy: StrategyBalmySDK.name(),
-    config: {
-      sourcesFilter: {
-        includeSources: [
-          "kyberswap",
-          "paraswap",
-          "odos",
-          "1inch",
-          "li-fi",
-          "open-ocean",
-          "uniswap",
-          "oku",
-          "magpie",
-          "enso",
-          "okx-dex",
-          "pendle",
-          "pendle-lp",
-          "0x",
-        ],
-      },
-    },
-    match: {},
+    strategy: StrategyAggregators.name(),
   },
 ]
 

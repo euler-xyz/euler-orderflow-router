@@ -10,7 +10,7 @@ import {
   publicActions,
   stringToHex,
 } from "viem"
-import { base, mainnet } from "viem/chains"
+import { base, mainnet, plasma } from "viem/chains"
 import { SwapperMode } from "../interface"
 import type { SwapApiResponse } from "../interface"
 import { runPipeline } from "../runner"
@@ -25,6 +25,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -167,7 +168,7 @@ const defaultConfig: Config = {
         priceOne: 100000000n,
       },
     },
-    [9745]: {
+    [plasma.id]: {
       //plasma
       mHYPER: {
         tokenContract: "0xb31BeA5c2a43f942a3800558B1aa25978da75F8a",
@@ -210,6 +211,10 @@ export class StrategyMidas {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyMidas.name(),
@@ -228,8 +233,9 @@ export class StrategyMidas {
             if (
               isAddressEqual(swapParams.tokenOut.address, mToken.paymentToken)
             ) {
-              result.quotes =
-                await this.exactInFromMTokenToPaymentToken(swapParams)
+              result.quotes = includesCustomProvider(swapParams)
+                ? await this.exactInFromMTokenToPaymentToken(swapParams)
+                : []
             } else {
               result.quotes = await this.exactInFromMTokenToAny(swapParams)
             }
@@ -237,8 +243,9 @@ export class StrategyMidas {
             if (
               isAddressEqual(swapParams.tokenIn.address, mToken.paymentToken)
             ) {
-              result.quotes =
-                await this.exactInFromPaymentTokenToMToken(swapParams)
+              result.quotes = includesCustomProvider(swapParams)
+                ? await this.exactInFromPaymentTokenToMToken(swapParams)
+                : []
             } else {
               result.quotes = await this.exactInFromAnyToMToken(swapParams)
             }
@@ -250,8 +257,9 @@ export class StrategyMidas {
             if (
               isAddressEqual(swapParams.tokenOut.address, mToken.paymentToken)
             ) {
-              result.quotes =
-                await this.targetDebtFromMTokenToPaymentToken(swapParams)
+              result.quotes = includesCustomProvider(swapParams)
+                ? await this.targetDebtFromMTokenToPaymentToken(swapParams)
+                : []
             } else {
               result.quotes = await this.targetDebtFromMTokenToAny(swapParams)
             }
@@ -259,8 +267,9 @@ export class StrategyMidas {
             if (
               isAddressEqual(swapParams.tokenIn.address, mToken.paymentToken)
             ) {
-              result.quotes =
-                await this.targetDebtFromPaymentTokenToMToken(swapParams)
+              result.quotes = includesCustomProvider(swapParams)
+                ? await this.targetDebtFromPaymentTokenToMToken(swapParams)
+                : []
             } else {
               result.quotes = await this.targetDebtFromAnyToMToken(swapParams)
             }

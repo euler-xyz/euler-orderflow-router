@@ -19,6 +19,7 @@ import {
   encodeSwapMulticallItem,
   encodeTargetDebtAsExactInMulticall,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -61,6 +62,10 @@ export class StrategyPendleCrossChainPT {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyPendleCrossChainPT.name(),
@@ -81,7 +86,9 @@ export class StrategyPendleCrossChainPT {
               getAddress(swapParams.tokenIn.metadata.pendleCrossChainPTPaired),
             )
           ) {
-            result.quotes = [await this.exactInFromPTToUnderlying(swapParams)]
+            result.quotes = includesCustomProvider(swapParams)
+              ? [await this.exactInFromPTToUnderlying(swapParams)]
+              : []
           } else {
             result.quotes = await this.exactInFromPTToAny(swapParams)
           }
@@ -94,7 +101,9 @@ export class StrategyPendleCrossChainPT {
               getAddress(swapParams.tokenIn.metadata.pendleCrossChainPTPaired),
             )
           ) {
-            result.quotes = await this.targetDebtFromPTToUnderlying(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.targetDebtFromPTToUnderlying(swapParams)
+              : []
           } else {
             result.quotes = await this.targetDebtFromPTToAny(swapParams)
           }

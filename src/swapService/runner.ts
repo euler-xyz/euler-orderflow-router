@@ -12,12 +12,17 @@ import { strategies } from "./strategies/index"
 import type { StrategyResult, SwapParams } from "./types"
 import { ApiError, addInOutDeposits } from "./utils"
 
-function loadPipeline(swapParams: SwapParams) {
+// provider is needed in construction by balmy strategy which doesn't filter providers during the quote
+function loadPipeline(
+  chainId: number,
+  routingOverride?: ChainRoutingConfig,
+  provider?: string,
+) {
   let routing: ChainRoutingConfig
-  if (swapParams.routingOverride) {
-    routing = swapParams.routingOverride
+  if (routingOverride) {
+    routing = routingOverride
   } else {
-    routing = getRoutingConfig(swapParams.chainId)
+    routing = getRoutingConfig(chainId)
     if (!routing)
       throw new ApiError(
         StatusCodes.NOT_FOUND,
@@ -29,6 +34,7 @@ function loadPipeline(swapParams: SwapParams) {
     return new strategies[routingItem.strategy](
       routingItem.match,
       routingItem.config,
+      provider,
     )
   })
 }
@@ -36,7 +42,11 @@ function loadPipeline(swapParams: SwapParams) {
 export async function runPipeline(
   swapParams: SwapParams,
 ): Promise<SwapApiResponse[]> {
-  const pipeline = loadPipeline(swapParams)
+  const pipeline = loadPipeline(
+    swapParams.chainId,
+    swapParams.routingOverride,
+    swapParams.provider,
+  )
 
   const allResults: StrategyResult[] = []
   for (const strategy of pipeline) {
@@ -53,7 +63,12 @@ export async function runPipeline(
       StatusCodes.NOT_FOUND,
       "Pipeline empty or result not found",
     )
-  if (!finalResult.quotes || finalResult.quotes.length === 0) {
+
+  // empty results when provider is set is a valid response
+  if (
+    !finalResult.quotes ||
+    (finalResult.quotes.length === 0 && !swapParams.provider)
+  ) {
     throw new ApiError(
       StatusCodes.NOT_FOUND,
       "Swap quote not found",
@@ -61,14 +76,18 @@ export async function runPipeline(
     )
   }
 
-  console.log({
-    name: "Best quote",
-    amountIn: finalResult.quotes[0].amountIn,
-    amountInMax: finalResult.quotes[0].amountInMax,
-    amountOut: finalResult.quotes[0].amountOut,
-    amountOutMin: finalResult.quotes[0].amountOutMin,
-    route: finalResult.quotes[0].route,
-  })
+  if (finalResult.quotes.length) {
+    console.log({
+      name: "Best quote",
+      amountIn: finalResult.quotes[0].amountIn,
+      amountInMax: finalResult.quotes[0].amountInMax,
+      amountOut: finalResult.quotes[0].amountOut,
+      amountOutMin: finalResult.quotes[0].amountOutMin,
+      route: finalResult.quotes[0].route,
+    })
+  } else {
+    console.log("Empty results []")
+  }
   // console.log(
   //   finalResult.quotes
   //     .map((q) => q.route.map((r) => r.providerName).join(" "))
@@ -83,13 +102,14 @@ export async function runPipeline(
 export async function findSwaps(swapParams: SwapParams) {
   // GLOBAL CHECKS
   let quotes = await runPipeline(swapParams)
+  const origQuoteLenght = quotes.length
 
   // make sure verify item includes at least a function selector
   quotes = quotes.filter(
     (q) => isHex(q.verify.verifierData) && q.verify.verifierData.length >= 10,
   )
 
-  if (quotes.length === 0)
+  if (origQuoteLenght > 0 && quotes.length === 0)
     throw new ApiError(StatusCodes.INTERNAL_SERVER_ERROR, "Invalid quotes")
 
   for (const quote of quotes) {
@@ -103,4 +123,18 @@ export async function findSwaps(swapParams: SwapParams) {
   })
 
   return quotes
+}
+
+export async function reflectProviders(chainId: number) {
+  const pipeline = loadPipeline(chainId)
+
+  return [
+    ...new Set(
+      (
+        await Promise.all(
+          pipeline.map((strategy) => strategy.providers(chainId)),
+        )
+      ).flat(),
+    ),
+  ]
 }

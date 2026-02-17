@@ -12,6 +12,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import * as chains from "viem/chains"
 
 // Supported Networks: https://0x.org/docs/0x-swap-api/introduction#supported-networks
 const SUPPORTED_CHAINS = [
@@ -27,9 +28,9 @@ const SUPPORTED_CHAINS = [
   Chains.OPTIMISM,
   Chains.POLYGON,
   Chains.SCROLL,
-  { chainId: 59144 }, // linea
-  { chainId: 130 }, // unichain
-  { chainId: 9745 }, // plasma
+  { chainId: chains.linea.id },
+  { chainId: chains.unichain.id },
+  { chainId: chains.plasma.id },
 ]
 
 const ZRX_METADATA: QuoteSourceMetadata<ZRXSupport> = {
@@ -90,7 +91,7 @@ export class CustomZRXQuoteSource
       failed(ZRX_METADATA, chainId, sellToken, buyToken, await response.text())
     }
     const {
-      transaction: { data, to, value },
+      transaction: { data, to, value, gas },
       buyAmount,
       minBuyAmount,
       // issues,
@@ -103,7 +104,7 @@ export class CustomZRXQuoteSource
       maxSellAmount: order.sellAmount,
       buyAmount: BigInt(buyAmount),
       minBuyAmount: BigInt(minBuyAmount),
-      // estimatedGas: BigInt(gas ?? 0),
+      estimatedGas: BigInt(gas ?? 0),
       // allowanceTarget: calculateAllowanceTarget(sellToken, allowanceTarget),
       customData: {
         tx: {

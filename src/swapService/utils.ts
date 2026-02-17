@@ -267,6 +267,7 @@ export function buildApiResponseExactInputFromQuote(
     tokenIn: swapParams.tokenIn,
     tokenOut: swapParams.tokenOut,
     slippage: swapParams.slippage,
+    estimatedGas: quote.estimatedGas?.toString(),
     route: quoteToRoute(quote),
     swap,
     verify,
@@ -663,6 +664,10 @@ export function quoteToRoute(quote: SwapQuote): SwapRouteItem[] {
 
 export function isExactInRepay(swapParams: SwapParams) {
   return swapParams.swapperMode === SwapperMode.EXACT_IN && swapParams.isRepay
+}
+
+export function includesCustomProvider(swapParams: SwapParams) {
+  return !swapParams.provider || swapParams.provider === "custom"
 }
 
 export function promiseWithTimeout(fn: any, timeoutSeconds: number) {

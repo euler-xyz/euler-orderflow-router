@@ -35,6 +35,7 @@ export interface SwapApiResponse {
   swap: SwapApiResponseSwap
   verify: SwapApiResponseVerify
   route: SwapRouteItem[]
+  estimatedGas?: string
 }
 
 export interface SwapApiResponseSwap {
@@ -87,7 +88,7 @@ export interface StrategyMatchConfig {
 
 export interface RoutingItem {
   strategy: string
-  match: StrategyMatchConfig
+  match?: StrategyMatchConfig
   config?: StrategyConfig
 }
 

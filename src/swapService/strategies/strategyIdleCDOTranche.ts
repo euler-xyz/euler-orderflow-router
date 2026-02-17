@@ -18,6 +18,7 @@ import {
   buildApiResponseVerifySkimMin,
   encodeSwapMulticallItem,
   findToken,
+  includesCustomProvider,
   isExactInRepay,
   matchParams,
 } from "../utils"
@@ -78,6 +79,10 @@ export class StrategyIdleCDOTranche {
     )
   }
 
+  async providers(): Promise<string[]> {
+    return ["custom"]
+  }
+
   async findSwap(swapParams: SwapParams): Promise<StrategyResult> {
     const result: StrategyResult = {
       strategy: StrategyIdleCDOTranche.name(),
@@ -99,8 +104,9 @@ export class StrategyIdleCDOTranche {
               underlying: swapParams.tokenIn.address,
             })
           ) {
-            result.quotes =
-              await this.exactInFromUnderlyingToTranche(swapParams)
+            result.quotes = includesCustomProvider(swapParams)
+              ? await this.exactInFromUnderlyingToTranche(swapParams)
+              : []
           } else {
             result.quotes = await this.exactInFromAnyToTranche(swapParams)
           }
