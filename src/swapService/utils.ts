@@ -278,15 +278,20 @@ export function addInOutDeposits(
   swapParams: SwapParams,
   response: SwapApiResponse,
 ): SwapApiResponse {
-  const multicallItems = [
-    ...response.swap.multicallItems,
-    encodeDepositMulticallItem(
-      swapParams.tokenIn.address,
-      swapParams.vaultIn,
-      5n, // avoid zero shares error
-      swapParams.accountIn,
-    ),
-  ]
+  const unusedInputItem = swapParams.unusedInputReceiver
+    ? encodeERC20TransferMulticallItem(
+        swapParams.tokenIn.address,
+        maxUint256,
+        swapParams.unusedInputReceiver,
+      )
+    : encodeDepositMulticallItem(
+        swapParams.tokenIn.address,
+        swapParams.vaultIn,
+        5n, // avoid zero shares error
+        swapParams.accountIn,
+      )
+
+  const multicallItems = [...response.swap.multicallItems, unusedInputItem]
 
   if (!swapParams.skipSweepDepositOut) {
     multicallItems.push(
@@ -563,14 +568,24 @@ export function encodeRepayAndSweep(swapParams: SwapParams) {
     )
   }
 
-  multicallItems.push(
-    encodeDepositMulticallItem(
-      swapParams.tokenIn.address,
-      swapParams.vaultIn,
-      5n,
-      swapParams.accountIn,
-    ),
-  )
+  if (swapParams.unusedInputReceiver) {
+    multicallItems.push(
+      encodeERC20TransferMulticallItem(
+        swapParams.tokenIn.address,
+        maxUint256,
+        swapParams.unusedInputReceiver,
+      ),
+    )
+  } else {
+    multicallItems.push(
+      encodeDepositMulticallItem(
+        swapParams.tokenIn.address,
+        swapParams.vaultIn,
+        5n,
+        swapParams.accountIn,
+      ),
+    )
+  }
 
   return multicallItems
 }

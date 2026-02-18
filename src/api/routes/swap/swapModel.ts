@@ -161,7 +161,7 @@ const getSwapSchema = z.object({
       vaultIn: addressSchema.openapi({
         param: {
           description:
-            "Address of the vault where to return unused input asset. Ignored in exact input mode.",
+            "Address of the vault where to return unused input asset. Ignored if `unusedInputReceiver` is provided",
         },
         example: "0x797DD80692c3b2dAdabCe8e30C07fDE5307D48a9",
       }),
@@ -172,7 +172,7 @@ const getSwapSchema = z.object({
       accountIn: addressSchema.openapi({
         param: {
           description:
-            "Sub-account for which the unused input should be deposited. Ignored in exact input mode.",
+            "Sub-account for which the unused input should be deposited. Ignored if `unusedInputReceiver` is provided",
         },
         example: "0x0000000000000000000000000000000000000000",
       }),
@@ -264,6 +264,13 @@ const getSwapSchema = z.object({
         },
         example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
       }),
+      unusedInputReceiver: addressSchema.optional().openapi({
+        param: {
+          description:
+            "Address which will receive unused input. Invalidates `accountIn` and `vaultIn`",
+        },
+        example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
+      }),
       skipSweepDepositOut: z
         .string()
         .toLowerCase()
@@ -323,7 +330,7 @@ const swapResponseSchemaSingle = z.object({
   }),
   accountIn: addressSchema.openapi({
     description:
-      "Sub-account for which the unused input will be deposited. Ignored in exact input mode.",
+      "Sub-account for which the unused input will be deposited. Ignored if `unusedInputReceiver` is provided",
   }),
   accountOut: addressSchema.openapi({
     description:
@@ -331,7 +338,7 @@ const swapResponseSchemaSingle = z.object({
   }),
   vaultIn: addressSchema.openapi({
     description:
-      "Address of the vault which will receive unused input asset. Ignored in exact input mode.",
+      "Address of the vault which will receive unused input asset. Ignored if `unusedInputReceiver` is provided",
   }),
   receiver: addressSchema.openapi({
     description:
@@ -361,6 +368,10 @@ const swapResponseSchemaSingle = z.object({
   route: z
     .array(swapRouteItemSchema)
     .openapi({ description: "Swap route details" }),
+  unusedInputReceiver: addressSchema.optional().openapi({
+    description:
+      "Address which will receive unused input. Invalidates `accountIn` and `vaultIn`",
+  }),
 })
 
 const swapResponseSchema = z.array(swapResponseSchemaSingle)
