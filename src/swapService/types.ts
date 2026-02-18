@@ -29,6 +29,7 @@ export interface SwapParams {
   noRepayEncoding?: boolean // FIXME workaround for composite repays (ERC4626 strategy / overswap)
   skipSweepDepositOut?: boolean // don't add the final deposit of the bought asset (sweep), leave the assets in Swapper
   unusedInputReceiver?: Address // address to receive unused input instead of depositing to vaultIn/accountIn
+  transferOutputToReceiver?: boolean // transfer output tokens to receiver instead of depositing. Invalidates accountOut
   provider?: string // preselected provider
 }
 

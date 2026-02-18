@@ -1,6 +1,6 @@
 import { SwapVerificationType, SwapperMode } from "@/swapService/interface"
 import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
-import { InvalidAddressError, getAddress, isHex } from "viem"
+import { InvalidAddressError, getAddress, isHex, zeroAddress } from "viem"
 import { z } from "zod"
 
 extendZodWithOpenApi(z)
@@ -88,7 +88,7 @@ const swapApiResponseVerifySchema = z.object({
   }),
   type: swapVerificationTypeSchema.openapi({
     description:
-      "Type of swap verification call: 'skimMin' for a swap and deposit or 'debtMax' for swap and repay",
+      "Type of swap verification call: 'skimMin' for a swap and deposit, 'debtMax' for swap and repay, or 'transferMin' for swap and transfer",
   }),
   vault: addressSchema.openapi({ description: "Receiver vault to verify" }),
   account: addressSchema.openapi({ description: "Account to verify" }),
@@ -154,14 +154,14 @@ const getSwapSchema = z.object({
       receiver: addressSchema.openapi({
         param: {
           description:
-            "Address of the vault to deposit the bought assets or to repay debt",
+            "Address of the vault to deposit the bought assets or to repay debt. Or address of the receiver of the bought assets if `transferOutputToReceiver` is set",
         },
         example: "0xD8b27CF359b7D15710a5BE299AF6e7Bf904984C2",
       }),
       vaultIn: addressSchema.openapi({
         param: {
           description:
-            "Address of the vault where to return unused input asset. Ignored if `unusedInputReceiver` is provided",
+            "Address of the vault where to return unused input asset. Must be address zero if `unusedInputReceiver` is provided",
         },
         example: "0x797DD80692c3b2dAdabCe8e30C07fDE5307D48a9",
       }),
@@ -172,14 +172,14 @@ const getSwapSchema = z.object({
       accountIn: addressSchema.openapi({
         param: {
           description:
-            "Sub-account for which the unused input should be deposited. Ignored if `unusedInputReceiver` is provided",
+            "Sub-account for which the unused input should be deposited. Must be address zero if `unusedInputReceiver` is provided",
         },
         example: "0x0000000000000000000000000000000000000000",
       }),
       accountOut: addressSchema.openapi({
         param: {
           description:
-            "Sub-account to receive the deposit or repay of the bought asset",
+            "Sub-account to receive the deposit or repay of the bought asset. Must be address zero if `transferOutputToReceiver` is set",
         },
         example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
       }),
@@ -267,10 +267,23 @@ const getSwapSchema = z.object({
       unusedInputReceiver: addressSchema.optional().openapi({
         param: {
           description:
-            "Address which will receive unused input. Invalidates `accountIn` and `vaultIn`",
+            "Address which will receive unused input. Requires `vaultIn` and `accountIn` to be address zero",
         },
         example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
       }),
+      transferOutputToReceiver: z
+        .string()
+        .toLowerCase()
+        .transform((s) => JSON.parse(s))
+        .pipe(z.boolean())
+        .optional()
+        .openapi({
+          param: {
+            description:
+              "If true, output tokens will be transferred to `receiver` instead of deposited. Requires `accountOut` to be address zero and `swapperMode` to be exact input (0)",
+          },
+          example: "false",
+        }),
       skipSweepDepositOut: z
         .string()
         .toLowerCase()
@@ -308,6 +321,37 @@ const getSwapSchema = z.object({
         message: "tokenOut must be different from tokenIn",
         path: ["tokenOut"],
       },
+    )
+    .refine(
+      (data) =>
+        !data.unusedInputReceiver ||
+        (data.vaultIn.toLowerCase() === zeroAddress.toLowerCase() &&
+          data.accountIn.toLowerCase() === zeroAddress.toLowerCase()),
+      {
+        message:
+          "vaultIn and accountIn must be address zero when unusedInputReceiver is set",
+        path: ["unusedInputReceiver"],
+      },
+    )
+    .refine(
+      (data) =>
+        !data.transferOutputToReceiver ||
+        data.accountOut.toLowerCase() === zeroAddress.toLowerCase(),
+      {
+        message:
+          "accountOut must be address zero when transferOutputToReceiver is set",
+        path: ["transferOutputToReceiver"],
+      },
+    )
+    .refine(
+      (data) =>
+        !data.transferOutputToReceiver ||
+        data.swapperMode === SwapperMode.EXACT_IN,
+      {
+        message:
+          "swapperMode must be exact input (0) when transferOutputToReceiver is set",
+        path: ["transferOutputToReceiver"],
+      },
     ),
 })
 
@@ -330,19 +374,19 @@ const swapResponseSchemaSingle = z.object({
   }),
   accountIn: addressSchema.openapi({
     description:
-      "Sub-account for which the unused input will be deposited. Ignored if `unusedInputReceiver` is provided",
+      "Sub-account for which the unused input will be deposited. Address zero if `unusedInputReceiver` is provided",
   }),
   accountOut: addressSchema.openapi({
     description:
-      "Sub-account which will receive the deposit or repay of the bought asset",
+      "Sub-account which will receive the deposit or repay of the bought asset. Address zero if `transferOutputToReceiver` is set",
   }),
   vaultIn: addressSchema.openapi({
     description:
-      "Address of the vault which will receive unused input asset. Ignored if `unusedInputReceiver` is provided",
+      "Address of the vault which will receive unused input asset. Address zero if `unusedInputReceiver` is provided",
   }),
   receiver: addressSchema.openapi({
     description:
-      "Address of the vault where the bought assets will be deposited or repaid",
+      "Address of the vault where the bought assets will be deposited or repaid. Or address of the receiver of the bought assets if `transferOutputToReceiver` is set",
   }),
   tokenIn: tokenListItemSchema.openapi({
     description: "Address of the sold asset",
@@ -370,7 +414,11 @@ const swapResponseSchemaSingle = z.object({
     .openapi({ description: "Swap route details" }),
   unusedInputReceiver: addressSchema.optional().openapi({
     description:
-      "Address which will receive unused input. Invalidates `accountIn` and `vaultIn`",
+      "Address which will receive unused input. Requires `vaultIn` and `accountIn` to be address zero",
+  }),
+  transferOutputToReceiver: z.boolean().optional().openapi({
+    description:
+      "If true, output tokens are transferred to `receiver` instead of deposited. Requires `accountOut` to be address zero and `swapperMode` to be exact input (0)",
   }),
 })
 

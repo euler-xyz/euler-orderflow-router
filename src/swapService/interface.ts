@@ -36,6 +36,7 @@ export interface SwapApiResponse {
   verify: SwapApiResponseVerify
   route: SwapRouteItem[]
   estimatedGas?: string
+  transferOutputToReceiver?: boolean
 }
 
 export interface SwapApiResponseSwap {
@@ -63,6 +64,7 @@ export interface SwapApiResponseMulticallItem {
 export enum SwapVerificationType {
   SkimMin = "skimMin",
   DebtMax = "debtMax",
+  TransferMin = "transferMin",
 }
 
 export type StrategyConfig = any // TODO

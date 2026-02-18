@@ -152,6 +152,31 @@ export function buildApiResponseVerifySkimMin(
   }
 }
 
+export function buildApiResponseVerifyTransferMin(
+  chainId: number,
+  tokenOut: Address,
+  receiver: Address,
+  amountMin: bigint,
+  deadline: number,
+): SwapApiResponseVerify {
+  const verifierAddress = getVerifier(chainId)
+
+  const verifierData = encodeFunctionData({
+    abi: contractBook.swapVerifier.abi,
+    functionName: "verifyAmountMinAndTransfer",
+    args: [tokenOut, receiver, amountMin, BigInt(deadline)],
+  })
+  return {
+    verifierAddress,
+    verifierData,
+    type: SwapVerificationType.TransferMin,
+    vault: receiver,
+    account: zeroAddress,
+    amount: String(amountMin),
+    deadline,
+  }
+}
+
 export class ApiError extends Error {
   readonly statusCode: StatusCodes
   readonly data: any
@@ -247,13 +272,21 @@ export function buildApiResponseExactInputFromQuote(
 
   const swap = buildApiResponseSwap(swapParams.from, multicallItems)
 
-  const verify = buildApiResponseVerifySkimMin(
-    swapParams.chainId,
-    swapParams.receiver,
-    swapParams.accountOut,
-    amountOutMin,
-    swapParams.deadline,
-  )
+  const verify = swapParams.transferOutputToReceiver
+    ? buildApiResponseVerifyTransferMin(
+        swapParams.chainId,
+        swapParams.tokenOut.address,
+        swapParams.receiver,
+        amountOutMin,
+        swapParams.deadline,
+      )
+    : buildApiResponseVerifySkimMin(
+        swapParams.chainId,
+        swapParams.receiver,
+        swapParams.accountOut,
+        amountOutMin,
+        swapParams.deadline,
+      )
 
   return {
     amountIn: String(swapParams.amount),
@@ -271,6 +304,7 @@ export function buildApiResponseExactInputFromQuote(
     route: quoteToRoute(quote),
     swap,
     verify,
+    transferOutputToReceiver: swapParams.transferOutputToReceiver,
   }
 }
 
