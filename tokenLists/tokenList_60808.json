@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 60808,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 60808,
@@ -21,7 +27,8 @@
     "name": "MockERC20",
     "symbol": "MOCK",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0x589F02CFaebF48F835ce43A8686f91857d7929CC"
+    "logoURI": "https://token-images.euler.finance/60808/0x589F02CFaebF48F835ce43A8686f91857d7929CC",
+    "groups": []
   },
   {
     "chainId": 60808,
@@ -29,7 +36,10 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0x4200000000000000000000000000000000000006"
+    "logoURI": "https://token-images.euler.finance/60808/0x4200000000000000000000000000000000000006",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 60808,
@@ -37,7 +47,10 @@
     "name": "SolvBTC Babylon",
     "symbol": "SolvBTC.BBN",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0xCC0966D8418d412c599A6421b760a847eB169A8c"
+    "logoURI": "https://token-images.euler.finance/60808/0xCC0966D8418d412c599A6421b760a847eB169A8c",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -45,7 +58,10 @@
     "name": "Solv BTC",
     "symbol": "SolvBTC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0x541FD749419CA806a8bc7da8ac23D346f2dF8B77"
+    "logoURI": "https://token-images.euler.finance/60808/0x541FD749419CA806a8bc7da8ac23D346f2dF8B77",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -53,7 +69,10 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/60808/0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3"
+    "logoURI": "https://token-images.euler.finance/60808/0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -61,7 +80,10 @@
     "name": "Bridged USDC (BOB)",
     "symbol": "USDC.e",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/60808/0xe75D0fB2C24A55cA1e3F96781a2bCC7bdba058F0"
+    "logoURI": "https://token-images.euler.finance/60808/0xe75D0fB2C24A55cA1e3F96781a2bCC7bdba058F0",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 60808,
@@ -69,7 +91,10 @@
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/60808/0xA45d4121b3D47719FF57a947A9d961539Ba33204"
+    "logoURI": "https://token-images.euler.finance/60808/0xA45d4121b3D47719FF57a947A9d961539Ba33204",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -78,6 +103,9 @@
     "symbol": "HybridBTC.pendle",
     "decimals": 8,
     "logoURI": "https://token-images.euler.finance/60808/0x9998e05030Aee3Af9AD3df35A34F5C51e1628779",
+    "groups": [
+      "BTC"
+    ],
     "metadata": {
       "provider": "VEDA"
     }
@@ -88,7 +116,10 @@
     "name": "tBTC v2",
     "symbol": "tBTC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2"
+    "logoURI": "https://token-images.euler.finance/60808/0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -96,7 +127,10 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/60808/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
+    "logoURI": "https://token-images.euler.finance/60808/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 60808,
@@ -104,7 +138,10 @@
     "name": "Satoshi Stablecoin",
     "symbol": "satUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0x78Fea795cBFcC5fFD6Fb5B845a4f53d25C283bDB"
+    "logoURI": "https://token-images.euler.finance/60808/0x78Fea795cBFcC5fFD6Fb5B845a4f53d25C283bDB",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 60808,
@@ -112,6 +149,9 @@
     "name": "Satoshi Stablecoin V2",
     "symbol": "satUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/60808/0xecf21b335B41f9d5A89f6186A99c19a3c467871f"
+    "logoURI": "https://token-images.euler.finance/60808/0xecf21b335B41f9d5A89f6186A99c19a3c467871f",
+    "groups": [
+      "USD"
+    ]
   }
 ]

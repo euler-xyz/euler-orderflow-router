@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 239,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 239,
@@ -21,7 +27,8 @@
     "name": "Mock1",
     "symbol": "MCK1",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0x83235A46726803c1980A28cE283D90f6281b2530"
+    "logoURI": "https://token-images.euler.finance/239/0x83235A46726803c1980A28cE283D90f6281b2530",
+    "groups": []
   },
   {
     "chainId": 239,
@@ -29,7 +36,8 @@
     "name": "Mock2",
     "symbol": "MCK2",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/239/0xcEdc4054676d39716AEF0347b319487989797119"
+    "logoURI": "https://token-images.euler.finance/239/0xcEdc4054676d39716AEF0347b319487989797119",
+    "groups": []
   },
   {
     "chainId": 239,
@@ -37,7 +45,8 @@
     "name": "Mock3",
     "symbol": "MCK3",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0x67D6FeeC2936e3F014a087c442FdC4774C1C30C4"
+    "logoURI": "https://token-images.euler.finance/239/0x67D6FeeC2936e3F014a087c442FdC4774C1C30C4",
+    "groups": []
   },
   {
     "chainId": 239,
@@ -45,7 +54,10 @@
     "name": "TON Token",
     "symbol": "TON",
     "decimals": 9,
-    "logoURI": "https://token-images.euler.finance/239/0xb76d91340F5CE3577f0a056D29f6e3Eb4E88B140"
+    "logoURI": "https://token-images.euler.finance/239/0xb76d91340F5CE3577f0a056D29f6e3Eb4E88B140",
+    "groups": [
+      "TON"
+    ]
   },
   {
     "chainId": 239,
@@ -54,6 +66,9 @@
     "symbol": "tsTON",
     "decimals": 9,
     "logoURI": "https://token-images.euler.finance/239/0xD44F691aeD69fe43180B95b6F82f89c18Fb93094",
+    "groups": [
+      "TON"
+    ],
     "metadata": {
       "provider": "TONSTAKERS"
     }
@@ -64,7 +79,10 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0x61D66bC21fED820938021B06e9b2291f3FB91945"
+    "logoURI": "https://token-images.euler.finance/239/0x61D66bC21fED820938021B06e9b2291f3FB91945",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 239,
@@ -72,7 +90,10 @@
     "name": "Coinbase Wrapped BTC",
     "symbol": "cbBTC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/239/0xCa6328a3Dac228CA16181dEf8811170792D659D8"
+    "logoURI": "https://token-images.euler.finance/239/0xCa6328a3Dac228CA16181dEf8811170792D659D8",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 239,
@@ -80,7 +101,8 @@
     "name": "Tether USD",
     "symbol": "USD₮",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/239/0xAF988C3f7CB2AceAbB15f96b19388a259b6C438f"
+    "logoURI": "https://token-images.euler.finance/239/0xAF988C3f7CB2AceAbB15f96b19388a259b6C438f",
+    "groups": []
   },
   {
     "chainId": 239,
@@ -88,7 +110,10 @@
     "name": "Coinbase Wrapped BTC",
     "symbol": "cbBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/239/0x7048c9e4aBD0cf0219E95a17A8C6908dfC4f0Ee4"
+    "logoURI": "https://token-images.euler.finance/239/0x7048c9e4aBD0cf0219E95a17A8C6908dfC4f0Ee4",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 239,
@@ -96,7 +121,10 @@
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/239/0xecAc9C5F704e954931349Da37F60E39f515c11c1"
+    "logoURI": "https://token-images.euler.finance/239/0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 239,
@@ -105,6 +133,9 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0xAf368c91793CB22739386DFCbBb2F1A9e4bCBeBf",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "747c1d2a-c668-4682-b9f9-296708a3dd90"
@@ -117,6 +148,9 @@
     "symbol": "wrsETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0x5448BBf60Ee2edBCd32F032f3294982f4ad1119e",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "33c732f6-a78d-41da-af5b-ccd9fa5e52d5"
@@ -128,7 +162,10 @@
     "name": "USN",
     "symbol": "USN",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0x51A30E647D33A044967FA3DBb04d6ED6F45455F6"
+    "logoURI": "https://token-images.euler.finance/239/0x51A30E647D33A044967FA3DBb04d6ED6F45455F6",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 239,
@@ -137,6 +174,9 @@
     "symbol": "sUSN",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0x5Ced7F73B76A555CCB372cc0F0137bEc5665F81E",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -148,6 +188,9 @@
     "symbol": "RLP",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0x35533f54740F1F1aA4179E57bA37039dfa16868B",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -158,7 +201,10 @@
     "name": "Resolv USD",
     "symbol": "USR",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0xb1b385542B6E80F77B94393Ba8342c3Af699f15c"
+    "logoURI": "https://token-images.euler.finance/239/0xb1b385542B6E80F77B94393Ba8342c3Af699f15c",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 239,
@@ -167,6 +213,9 @@
     "symbol": "wstUSR",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0x2a52B289bA68bBd02676640aA9F605700c9e5699",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "STABLEWATCH"
     }
@@ -177,7 +226,10 @@
     "name": "Wrapped TAC",
     "symbol": "WTAC",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/239/0xB63B9f0eb4A6E6f191529D71d4D88cc8900Df2C9"
+    "logoURI": "https://token-images.euler.finance/239/0xB63B9f0eb4A6E6f191529D71d4D88cc8900Df2C9",
+    "groups": [
+      "TAC"
+    ]
   },
   {
     "chainId": 239,
@@ -186,6 +238,9 @@
     "symbol": "yUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/239/0x4772D2e014F9fC3a820C444e3313968e9a5C8121",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "7c43e890-cefc-48d1-bf80-203cdb7dfe4f"
@@ -197,6 +252,9 @@
     "name": "uniBTC",
     "symbol": "uniBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/239/0xF9775085d726E782E83585033B58606f7731AB18"
+    "logoURI": "https://token-images.euler.finance/239/0xF9775085d726E782E83585033B58606f7731AB18",
+    "groups": [
+      "BTC"
+    ]
   }
 ]

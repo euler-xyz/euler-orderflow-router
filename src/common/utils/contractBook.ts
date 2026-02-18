@@ -4,7 +4,7 @@ const contractBook: any = {
   swapper: {
     abi: require("./abi/Swapper.json"),
     address: {
-      [chains.mainnet.id]: "0x2Bba09866b6F1025258542478C39720A09B728bF",
+      [chains.mainnet.id]: "0xa762390A3f9bf6D2Aa2e28F0f14584f55df2D4B0",
       [chains.base.id]: "0x0D3d0F97eD816Ca3350D627AD8e57B6AD41774df",
       [chains.polygon.id]: "0x3e43F3CE1C364722df6470381Fa1F15ffbFB37E3",
       [chains.avalanche.id]: "0x6E1C286e888Ab5911ca37aCeD81365d57eC29a06",

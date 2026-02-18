@@ -5,7 +5,10 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 80094,
@@ -13,7 +16,10 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b"
+    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "groups": [
+      "EUL"
+    ]
   },
   {
     "chainId": 80094,
@@ -21,7 +27,8 @@
     "name": "MockERC20",
     "symbol": "MOCK",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x08Da74F12AB643d6092B1A67b37FF26152F3E99D"
+    "logoURI": "https://token-images.euler.finance/80094/0x08Da74F12AB643d6092B1A67b37FF26152F3E99D",
+    "groups": []
   },
   {
     "chainId": 80094,
@@ -29,7 +36,8 @@
     "name": "Wrapped Bera",
     "symbol": "WBERA",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x6969696969696969696969696969696969696969"
+    "logoURI": "https://token-images.euler.finance/80094/0x6969696969696969696969696969696969696969",
+    "groups": []
   },
   {
     "chainId": 80094,
@@ -37,7 +45,10 @@
     "name": "WETH",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590"
+    "logoURI": "https://token-images.euler.finance/80094/0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 80094,
@@ -45,7 +56,10 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/80094/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
+    "logoURI": "https://token-images.euler.finance/80094/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 80094,
@@ -53,7 +67,10 @@
     "name": "Honey",
     "symbol": "HONEY",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce"
+    "logoURI": "https://token-images.euler.finance/80094/0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -61,7 +78,10 @@
     "name": "Bridged USDC (Stargate)",
     "symbol": "USDC.e",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/80094/0x549943e04f40284185054145c6E4e9568C1D3241"
+    "logoURI": "https://token-images.euler.finance/80094/0x549943e04f40284185054145c6E4e9568C1D3241",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -70,6 +90,9 @@
     "symbol": "STONE",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0xEc901DA9c68E90798BbBb74c11406A32A70652C3",
+    "groups": [
+      "ETH"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "e28e32b5-e356-41d9-8dc7-a376ece56619"
@@ -81,7 +104,10 @@
     "name": "BYUSD",
     "symbol": "BYUSD",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/80094/0x688e72142674041f8f6Af4c808a4045cA1D6aC82"
+    "logoURI": "https://token-images.euler.finance/80094/0x688e72142674041f8f6Af4c808a4045cA1D6aC82",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -89,7 +115,10 @@
     "name": "Reservoir Stablecoin",
     "symbol": "rUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x09D4214C03D01F49544C0448DBE3A27f768F2b34"
+    "logoURI": "https://token-images.euler.finance/80094/0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -97,7 +126,10 @@
     "name": "Lombard Staked Bitcoin",
     "symbol": "LBTC",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/80094/0xecAc9C5F704e954931349Da37F60E39f515c11c1"
+    "logoURI": "https://token-images.euler.finance/80094/0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "groups": [
+      "BTC"
+    ]
   },
   {
     "chainId": 80094,
@@ -106,6 +138,9 @@
     "symbol": "srUSD",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x5475611Dffb8ef4d697Ae39df9395513b6E947d7",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "402b0554-9525-40af-8703-3c59b0aa863c"
@@ -117,7 +152,8 @@
     "name": "NECT/USDC/HONEY",
     "symbol": "NECT/USDC/HONEY",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23"
+    "logoURI": "https://token-images.euler.finance/80094/0xD10E65A5F8cA6f835F2B1832e37cF150fb955f23",
+    "groups": []
   },
   {
     "chainId": 80094,
@@ -125,7 +161,10 @@
     "name": "Nectar",
     "symbol": "NECT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3"
+    "logoURI": "https://token-images.euler.finance/80094/0x1cE0a25D13CE4d52071aE7e02Cf1F6606F4C79d3",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -133,7 +172,10 @@
     "name": "Staked Nectar",
     "symbol": "sNECT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x597877Ccf65be938BD214C4c46907669e3E62128"
+    "logoURI": "https://token-images.euler.finance/80094/0x597877Ccf65be938BD214C4c46907669e3E62128",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -142,6 +184,7 @@
     "symbol": "oriBGT",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x69f1E971257419B1E9C405A553f252c64A29A30a",
+    "groups": [],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "9b8da01e-a2d6-427b-95ef-96df8de8d32f"
@@ -153,7 +196,10 @@
     "name": "Berachain Staked ETH",
     "symbol": "beraETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x6fc6545d5cDE268D5C7f1e476D444F39c995120d"
+    "logoURI": "https://token-images.euler.finance/80094/0x6fc6545d5cDE268D5C7f1e476D444F39c995120d",
+    "groups": [
+      "ETH"
+    ]
   },
   {
     "chainId": 80094,
@@ -161,7 +207,10 @@
     "name": "USDe",
     "symbol": "USDe",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34"
+    "logoURI": "https://token-images.euler.finance/80094/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "groups": [
+      "USD"
+    ]
   },
   {
     "chainId": 80094,
@@ -170,6 +219,9 @@
     "symbol": "sUSDe",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "SUSDE"
     }
@@ -181,6 +233,9 @@
     "symbol": "PT-sUSDE-25SEP2025",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x2719e657ec3B3CbE521a18E640CA55799836376f",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "PENDLE",
       "isPendlePT": true,
@@ -194,6 +249,7 @@
     "symbol": "iBERA",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x9b6761bf2397Bb5a6624a856cC84A3A14Dcd3fe5",
+    "groups": [],
     "metadata": {
       "provider": "IBERA"
     }
@@ -204,7 +260,8 @@
     "name": "Infrared BGT",
     "symbol": "iBGT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0xac03CABA51e17c86c921E1f6CBFBdC91F8BB2E6b"
+    "logoURI": "https://token-images.euler.finance/80094/0xac03CABA51e17c86c921E1f6CBFBdC91F8BB2E6b",
+    "groups": []
   },
   {
     "chainId": 80094,
@@ -213,6 +270,9 @@
     "symbol": "BB.SNECT",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0x1d22592F66Fc92e0a64eE9300eAeca548cd466c5",
+    "groups": [
+      "USD"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "30dd2264-82da-40d1-b28d-87e94fc9c2e7"
@@ -224,7 +284,10 @@
     "name": "Liquid BGT",
     "symbol": "LBGT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0xBaadCC2962417C01Af99fb2B7C75706B9bd6Babe"
+    "logoURI": "https://token-images.euler.finance/80094/0xBaadCC2962417C01Af99fb2B7C75706B9bd6Babe",
+    "groups": [
+      "BERA"
+    ]
   },
   {
     "chainId": 80094,
@@ -233,6 +296,9 @@
     "symbol": "stLBGT",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/80094/0xFace73a169e2CA2934036C8Af9f464b5De9eF0ca",
+    "groups": [
+      "BERA"
+    ],
     "metadata": {
       "provider": "DEFILLAMA",
       "poolId": "9ccbebab-a66d-4b9e-bf6a-47ea1d638874"
@@ -244,7 +310,8 @@
     "name": "Credifi Credit Token",
     "symbol": "CREDIT",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/80094/0x916D6eFAF349B108Be41352aD61aB00D25a69784"
+    "logoURI": "https://token-images.euler.finance/80094/0x916D6eFAF349B108Be41352aD61aB00D25a69784",
+    "groups": []
   },
   {
     "chainId": 80094,
@@ -252,6 +319,7 @@
     "name": "YEET",
     "symbol": "YEET",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/80094/0x08A38Caa631DE329FF2DAD1656CE789F31AF3142"
+    "logoURI": "https://token-images.euler.finance/80094/0x08A38Caa631DE329FF2DAD1656CE789F31AF3142",
+    "groups": []
   }
 ]
