@@ -274,19 +274,19 @@ export function buildApiResponseExactInputFromQuote(
 
   const verify = swapParams.transferOutputToReceiver
     ? buildApiResponseVerifyTransferMin(
-      swapParams.chainId,
-      swapParams.tokenOut.address,
-      swapParams.receiver,
-      amountOutMin,
-      swapParams.deadline,
-    )
+        swapParams.chainId,
+        swapParams.tokenOut.address,
+        swapParams.receiver,
+        amountOutMin,
+        swapParams.deadline,
+      )
     : buildApiResponseVerifySkimMin(
-      swapParams.chainId,
-      swapParams.receiver,
-      swapParams.accountOut,
-      amountOutMin,
-      swapParams.deadline,
-    )
+        swapParams.chainId,
+        swapParams.receiver,
+        swapParams.accountOut,
+        amountOutMin,
+        swapParams.deadline,
+      )
 
   return {
     amountIn: String(swapParams.amount),
@@ -314,16 +314,16 @@ export function addInOutDeposits(
 ): SwapApiResponse {
   const unusedInputItem = swapParams.unusedInputReceiver
     ? encodeTransferMulticallItem(
-      swapParams.tokenIn.address,
-      1n,
-      swapParams.unusedInputReceiver,
-    )
+        swapParams.tokenIn.address,
+        1n,
+        swapParams.unusedInputReceiver,
+      )
     : encodeDepositMulticallItem(
-      swapParams.tokenIn.address,
-      swapParams.vaultIn,
-      5n, // avoid zero shares error
-      swapParams.accountIn,
-    )
+        swapParams.tokenIn.address,
+        swapParams.vaultIn,
+        5n, // avoid zero shares error
+        swapParams.accountIn,
+      )
 
   const multicallItems = [...response.swap.multicallItems, unusedInputItem]
 
@@ -661,12 +661,12 @@ export async function binarySearchQuote(
 
   do {
     amountFrom = (amountFrom * percentageChange) / 10000n
-      ; ({ quote, amountTo } =
-        (cnt === 0 && initialQuote) ||
-        (await fetchQuote({
-          ...swapParams,
-          amount: amountFrom,
-        })))
+    ;({ quote, amountTo } =
+      (cnt === 0 && initialQuote) ||
+      (await fetchQuote({
+        ...swapParams,
+        amount: amountFrom,
+      })))
 
     if (prevAmountTo && prevAmountTo === amountTo)
       throw new Error("Binary search quote not improving")
@@ -678,9 +678,9 @@ export async function binarySearchQuote(
     percentageChange =
       amountTo > targetAmountTo
         ? // result above target, adjust input down by the percentage difference of outputs - 0.01%
-        ((amountTo - targetAmountTo) * 10_000n) / targetAmountTo + 1n - 10000n
+          ((amountTo - targetAmountTo) * 10_000n) / targetAmountTo + 1n - 10000n
         : // result below target, adjust input by the percentege difference of outputs + 0.01%
-        ((targetAmountTo - amountTo) * 10_000n) / amountTo + 10_000n + 1n
+          ((targetAmountTo - amountTo) * 10_000n) / amountTo + 10_000n + 1n
 
     percentageChange =
       percentageChange < 0n ? percentageChange * -1n : percentageChange
