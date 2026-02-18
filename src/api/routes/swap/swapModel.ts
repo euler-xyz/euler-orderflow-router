@@ -268,8 +268,7 @@ const getSwapSchema = z.object({
         param: {
           description:
             "Address which will receive unused input. Requires `vaultIn` and `accountIn` to be address zero",
-        },
-        example: "0x8A54C278D117854486db0F6460D901a180Fff5aa",
+        }
       }),
       transferOutputToReceiver: z
         .string()
