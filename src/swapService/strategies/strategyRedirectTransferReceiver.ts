@@ -1,11 +1,8 @@
+import contractBook from "@/common/utils/contractBook"
 import { SwapperMode } from "../interface"
 import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
-import {
-  buildApiResponseVerifyTransferMin,
-  matchParams,
-} from "../utils"
-import contractBook from "@/common/utils/contractBook"
+import { buildApiResponseVerifyTransferMin, matchParams } from "../utils"
 
 // Wrapper which intercepts exact in swaps and redirects the output to a different receiver
 export class StrategyRedirectTransferReceiver {
@@ -21,7 +18,10 @@ export class StrategyRedirectTransferReceiver {
   }
 
   async supports(swapParams: SwapParams) {
-    return swapParams.swapperMode === SwapperMode.EXACT_IN && !!swapParams.transferOutputToReceiver
+    return (
+      swapParams.swapperMode === SwapperMode.EXACT_IN &&
+      !!swapParams.transferOutputToReceiver
+    )
   }
 
   async providers(): Promise<string[]> {
