@@ -47,6 +47,17 @@
   },
   {
     "chainId": 1,
+    "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+    "name": "Staked Ether 2.0",
+    "symbol": "stETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+    "groups": [
+      "ETH"
+    ]
+  },
+  {
+    "chainId": 1,
     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
     "name": "USD Coin",
     "symbol": "USDC",

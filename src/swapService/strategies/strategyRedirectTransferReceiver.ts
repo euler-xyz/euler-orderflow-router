@@ -42,6 +42,7 @@ export class StrategyRedirectTransferReceiver {
         ...swapParams,
         receiver: contractBook.swapVerifier.address[swapParams.chainId],
         skipSweepDepositOut: true,
+        transferOutputToReceiver: undefined,
       }
 
       const innerSwaps = await runPipeline(innerSwapParams)
