@@ -2,6 +2,7 @@ import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
   StrategyAggregators,
   StrategyERC4626Wrapper,
+  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -15,6 +16,9 @@ const arbitrumRoutingConfig: ChainRoutingConfig = [
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
     },
+  },
+  {
+    strategy: StrategyRedirectTransferReceiver.name(),
   },
   {
     strategy: StrategyERC4626Wrapper.name(),

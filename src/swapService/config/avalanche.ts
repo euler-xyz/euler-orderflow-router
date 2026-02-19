@@ -4,6 +4,7 @@ import {
   StrategyERC4626Wrapper,
   StrategyElixir,
   StrategyPendleCrossChainPT,
+  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -19,6 +20,9 @@ const avalancheRoutingConfig: ChainRoutingConfig = [
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
     },
+  },
+  {
+    strategy: StrategyRedirectTransferReceiver.name(),
   },
   {
     strategy: StrategyElixir.name(),

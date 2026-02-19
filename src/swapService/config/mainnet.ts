@@ -7,6 +7,7 @@ import {
   StrategyIdleCDOTranche,
   StrategyMidas,
   StrategyRedirectDepositWrapper,
+  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
   StrategyStrata,
 } from "../strategies"
@@ -47,6 +48,9 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
     },
+  },
+  {
+    strategy: StrategyRedirectTransferReceiver.name(),
   },
   // SPECIAL CASE TOKENS
   {

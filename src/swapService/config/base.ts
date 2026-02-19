@@ -2,6 +2,7 @@ import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
   StrategyAggregators,
   StrategyMidas,
+  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -13,6 +14,9 @@ const baseRoutingConfig: ChainRoutingConfig = [
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
     },
+  },
+  {
+    strategy: StrategyRedirectTransferReceiver.name(),
   },
   // SPECIAL CASE TOKENS
   {

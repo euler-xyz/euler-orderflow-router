@@ -5,6 +5,7 @@ import {
   StrategyMidas,
   StrategyPendleLP,
   StrategyRedirectDepositWrapper,
+  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
 } from "../strategies"
 
@@ -21,6 +22,9 @@ const plasmaRoutingConfig: ChainRoutingConfig = [
       isRepay: true,
       swapperModes: [SwapperMode.EXACT_IN],
     },
+  },
+  {
+    strategy: StrategyRedirectTransferReceiver.name(),
   },
   {
     strategy: StrategyRedirectDepositWrapper.name(),

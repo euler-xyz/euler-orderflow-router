@@ -9,6 +9,7 @@ import { StrategyMidas } from "./strategyMidas"
 import { StrategyPendleCrossChainPT } from "./strategyPendleCrossChainPT"
 import { StrategyPendleLP } from "./strategyPendleLP"
 import { StrategyRedirectDepositWrapper } from "./strategyRedirectDepositWrapper"
+import { StrategyRedirectTransferReceiver } from "./strategyRedirectTransferReceiver"
 import { StrategyRepayWrapper } from "./strategyRepayWrapper"
 import { StrategyStrata } from "./strategyStrata"
 
@@ -21,6 +22,7 @@ export {
   StrategyIdleCDOTranche,
   StrategyCurveLPNG,
   StrategyRedirectDepositWrapper,
+  StrategyRedirectTransferReceiver,
   StrategyConnect2,
   StrategyElixir,
   StrategyPendleCrossChainPT,
@@ -37,6 +39,7 @@ export const strategies = {
   [StrategyIdleCDOTranche.name()]: StrategyIdleCDOTranche,
   [StrategyCurveLPNG.name()]: StrategyCurveLPNG,
   [StrategyRedirectDepositWrapper.name()]: StrategyRedirectDepositWrapper,
+  [StrategyRedirectTransferReceiver.name()]: StrategyRedirectTransferReceiver,
   [StrategyConnect2.name()]: StrategyConnect2,
   [StrategyElixir.name()]: StrategyElixir,
   [StrategyPendleCrossChainPT.name()]: StrategyPendleCrossChainPT,
