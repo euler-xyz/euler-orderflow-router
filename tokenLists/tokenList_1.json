@@ -1,6 +1,30 @@
 [
   {
     "chainId": 1,
+    "address": "0x51C2d74017390CbBd30550179A16A1c28F7210fc",
+    "name": "STAC",
+    "symbol": "STAC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x51C2d74017390CbBd30550179A16A1c28F7210fc",
+    "groups": [
+      "securitize"
+    ],
+    "coingeckoId": "securitize-tokenized-aaa-clo-fund"
+  },
+  {
+    "chainId": 1,
+    "address": "0x2255718832bC9fD3bE1CaF75084F4803DA14FF01",
+    "name": "VBILL",
+    "symbol": "VBILL",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x2255718832bC9fD3bE1CaF75084F4803DA14FF01",
+    "groups": [
+      "securitize"
+    ],
+    "coingeckoId": "vaneck-treasury-fund"
+  },
+  {
+    "chainId": 1,
     "address": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
     "name": "Euler",
     "symbol": "EUL",
@@ -3429,6 +3453,20 @@
       "provider": "PENDLE",
       "isPendlePT": true,
       "pendleMarket": "0xaC24A6f0068d9701EAEa76AB0B418021017F8D59"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0x3de0ff76E8b528C092d47b9DaC775931cef80F49",
+    "name": "PT Ethena sUSDE 7MAY2026",
+    "symbol": "PT-sUSDE-7MAY2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3de0ff76E8b528C092d47b9DaC775931cef80F49",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x8dAe8ECe668cf80d348873F23D456448E8694883"
     }
   }
 ]

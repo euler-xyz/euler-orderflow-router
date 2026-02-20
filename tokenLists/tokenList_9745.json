@@ -589,5 +589,19 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313",
     "groups": []
+  },
+  {
+    "chainId": 9745,
+    "address": "0xab509448ad489e2E1341e25CC500f2596464Cc82",
+    "name": "PT Ethena sUSDE 9APR2026",
+    "symbol": "PT-sUSDE-9APR2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/9745/0xab509448ad489e2E1341e25CC500f2596464Cc82",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x5Fa69163085efd4767f24639eB1fB87Ed34bBB12"
+    }
   }
 ]
