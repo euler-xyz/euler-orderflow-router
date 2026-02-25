@@ -603,5 +603,19 @@
       "isPendlePT": true,
       "pendleMarket": "0x5Fa69163085efd4767f24639eB1fB87Ed34bBB12"
     }
+  },
+  {
+    "chainId": 9745,
+    "address": "0x34C772F9B78590F5AB324Be11d87885e36878eEe",
+    "name": "PT Syrup USDT 30APR2026",
+    "symbol": "PT-syrupUSDT-30APR2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/9745/0x34C772F9B78590F5AB324Be11d87885e36878eEe",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x5F6b7F7105340Ce6e7c8844279f33776262B5180"
+    }
   }
 ]

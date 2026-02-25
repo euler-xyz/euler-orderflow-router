@@ -587,5 +587,33 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0xA7907b6B6169D66012Bf1c36f27a72C06AEC065c",
     "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0x07bc5bD6cE9A17f0e7aa91E0Adbc9070dcB1d1dE",
+    "name": "PT Staked USDai 18JUN2026",
+    "symbol": "PT-sUSDai-18JUN2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x07bc5bD6cE9A17f0e7aa91E0Adbc9070dcB1d1dE",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x299674F6Da858f903D77486FBA50Bc9F2e0Db24D"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0xB459dB106f645d698E74027eeF6019A26a0675Cc",
+    "name": "PT Staked USDai 15OCT2026",
+    "symbol": "PT-sUSDai-15OCT2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0xB459dB106f645d698E74027eeF6019A26a0675Cc",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0xcbF629C8d396b1261F81F55175Afa010E94787d8"
+    }
   }
 ]

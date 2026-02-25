@@ -3468,5 +3468,23 @@
       "isPendlePT": true,
       "pendleMarket": "0x8dAe8ECe668cf80d348873F23D456448E8694883"
     }
+  },
+  {
+    "chainId": 1,
+    "address": "0x3d3194345261F0e053acE8440341E3A9cFcd095A",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3d3194345261F0e053acE8440341E3A9cFcd095A",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xA15CD3034Abd5d56b1422a2a7d27e030b3BCd77A",
+    "name": "Pareto AA - ACRDX-test-0USDC",
+    "symbol": "AA_ACRDX-test-0USDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xA15CD3034Abd5d56b1422a2a7d27e030b3BCd77A",
+    "groups": []
   }
 ]
