@@ -57,9 +57,9 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
     strategy: StrategyCurveLPNG.name(),
     match: { tokensInOrOut: [CUSDOUSDC_CURVELP_MAINNET] },
   },
-  // {
-  //   strategy: StrategyStrata.name(),
-  // },
+  {
+    strategy: StrategyStrata.name(),
+  },
   {
     strategy: StrategyERC4626Wrapper.name(),
     match: {

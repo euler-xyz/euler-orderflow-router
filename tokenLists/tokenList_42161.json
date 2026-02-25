@@ -615,5 +615,33 @@
       "isPendlePT": true,
       "pendleMarket": "0xcbF629C8d396b1261F81F55175Afa010E94787d8"
     }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+    "name": "PT USDai 18JUN2026",
+    "symbol": "PT-USDai-18JUN2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x8A8A557b90eC79496a18a1f9C9DA8Bbd7DB86Fd3"
+    }
+  },
+  {
+    "chainId": 42161,
+    "address": "0xC9d24aD0bB25F34098e226a8C5192Dea7bacccaE",
+    "name": "PT USDai 15OCT2026",
+    "symbol": "PT-USDai-15OCT2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0xC9d24aD0bB25F34098e226a8C5192Dea7bacccaE",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0xA8a0DEA40174CfC30fEA9e3A77f182aB33f46E25"
+    }
   }
 ]
