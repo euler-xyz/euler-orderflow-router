@@ -643,5 +643,19 @@
       "isPendlePT": true,
       "pendleMarket": "0xA8a0DEA40174CfC30fEA9e3A77f182aB33f46E25"
     }
+  },
+  {
+    "chainId": 42161,
+    "address": "0xE46271ecb1d5c7c5134868760F10c18B03021eF1",
+    "name": "PT thBILL 18JUN2026",
+    "symbol": "PT-thBILL-18JUN2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/42161/0xE46271ecb1d5c7c5134868760F10c18B03021eF1",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x22d95cEC2b962C142FfF9BE88CfC7eF15043419F"
+    }
   }
 ]
