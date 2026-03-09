@@ -657,5 +657,23 @@
       "isPendlePT": true,
       "pendleMarket": "0x22d95cEC2b962C142FfF9BE88CfC7eF15043419F"
     }
+  },
+  {
+    "chainId": 42161,
+    "address": "0x972d3Dc804ec7CABEAb6D394b9a9f4E6c313dda7",
+    "name": "Foo USD",
+    "symbol": "fooUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x972d3Dc804ec7CABEAb6D394b9a9f4E6c313dda7",
+    "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0xB4134E73fA51a9214a945f6fE3003d1a056AE6d8",
+    "name": "Bar USD",
+    "symbol": "barUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0xB4134E73fA51a9214a945f6fE3003d1a056AE6d8",
+    "groups": []
   }
 ]

@@ -3527,5 +3527,41 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/1/0x974d86f395e30DBF803DB8d35EcB325fe1C13441",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xf4edb25A80CE96a70a93185767D3Bfc5e92e2697",
+    "name": "Pending Settlement Pareto ACRDX",
+    "symbol": "pspACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xf4edb25A80CE96a70a93185767D3Bfc5e92e2697",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x91C699E708F826Ca6bB5cd875A1168354F509c34",
+    "name": "pending-settlement-USDC",
+    "symbol": "psUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x91C699E708F826Ca6bB5cd875A1168354F509c34",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x8f834F177633324c175Ee4a7f6801F0e2579838d",
+    "name": "Pareto AA - ACRDXUSDC",
+    "symbol": "AA_ACRDXUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x8f834F177633324c175Ee4a7f6801F0e2579838d",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xcE10B17EBc931C6B50e9710CC5F721cBE64C1168",
+    "name": "pending-settlement-pACRDX",
+    "symbol": "ps-pACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xcE10B17EBc931C6B50e9710CC5F721cBE64C1168",
+    "groups": []
   }
 ]
