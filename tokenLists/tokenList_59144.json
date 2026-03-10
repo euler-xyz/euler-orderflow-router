@@ -215,5 +215,27 @@
     "groups": [
       "USD"
     ]
+  },
+  {
+    "chainId": 59144,
+    "address": "0x37c44fc08e403Efc0946C0623CB1164A52CE1576",
+    "name": "avUSD",
+    "symbol": "avUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/59144/0x37c44fc08e403Efc0946C0623CB1164A52CE1576",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 59144,
+    "address": "0x5C247948fD58Bb02B6c4678d9940F5e6B9af1127",
+    "name": "Staked avUSD",
+    "symbol": "savUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/59144/0x5C247948fD58Bb02B6c4678d9940F5e6B9af1127",
+    "groups": [
+      "USD"
+    ]
   }
 ]

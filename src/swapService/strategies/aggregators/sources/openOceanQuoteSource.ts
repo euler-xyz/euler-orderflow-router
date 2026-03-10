@@ -116,10 +116,11 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
   }: QuoteParams<OpenOceanSupport, OpenOceanConfig>): Promise<
     SourceQuoteResponse<OpenOceanData>
   > {
-    const { sellToken: sellTokenDataResult } = await external.tokenData.request()
+    const { sellToken: sellTokenDataResult } =
+      await external.tokenData.request()
     const client = getViemClient(chainId)
     const gasPrice = await client.getGasPrice().catch((error) => {
-      console.error('Error getting gas price: ', error)
+      console.error("Error getting gas price: ", error)
       return 1n
     })
     const gasPriceGwei = Number.parseFloat(formatUnits(gasPrice, 9))
