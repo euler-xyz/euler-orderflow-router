@@ -3563,5 +3563,14 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xcE10B17EBc931C6B50e9710CC5F721cBE64C1168",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x85B78AcA6Deae198fBF201c82DAF6Ca21942acc6",
+    "name": "Lido ARM",
+    "symbol": "ARM-WETH-stETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x85B78AcA6Deae198fBF201c82DAF6Ca21942acc6",
+    "groups": []
   }
 ]
