@@ -572,8 +572,6 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xcD2F22236DD9Dfe2356D7C543161D4d260FD9BcB",
     "groups": []
-<<<<<<< HEAD
-=======
   },
   {
     "chainId": 8453,
@@ -648,6 +646,5 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
     "groups": []
->>>>>>> master
   }
 ]

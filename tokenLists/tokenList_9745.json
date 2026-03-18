@@ -589,8 +589,6 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/9745/0x08EFCC2F3e61185D0EA7F8830B3FEc9Bfa2EE313",
     "groups": []
-<<<<<<< HEAD
-=======
   },
   {
     "chainId": 9745,
@@ -619,6 +617,5 @@
       "isPendlePT": true,
       "pendleMarket": "0x5F6b7F7105340Ce6e7c8844279f33776262B5180"
     }
->>>>>>> master
   }
 ]
