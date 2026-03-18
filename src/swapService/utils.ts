@@ -1,5 +1,9 @@
 import contractBook from "@/common/utils/contractBook"
-import getTokenList, { type TokenListItem } from "@/common/utils/tokenList"
+import {
+  type TokenListItem,
+  findTokenInCache,
+  getOrFetchToken,
+} from "@/common/utils/tokenList"
 import type { StatusCodes } from "http-status-codes"
 import {
   type Address,
@@ -37,11 +41,11 @@ export const SWAPPER_HANDLER_UNISWAP_V3 = stringToHex("UniswapV3", {
 })
 
 export const findToken = (chainId: number, tokenAddress: Address) => {
-  const token = getTokenList(chainId).find((t: TokenListItem) =>
-    isAddressEqual(t.address, tokenAddress),
-  )
-  return token
+  return findTokenInCache(chainId, tokenAddress)
 }
+
+export const findOrFetchToken = (chainId: number, tokenAddress: Address) =>
+  getOrFetchToken(chainId, tokenAddress)
 
 // TODO move to base class
 export function matchParams(

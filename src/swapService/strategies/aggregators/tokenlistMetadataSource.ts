@@ -1,4 +1,4 @@
-import { getAllTokenLists } from "@/common/utils/tokenList"
+import { getAllTokenLists, getOrFetchToken } from "@/common/utils/tokenList"
 import type {
   ChainId,
   FieldsRequirements,
@@ -13,7 +13,7 @@ import type {
   MetadataInput,
   MetadataResult,
 } from "@balmy/sdk/dist/services/metadata/types"
-import { type Address, isAddressEqual } from "viem"
+import type { Address } from "viem"
 
 export class TokenlistMetadataSource
   implements IMetadataSource<BaseTokenMetadata>
@@ -25,11 +25,15 @@ export class TokenlistMetadataSource
     config?: { timeout?: TimeString }
   }) {
     const result: Record<ChainId, Record<TokenAddress, BaseTokenMetadata>> = {}
-    const allTokens = getAllTokenLists()
-    for (const { chainId, token } of params.tokens) {
-      const tokenListItem = allTokens[chainId]?.find((t) =>
-        isAddressEqual(t.address, token as Address),
-      )
+    const tokenMetadata = await Promise.all(
+      params.tokens.map(async ({ chainId, token }) => ({
+        chainId,
+        token,
+        tokenListItem: await getOrFetchToken(chainId, token as Address),
+      })),
+    )
+
+    for (const { chainId, token, tokenListItem } of tokenMetadata) {
       if (tokenListItem) {
         if (!result[chainId]) result[chainId] = {}
         result[chainId][token] = {

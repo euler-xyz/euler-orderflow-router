@@ -13,7 +13,7 @@ import { findSwaps, reflectProviders } from "@/swapService/runner"
 import type { SwapParams } from "@/swapService/types"
 import {
   ApiError,
-  findToken,
+  findOrFetchToken,
   getSwapper,
   parseHrtimeToSeconds,
 } from "@/swapService/utils"
@@ -86,7 +86,7 @@ swapRouter.get(
   validateRequest(getSwapSchema),
   async (req: Request, res: Response) => {
     try {
-      const swapParams = parseRequest(req)
+      const swapParams = await parseRequest(req)
 
       const startTime = process.hrtime()
       const swaps = await findSwaps(swapParams)
@@ -111,7 +111,7 @@ swapRouter.get(
   validateRequest(getSwapSchema),
   async (req: Request, res: Response) => {
     try {
-      const swapParams = parseRequest(req)
+      const swapParams = await parseRequest(req)
 
       const startTime = process.hrtime()
       const swaps = await findSwaps(swapParams)
@@ -147,7 +147,7 @@ function createFailureResponse(req: Request, error: any) {
   return ServiceResponse.failure(`${error}`, StatusCodes.INTERNAL_SERVER_ERROR)
 }
 
-function parseRequest(request: Request): SwapParams {
+async function parseRequest(request: Request): Promise<SwapParams> {
   try {
     logProd({
       name: "INCOMING QUERY",
@@ -162,11 +162,11 @@ function parseRequest(request: Request): SwapParams {
     //  }
 
     const chainId = validatedParams.chainId
-    const tokenIn = findToken(chainId, validatedParams.tokenIn)
+    const tokenIn = await findOrFetchToken(chainId, validatedParams.tokenIn)
     if (!tokenIn)
       throw new ApiError(StatusCodes.NOT_FOUND, "Token in not supported")
 
-    const tokenOut = findToken(chainId, validatedParams.tokenOut)
+    const tokenOut = await findOrFetchToken(chainId, validatedParams.tokenOut)
 
     if (!tokenOut)
       throw new ApiError(StatusCodes.NOT_FOUND, "Token out not supported")
