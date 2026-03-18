@@ -14,9 +14,12 @@ const bscRoutingConfig: ChainRoutingConfig = [
       swapperModes: [SwapperMode.EXACT_IN],
     },
   },
-  {
-    strategy: StrategyRedirectTransferReceiver.name(),
-  },
+  // {
+  //   strategy: StrategyERC4626Wrapper.name(),
+  //   match: {
+  //     tokensInOrOut: [YNBNBX_BSC],
+  //   },
+  // },
   // DEFAULTS
   {
     strategy: StrategyAggregators.name(),

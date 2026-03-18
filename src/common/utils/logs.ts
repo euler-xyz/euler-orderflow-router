@@ -1,4 +1,3 @@
-import { SwapperMode } from "@/swapService/interface"
 import type { SwapParams } from "@/swapService/types"
 import type { SourceListQuoteRequest } from "@balmy/sdk"
 import httpContext from "express-http-context"

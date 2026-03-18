@@ -88,11 +88,11 @@ export async function runPipeline(
   } else {
     console.log("Empty results []")
   }
-  // console.log(
-  //   finalResult.quotes
-  //     .map((q) => q.route.map((r) => r.providerName).join(" "))
-  //     .join(", "),
-  // )
+  console.log(
+    finalResult.quotes
+      .map((q) => q.route.map((r) => r.providerName).join(" "))
+      .join(", "),
+  )
 
   // console.log('finalResult.quotes: ', JSON.stringify(finalResult.quotes, null, 2));
 

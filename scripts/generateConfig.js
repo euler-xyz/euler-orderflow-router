@@ -15,6 +15,8 @@ async function run() {
     return
   }
   const { chainIds } = await response.json()
+  // TODO REMOVE
+  if (!chainIds.includes(130)) chainIds.push(130)
   try {
     const aggregators = await Promise.all(
       chainIds.map(async (chainId) => {

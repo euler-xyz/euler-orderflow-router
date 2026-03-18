@@ -3,9 +3,8 @@ import {
   StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyElixir,
-  StrategyPendleCrossChainPT,
-  StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
+  StrategyRedirectTransferReceiver,
 } from "../strategies"
 
 // const SAVUSD_AVALANCHE = "a0x06d47F3fb376649c3A9Dafe069B3D6E35572219E"
@@ -29,9 +28,6 @@ const avalancheRoutingConfig: ChainRoutingConfig = [
     match: {
       tokensInOrOut: [SDEUSD_AVALANCHE],
     },
-  },
-  {
-    strategy: StrategyPendleCrossChainPT.name(),
   },
   {
     strategy: StrategyERC4626Wrapper.name(),

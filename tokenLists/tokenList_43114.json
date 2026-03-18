@@ -474,5 +474,46 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/43114/0x48b0D7dDe081B09a97Ba9b67347D75818bb8CE44",
     "groups": []
+<<<<<<< HEAD
+=======
+  },
+  {
+    "chainId": 43114,
+    "address": "0x24Dd05a8fd6c75C16eba113ba5CA334811b3e055",
+    "name": "Mock USD Stablecoin",
+    "symbol": "mUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x24Dd05a8fd6c75C16eba113ba5CA334811b3e055",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 43114,
+    "address": "0x4e07f5cB1751E1AE17E8D3D2d6b8D9b4cE8492e6",
+    "name": "Pending Settlement mUSD",
+    "symbol": "ps-mUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x4e07f5cB1751E1AE17E8D3D2d6b8D9b4cE8492e6",
+    "groups": []
+  },
+  {
+    "chainId": 43114,
+    "address": "0x311ad4977655e781BE7ffe3cF02A34102D1A06b8",
+    "name": "Mock RWA",
+    "symbol": "mRWA",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x311ad4977655e781BE7ffe3cF02A34102D1A06b8",
+    "groups": []
+  },
+  {
+    "chainId": 43114,
+    "address": "0x3e3e3a934412f52cbd287b8B3264d4F862F485e8",
+    "name": "Pending Settlement mRWA",
+    "symbol": "ps-mRWA",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x3e3e3a934412f52cbd287b8B3264d4F862F485e8",
+    "groups": []
+>>>>>>> master
   }
 ]

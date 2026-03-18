@@ -24,19 +24,48 @@ export type TokenListItem = {
 
 const cache: Record<number, TokenListItem[]> = {}
 
-const loadTokenlistsFromFiles = () => {
+const getTokenListsDir = () => {
   let dir = `${__dirname}/../tokenLists`
-  let files
   try {
-    files = fs.readdirSync(dir)
+    fs.readdirSync(dir)
   } catch {
     dir = `${__dirname}/../../../tokenLists`
-    files = fs.readdirSync(dir)
   }
+  return dir
+}
+
+const mergeCustomTokens = () => {
+  const dir = getTokenListsDir()
+  const customPath = `${dir}/custom.json`
+  if (!fs.existsSync(customPath)) return
+
+  const customTokens = JSON.parse(
+    fs.readFileSync(customPath).toString(),
+  ) as TokenListItem[]
+
+  for (const token of customTokens) {
+    let chainTokens = cache[token.chainId]
+    if (!chainTokens) {
+      chainTokens = []
+      cache[token.chainId] = chainTokens
+    }
+    const exists = chainTokens.some(
+      (cachedToken) =>
+        cachedToken.address.toLowerCase() === token.address.toLowerCase(),
+    )
+    if (!exists) chainTokens.push(token)
+  }
+}
+
+const loadTokenlistsFromFiles = () => {
+  const dir = getTokenListsDir()
+  const files = fs
+    .readdirSync(dir)
+    .filter((file) => /^tokenList_(\d+)\.json$/.test(file))
   for (const file of files) {
-    const match = file.match(/(\d+)/g)
+    const match = file.match(/^tokenList_(\d+)\.json$/)
     if (!match) throw new Error("Invalid tokenlist file")
-    const chainId = Number(match[0])
+    const chainId = Number(match[1])
     cache[chainId] = JSON.parse(
       fs.readFileSync(`${dir}/${file}`).toString(),
     ) as TokenListItem[]
@@ -44,12 +73,7 @@ const loadTokenlistsFromFiles = () => {
 }
 
 const writeTokenListsToFiles = () => {
-  let dir = `${__dirname}/../tokenLists`
-  try {
-    fs.readdirSync(dir)
-  } catch {
-    dir = `${__dirname}/../../../tokenLists`
-  }
+  const dir = getTokenListsDir()
   for (const [chainId, tokenlist] of Object.entries(cache)) {
     fs.writeFileSync(
       `${dir}/tokenList_${chainId}.json`,
@@ -65,12 +89,17 @@ export async function buildCache() {
       "Missing TOKENLIST_URL configuration. Falling back to static files",
     )
     loadTokenlistsFromFiles()
+    mergeCustomTokens()
     return cache
   }
 
   await Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
-      const response = await fetch(`${tokenlistURL}?chainId=${chainId}`)
+      let url = tokenlistURL
+      if (chainId === "80094") {
+        url = "https://indexer-main-erpc.euler.finance/v1/tokens"
+      }
+      const response = await fetch(`${url}?chainId=${chainId}`)
 
       if (!response.ok) {
         throw new Error(`${response.status} ${response.statusText}`)
@@ -88,6 +117,7 @@ export async function buildCache() {
     console.log(`Error fetching tokenlists ${err}`)
     loadTokenlistsFromFiles()
   })
+  mergeCustomTokens()
 
   try {
     writeTokenListsToFiles()

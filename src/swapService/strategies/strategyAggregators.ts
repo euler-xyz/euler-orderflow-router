@@ -43,6 +43,7 @@ import {
 import { CustomSourceList } from "./aggregators/customSourceList"
 import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
 import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
+import { StubPriceSource } from "./aggregators/stubPriceSource"
 import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
 
 const DAO_MULTISIG = "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
@@ -194,6 +195,12 @@ export class StrategyAggregators {
           config: {
             type: "fallback",
           },
+        },
+      },
+      price: {
+        source: {
+          type: "custom",
+          instance: new StubPriceSource(providerService),
         },
       },
       gas: {

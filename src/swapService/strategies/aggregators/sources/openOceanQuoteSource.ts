@@ -1,3 +1,4 @@
+import { viemClients } from "@/common/utils/viemClients"
 import {
   type Address,
   Addresses,
@@ -5,7 +6,6 @@ import {
   Chains,
   isSameAddress,
 } from "@balmy/sdk"
-import type { GasPrice } from "@balmy/sdk/dist/services/gas/types"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -19,7 +19,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import { formatUnits } from "viem"
+import { formatUnits, publicActions } from "viem"
 import * as chains from "viem/chains"
 
 // https://docs.openocean.finance/dev/supported-chains
@@ -116,13 +116,14 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
   }: QuoteParams<OpenOceanSupport, OpenOceanConfig>): Promise<
     SourceQuoteResponse<OpenOceanData>
   > {
-    const [{ sellToken: sellTokenDataResult }, gasPriceResult] =
-      await Promise.all([
-        external.tokenData.request(),
-        external.gasPrice.request(),
-      ])
-    const legacyGasPrice = eip1159ToLegacy(gasPriceResult)
-    const gasPrice = Number.parseFloat(formatUnits(legacyGasPrice, 9))
+    const { sellToken: sellTokenDataResult } =
+      await external.tokenData.request()
+    const client = getViemClient(chainId)
+    const gasPrice = await client.getGasPrice().catch((error) => {
+      console.error("Error getting gas price: ", error)
+      return 1n
+    })
+    const gasPriceGwei = Number.parseFloat(formatUnits(gasPrice, 9))
     const amount = formatUnits(order.sellAmount, sellTokenDataResult.decimals)
     const { nativeAsset } = SUPPORTED_CHAINS[chainId]
     const native = nativeAsset ?? Addresses.NATIVE_TOKEN
@@ -135,7 +136,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
         : buyToken,
       amount: amount,
       slippage: slippagePercentage,
-      gasPrice: gasPrice,
+      gasPrice: gasPriceGwei,
       account: recipient ?? takeFrom,
       referrer:
         chainId === 239
@@ -155,6 +156,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
     }
 
     const response = await fetchService.fetch(url, { timeout, headers })
+
     if (!response.ok) {
       failed(
         OPEN_OCEAN_METADATA,
@@ -215,9 +217,8 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
   }
 }
 
-function eip1159ToLegacy(gasPrice: GasPrice): bigint {
-  if ("gasPrice" in gasPrice) {
-    return BigInt(gasPrice.gasPrice)
-  }
-  return BigInt(gasPrice.maxFeePerGas)
+const getViemClient = (chainId: number) => {
+  if (!viemClients[chainId])
+    throw new Error(`No client found for chainId ${chainId}`)
+  return viemClients[chainId].extend(publicActions)
 }

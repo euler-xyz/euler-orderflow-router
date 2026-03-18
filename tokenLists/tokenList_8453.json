@@ -572,5 +572,82 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xcD2F22236DD9Dfe2356D7C543161D4d260FD9BcB",
     "groups": []
+<<<<<<< HEAD
+=======
+  },
+  {
+    "chainId": 8453,
+    "address": "0xf016413834E6D1A14F3D628B11D6Ef725a6bdbDD",
+    "name": "Argentine Peso token",
+    "symbol": "ARGt",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xf016413834E6D1A14F3D628B11D6Ef725a6bdbDD",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xe5020A6d073a794B6E7f05678707dE47986Fb0b6",
+    "name": "Frax USD",
+    "symbol": "frxUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xe5020A6d073a794B6E7f05678707dE47986Fb0b6",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 8453,
+    "address": "0x80CBb36F48fad69069a3B93989EEE3bAD8f3f103",
+    "name": "ICHI Vault Liquidity",
+    "symbol": "IV-HYDX-187-frxUSD-BRZ",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x80CBb36F48fad69069a3B93989EEE3bAD8f3f103",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x52801C578172c7cb60a0646fc0af6a42A47bA403",
+    "name": "ICHI Vault Liquidity",
+    "symbol": "IV-HYDX-189-frxUSD-tGBP",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x52801C578172c7cb60a0646fc0af6a42A47bA403",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x6F28872Ed9b0dAe3273f5d9eadBeD224f8D24c19",
+    "name": "ICHI Vault Liquidity",
+    "symbol": "IV-HYDX-17-frxUSD-USDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x6F28872Ed9b0dAe3273f5d9eadBeD224f8D24c19",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x1ffEa4b2d372d2c85fE3A7f28BB1B213dF8c58ED",
+    "name": "ICHI Vault Liquidity",
+    "symbol": "IV-HYDX-191-frxUSD-IDRX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x1ffEa4b2d372d2c85fE3A7f28BB1B213dF8c58ED",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xdD01Aa17Db58068b877001f3741422DF439c0E0d",
+    "name": "ICHI Vault Liquidity",
+    "symbol": "IV-HYDX-215-frxUSD-KRWQ",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xdD01Aa17Db58068b877001f3741422DF439c0E0d",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
+    "name": "BRZ Token",
+    "symbol": "BRZ",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
+    "groups": []
+>>>>>>> master
   }
 ]

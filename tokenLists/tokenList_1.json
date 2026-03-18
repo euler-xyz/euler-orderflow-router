@@ -1,6 +1,42 @@
 [
   {
     "chainId": 1,
+    "address": "0x17418038ecF73BA4026c4f428547BF099706F27B",
+    "name": "ACRED",
+    "symbol": "ACRED",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x17418038ecF73BA4026c4f428547BF099706F27B",
+    "groups": [
+      "securitize"
+    ],
+    "coingeckoId": "apollo-diversified-credit-securitize-fund"
+  },
+  {
+    "chainId": 1,
+    "address": "0x51C2d74017390CbBd30550179A16A1c28F7210fc",
+    "name": "STAC",
+    "symbol": "STAC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x51C2d74017390CbBd30550179A16A1c28F7210fc",
+    "groups": [
+      "securitize"
+    ],
+    "coingeckoId": "securitize-tokenized-aaa-clo-fund"
+  },
+  {
+    "chainId": 1,
+    "address": "0x2255718832bC9fD3bE1CaF75084F4803DA14FF01",
+    "name": "VBILL",
+    "symbol": "VBILL",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x2255718832bC9fD3bE1CaF75084F4803DA14FF01",
+    "groups": [
+      "securitize"
+    ],
+    "coingeckoId": "vaneck-treasury-fund"
+  },
+  {
+    "chainId": 1,
     "address": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
     "name": "Euler",
     "symbol": "EUL",
@@ -3441,5 +3477,114 @@
       "isPendlePT": true,
       "pendleMarket": "0xaC24A6f0068d9701EAEa76AB0B418021017F8D59"
     }
+<<<<<<< HEAD
+=======
+  },
+  {
+    "chainId": 1,
+    "address": "0x3de0ff76E8b528C092d47b9DaC775931cef80F49",
+    "name": "PT Ethena sUSDE 7MAY2026",
+    "symbol": "PT-sUSDE-7MAY2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3de0ff76E8b528C092d47b9DaC775931cef80F49",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x8dAe8ECe668cf80d348873F23D456448E8694883"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0x3d3194345261F0e053acE8440341E3A9cFcd095A",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3d3194345261F0e053acE8440341E3A9cFcd095A",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xA15CD3034Abd5d56b1422a2a7d27e030b3BCd77A",
+    "name": "Pareto AA - ACRDX-test-0USDC",
+    "symbol": "AA_ACRDX-test-0USDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xA15CD3034Abd5d56b1422a2a7d27e030b3BCd77A",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x77fc9A019De3D576D072199979A4fE3AA29a9642",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x77fc9A019De3D576D072199979A4fE3AA29a9642",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x564fa4e3EEE769b911643DDc637E8FB8489cc1a2",
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x564fa4e3EEE769b911643DDc637E8FB8489cc1a2",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 1,
+    "address": "0x974d86f395e30DBF803DB8d35EcB325fe1C13441",
+    "name": "deACRDX",
+    "symbol": "deACRDX",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x974d86f395e30DBF803DB8d35EcB325fe1C13441",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xf4edb25A80CE96a70a93185767D3Bfc5e92e2697",
+    "name": "Pending Settlement Pareto ACRDX",
+    "symbol": "pspACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xf4edb25A80CE96a70a93185767D3Bfc5e92e2697",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x91C699E708F826Ca6bB5cd875A1168354F509c34",
+    "name": "pending-settlement-USDC",
+    "symbol": "psUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x91C699E708F826Ca6bB5cd875A1168354F509c34",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x8f834F177633324c175Ee4a7f6801F0e2579838d",
+    "name": "Pareto AA - ACRDXUSDC",
+    "symbol": "AA_ACRDXUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x8f834F177633324c175Ee4a7f6801F0e2579838d",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xcE10B17EBc931C6B50e9710CC5F721cBE64C1168",
+    "name": "pending-settlement-pACRDX",
+    "symbol": "ps-pACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xcE10B17EBc931C6B50e9710CC5F721cBE64C1168",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x85B78AcA6Deae198fBF201c82DAF6Ca21942acc6",
+    "name": "Lido ARM",
+    "symbol": "ARM-WETH-stETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x85B78AcA6Deae198fBF201c82DAF6Ca21942acc6",
+    "groups": []
+>>>>>>> master
   }
 ]
