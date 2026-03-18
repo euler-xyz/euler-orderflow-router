@@ -1,23 +1,9 @@
-import { type ChainRoutingConfig, SwapperMode } from "../interface"
-import {
-  StrategyAggregators,
-  StrategyMidas,
-  StrategyRedirectTransferReceiver,
-  StrategyRepayWrapper,
-} from "../strategies"
+import type { ChainRoutingConfig } from "../interface"
+import { StrategyAggregators, StrategyMidas } from "../strategies"
+import { globalRoutingWrappers } from "./global"
 
 const baseRoutingConfig: ChainRoutingConfig = [
-  // WRAPPERS
-  {
-    strategy: StrategyRepayWrapper.name(),
-    match: {
-      isRepay: true,
-      swapperModes: [SwapperMode.EXACT_IN],
-    },
-  },
-  {
-    strategy: StrategyRedirectTransferReceiver.name(),
-  },
+  ...globalRoutingWrappers,
   // SPECIAL CASE TOKENS
   {
     strategy: StrategyMidas.name(),

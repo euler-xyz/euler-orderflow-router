@@ -1,19 +1,9 @@
-import { type ChainRoutingConfig, SwapperMode } from "../interface"
-import {
-  StrategyAggregators,
-  StrategyRedirectTransferReceiver,
-  StrategyRepayWrapper,
-} from "../strategies"
+import type { ChainRoutingConfig } from "../interface"
+import { StrategyAggregators } from "../strategies"
+import { globalRoutingWrappers } from "./global"
 
 const bscRoutingConfig: ChainRoutingConfig = [
-  // WRAPPERS
-  {
-    strategy: StrategyRepayWrapper.name(),
-    match: {
-      isRepay: true,
-      swapperModes: [SwapperMode.EXACT_IN],
-    },
-  },
+  ...globalRoutingWrappers,
   // {
   //   strategy: StrategyERC4626Wrapper.name(),
   //   match: {

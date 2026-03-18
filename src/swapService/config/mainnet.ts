@@ -7,10 +7,9 @@ import {
   StrategyIdleCDOTranche,
   StrategyMidas,
   StrategyRedirectDepositWrapper,
-  StrategyRedirectTransferReceiver,
-  StrategyRepayWrapper,
   StrategyStrata,
 } from "../strategies"
+import { globalRoutingWrappers } from "./global"
 
 const SUSDS_MAINNET = "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
 const WSTUSR_MAINNET = "0x1202f5c7b4b9e47a1a484e8b270be34dbbc75055"
@@ -41,17 +40,7 @@ const PT_MAPOLLO_20NOV2025_MAINNET =
 const MAPOLLO_MAINNET = "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05"
 
 const mainnetRoutingConfig: ChainRoutingConfig = [
-  // WRAPPERS
-  {
-    strategy: StrategyRepayWrapper.name(),
-    match: {
-      isRepay: true,
-      swapperModes: [SwapperMode.EXACT_IN],
-    },
-  },
-  {
-    strategy: StrategyRedirectTransferReceiver.name(),
-  },
+  ...globalRoutingWrappers,
   // SPECIAL CASE TOKENS
   {
     strategy: StrategyIdleCDOTranche.name(),
