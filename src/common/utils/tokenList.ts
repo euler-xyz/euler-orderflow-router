@@ -1,5 +1,13 @@
 import fs from "node:fs"
-import type { Address } from "viem"
+import {
+  http,
+  type Address,
+  createPublicClient,
+  hexToString,
+  isAddressEqual,
+  parseAbi,
+  publicActions,
+} from "viem"
 import { RPC_URLS } from "./viemClients"
 
 export type TokenListItem = {
@@ -23,6 +31,20 @@ export type TokenListItem = {
 }
 
 const cache: Record<number, TokenListItem[]> = {}
+const pendingTokenFetches = new Map<
+  string,
+  Promise<TokenListItem | undefined>
+>()
+
+const erc20StringAbi = parseAbi([
+  "function name() view returns (string)",
+  "function symbol() view returns (string)",
+])
+const erc20Bytes32Abi = parseAbi([
+  "function name() view returns (bytes32)",
+  "function symbol() view returns (bytes32)",
+])
+const erc20DecimalsAbi = parseAbi(["function decimals() view returns (uint8)"])
 
 const getTokenListsDir = () => {
   let dir = `${__dirname}/../tokenLists`
@@ -80,6 +102,122 @@ const writeTokenListsToFiles = () => {
       JSON.stringify(tokenlist, null, 2),
     )
   }
+}
+
+export function findTokenInCache(chainId: number, tokenAddress: Address) {
+  return getTokenList(chainId).find((t: TokenListItem) =>
+    isAddressEqual(t.address, tokenAddress),
+  )
+}
+
+function upsertTokenInCache(token: TokenListItem) {
+  let chainTokens = cache[token.chainId]
+  if (!chainTokens) {
+    chainTokens = []
+    cache[token.chainId] = chainTokens
+  }
+
+  const existingIndex = chainTokens.findIndex((cachedToken) =>
+    isAddressEqual(cachedToken.address, token.address),
+  )
+
+  if (existingIndex >= 0) {
+    chainTokens[existingIndex] = { ...chainTokens[existingIndex], ...token }
+    return chainTokens[existingIndex]
+  }
+
+  chainTokens.push(token)
+  return token
+}
+
+function getPublicClient(chainId: number) {
+  const rpcUrl = RPC_URLS[chainId]
+  if (!rpcUrl) return
+
+  return createPublicClient({
+    transport: http(rpcUrl, { timeout: 120_000 }),
+  }).extend(publicActions)
+}
+
+async function readStringMetadata(
+  client: ReturnType<typeof getPublicClient>,
+  tokenAddress: Address,
+  functionName: "name" | "symbol",
+) {
+  if (!client) return
+
+  try {
+    return (await client.readContract({
+      address: tokenAddress,
+      abi: erc20StringAbi,
+      functionName,
+    })) as string
+  } catch {
+    try {
+      const value = (await client.readContract({
+        address: tokenAddress,
+        abi: erc20Bytes32Abi,
+        functionName,
+      })) as `0x${string}`
+      return hexToString(value, { size: 32 }).replace(/\0+$/g, "")
+    } catch {
+      return
+    }
+  }
+}
+
+async function fetchTokenFromContract(
+  chainId: number,
+  tokenAddress: Address,
+): Promise<TokenListItem | undefined> {
+  const client = getPublicClient(chainId)
+  if (!client) return
+
+  try {
+    const [name, symbol, decimals] = await Promise.all([
+      readStringMetadata(client, tokenAddress, "name"),
+      readStringMetadata(client, tokenAddress, "symbol"),
+      client.readContract({
+        address: tokenAddress,
+        abi: erc20DecimalsAbi,
+        functionName: "decimals",
+      }) as Promise<number>,
+    ])
+
+    if (!name || !symbol || decimals === undefined || decimals === null) return
+
+    return upsertTokenInCache({
+      address: tokenAddress,
+      chainId,
+      decimals,
+      logoURI: "",
+      name,
+      symbol,
+    })
+  } catch {
+    return
+  }
+}
+
+export async function getOrFetchToken(
+  chainId: number,
+  tokenAddress: Address,
+): Promise<TokenListItem | undefined> {
+  const cachedToken = findTokenInCache(chainId, tokenAddress)
+  if (cachedToken) return cachedToken
+
+  const key = `${chainId}:${tokenAddress.toLowerCase()}`
+  const pendingFetch = pendingTokenFetches.get(key)
+  if (pendingFetch) return pendingFetch
+
+  const fetchPromise = fetchTokenFromContract(chainId, tokenAddress).finally(
+    () => {
+      pendingTokenFetches.delete(key)
+    },
+  )
+
+  pendingTokenFetches.set(key, fetchPromise)
+  return fetchPromise
 }
 
 export async function buildCache() {
