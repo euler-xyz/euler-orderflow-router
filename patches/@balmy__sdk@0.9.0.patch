@@ -63,3 +63,39 @@ index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1
  };
  function getAllChains() {
      return Object.values(exports.Chains);
+diff --git a/dist/services/quotes/quote-sources/types.d.ts b/dist/services/quotes/quote-sources/types.d.ts
+index 09dc5aa59b6d6a4c0b277490bd7c95747390bd65..855c21bcec41aed8277097aa066bb21ac3969416 100644
+--- a/dist/services/quotes/quote-sources/types.d.ts
++++ b/dist/services/quotes/quote-sources/types.d.ts
+@@ -85,6 +85,7 @@ type BaseSwapQuoteRequest<Order extends BaseOrder, Accounts extends BaseSwapAcco
+         }>;
+         gasPrice: ITriggerablePromise<GasPrice>;
+     };
++    swapParams?: unknown;
+ };
+ export type SourceQuoteResponse<CustomQuoteSourceData extends Record<string, any> = Record<string, any>> = {
+     sellAmount: bigint;
+diff --git a/dist/services/quotes/source-lists/local-source-list.js b/dist/services/quotes/source-lists/local-source-list.js
+index c2aceef772d34e1eb3cd86dc8a3a39536ec7be09..087c916b738b62fe5ee37fc92718187ecaf17a31 100644
+--- a/dist/services/quotes/source-lists/local-source-list.js
++++ b/dist/services/quotes/source-lists/local-source-list.js
+@@ -137,6 +137,7 @@ function mapQuoteRequestToSourceRequest(request) {
+             recipient: request.recipient,
+         },
+         external: request.external,
++        swapParams: request.swapParams,
+     };
+ }
+ //# sourceMappingURL=local-source-list.js.map
+diff --git a/dist/services/quotes/types.d.ts b/dist/services/quotes/types.d.ts
+index 2be21534b29c7939426d2a375d40bf080785ecc9..692ef8a33dc1582da63eae5a6edb0d2c601eed15 100644
+--- a/dist/services/quotes/types.d.ts
++++ b/dist/services/quotes/types.d.ts
+@@ -116,6 +116,7 @@ export type QuoteRequest = {
+     }, {
+         excludeSources: SourceId[];
+     }>;
++    swapParams?: unknown;
+     includeNonTransferSourcesWhenRecipientIsSet?: boolean;
+     estimateBuyOrdersWithSellOnlySources?: boolean;
+     sourceConfig?: SourceConfig;

@@ -10,7 +10,7 @@ import {
   addQuoteSlippage,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
-import { keccak256, toHex, zeroAddress } from "viem"
+import { isAddress, keccak256, toHex, zeroAddress } from "viem"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [Chains.ETHEREUM.chainId]: "mainnet",
@@ -36,6 +36,11 @@ const COW_METADATA: QuoteSourceMetadata<CoWSupport> = {
 type CoWSupport = { buyOrders: true; swapAndTransfer: true }
 type CoWConfig = object
 type CoWData = object
+type QuoteSwapParams = {
+  origin: string
+  receiver: string
+}
+
 export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
   CoWSupport,
   CoWConfig,
@@ -50,20 +55,23 @@ export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
     request: {
       chainId,
       sellToken,
-      buyToken,
+
       order,
-      accounts: { takeFrom, recipient },
+      accounts: { takeFrom },
       config: { slippagePercentage, timeout },
+      swapParams,
     },
   }: QuoteParams<CoWSupport, CoWConfig>): Promise<
     SourceQuoteResponse<CoWData>
   > {
+    const origin = (swapParams as QuoteSwapParams).origin
+    const receiver = (swapParams as QuoteSwapParams).receiver
     const appData = `{\"appCode\":\"CoW Swap\",\"environment\":\"production\",\"metadata\":{\"orderClass\":{\"orderClass\":\"market\"},\"quote\":{\"slippageBips\":${Math.floor(slippagePercentage / 100)},\"smartSlippage\":true}},\"version\":\"1.10.0\"}`
     const appDataHash = keccak256(toHex(appData))
     const queryBody = {
       sellToken,
-      buyToken,
-      receiver: recipient ?? takeFrom,
+      buyToken: receiver, // the evault
+      receiver: origin,
       appData,
       appDataHash,
       from: takeFrom,
@@ -94,7 +102,7 @@ export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
         COW_METADATA,
         chainId,
         sellToken,
-        buyToken,
+        receiver,
         await quoteResponse.text(),
       )
     }

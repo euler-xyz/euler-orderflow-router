@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@balmy/sdk@0.9.0':
-    hash: 7qju4ljebkyngse2xlcmozfhoa
+    hash: eauxv37ligpudiawoabo2sowr4
     path: patches/@balmy__sdk@0.9.0.patch
 
 dependencies:
@@ -15,7 +15,7 @@ dependencies:
     version: 7.2.0(zod@3.23.8)
   '@balmy/sdk':
     specifier: 0.9.0
-    version: 0.9.0(patch_hash=7qju4ljebkyngse2xlcmozfhoa)(typescript@5.7.2)(zod@3.23.8)
+    version: 0.9.0(patch_hash=eauxv37ligpudiawoabo2sowr4)(typescript@5.7.2)(zod@3.23.8)
   '@berachain-foundation/berancer-sdk':
     specifier: ^0.33.2
     version: 0.33.2(typescript@5.7.2)(zod@3.23.8)
@@ -138,7 +138,7 @@ packages:
       zod: 3.23.8
     dev: false
 
-  /@balmy/sdk@0.9.0(patch_hash=7qju4ljebkyngse2xlcmozfhoa)(typescript@5.7.2)(zod@3.23.8):
+  /@balmy/sdk@0.9.0(patch_hash=eauxv37ligpudiawoabo2sowr4)(typescript@5.7.2)(zod@3.23.8):
     resolution: {integrity: sha512-O8areOYP6h6jXf608N6SkYfvWBUF8b1M6TuUArDmOFNVuw2ZCLDpMj0udRo27IOBa+9Phdb4nIAITZFKBLHWDQ==}
     dependencies:
       cross-fetch: 3.1.5

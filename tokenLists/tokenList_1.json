@@ -3572,5 +3572,23 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0x85B78AcA6Deae198fBF201c82DAF6Ca21942acc6",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xD7cDE27a677CF61103c699099d7266b567930b49",
+    "name": "Pending Settlement pACRDX",
+    "symbol": "ps-pACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xD7cDE27a677CF61103c699099d7266b567930b49",
+    "groups": []
   }
 ]
