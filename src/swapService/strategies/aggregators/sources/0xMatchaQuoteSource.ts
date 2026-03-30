@@ -105,7 +105,10 @@ export class CustomZRXQuoteSource
       buyAmount: BigInt(buyAmount),
       minBuyAmount: BigInt(minBuyAmount),
       estimatedGas: BigInt(gas ?? 0),
-      // allowanceTarget: calculateAllowanceTarget(sellToken, allowanceTarget),
+      allowanceTarget: calculateAllowanceTarget(
+        sellToken,
+        Addresses.ZERO_ADDRESS,
+      ),
       customData: {
         tx: {
           calldata: data,

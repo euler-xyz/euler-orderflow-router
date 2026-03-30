@@ -1,4 +1,4 @@
-import { StrategyAggregators } from "./StrategyAggregators"
+import { StrategyAggregators } from "./strategyAggregators"
 import { StrategyCombinedUniswap } from "./strategyCombinedUniswap"
 import { StrategyConnect2 } from "./strategyConnect2"
 import { StrategyCurveLPNG } from "./strategyCurveLPNG"

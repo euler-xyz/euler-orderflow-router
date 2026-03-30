@@ -14,6 +14,7 @@ import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
+import { CustomMultiliquidQuoteSource } from "./sources/multiliquidQuoteSource"
 import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
 import { CustomOdosQuoteSource } from "./sources/odosQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
@@ -42,6 +43,7 @@ const customSources = {
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
+  multiliquid: new CustomMultiliquidQuoteSource(),
   kyberswap: new CustomKyberswapQuoteSource(),
   enso: new CustomEnsoQuoteSource(),
   "okx-dex": new CustomOKXDexQuoteSource(),
