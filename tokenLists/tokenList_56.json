@@ -309,5 +309,23 @@
     "groups": [
       "USD"
     ]
+  },
+  {
+    "chainId": 56,
+    "address": "0x5b8ce6D591c914a56CB019B3dECb63eDE22708C8",
+    "name": "Staked eTHENA",
+    "symbol": "stakeTHENA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/56/0x5b8ce6D591c914a56CB019B3dECb63eDE22708C8",
+    "groups": []
+  },
+  {
+    "chainId": 56,
+    "address": "0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11",
+    "name": "THENA",
+    "symbol": "THE",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/56/0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11",
+    "groups": []
   }
 ]

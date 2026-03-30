@@ -675,5 +675,23 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0xB4134E73fA51a9214a945f6fE3003d1a056AE6d8",
     "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0xD6110F59A978aDa6eF5c0E9D6BaA04455D46Ade7",
+    "name": "AxiomStable",
+    "symbol": "AXUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0xD6110F59A978aDa6eF5c0E9D6BaA04455D46Ade7",
+    "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0x864F9c6f50dC5Bd244F5002F1B0873Cd80e2539D",
+    "name": "Axiom Protocol Token",
+    "symbol": "AXM",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x864F9c6f50dC5Bd244F5002F1B0873Cd80e2539D",
+    "groups": []
   }
 ]

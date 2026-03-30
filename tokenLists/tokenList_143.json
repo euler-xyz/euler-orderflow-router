@@ -211,6 +211,15 @@
   },
   {
     "chainId": 143,
+    "address": "0xCE6170EA245dC8D1f275A710a062b70f125F0110",
+    "name": "FXRP",
+    "symbol": "FXRP",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xCE6170EA245dC8D1f275A710a062b70f125F0110",
+    "groups": []
+  },
+  {
+    "chainId": 143,
     "address": "0x4e8aaecCE10ad9394e96fE5f2bd4e587A7B04298",
     "name": "wnUSDT0",
     "symbol": "wnUSDT0",

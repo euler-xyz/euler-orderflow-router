@@ -560,6 +560,7 @@ export class StrategyAggregators {
       takerAddress: swapParams.from,
       recipient: swapParams.receiver,
       filters: sourcesFilter || this.config.sourcesFilter,
+      swapParams,
       includeNonTransferSourcesWhenRecipientIsSet: true,
     }
   }
