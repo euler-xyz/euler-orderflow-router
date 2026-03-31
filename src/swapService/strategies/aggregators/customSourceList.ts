@@ -49,7 +49,7 @@ const customSources = {
   "okx-dex": new CustomOKXDexQuoteSource(),
   paraswap: new CustomParaswapQuoteSource(),
   "0x": new CustomZRXQuoteSource(),
-  cow: new CustomCoWQuoteSource(),
+  // cow: new CustomCoWQuoteSource(),
   spectra: new CustomSpectraQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",

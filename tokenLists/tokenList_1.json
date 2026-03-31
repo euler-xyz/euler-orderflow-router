@@ -3590,5 +3590,14 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xD7cDE27a677CF61103c699099d7266b567930b49",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xd359082848c1027257616038A1CdFA2a54438561",
+    "name": "SL Token",
+    "symbol": "SL",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xd359082848c1027257616038A1CdFA2a54438561",
+    "groups": []
   }
 ]
