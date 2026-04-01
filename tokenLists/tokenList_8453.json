@@ -646,5 +646,14 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
     "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xAAA0008C8CF3A7Dca931adaF04336A5D808C82Cc",
+    "name": "DeFi Janus Henderson Anemoy AAA CLO Fund Token",
+    "symbol": "deJAAA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xAAA0008C8CF3A7Dca931adaF04336A5D808C82Cc",
+    "groups": []
   }
 ]

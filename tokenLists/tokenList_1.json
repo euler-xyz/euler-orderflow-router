@@ -3599,5 +3599,23 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xd359082848c1027257616038A1CdFA2a54438561",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x3131B41b72bc37C3B2313E8c1edEEa90e0224324",
+    "name": "Wrapped SP500 xStock",
+    "symbol": "wSPYx",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3131B41b72bc37C3B2313E8c1edEEa90e0224324",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xbd3f9814eB946E617f1d774A6762cDbec0bf087A",
+    "name": "Locked iUSD - 13 weeks",
+    "symbol": "liUSD-13w",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xbd3f9814eB946E617f1d774A6762cDbec0bf087A",
+    "groups": []
   }
 ]
