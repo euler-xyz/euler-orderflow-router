@@ -75,16 +75,22 @@ export class StrategyCowSwap {
       //   - EXACT_IN:    buyAmount  is shares of receiver vault → underlying
       //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
-        ? [sellAmount, await fetchPreviewRedeem(
-          swapParams.chainId,
-          swapParams.receiver,
-          buyAmount,
-        )]
-        : [await fetchPreviewRedeem(
-          swapParams.chainId,
-          swapParams.vaultIn,
-          sellAmount,
-        ), buyAmount]
+        ? [
+            sellAmount,
+            await fetchPreviewRedeem(
+              swapParams.chainId,
+              swapParams.receiver,
+              buyAmount,
+            ),
+          ]
+        : [
+            await fetchPreviewRedeem(
+              swapParams.chainId,
+              swapParams.vaultIn,
+              sellAmount,
+            ),
+            buyAmount,
+          ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -100,19 +106,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-          swapParams.chainId,
-          swapParams.receiver,
-          swapParams.accountOut,
-          amountOutMin,
-          swapParams.deadline,
-        )
+            swapParams.chainId,
+            swapParams.receiver,
+            swapParams.accountOut,
+            amountOutMin,
+            swapParams.deadline,
+          )
         : buildApiResponseVerifyDebtMax(
-          swapParams.chainId,
-          swapParams.receiver,
-          swapParams.accountOut,
-          swapParams.targetDebt,
-          swapParams.deadline,
-        )
+            swapParams.chainId,
+            swapParams.receiver,
+            swapParams.accountOut,
+            swapParams.targetDebt,
+            swapParams.deadline,
+          )
 
       result.quotes = [
         {
@@ -148,7 +154,8 @@ export class StrategyCowSwap {
 // empty-quote response instead of falling through to a non-CoW strategy.
 function isCowCompatible(swapParams: SwapParams): boolean {
   if (COW_SUPPORTED_CHAINS[swapParams.chainId] === undefined) return false
-  if (swapParams.swapperMode === SwapperMode.EXACT_IN) return !swapParams.isRepay
+  if (swapParams.swapperMode === SwapperMode.EXACT_IN)
+    return !swapParams.isRepay
   return swapParams.swapperMode === SwapperMode.TARGET_DEBT
 }
 
@@ -201,15 +208,12 @@ async function fetchCowQuote(
 
   let response: Response
   try {
-    response = await fetch(
-      `https://api.cow.fi/${chainSlug}/api/v1/quote`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        signal: controller.signal,
-      },
-    )
+    response = await fetch(`https://api.cow.fi/${chainSlug}/api/v1/quote`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    })
   } finally {
     clearTimeout(timeout)
   }
