@@ -327,6 +327,7 @@ export class StrategyAggregators {
         tokenIn: swapParams.tokenIn,
         tokenOut: swapParams.tokenOut,
         slippage: swapParams.slippage,
+        estimatedGas: quote.estimatedGas?.toString(),
         route: quoteToRoute(quote),
         swap,
         verify,

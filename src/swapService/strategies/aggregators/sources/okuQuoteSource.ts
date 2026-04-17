@@ -156,13 +156,17 @@ export class CustomOkuQuoteSource extends AlwaysValidConfigAndContextSource<
       )
     }
     const response = await quoteResponse.json()
-    const { coupon, inAmount, outAmount, signingRequest } = response
+    const { coupon, inAmount, outAmount, signingRequest, simulation, fees } =
+      response
     const sellAmount = parseUnits(inAmount, tokenData.sellToken.decimals)
     const buyAmount = parseUnits(outAmount, tokenData.buyToken.decimals)
     const to = coupon.raw.executionInformation.trade.to
+    const rawGas = simulation?.gas ?? fees?.gas
+    const estimatedGas = rawGas !== undefined ? BigInt(rawGas) : undefined
     const quote = {
       sellAmount,
       buyAmount,
+      estimatedGas,
       type: order.type,
       allowanceTarget: calculateAllowanceTarget(sellToken, to),
       customData: {

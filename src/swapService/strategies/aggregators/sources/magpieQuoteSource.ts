@@ -19,7 +19,6 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import { parseUnits } from "viem"
 import * as chains from "viem/chains"
 
 const SUPPORTED_CHAINS: Record<ChainId, string> = {
@@ -111,23 +110,14 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
         await quoteResponse.text(),
       )
     }
-    const {
-      id: quoteId,
-      amountOut,
-      targetAddress,
-      fees,
-    } = await quoteResponse.json()
-    const estimatedGasNum: `${number}` | undefined = fees.find(
-      (fee: { type: string; value: `${number}` }) => fee.type === "gas",
-    )?.value
-    const estimatedGas = estimatedGasNum
-      ? parseUnits(estimatedGasNum, 9)
-      : undefined
+    const { id: quoteId, amountOut, targetAddress } = await quoteResponse.json()
 
+    // Magpie's fees[type=gas].value is a native-token cost, not gas units,
+    // so we can't surface a gas-units estimate from the quote response.
     const quote = {
       sellAmount: order.sellAmount,
       buyAmount: BigInt(amountOut),
-      estimatedGas,
+      estimatedGas: undefined,
       allowanceTarget: calculateAllowanceTarget(sellToken, targetAddress),
       customData: { quoteId, takeFrom, recipient },
     }

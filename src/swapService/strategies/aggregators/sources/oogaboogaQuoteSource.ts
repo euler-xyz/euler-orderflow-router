@@ -39,12 +39,12 @@ export class CustomOogaboogaQuoteSource
   async quote(
     params: QuoteParams<OogaboogaSupport, OogaboogaConfig>,
   ): Promise<SourceQuoteResponse<OogaboogaData>> {
-    const { amountOut, to, data, value } = await this.getQuote(params)
+    const { amountOut, to, data, value, gas } = await this.getQuote(params)
 
     const quote = {
       sellAmount: params.request.order.sellAmount,
       buyAmount: BigInt(amountOut),
-      estimatedGas: undefined,
+      estimatedGas: gas !== undefined ? BigInt(gas) : undefined,
       allowanceTarget: calculateAllowanceTarget(params.request.sellToken, to),
       customData: {
         tx: {
@@ -114,8 +114,9 @@ export class CustomOogaboogaQuoteSource
         swapTokenInfo: { outputQuote: amountOut },
       },
       tx: { to, data, value },
+      gas,
     } = await response.json()
-    return { amountOut, data, to, value }
+    return { amountOut, data, to, value, gas }
   }
 
   isConfigAndContextValidForQuoting(

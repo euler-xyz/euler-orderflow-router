@@ -655,5 +655,23 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xAAA0008C8CF3A7Dca931adaF04336A5D808C82Cc",
     "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "name": "Venice Token",
+    "symbol": "VVV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "name": "LayerZero",
+    "symbol": "ZRO",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "groups": []
   }
 ]
