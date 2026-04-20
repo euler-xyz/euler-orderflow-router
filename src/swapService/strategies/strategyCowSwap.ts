@@ -77,12 +77,11 @@ export class StrategyCowSwap {
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
           sellAmount,
-          // await fetchPreviewRedeem(
-          //   swapParams.chainId,
-          //   swapParams.receiver,
-          //   buyAmount,
-          // ),
-          buyAmount
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
+            buyAmount,
+          )
         ]
         : [
           await fetchPreviewRedeem(
