@@ -18,7 +18,7 @@ const COW_SUPPORTED_CHAINS: Record<number, string> = {
   1: "mainnet",
 }
 
-export const COW_PROVIDER_NAME = "CoW Swap"
+export const COW_PROVIDER_NAME = "cow"
 
 const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
@@ -76,21 +76,21 @@ export class StrategyCowSwap {
       //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            sellAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.vaultIn,
-              sellAmount,
-            ),
+          sellAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -106,19 +106,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -133,7 +133,7 @@ export class StrategyCowSwap {
           tokenIn: swapParams.tokenIn,
           tokenOut: swapParams.tokenOut,
           slippage: swapParams.slippage,
-          route: [{ providerName: COW_PROVIDER_NAME }],
+          route: [{ providerName: "CoW Swap" }],
           swap,
           verify,
         },
