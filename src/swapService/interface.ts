@@ -36,7 +36,12 @@ export interface SwapApiResponse {
   verify: SwapApiResponseVerify
   route: SwapRouteItem[]
   estimatedGas?: string
+  providerData?: SwapApiResponseProviderData
   transferOutputToReceiver?: boolean
+}
+
+export interface SwapApiResponseProviderData {
+  quoteId?: string
 }
 
 export interface SwapApiResponseSwap {

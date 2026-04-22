@@ -64,7 +64,7 @@ export class StrategyCowSwap {
     }
 
     try {
-      const { sellAmount, buyAmount } = await fetchCowQuote(swapParams)
+      const { sellAmount, buyAmount, quoteId } = await fetchCowQuote(swapParams)
 
       const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
       // The vault-side of the CoW order is quoted in vault-share units (see
@@ -133,6 +133,7 @@ export class StrategyCowSwap {
           tokenIn: swapParams.tokenIn,
           tokenOut: swapParams.tokenOut,
           slippage: swapParams.slippage,
+          providerData: { quoteId },
           route: [{ providerName: "CoW Swap" }],
           swap,
           verify,
@@ -161,7 +162,7 @@ function isCowCompatible(swapParams: SwapParams): boolean {
 
 async function fetchCowQuote(
   swapParams: SwapParams,
-): Promise<{ sellAmount: bigint; buyAmount: bigint }> {
+): Promise<{ sellAmount: bigint; buyAmount: bigint; quoteId: string }> {
   const chainSlug = COW_SUPPORTED_CHAINS[swapParams.chainId]
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
   const kind = isExactIn ? "sell" : "buy"
@@ -226,12 +227,14 @@ async function fetchCowQuote(
     )
   }
 
-  const { quote } = (await response.json()) as {
+  const { quote, id } = (await response.json()) as {
     quote: { sellAmount: string; buyAmount: string }
+    id: string | number
   }
 
   return {
     sellAmount: BigInt(quote.sellAmount),
     buyAmount: BigInt(quote.buyAmount),
+    quoteId: String(id),
   }
 }

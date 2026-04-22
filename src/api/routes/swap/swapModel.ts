@@ -135,6 +135,12 @@ const swapApiResponseSwapSchema = z.object({
     .openapi({ description: "Raw Swapper multicall items" }),
 })
 
+const swapApiResponseProviderDataSchema = z.object({
+  quoteId: z.string().optional().openapi({
+    description: "Provider-specific quote identifier, when available",
+  }),
+})
+
 const getSwapSchema = z.object({
   query: z
     .object({
@@ -399,6 +405,9 @@ const swapResponseSchemaSingle = z.object({
   estimatedGas: z.string().optional().openapi({
     description:
       "Estimated gas cost of the swap (without processing like deposit, repay etc.)",
+  }),
+  providerData: swapApiResponseProviderDataSchema.optional().openapi({
+    description: "Provider-specific metadata",
   }),
   swap: swapApiResponseSwapSchema.openapi({
     description:
