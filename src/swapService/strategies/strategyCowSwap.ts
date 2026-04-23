@@ -1,5 +1,14 @@
 import { StatusCodes } from "http-status-codes"
-import { keccak256, toHex } from "viem"
+import { RPC_URLS } from "@/common/utils/viemClients"
+import {
+  type Address,
+  createPublicClient,
+  http,
+  isAddressEqual,
+  keccak256,
+  parseAbi,
+  toHex,
+} from "viem"
 import { SwapperMode } from "../interface"
 import type { StrategyResult, SwapParams } from "../types"
 import {
@@ -22,6 +31,7 @@ export const COW_PROVIDER_NAME = "cow"
 
 const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
+const erc4626AssetAbi = parseAbi(["function asset() view returns (address)"])
 
 // The router returns a stub swap payload for CoW quotes. The frontend never
 // submits this to the Swapper — it extracts `amountIn` / `amountOutMin` and
@@ -40,7 +50,10 @@ export class StrategyCowSwap {
   }
 
   async supports(swapParams: SwapParams) {
-    return swapParams.provider === COW_PROVIDER_NAME
+    return (
+      swapParams.provider === COW_PROVIDER_NAME &&
+      !swapParams.transferOutputToReceiver
+    )
   }
 
   async providers(chainId: number): Promise<string[]> {
@@ -76,21 +89,21 @@ export class StrategyCowSwap {
       //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            sellAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.vaultIn,
-              sellAmount,
-            ),
+          sellAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -106,19 +119,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -165,6 +178,20 @@ async function fetchCowQuote(
 ): Promise<{ sellAmount: bigint; buyAmount: bigint; quoteId: string }> {
   const chainSlug = COW_SUPPORTED_CHAINS[swapParams.chainId]
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
+
+  if (isExactIn) {
+    const receiverAsset = await fetchVaultAsset(
+      swapParams.chainId,
+      swapParams.receiver,
+    )
+    if (!isAddressEqual(receiverAsset, swapParams.tokenOut.address)) {
+      throw new ApiError(
+        StatusCodes.BAD_REQUEST,
+        "CoW exact-in requires receiver.asset() to equal tokenOut",
+      )
+    }
+  }
+
   const kind = isExactIn ? "sell" : "buy"
 
   // Mirror `cowQuoteSource` and the integration wrappers: whichever side of
@@ -226,8 +253,8 @@ async function fetchCowQuote(
       `CoW quote failed: ${response.status} ${text}`,
     )
   }
-
-  const { quote, id } = (await response.json()) as {
+  const res = await response.json()
+  const { quote, id } = (res) as {
     quote: { sellAmount: string; buyAmount: string }
     id: string | number
   }
@@ -236,5 +263,32 @@ async function fetchCowQuote(
     sellAmount: BigInt(quote.sellAmount),
     buyAmount: BigInt(quote.buyAmount),
     quoteId: String(id),
+  }
+}
+
+async function fetchVaultAsset(chainId: number, vault: Address): Promise<Address> {
+  const rpcUrl = RPC_URLS[chainId]
+  if (!rpcUrl) {
+    throw new ApiError(
+      StatusCodes.INTERNAL_SERVER_ERROR,
+      `Missing RPC URL for chain ${chainId}`,
+    )
+  }
+
+  const client = createPublicClient({
+    transport: http(rpcUrl, { timeout: 120_000 }),
+  })
+
+  try {
+    return (await client.readContract({
+      address: vault,
+      abi: erc4626AssetAbi,
+      functionName: "asset",
+    })) as Address
+  } catch {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      "CoW exact-in requires receiver to implement ERC4626 asset()",
+    )
   }
 }
