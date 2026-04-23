@@ -77,7 +77,8 @@ export class StrategyCowSwap {
     }
 
     try {
-      const { sellAmount, buyAmount, quoteId } = await fetchCowQuote(swapParams)
+      const { sellAmount, buyAmount, feeAmount, quoteId } =
+        await fetchCowQuote(swapParams)
 
       const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
       // The vault-side of the CoW order is quoted in vault-share units (see
@@ -89,7 +90,7 @@ export class StrategyCowSwap {
       //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            sellAmount,
+            sellAmount + feeAmount,
             await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.receiver,
@@ -173,9 +174,12 @@ function isCowCompatible(swapParams: SwapParams): boolean {
   return swapParams.swapperMode === SwapperMode.TARGET_DEBT
 }
 
-async function fetchCowQuote(
-  swapParams: SwapParams,
-): Promise<{ sellAmount: bigint; buyAmount: bigint; quoteId: string }> {
+async function fetchCowQuote(swapParams: SwapParams): Promise<{
+  sellAmount: bigint
+  buyAmount: bigint
+  feeAmount: bigint
+  quoteId: string
+}> {
   const chainSlug = COW_SUPPORTED_CHAINS[swapParams.chainId]
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
 
@@ -235,6 +239,7 @@ async function fetchCowQuote(
   const timeout = setTimeout(() => controller.abort(), COW_QUOTE_TIMEOUT_MS)
 
   let response: Response
+  console.log("body: ", body)
   try {
     response = await fetch(`https://api.cow.fi/${chainSlug}/api/v1/quote`, {
       method: "POST",
@@ -254,14 +259,16 @@ async function fetchCowQuote(
     )
   }
   const res = await response.json()
+  console.log("res: ", res)
   const { quote, id } = res as {
-    quote: { sellAmount: string; buyAmount: string }
+    quote: { sellAmount: string; buyAmount: string; feeAmount?: string }
     id: string | number
   }
 
   return {
     sellAmount: BigInt(quote.sellAmount),
     buyAmount: BigInt(quote.buyAmount),
+    feeAmount: BigInt(quote.feeAmount || "0"),
     quoteId: String(id),
   }
 }
