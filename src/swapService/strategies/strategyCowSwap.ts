@@ -1,9 +1,9 @@
-import { StatusCodes } from "http-status-codes"
 import { RPC_URLS } from "@/common/utils/viemClients"
+import { StatusCodes } from "http-status-codes"
 import {
+  http,
   type Address,
   createPublicClient,
-  http,
   isAddressEqual,
   keccak256,
   parseAbi,
@@ -89,21 +89,21 @@ export class StrategyCowSwap {
       //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-          sellAmount,
-          await fetchPreviewRedeem(
-            swapParams.chainId,
-            swapParams.receiver,
-            buyAmount,
-          ),
-        ]
-        : [
-          await fetchPreviewRedeem(
-            swapParams.chainId,
-            swapParams.vaultIn,
             sellAmount,
-          ),
-          buyAmount,
-        ]
+            await fetchPreviewRedeem(
+              swapParams.chainId,
+              swapParams.receiver,
+              buyAmount,
+            ),
+          ]
+        : [
+            await fetchPreviewRedeem(
+              swapParams.chainId,
+              swapParams.vaultIn,
+              sellAmount,
+            ),
+            buyAmount,
+          ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -119,19 +119,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-          swapParams.chainId,
-          swapParams.receiver,
-          swapParams.accountOut,
-          amountOutMin,
-          swapParams.deadline,
-        )
+            swapParams.chainId,
+            swapParams.receiver,
+            swapParams.accountOut,
+            amountOutMin,
+            swapParams.deadline,
+          )
         : buildApiResponseVerifyDebtMax(
-          swapParams.chainId,
-          swapParams.receiver,
-          swapParams.accountOut,
-          swapParams.targetDebt,
-          swapParams.deadline,
-        )
+            swapParams.chainId,
+            swapParams.receiver,
+            swapParams.accountOut,
+            swapParams.targetDebt,
+            swapParams.deadline,
+          )
 
       result.quotes = [
         {
@@ -254,7 +254,7 @@ async function fetchCowQuote(
     )
   }
   const res = await response.json()
-  const { quote, id } = (res) as {
+  const { quote, id } = res as {
     quote: { sellAmount: string; buyAmount: string }
     id: string | number
   }
@@ -266,7 +266,10 @@ async function fetchCowQuote(
   }
 }
 
-async function fetchVaultAsset(chainId: number, vault: Address): Promise<Address> {
+async function fetchVaultAsset(
+  chainId: number,
+  vault: Address,
+): Promise<Address> {
   const rpcUrl = RPC_URLS[chainId]
   if (!rpcUrl) {
     throw new ApiError(

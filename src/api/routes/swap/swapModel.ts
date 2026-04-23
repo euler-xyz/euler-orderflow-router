@@ -167,7 +167,7 @@ const getSwapSchema = z.object({
       vaultIn: addressSchema.openapi({
         param: {
           description:
-            "Address of the vault where to return unused input asset. Must be address zero if `unusedInputReceiver` is provided",
+            "Address of the vault where to return unused input asset. Must be address zero if `unusedInputReceiver` is provided. For CoW target debt quotes, this must be the vault holding the deposit to sell",
         },
         example: "0x797DD80692c3b2dAdabCe8e30C07fDE5307D48a9",
       }),
@@ -387,7 +387,7 @@ const swapResponseSchemaSingle = z.object({
   }),
   vaultIn: addressSchema.openapi({
     description:
-      "Address of the vault which will receive unused input asset. Address zero if `unusedInputReceiver` is provided",
+      "Address of the vault which will receive unused input asset. Address zero if `unusedInputReceiver` is provided. For CoW target debt quotes, this must be the vault holding the deposit to sell",
   }),
   receiver: addressSchema.openapi({
     description:
