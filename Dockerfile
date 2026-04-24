@@ -31,5 +31,5 @@ USER nonroot
 
 EXPOSE 3002
 
-ENTRYPOINT ["node"]
+ENTRYPOINT ["/nodejs/bin/node"]
 CMD ["dist/index.js"]
