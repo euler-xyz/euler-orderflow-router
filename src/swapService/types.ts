@@ -31,6 +31,7 @@ export interface SwapParams {
   unusedInputReceiver?: Address // address to receive unused input instead of depositing to vaultIn/accountIn
   transferOutputToReceiver?: boolean // transfer output tokens to receiver instead of depositing. Invalidates accountOut
   provider?: string // preselected provider
+  providerExtraData?: string // provider-specific request data
 }
 
 export interface SwapQuote {

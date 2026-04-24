@@ -18,6 +18,7 @@ export interface SwapApiRequest {
   deadline: number // timestamp in seconds
   dustAccount?: Address // dust will be deposited for this account or to `accountOut` if not provided
   routingOverride?: RoutingConfig
+  providerExtraData?: string // provider-specific request data
 }
 
 export interface SwapApiResponse {
@@ -111,6 +112,14 @@ export enum SwapperMode {
   // 2 - exact output swap and repay, targeting a debt amount of an account
   TARGET_DEBT = 2,
 }
+
+export const cowWrappers = [
+  "openPosition",
+  "closePosition",
+  "collateralSwap",
+] as const
+
+export type CowWrapper = (typeof cowWrappers)[number]
 
 export type ChainRoutingConfig = RoutingItem[]
 

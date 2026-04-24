@@ -319,6 +319,15 @@ const getSwapSchema = z.object({
               "Preselected provider of the quote. See `providers` endpoint",
           },
         }),
+      providerExtraData: z
+        .string()
+        .optional()
+        .openapi({
+          param: {
+            description:
+              "Provider-specific request data. Required when `provider=cow`; set to `openPosition`, `collateralSwap`, or `closePosition`. `openPosition` and `collateralSwap` require exact input mode (0); `closePosition` requires target debt mode (2).",
+          },
+        }),
     })
     .refine(
       (data) => data.tokenIn.toLowerCase() !== data.tokenOut.toLowerCase(),

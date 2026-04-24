@@ -19,7 +19,10 @@ import {
   buildApiResponseVerifySkimMin,
   matchParams,
 } from "../utils"
-import { fetchPreviewRedeem } from "./strategyERC4626Wrapper"
+import {
+  fetchPreviewDeposit,
+  fetchPreviewRedeem,
+} from "./strategyERC4626Wrapper"
 
 // Chains where CoW integration wrappers are deployed. Mirror of
 // euler-lite/entities/cowswap/constants.ts COWSWAP_CHAIN_CONFIG.
@@ -50,10 +53,7 @@ export class StrategyCowSwap {
   }
 
   async supports(swapParams: SwapParams) {
-    return (
-      swapParams.provider === COW_PROVIDER_NAME &&
-      !swapParams.transferOutputToReceiver
-    )
+    return isCowCompatible(swapParams)
   }
 
   async providers(chainId: number): Promise<string[]> {
@@ -67,30 +67,42 @@ export class StrategyCowSwap {
       match: matchParams(swapParams, this.match),
     }
 
-    if (!result.supports || !result.match) return result
-
     // Once the request targets CoW, pin the pipeline: either this strategy
     // produces a quote or the response is empty. No non-CoW fallback.
-    if (!isCowCompatible(swapParams)) {
+    if (
+      swapParams.provider === COW_PROVIDER_NAME &&
+      (!result.supports || !result.match)
+    ) {
       result.quotes = []
       return result
     }
+
+    if (!result.supports || !result.match) return result
 
     try {
       const { sellAmount, buyAmount, feeAmount, quoteId } =
         await fetchCowQuote(swapParams)
 
       const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
+      const isCollateralSwap =
+        swapParams.providerExtraData === COW_WRAPPER_COLLATERAL_SWAP
       // The vault-side of the CoW order is quoted in vault-share units (see
       // `fetchCowQuote`). Normalize back to the underlying asset using the
       // vault's live redeem rate so downstream consumers see `amountIn` /
       // `amountOut` in `tokenIn` / `tokenOut` units — same contract as every
       // other provider.
-      //   - EXACT_IN:    buyAmount  is shares of receiver vault → underlying
-      //   - TARGET_DEBT: sellAmount is shares of vaultIn vault   → underlying
+      //   - openPosition:    buyAmount  is shares of receiver vault -> underlying
+      //   - closePosition:   sellAmount is shares of vaultIn vault   -> underlying
+      //   - collateralSwap:  both sides are vault shares             -> underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            sellAmount + feeAmount,
+            isCollateralSwap
+              ? await fetchPreviewRedeem(
+                  swapParams.chainId,
+                  swapParams.vaultIn,
+                  sellAmount + feeAmount,
+                )
+              : sellAmount + feeAmount,
             await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.receiver,
@@ -164,14 +176,30 @@ export class StrategyCowSwap {
   }
 }
 
-// Requests CoW can actually serve. Anything outside this — wrong chain,
-// EXACT_OUT, EXACT_IN with isRepay (needs the Swapper repay path) — gets an
-// empty-quote response instead of falling through to a non-CoW strategy.
+const COW_WRAPPER_OPEN_POSITION = "openPosition"
+const COW_WRAPPER_CLOSE_POSITION = "closePosition"
+const COW_WRAPPER_COLLATERAL_SWAP = "collateralSwap"
+
+// Requests CoW can actually serve. Anything outside this -- missing wrapper,
+// wrong chain, wrong mode, or EXACT_IN with isRepay (needs the Swapper repay
+// path) -- gets an empty-quote response instead of falling through to a non-CoW
+// strategy.
 function isCowCompatible(swapParams: SwapParams): boolean {
+  if (swapParams.provider !== COW_PROVIDER_NAME) return false
+  if (swapParams.transferOutputToReceiver) return false
   if (COW_SUPPORTED_CHAINS[swapParams.chainId] === undefined) return false
-  if (swapParams.swapperMode === SwapperMode.EXACT_IN)
-    return !swapParams.isRepay
-  return swapParams.swapperMode === SwapperMode.TARGET_DEBT
+
+  switch (swapParams.providerExtraData) {
+    case COW_WRAPPER_OPEN_POSITION:
+    case COW_WRAPPER_COLLATERAL_SWAP:
+      return (
+        swapParams.swapperMode === SwapperMode.EXACT_IN && !swapParams.isRepay
+      )
+    case COW_WRAPPER_CLOSE_POSITION:
+      return swapParams.swapperMode === SwapperMode.TARGET_DEBT
+    default:
+      return false
+  }
 }
 
 async function fetchCowQuote(swapParams: SwapParams): Promise<{
@@ -182,6 +210,8 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
 }> {
   const chainSlug = COW_SUPPORTED_CHAINS[swapParams.chainId]
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
+  const isCollateralSwap =
+    swapParams.providerExtraData === COW_WRAPPER_COLLATERAL_SWAP
 
   if (isExactIn) {
     const receiverAsset = await fetchVaultAsset(
@@ -194,6 +224,19 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
         "CoW exact-in requires receiver.asset() to equal tokenOut",
       )
     }
+
+    if (isCollateralSwap) {
+      const vaultInAsset = await fetchVaultAsset(
+        swapParams.chainId,
+        swapParams.vaultIn,
+      )
+      if (!isAddressEqual(vaultInAsset, swapParams.tokenIn.address)) {
+        throw new ApiError(
+          StatusCodes.BAD_REQUEST,
+          "CoW collateral swap requires vaultIn.asset() to equal tokenIn",
+        )
+      }
+    }
   }
 
   const kind = isExactIn ? "sell" : "buy"
@@ -202,14 +245,25 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   // the trade touches an ERC4626 vault uses the *vault* address as the CoW
   // token. The settlement runs withdraw/deposit inline, so this is the price
   // the order actually clears at.
-  //   - EXACT_IN  (swap → deposit):         buyToken  = receiver vault
-  //   - TARGET_DEBT (withdraw → swap → repay): sellToken = vaultIn vault
+  //   - openPosition (swap -> deposit):         buyToken  = receiver vault
+  //   - closePosition (withdraw -> swap -> repay): sellToken = vaultIn vault
+  //   - collateralSwap: sellToken = vaultIn vault, buyToken = receiver vault
   // Consequence: the amount on the vault-side comes back in vault-share units,
   // not in the underlying. Downstream consumers must convert via the vault's
   // exchange rate — see euler-lite `useMultiplyForm` (amountOut) and
   // `useCollateralSwapRepay` (amountIn) for the pattern.
-  const sellToken = isExactIn ? swapParams.tokenIn.address : swapParams.vaultIn
+  const sellToken =
+    isExactIn && !isCollateralSwap
+      ? swapParams.tokenIn.address
+      : swapParams.vaultIn
   const buyToken = isExactIn ? swapParams.receiver : swapParams.tokenOut.address
+  const amount = isCollateralSwap
+    ? await fetchPreviewDeposit(
+        swapParams.chainId,
+        swapParams.vaultIn,
+        swapParams.amount,
+      )
+    : swapParams.amount
 
   // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
   // in percent. The existing `cowQuoteSource` divides by 100 here, which is
@@ -231,8 +285,8 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     validFor: COW_ORDER_VALID_FOR_SECONDS,
     kind,
     ...(isExactIn
-      ? { sellAmountBeforeFee: swapParams.amount.toString() }
-      : { buyAmountAfterFee: swapParams.amount.toString() }),
+      ? { sellAmountBeforeFee: amount.toString() }
+      : { buyAmountAfterFee: amount.toString() }),
   }
 
   const controller = new AbortController()
