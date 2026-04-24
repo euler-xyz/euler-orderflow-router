@@ -1,4 +1,6 @@
-FROM 310118226683.dkr.ecr.eu-west-1.amazonaws.com/node:24-slim AS build
+ARG NODE_BASE_REPO
+
+FROM ${NODE_BASE_REPO}:24-slim AS build
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -17,7 +19,7 @@ RUN pnpm run generate-config
 RUN pnpm run build
 RUN npm_config_ignore_scripts=true pnpm prune --prod
 
-FROM 310118226683.dkr.ecr.eu-west-1.amazonaws.com/node:24-distroless AS runtime
+FROM ${NODE_BASE_REPO}:24-distroless AS runtime
 
 ENV NODE_ENV=production
 ENV PORT=3002
