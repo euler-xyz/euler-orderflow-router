@@ -25,6 +25,7 @@ WORKDIR /app
 
 COPY --from=build --chown=nonroot:nonroot /app/dist ./dist
 COPY --from=build --chown=nonroot:nonroot /app/node_modules ./node_modules
+COPY --from=build --chown=nonroot:nonroot /app/scripts/pnpm-runtime-shim.cjs ./pnpm
 COPY --from=build --chown=nonroot:nonroot /app/tokenLists ./tokenLists
 
 USER nonroot
