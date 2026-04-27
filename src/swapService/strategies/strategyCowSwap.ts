@@ -96,27 +96,27 @@ export class StrategyCowSwap {
       //   - collateralSwap:  both sides are vault shares             -> underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            isCollateralSwap
-              ? await fetchPreviewRedeem(
-                  swapParams.chainId,
-                  swapParams.vaultIn,
-                  sellAmount + feeAmount,
-                )
-              : sellAmount + feeAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
+          isCollateralSwap
+            ? await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.vaultIn,
-              sellAmount,
-            ),
+              sellAmount + feeAmount,
+            )
+            : sellAmount + feeAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount + feeAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -132,19 +132,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -259,10 +259,10 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   const buyToken = isExactIn ? swapParams.receiver : swapParams.tokenOut.address
   const amount = isCollateralSwap
     ? await fetchPreviewDeposit(
-        swapParams.chainId,
-        swapParams.vaultIn,
-        swapParams.amount,
-      )
+      swapParams.chainId,
+      swapParams.vaultIn,
+      swapParams.amount,
+    )
     : swapParams.amount
 
   // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
@@ -293,7 +293,6 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   const timeout = setTimeout(() => controller.abort(), COW_QUOTE_TIMEOUT_MS)
 
   let response: Response
-  console.log("body: ", body)
   try {
     response = await fetch(`https://api.cow.fi/${chainSlug}/api/v1/quote`, {
       method: "POST",
@@ -313,7 +312,6 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     )
   }
   const res = await response.json()
-  console.log("res: ", res)
   const { quote, id } = res as {
     quote: { sellAmount: string; buyAmount: string; feeAmount?: string }
     id: string | number
