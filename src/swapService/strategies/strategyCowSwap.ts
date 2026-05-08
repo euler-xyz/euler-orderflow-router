@@ -34,6 +34,7 @@ export const COW_PROVIDER_NAME = "cow"
 
 const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
+const COW_CLOSE_POSITION_FULL_REPAY_BUY_AMOUNT_BUFFER_DENOMINATOR = 100_000n
 const erc4626AssetAbi = parseAbi(["function asset() view returns (address)"])
 
 // The router returns a stub swap payload for CoW quotes. The frontend never
@@ -212,6 +213,12 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
   const isCollateralSwap =
     swapParams.providerExtraData === COW_WRAPPER_COLLATERAL_SWAP
+  const isClosePosition =
+    swapParams.providerExtraData === COW_WRAPPER_CLOSE_POSITION
+  const isFullClosePositionRepay =
+    isClosePosition &&
+    swapParams.swapperMode === SwapperMode.TARGET_DEBT &&
+    swapParams.targetDebt === 0n
 
   if (isExactIn) {
     const receiverAsset = await fetchVaultAsset(
@@ -257,13 +264,19 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
       ? swapParams.tokenIn.address
       : swapParams.vaultIn
   const buyToken = isExactIn ? swapParams.receiver : swapParams.tokenOut.address
+  // Full close-position repay quotes include the same debt buffer that the
+  // final CoW BUY order signs, so quoteId and order amounts stay aligned.
   const amount = isCollateralSwap
     ? await fetchPreviewDeposit(
         swapParams.chainId,
         swapParams.vaultIn,
         swapParams.amount,
       )
-    : swapParams.amount
+    : isFullClosePositionRepay
+      ? padClosePositionFullRepayBuyAmount(
+          swapParams.currentDebt || swapParams.amount,
+        )
+      : swapParams.amount
 
   // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
   // in percent. The existing `cowQuoteSource` divides by 100 here, which is
@@ -323,6 +336,13 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     feeAmount: BigInt(quote.feeAmount || "0"),
     quoteId: String(id),
   }
+}
+
+function padClosePositionFullRepayBuyAmount(amount: bigint): bigint {
+  return (
+    amount +
+    amount / COW_CLOSE_POSITION_FULL_REPAY_BUY_AMOUNT_BUFFER_DENOMINATOR
+  )
 }
 
 async function fetchVaultAsset(
