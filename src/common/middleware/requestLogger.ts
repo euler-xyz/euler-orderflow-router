@@ -4,6 +4,7 @@ import type { Request, RequestHandler, Response } from "express"
 import { StatusCodes, getReasonPhrase } from "http-status-codes"
 import type { LevelWithSilent } from "pino"
 import { type CustomAttributeKeys, type Options, pinoHttp } from "pino-http"
+import { isProductionEnv, logWarn } from "../utils/logs"
 
 enum LogLevel {
   Fatal = "fatal",
@@ -24,19 +25,19 @@ type PinoCustomProps = {
 
 const requestLogger = (options?: Options): RequestHandler[] => {
   const pinoOptions: Options = {
-    enabled: !!process.env.isProduction,
+    enabled: isProductionEnv(),
+    level: isProductionEnv() ? LogLevel.Warn : process.env.LOG_LEVEL,
     customProps: customProps as unknown as Options["customProps"],
     redact: [],
     genReqId,
     customLogLevel,
     customSuccessMessage,
-    customReceivedMessage: (req) => `request received: ${req.method}`,
     customErrorMessage: (_req, res) =>
       `request errored with status code: ${res.statusCode}`,
     customAttributeKeys,
     ...options,
   }
-  return [responseBodyMiddleware, pinoHttp(pinoOptions)]
+  return [incomingRequestLogger, responseBodyMiddleware, pinoHttp(pinoOptions)]
 }
 
 const customAttributeKeys: CustomAttributeKeys = {
@@ -53,8 +54,25 @@ const customProps = (req: Request, res: Response): PinoCustomProps => ({
   responseBody: res.locals.responseBody,
 })
 
+const incomingRequestLogger: RequestHandler = (req, res, next) => {
+  const requestId = genReqId(req, res)
+  req.id = requestId
+
+  logWarn({
+    name: "INCOMING REQUEST",
+    requestId,
+    method: req.method,
+    url: req.originalUrl || req.url,
+    path: req.path,
+    query: req.query,
+    userAgent: req.headers["user-agent"],
+  })
+
+  next()
+}
+
 const responseBodyMiddleware: RequestHandler = (_req, res, next) => {
-  const isNotProduction = !!process.env.isProduction
+  const isNotProduction = !isProductionEnv()
   if (isNotProduction) {
     const originalSend = res.send
     res.send = (content) => {

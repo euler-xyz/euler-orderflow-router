@@ -8,6 +8,7 @@ import {
   parseAbi,
   publicActions,
 } from "viem"
+import { logWarn } from "./logs"
 import { RPC_URLS } from "./viemClients"
 
 export type TokenListItem = {
@@ -223,9 +224,7 @@ export async function getOrFetchToken(
 export async function buildCache() {
   const tokenlistURL = process.env.TOKENLIST_URL
   if (!tokenlistURL) {
-    console.warn(
-      "Missing TOKENLIST_URL configuration. Falling back to static files",
-    )
+    logWarn("Missing TOKENLIST_URL configuration. Falling back to static files")
     loadTokenlistsFromFiles()
     mergeCustomTokens()
     return cache
@@ -252,7 +251,7 @@ export async function buildCache() {
       cache[Number(chainId)] = res as TokenListItem[]
     }),
   ).catch((err) => {
-    console.log(`Error fetching tokenlists ${err}`)
+    logWarn({ name: "Error fetching tokenlists", error: err })
     loadTokenlistsFromFiles()
   })
   mergeCustomTokens()
@@ -260,7 +259,7 @@ export async function buildCache() {
   try {
     writeTokenListsToFiles()
   } catch (err) {
-    console.log(`Error writing tokenlists, ${err}`)
+    logWarn({ name: "Error writing tokenlists", error: err })
   }
   return cache
 }

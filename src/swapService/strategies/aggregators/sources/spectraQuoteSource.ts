@@ -1,3 +1,4 @@
+import { logWarn } from "@/common/utils/logs"
 import type { TokenListItem } from "@/common/utils/tokenList"
 import { findToken } from "@/swapService/utils"
 import { Chains, type IFetchService } from "@balmy/sdk"
@@ -14,7 +15,6 @@ import {
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
-import { log } from "@uniswap/smart-order-router"
 import qs from "qs"
 import { type Address, getAddress, isAddressEqual } from "viem"
 import { arbitrum, avalanche, base, bsc, mainnet, optimism } from "viem/chains"
@@ -164,7 +164,7 @@ export class CustomSpectraQuoteSource
       const msg =
         (await response.text()) || `Failed with status ${response.status}`
 
-      log({ name: "[SPECTRA ERROR]", msg, recipient, url })
+      logWarn({ name: "[SPECTRA ERROR]", msg, recipient, url })
       failed(SPECTRA_METADATA, chainId, sellToken, buyToken, msg)
     }
 

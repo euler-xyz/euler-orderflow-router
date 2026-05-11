@@ -1,4 +1,5 @@
 import contractBook from "@/common/utils/contractBook"
+import { logDev } from "@/common/utils/logs"
 import {
   type TokenListItem,
   findTokenInCache,
@@ -664,7 +665,10 @@ export async function binarySearchQuote(
         amount: amountFrom,
       })))
 
-    console.log("amountTo: ", amountTo)
+    logDev({
+      name: "Binary search quote amount",
+      amountTo: amountTo.toString(),
+    })
     if (prevAmountTo && prevAmountTo === amountTo)
       throw new Error("Binary search quote not improving")
     prevAmountTo = amountTo
