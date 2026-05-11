@@ -19,10 +19,7 @@ import {
   buildApiResponseVerifySkimMin,
   matchParams,
 } from "../utils"
-import {
-  fetchPreviewDeposit,
-  fetchPreviewRedeem,
-} from "./strategyERC4626Wrapper"
+import { fetchPreviewRedeem } from "./strategyERC4626Wrapper"
 
 // Chains where CoW integration wrappers are deployed. Mirror of
 // euler-lite/entities/cowswap/constants.ts COWSWAP_CHAIN_CONFIG.
@@ -81,12 +78,12 @@ export class StrategyCowSwap {
     if (!result.supports || !result.match) return result
 
     try {
-      const { sellAmount, buyAmount, feeAmount, quoteId } =
+      const { sellAmount, buyAmount, feeAmount, providerData } =
         await fetchCowQuote(swapParams)
 
       const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
       const isCollateralSwap =
-        swapParams.providerExtraData === COW_WRAPPER_COLLATERAL_SWAP
+        swapParams.providerExtraData?.type === COW_WRAPPER_COLLATERAL_SWAP
       // The vault-side of the CoW order is quoted in vault-share units (see
       // `fetchCowQuote`). Normalize back to the underlying asset using the
       // vault's live redeem rate so downstream consumers see `amountIn` /
@@ -97,27 +94,27 @@ export class StrategyCowSwap {
       //   - collateralSwap:  both sides are vault shares             -> underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            isCollateralSwap
-              ? await fetchPreviewRedeem(
-                  swapParams.chainId,
-                  swapParams.vaultIn,
-                  sellAmount + feeAmount,
-                )
-              : sellAmount + feeAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
+          isCollateralSwap
+            ? await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.vaultIn,
               sellAmount + feeAmount,
-            ),
+            )
+            : sellAmount + feeAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount + feeAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -133,19 +130,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -160,7 +157,7 @@ export class StrategyCowSwap {
           tokenIn: swapParams.tokenIn,
           tokenOut: swapParams.tokenOut,
           slippage: swapParams.slippage,
-          providerData: { quoteId },
+          providerData,
           route: [{ providerName: "CoW Swap" }],
           swap,
           verify,
@@ -190,7 +187,7 @@ function isCowCompatible(swapParams: SwapParams): boolean {
   if (swapParams.transferOutputToReceiver) return false
   if (COW_SUPPORTED_CHAINS[swapParams.chainId] === undefined) return false
 
-  switch (swapParams.providerExtraData) {
+  switch (swapParams.providerExtraData?.type) {
     case COW_WRAPPER_OPEN_POSITION:
     case COW_WRAPPER_COLLATERAL_SWAP:
       return (
@@ -207,14 +204,19 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   sellAmount: bigint
   buyAmount: bigint
   feeAmount: bigint
-  quoteId: string
+  providerData: {
+    quoteId: string
+    sellAmount: string
+    feeAmount: string
+    buyAmount: string
+  }
 }> {
   const chainSlug = COW_SUPPORTED_CHAINS[swapParams.chainId]
   const isExactIn = swapParams.swapperMode === SwapperMode.EXACT_IN
   const isCollateralSwap =
-    swapParams.providerExtraData === COW_WRAPPER_COLLATERAL_SWAP
+    swapParams.providerExtraData?.type === COW_WRAPPER_COLLATERAL_SWAP
   const isClosePosition =
-    swapParams.providerExtraData === COW_WRAPPER_CLOSE_POSITION
+    swapParams.providerExtraData?.type === COW_WRAPPER_CLOSE_POSITION
   const isFullClosePositionRepay =
     isClosePosition &&
     swapParams.swapperMode === SwapperMode.TARGET_DEBT &&
@@ -266,17 +268,10 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   const buyToken = isExactIn ? swapParams.receiver : swapParams.tokenOut.address
   // Full close-position repay quotes include the same debt buffer that the
   // final CoW BUY order signs, so quoteId and order amounts stay aligned.
-  const amount = isCollateralSwap
-    ? await fetchPreviewDeposit(
-        swapParams.chainId,
-        swapParams.vaultIn,
-        swapParams.amount,
-      )
-    : isFullClosePositionRepay
-      ? padClosePositionFullRepayBuyAmount(
-          swapParams.currentDebt || swapParams.amount,
-        )
-      : swapParams.amount
+  const amount = getCowQuoteAmount(swapParams, {
+    isCollateralSwap,
+    isFullClosePositionRepay,
+  })
 
   // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
   // in percent. The existing `cowQuoteSource` divides by 100 here, which is
@@ -329,13 +324,48 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     quote: { sellAmount: string; buyAmount: string; feeAmount?: string }
     id: string | number
   }
+  const feeAmount = quote.feeAmount || "0"
 
   return {
     sellAmount: BigInt(quote.sellAmount),
     buyAmount: BigInt(quote.buyAmount),
-    feeAmount: BigInt(quote.feeAmount || "0"),
-    quoteId: String(id),
+    feeAmount: BigInt(feeAmount),
+    providerData: {
+      quoteId: String(id),
+      sellAmount: quote.sellAmount,
+      feeAmount,
+      buyAmount: quote.buyAmount,
+    },
   }
+}
+
+function getCowQuoteAmount(
+  swapParams: SwapParams,
+  {
+    isCollateralSwap,
+    isFullClosePositionRepay,
+  }: { isCollateralSwap: boolean; isFullClosePositionRepay: boolean },
+): bigint {
+  if (isCollateralSwap) {
+    const swapCollateralSharesAmountIn =
+      swapParams.providerExtraData?.swapCollateralSharesAmountIn
+    if (swapCollateralSharesAmountIn === undefined) {
+      throw new ApiError(
+        StatusCodes.BAD_REQUEST,
+        "CoW collateral swap requires providerExtraData.swapCollateralSharesAmountIn",
+      )
+    }
+
+    return swapCollateralSharesAmountIn
+  }
+
+  if (isFullClosePositionRepay) {
+    return padClosePositionFullRepayBuyAmount(
+      swapParams.currentDebt || swapParams.amount,
+    )
+  }
+
+  return swapParams.amount
 }
 
 function padClosePositionFullRepayBuyAmount(amount: bigint): bigint {

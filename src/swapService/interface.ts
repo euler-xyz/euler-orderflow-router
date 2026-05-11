@@ -18,7 +18,7 @@ export interface SwapApiRequest {
   deadline: number // timestamp in seconds
   dustAccount?: Address // dust will be deposited for this account or to `accountOut` if not provided
   routingOverride?: RoutingConfig
-  providerExtraData?: string // provider-specific request data
+  providerExtraData?: SwapApiProviderExtraData // provider-specific request data
 }
 
 export interface SwapApiResponse {
@@ -43,6 +43,9 @@ export interface SwapApiResponse {
 
 export interface SwapApiResponseProviderData {
   quoteId?: string
+  sellAmount?: string
+  feeAmount?: string
+  buyAmount?: string
 }
 
 export interface SwapApiResponseSwap {
@@ -120,6 +123,11 @@ export const cowWrappers = [
 ] as const
 
 export type CowWrapper = (typeof cowWrappers)[number]
+
+export interface SwapApiProviderExtraData {
+  type: CowWrapper
+  swapCollateralSharesAmountIn?: bigint
+}
 
 export type ChainRoutingConfig = RoutingItem[]
 
