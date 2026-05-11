@@ -3,17 +3,45 @@ import type { SourceListQuoteRequest } from "@balmy/sdk"
 import httpContext from "express-http-context"
 import pino from "pino"
 
+const WARN_LEVEL = 40
+
+export const isProductionEnv = () => {
+  const isProduction = process.env.isProduction?.toLowerCase()
+  return (
+    process.env.NODE_ENV === "production" ||
+    isProduction === "true" ||
+    isProduction === "1"
+  )
+}
+
 export const logger = pino({
   name: "server start",
+  level: isProductionEnv() ? "warn" : process.env.LOG_LEVEL || "info",
   formatters: {
     bindings: (_) => ({}),
   },
+  hooks: {
+    logMethod(args, method, level) {
+      if (isProductionEnv() && level < WARN_LEVEL) return
+      method.apply(this, args)
+    },
+  },
 })
+
+const withRequestContext = (data: object | string) => {
+  const payload = typeof data === "string" ? { name: data } : data
+  return {
+    ip: httpContext.get("remoteIP"),
+    ...payload,
+  }
+}
 
 export const logEnv = (
   env: "all" | "production" | "development",
-  data: object,
+  data: object | string,
 ) => {
+  if (isProductionEnv()) return
+
   if (typeof data === "string") {
     if (process.env.NODE_ENV === "development") {
       logger.info(data)
@@ -23,10 +51,7 @@ export const logEnv = (
   }
 
   if (env === process.env.NODE_ENV || env === "all") {
-    logger.info({
-      ip: httpContext.get("remoteIP"),
-      ...data,
-    })
+    logger.info(withRequestContext(data))
   }
 }
 
@@ -42,35 +67,43 @@ export const logProd = (data: any) => {
   logEnv("production", data)
 }
 
+export const logWarn = (data: object | string) => {
+  logger.warn(withRequestContext(data))
+}
+
+export const logError = (data: object | string) => {
+  logger.error(withRequestContext(data))
+}
+
 export const logRouteTime = (
   swapParams: SwapParams,
   elapsedSeconds: number,
 ) => {
-  logProd({
+  logDev({
     name: "ROUTE EXECUTED",
     swapperMode: swapParams.swapperMode,
     elapsedSeconds,
   })
   if (elapsedSeconds > 10) {
-    logProd({
+    logWarn({
       name: "SLOW ROUTE [10]",
       swapperMode: swapParams.swapperMode,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 5) {
-    logProd({
+    logWarn({
       name: "SLOW ROUTE [5]",
       swapperMode: swapParams.swapperMode,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 3) {
-    logProd({
+    logWarn({
       name: "SLOW ROUTE [3]",
       swapperMode: swapParams.swapperMode,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 1) {
-    logProd({
+    logWarn({
       name: "SLOW ROUTE [1]",
       swapperMode: swapParams.swapperMode,
       elapsedSeconds,
@@ -91,7 +124,7 @@ export const logQuoteTime = (
     order,
   }
 
-  logProd({
+  logDev({
     name: "QUOTE EXECUTED",
     sourceId,
     request: requestGist,
@@ -99,28 +132,28 @@ export const logQuoteTime = (
   })
 
   if (elapsedSeconds > 10) {
-    logProd({
+    logWarn({
       name: "SLOW QUOTE [10]",
       sourceId,
       request: requestGist,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 5) {
-    logProd({
+    logWarn({
       name: "SLOW QUOTE [5]",
       sourceId,
       request: requestGist,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 3) {
-    logProd({
+    logWarn({
       name: "SLOW QUOTE [3]",
       sourceId,
       request: requestGist,
       elapsedSeconds,
     })
   } else if (elapsedSeconds > 1) {
-    logProd({
+    logWarn({
       name: "SLOW QUOTE [1]",
       sourceId,
       request: requestGist,

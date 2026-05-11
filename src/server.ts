@@ -9,8 +9,8 @@ import { logRouter } from "@/api/routes/log/logRouter"
 import { swapRouter } from "@/api/routes/swap/swapRouter"
 import errorHandler from "@/common/middleware/errorHandler"
 import rateLimiter from "@/common/middleware/rateLimiter"
+import requestLogger from "@/common/middleware/requestLogger"
 import { logger } from "./common/utils/logs"
-// import requestLogger from "@/common/middleware/requestLogger"
 
 const app: Express = express()
 
@@ -32,7 +32,7 @@ app.use((req, _, next) => {
   next()
 })
 // Request logging
-// app.use(requestLogger)
+app.use(requestLogger)
 
 // Routes
 app.use("/log", logRouter)

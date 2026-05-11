@@ -1,3 +1,4 @@
+import { logWarn } from "@/common/utils/logs"
 import type { TokenListItem } from "@/common/utils/tokenList"
 import { viemClients } from "@/common/utils/viemClients"
 import {
@@ -1010,7 +1011,11 @@ export async function fetchMTokenPrice(chainId: number, mToken: MTokenConfig) {
     data = (await client.readContract(query)) as bigint
     if (data <= 0) throw new Error("Invalid mTBILL price")
   } catch (err) {
-    console.log(err)
+    logWarn({
+      name: "Failed fetching Midas price",
+      token: mToken.tokenContract,
+      error: err,
+    })
     throw new Error(`Failed fetching ${mToken.tokenContract} price`)
   }
 

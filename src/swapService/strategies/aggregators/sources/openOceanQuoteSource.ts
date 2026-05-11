@@ -1,3 +1,4 @@
+import { logWarn } from "@/common/utils/logs"
 import { viemClients } from "@/common/utils/viemClients"
 import {
   type Address,
@@ -120,7 +121,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       await external.tokenData.request()
     const client = getViemClient(chainId)
     const gasPrice = await client.getGasPrice().catch((error) => {
-      console.error("Error getting gas price: ", error)
+      logWarn({ name: "Error getting gas price", error })
       return 1n
     })
     const gasPriceGwei = Number.parseFloat(formatUnits(gasPrice, 9))

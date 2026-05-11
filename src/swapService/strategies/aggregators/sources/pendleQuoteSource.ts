@@ -1,4 +1,4 @@
-import { log } from "@/common/utils/logs"
+import { logWarn } from "@/common/utils/logs"
 import { findToken } from "@/swapService/utils"
 import type {
   BuildTxParams,
@@ -143,7 +143,7 @@ export class CustomPendleQuoteSource
         (await response.text()) || `Failed with status ${response.status}`
 
       if (response.status === 400) {
-        log({ name: "[PENDLE ERROR]", msg, recipient, url })
+        logWarn({ name: "[PENDLE ERROR]", msg, recipient, url })
 
         // if (msg.includes("SY limit exceeded")) {
         //   soldOutCoolOff[`${buyToken}${chainId}`] = Date.now()
