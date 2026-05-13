@@ -44,9 +44,9 @@ const mainnetRoutingConfig: ChainRoutingConfig = [
   ...globalRoutingWrappers,
   // Only fires when the request carries `provider=cow`. Returns a stub swap
   // payload; the frontend builds the CoW order itself against the EVC wrapper.
-  {
-    strategy: StrategyCowSwap.name(),
-  },
+  // {
+  //   strategy: StrategyCowSwap.name(),
+  // },
   // SPECIAL CASE TOKENS
   {
     strategy: StrategyIdleCDOTranche.name(),
