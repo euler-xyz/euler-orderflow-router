@@ -127,6 +127,7 @@ export type CowWrapper = (typeof cowWrappers)[number]
 export interface SwapApiProviderExtraData {
   type: CowWrapper
   swapCollateralSharesAmountIn?: bigint
+  appData?: string
 }
 
 export type ChainRoutingConfig = RoutingItem[]

@@ -278,7 +278,9 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   // 10000× too small — always quotes 0 slippage. This strategy uses the
   // correct conversion.
   const slippageBips = Math.floor(swapParams.slippage * 100)
-  const appData = `{"appCode":"Euler","environment":"production","metadata":{"orderClass":{"orderClass":"market"},"quote":{"slippageBips":${slippageBips},"smartSlippage":true}},"version":"1.10.0"}`
+  const appData =
+    swapParams.providerExtraData?.appData ??
+    `{"appCode":"Euler","environment":"production","metadata":{"orderClass":{"orderClass":"market"},"quote":{"slippageBips":${slippageBips},"smartSlippage":true}},"version":"1.10.0"}`
   const appDataHash = keccak256(toHex(appData))
 
   const body = {

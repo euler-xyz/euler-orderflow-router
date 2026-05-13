@@ -142,6 +142,10 @@ const swapApiProviderExtraDataSchema = z.preprocess(
       type: z.enum(cowWrappers).openapi({
         description: "Provider-specific operation type",
       }),
+      appData: z.string().optional().openapi({
+        description:
+          "CoW wrapper appData JSON to forward to the CoW quote API. The embedded wrapper signature bytes should be omitted.",
+      }),
       swapCollateralSharesAmountIn: z
         .string()
         .transform((s) => BigInt(s || "0"))
