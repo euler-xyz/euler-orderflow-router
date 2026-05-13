@@ -280,10 +280,10 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   })
   const cowOrderOwner = isClosePosition
     ? await fetchClosePositionInbox(
-      swapParams.chainId,
-      swapParams.origin,
-      swapParams.accountOut,
-    )
+        swapParams.chainId,
+        swapParams.origin,
+        swapParams.accountOut,
+      )
     : swapParams.origin
   const cowOrderReceiver = isClosePosition
     ? cowOrderOwner
