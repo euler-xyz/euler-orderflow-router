@@ -1,4 +1,8 @@
-import { SwapVerificationType, SwapperMode } from "@/swapService/interface"
+import {
+  SwapVerificationType,
+  SwapperMode,
+  cowWrappers,
+} from "@/swapService/interface"
 import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
 import { InvalidAddressError, getAddress, isHex, zeroAddress } from "viem"
 import { z } from "zod"
@@ -123,6 +127,46 @@ const routingItemSchema = z.object({
 
 const chainRoutingConfigSchema = z.array(routingItemSchema)
 
+const swapApiProviderExtraDataSchema = z.preprocess(
+  (value) => {
+    if (typeof value !== "string") return value
+
+    try {
+      return JSON.parse(value)
+    } catch {
+      return value
+    }
+  },
+  z
+    .object({
+      type: z.enum(cowWrappers).openapi({
+        description: "Provider-specific operation type",
+      }),
+      appData: z.string().optional().openapi({
+        description:
+          "CoW wrapper appData JSON to forward to the CoW quote API. The embedded wrapper signature bytes should be omitted.",
+      }),
+      swapCollateralSharesAmountIn: z
+        .string()
+        .transform((s) => BigInt(s || "0"))
+        .pipe(z.bigint().nonnegative())
+        .optional()
+        .openapi({
+          description: "Vault-share sell amount for CoW collateral swap quotes",
+        }),
+    })
+    .refine(
+      (data) =>
+        data.type !== "collateralSwap" ||
+        data.swapCollateralSharesAmountIn !== undefined,
+      {
+        message:
+          "swapCollateralSharesAmountIn is required when providerExtraData.type is collateralSwap",
+        path: ["swapCollateralSharesAmountIn"],
+      },
+    ),
+)
+
 const swapApiResponseSwapSchema = z.object({
   swapperAddress: addressSchema.openapi({
     description: "Swapper contract address",
@@ -133,6 +177,21 @@ const swapApiResponseSwapSchema = z.object({
   multicallItems: z
     .array(swapApiResponseMulticallItemSchema)
     .openapi({ description: "Raw Swapper multicall items" }),
+})
+
+const swapApiResponseProviderDataSchema = z.object({
+  quoteId: z.string().optional().openapi({
+    description: "Provider-specific quote identifier, when available",
+  }),
+  sellAmount: z.string().optional().openapi({
+    description: "Provider-specific sell amount from the upstream quote",
+  }),
+  feeAmount: z.string().optional().openapi({
+    description: "Provider-specific fee amount from the upstream quote",
+  }),
+  buyAmount: z.string().optional().openapi({
+    description: "Provider-specific buy amount from the upstream quote",
+  }),
 })
 
 const getSwapSchema = z.object({
@@ -161,7 +220,7 @@ const getSwapSchema = z.object({
       vaultIn: addressSchema.openapi({
         param: {
           description:
-            "Address of the vault where to return unused input asset. Must be address zero if `unusedInputReceiver` is provided",
+            "Address of the vault where to return unused input asset. Must be address zero if `unusedInputReceiver` is provided. For CoW target debt quotes, this must be the vault holding the deposit to sell",
         },
         example: "0x797DD80692c3b2dAdabCe8e30C07fDE5307D48a9",
       }),
@@ -313,6 +372,12 @@ const getSwapSchema = z.object({
               "Preselected provider of the quote. See `providers` endpoint",
           },
         }),
+      providerExtraData: swapApiProviderExtraDataSchema.optional().openapi({
+        param: {
+          description:
+            'Provider-specific request data. Required when `provider=cow`; pass an object such as `{"type":"openPosition"}`, `{"type":"closePosition"}`, or `{"type":"collateralSwap","swapCollateralSharesAmountIn":"1000000000000000000"}`. `openPosition` and `collateralSwap` require exact input mode (0); `closePosition` requires target debt mode (2).',
+        },
+      }),
     })
     .refine(
       (data) => data.tokenIn.toLowerCase() !== data.tokenOut.toLowerCase(),
@@ -381,7 +446,7 @@ const swapResponseSchemaSingle = z.object({
   }),
   vaultIn: addressSchema.openapi({
     description:
-      "Address of the vault which will receive unused input asset. Address zero if `unusedInputReceiver` is provided",
+      "Address of the vault which will receive unused input asset. Address zero if `unusedInputReceiver` is provided. For CoW target debt quotes, this must be the vault holding the deposit to sell",
   }),
   receiver: addressSchema.openapi({
     description:
@@ -399,6 +464,9 @@ const swapResponseSchemaSingle = z.object({
   estimatedGas: z.string().optional().openapi({
     description:
       "Estimated gas cost of the swap (without processing like deposit, repay etc.)",
+  }),
+  providerData: swapApiResponseProviderDataSchema.optional().openapi({
+    description: "Provider-specific metadata",
   }),
   swap: swapApiResponseSwapSchema.openapi({
     description:
