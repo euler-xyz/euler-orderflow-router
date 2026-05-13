@@ -26,6 +26,9 @@ import { fetchPreviewRedeem } from "./strategyERC4626Wrapper"
 const COW_SUPPORTED_CHAINS: Record<number, string> = {
   1: "mainnet",
 }
+const COW_CLOSE_POSITION_WRAPPERS: Record<number, Address> = {
+  1: "0xa18c87849eF90190117FF1E1e8b4acE6Dac7A54b",
+}
 
 export const COW_PROVIDER_NAME = "cow"
 
@@ -33,6 +36,9 @@ const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
 const COW_CLOSE_POSITION_FULL_REPAY_BUY_AMOUNT_BUFFER_DENOMINATOR = 100_000n
 const erc4626AssetAbi = parseAbi(["function asset() view returns (address)"])
+const closePositionInboxAbi = parseAbi([
+  "function getInboxAddressAndDomainSeparator(address owner, address subaccount) view returns (address, bytes32)",
+])
 
 // The router returns a stub swap payload for CoW quotes. The frontend never
 // submits this to the Swapper — it extracts `amountIn` / `amountOutMin` and
@@ -272,6 +278,16 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     isCollateralSwap,
     isFullClosePositionRepay,
   })
+  const cowOrderOwner = isClosePosition
+    ? await fetchClosePositionInbox(
+      swapParams.chainId,
+      swapParams.origin,
+      swapParams.accountOut,
+    )
+    : swapParams.origin
+  const cowOrderReceiver = isClosePosition
+    ? cowOrderOwner
+    : swapParams.accountOut
 
   // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
   // in percent. The existing `cowQuoteSource` divides by 100 here, which is
@@ -286,12 +302,12 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   const body = {
     sellToken,
     buyToken,
-    receiver: swapParams.origin,
+    receiver: cowOrderReceiver,
     appData,
     appDataHash,
-    from: swapParams.origin,
+    from: cowOrderOwner,
     priceQuality: "optimal",
-    signingScheme: "eip712",
+    signingScheme: isClosePosition ? "eip1271" : "eip712",
     validFor: COW_ORDER_VALID_FOR_SECONDS,
     kind,
     ...(isExactIn
@@ -405,4 +421,39 @@ async function fetchVaultAsset(
       "CoW exact-in requires receiver to implement ERC4626 asset()",
     )
   }
+}
+
+async function fetchClosePositionInbox(
+  chainId: number,
+  owner: Address,
+  account: Address,
+): Promise<Address> {
+  const rpcUrl = RPC_URLS[chainId]
+  if (!rpcUrl) {
+    throw new ApiError(
+      StatusCodes.INTERNAL_SERVER_ERROR,
+      `Missing RPC URL for chain ${chainId}`,
+    )
+  }
+
+  const closePositionWrapper = COW_CLOSE_POSITION_WRAPPERS[chainId]
+  if (!closePositionWrapper) {
+    throw new ApiError(
+      StatusCodes.INTERNAL_SERVER_ERROR,
+      `Missing CoW close-position wrapper for chain ${chainId}`,
+    )
+  }
+
+  const client = createPublicClient({
+    transport: http(rpcUrl, { timeout: 120_000 }),
+  })
+
+  const [inbox] = (await client.readContract({
+    address: closePositionWrapper,
+    abi: closePositionInboxAbi,
+    functionName: "getInboxAddressAndDomainSeparator",
+    args: [owner, account],
+  })) as readonly [Address, `0x${string}`]
+
+  return inbox
 }
