@@ -14,7 +14,7 @@ RUN corepack enable
 WORKDIR /app
 COPY . .
 
-RUN pnpm i
+RUN pnpm install --frozen-lockfile
 RUN pnpm run generate-config
 RUN pnpm run build
 
