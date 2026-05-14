@@ -1,3 +1,4 @@
+import { logger } from "@/common/utils/logs"
 import { RPC_URLS } from "@/common/utils/viemClients"
 import { StatusCodes } from "http-status-codes"
 import {
@@ -300,6 +301,7 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     `{"appCode":"Euler","environment":"production","metadata":{"orderClass":{"orderClass":"market"},"quote":{"slippageBips":${slippageBips},"smartSlippage":true}},"version":"1.10.0"}`
   const appDataHash = keccak256(toHex(appData))
 
+  const quoteUrl = `https://api.cow.fi/${chainSlug}/api/v1/quote`
   const body = {
     sellToken,
     buyToken,
@@ -321,7 +323,13 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
 
   let response: Response
   try {
-    response = await fetch(`https://api.cow.fi/${chainSlug}/api/v1/quote`, {
+    logger.warn({
+      name: "CoW quote request",
+      url: quoteUrl,
+      payload: body,
+    })
+
+    response = await fetch(quoteUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -331,14 +339,23 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     clearTimeout(timeout)
   }
 
+  const responseText = await response.text().catch(() => "")
+  logger.warn({
+    name: "CoW quote response",
+    url: quoteUrl,
+    status: response.status,
+    statusText: response.statusText,
+    headers: Object.fromEntries(response.headers.entries()),
+    body: responseText,
+  })
+
   if (!response.ok) {
-    const text = await response.text().catch(() => "")
     throw new ApiError(
       StatusCodes.BAD_GATEWAY,
-      `CoW quote failed: ${response.status} ${text}`,
+      `CoW quote failed: ${response.status} ${responseText}`,
     )
   }
-  const res = await response.json()
+  const res = JSON.parse(responseText)
   const { quote, id } = res as {
     quote: { sellAmount: string; buyAmount: string; feeAmount?: string }
     id: string | number
