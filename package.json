@@ -23,7 +23,7 @@
     "doppler:syncprd": "TOKEN=prd ./scripts/dopplerSync.sh",
     "generate-config": "node scripts/generateConfig.js"
   },
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@11.1.2",
   "engines": {
     "node": ">=23"
   },
