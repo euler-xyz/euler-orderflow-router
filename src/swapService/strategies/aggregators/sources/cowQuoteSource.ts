@@ -25,7 +25,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
 }
 
 const COW_METADATA: QuoteSourceMetadata<CoWSupport> = {
-  name: "CoW Swap",
+  name: "CoW Protocol",
   supports: {
     chains: Object.keys(SUPPORTED_CHAINS).map(Number),
     swapAndTransfer: true,
@@ -66,7 +66,7 @@ export class CustomCoWQuoteSource extends AlwaysValidConfigAndContextSource<
   > {
     const origin = (swapParams as QuoteSwapParams).origin
     const receiver = (swapParams as QuoteSwapParams).receiver
-    const appData = `{\"appCode\":\"CoW Swap\",\"environment\":\"production\",\"metadata\":{\"orderClass\":{\"orderClass\":\"market\"},\"quote\":{\"slippageBips\":${Math.floor(slippagePercentage / 100)},\"smartSlippage\":true}},\"version\":\"1.10.0\"}`
+    const appData = `{\"appCode\":\"CoW Protocol\",\"environment\":\"production\",\"metadata\":{\"orderClass\":{\"orderClass\":\"market\"},\"quote\":{\"slippageBips\":${Math.floor(slippagePercentage / 100)},\"smartSlippage\":true}},\"version\":\"1.10.0\"}`
     const appDataHash = keccak256(toHex(appData))
     const queryBody = {
       sellToken,
