@@ -31,6 +31,7 @@ const COW_CLOSE_POSITION_WRAPPERS: Record<number, Address> = {
 }
 
 export const COW_PROVIDER_NAME = "cow"
+export const COW_PROVIDER_DISPLAY_NAME = "CoW Protocol"
 
 const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
@@ -164,7 +165,7 @@ export class StrategyCowSwap {
           tokenOut: swapParams.tokenOut,
           slippage: swapParams.slippage,
           providerData,
-          route: [{ providerName: "CoW Swap" }],
+          route: [{ providerName: COW_PROVIDER_DISPLAY_NAME }],
           swap,
           verify,
         },
