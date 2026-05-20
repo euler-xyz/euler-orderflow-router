@@ -277,9 +277,7 @@ export async function buildCache() {
 
   await Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
-      const url =
-        process.env[`TOKENLIST_URL_${chainId}`] ||
-        tokenlistURL
+      const url = process.env[`TOKENLIST_URL_${chainId}`] || tokenlistURL
       try {
         cache[Number(chainId)] = await fetchTokenList(url, chainId)
       } catch (err) {
