@@ -17,7 +17,7 @@ COPY . .
 
 RUN pnpm run generate-config
 RUN pnpm run build
-RUN npm_config_ignore_scripts=true pnpm prune --prod
+RUN pnpm prune --prod --ignore-scripts
 
 FROM ${NODE_BASE_REPO}:24-distroless AS runtime
 
