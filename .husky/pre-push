@@ -1,12 +1,9 @@
 #!/bin/sh
-export NVM_DIR="$HOME/.nvm/nvm.sh"
-. "$(dirname $NVM_DIR)/nvm.sh"
 
 export NVM_DIR="$HOME/.nvm"
-a=$(nvm ls | grep 'node')
-b=${a#*(-> }
-v=${b%%[)| ]*}
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh" --no-use
+  nvm use --silent >/dev/null 2>&1 || true
+fi
 
-export PATH="$NVM_DIR/versions/node/$v/bin:$PATH"
-
-npm run build
+pnpm run build
