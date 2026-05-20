@@ -220,6 +220,91 @@
   },
   {
     "chainId": 143,
+    "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+    "name": "Wrapped eETH",
+    "symbol": "weETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xA3D68b74bF0528fdD07263c60d6488749044914b",
+    "groups": [
+      "ETH"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xd18B7EC58Cdf4876f6AFebd3Ed1730e4Ce10414b",
+    "name": "Coinbase Wrapped BTC",
+    "symbol": "cbBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xd18B7EC58Cdf4876f6AFebd3Ed1730e4Ce10414b",
+    "groups": [
+      "BTC"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xF7Cf282eC810fDed974F99c0163E792f432892BC",
+    "name": "Midas Hyperithm BTC",
+    "symbol": "mHyperBTC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF7Cf282eC810fDed974F99c0163E792f432892BC",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
+    "name": "Hyperithm Delta Neutral cbBTC Vault",
+    "symbol": "aHyperBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
+    "name": "Kintsu Surge wnSMON / wnWMON",
+    "symbol": "wnSMON-wnWMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
+    "name": "Fastlane Surge wnSHMON / wnWMON",
+    "symbol": "wnSHMON-wnWMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
+    "name": "Mu Digital wnLOAZND/AZND/wnAUSD",
+    "symbol": "wnLOAZND-AZND-wnAUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
+    "name": "RWA Backed Lending by Valos",
+    "symbol": "vUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
+    "name": "Yuzu Prime",
+    "symbol": "yzPrime",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
+    "groups": []
+  },
+  {
+    "chainId": 143,
     "address": "0x4e8aaecCE10ad9394e96fE5f2bd4e587A7B04298",
     "name": "wnUSDT0",
     "symbol": "wnUSDT0",

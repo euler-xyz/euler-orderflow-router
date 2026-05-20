@@ -2199,20 +2199,6 @@
   },
   {
     "chainId": 1,
-    "address": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
-    "name": "Midas Apollo Crypto",
-    "symbol": "mAPOLLO",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
-    "groups": [
-      "USD"
-    ],
-    "metadata": {
-      "provider": "MIDAS"
-    }
-  },
-  {
-    "chainId": 1,
     "address": "0x5b1578E2604B91bd7b24F86F0E5EF6C024bB3a14",
     "name": "PT Kelp High Growth ETH 25JUN2026",
     "symbol": "PT-hgETH-25JUN2026",
@@ -2932,6 +2918,29 @@
   },
   {
     "chainId": 1,
+    "address": "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
+    "name": "Midas Apollo Crypto",
+    "symbol": "mAPOLLO",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05",
+    "groups": [
+      "USD"
+    ],
+    "metadata": {
+      "provider": "MIDAS"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
+    "groups": []
+  },
+  {
+    "chainId": 1,
     "address": "0x8CfEd6A728017A8641a213Bd9E2Ea6183dE275E8",
     "name": "PT Midas Apollo Crypto 20NOV2025",
     "symbol": "PT-mAPOLLO-20NOV2025",
@@ -3575,15 +3584,6 @@
   },
   {
     "chainId": 1,
-    "address": "0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
-    "name": "Pending Settlement USDC",
-    "symbol": "psUSDC",
-    "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/1/0x24AEc81F57C27A3D09a780C6C225DD3E6e87Af42",
-    "groups": []
-  },
-  {
-    "chainId": 1,
     "address": "0xD7cDE27a677CF61103c699099d7266b567930b49",
     "name": "Pending Settlement pACRDX",
     "symbol": "ps-pACRDX",
@@ -3616,6 +3616,173 @@
     "symbol": "liUSD-13w",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/1/0xbd3f9814eB946E617f1d774A6762cDbec0bf087A",
+    "groups": [
+      "USD"
+    ],
+    "metadata": {
+      "provider": "STABLEWATCH"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+    "name": "Liquid staked Ether 2.0",
+    "symbol": "stETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x43E54C2E7b3e294De3A155785F52AB49d87B9922",
+    "name": "Aladdin sdCRV",
+    "symbol": "asdCRV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x43E54C2E7b3e294De3A155785F52AB49d87B9922",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x450cCEAD18b9e310acA11ECCf2b52AefD3dc11d5",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0x450cCEAD18b9e310acA11ECCf2b52AefD3dc11d5",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x53e113aD7318849F5418225A4751D4A42A23D3bB",
+    "name": "Pending Settlement pACRDX",
+    "symbol": "ps-pACRDX",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x53e113aD7318849F5418225A4751D4A42A23D3bB",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xC0c17dD08263C16f6b64E772fB9B723Bf1344DdF",
+    "name": "Precious Metals USD",
+    "symbol": "pmUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xC0c17dD08263C16f6b64E772fB9B723Bf1344DdF",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x99CD4Ec3f88A45940936F469E4bB72A2A701EEB9",
+    "name": "Staked USDS",
+    "symbol": "stUSDS",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x99CD4Ec3f88A45940936F469E4bB72A2A701EEB9",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x88B608C0596F7865d77812db732d4A804beC5639",
+    "name": "Honest Abe",
+    "symbol": "HA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x88B608C0596F7865d77812db732d4A804beC5639",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xbF4e3fbE8B60062A00C7a6B1D97d0d49c2971A19",
+    "name": "USPC Vault",
+    "symbol": "USPC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0xbF4e3fbE8B60062A00C7a6B1D97d0d49c2971A19",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x2b95A1Dcc3D405535f9ed33c219ab38E8d7e0884",
+    "name": "Aladdin cvxCRV",
+    "symbol": "aCRV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x2b95A1Dcc3D405535f9ed33c219ab38E8d7e0884",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x27B5739e22ad9033bcBf192059122d163b60349D",
+    "name": "yCRV yVault",
+    "symbol": "yvyCRV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x27B5739e22ad9033bcBf192059122d163b60349D",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x0844C227b892be5d7c837000C096f64bFc316c2d",
+    "name": "Curve yYB Factory yVault",
+    "symbol": "yvCurve-yYB-f",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x0844C227b892be5d7c837000C096f64bFc316c2d",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x3b09a704669A5d8463FbFF06730895AEEe7A9671",
+    "name": "Moo StakeDao pmUSD-crvUSD",
+    "symbol": "mooStakeDao_pmUSD-crvUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x3b09a704669A5d8463FbFF06730895AEEe7A9671",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x0B1b34677B80F499D2f03Bf335Ed6A2Db9f2a376",
+    "name": "Moo Curve crvUSD-YB",
+    "symbol": "mooCurveCrvUSD-YB",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x0B1b34677B80F499D2f03Bf335Ed6A2Db9f2a376",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6",
+    "name": "Alchemix ETH",
+    "symbol": "alETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9",
+    "name": "Alchemix USD",
+    "symbol": "alUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x0B2456017C5Df2dFc0289740C4b352049892780C",
+    "name": "Wrapped Strategy PP Variable xStock",
+    "symbol": "wSTRCx",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x0B2456017C5Df2dFc0289740C4b352049892780C",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xE7E553Cd128F0011777323A0b44a7b96EA1CB540",
+    "name": "Wrapped SP500 xStock",
+    "symbol": "wSPYx",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0xE7E553Cd128F0011777323A0b44a7b96EA1CB540",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xE31Aa86e21e420d03E52AaA06C349BDC525a664F",
+    "name": "CurveYield crvUSD",
+    "symbol": "cy-crvUSD",
+    "decimals": 20,
+    "logoURI": "https://token-images.euler.finance/1/0xE31Aa86e21e420d03E52AaA06C349BDC525a664F",
     "groups": []
   }
 ]

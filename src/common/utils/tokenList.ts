@@ -38,9 +38,6 @@ const pendingTokenFetches = new Map<
 >()
 const TOKENLIST_FETCH_TIMEOUT_MS =
   Number(process.env.TOKENLIST_FETCH_TIMEOUT_SECONDS || 30) * 1000
-const TOKENLIST_URL_OVERRIDES: Record<string, string> = {
-  "80094": "https://indexer.euler.finance/v1/tokens",
-}
 
 const erc20StringAbi = parseAbi([
   "function name() view returns (string)",
@@ -282,7 +279,6 @@ export async function buildCache() {
     Object.keys(RPC_URLS).map(async (chainId) => {
       const url =
         process.env[`TOKENLIST_URL_${chainId}`] ||
-        TOKENLIST_URL_OVERRIDES[chainId] ||
         tokenlistURL
       try {
         cache[Number(chainId)] = await fetchTokenList(url, chainId)

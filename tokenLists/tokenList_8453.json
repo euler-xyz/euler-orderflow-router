@@ -673,5 +673,106 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0x6985884C4392D348587B19cb9eAAf157F13271cd",
     "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x9c5C365e764829876243d0b289733B9D2b729685",
+    "name": "DeFi Janus Henderson Anemoy S&P500® Fund Token",
+    "symbol": "deSPXA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x9c5C365e764829876243d0b289733B9D2b729685",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    "name": "Virtual Protocol",
+    "symbol": "VIRTUAL",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xBa515EEd0119aCB7CFE8fAb3ACD6b362f3ed5319",
+    "name": "Staked UTY",
+    "symbol": "yUTY",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xBa515EEd0119aCB7CFE8fAb3ACD6b362f3ed5319",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 8453,
+    "address": "0x998078b86Ee9978b596dfe51bcEf26AB16abE15E",
+    "name": "Test Token B",
+    "symbol": "TTB",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x998078b86Ee9978b596dfe51bcEf26AB16abE15E",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xe48402050Fa19F3022cd73082944E07f6e40Bc63",
+    "name": "Test Token A",
+    "symbol": "TTA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xe48402050Fa19F3022cd73082944E07f6e40Bc63",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xf6a3B155CB5bd7d77E26b25177392c884b700B6f",
+    "name": "AlphaGrowth VVV Buyback LP Vault",
+    "symbol": "agVVVWETHlp",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xf6a3B155CB5bd7d77E26b25177392c884b700B6f",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xF4d97F2da56e8c3098f3a8D538DB630A2606a024",
+    "name": "Diem",
+    "symbol": "DIEM",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xF4d97F2da56e8c3098f3a8D538DB630A2606a024",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x49E392de962Fa835B862F59E78611c69E930b5C4",
+    "name": "SINC",
+    "symbol": "SINC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x49E392de962Fa835B862F59E78611c69E930b5C4",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xAf16C06AA672D35d94641F966e82d0eb4dBF8F80",
+    "name": "CurveYield CRV",
+    "symbol": "cyCRV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xAf16C06AA672D35d94641F966e82d0eb4dBF8F80",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93",
+    "name": "Curve.Fi USD Stablecoin",
+    "symbol": "crvUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xD9e587D18A6aA190eba22dFce06fb84a8cdfEFA3",
+    "name": "Test Bond Alpha",
+    "symbol": "TBA",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0xD9e587D18A6aA190eba22dFce06fb84a8cdfEFA3",
+    "groups": []
   }
 ]
