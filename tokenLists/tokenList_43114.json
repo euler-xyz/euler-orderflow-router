@@ -512,5 +512,32 @@
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/43114/0x3e3e3a934412f52cbd287b8B3264d4F862F485e8",
     "groups": []
+  },
+  {
+    "chainId": 43114,
+    "address": "0xb70B5A24bd06a9c6254501076b0DD8B86DD27a28",
+    "name": "Pending Settlement USDC",
+    "symbol": "psUSDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0xb70B5A24bd06a9c6254501076b0DD8B86DD27a28",
+    "groups": []
+  },
+  {
+    "chainId": 43114,
+    "address": "0x62092Ca9ab314f0b9E4409cBD365D400467a077B",
+    "name": "Mock RWA",
+    "symbol": "mRWA",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x62092Ca9ab314f0b9E4409cBD365D400467a077B",
+    "groups": []
+  },
+  {
+    "chainId": 43114,
+    "address": "0x433AF1D58F2B24d05e6F191548fbE1e74af67c3B",
+    "name": "Pending Settlement mRWA",
+    "symbol": "ps-mRWA",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/43114/0x433AF1D58F2B24d05e6F191548fbE1e74af67c3B",
+    "groups": []
   }
 ]

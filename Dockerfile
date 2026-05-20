@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN corepack enable
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY patches ./patches
 
 RUN HUSKY=0 pnpm install --frozen-lockfile
@@ -17,7 +17,7 @@ COPY . .
 
 RUN pnpm run generate-config
 RUN pnpm run build
-RUN npm_config_ignore_scripts=true pnpm prune --prod
+RUN pnpm prune --prod --ignore-scripts
 
 FROM ${NODE_BASE_REPO}:24-distroless AS runtime
 

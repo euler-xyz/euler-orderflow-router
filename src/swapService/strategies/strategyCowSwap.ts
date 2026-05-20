@@ -101,27 +101,27 @@ export class StrategyCowSwap {
       //   - collateralSwap:  both sides are vault shares             -> underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            isCollateralSwap
-              ? await fetchPreviewRedeem(
-                  swapParams.chainId,
-                  swapParams.vaultIn,
-                  sellAmount + feeAmount,
-                )
-              : sellAmount + feeAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
+          isCollateralSwap
+            ? await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.vaultIn,
               sellAmount + feeAmount,
-            ),
+            )
+            : sellAmount + feeAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount + feeAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -137,19 +137,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -281,10 +281,10 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   })
   const cowOrderOwner = isClosePosition
     ? await fetchClosePositionInbox(
-        swapParams.chainId,
-        swapParams.origin,
-        swapParams.accountOut,
-      )
+      swapParams.chainId,
+      swapParams.origin,
+      swapParams.accountOut,
+    )
     : swapParams.origin
   const cowOrderReceiver = isClosePosition
     ? cowOrderOwner
@@ -300,6 +300,7 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     `{"appCode":"Euler","environment":"production","metadata":{"orderClass":{"orderClass":"market"},"quote":{"slippageBips":${slippageBips},"smartSlippage":true}},"version":"1.10.0"}`
   const appDataHash = keccak256(toHex(appData))
 
+  const quoteUrl = `https://api.cow.fi/${chainSlug}/api/v1/quote`
   const body = {
     sellToken,
     buyToken,
@@ -321,7 +322,7 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
 
   let response: Response
   try {
-    response = await fetch(`https://api.cow.fi/${chainSlug}/api/v1/quote`, {
+    response = await fetch(quoteUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -331,14 +332,15 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     clearTimeout(timeout)
   }
 
+  const responseText = await response.text().catch(() => "")
+
   if (!response.ok) {
-    const text = await response.text().catch(() => "")
     throw new ApiError(
       StatusCodes.BAD_GATEWAY,
-      `CoW quote failed: ${response.status} ${text}`,
+      `CoW quote failed: ${response.status} ${responseText}`,
     )
   }
-  const res = await response.json()
+  const res = JSON.parse(responseText)
   const { quote, id } = res as {
     quote: { sellAmount: string; buyAmount: string; feeAmount?: string }
     id: string | number
