@@ -1,4 +1,3 @@
-import { logger } from "@/common/utils/logs"
 import { RPC_URLS } from "@/common/utils/viemClients"
 import { StatusCodes } from "http-status-codes"
 import {
@@ -102,27 +101,27 @@ export class StrategyCowSwap {
       //   - collateralSwap:  both sides are vault shares             -> underlying
       const [amountInUnderlying, amountOutUnderlying] = isExactIn
         ? [
-            isCollateralSwap
-              ? await fetchPreviewRedeem(
-                  swapParams.chainId,
-                  swapParams.vaultIn,
-                  sellAmount + feeAmount,
-                )
-              : sellAmount + feeAmount,
-            await fetchPreviewRedeem(
-              swapParams.chainId,
-              swapParams.receiver,
-              buyAmount,
-            ),
-          ]
-        : [
-            await fetchPreviewRedeem(
+          isCollateralSwap
+            ? await fetchPreviewRedeem(
               swapParams.chainId,
               swapParams.vaultIn,
               sellAmount + feeAmount,
-            ),
+            )
+            : sellAmount + feeAmount,
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.receiver,
             buyAmount,
-          ]
+          ),
+        ]
+        : [
+          await fetchPreviewRedeem(
+            swapParams.chainId,
+            swapParams.vaultIn,
+            sellAmount + feeAmount,
+          ),
+          buyAmount,
+        ]
 
       // For BUY orders the unknown is `sellAmount` (collateral spent) — slip up.
       // For SELL orders the unknown is `buyAmount` (output received) — slip down.
@@ -138,19 +137,19 @@ export class StrategyCowSwap {
       const swap = buildApiResponseSwap(swapParams.from, [])
       const verify = isExactIn
         ? buildApiResponseVerifySkimMin(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            amountOutMin,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          amountOutMin,
+          swapParams.deadline,
+        )
         : buildApiResponseVerifyDebtMax(
-            swapParams.chainId,
-            swapParams.receiver,
-            swapParams.accountOut,
-            swapParams.targetDebt,
-            swapParams.deadline,
-          )
+          swapParams.chainId,
+          swapParams.receiver,
+          swapParams.accountOut,
+          swapParams.targetDebt,
+          swapParams.deadline,
+        )
 
       result.quotes = [
         {
@@ -282,10 +281,10 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   })
   const cowOrderOwner = isClosePosition
     ? await fetchClosePositionInbox(
-        swapParams.chainId,
-        swapParams.origin,
-        swapParams.accountOut,
-      )
+      swapParams.chainId,
+      swapParams.origin,
+      swapParams.accountOut,
+    )
     : swapParams.origin
   const cowOrderReceiver = isClosePosition
     ? cowOrderOwner
@@ -323,12 +322,6 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
 
   let response: Response
   try {
-    logger.warn({
-      name: "CoW quote request",
-      url: quoteUrl,
-      payload: body,
-    })
-
     response = await fetch(quoteUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -340,14 +333,6 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
   }
 
   const responseText = await response.text().catch(() => "")
-  logger.warn({
-    name: "CoW quote response",
-    url: quoteUrl,
-    status: response.status,
-    statusText: response.statusText,
-    headers: Object.fromEntries(response.headers.entries()),
-    body: responseText,
-  })
 
   if (!response.ok) {
     throw new ApiError(
