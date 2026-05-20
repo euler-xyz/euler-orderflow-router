@@ -23,7 +23,10 @@
     "doppler:syncprd": "TOKEN=prd ./scripts/dopplerSync.sh",
     "generate-config": "node scripts/generateConfig.js"
   },
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=23"
+  },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "7.2.0",
     "@balmy/sdk": "0.9.0",
