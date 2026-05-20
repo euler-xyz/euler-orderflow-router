@@ -30,8 +30,8 @@ importers:
         specifier: 4.9.2
         version: 4.9.2(hardhat@2.28.6(typescript@5.9.3))(jsbi@3.2.5)
       '@uniswap/v3-sdk':
-        specifier: 3.19.0
-        version: 3.19.0(hardhat@2.28.6(typescript@5.9.3))
+        specifier: 3.30.0
+        version: 3.30.0(hardhat@2.28.6(typescript@5.9.3))
       cors:
         specifier: 2.8.5
         version: 2.8.5
@@ -1322,10 +1322,6 @@ packages:
 
   '@uniswap/v3-periphery@1.4.4':
     resolution: {integrity: sha512-S4+m+wh8HbWSO3DKk4LwUCPZJTpCugIsHrWR86m/OrUyvSqGDTXKFfc2sMuGXCZrD1ZqO3rhQsKgdWg3Hbb2Kw==}
-    engines: {node: '>=10'}
-
-  '@uniswap/v3-sdk@3.19.0':
-    resolution: {integrity: sha512-HbX3YjHJRXI2LFCxLUWgPfRZX6N9a+cELJ3Dus5vYDPYYjFOwJr16c2esDsdHUe3TG2oOeA/u2wv9TDT2GSBIw==}
     engines: {node: '>=10'}
 
   '@uniswap/v3-sdk@3.30.0':
@@ -3788,7 +3784,7 @@ snapshots:
 
   '@ethersproject/abi@5.7.0':
     dependencies:
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/constants': 5.7.0
@@ -3910,10 +3906,10 @@ snapshots:
 
   '@ethersproject/contracts@5.7.0':
     dependencies:
-      '@ethersproject/abi': 5.7.0
+      '@ethersproject/abi': 5.8.0
       '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/constants': 5.7.0
@@ -3936,8 +3932,8 @@ snapshots:
 
   '@ethersproject/hash@5.7.0':
     dependencies:
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/base64': 5.7.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
@@ -3960,7 +3956,7 @@ snapshots:
 
   '@ethersproject/hdnode@5.7.0':
     dependencies:
-      '@ethersproject/abstract-signer': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
       '@ethersproject/basex': 5.7.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
@@ -3975,8 +3971,8 @@ snapshots:
 
   '@ethersproject/json-wallets@5.7.0':
     dependencies:
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/hdnode': 5.7.0
       '@ethersproject/keccak256': 5.7.0
@@ -4027,8 +4023,8 @@ snapshots:
   '@ethersproject/providers@5.7.2':
     dependencies:
       '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/base64': 5.7.0
       '@ethersproject/basex': 5.7.0
       '@ethersproject/bignumber': 5.7.0
@@ -4158,7 +4154,7 @@ snapshots:
 
   '@ethersproject/transactions@5.7.0':
     dependencies:
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/constants': 5.7.0
@@ -4189,8 +4185,8 @@ snapshots:
   '@ethersproject/wallet@5.7.0':
     dependencies:
       '@ethersproject/abstract-provider': 5.7.0
-      '@ethersproject/abstract-signer': 5.7.0
-      '@ethersproject/address': 5.7.0
+      '@ethersproject/abstract-signer': 5.8.0
+      '@ethersproject/address': 5.8.0
       '@ethersproject/bignumber': 5.7.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/hash': 5.7.0
@@ -4628,7 +4624,7 @@ snapshots:
       '@uniswap/sdk-core': 6.1.1
       '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(typescript@5.9.3))
       '@uniswap/v2-sdk': 4.20.0
-      '@uniswap/v3-sdk': 3.19.0(hardhat@2.28.6(typescript@5.9.3))
+      '@uniswap/v3-sdk': 3.30.0(hardhat@2.28.6(typescript@5.9.3))
       '@uniswap/v4-sdk': 1.30.0(hardhat@2.28.6(typescript@5.9.3))
     transitivePeerDependencies:
       - bufferutil
@@ -4703,7 +4699,7 @@ snapshots:
       '@uniswap/universal-router': 1.6.0
       '@uniswap/universal-router-sdk': 4.35.0(hardhat@2.28.6(typescript@5.9.3))
       '@uniswap/v2-sdk': 4.20.0
-      '@uniswap/v3-sdk': 3.19.0(hardhat@2.28.6(typescript@5.9.3))
+      '@uniswap/v3-sdk': 3.30.0(hardhat@2.28.6(typescript@5.9.3))
       '@uniswap/v4-sdk': 1.30.0(hardhat@2.28.6(typescript@5.9.3))
       async-retry: 1.3.3
       await-timeout: 1.1.1
@@ -4799,19 +4795,6 @@ snapshots:
       '@uniswap/v2-core': 1.0.1
       '@uniswap/v3-core': 1.0.1
       base64-sol: 1.0.1
-
-  '@uniswap/v3-sdk@3.19.0(hardhat@2.28.6(typescript@5.9.3))':
-    dependencies:
-      '@ethersproject/abi': 5.8.0
-      '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 6.1.1
-      '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(typescript@5.9.3))
-      '@uniswap/v3-periphery': 1.4.4
-      '@uniswap/v3-staker': 1.0.0
-      tiny-invariant: 1.3.3
-      tiny-warning: 1.0.3
-    transitivePeerDependencies:
-      - hardhat
 
   '@uniswap/v3-sdk@3.30.0(hardhat@2.28.6(typescript@5.9.3))':
     dependencies:
