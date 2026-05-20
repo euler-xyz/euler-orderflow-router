@@ -2,7 +2,7 @@ diff --git a/dist/chains.js b/dist/chains.js
 index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1013f70fe 100644
 --- a/dist/chains.js
 +++ b/dist/chains.js
-@@ -566,6 +566,60 @@ exports.Chains = {
+@@ -566,6 +566,69 @@ exports.Chains = {
          explorer: 'https://goerli.basescan.org/',
          testnet: true,
      },
@@ -41,6 +41,15 @@ index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1
 +        wToken: '0x4200000000000000000000000000000000000006',
 +        publicRPCs: ['https://rpc.ankr.com/swell'],
 +        explorer: 'https://explorer.swellnetwork.io/',
++    },
++    HYPEREVM: {
++        chainId: 999,
++        name: 'HyperEVM',
++        ids: ['hyperevm', 'hyperliquid'],
++        nativeCurrency: { symbol: 'HYPE', name: 'HYPE' },
++        wToken: '0x5555555555555555555555555555555555555555',
++        publicRPCs: ['https://rpc.hyperliquid.xyz/evm'],
++        explorer: 'https://hyperevmscan.io/',
 +    },
 +    PLASMA: {
 +        chainId: 9745,
