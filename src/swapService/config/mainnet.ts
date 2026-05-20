@@ -2,6 +2,7 @@ import { type ChainRoutingConfig, SwapperMode } from "../interface"
 import {
   StrategyAggregators,
   StrategyCombinedUniswap,
+  StrategyCowSwap,
   StrategyCurveLPNG,
   StrategyERC4626Wrapper,
   StrategyIdleCDOTranche,
@@ -41,6 +42,11 @@ const MAPOLLO_MAINNET = "0x7CF9DEC92ca9FD46f8d86e7798B72624Bc116C05"
 
 const mainnetRoutingConfig: ChainRoutingConfig = [
   ...globalRoutingWrappers,
+  // Only fires when the request carries `provider=cow`. Returns a stub swap
+  // payload; the frontend builds the CoW order itself against the EVC wrapper.
+  {
+    strategy: StrategyCowSwap.name(),
+  },
   // SPECIAL CASE TOKENS
   {
     strategy: StrategyIdleCDOTranche.name(),

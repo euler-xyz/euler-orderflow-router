@@ -18,6 +18,7 @@ export interface SwapApiRequest {
   deadline: number // timestamp in seconds
   dustAccount?: Address // dust will be deposited for this account or to `accountOut` if not provided
   routingOverride?: RoutingConfig
+  providerExtraData?: SwapApiProviderExtraData // provider-specific request data
 }
 
 export interface SwapApiResponse {
@@ -36,7 +37,15 @@ export interface SwapApiResponse {
   verify: SwapApiResponseVerify
   route: SwapRouteItem[]
   estimatedGas?: string
+  providerData?: SwapApiResponseProviderData
   transferOutputToReceiver?: boolean
+}
+
+export interface SwapApiResponseProviderData {
+  quoteId?: string
+  sellAmount?: string
+  feeAmount?: string
+  buyAmount?: string
 }
 
 export interface SwapApiResponseSwap {
@@ -105,6 +114,20 @@ export enum SwapperMode {
   EXACT_OUT = 1,
   // 2 - exact output swap and repay, targeting a debt amount of an account
   TARGET_DEBT = 2,
+}
+
+export const cowWrappers = [
+  "openPosition",
+  "closePosition",
+  "collateralSwap",
+] as const
+
+export type CowWrapper = (typeof cowWrappers)[number]
+
+export interface SwapApiProviderExtraData {
+  type: CowWrapper
+  swapCollateralSharesAmountIn?: bigint
+  appData?: string
 }
 
 export type ChainRoutingConfig = RoutingItem[]

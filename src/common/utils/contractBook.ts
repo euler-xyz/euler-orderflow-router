@@ -1,5 +1,6 @@
 import type { Address } from "viem"
 import * as chains from "viem/chains"
+import { logWarn } from "./logs"
 
 type Deployment = {
   chainId: number
@@ -106,7 +107,7 @@ export async function refreshContractBookAddresses() {
 export function initContractBookCache() {
   setInterval(() => {
     void refreshContractBookAddresses().catch((error) => {
-      console.warn("Error refreshing contractBook addresses", error)
+      logWarn({ name: "Error refreshing contractBook addresses", error })
     })
   }, CONTRACT_BOOK_CACHE_TIMEOUT_MS)
 }

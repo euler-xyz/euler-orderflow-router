@@ -1,6 +1,7 @@
 import { StrategyAggregators } from "./strategyAggregators"
 import { StrategyCombinedUniswap } from "./strategyCombinedUniswap"
 import { StrategyConnect2 } from "./strategyConnect2"
+import { StrategyCowSwap } from "./strategyCowSwap"
 import { StrategyCurveLPNG } from "./strategyCurveLPNG"
 import { StrategyERC4626Wrapper } from "./strategyERC4626Wrapper"
 import { StrategyElixir } from "./strategyElixir"
@@ -14,6 +15,7 @@ import { StrategyStrata } from "./strategyStrata"
 
 export {
   StrategyCombinedUniswap,
+  StrategyCowSwap,
   StrategyMidas,
   StrategyRepayWrapper,
   StrategyAggregators,
@@ -31,6 +33,7 @@ export {
 export const strategies = {
   [StrategyMidas.name()]: StrategyMidas,
   [StrategyCombinedUniswap.name()]: StrategyCombinedUniswap,
+  [StrategyCowSwap.name()]: StrategyCowSwap,
   [StrategyRepayWrapper.name()]: StrategyRepayWrapper,
   [StrategyAggregators.name()]: StrategyAggregators,
   [StrategyERC4626Wrapper.name()]: StrategyERC4626Wrapper,

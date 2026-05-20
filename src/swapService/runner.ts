@@ -1,5 +1,4 @@
-import { logProd } from "@/common/utils/logs"
-import { log } from "@uniswap/smart-order-router"
+import { logDev, logProd } from "@/common/utils/logs"
 import { StatusCodes } from "http-status-codes"
 import { isHex } from "viem"
 import { getRoutingConfig } from "./config"
@@ -55,7 +54,7 @@ export async function runPipeline(
     if (result.quotes) break
   }
 
-  console.log(allResults)
+  logDev({ name: "Pipeline results", results: allResults })
 
   const finalResult = allResults.at(-1)
   if (!finalResult)
@@ -77,7 +76,7 @@ export async function runPipeline(
   }
 
   if (finalResult.quotes.length) {
-    console.log({
+    logDev({
       name: "Best quote",
       amountIn: finalResult.quotes[0].amountIn,
       amountInMax: finalResult.quotes[0].amountInMax,
@@ -86,13 +85,14 @@ export async function runPipeline(
       route: finalResult.quotes[0].route,
     })
   } else {
-    console.log("Empty results []")
+    logDev("Empty results []")
   }
-  console.log(
-    finalResult.quotes
+  logDev({
+    name: "Quote routes",
+    routes: finalResult.quotes
       .map((q) => q.route.map((r) => r.providerName).join(" "))
       .join(", "),
-  )
+  })
 
   // console.log('finalResult.quotes: ', JSON.stringify(finalResult.quotes, null, 2));
 

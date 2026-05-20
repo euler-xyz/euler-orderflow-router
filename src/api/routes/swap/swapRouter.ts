@@ -8,7 +8,13 @@ import {
   handleServiceResponse,
   validateRequest,
 } from "@/common/utils/httpHandlers"
-import { log, logProd, logRouteTime } from "@/common/utils/logs"
+import {
+  log,
+  logError,
+  logProd,
+  logRouteTime,
+  logWarn,
+} from "@/common/utils/logs"
 import { findSwaps, reflectProviders } from "@/swapService/runner"
 import type { SwapParams } from "@/swapService/types"
 import {
@@ -124,7 +130,6 @@ swapRouter.get(
         res,
       )
     } catch (error) {
-      console.log("error: ", error)
       return handleServiceResponse(createFailureResponse(req, error), res)
     } finally {
       log("===== SWAPS END =====")
@@ -133,14 +138,23 @@ swapRouter.get(
 )
 
 function createFailureResponse(req: Request, error: any) {
-  logProd({
+  const errorData = error && typeof error === "object" ? error : {}
+  const statusCode = errorData.statusCode ?? StatusCodes.INTERNAL_SERVER_ERROR
+  const logData = {
     name: "[ERROR]",
-    statusCode: error.statusCode,
-    message: error.message,
-    errorMessage: error.errorMessage,
-    data: error.data,
+    statusCode,
+    message: errorData.message ?? `${error}`,
+    errorMessage: errorData.errorMessage,
+    data: errorData.data,
     url: req.url,
-  })
+  }
+
+  if (statusCode >= StatusCodes.INTERNAL_SERVER_ERROR) {
+    logError(logData)
+  } else {
+    logWarn(logData)
+  }
+
   if (error instanceof ApiError) {
     return ServiceResponse.failure(error.message, error.statusCode, error.data)
   }
