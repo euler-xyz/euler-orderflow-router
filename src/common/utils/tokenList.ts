@@ -36,6 +36,11 @@ const pendingTokenFetches = new Map<
   string,
   Promise<TokenListItem | undefined>
 >()
+const TOKENLIST_FETCH_TIMEOUT_MS =
+  Number(process.env.TOKENLIST_FETCH_TIMEOUT_SECONDS || 30) * 1000
+const TOKENLIST_URL_OVERRIDES: Record<string, string> = {
+  "80094": "https://indexer.euler.finance/v1/tokens",
+}
 
 const erc20StringAbi = parseAbi([
   "function name() view returns (string)",
@@ -80,7 +85,7 @@ const mergeCustomTokens = () => {
   }
 }
 
-const loadTokenlistsFromFiles = () => {
+const loadTokenlistsFromFiles = ({ overwrite = true } = {}) => {
   const dir = getTokenListsDir()
   const files = fs
     .readdirSync(dir)
@@ -89,6 +94,7 @@ const loadTokenlistsFromFiles = () => {
     const match = file.match(/^tokenList_(\d+)\.json$/)
     if (!match) throw new Error("Invalid tokenlist file")
     const chainId = Number(match[1])
+    if (!overwrite && cache[chainId]) continue
     cache[chainId] = JSON.parse(
       fs.readFileSync(`${dir}/${file}`).toString(),
     ) as TokenListItem[]
@@ -103,6 +109,46 @@ const writeTokenListsToFiles = () => {
       JSON.stringify(tokenlist, null, 2),
     )
   }
+}
+
+const normalizeTokenListResponse = (response: unknown): TokenListItem[] => {
+  if (Array.isArray(response)) return response as TokenListItem[]
+
+  if (response && typeof response === "object") {
+    const typedResponse = response as {
+      data?: unknown
+      error?: unknown
+      success?: boolean | string
+    }
+
+    if (typedResponse.success === false || typedResponse.success === "false") {
+      throw new Error(JSON.stringify(typedResponse.error ?? typedResponse))
+    }
+
+    if (Array.isArray(typedResponse.data)) {
+      return typedResponse.data as TokenListItem[]
+    }
+  }
+
+  throw new Error("Invalid tokenlist response format")
+}
+
+async function fetchTokenList(url: string, chainId: string) {
+  const response = await fetch(`${url}?chainId=${chainId}`, {
+    signal: AbortSignal.timeout(TOKENLIST_FETCH_TIMEOUT_MS),
+  })
+
+  if (!response.ok) {
+    throw new Error(`${response.status} ${response.statusText}`)
+  }
+
+  const tokenlist = normalizeTokenListResponse(await response.json())
+  for (const token of tokenlist) {
+    if (token.logoURI) {
+      token.logoURI = token.logoURI.replace(/([?&])v=[^&]*/g, "")
+    }
+  }
+  return tokenlist
 }
 
 export function findTokenInCache(chainId: number, tokenAddress: Address) {
@@ -230,30 +276,24 @@ export async function buildCache() {
     return cache
   }
 
+  loadTokenlistsFromFiles({ overwrite: false })
+
   await Promise.all(
     Object.keys(RPC_URLS).map(async (chainId) => {
-      let url = tokenlistURL
-      if (chainId === "80094") {
-        url = "https://indexer-main-erpc.euler.finance/v1/tokens"
+      const url =
+        process.env[`TOKENLIST_URL_${chainId}`] ||
+        TOKENLIST_URL_OVERRIDES[chainId] ||
+        tokenlistURL
+      try {
+        cache[Number(chainId)] = await fetchTokenList(url, chainId)
+      } catch (err) {
+        logWarn({
+          name: `Error fetching tokenlist for chain ${chainId}`,
+          error: err,
+        })
       }
-      const response = await fetch(`${url}?chainId=${chainId}`)
-
-      if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`)
-      }
-      const res = await response.json()
-      if (res.success === "false") {
-        throw new Error(JSON.stringify(res))
-      }
-      for (const t of res) {
-        t.logoURI = t.logoURI.replace(/([?&])v=[^&]*/g, "")
-      }
-      cache[Number(chainId)] = res as TokenListItem[]
     }),
-  ).catch((err) => {
-    logWarn({ name: "Error fetching tokenlists", error: err })
-    loadTokenlistsFromFiles()
-  })
+  )
   mergeCustomTokens()
 
   try {
