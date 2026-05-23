@@ -71,7 +71,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.6",
     "@types/qs": "^6.9.18",
-    "@types/supertest": "^6.0.2",
+    "@types/supertest": "^7.2.0",
     "@types/swagger-ui-express": "^4.1.7",
     "euler-v2-sdk": "0.0.1-alpha",
     "husky": "^9.1.7",
