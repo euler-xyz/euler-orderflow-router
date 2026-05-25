@@ -310,7 +310,7 @@ export function addInOutDeposits(
   response: SwapApiResponse,
 ): SwapApiResponse {
   const unusedInputItem = swapParams.unusedInputReceiver
-    ? encodeTransferMulticallItem(
+    ? encodeSweepMulticallItem(
         swapParams.tokenIn.address,
         1n,
         swapParams.unusedInputReceiver,
@@ -617,7 +617,7 @@ export function encodeRepayAndSweep(swapParams: SwapParams) {
 
   if (swapParams.unusedInputReceiver) {
     multicallItems.push(
-      encodeTransferMulticallItem(
+      encodeSweepMulticallItem(
         swapParams.tokenIn.address,
         1n,
         swapParams.unusedInputReceiver,
