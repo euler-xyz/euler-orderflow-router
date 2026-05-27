@@ -774,5 +774,25 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/8453/0xD9e587D18A6aA190eba22dFce06fb84a8cdfEFA3",
     "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x0d2D82bBbda0f403D28A86A8e039F2CBbC28f857",
+    "name": "Wrapped UTXO Asset",
+    "symbol": "wUTXO",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/8453/0x0d2D82bBbda0f403D28A86A8e039F2CBbC28f857",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/8453/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+    "groups": [
+      "BTC"
+    ]
   }
 ]
