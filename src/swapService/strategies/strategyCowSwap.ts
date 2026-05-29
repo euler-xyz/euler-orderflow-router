@@ -13,6 +13,7 @@ import { SwapperMode } from "../interface"
 import type { StrategyResult, SwapParams } from "../types"
 import {
   ApiError,
+  adjustForInterest,
   applySlippage,
   buildApiResponseSwap,
   buildApiResponseVerifyDebtMax,
@@ -35,7 +36,6 @@ export const COW_PROVIDER_DISPLAY_NAME = "CoW Protocol"
 
 const COW_QUOTE_TIMEOUT_MS = 15_000
 const COW_ORDER_VALID_FOR_SECONDS = 1800
-const COW_CLOSE_POSITION_FULL_REPAY_BUY_AMOUNT_BUFFER_DENOMINATOR = 100_000n
 const erc4626AssetAbi = parseAbi(["function asset() view returns (address)"])
 const closePositionInboxAbi = parseAbi([
   "function getInboxAddressAndDomainSeparator(address owner, address subaccount) view returns (address, bytes32)",
@@ -381,19 +381,10 @@ function getCowQuoteAmount(
   }
 
   if (isFullClosePositionRepay) {
-    return padClosePositionFullRepayBuyAmount(
-      swapParams.currentDebt || swapParams.amount,
-    )
+    return adjustForInterest(swapParams.currentDebt || swapParams.amount)
   }
 
   return swapParams.amount
-}
-
-function padClosePositionFullRepayBuyAmount(amount: bigint): bigint {
-  return (
-    amount +
-    amount / COW_CLOSE_POSITION_FULL_REPAY_BUY_AMOUNT_BUFFER_DENOMINATOR
-  )
 }
 
 async function fetchVaultAsset(

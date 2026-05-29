@@ -3784,5 +3784,19 @@
     "decimals": 20,
     "logoURI": "https://token-images.euler.finance/1/0xE31Aa86e21e420d03E52AaA06C349BDC525a664F",
     "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x4ad88F62310D377c60F6B0c25Bde8011f315EeA7",
+    "name": "PT Strategy PP Variable xStock 27AUG2026",
+    "symbol": "PT-STRCx-27AUG2026",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x4ad88F62310D377c60F6B0c25Bde8011f315EeA7",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x84183d35960914bad14Fa272372861664df329E2"
+    }
   }
 ]
