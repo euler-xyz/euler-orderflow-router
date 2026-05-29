@@ -693,5 +693,45 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/42161/0x864F9c6f50dC5Bd244F5002F1B0873Cd80e2539D",
     "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    "name": "Arbitrum tBTC v2",
+    "symbol": "tBTC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    "groups": [
+      "BTC"
+    ]
+  },
+  {
+    "chainId": 42161,
+    "address": "0x75289388d50364c3013583d97bd70cED0e183e32",
+    "name": "Aladdin sdCRV",
+    "symbol": "asdCRV",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x75289388d50364c3013583d97bd70cED0e183e32",
+    "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0x498Bf2B1e120FeD3ad3D42EA2165E9b73f99C1e5",
+    "name": "Curve.Fi USD Stablecoin",
+    "symbol": "crvUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x498Bf2B1e120FeD3ad3D42EA2165E9b73f99C1e5",
+    "groups": []
+  },
+  {
+    "chainId": 42161,
+    "address": "0x55380fe7A1910dFf29A47B622057ab4139DA42C5",
+    "name": "Leveraged ETH",
+    "symbol": "xETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/42161/0x55380fe7A1910dFf29A47B622057ab4139DA42C5",
+    "groups": [
+      "ETH"
+    ]
   }
 ]
