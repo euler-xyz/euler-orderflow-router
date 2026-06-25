@@ -794,5 +794,72 @@
     "groups": [
       "BTC"
     ]
+  },
+  {
+    "chainId": 8453,
+    "address": "0x34a2798D47b238A7CbA9D87D49618DEE6C4D999F",
+    "name": "Staked USN",
+    "symbol": "sUSN",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/8453/0x34a2798D47b238A7CbA9D87D49618DEE6C4D999F",
+    "groups": [
+      "USD"
+    ]
+  },
+  {
+    "chainId": 8453,
+    "address": "0xcb585250f852C6c6bf90434AB21A00f02833a4af",
+    "name": "Coinbase Wrapped XRP",
+    "symbol": "cbXRP",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/8453/0xcb585250f852C6c6bf90434AB21A00f02833a4af",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xcbADA732173e39521CDBE8bf59a6Dc85A9fc7b8c",
+    "name": "Coinbase Wrapped ADA",
+    "symbol": "cbADA",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/8453/0xcbADA732173e39521CDBE8bf59a6Dc85A9fc7b8c",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0xcb17C9Db87B595717C857a08468793f5bAb6445F",
+    "name": "Coinbase Wrapped LTC",
+    "symbol": "cbLTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/8453/0xcb17C9Db87B595717C857a08468793f5bAb6445F",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x9C8cd8d3961F445D653713dE65C6578bE11668e7",
+    "name": "SINC",
+    "symbol": "SINC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/8453/0x9C8cd8d3961F445D653713dE65C6578bE11668e7",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x311935Cd80B76769bF2ecC9D8Ab7635b2139cf82",
+    "name": "Solana",
+    "symbol": "SOL",
+    "decimals": 9,
+    "logoURI": "https://token-images.euler.finance/8453/0x311935Cd80B76769bF2ecC9D8Ab7635b2139cf82",
+    "groups": []
+  },
+  {
+    "chainId": 8453,
+    "address": "0x1ceA84203673764244E05693e42E6Ace62bE9BA5",
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/8453/0x1ceA84203673764244E05693e42E6Ace62bE9BA5",
+    "groups": [
+      "BTC"
+    ]
   }
 ]
