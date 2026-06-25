@@ -552,5 +552,14 @@
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/56/0x992879Cd8ce0c312d98648875B5A8D6D042cbF34",
     "groups": []
+  },
+  {
+    "chainId": 56,
+    "address": "0xd0a58BC9D88D3FF48C0294Cb7e45937d0E41A928",
+    "name": "SpaceX (Ondo Tokenized)",
+    "symbol": "SPCXon",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/56/0xd0a58BC9D88D3FF48C0294Cb7e45937d0E41A928",
+    "groups": []
   }
 ]

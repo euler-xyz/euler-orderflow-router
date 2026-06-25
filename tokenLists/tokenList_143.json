@@ -305,6 +305,52 @@
   },
   {
     "chainId": 143,
+    "address": "0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
+    "name": "K3 x Galaxy Lending",
+    "symbol": "gAUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
+    "name": "WMoo Balancer Monad wnUSDT0-wnAUSD-wnUSDC",
+    "symbol": "wmooBalancerMonadwnUSDT0-wnAUSD-wnUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
+    "groups": []
+  },
+  {
+    "chainId": 143,
+    "address": "0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
+    "name": "PT AUSD 8OCT2026",
+    "symbol": "PT-AUSD-8OCT2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x6f99CF00ee7290aE78a072Bb6910eF72D1129fE7"
+    }
+  },
+  {
+    "chainId": 143,
+    "address": "0xDaf216939826AcABA0C2312F7E30A890213845CD",
+    "name": "PT earnAUSD 8OCT2026",
+    "symbol": "PT-earnAUSD-8OCT2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xDaf216939826AcABA0C2312F7E30A890213845CD",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x475B98c83AEdBfdd0a0aBaA930ec8cb501aC93B1"
+    }
+  },
+  {
+    "chainId": 143,
     "address": "0x4e8aaecCE10ad9394e96fE5f2bd4e587A7B04298",
     "name": "wnUSDT0",
     "symbol": "wnUSDT0",

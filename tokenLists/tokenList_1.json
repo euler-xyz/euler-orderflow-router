@@ -3798,5 +3798,46 @@
       "isPendlePT": true,
       "pendleMarket": "0x84183d35960914bad14Fa272372861664df329E2"
     }
+  },
+  {
+    "chainId": 1,
+    "address": "0x6a547b25534234bb79CE6961a23Db13DE154b6F4",
+    "name": "Tenbin Gold",
+    "symbol": "tGLD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x6a547b25534234bb79CE6961a23Db13DE154b6F4",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0xeCfaFdC7741323a945A163ed068B5a3C43483957",
+    "name": "PT reUSD 10DEC2026",
+    "symbol": "PT-reUSD-10DEC2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/1/0xeCfaFdC7741323a945A163ed068B5a3C43483957",
+    "groups": [],
+    "metadata": {
+      "provider": "PENDLE",
+      "isPendlePT": true,
+      "pendleMarket": "0x13285bCbc27F92b47B4EDB99D744C07B48C977c0"
+    }
+  },
+  {
+    "chainId": 1,
+    "address": "0x1204371AC0e5176f4B8c5B2F16C2Bec551b6FC1a",
+    "name": "Tokenized BNY High-yield Bond Fund",
+    "symbol": "HYBOND",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/1/0x1204371AC0e5176f4B8c5B2F16C2Bec551b6FC1a",
+    "groups": []
+  },
+  {
+    "chainId": 1,
+    "address": "0x497C761D268cBC2DB6f40CdB21B9AC019c37917D",
+    "name": "BTCY Vault",
+    "symbol": "BTCY",
+    "decimals": 14,
+    "logoURI": "https://token-images.euler.finance/1/0x497C761D268cBC2DB6f40CdB21B9AC019c37917D",
+    "groups": []
   }
 ]
