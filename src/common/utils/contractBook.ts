@@ -1,4 +1,4 @@
-import type { Address } from "viem"
+import { type Address, getAddress } from "viem"
 import * as chains from "viem/chains"
 import { logWarn } from "./logs"
 
@@ -62,6 +62,49 @@ const contractBook: any = {
   },
 }
 
+const SWAP_VERIFIER_ENV_PREFIX = "EULER_SWAP_VERIFIER_ADDRESS_"
+
+// Per-chain SwapVerifier overrides from env, e.g.
+// EULER_SWAP_VERIFIER_ADDRESS_8453=0x... . Applied AFTER
+// refreshContractBookAddresses so a custom SwapVerifier deployment is never
+// reverted to the canonical EulerChains.json address. This mirrors the override
+// the Lite app applies to its /api/euler-chains payload, keeping the quote's
+// verify.verifierAddress in sync with the verifier the Lite SDK validates
+// against (a mismatch makes the SDK reject every quote).
+function readSwapVerifierEnvOverrides(
+  env: NodeJS.ProcessEnv = process.env,
+): Record<number, Address> {
+  const overrides: Record<number, Address> = {}
+  for (const [key, rawValue] of Object.entries(env)) {
+    if (!key.startsWith(SWAP_VERIFIER_ENV_PREFIX)) continue
+    const value = rawValue?.trim()
+    if (!value) continue
+    const chainId = Number(key.slice(SWAP_VERIFIER_ENV_PREFIX.length))
+    if (!Number.isSafeInteger(chainId) || chainId <= 0) {
+      logWarn({ name: "Invalid SwapVerifier override env key", key })
+      continue
+    }
+    try {
+      overrides[chainId] = getAddress(value)
+    } catch {
+      logWarn({ name: "Invalid SwapVerifier override address", key, value })
+    }
+  }
+  return overrides
+}
+
+function applySwapVerifierEnvOverrides(env: NodeJS.ProcessEnv = process.env) {
+  for (const [chainId, address] of Object.entries(
+    readSwapVerifierEnvOverrides(env),
+  )) {
+    contractBook.swapVerifier.address[Number(chainId)] = address
+  }
+}
+
+// Apply once at module load so the override holds even before the first
+// deployment refresh resolves.
+applySwapVerifierEnvOverrides()
+
 let refreshPromise: Promise<void> | null = null
 
 async function queryDeployments(url: string): Promise<Deployment[]> {
@@ -99,6 +142,10 @@ export async function refreshContractBookAddresses() {
           peripheryAddrs.swapVerifier
       }
     }
+
+    // Re-assert env overrides last so a custom SwapVerifier is never reverted
+    // to the canonical deployment address fetched above.
+    applySwapVerifierEnvOverrides()
   })().finally(() => {
     refreshPromise = null
   })
