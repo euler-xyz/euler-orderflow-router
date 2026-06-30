@@ -42,8 +42,8 @@ const contractBook: any = {
   swapVerifier: {
     abi: require("./abi/SwapVerifier.json"),
     address: {
-      [chains.mainnet.id]: "0x312eE8B4a2df952E3c52Bb155c44F54f81f92d1d",
-      [chains.base.id]: "0x67c9C729258fcF4c84C6c43950581B73a187f00B",
+      [chains.mainnet.id]: "0x786c900d7D348662703C38B46f24c1cda2C582AB",
+      [chains.base.id]: "0xF8B2d2BA412E24235eAaDa8d3050202898455455",
       [chains.polygon.id]: "0xF86a955d82f83E2412A9902Cc3Fd15b750cFD992",
       [chains.avalanche.id]: "0x768B74A19115316c1A782fFa335FdfBb66278174",
       [chains.bsc.id]: "0xc0126DE6e1615479b357e2Fef6d423FB2FBEe502",
