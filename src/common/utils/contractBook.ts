@@ -1,4 +1,4 @@
-import type { Address } from "viem"
+import { type Address, getAddress } from "viem"
 import * as chains from "viem/chains"
 import { logWarn } from "./logs"
 
@@ -42,8 +42,8 @@ const contractBook: any = {
   swapVerifier: {
     abi: require("./abi/SwapVerifier.json"),
     address: {
-      [chains.mainnet.id]: "0x786c900d7D348662703C38B46f24c1cda2C582AB",
-      [chains.base.id]: "0xF8B2d2BA412E24235eAaDa8d3050202898455455",
+      [chains.mainnet.id]: "0x312eE8B4a2df952E3c52Bb155c44F54f81f92d1d",
+      [chains.base.id]: "0x67c9C729258fcF4c84C6c43950581B73a187f00B",
       [chains.polygon.id]: "0xF86a955d82f83E2412A9902Cc3Fd15b750cFD992",
       [chains.avalanche.id]: "0x768B74A19115316c1A782fFa335FdfBb66278174",
       [chains.bsc.id]: "0xc0126DE6e1615479b357e2Fef6d423FB2FBEe502",
@@ -61,6 +61,49 @@ const contractBook: any = {
     },
   },
 }
+
+const SWAP_VERIFIER_ENV_PREFIX = "EULER_SWAP_VERIFIER_ADDRESS_"
+
+// Per-chain SwapVerifier overrides from env, e.g.
+// EULER_SWAP_VERIFIER_ADDRESS_8453=0x... . Applied AFTER
+// refreshContractBookAddresses so a custom SwapVerifier deployment is never
+// reverted to the canonical EulerChains.json address. This mirrors the override
+// the Lite app applies to its /api/euler-chains payload, keeping the quote's
+// verify.verifierAddress in sync with the verifier the Lite SDK validates
+// against (a mismatch makes the SDK reject every quote).
+function readSwapVerifierEnvOverrides(
+  env: NodeJS.ProcessEnv = process.env,
+): Record<number, Address> {
+  const overrides: Record<number, Address> = {}
+  for (const [key, rawValue] of Object.entries(env)) {
+    if (!key.startsWith(SWAP_VERIFIER_ENV_PREFIX)) continue
+    const value = rawValue?.trim()
+    if (!value) continue
+    const chainId = Number(key.slice(SWAP_VERIFIER_ENV_PREFIX.length))
+    if (!Number.isSafeInteger(chainId) || chainId <= 0) {
+      logWarn({ name: "Invalid SwapVerifier override env key", key })
+      continue
+    }
+    try {
+      overrides[chainId] = getAddress(value)
+    } catch {
+      logWarn({ name: "Invalid SwapVerifier override address", key, value })
+    }
+  }
+  return overrides
+}
+
+function applySwapVerifierEnvOverrides(env: NodeJS.ProcessEnv = process.env) {
+  for (const [chainId, address] of Object.entries(
+    readSwapVerifierEnvOverrides(env),
+  )) {
+    contractBook.swapVerifier.address[Number(chainId)] = address
+  }
+}
+
+// Apply once at module load so the override holds even before the first
+// deployment refresh resolves.
+applySwapVerifierEnvOverrides()
 
 let refreshPromise: Promise<void> | null = null
 
@@ -99,6 +142,10 @@ export async function refreshContractBookAddresses() {
           peripheryAddrs.swapVerifier
       }
     }
+
+    // Re-assert env overrides last so a custom SwapVerifier is never reverted
+    // to the canonical deployment address fetched above.
+    applySwapVerifierEnvOverrides()
   })().finally(() => {
     refreshPromise = null
   })
