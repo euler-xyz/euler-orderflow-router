@@ -179,6 +179,10 @@ export class StrategyAggregators {
                 { apiKey: String(process.env.PENDLE_API_KEY) },
               ]),
             ),
+            "binance-wallet": {
+              apiKey: process.env.BINANCE_WALLET_API_KEY,
+              secretKey: process.env.BINANCE_WALLET_SECRET_KEY,
+            },
           },
         },
       },
