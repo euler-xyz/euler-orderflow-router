@@ -1,4 +1,4 @@
-import contractBook from "@/common/utils/contractBook"
+import { getSwapVerifierAddress } from "@/common/utils/deployments"
 import { SwapperMode } from "../interface"
 import { runPipeline } from "../runner"
 import type { StrategyResult, SwapParams } from "../types"
@@ -40,7 +40,7 @@ export class StrategyRedirectTransferReceiver {
     try {
       const innerSwapParams = {
         ...swapParams,
-        receiver: contractBook.swapVerifier.address[swapParams.chainId],
+        receiver: getSwapVerifierAddress(swapParams.chainId),
         skipSweepDepositOut: true,
         transferOutputToReceiver: undefined,
       }
