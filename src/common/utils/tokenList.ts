@@ -38,6 +38,7 @@ const pendingTokenFetches = new Map<
 >()
 const TOKENLIST_FETCH_TIMEOUT_MS =
   Number(process.env.TOKENLIST_FETCH_TIMEOUT_SECONDS || 30) * 1000
+const TOKENLIST_PAGE_SIZE = 100
 
 const erc20StringAbi = parseAbi([
   "function name() view returns (string)",
@@ -108,13 +109,25 @@ const writeTokenListsToFiles = () => {
   }
 }
 
-const normalizeTokenListResponse = (response: unknown): TokenListItem[] => {
-  if (Array.isArray(response)) return response as TokenListItem[]
+type NormalizedTokenListResponse = {
+  tokenlist: TokenListItem[]
+  meta?: {
+    total?: number
+    offset?: number
+    limit?: number
+  }
+}
+
+const normalizeTokenListResponse = (
+  response: unknown,
+): NormalizedTokenListResponse => {
+  if (Array.isArray(response)) return { tokenlist: response as TokenListItem[] }
 
   if (response && typeof response === "object") {
     const typedResponse = response as {
       data?: unknown
       error?: unknown
+      meta?: unknown
       success?: boolean | string
     }
 
@@ -123,23 +136,77 @@ const normalizeTokenListResponse = (response: unknown): TokenListItem[] => {
     }
 
     if (Array.isArray(typedResponse.data)) {
-      return typedResponse.data as TokenListItem[]
+      return {
+        tokenlist: typedResponse.data as TokenListItem[],
+        meta:
+          typedResponse.meta && typeof typedResponse.meta === "object"
+            ? (typedResponse.meta as NormalizedTokenListResponse["meta"])
+            : undefined,
+      }
     }
   }
 
   throw new Error("Invalid tokenlist response format")
 }
 
-async function fetchTokenList(url: string, chainId: string) {
-  const response = await fetch(`${url}?chainId=${chainId}`, {
-    signal: AbortSignal.timeout(TOKENLIST_FETCH_TIMEOUT_MS),
-  })
+const buildTokenListURL = (
+  url: string,
+  params: { chainId: string; limit?: number; offset?: number },
+) => {
+  const tokenListURL = new URL(url)
+  tokenListURL.searchParams.set("chainId", params.chainId)
+  if (params.limit !== undefined) {
+    tokenListURL.searchParams.set("limit", String(params.limit))
+  }
+  if (params.offset !== undefined) {
+    tokenListURL.searchParams.set("offset", String(params.offset))
+  }
+  return tokenListURL.toString()
+}
+
+async function fetchTokenListPage(
+  url: string,
+  chainId: string,
+  offset: number,
+) {
+  const response = await fetch(
+    buildTokenListURL(url, {
+      chainId,
+      limit: TOKENLIST_PAGE_SIZE,
+      offset,
+    }),
+    {
+      signal: AbortSignal.timeout(TOKENLIST_FETCH_TIMEOUT_MS),
+    },
+  )
 
   if (!response.ok) {
     throw new Error(`${response.status} ${response.statusText}`)
   }
 
-  const tokenlist = normalizeTokenListResponse(await response.json())
+  return normalizeTokenListResponse(await response.json())
+}
+
+async function fetchTokenList(url: string, chainId: string) {
+  const tokenlist: TokenListItem[] = []
+  let offset = 0
+  while (true) {
+    const response = await fetchTokenListPage(url, chainId, offset)
+    tokenlist.push(...response.tokenlist)
+
+    const total = response.meta?.total
+    const pageOffset = response.meta?.offset ?? offset
+    if (
+      total === undefined ||
+      response.tokenlist.length === 0 ||
+      pageOffset + response.tokenlist.length >= total
+    ) {
+      break
+    }
+
+    offset = pageOffset + (response.meta?.limit ?? response.tokenlist.length)
+  }
+
   for (const token of tokenlist) {
     if (token.logoURI) {
       token.logoURI = token.logoURI.replace(/([?&])v=[^&]*/g, "")

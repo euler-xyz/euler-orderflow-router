@@ -18,7 +18,6 @@ import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomMultiliquidQuoteSource } from "./sources/multiliquidQuoteSource"
 import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
 import { CustomNordsternQuoteSource } from "./sources/nordsternQuoteSource"
-import { CustomOdosQuoteSource } from "./sources/odosQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
 import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
 import { CustomOneInchQuoteSource } from "./sources/oneInchQuoteSource"
@@ -42,7 +41,6 @@ const customSources = {
   "open-ocean": new CustomOpenOceanQuoteSource(),
   neptune: new CustomNeptuneQuoteSource(),
   nordstern: new CustomNordsternQuoteSource(),
-  odos: new CustomOdosQuoteSource(),
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
