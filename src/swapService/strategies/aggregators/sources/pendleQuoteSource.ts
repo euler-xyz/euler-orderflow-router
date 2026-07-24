@@ -24,7 +24,6 @@ import pendleAggregators from "./pendle/pendleAggregators.json"
 // https://api-v2.pendle.finance/core/docs#/Chains/ChainsController_getSupportedChainIds
 export const AGGREGATOR_NAMES: Record<string, string> = {
   kyberswap: "KyberSwap",
-  odos: "Odos",
   paraswap: "Velora",
   okx: "OKX",
 }

@@ -10,10 +10,10 @@ pnpm i
 ```
 
 Copy `.env.template` to `.env` and set configuration. Alternatively use:
-```   
+```
 pnpm run doppler:syncdev # local development
 pnpm run doppler:syncstg # staging
-pnpm run doppler:syncprd # production
+pnpm run doppler:syncprd # production 
 ```
 
 ## Running

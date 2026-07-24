@@ -1,80 +1,63 @@
 [
   {
     "chainId": 143,
-    "address": "0xDef72Af3fc69E1Dd5a094f7DDa08Ba203CD0438B",
-    "name": "EUL",
-    "symbol": "EUL",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    "groups": [
-      "EUL"
-    ]
-  },
-  {
-    "chainId": 143,
-    "address": "0xff074349C8b89bB7362bD25c58742896D817A862",
-    "name": "rEUL",
-    "symbol": "rEUL",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    "groups": [
-      "EUL"
-    ]
-  },
-  {
-    "chainId": 143,
-    "address": "0xf13DAcAdA8f45c2b2Cbf60eCb1D412d0C57bf2F8",
-    "name": "eUSD",
-    "symbol": "eUSD",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    "groups": [
-      "EUL"
-    ]
-  },
-  {
-    "chainId": 143,
-    "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
-    "name": "Wrapped MON",
-    "symbol": "WMON",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
-    "groups": [
-      "MONAD"
-    ]
-  },
-  {
-    "chainId": 143,
-    "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
-    "name": "USDC",
-    "symbol": "USDC",
-    "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
-    "groups": [
-      "USD"
-    ]
-  },
-  {
-    "chainId": 143,
     "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
     "name": "AUSD",
     "symbol": "AUSD",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/143/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-    "groups": [
-      "USD"
+    "tags": [
+      "usd"
     ]
   },
   {
     "chainId": 143,
-    "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
-    "name": "Wrapped Ether",
-    "symbol": "WETH",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
-    "groups": [
-      "ETH"
+    "address": "0x00c8fD2e46dCA0e692722a5814e4A37b1b59866A",
+    "name": "Debt token of EVK Vault eAUSD-8",
+    "symbol": "eAUSD-8-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x00c8fD2e46dCA0e692722a5814e4A37b1b59866A",
+    "tags": [
+      "usd"
     ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
+    "name": "K3 x Galaxy Lending",
+    "symbol": "gAUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
+    "name": "XAUt0",
+    "symbol": "XAUt0",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x01bFF41798a0BcF287b996046Ca68b395DbC1071"
+  },
+  {
+    "chainId": 143,
+    "address": "0x02861c549bcFa1eE40d70d16Fd2D09108f83D37F",
+    "name": "Debt token of EVK Vault eLBTC-3",
+    "symbol": "eLBTC-3-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x02861c549bcFa1eE40d70d16Fd2D09108f83D37F",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
+    "name": "Kintsu Surge wnSMON / wnWMON",
+    "symbol": "wnSMON-wnWMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8"
   },
   {
     "chainId": 143,
@@ -83,30 +66,49 @@
     "symbol": "WBTC",
     "decimals": 8,
     "logoURI": "https://token-images.euler.finance/143/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
-    "groups": [
-      "BTC"
+    "tags": [
+      "btc"
     ]
   },
   {
     "chainId": 143,
-    "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
-    "name": "Lombard Staked Bitcoin",
-    "symbol": "LBTC",
+    "address": "0x057877330955dD6e9F7cE87E22cC72D47E76A147",
+    "name": "Debt token of EVK Vault eBTC.b-1",
+    "symbol": "eBTC.b-1-DEBT",
     "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0xecAc9C5F704e954931349Da37F60E39f515c11c1",
-    "groups": [
-      "BTC"
+    "logoURI": "https://token-images.euler.finance/143/0x057877330955dD6e9F7cE87E22cC72D47E76A147",
+    "tags": [
+      "btc"
     ]
   },
   {
     "chainId": 143,
-    "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
-    "name": "Bitcoin",
-    "symbol": "BTC.b",
-    "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
-    "groups": [
-      "BTC"
+    "address": "0x0779f2A7f0Db0Fee03FC64650D44ab863905ab40",
+    "name": "Debt token of EVK Vault eUNDEFINED-1",
+    "symbol": "eUNDEFINED-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x0779f2A7f0Db0Fee03FC64650D44ab863905ab40"
+  },
+  {
+    "chainId": 143,
+    "address": "0x0a78c4B341aB66A0E43786897dAB0B35DdffAA20",
+    "name": "Debt token of EVK Vault ewstETH-1",
+    "symbol": "ewstETH-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x0a78c4B341aB66A0E43786897dAB0B35DdffAA20",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x0A8d7b65F7F454E3Be5A9FF47975D86eee2F086c",
+    "name": "Debt token of EVK Vault eUSDC-7",
+    "symbol": "eUSDC-7-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x0A8d7b65F7F454E3Be5A9FF47975D86eee2F086c",
+    "tags": [
+      "usd"
     ]
   },
   {
@@ -116,19 +118,49 @@
     "symbol": "wstETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/143/0x10Aeaf63194db8d453d4D85a06E5eFE1dd0b5417",
-    "groups": [
-      "ETH"
+    "tags": [
+      "eth"
     ]
   },
   {
     "chainId": 143,
-    "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
-    "name": "gMON",
-    "symbol": "gMON",
+    "address": "0x13064398BDb36ac16cE1937Fe529fDad29b39Ab4",
+    "name": "Debt token of EVK Vault ePT-AUSD-8OCT2026-1",
+    "symbol": "ePT-AUSD-8OCT2026-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x13064398BDb36ac16cE1937Fe529fDad29b39Ab4",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x150360c0eFd098A6426060Ee0Cc4a0444c4b4b68",
+    "name": "Fastlane Surge shMON / wnWMON",
+    "symbol": "shMON-wnWMON",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
-    "groups": [
-      "MONAD"
+    "logoURI": "https://token-images.euler.finance/143/0x150360c0eFd098A6426060Ee0Cc4a0444c4b4b68"
+  },
+  {
+    "chainId": 143,
+    "address": "0x1741f93E3B1913224Bc44d20D5A6BCe5506e53bF",
+    "name": "Debt token of EVK Vault eUSDC-3",
+    "symbol": "eUSDC-3-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x1741f93E3B1913224Bc44d20D5A6BCe5506e53bF",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x197B9DAa027a259c47714c371b3821D79f49d14F",
+    "name": "Debt token of EVK Vault eUSDT0-2",
+    "symbol": "eUSDT0-2-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x197B9DAa027a259c47714c371b3821D79f49d14F",
+    "tags": [
+      "usd"
     ]
   },
   {
@@ -138,8 +170,757 @@
     "symbol": "shMON",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/143/0x1B68626dCa36c7fE922fD2d55E4f631d962dE19c",
+    "tags": [
+      "mon"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x1dC2c96D1e906De6C29a9bbFeF53472CE22DBc72",
+    "name": "Debt token of EVK Vault eAUSD-20",
+    "symbol": "eAUSD-20-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x1dC2c96D1e906De6C29a9bbFeF53472CE22DBc72",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x2016B01227036DdCF2e9eA576E8b8E76c7Bb4b5a",
+    "name": "Debt token of EVK Vault eUSDC-6",
+    "symbol": "eUSDC-6-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2016B01227036DdCF2e9eA576E8b8E76c7Bb4b5a",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x2182985311c4581eB334b6Ff209265A488C14a67",
+    "name": "Debt token of EVK Vault eUSDT0-9",
+    "symbol": "eUSDT0-9-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2182985311c4581eB334b6Ff209265A488C14a67",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x23212C3648c1b5a32870BDEb9d589FaEE8D89E7C",
+    "name": "Debt token of EVK Vault eWMON-9",
+    "symbol": "eWMON-9-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x23212C3648c1b5a32870BDEb9d589FaEE8D89E7C"
+  },
+  {
+    "chainId": 143,
+    "address": "0x2384F7f458D99cC3Fc4194B8197466777E164aE3",
+    "name": "Debt token of EVK Vault eAUSD-10",
+    "symbol": "eAUSD-10-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2384F7f458D99cC3Fc4194B8197466777E164aE3",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x243012360f73B3D21c8F8560CbdB18b5a9D43B4c",
+    "name": "Debt token of EVK Vault eUSDC-12",
+    "symbol": "eUSDC-12-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x243012360f73B3D21c8F8560CbdB18b5a9D43B4c",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x2638F93db65e5311cD73BEF52C71d9126Df3Cea4",
+    "name": "Debt token of EVK Vault eUSDT0-6",
+    "symbol": "eUSDT0-6-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2638F93db65e5311cD73BEF52C71d9126Df3Cea4",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x2678746Dd50fF9E507718b414e07Ae54f227d619",
+    "name": "Debt token of EVK Vault eAUSD-19",
+    "symbol": "eAUSD-19-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2678746Dd50fF9E507718b414e07Ae54f227d619",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x276759B029703971e03A9F2B6198dD6C29B50209",
+    "name": "Debt token of EVK Vault eyzPrime-1",
+    "symbol": "eyzPrime-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x276759B029703971e03A9F2B6198dD6C29B50209"
+  },
+  {
+    "chainId": 143,
+    "address": "0x28AfF5fC4B4415A12BC635535069527c135d9646",
+    "name": "Debt token of EVK Vault eshMON-wnWMON-1",
+    "symbol": "eshMON-wnWMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x28AfF5fC4B4415A12BC635535069527c135d9646"
+  },
+  {
+    "chainId": 143,
+    "address": "0x29FcD71C88630Bce0A73678e33CE1d3AC5e88efa",
+    "name": "Debt token of EVK Vault eWETH-5",
+    "symbol": "eWETH-5-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x29FcD71C88630Bce0A73678e33CE1d3AC5e88efa",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x2d01C989E1a6EF0eDd961DF2E788Cd1146Aab88D",
+    "name": "Debt token of EVK Vault eXAUt0-3",
+    "symbol": "eXAUt0-3-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x2d01C989E1a6EF0eDd961DF2E788Cd1146Aab88D"
+  },
+  {
+    "chainId": 143,
+    "address": "0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
+    "name": "wnAUSD / wnUSDC / wnUSDT0",
+    "symbol": "wnAUSD-wnUSDC-wnUSDT0",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x3031f65Ba675d642d5F840dae259Ee6AFd438c7F",
+    "name": "Debt token of EVK Vault eWMON-1",
+    "symbol": "eWMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x3031f65Ba675d642d5F840dae259Ee6AFd438c7F"
+  },
+  {
+    "chainId": 143,
+    "address": "0x33151Eba2eB92CA261142933C754CeEe6Ddd13AB",
+    "name": "Debt token of EVK Vault esMON-2",
+    "symbol": "esMON-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x33151Eba2eB92CA261142933C754CeEe6Ddd13AB"
+  },
+  {
+    "chainId": 143,
+    "address": "0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
+    "name": "Fastlane Surge wnSHMON / wnWMON",
+    "symbol": "wnSHMON-wnWMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x340Fa62AE58e90473da64b0af622cdd6113106Cb"
+  },
+  {
+    "chainId": 143,
+    "address": "0x3475Ea1c3451a9a10Aeb51bd8836312175B88BAc",
+    "name": "Kintsu Surge sMON / wnWMON",
+    "symbol": "sMON-wnWMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x3475Ea1c3451a9a10Aeb51bd8836312175B88BAc"
+  },
+  {
+    "chainId": 143,
+    "address": "0x3749c566e7b933A1B70ca2a82cb6854782FE6863",
+    "name": "Debt token of EVK Vault eUNDEFINED-3",
+    "symbol": "eUNDEFINED-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x3749c566e7b933A1B70ca2a82cb6854782FE6863"
+  },
+  {
+    "chainId": 143,
+    "address": "0x39D7918C208181d5faC50E84f597E6fdF8B65227",
+    "name": "Debt token of EVK Vault eUSDC-16",
+    "symbol": "eUSDC-16-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x39D7918C208181d5faC50E84f597E6fdF8B65227",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x3AecdCba4B1F3A4620D696E5126b969b43C5b609",
+    "name": "Debt token of EVK Vault eWMON-2",
+    "symbol": "eWMON-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x3AecdCba4B1F3A4620D696E5126b969b43C5b609"
+  },
+  {
+    "chainId": 143,
+    "address": "0x3B5ce5B125b1a69Ada91D0d7976B2b761B718CC7",
+    "name": "Debt token of EVK Vault eXAUt0-2",
+    "symbol": "eXAUt0-2-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x3B5ce5B125b1a69Ada91D0d7976B2b761B718CC7"
+  },
+  {
+    "chainId": 143,
+    "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+    "name": "Wrapped MON",
+    "symbol": "WMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+    "tags": [
+      "mon"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x3DccA662A6bE4919026c7bA7899a6a52fC8EDA47",
+    "name": "Debt token of EVK Vault eUSDC-11",
+    "symbol": "eUSDC-11-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x3DccA662A6bE4919026c7bA7899a6a52fC8EDA47",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x3f550c44B4f001fC3F5e837643Ef4C552823E6dC",
+    "name": "Debt token of EVK Vault eUSDT0-1",
+    "symbol": "eUSDT0-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x3f550c44B4f001fC3F5e837643Ef4C552823E6dC",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x439c750dA7D1Bc4A078F94Fdd0E6E1746cf736C7",
+    "name": "Debt token of EVK Vault eAUSD-14",
+    "symbol": "eAUSD-14-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x439c750dA7D1Bc4A078F94Fdd0E6E1746cf736C7",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x45cbDdC864967Abd48B7c190CEa38549CB4740a2",
+    "name": "Debt token of EVK Vault eWMON-13",
+    "symbol": "eWMON-13-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x45cbDdC864967Abd48B7c190CEa38549CB4740a2"
+  },
+  {
+    "chainId": 143,
+    "address": "0x45de00b44d370f3Ed5bBB2D84A608E72Ea266b26",
+    "name": "Debt token of EVK Vault eUSDC-5",
+    "symbol": "eUSDC-5-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x45de00b44d370f3Ed5bBB2D84A608E72Ea266b26",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x47C2a9E9051E7948Dc3A3D71276CFEd74e6925f3",
+    "name": "Debt token of EVK Vault eXAUt0-4",
+    "symbol": "eXAUt0-4-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x47C2a9E9051E7948Dc3A3D71276CFEd74e6925f3"
+  },
+  {
+    "chainId": 143,
+    "address": "0x49fA6ECFE3B6a35219edfA4Fe0535cc181a48102",
+    "name": "Debt token of EVK Vault ewnLOAZND-AZND-wnAUSD-2",
+    "symbol": "ewnLOAZND-AZND-wnAUSD-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x49fA6ECFE3B6a35219edfA4Fe0535cc181a48102",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x4Ac39b2B03CE306af7F5A74D7b685B2Dce1128bd",
+    "name": "Debt token of EVK Vault esMON-3",
+    "symbol": "esMON-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x4Ac39b2B03CE306af7F5A74D7b685B2Dce1128bd"
+  },
+  {
+    "chainId": 143,
+    "address": "0x4ebaFD47f85eb43a8B80D15dF3c7c6E74EEA48e7",
+    "name": "Debt token of EVK Vault eWMON-8",
+    "symbol": "eWMON-8-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x4ebaFD47f85eb43a8B80D15dF3c7c6E74EEA48e7"
+  },
+  {
+    "chainId": 143,
+    "address": "0x4F55D4E8B47319B59aDd5a76b863A1fA4E4FD68f",
+    "name": "Debt token of EVK Vault ewnSHMON-wnWMON-1",
+    "symbol": "ewnSHMON-wnWMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x4F55D4E8B47319B59aDd5a76b863A1fA4E4FD68f"
+  },
+  {
+    "chainId": 143,
+    "address": "0x4fe3445592Fd3320546226620Ffe5EEd42a60320",
+    "name": "Debt token of EVK Vault eWBTC-4",
+    "symbol": "eWBTC-4-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x4fe3445592Fd3320546226620Ffe5EEd42a60320",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x51Fac0fDbd5de1098CC1E62ca4c4aEe84a5a00e2",
+    "name": "Debt token of EVK Vault eAUSD-7",
+    "symbol": "eAUSD-7-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x51Fac0fDbd5de1098CC1E62ca4c4aEe84a5a00e2",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x5426b5243aAC6446f5B1F00375fB72EA8d6792e8",
+    "name": "Debt token of EVK Vault eUSDT0-11",
+    "symbol": "eUSDT0-11-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x5426b5243aAC6446f5B1F00375fB72EA8d6792e8",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x54803000e1920a9A372209edC06E3B720335bdbC",
+    "name": "Debt token of EVK Vault eWMON-4",
+    "symbol": "eWMON-4-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x54803000e1920a9A372209edC06E3B720335bdbC"
+  },
+  {
+    "chainId": 143,
+    "address": "0x57c684759ED9f413B4A5ccb9C64ec8581f78D3A5",
+    "name": "Debt token of EVK Vault ewstETH-5",
+    "symbol": "ewstETH-5-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x57c684759ED9f413B4A5ccb9C64ec8581f78D3A5",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x58D32506687A1464b38d711AbB22056072784C19",
+    "name": "Debt token of EVK Vault ewnAUSD-wnUSDC-wnUSDT0-1",
+    "symbol": "ewnAUSD-wnUSDC-wnUSDT0-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x58D32506687A1464b38d711AbB22056072784C19",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x5C6EA8b1e20DBfA128F171d3161c85B89d3Ec316",
+    "name": "Debt token of EVK Vault eshMON-2",
+    "symbol": "eshMON-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x5C6EA8b1e20DBfA128F171d3161c85B89d3Ec316"
+  },
+  {
+    "chainId": 143,
+    "address": "0x5fD5EF14263691c2059d8b8C2e19DEa84e5630Cd",
+    "name": "Debt token of EVK Vault ewstETH-4",
+    "symbol": "ewstETH-4-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x5fD5EF14263691c2059d8b8C2e19DEa84e5630Cd",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x608eF1D02B5CcA9A920481ebdCaCB5a209355869",
+    "name": "Debt token of EVK Vault ePT-AUSD-8OCT2026-2",
+    "symbol": "ePT-AUSD-8OCT2026-2-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x608eF1D02B5CcA9A920481ebdCaCB5a209355869",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x6092c9193e1bd058AE85508f786ba80187675767",
+    "name": "Debt token of EVK Vault eUSDC-9",
+    "symbol": "eUSDC-9-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x6092c9193e1bd058AE85508f786ba80187675767",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x645906a0e509b4ff56d74D3EAE31059111048655",
+    "name": "Debt token of EVK Vault eAUSD-4",
+    "symbol": "eAUSD-4-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x645906a0e509b4ff56d74D3EAE31059111048655",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x64745Af24D2786c77A367010c74533Da6095c38A",
+    "name": "Debt token of EVK Vault eAUSD-5",
+    "symbol": "eAUSD-5-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x64745Af24D2786c77A367010c74533Da6095c38A",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x64C56e15208CE3Ef0c25458931Ca03aCa865e304",
+    "name": "Debt token of EVK Vault eWETH-1",
+    "symbol": "eWETH-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x64C56e15208CE3Ef0c25458931Ca03aCa865e304",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x6B303d6582bf1Bd9f6De07cd93a3FE46f7656BB5",
+    "name": "Debt token of EVK Vault eWMON-6",
+    "symbol": "eWMON-6-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x6B303d6582bf1Bd9f6De07cd93a3FE46f7656BB5"
+  },
+  {
+    "chainId": 143,
+    "address": "0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
+    "name": "WMoo Balancer Monad wnUSDT0-wnAUSD-wnUSDC",
+    "symbol": "wmooBalancerMonadwnUSDT0-wnAUSD-wnUSDC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x6E65fdbb8c8Eba34b8CBAFA3C008498C3335a82e",
+    "name": "Debt token of EVK Vault eAUSD-3",
+    "symbol": "eAUSD-3-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x6E65fdbb8c8Eba34b8CBAFA3C008498C3335a82e",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x6Ed8f90B835e57a38dCB10A918Ea0C9B06bd5c6f",
+    "name": "Debt token of EVK Vault eUSDC-15",
+    "symbol": "eUSDC-15-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x6Ed8f90B835e57a38dCB10A918Ea0C9B06bd5c6f",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x704141aB8533ABfe83b42ed111b9A4415d2308AE",
+    "name": "Debt token of EVK Vault eUSDC-13",
+    "symbol": "eUSDC-13-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x704141aB8533ABfe83b42ed111b9A4415d2308AE",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x722E9178A3EE10a456d88D20c7761e513c65f9fa",
+    "name": "Debt token of EVK Vault eaHyperBTC-1",
+    "symbol": "eaHyperBTC-1-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x722E9178A3EE10a456d88D20c7761e513c65f9fa",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x724A04839Bd8D89fd41A294AE3c7aa0D68e91ea8",
+    "name": "Debt token of EVK Vault eLBTC-1",
+    "symbol": "eLBTC-1-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x724A04839Bd8D89fd41A294AE3c7aa0D68e91ea8",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x7292656081754e4E6ac20CBEEeA8aF9d6D6aD485",
+    "name": "Debt token of EVK Vault emHyperBTC-2",
+    "symbol": "emHyperBTC-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x7292656081754e4E6ac20CBEEeA8aF9d6D6aD485",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x7502a04F03E53Cb7f14E03A65Ec3c235054D997D",
+    "name": "Debt token of EVK Vault eUSDC-2",
+    "symbol": "eUSDC-2-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x7502a04F03E53Cb7f14E03A65Ec3c235054D997D",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x797C4798aa310D96eCB506cEf06e043384Fa0041",
+    "name": "Debt token of EVK Vault ewstETH-3",
+    "symbol": "ewstETH-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x797C4798aa310D96eCB506cEf06e043384Fa0041",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x803086b10C575c5593515ec203C8E0313CE25942",
+    "name": "Debt token of EVK Vault ePT-earnAUSD-8OCT2026-1",
+    "symbol": "ePT-earnAUSD-8OCT2026-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x803086b10C575c5593515ec203C8E0313CE25942",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x80DEB0579b8e13a20C983Da64D86c2b1A4AC9Da5",
+    "name": "Debt token of EVK Vault eeUSD-2",
+    "symbol": "eeUSD-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x80DEB0579b8e13a20C983Da64D86c2b1A4AC9Da5",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x80fc21D1E3aA9Be1ede524f1694A326f8edF9DbF",
+    "name": "Debt token of EVK Vault eWETH-2",
+    "symbol": "eWETH-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x80fc21D1E3aA9Be1ede524f1694A326f8edF9DbF",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x831E8703b7f5ACd7EcdcEbC04E6ab6D661dcf0A8",
+    "name": "Debt token of EVK Vault eAUSD-6",
+    "symbol": "eAUSD-6-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x831E8703b7f5ACd7EcdcEbC04E6ab6D661dcf0A8",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+    "name": "gMON",
+    "symbol": "gMON",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+    "tags": [
+      "mon"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x861A31E3b2a6730d2B07F517773179734Ff8b6F0",
+    "name": "Debt token of EVK Vault ewstETH-2",
+    "symbol": "ewstETH-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x861A31E3b2a6730d2B07F517773179734Ff8b6F0",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x87d739660070946326f42BcA8ECCBF74343B70DE",
+    "name": "Debt token of EVK Vault eAUSD-9",
+    "symbol": "eAUSD-9-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x87d739660070946326f42BcA8ECCBF74343B70DE",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x87Ec26515C9561E1e5B2429201875AbAD32e6CCc",
+    "name": "Debt token of EVK Vault eUSDC-14",
+    "symbol": "eUSDC-14-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x87Ec26515C9561E1e5B2429201875AbAD32e6CCc",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x8A7195488058E37a639d23E3f33A736AdCEc76f6",
+    "name": "Debt token of EVK Vault eWBTC-2",
+    "symbol": "eWBTC-2-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x8A7195488058E37a639d23E3f33A736AdCEc76f6",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x8Be048ad60bc57c154E62e47A608E8E4208e61d3",
+    "name": "Debt token of EVK Vault eLBTC-2",
+    "symbol": "eLBTC-2-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0x8Be048ad60bc57c154E62e47A608E8E4208e61d3",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
+    "name": "RWA Backed Lending by Valos",
+    "symbol": "vUSD",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x8eD6958a3fc9CA143080bA8d46C7F52d8335dcD6",
+    "name": "Debt token of EVK Vault eAUSD-1",
+    "symbol": "eAUSD-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x8eD6958a3fc9CA143080bA8d46C7F52d8335dcD6",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x92aCC05af1209963c976888eb237229ebC23FB16",
+    "name": "Debt token of EVK Vault eUSDT0-4",
+    "symbol": "eUSDT0-4-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x92aCC05af1209963c976888eb237229ebC23FB16",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x95006DcC00db06eb0697D76Bf06f718DA0Ce912E",
+    "name": "Debt token of EVK Vault eshMON-3",
+    "symbol": "eshMON-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x95006DcC00db06eb0697D76Bf06f718DA0Ce912E"
+  },
+  {
+    "chainId": 143,
+    "address": "0x9B9c88ec1D2955DFc3f208Ac019aEe5D7f764d0C",
+    "name": "Debt token of EVK Vault eUNDEFINED-2",
+    "symbol": "eUNDEFINED-2-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x9B9c88ec1D2955DFc3f208Ac019aEe5D7f764d0C"
+  },
+  {
+    "chainId": 143,
+    "address": "0x9fB330c96006Fbd283A9B1B6EC999990C2ECb1C1",
+    "name": "Debt token of EVK Vault ewmooBalancerMonadwnUSDT0-wnAUSD-wnUSDC-1",
+    "symbol": "ewmooBalancerMonadwnUSDT0-wnAUSD-wnUSDC-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0x9fB330c96006Fbd283A9B1B6EC999990C2ECb1C1",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
+    "name": "PT AUSD 8OCT2026",
+    "symbol": "PT-AUSD-8OCT2026",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
+    "metadata": {
+      "isPendlePT": true,
+      "isPendleLP": false,
+      "pendleMarket": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7"
+    },
     "groups": [
-      "MONAD"
+      "pendle-pt"
+    ],
+    "tags": [
+      "usd",
+      "pt"
     ]
   },
   {
@@ -149,74 +930,20 @@
     "symbol": "sMON",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/143/0xA3227C5969757783154C60bF0bC1944180ed81B9",
-    "groups": [
-      "MONAD"
+    "tags": [
+      "mon"
     ]
   },
   {
     "chainId": 143,
-    "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
-    "name": "USDT0",
-    "symbol": "USDT0",
+    "address": "0xa3587B3Ef7528c1aBB26aE4aeFA1a3E12AA28EC4",
+    "name": "Debt token of EVK Vault eAUSD-11",
+    "symbol": "eAUSD-11-DEBT",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
-    "groups": [
-      "USD"
+    "logoURI": "https://token-images.euler.finance/143/0xa3587B3Ef7528c1aBB26aE4aeFA1a3E12AA28EC4",
+    "tags": [
+      "usd"
     ]
-  },
-  {
-    "chainId": 143,
-    "address": "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
-    "name": "XAUt0",
-    "symbol": "XAUt0",
-    "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
-    "name": "wnAUSD / wnUSDC / wnUSDT0",
-    "symbol": "wnAUSD-wnUSDC-wnUSDT0",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x3475Ea1c3451a9a10Aeb51bd8836312175B88BAc",
-    "name": "Kintsu Surge sMON / wnWMON",
-    "symbol": "sMON-wnWMON",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x3475Ea1c3451a9a10Aeb51bd8836312175B88BAc",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x150360c0eFd098A6426060Ee0Cc4a0444c4b4b68",
-    "name": "Fastlane Surge shMON / wnWMON",
-    "symbol": "shMON-wnWMON",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x150360c0eFd098A6426060Ee0Cc4a0444c4b4b68",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0xD328E74AdD15Ac98275737a7C1C884ddc951f4D3",
-    "name": "wnLOAZND / AZND / wnAUSD",
-    "symbol": "wnLOAZND-AZND-wnAUSD",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xD328E74AdD15Ac98275737a7C1C884ddc951f4D3",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0xCE6170EA245dC8D1f275A710a062b70f125F0110",
-    "name": "FXRP",
-    "symbol": "FXRP",
-    "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0xCE6170EA245dC8D1f275A710a062b70f125F0110",
-    "groups": []
   },
   {
     "chainId": 143,
@@ -225,8 +952,358 @@
     "symbol": "weETH",
     "decimals": 18,
     "logoURI": "https://token-images.euler.finance/143/0xA3D68b74bF0528fdD07263c60d6488749044914b",
-    "groups": [
-      "ETH"
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xA45F4F75883C426e97F1f6500f217B1fCc995145",
+    "name": "Debt token of EVK Vault eUSDC-1",
+    "symbol": "eUSDC-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xA45F4F75883C426e97F1f6500f217B1fCc995145",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xA4b9B2020c5c52c6056b0E3e6fCC26532bA3c700",
+    "name": "Debt token of EVK Vault eweETH-1",
+    "symbol": "eweETH-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xA4b9B2020c5c52c6056b0E3e6fCC26532bA3c700",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xa52c0bB34a529920E22b22efD2E2d55d00f53c25",
+    "name": "Debt token of EVK Vault eWBTC-3",
+    "symbol": "eWBTC-3-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xa52c0bB34a529920E22b22efD2E2d55d00f53c25",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xA5624824df88e2516D74D046e835ef8c51a9C045",
+    "name": "Debt token of EVK Vault eXAUt0-1",
+    "symbol": "eXAUt0-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xA5624824df88e2516D74D046e835ef8c51a9C045"
+  },
+  {
+    "chainId": 143,
+    "address": "0xA70D959BAD63C46a7dCaC9016A02f176E571D431",
+    "name": "Debt token of EVK Vault ewnLOAZND-AZND-wnAUSD-1",
+    "symbol": "ewnLOAZND-AZND-wnAUSD-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xA70D959BAD63C46a7dCaC9016A02f176E571D431",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xa79aeBEC4Cc9ad75C9a157B3445FBb40221513dc",
+    "name": "Debt token of EVK Vault eWMON-3",
+    "symbol": "eWMON-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xa79aeBEC4Cc9ad75C9a157B3445FBb40221513dc"
+  },
+  {
+    "chainId": 143,
+    "address": "0xAA05E42007324d65800f7E9be18F6B4362408809",
+    "name": "Debt token of EVK Vault eUSDC-8",
+    "symbol": "eUSDC-8-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xAA05E42007324d65800f7E9be18F6B4362408809",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xAA7892876BeaE772AD366dD5665bc47a5C070947",
+    "name": "Debt token of EVK Vault ewnSMON-wnWMON-1",
+    "symbol": "ewnSMON-wnWMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xAA7892876BeaE772AD366dD5665bc47a5C070947"
+  },
+  {
+    "chainId": 143,
+    "address": "0xaB051CfF8a1231077f0D97Ac476BA53b79B940C1",
+    "name": "Debt token of EVK Vault eUSDT0-3",
+    "symbol": "eUSDT0-3-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xaB051CfF8a1231077f0D97Ac476BA53b79B940C1",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xABfC8527f48E86a9a5100a94BF0d37749E16B770",
+    "name": "Debt token of EVK Vault eLBTC-4",
+    "symbol": "eLBTC-4-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xABfC8527f48E86a9a5100a94BF0d37749E16B770",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xAc3DFc769d73DFBabF0e3B2Ba7312cBdb1F111C7",
+    "name": "Debt token of EVK Vault eWMON-12",
+    "symbol": "eWMON-12-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xAc3DFc769d73DFBabF0e3B2Ba7312cBdb1F111C7"
+  },
+  {
+    "chainId": 143,
+    "address": "0xac44e9Ac13a91B4Ae089E59923a6527B67f13c08",
+    "name": "Debt token of EVK Vault eWETH-6",
+    "symbol": "eWETH-6-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xac44e9Ac13a91B4Ae089E59923a6527B67f13c08",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xaD0B16E24216A82851A7b829AE7b9bDA04F86e04",
+    "name": "Debt token of EVK Vault eAUSD-17",
+    "symbol": "eAUSD-17-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xaD0B16E24216A82851A7b829AE7b9bDA04F86e04",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xaF69E7ACac6687AdfC35f53d0E045AD75A60d42c",
+    "name": "Debt token of EVK Vault eAUSD-13",
+    "symbol": "eAUSD-13-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xaF69E7ACac6687AdfC35f53d0E045AD75A60d42c",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xB0d0Ae71397bE0284EB71dAFAAB68ed0dA496E80",
+    "name": "Debt token of EVK Vault eWMON-5",
+    "symbol": "eWMON-5-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xB0d0Ae71397bE0284EB71dAFAAB68ed0dA496E80"
+  },
+  {
+    "chainId": 143,
+    "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
+    "name": "Bitcoin",
+    "symbol": "BTC.b",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xb2F525cDd97875519f4e76ce1ac6f28c80bF8F93",
+    "name": "Debt token of EVK Vault eAUSD-18",
+    "symbol": "eAUSD-18-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xb2F525cDd97875519f4e76ce1ac6f28c80bF8F93",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xB5DE1b473d814fFC52191A0C57B3776C4e205919",
+    "name": "Debt token of EVK Vault eUSDC-10",
+    "symbol": "eUSDC-10-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xB5DE1b473d814fFC52191A0C57B3776C4e205919",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xBCF4Ca13Ad7d53Ece291365827745C5277735080",
+    "name": "Debt token of EVK Vault eAUSD-16",
+    "symbol": "eAUSD-16-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xBCF4Ca13Ad7d53Ece291365827745C5277735080",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
+    "name": "Mu Digital wnLOAZND/AZND/wnAUSD",
+    "symbol": "wnLOAZND-AZND-wnAUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xbEA50b0942423A88002B88c97e190e2f8c230281",
+    "name": "Debt token of EVK Vault egAUSD-1",
+    "symbol": "egAUSD-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xbEA50b0942423A88002B88c97e190e2f8c230281",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xbF9038017538dCB8687A85f9cdE8DfE9cb425614",
+    "name": "Debt token of EVK Vault eWMON-10",
+    "symbol": "eWMON-10-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xbF9038017538dCB8687A85f9cdE8DfE9cb425614"
+  },
+  {
+    "chainId": 143,
+    "address": "0xC2e6Ef8687bd48614AE6BAEBa176c1c5035A9964",
+    "name": "Debt token of EVK Vault eUSDT0-5",
+    "symbol": "eUSDT0-5-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xC2e6Ef8687bd48614AE6BAEBa176c1c5035A9964",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
+    "name": "Hyperithm Delta Neutral cbBTC Vault",
+    "symbol": "aHyperBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xc8B12a7a1D39397959b6237fd4F32321A45197Da",
+    "name": "Debt token of EVK Vault eAUSD-12",
+    "symbol": "eAUSD-12-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xc8B12a7a1D39397959b6237fd4F32321A45197Da",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
+    "name": "Yuzu Prime",
+    "symbol": "yzPrime",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xcc51a7F2eCEC976f7B9c7095CEA0062e9Aa07195",
+    "name": "Debt token of EVK Vault ecbBTC-2",
+    "symbol": "ecbBTC-2-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xcc51a7F2eCEC976f7B9c7095CEA0062e9Aa07195",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xcE3bBFb7b42e01C9097ef921dB0EC77641F5dc39",
+    "name": "Debt token of EVK Vault emHyperBTC-1",
+    "symbol": "emHyperBTC-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xcE3bBFb7b42e01C9097ef921dB0EC77641F5dc39",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xCE6170EA245dC8D1f275A710a062b70f125F0110",
+    "name": "FXRP",
+    "symbol": "FXRP",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xCE6170EA245dC8D1f275A710a062b70f125F0110"
+  },
+  {
+    "chainId": 143,
+    "address": "0xcF2dE055B5EF98c8724f2d81cb6cC0C30CD8B1C8",
+    "name": "Debt token of EVK Vault ecbBTC-3",
+    "symbol": "ecbBTC-3-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xcF2dE055B5EF98c8724f2d81cb6cC0C30CD8B1C8",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xcFa33554d25E32fE7D5bf36663cABd909a069E4E",
+    "name": "Debt token of EVK Vault esMON-1",
+    "symbol": "esMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xcFa33554d25E32fE7D5bf36663cABd909a069E4E"
+  },
+  {
+    "chainId": 143,
+    "address": "0xD0e3e9Da1299d38dE6422629e4FBAD3f3cDb6Fa0",
+    "name": "Debt token of EVK Vault eWETH-4",
+    "symbol": "eWETH-4-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xD0e3e9Da1299d38dE6422629e4FBAD3f3cDb6Fa0",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xD1221C927854F9Ac728a4B2B96d3e8221509001A",
+    "name": "Debt token of EVK Vault evUSD-2",
+    "symbol": "evUSD-2-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xD1221C927854F9Ac728a4B2B96d3e8221509001A",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xd183AD4e6812929B3301601b8CebA807aDC880B6",
+    "name": "Debt token of EVK Vault evUSD-1",
+    "symbol": "evUSD-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xd183AD4e6812929B3301601b8CebA807aDC880B6",
+    "tags": [
+      "usd"
     ]
   },
   {
@@ -236,104 +1313,61 @@
     "symbol": "cbBTC",
     "decimals": 8,
     "logoURI": "https://token-images.euler.finance/143/0xd18B7EC58Cdf4876f6AFebd3Ed1730e4Ce10414b",
-    "groups": [
-      "BTC"
+    "tags": [
+      "btc"
     ]
   },
   {
     "chainId": 143,
-    "address": "0xF7Cf282eC810fDed974F99c0163E792f432892BC",
-    "name": "Midas Hyperithm BTC",
-    "symbol": "mHyperBTC",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xF7Cf282eC810fDed974F99c0163E792f432892BC",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
-    "name": "Hyperithm Delta Neutral cbBTC Vault",
-    "symbol": "aHyperBTC",
-    "decimals": 8,
-    "logoURI": "https://token-images.euler.finance/143/0xC6De1DC0B59682bE906E5BcA14E385E74EE88168",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
-    "name": "Kintsu Surge wnSMON / wnWMON",
-    "symbol": "wnSMON-wnWMON",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
-    "name": "Fastlane Surge wnSHMON / wnWMON",
-    "symbol": "wnSHMON-wnWMON",
-    "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
-    "name": "Mu Digital wnLOAZND/AZND/wnAUSD",
+    "address": "0xD328E74AdD15Ac98275737a7C1C884ddc951f4D3",
+    "name": "wnLOAZND / AZND / wnAUSD",
     "symbol": "wnLOAZND-AZND-wnAUSD",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
-    "groups": []
+    "logoURI": "https://token-images.euler.finance/143/0xD328E74AdD15Ac98275737a7C1C884ddc951f4D3",
+    "tags": [
+      "usd"
+    ]
   },
   {
     "chainId": 143,
-    "address": "0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
-    "name": "RWA Backed Lending by Valos",
-    "symbol": "vUSD",
+    "address": "0xd54CacFD9361862D3c7b319669b1BB428BF035CC",
+    "name": "Debt token of EVK Vault eUSDT0-7",
+    "symbol": "eUSDT0-7-DEBT",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365",
-    "groups": []
+    "logoURI": "https://token-images.euler.finance/143/0xd54CacFD9361862D3c7b319669b1BB428BF035CC",
+    "tags": [
+      "usd"
+    ]
   },
   {
     "chainId": 143,
-    "address": "0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
-    "name": "Yuzu Prime",
-    "symbol": "yzPrime",
+    "address": "0xD579ae34332f7fad20a0399B00AE3470E26F8012",
+    "name": "Debt token of EVK Vault eeUSD-1",
+    "symbol": "eeUSD-1-DEBT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0xc9ea90692757831d98Ac629F2A0140E02b80A7DA",
-    "groups": []
+    "logoURI": "https://token-images.euler.finance/143/0xD579ae34332f7fad20a0399B00AE3470E26F8012",
+    "tags": [
+      "usd"
+    ]
   },
   {
     "chainId": 143,
-    "address": "0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
-    "name": "K3 x Galaxy Lending",
-    "symbol": "gAUSD",
-    "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x0143C3eF3a76Ed825Fd5201953f65b52aCEfD799",
-    "groups": []
-  },
-  {
-    "chainId": 143,
-    "address": "0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
-    "name": "WMoo Balancer Monad wnUSDT0-wnAUSD-wnUSDC",
-    "symbol": "wmooBalancerMonadwnUSDT0-wnAUSD-wnUSDC",
+    "address": "0xd851F1Ec03da23B20D6B39Eccd7a9b1688040Fb3",
+    "name": "Debt token of EVK Vault egMON-2",
+    "symbol": "egMON-2-DEBT",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/143/0x6e58131ea11ed990D4b62476529cF2502Fe0eC5F",
-    "groups": []
+    "logoURI": "https://token-images.euler.finance/143/0xd851F1Ec03da23B20D6B39Eccd7a9b1688040Fb3"
   },
   {
     "chainId": 143,
-    "address": "0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
-    "name": "PT AUSD 8OCT2026",
-    "symbol": "PT-AUSD-8OCT2026",
+    "address": "0xD937Fb51887CD37c7f68cf0f3794130B1447e625",
+    "name": "Debt token of EVK Vault eAUSD-2",
+    "symbol": "eAUSD-2-DEBT",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/143/0x9FC74f8Ed616B5BaF52a170caa97d6d3898602d1",
-    "groups": [],
-    "metadata": {
-      "provider": "PENDLE",
-      "isPendlePT": true,
-      "pendleMarket": "0x6f99CF00ee7290aE78a072Bb6910eF72D1129fE7"
-    }
+    "logoURI": "https://token-images.euler.finance/143/0xD937Fb51887CD37c7f68cf0f3794130B1447e625",
+    "tags": [
+      "usd"
+    ]
   },
   {
     "chainId": 143,
@@ -342,12 +1376,250 @@
     "symbol": "PT-earnAUSD-8OCT2026",
     "decimals": 6,
     "logoURI": "https://token-images.euler.finance/143/0xDaf216939826AcABA0C2312F7E30A890213845CD",
-    "groups": [],
     "metadata": {
-      "provider": "PENDLE",
       "isPendlePT": true,
-      "pendleMarket": "0x475B98c83AEdBfdd0a0aBaA930ec8cb501aC93B1"
-    }
+      "isPendleLP": false,
+      "pendleMarket": "0x475b98c83aedbfdd0a0abaa930ec8cb501ac93b1"
+    },
+    "groups": [
+      "pendle-pt"
+    ],
+    "tags": [
+      "usd",
+      "pt"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xdB7D9aEC73E1b3da31Fd282fe328484a7071710B",
+    "name": "Debt token of EVK Vault eUSDT0-10",
+    "symbol": "eUSDT0-10-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xdB7D9aEC73E1b3da31Fd282fe328484a7071710B",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xDee555012C86Ec3fEe427695Bd432A41BC5065E2",
+    "name": "Debt token of EVK Vault eeUSD-3",
+    "symbol": "eeUSD-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xDee555012C86Ec3fEe427695Bd432A41BC5065E2",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xE02b823369A9e2FBc1E32313b4656f36A8588531",
+    "name": "Debt token of EVK Vault ecbBTC-1",
+    "symbol": "ecbBTC-1-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xE02b823369A9e2FBc1E32313b4656f36A8588531",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xe109d36fD5C9676Db40f9f72f98DDc6aC4cCee30",
+    "name": "Debt token of EVK Vault eAUSD-15",
+    "symbol": "eAUSD-15-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xe109d36fD5C9676Db40f9f72f98DDc6aC4cCee30",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xE4491b6611A17C35Dd9FaC651C70FC78C557AB07",
+    "name": "Debt token of EVK Vault eUSDT0-8",
+    "symbol": "eUSDT0-8-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xE4491b6611A17C35Dd9FaC651C70FC78C557AB07",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xE65B698E2bf27896359AF44ca37B103a36490ec4",
+    "name": "Debt token of EVK Vault eshMON-1",
+    "symbol": "eshMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xE65B698E2bf27896359AF44ca37B103a36490ec4"
+  },
+  {
+    "chainId": 143,
+    "address": "0xE7CD635A5a846678303C0372012348b34130235E",
+    "name": "Debt token of EVK Vault eeUSD-4",
+    "symbol": "eeUSD-4-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xE7CD635A5a846678303C0372012348b34130235E",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+    "name": "USDT0",
+    "symbol": "USDT0",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xE8f11c6218E966DdDE52371976a023Bb37214faC",
+    "name": "Debt token of EVK Vault egMON-1",
+    "symbol": "egMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xE8f11c6218E966DdDE52371976a023Bb37214faC"
+  },
+  {
+    "chainId": 143,
+    "address": "0xe9b786F98C1E85126E3604E60022943caAB57A78",
+    "name": "Debt token of EVK Vault eFXRP-1",
+    "symbol": "eFXRP-1-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xe9b786F98C1E85126E3604E60022943caAB57A78"
+  },
+  {
+    "chainId": 143,
+    "address": "0xEC691aEBC1b49ebCF0849c1103c3014701C6bAcD",
+    "name": "Debt token of EVK Vault eWBTC-1",
+    "symbol": "eWBTC-1-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xEC691aEBC1b49ebCF0849c1103c3014701C6bAcD",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "name": "Lombard Staked Bitcoin",
+    "symbol": "LBTC",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xf039DFbFA9d50baFBbA5b7A66B0D4Ae397b7A66c",
+    "name": "Debt token of EVK Vault eUSDT0-12",
+    "symbol": "eUSDT0-12-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xf039DFbFA9d50baFBbA5b7A66B0D4Ae397b7A66c",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xF07D28b0620F4BB0ea6cB22534FCB3596E0ef19a",
+    "name": "Debt token of EVK Vault eWMON-11",
+    "symbol": "eWMON-11-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF07D28b0620F4BB0ea6cB22534FCB3596E0ef19a"
+  },
+  {
+    "chainId": 143,
+    "address": "0xf13DAcAdA8f45c2b2Cbf60eCb1D412d0C57bf2F8",
+    "name": "Euler USD",
+    "symbol": "eUSD",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xf13DAcAdA8f45c2b2Cbf60eCb1D412d0C57bf2F8",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xF34f113b546c7dB951105587ca7329dcCA8B8B47",
+    "name": "Debt token of EVK Vault eWETH-3",
+    "symbol": "eWETH-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF34f113b546c7dB951105587ca7329dcCA8B8B47",
+    "tags": [
+      "eth"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xF41b1BFe16aE43265cE17aF5d2935CaBE59DcEBC",
+    "name": "Debt token of EVK Vault eWMON-7",
+    "symbol": "eWMON-7-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF41b1BFe16aE43265cE17aF5d2935CaBE59DcEBC"
+  },
+  {
+    "chainId": 143,
+    "address": "0xF68041b77F8B8802F9981823626F4FFA6396FA0f",
+    "name": "Debt token of EVK Vault esMON-wnWMON-1",
+    "symbol": "esMON-wnWMON-1-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF68041b77F8B8802F9981823626F4FFA6396FA0f"
+  },
+  {
+    "chainId": 143,
+    "address": "0xF7Cf282eC810fDed974F99c0163E792f432892BC",
+    "name": "Midas Hyperithm BTC",
+    "symbol": "mHyperBTC",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xF7Cf282eC810fDed974F99c0163E792f432892BC",
+    "tags": [
+      "btc"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xfaA2Bb67d2b7BB05448b31F50a943a61De58E940",
+    "name": "Debt token of EVK Vault egMON-3",
+    "symbol": "egMON-3-DEBT",
+    "decimals": 18,
+    "logoURI": "https://token-images.euler.finance/143/0xfaA2Bb67d2b7BB05448b31F50a943a61De58E940"
+  },
+  {
+    "chainId": 143,
+    "address": "0xFD1757a28280E1Ca2569002BC49592535c9598bF",
+    "name": "Debt token of EVK Vault eUSDC-4",
+    "symbol": "eUSDC-4-DEBT",
+    "decimals": 6,
+    "logoURI": "https://token-images.euler.finance/143/0xFD1757a28280E1Ca2569002BC49592535c9598bF",
+    "tags": [
+      "usd"
+    ]
+  },
+  {
+    "chainId": 143,
+    "address": "0xFd6CecB91d6C36AE35BC6E27f73148B8318CA4D5",
+    "name": "Debt token of EVK Vault ecbBTC-4",
+    "symbol": "ecbBTC-4-DEBT",
+    "decimals": 8,
+    "logoURI": "https://token-images.euler.finance/143/0xFd6CecB91d6C36AE35BC6E27f73148B8318CA4D5",
+    "tags": [
+      "btc"
+    ]
   },
   {
     "chainId": 143,
