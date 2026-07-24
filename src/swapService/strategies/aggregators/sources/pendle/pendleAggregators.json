@@ -1,14 +1,14 @@
 {
-  "1": ["kyberswap", "odos", "okx", "paraswap"],
-  "10": ["kyberswap", "odos", "okx", "paraswap"],
-  "56": ["kyberswap", "odos", "okx", "paraswap"],
-  "130": ["kyberswap", "odos", "okx", "paraswap"],
+  "1": ["kyberswap", "okx", "paraswap"],
+  "10": ["kyberswap", "okx", "paraswap"],
+  "56": ["kyberswap", "okx", "paraswap"],
+  "130": ["kyberswap", "okx", "paraswap"],
   "143": ["kyberswap", "okx"],
-  "146": ["kyberswap", "odos", "okx"],
+  "146": ["kyberswap", "okx"],
   "999": ["kyberswap"],
-  "5000": ["kyberswap", "odos", "okx"],
-  "8453": ["kyberswap", "odos", "okx", "paraswap"],
+  "5000": ["kyberswap", "okx"],
+  "8453": ["kyberswap", "okx", "paraswap"],
   "9745": ["kyberswap", "okx"],
-  "42161": ["kyberswap", "odos", "okx", "paraswap"],
+  "42161": ["kyberswap", "okx", "paraswap"],
   "80094": ["kyberswap"]
 }
