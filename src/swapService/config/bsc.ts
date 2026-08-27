@@ -1,16 +1,13 @@
 import type { ChainRoutingConfig } from "../interface"
-import { StrategyAggregators } from "../strategies"
+import { StrategyAggregators, StrategyCowSwap } from "../strategies"
 import { globalRoutingWrappers } from "./global"
 
 const bscRoutingConfig: ChainRoutingConfig = [
   ...globalRoutingWrappers,
-  // {
-  //   strategy: StrategyERC4626Wrapper.name(),
-  //   match: {
-  //     tokensInOrOut: [YNBNBX_BSC],
-  //   },
-  // },
   // DEFAULTS
+  {
+    strategy: StrategyCowSwap.name(),
+  },
   {
     strategy: StrategyAggregators.name(),
   },

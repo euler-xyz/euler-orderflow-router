@@ -26,9 +26,11 @@ import { fetchPreviewRedeem } from "./strategyERC4626Wrapper"
 // euler-lite/entities/cowswap/constants.ts COWSWAP_CHAIN_CONFIG.
 const COW_SUPPORTED_CHAINS: Record<number, string> = {
   1: "mainnet",
+  56: "bnb",
 }
 const COW_CLOSE_POSITION_WRAPPERS: Record<number, Address> = {
   1: "0xa18c87849eF90190117FF1E1e8b4acE6Dac7A54b",
+  56: "0x4f4CE927188637b4a1d91350c3114F4BD301dd02",
 }
 
 export const COW_PROVIDER_NAME = "cow"
@@ -257,10 +259,9 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
 
   const kind = isExactIn ? "sell" : "buy"
 
-  // Mirror `cowQuoteSource` and the integration wrappers: whichever side of
-  // the trade touches an ERC4626 vault uses the *vault* address as the CoW
-  // token. The settlement runs withdraw/deposit inline, so this is the price
-  // the order actually clears at.
+  // Whichever side of the trade touches an ERC4626 vault uses the *vault*
+  // address as the CoW token. The settlement runs withdraw/deposit inline, so
+  // this is the price the order actually clears at.
   //   - openPosition (swap -> deposit):         buyToken  = receiver vault
   //   - closePosition (withdraw -> swap -> repay): sellToken = vaultIn vault
   //   - collateralSwap: sellToken = vaultIn vault, buyToken = receiver vault
@@ -290,10 +291,8 @@ async function fetchCowQuote(swapParams: SwapParams): Promise<{
     ? cowOrderOwner
     : swapParams.accountOut
 
-  // CoW appData expects basis points (1% = 100 bips). `swapParams.slippage` is
-  // in percent. The existing `cowQuoteSource` divides by 100 here, which is
-  // 10000× too small — always quotes 0 slippage. This strategy uses the
-  // correct conversion.
+  // CoW appData expects basis points (1% = 100 bips), while
+  // `swapParams.slippage` is expressed as a percentage.
   const slippageBips = Math.floor(swapParams.slippage * 100)
   const appData =
     swapParams.providerExtraData?.appData ??
