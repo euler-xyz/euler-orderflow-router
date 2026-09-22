@@ -161,4 +161,4 @@ Additionally there is a script to generate auxiliary config files, executed by `
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
 
 ## Tokenlists
-The router relies on tokenlists for all swapped tokens. They can be fetched from `TOKENLIST_URL` or read from JSON files in `tokenLists` folder if the configuration is missing. Note the files are not updated currently. Please reach out on [Euler discord](https://discord.com/invite/pTTnr7b4mT) if you need access to the tokenlist endpoint.
+The router relies on tokenlists for all swapped tokens. They can be fetched from `TOKENLIST_URL` or read from JSON files in `tokenLists` folder if the configuration is missing. Note the files are not updated currently. Please reach out on [Euler discord](https://discord.euler.finance/) if you need access to the tokenlist endpoint.
