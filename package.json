@@ -67,7 +67,7 @@
     "clean": true
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.4.15",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.6",
     "@types/qs": "^6.9.18",
