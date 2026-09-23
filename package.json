@@ -37,7 +37,7 @@
     "@uniswap/smart-order-router": "4.9.2",
     "@uniswap/v3-sdk": "3.30.0",
     "cors": "2.8.5",
-    "dotenv": "16.4.5",
+    "dotenv": "17.4.2",
     "ethers": "5.7.2",
     "express": "5.2.1",
     "express-http-context": "^1.2.5",
