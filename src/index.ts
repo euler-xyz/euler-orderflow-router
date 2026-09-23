@@ -1,19 +1,10 @@
 import { app, logger } from "@/server"
-import {
-  initContractBookCache,
-  refreshContractBookAddresses,
-} from "./common/utils/contractBook"
+import { loadDeployments } from "./common/utils/deployments"
 import { initTokenlistCache } from "./common/utils/tokenList"
 
 async function main() {
-  await refreshContractBookAddresses().catch((error) => {
-    logger.warn(
-      { error },
-      "Failed to refresh contractBook addresses on startup",
-    )
-  })
+  await loadDeployments()
 
-  initContractBookCache()
   initTokenlistCache()
 
   const server = app.listen(process.env.PORT, () => {
@@ -34,4 +25,7 @@ async function main() {
   process.on("SIGTERM", onCloseSignal)
 }
 
-void main()
+void main().catch((error) => {
+  logger.error({ error }, "Fatal: failed to load deployments on startup")
+  process.exit(1)
+})
