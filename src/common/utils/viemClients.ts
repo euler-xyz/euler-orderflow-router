@@ -17,7 +17,7 @@ export const RPC_URLS: Record<number, string> = {
   [chains.berachain.id]: process.env.RPC_URL_80094 || "",
   [chains.avalanche.id]: process.env.RPC_URL_43114 || "",
   [chains.bsc.id]: process.env.RPC_URL_56 || "",
-  [chains.linea.id]: process.env.RPC_URL_56 || "",
+  [chains.linea.id]: process.env.RPC_URL_59144 || "",
   [chains.sonic.id]: process.env.RPC_URL_146 || "",
   [chains.hyperEvm.id]: process.env.RPC_URL_999 || "",
   [chains.unichain.id]: process.env.RPC_URL_130 || "",
@@ -54,6 +54,7 @@ export const createClients = (): Record<number, Client<Transport, Chain>> => ({
   [chains.tac.id]: createChainConfig(chains.tac),
   [chains.plasma.id]: createChainConfig(chains.plasma),
   [chains.linea.id]: createChainConfig(chains.linea),
+  [chains.monad.id]: createChainConfig(chains.monad),
 })
 
 export const viemClients = createClients()
