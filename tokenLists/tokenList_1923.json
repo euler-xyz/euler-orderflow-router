@@ -5,7 +5,7 @@
     "name": "EUL",
     "symbol": "EUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
     "groups": [
       "EUL"
     ]
@@ -16,7 +16,7 @@
     "name": "rEUL",
     "symbol": "rEUL",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1/0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
     "groups": [
       "EUL"
     ]
@@ -27,7 +27,7 @@
     "name": "Wrapped Ether",
     "symbol": "WETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x4200000000000000000000000000000000000006",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x4200000000000000000000000000000000000006",
     "groups": [
       "ETH"
     ]
@@ -38,7 +38,7 @@
     "name": "Wrapped liquid staked Ether 2.0",
     "symbol": "wstETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x7c98E0779EB5924b3ba8cE3B17648539ed5b0Ecc",
     "groups": [
       "ETH"
     ],
@@ -53,7 +53,7 @@
     "name": "Wrapped eETH",
     "symbol": "weETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0xA6cB988942610f6731e664379D15fFcfBf282b44",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0xA6cB988942610f6731e664379D15fFcfBf282b44",
     "groups": [
       "ETH"
     ],
@@ -67,7 +67,7 @@
     "name": "Renzo Restaked ETH",
     "symbol": "ezETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x2416092f143378750bb29b79eD961ab195CcEea5",
     "groups": [
       "ETH"
     ],
@@ -81,7 +81,7 @@
     "name": "KelpDao Restaked ETH",
     "symbol": "rsETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0xc3eACf0612346366Db554C991D7858716db09f58",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0xc3eACf0612346366Db554C991D7858716db09f58",
     "groups": [
       "ETH"
     ],
@@ -96,7 +96,7 @@
     "name": "swETH",
     "symbol": "swETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x09341022ea237a4DB1644DE7CCf8FA0e489D85B7",
     "groups": [],
     "metadata": {
       "provider": "DEFILLAMA",
@@ -109,7 +109,7 @@
     "name": "rswETH",
     "symbol": "rswETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x18d33689AE5d02649a859A1CF16c9f0563975258",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x18d33689AE5d02649a859A1CF16c9f0563975258",
     "groups": [],
     "metadata": {
       "provider": "DEFILLAMA",
@@ -122,7 +122,7 @@
     "name": "Renzo Restaked LST",
     "symbol": "pzETH",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x9cb41CD74D01ae4b4f640EC40f7A60cA1bCF83E7",
     "groups": [],
     "metadata": {
       "provider": "RENZO"
@@ -134,7 +134,7 @@
     "name": "Relend Network USDC",
     "symbol": "rUSDC",
     "decimals": 6,
-    "logoURI": "https://token-images.euler.finance/1923/0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x9ab96A4668456896d45c301Bc3A15Cee76AA7B8D",
     "groups": [
       "USD"
     ]
@@ -145,7 +145,7 @@
     "name": "EVK Vault eWETH-1",
     "symbol": "eWETH-1",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x49C077B74292aA8F589d39034Bf9C1Ed1825a608",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x49C077B74292aA8F589d39034Bf9C1Ed1825a608",
     "groups": []
   },
   {
@@ -154,7 +154,7 @@
     "name": "USD Stable",
     "symbol": "USDs",
     "decimals": 18,
-    "logoURI": "https://token-images.euler.finance/1923/0x7fA65bb90fCEc0FA82e009E65AA3736c376C2572",
+    "logoURI": "https://v3.euler.finance/v3/images/tokens/1923/0x7fA65bb90fCEc0FA82e009E65AA3736c376C2572",
     "groups": []
   }
 ]
