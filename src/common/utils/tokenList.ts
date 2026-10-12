@@ -31,19 +31,6 @@ export type TokenListItem = {
   }
 }
 
-export const normalizeTokenImageURL = (logoURI: string) =>
-  logoURI.replace(
-    /^https?:\/\/token-images\.euler\.finance(?=\/\d+\/0x[\da-f]{40}(?:[?#]|$))/i,
-    "https://v3.euler.finance/v3/images/tokens",
-  )
-
-const normalizeTokenImages = (tokenlist: TokenListItem[]) => {
-  for (const token of tokenlist) {
-    if (token.logoURI) token.logoURI = normalizeTokenImageURL(token.logoURI)
-  }
-  return tokenlist
-}
-
 const cache: Record<number, TokenListItem[]> = {}
 const pendingTokenFetches = new Map<
   string,
@@ -78,9 +65,9 @@ const mergeCustomTokens = () => {
   const customPath = `${dir}/custom.json`
   if (!fs.existsSync(customPath)) return
 
-  const customTokens = normalizeTokenImages(
-    JSON.parse(fs.readFileSync(customPath).toString()) as TokenListItem[],
-  )
+  const customTokens = JSON.parse(
+    fs.readFileSync(customPath).toString(),
+  ) as TokenListItem[]
 
   for (const token of customTokens) {
     let chainTokens = cache[token.chainId]
@@ -106,11 +93,9 @@ const loadTokenlistsFromFiles = ({ overwrite = true } = {}) => {
     if (!match) throw new Error("Invalid tokenlist file")
     const chainId = Number(match[1])
     if (!overwrite && cache[chainId]) continue
-    cache[chainId] = normalizeTokenImages(
-      JSON.parse(
-        fs.readFileSync(`${dir}/${file}`).toString(),
-      ) as TokenListItem[],
-    )
+    cache[chainId] = JSON.parse(
+      fs.readFileSync(`${dir}/${file}`).toString(),
+    ) as TokenListItem[]
   }
 }
 
@@ -227,7 +212,7 @@ async function fetchTokenList(url: string, chainId: string) {
       token.logoURI = token.logoURI.replace(/([?&])v=[^&]*/g, "")
     }
   }
-  return normalizeTokenImages(tokenlist)
+  return tokenlist
 }
 
 export function findTokenInCache(chainId: number, tokenAddress: Address) {
