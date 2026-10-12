@@ -13,8 +13,8 @@ async function main() {
     )
   })
 
+  const tokenlistRefreshTimer = await initTokenlistCache()
   initContractBookCache()
-  initTokenlistCache()
 
   const server = app.listen(process.env.PORT, () => {
     const { NODE_ENV, PORT } = process.env
@@ -23,6 +23,7 @@ async function main() {
 
   const onCloseSignal = () => {
     logger.info("sigint received, shutting down")
+    clearInterval(tokenlistRefreshTimer)
     server.close(() => {
       logger.info("server closed")
       process.exit()
@@ -34,4 +35,7 @@ async function main() {
   process.on("SIGTERM", onCloseSignal)
 }
 
-void main()
+void main().catch((error) => {
+  logger.error({ error }, "Server startup failed")
+  process.exit(1)
+})

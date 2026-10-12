@@ -161,4 +161,12 @@ Additionally there is a script to generate auxiliary config files, executed by `
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
 
 ## Tokenlists
-The router relies on tokenlists for all swapped tokens. They can be fetched from `TOKENLIST_URL` or read from JSON files in `tokenLists` folder if the configuration is missing. Note the files are not updated currently. Please reach out on [Euler discord](https://discord.euler.finance/) if you need access to the tokenlist endpoint.
+The router fetches token lists from the required `TOKENLIST_URL` endpoint for each chain with a configured `RPC_URL_<chainId>`. The environment template uses `https://v3.euler.finance/v3/tokens`; `TOKENLIST_URL_<chainId>` can override the endpoint for an individual chain. Responses support paginated V3 envelopes or token arrays.
+
+Startup waits for a non-empty token list for every configured chain before accepting requests. A missing endpoint, an unsupported chain or a failed initial fetch prevents startup. The fetch timeout (`TOKENLIST_FETCH_TIMEOUT_SECONDS`, default 30) covers the full paginated list for each chain.
+
+Token lists are cached in memory and refreshed every `TOKENLIST_CACHE_TIMEOUT_SECONDS` (default 300). Failed or empty refreshes retain the last successful list for that chain. Concurrent refreshes share the same request. A process restart requires a successful upstream fetch.
+
+The four Monad entries in [`customTokens.json`](./src/common/config/customTokens.json) supplement the fetched catalog without overriding upstream entries. They include wrapped assets used by routing that are absent from the V3 catalog. Tokens absent from both sources can be resolved on-chain for basic ERC-20 metadata; that lookup does not supply Pendle or Spectra routing metadata.
+
+See [token-list coverage](./docs/token-list-coverage.md) for the routing metadata comparison, custom-token exceptions and deployment checks.

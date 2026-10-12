@@ -1,4 +1,3 @@
-import fs from "node:fs"
 import {
   http,
   type Address,
@@ -8,6 +7,7 @@ import {
   parseAbi,
   publicActions,
 } from "viem"
+import customTokens from "../config/customTokens.json"
 import { logWarn } from "./logs"
 import { RPC_URLS } from "./viemClients"
 
@@ -38,7 +38,7 @@ const pendingTokenFetches = new Map<
 >()
 const TOKENLIST_FETCH_TIMEOUT_MS =
   Number(process.env.TOKENLIST_FETCH_TIMEOUT_SECONDS || 30) * 1000
-const TOKENLIST_PAGE_SIZE = 100
+const TOKENLIST_PAGE_SIZE = 500
 
 const erc20StringAbi = parseAbi([
   "function name() view returns (string)",
@@ -50,62 +50,17 @@ const erc20Bytes32Abi = parseAbi([
 ])
 const erc20DecimalsAbi = parseAbi(["function decimals() view returns (uint8)"])
 
-const getTokenListsDir = () => {
-  let dir = `${__dirname}/../tokenLists`
-  try {
-    fs.readdirSync(dir)
-  } catch {
-    dir = `${__dirname}/../../../tokenLists`
-  }
-  return dir
-}
-
 const mergeCustomTokens = () => {
-  const dir = getTokenListsDir()
-  const customPath = `${dir}/custom.json`
-  if (!fs.existsSync(customPath)) return
-
-  const customTokens = JSON.parse(
-    fs.readFileSync(customPath).toString(),
-  ) as TokenListItem[]
-
-  for (const token of customTokens) {
-    let chainTokens = cache[token.chainId]
-    if (!chainTokens) {
-      chainTokens = []
-      cache[token.chainId] = chainTokens
+  for (const token of customTokens as TokenListItem[]) {
+    const chainTokens = cache[token.chainId]
+    if (!chainTokens) continue
+    if (
+      !chainTokens.some((cachedToken) =>
+        isAddressEqual(cachedToken.address, token.address),
+      )
+    ) {
+      chainTokens.push(token)
     }
-    const exists = chainTokens.some(
-      (cachedToken) =>
-        cachedToken.address.toLowerCase() === token.address.toLowerCase(),
-    )
-    if (!exists) chainTokens.push(token)
-  }
-}
-
-const loadTokenlistsFromFiles = ({ overwrite = true } = {}) => {
-  const dir = getTokenListsDir()
-  const files = fs
-    .readdirSync(dir)
-    .filter((file) => /^tokenList_(\d+)\.json$/.test(file))
-  for (const file of files) {
-    const match = file.match(/^tokenList_(\d+)\.json$/)
-    if (!match) throw new Error("Invalid tokenlist file")
-    const chainId = Number(match[1])
-    if (!overwrite && cache[chainId]) continue
-    cache[chainId] = JSON.parse(
-      fs.readFileSync(`${dir}/${file}`).toString(),
-    ) as TokenListItem[]
-  }
-}
-
-const writeTokenListsToFiles = () => {
-  const dir = getTokenListsDir()
-  for (const [chainId, tokenlist] of Object.entries(cache)) {
-    fs.writeFileSync(
-      `${dir}/tokenList_${chainId}.json`,
-      JSON.stringify(tokenlist, null, 2),
-    )
   }
 }
 
@@ -168,6 +123,7 @@ async function fetchTokenListPage(
   url: string,
   chainId: string,
   offset: number,
+  signal: AbortSignal,
 ) {
   const response = await fetch(
     buildTokenListURL(url, {
@@ -176,7 +132,7 @@ async function fetchTokenListPage(
       offset,
     }),
     {
-      signal: AbortSignal.timeout(TOKENLIST_FETCH_TIMEOUT_MS),
+      signal,
     },
   )
 
@@ -190,12 +146,21 @@ async function fetchTokenListPage(
 async function fetchTokenList(url: string, chainId: string) {
   const tokenlist: TokenListItem[] = []
   let offset = 0
+  const signal = AbortSignal.timeout(TOKENLIST_FETCH_TIMEOUT_MS)
   while (true) {
-    const response = await fetchTokenListPage(url, chainId, offset)
+    const response = await fetchTokenListPage(url, chainId, offset, signal)
     tokenlist.push(...response.tokenlist)
 
     const total = response.meta?.total
     const pageOffset = response.meta?.offset ?? offset
+    if (pageOffset !== offset) throw new Error("Invalid tokenlist page offset")
+    if (
+      total !== undefined &&
+      response.tokenlist.length === 0 &&
+      pageOffset < total
+    ) {
+      throw new Error("Incomplete tokenlist response")
+    }
     if (
       total === undefined ||
       response.tokenlist.length === 0 ||
@@ -204,7 +169,10 @@ async function fetchTokenList(url: string, chainId: string) {
       break
     }
 
-    offset = pageOffset + (response.meta?.limit ?? response.tokenlist.length)
+    const nextOffset =
+      pageOffset + (response.meta?.limit ?? response.tokenlist.length)
+    if (nextOffset <= offset) throw new Error("Invalid tokenlist pagination")
+    offset = nextOffset
   }
 
   for (const token of tokenlist) {
@@ -331,38 +299,51 @@ export async function getOrFetchToken(
   return fetchPromise
 }
 
-export async function buildCache() {
+async function refreshTokenlists() {
   const tokenlistURL = process.env.TOKENLIST_URL
-  if (!tokenlistURL) {
-    logWarn("Missing TOKENLIST_URL configuration. Falling back to static files")
-    loadTokenlistsFromFiles()
-    mergeCustomTokens()
-    return cache
-  }
+  if (!tokenlistURL) throw new Error("TOKENLIST_URL is required")
 
-  loadTokenlistsFromFiles({ overwrite: false })
+  const chainIds = Object.keys(RPC_URLS).filter(
+    (chainId) => RPC_URLS[Number(chainId)],
+  )
+  if (!chainIds.length)
+    throw new Error("At least one RPC_URL_<chainId> is required")
 
   await Promise.all(
-    Object.keys(RPC_URLS).map(async (chainId) => {
+    chainIds.map(async (chainId) => {
       const url = process.env[`TOKENLIST_URL_${chainId}`] || tokenlistURL
       try {
-        cache[Number(chainId)] = await fetchTokenList(url, chainId)
+        const tokenlist = await fetchTokenList(url, chainId)
+        if (!tokenlist.length)
+          throw new Error(`Empty tokenlist for chain ${chainId}`)
+        cache[Number(chainId)] = tokenlist
       } catch (err) {
         logWarn({
           name: `Error fetching tokenlist for chain ${chainId}`,
           error: err,
         })
+        if (!cache[Number(chainId)]) {
+          throw new Error(
+            `Initial tokenlist load failed for chain ${chainId}`,
+            { cause: err },
+          )
+        }
       }
     }),
   )
   mergeCustomTokens()
-
-  try {
-    writeTokenListsToFiles()
-  } catch (err) {
-    logWarn({ name: "Error writing tokenlists", error: err })
-  }
   return cache
+}
+
+let refreshPromise: Promise<typeof cache> | undefined
+
+export function buildCache() {
+  if (!refreshPromise) {
+    refreshPromise = refreshTokenlists().finally(() => {
+      refreshPromise = undefined
+    })
+  }
+  return refreshPromise
 }
 
 export default function getTokenList(chainId: number): TokenListItem[] {
@@ -373,10 +354,14 @@ export function getAllTokenLists() {
   return cache
 }
 
-export function initTokenlistCache() {
-  buildCache()
-  setInterval(
-    buildCache,
+export async function initTokenlistCache() {
+  await buildCache()
+  return setInterval(
+    () => {
+      buildCache().catch((error) => {
+        logWarn({ name: "Error refreshing tokenlists", error })
+      })
+    },
     Number(process.env.TOKENLIST_CACHE_TIMEOUT_SECONDS || 5 * 60) * 1000,
   )
 }
