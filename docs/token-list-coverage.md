@@ -30,7 +30,7 @@ The runtime retains all upstream metadata. ERC-20 on-chain lookup supplies name,
 | `0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9` | wnAUSD | Absent |
 | `0x8d5c2Df3Eef09088Fcccf3376D8EcD0Dd505f642` | wnUSDC | Absent |
 
-The four-entry compiled custom overlay preserves these assets without filesystem access. It applies only after a configured Monad catalog loads, and does not override V3 entries. The three absent wrappers are also the only snapshot tokens missing from the ten supported V3 catalogs. Cache-only inner-token lookups in routing are a reason to keep this overlay while those tokens are absent upstream.
+Requested tokens and inner assets resolve their metadata on-chain when absent from the catalog. The runtime contains no manually maintained custom-token overlay. Both listed and unlisted tokens need verified contract decimals before quoting.
 
 ## Deployment coverage
 
@@ -43,7 +43,7 @@ The default V3 endpoint returns HTTP 404 `CHAIN_NOT_SUPPORTED` for:
 
 These four chains account for 110 snapshot tokens, including 23 metadata records. This audit cannot establish their V3 routing coverage.
 
-Before deployment, compare the configured RPC chains with the deployed token-list source coverage. A configured chain using an unsupported endpoint prevents startup. Each such chain needs upstream catalog support or a suitable per-chain endpoint. Changing which chains the service supports is an explicit deployment decision.
+The router can start on these configured chains without a V3 catalog. It tries generic discovery sources and resolves missing ERC-20 assets through RPC. Protocol routes still require authoritative metadata; generic list availability is not equivalent to complete protocol coverage.
 
 Catalog coverage is not proof of swap execution. Live fork swaps were not run as part of this audit.
 
@@ -55,6 +55,12 @@ DefiLlama publishes a usable per-chain catalog at `https://d3g10bzo9rdluh.cloudf
 
 Pendle's current `/core/v2/markets/all?chainId={chainId}&limit=100&skip=0` API returns 17 Sonic markets and 14 Berachain markets, including expired markets. Protocol flags and market addresses must come from V3 or an authoritative protocol source; ordinary list names and symbols cannot establish that classification.
 
-The present runtime still uses the V3-only cache with the custom overlay. A broader automatic fallback requires contract-verified decimals on every input and inner-token lookup, including the aggregator metadata source. A failed RPC read must reject quoting rather than use a list value or assume 18 decimals. The two Midas payment-token calculations that default missing decimals to 18 also need attention in that refactor.
+The runtime uses V3 first, supplements failed catalogs with generic sources, and resolves unknown input and inner tokens on-chain. All quote consumers require contract decimals, including the aggregator metadata source and Midas payment-token calculations. No static catalogs or custom token records are bundled.
 
 Five of the eight Sonic snapshot PT-to-market mappings match the provider response. The remaining three PT addresses are absent from that response, so this source does not establish full routing parity. The Berachain snapshot PT-to-market mapping matches. A symbol prefix is not sufficient proof of a PT or its market.
+
+## Built-loader checks (2026-10-13)
+
+The built loader completed discovery for all 14 active configured chains. Sonic and Berachain used 104 and 78 normalized DefiLlama entries respectively; native zero-address placeholders were excluded. TAC and BOB completed initialization with empty catalogs and resolved requested tokens on-chain.
+
+All three Monad wrapper exceptions resolved through the configured public RPC with their actual symbols and six decimals. BOB WETH and a TAC ERC-20 also resolved through RPC without usable catalogs. These checks validate metadata discovery and decimal reads, not signed swap execution.

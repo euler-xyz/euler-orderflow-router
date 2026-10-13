@@ -4,9 +4,17 @@ import routingToken from "./fixtures/v3RoutingToken.json"
 const mocks = vi.hoisted(() => ({
   rpcUrls: {} as Record<number, string>,
   warn: vi.fn(),
+  fallback: vi.fn(),
+  pendle: vi.fn(),
 }))
 vi.mock("../common/utils/viemClients", () => ({ RPC_URLS: mocks.rpcUrls }))
 vi.mock("../common/utils/logs", () => ({ logWarn: mocks.warn }))
+
+vi.mock("../common/utils/tokenSources", async (original) => ({
+  ...(await original<typeof import("../common/utils/tokenSources")>()),
+  fetchFallbackTokens: mocks.fallback,
+  fetchPendleMetadata: mocks.pendle,
+}))
 
 const token = {
   chainId: 1,
@@ -26,6 +34,8 @@ const failure = () => ({ ok: false, status: 503, statusText: "Unavailable" })
 beforeEach(() => {
   vi.resetModules()
   vi.clearAllMocks()
+  mocks.fallback.mockResolvedValue([])
+  mocks.pendle.mockResolvedValue(new Map())
   for (const chain of Object.keys(mocks.rpcUrls))
     delete mocks.rpcUrls[Number(chain)]
   mocks.rpcUrls[1] = "https://rpc.example"
@@ -42,10 +52,13 @@ afterEach(() => {
 const load = () => import("../common/utils/tokenList")
 
 describe("V3 token cache", () => {
-  it("requires the upstream endpoint", async () => {
-    vi.stubEnv("TOKENLIST_URL", "")
-    await expect((await load()).buildCache()).rejects.toThrow(
-      "TOKENLIST_URL is required",
+  it("uses the production V3 endpoint when the override is omitted", async () => {
+    mocks.rpcUrls[1] = ""
+    const fetchMock = vi.fn().mockResolvedValue(response())
+    vi.stubGlobal("fetch", fetchMock)
+    await (await load()).buildCache()
+    expect(new URL(fetchMock.mock.calls[0][0]).origin).toBe(
+      "https://v3.euler.finance",
     )
   })
 
@@ -109,9 +122,7 @@ describe("V3 token cache", () => {
           response([token], { total: 2, limit: 0, offset: 0 }),
         ),
     )
-    await expect((await load()).buildCache()).rejects.toThrow(
-      "Initial tokenlist load failed",
-    )
+    await (await load()).buildCache()
     expect(mocks.warn.mock.calls[0][0].error.message).toBe(
       "Invalid tokenlist pagination",
     )
@@ -156,7 +167,7 @@ describe("V3 token cache", () => {
     await api.buildCache()
     expect(api.default(1)).toBe(mainnet)
     expect(api.default(143)).not.toBe(oldMonad)
-    expect(api.default(143)).toHaveLength(5)
+    expect(api.default(143)).toHaveLength(1)
   })
 
   it("shares an in-flight refresh", async () => {
@@ -177,7 +188,7 @@ describe("V3 token cache", () => {
   })
 
   it.each(["HTTP", "empty", "invalid"])(
-    "rejects a %s initial fetch without seeding a static list",
+    "uses RPC discovery readiness after a %s initial list failure",
     async (mode) => {
       const value =
         mode === "HTTP"
@@ -187,10 +198,9 @@ describe("V3 token cache", () => {
             : { ok: true, json: async () => ({ error: "bad" }) }
       vi.stubGlobal("fetch", vi.fn().mockResolvedValue(value))
       const api = await load()
-      await expect(api.buildCache()).rejects.toThrow(
-        "Initial tokenlist load failed for chain 1",
-      )
-      expect(api.getAllTokenLists()).toEqual({})
+      await api.buildCache()
+      expect(api.getAllTokenLists()).toEqual({ 1: [] })
+      expect(mocks.fallback).toHaveBeenCalledWith(1)
     },
   )
 
@@ -211,27 +221,26 @@ describe("V3 token cache", () => {
     },
   )
 
-  it("adds all four Monad custom tokens without overriding V3", async () => {
-    delete mocks.rpcUrls[1]
-    mocks.rpcUrls[143] = "https://rpc.example"
-    const upstream = {
-      ...token,
-      chainId: 143,
-      address: "0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
-      name: "V3 name",
-      symbol: "V3 symbol",
-    }
-    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response([upstream])))
-    const api = await load()
-    const cache = await api.buildCache()
-    expect(cache[143]).toHaveLength(4)
-    expect(cache[143][0].name).toBe("V3 name")
-    expect(cache[143].slice(1).map((t) => t.decimals)).toEqual([6, 6, 6])
-    await api.buildCache()
-    expect(cache[143]).toHaveLength(4)
+  it("uses fallback discovery and authoritative protocol metadata after a primary failure", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(failure()))
+    mocks.fallback.mockResolvedValue([token])
+    mocks.pendle.mockResolvedValue(
+      new Map([
+        [
+          token.address,
+          {
+            isPendlePT: true,
+            pendleMarket: "0x0000000000000000000000000000000000000002",
+          },
+        ],
+      ]),
+    )
+    const cache = await (await load()).buildCache()
+    expect(cache[1]).toHaveLength(1)
+    expect(cache[1][0].metadata?.isPendlePT).toBe(true)
   })
 
-  it("does not activate Monad through the custom overlay", async () => {
+  it("caches only configured chains", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response()))
     expect((await (await load()).buildCache())[143]).toBeUndefined()
   })
@@ -261,12 +270,13 @@ describe("V3 token cache", () => {
 
   it("does not schedule a refresh when startup fails", async () => {
     vi.useFakeTimers()
-    const fetchMock = vi.fn().mockResolvedValue(failure())
+    mocks.rpcUrls[1] = ""
+    const fetchMock = vi.fn()
     vi.stubGlobal("fetch", fetchMock)
     await expect((await load()).initTokenlistCache()).rejects.toThrow(
-      "Initial tokenlist load failed",
+      "At least one RPC_URL",
     )
     await vi.advanceTimersByTimeAsync(300_000)
-    expect(fetchMock).toHaveBeenCalledOnce()
+    expect(fetchMock).not.toHaveBeenCalled()
   })
 })

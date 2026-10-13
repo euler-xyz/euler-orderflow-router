@@ -160,13 +160,18 @@ Additionally there is a script to generate auxiliary config files, executed by `
 ## Selecting providers
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
 
-## Tokenlists
-The router fetches token lists from the required `TOKENLIST_URL` endpoint for each chain with a configured `RPC_URL_<chainId>`. The environment template uses `https://v3.euler.finance/v3/tokens`; `TOKENLIST_URL_<chainId>` can override the endpoint for an individual chain. Responses support paginated V3 envelopes or token arrays.
+## Token metadata
 
-Startup waits for a non-empty token list for every configured chain before accepting requests. A missing endpoint, an unsupported chain or a failed initial fetch prevents startup. The fetch timeout (`TOKENLIST_FETCH_TIMEOUT_SECONDS`, default 30) covers the full paginated list for each chain.
+The primary token catalog defaults to `https://v3.euler.finance/v3/tokens`. `TOKENLIST_URL` overrides it; `TOKENLIST_URL_<chainId>` can override it for an individual chain. Only chains with a configured `RPC_URL_<chainId>` are loaded.
 
-Token lists are cached in memory and refreshed every `TOKENLIST_CACHE_TIMEOUT_SECONDS` (default 300). Failed or empty refreshes retain the last successful list for that chain. Concurrent refreshes share the same request. A process restart requires a successful upstream fetch.
+If a primary catalog fails or is empty, the router supplements its last successful data with DefiLlama and the official Uniswap list. Discovery data stays in memory and refreshes every `TOKENLIST_CACHE_TIMEOUT_SECONDS` (default 300). Overlapping refreshes share one request. The timeout (`TOKENLIST_FETCH_TIMEOUT_SECONDS`, default 30) bounds each upstream load.
 
-The four Monad entries in [`customTokens.json`](./src/common/config/customTokens.json) supplement the fetched catalog without overriding upstream entries. They include wrapped assets used by routing that are absent from the V3 catalog. Tokens absent from both sources can be resolved on-chain for basic ERC-20 metadata; that lookup does not supply Pendle or Spectra routing metadata.
+Startup waits for the initial discovery attempts. List outages do not prevent startup: even with an empty catalog, requested ERC-20 tokens and inner routing assets can resolve their name, symbol and decimals through the configured RPC. Missing RPC configuration prevents startup. Native zero-address list placeholders are excluded.
 
-See [token-list coverage](./docs/token-list-coverage.md) for the routing metadata comparison, custom-token exceptions and deployment checks.
+Before quoting, both input tokens and inner routing assets use contract-verified decimals, memoized by chain and address for the process. Failed or invalid reads reject token resolution; list decimals and an assumed 18 are not used as substitutes. ERC-20 metadata reads have a 10-second RPC timeout and support string or bytes32 name/symbol responses.
+
+Protocol routing metadata comes from V3. For tokens absent from that catalog, the router can identify Pendle PT and LP addresses from Pendle's paginated market API. It does not classify tokens from their symbols or accept protocol flags from generic lists. A missing or ambiguous market mapping does not produce a fabricated market address.
+
+Optional source overrides are `DEFILLAMA_TOKEN_LIST_URL` (per-chain list base), `UNISWAP_TOKEN_LIST_URL` (global published list) and `PENDLE_MARKETS_URL` (paginated market endpoint). The default Uniswap source is its official npm publication; `tokens.uniswap.org` currently serves HTML.
+
+See [token-list coverage](./docs/token-list-coverage.md) for the source audit and protocol coverage limits.

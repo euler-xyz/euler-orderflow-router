@@ -5,6 +5,10 @@ vi.mock("../common/utils/viemClients", () => ({
   RPC_URLS: { 1: "https://rpc.example" },
 }))
 vi.mock("../common/utils/logs", () => ({ logWarn: vi.fn() }))
+vi.mock("../common/utils/tokenSources", async (original) => ({
+  ...(await original<typeof import("../common/utils/tokenSources")>()),
+  fetchPendleMetadata: async () => new Map(),
+}))
 vi.mock("viem", async (original) => ({
   ...(await original<typeof import("viem")>()),
   createPublicClient: () => ({ extend: () => ({ readContract: mocks.read }) }),

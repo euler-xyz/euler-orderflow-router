@@ -912,7 +912,7 @@ export class StrategyMidas {
     if (isAmountMToken) {
       amountOut = amount
       depositAmount = (amount * mTBILLPriceUSD) / mToken.priceOne
-      // clear out decimals over 6
+      // truncate to payment-token precision
       depositAmount = (depositAmount / scale) * scale
       amountIn = depositAmount / scale
       amountOut = (depositAmount * mToken.priceOne) / mTBILLPriceUSD
