@@ -3,9 +3,11 @@ import {
   type Address,
   createPublicClient,
   hexToString,
+  isAddress,
   isAddressEqual,
   parseAbi,
   publicActions,
+  zeroAddress,
 } from "viem"
 import customTokens from "../config/customTokens.json"
 import { logWarn } from "./logs"
@@ -32,6 +34,7 @@ export type TokenListItem = {
 }
 
 const cache: Record<number, TokenListItem[]> = {}
+const verifiedDecimals = new Map<string, number>()
 const pendingTokenFetches = new Map<
   string,
   Promise<TokenListItem | undefined>
@@ -214,7 +217,7 @@ function getPublicClient(chainId: number) {
   if (!rpcUrl) return
 
   return createPublicClient({
-    transport: http(rpcUrl, { timeout: 120_000 }),
+    transport: http(rpcUrl, { timeout: 10_000, retryCount: 0 }),
   }).extend(publicActions)
 }
 
@@ -263,7 +266,14 @@ async function fetchTokenFromContract(
       }) as Promise<number>,
     ])
 
-    if (!name || !symbol || decimals === undefined || decimals === null) return
+    if (
+      !name ||
+      !symbol ||
+      !Number.isInteger(decimals) ||
+      decimals < 0 ||
+      decimals > 255
+    )
+      return
 
     return upsertTokenInCache({
       address: tokenAddress,
@@ -282,19 +292,49 @@ export async function getOrFetchToken(
   chainId: number,
   tokenAddress: Address,
 ): Promise<TokenListItem | undefined> {
-  const cachedToken = findTokenInCache(chainId, tokenAddress)
-  if (cachedToken) return cachedToken
-
+  if (
+    !RPC_URLS[chainId] ||
+    !isAddress(tokenAddress) ||
+    tokenAddress.toLowerCase() === zeroAddress
+  )
+    return
   const key = `${chainId}:${tokenAddress.toLowerCase()}`
   const pendingFetch = pendingTokenFetches.get(key)
   if (pendingFetch) return pendingFetch
 
-  const fetchPromise = fetchTokenFromContract(chainId, tokenAddress).finally(
-    () => {
-      pendingTokenFetches.delete(key)
-    },
-  )
-
+  const fetchPromise = (async () => {
+    const cachedToken = findTokenInCache(chainId, tokenAddress)
+    if (!cachedToken) {
+      const token = await fetchTokenFromContract(chainId, tokenAddress)
+      if (token) verifiedDecimals.set(key, token.decimals)
+      return token
+    }
+    let decimals = verifiedDecimals.get(key)
+    if (decimals === undefined) {
+      const client = getPublicClient(chainId)
+      if (!client) return
+      try {
+        decimals = (await client.readContract({
+          address: tokenAddress,
+          abi: erc20DecimalsAbi,
+          functionName: "decimals",
+        })) as number
+      } catch {
+        return
+      }
+    }
+    if (
+      decimals === undefined ||
+      !Number.isInteger(decimals) ||
+      decimals < 0 ||
+      decimals > 255
+    )
+      return
+    verifiedDecimals.set(key, decimals)
+    return upsertTokenInCache({ ...cachedToken, decimals })
+  })().finally(() => {
+    pendingTokenFetches.delete(key)
+  })
   pendingTokenFetches.set(key, fetchPromise)
   return fetchPromise
 }
