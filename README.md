@@ -157,6 +157,10 @@ const pipeline = [
  
 Additionally there is a script to generate auxiliary config files, executed by `pnpm run generate-config`. Currently it fetches the list of supported [Pendle aggregators](./src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json) for all chains
 
+## Adding a chain and deploying
+
+See [docs/adding-a-chain.md](./docs/adding-a-chain.md) for enabling a chain, the RPC and token list it needs, and how the service is built and deployed.
+
 ## Selecting providers
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
 
