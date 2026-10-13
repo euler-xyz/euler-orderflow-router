@@ -22,7 +22,6 @@ export const RPC_URLS: Record<number, string> = {
   [chains.hyperEvm.id]: process.env.RPC_URL_999 || "",
   [chains.unichain.id]: process.env.RPC_URL_130 || "",
   [chains.bob.id]: process.env.RPC_URL_60808 || "",
-  [chains.swellchain.id]: process.env.RPC_URL_1923 || "",
   [chains.tac.id]: process.env.RPC_URL_239 || "",
   [chains.plasma.id]: process.env.RPC_URL_9745 || "",
   [chains.monad.id]: process.env.RPC_URL_143 || "",

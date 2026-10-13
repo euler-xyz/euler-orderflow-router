@@ -37,13 +37,24 @@ The four-entry compiled custom overlay preserves these assets without filesystem
 The default V3 endpoint returns HTTP 404 `CHAIN_NOT_SUPPORTED` for:
 
 - Sonic: `146`
-- Swell: `1923`
 - TAC: `239`
 - BOB: `60808`
 - Berachain: `80094`
 
-These five chains account for 123 snapshot tokens, including 27 routing metadata records. This audit cannot establish their V3 routing coverage.
+These four chains account for 110 snapshot tokens, including 23 metadata records. This audit cannot establish their V3 routing coverage.
 
 Before deployment, compare the configured RPC chains with the deployed token-list source coverage. A configured chain using an unsupported endpoint prevents startup. Each such chain needs upstream catalog support or a suitable per-chain endpoint. Changing which chains the service supports is an explicit deployment decision.
 
 Catalog coverage is not proof of swap execution. Live fork swaps were not run as part of this audit.
+
+## Automatic source audit (2026-10-13)
+
+DefiLlama publishes a usable per-chain catalog at `https://d3g10bzo9rdluh.cloudfront.net/tokenlists-{chainId}.json` for Sonic (105 entries) and Berachain (79 entries). The TAC and BOB URLs return HTTP 403. These payloads contain basic token details but no protocol routing metadata.
+
+`https://tokens.uniswap.org` returns HTML in this audit. The official `@uniswap/default-token-list` npm publication serves JSON via `https://unpkg.com/@uniswap/default-token-list@latest/build/uniswap-default.tokenlist.json`, but its 1,784 tokens do not include Sonic, TAC, BOB or Berachain.
+
+Pendle's current `/core/v2/markets/all?chainId={chainId}&limit=100&skip=0` API returns 17 Sonic markets and 14 Berachain markets, including expired markets. Protocol flags and market addresses must come from V3 or an authoritative protocol source; ordinary list names and symbols cannot establish that classification.
+
+The present runtime still uses the V3-only cache with the custom overlay. A broader automatic fallback requires contract-verified decimals on every input and inner-token lookup, including the aggregator metadata source. A failed RPC read must reject quoting rather than use a list value or assume 18 decimals. The two Midas payment-token calculations that default missing decimals to 18 also need attention in that refactor.
+
+The eight Sonic snapshot PTs all need their market mappings checked against live provider data before adopting automatic enrichment; some returned mappings differ from the recorded snapshot market. A symbol prefix is not sufficient proof of a PT or its market.

@@ -25,7 +25,6 @@ const SUPPORTED_CHAINS = [
   chains.linea.id,
   chains.sonic.id,
   chains.hyperEvm.id,
-  chains.swellchain.id,
   chains.unichain.id,
   chains.berachain.id,
   chains.bob.id,

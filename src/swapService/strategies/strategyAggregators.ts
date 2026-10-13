@@ -217,8 +217,7 @@ export class StrategyAggregators {
   async supports(swapParams: SwapParams) {
     return (
       !isExactInRepay(swapParams) &&
-      (this.sdk.quoteService.supportedChains().includes(swapParams.chainId) ||
-        swapParams.chainId === 1923) && // TODO fix!
+      this.sdk.quoteService.supportedChains().includes(swapParams.chainId) &&
       (!this.config.sourcesFilter?.includeSources ||
         this.config.sourcesFilter.includeSources.length > 0)
     )
