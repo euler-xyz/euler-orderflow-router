@@ -53,7 +53,7 @@ const load = () => import("../common/utils/tokenList")
 
 describe("V3 token cache", () => {
   it("uses the production V3 endpoint when the override is omitted", async () => {
-    mocks.rpcUrls[1] = ""
+    vi.stubEnv("TOKENLIST_URL", "")
     const fetchMock = vi.fn().mockResolvedValue(response())
     vi.stubGlobal("fetch", fetchMock)
     await (await load()).buildCache()
