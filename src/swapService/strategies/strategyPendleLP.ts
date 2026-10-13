@@ -114,7 +114,7 @@ export class StrategyPendleLP {
 
     if (!swapParams.tokenIn.metadata?.pendleMarket)
       throw new Error("Missing input pendle market")
-    const tokenIn = findToken(
+    const tokenIn = await findToken(
       swapParams.chainId,
       getAddress(swapParams.tokenIn.metadata.pendleMarket),
     )
@@ -161,7 +161,7 @@ export class StrategyPendleLP {
     if (!swapParams.tokenOut.metadata?.pendleMarket)
       throw new Error("Missing output pendle market")
 
-    const tokenOut = findToken(
+    const tokenOut = await findToken(
       swapParams.chainId,
       getAddress(swapParams.tokenOut.metadata?.pendleMarket),
     )
@@ -222,7 +222,7 @@ export class StrategyPendleLP {
   ): Promise<SwapApiResponse[]> {
     if (!swapParams.tokenIn.metadata?.pendleMarket)
       throw new Error("Missing input pendle market")
-    const tokenIn = findToken(
+    const tokenIn = await findToken(
       swapParams.chainId,
       getAddress(swapParams.tokenIn.metadata.pendleMarket),
     )
@@ -290,7 +290,7 @@ export class StrategyPendleLP {
   ): Promise<SwapApiResponse[]> {
     if (!swapParams.tokenOut.metadata?.pendleMarket)
       throw new Error("Missing output pendle market")
-    const lpToken = findToken(
+    const lpToken = await findToken(
       swapParams.chainId,
       getAddress(swapParams.tokenOut.metadata?.pendleMarket),
     )

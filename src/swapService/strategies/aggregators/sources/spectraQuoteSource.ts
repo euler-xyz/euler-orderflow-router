@@ -106,8 +106,8 @@ export class CustomSpectraQuoteSource
       accounts: { takeFrom, recipient },
     },
   }: QuoteParams<SpectraSupport, SpectraConfig>) {
-    const tokenIn = findToken(chainId, getAddress(sellToken))
-    const tokenOut = findToken(chainId, getAddress(buyToken))
+    const tokenIn = await findToken(chainId, getAddress(sellToken))
+    const tokenOut = await findToken(chainId, getAddress(buyToken))
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
     if (!tokenIn.metadata?.isSpectraPT && !tokenOut.metadata?.isSpectraPT) {
       failed(

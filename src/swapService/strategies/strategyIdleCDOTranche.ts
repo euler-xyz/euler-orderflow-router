@@ -178,7 +178,7 @@ export class StrategyIdleCDOTranche {
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
     const trancheData = this.getSupportedTranche(swapParams.tokenOut.address)
-    const tokenOut = findToken(swapParams.chainId, trancheData.underlying)
+    const tokenOut = await findToken(swapParams.chainId, trancheData.underlying)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,

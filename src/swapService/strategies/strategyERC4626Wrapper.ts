@@ -435,7 +435,7 @@ export class StrategyERC4626Wrapper {
     )
 
     const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
 
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -536,7 +536,7 @@ export class StrategyERC4626Wrapper {
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
     const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
-    const tokenOut = findToken(swapParams.chainId, vaultData.asset)
+    const tokenOut = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,
@@ -657,7 +657,7 @@ export class StrategyERC4626Wrapper {
   ): Promise<SwapApiResponse[]> {
     // TODO expects dust out - add to dust list
     const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,
@@ -781,7 +781,7 @@ export class StrategyERC4626Wrapper {
     const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
 
     const mintAmount = adjustForInterest(swapParams.amount)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenIn) throw new Error("Inner token in not found")
     const mintSwapParams = {
       ...swapParams,
@@ -807,7 +807,7 @@ export class StrategyERC4626Wrapper {
       mintData,
     )
 
-    const tokenOut = findToken(swapParams.chainId, vaultData.asset)
+    const tokenOut = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,

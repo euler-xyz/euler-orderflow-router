@@ -362,10 +362,10 @@ export class StrategyMidas {
 
     const innerSwapParams = {
       ...swapParams,
-      tokenIn: findToken(
+      tokenIn: (await findToken(
         swapParams.chainId,
         mToken.paymentToken,
-      ) as TokenListItem,
+      )) as TokenListItem,
       amount: redeemInstantAmountOut,
     }
 
@@ -459,10 +459,10 @@ export class StrategyMidas {
 
     const innerSwapParams = {
       ...swapParams,
-      tokenOut: findToken(
+      tokenOut: (await findToken(
         swapParams.chainId,
         mToken.paymentToken,
-      ) as TokenListItem,
+      )) as TokenListItem,
       receiver: swapParams.from,
     }
 
@@ -590,10 +590,10 @@ export class StrategyMidas {
 
     const innerSwapParams = {
       ...swapParams,
-      tokenIn: findToken(
+      tokenIn: (await findToken(
         swapParams.chainId,
         mToken.paymentToken,
-      ) as TokenListItem,
+      )) as TokenListItem,
       vaultIn: mToken.paymentTokenSweepVault,
       accountIn: swapParams.dustAccount,
       onlyFixedInputExactOut: true, // eliminate dust in the intermediate asset (vault underlying)
@@ -800,7 +800,7 @@ export class StrategyMidas {
 
     const mToken = this.getMToken(swapParams)
     const paymentTokenDecimals = BigInt(
-      findToken(swapParams.chainId, mToken.paymentToken)?.decimals || 18,
+      (await findToken(swapParams.chainId, mToken.paymentToken)).decimals,
     )
 
     const mTBILLPriceUSD = await fetchMTokenPrice(swapParams.chainId, mToken)
@@ -883,7 +883,7 @@ export class StrategyMidas {
   ) {
     const mToken = this.getMToken(swapParams)
     const paymentTokenDecimals = BigInt(
-      findToken(swapParams.chainId, mToken.paymentToken)?.decimals || 18,
+      (await findToken(swapParams.chainId, mToken.paymentToken)).decimals,
     )
 
     const abiItem = {
