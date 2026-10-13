@@ -74,7 +74,9 @@ See [Token metadata](../README.md#token-metadata) and [token-list coverage](./to
 
 The image is built from the `Dockerfile`. The build needs the `NODE_BASE_REPO` build arg: the repository that holds the `24-slim` and `24-distroless` Node base images. The build runs `generate-config` and `build`.
 
-A deploy is a terraform apply of the swap API stack, with `docker_image_link` set to the image (`<registry>/<repository>:<tag>`). Terraform reads the task's environment from Doppler at apply time. A newly provisioned `RPC_URL_<id>` reaches the service only at the next apply.
+On every push to `master`, `.github/workflows/build-image.yml` builds the image and pushes it to ECR as `<ECR_REPOSITORY>:<commit SHA>`. It never runs on pull requests, and it runs only in `euler-xyz/euler-orderflow-router`, not in forks.
+
+A deploy is a terraform apply of the swap API stack, with `docker_image_link` set to `<registry>/<ECR_REPOSITORY>:<commit SHA>`. Terraform reads the task's environment from Doppler at apply time. A newly provisioned `RPC_URL_<id>` reaches the service only at the next apply.
 
 Order for a new chain:
 
@@ -83,3 +85,47 @@ Order for a new chain:
 3. The config PR is merged and its image is built.
 4. Terraform is applied with that image.
 5. `GET /providers?chainId=<id>` lists the expected providers, and a quote on the chain succeeds.
+
+### One-time setup for the image workflow
+
+The workflow signs in to AWS with GitHub OIDC; there are no stored keys. A repository admin sets up:
+
+1. **OIDC provider.** The AWS account trusts `token.actions.githubusercontent.com` with audience `sts.amazonaws.com`. Skip this if the account already has it.
+2. **IAM role** for the workflow, with this trust policy:
+
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Federated": "arn:aws:iam::<account-id>:oidc-provider/token.actions.githubusercontent.com"
+         },
+         "Action": "sts:AssumeRoleWithWebIdentity",
+         "Condition": {
+           "StringEquals": {
+             "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+             "token.actions.githubusercontent.com:sub": "repo:euler-xyz/euler-orderflow-router:ref:refs/heads/master"
+           }
+         }
+       }
+     ]
+   }
+   ```
+
+   The `sub` condition limits the role to pushes to `master` in this repository. If the organization customizes its OIDC subject claim, match that format instead. The role's permissions:
+   - `ecr:GetAuthorizationToken` on `*`
+   - on the swap API repository: `ecr:BatchCheckLayerAvailability`, `ecr:BatchGetImage`, `ecr:GetDownloadUrlForLayer`, `ecr:InitiateLayerUpload`, `ecr:UploadLayerPart`, `ecr:CompleteLayerUpload` and `ecr:PutImage`
+   - on the base image repository: `ecr:BatchCheckLayerAvailability`, `ecr:BatchGetImage` and `ecr:GetDownloadUrlForLayer`
+3. **ECR repository.** Use the one the swap API stack deploys from. Set its tags to immutable: each tag is a commit SHA and never changes.
+4. **Repository variables**, under Settings → Secrets and variables → Actions → Variables:
+
+   | Variable | Value |
+   |---|---|
+   | `AWS_ROLE_ARN` | ARN of the role from step 2 |
+   | `AWS_REGION` | region of the ECR registry |
+   | `ECR_REPOSITORY` | name of the repository from step 3 |
+   | `NODE_BASE_REPO` | the base image repository URI, without a tag, as passed to `docker build --build-arg` |
+
+The login step signs in to the role account's default registry. `NODE_BASE_REPO` must be in that registry, or the login step needs the base image's registry added under `registries`. Until all four variables are set, the workflow fails at its first step and names the missing ones.
