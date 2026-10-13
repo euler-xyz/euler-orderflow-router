@@ -51,9 +51,8 @@ const customSources = {
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
     "IceCreamSwap",
-    [60808],
   ),
-  oku_bob_uniswap: new CustomOkuQuoteSource("usor", "Uniswap", [60808]),
+  oku_bob_uniswap: new CustomOkuQuoteSource("usor", "Uniswap"),
   "binance-wallet": new CustomBinanceWalletQuoteSource(),
 }
 export class CustomSourceList extends LocalSourceList {

@@ -1,12 +1,7 @@
 import { logWarn } from "@/common/utils/logs"
 import { viemClients } from "@/common/utils/viemClients"
-import {
-  type Address,
-  Addresses,
-  type ChainId,
-  Chains,
-  isSameAddress,
-} from "@balmy/sdk"
+import { aggregatorChainSettings } from "@/swapService/config/chains"
+import { Addresses, isSameAddress } from "@balmy/sdk"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -21,68 +16,9 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
 import { formatUnits, publicActions } from "viem"
-import * as chains from "viem/chains"
 
 // https://docs.openocean.finance/dev/supported-chains
-const SUPPORTED_CHAINS: Record<
-  ChainId,
-  { chainKey: string; nativeAsset?: Address }
-> = {
-  [Chains.ETHEREUM.chainId]: { chainKey: "eth" },
-  [Chains.BNB_CHAIN.chainId]: { chainKey: "bsc" },
-  [Chains.POLYGON.chainId]: {
-    chainKey: "polygon",
-    nativeAsset: "0x0000000000000000000000000000000000001010",
-  },
-  [Chains.BASE.chainId]: { chainKey: "base" },
-  [Chains.LINEA.chainId]: { chainKey: "linea" },
-  [Chains.FANTOM.chainId]: {
-    chainKey: "fantom",
-    nativeAsset: "0x0000000000000000000000000000000000000000",
-  },
-  [Chains.AVALANCHE.chainId]: {
-    chainKey: "avax",
-    nativeAsset: "0x0000000000000000000000000000000000000000",
-  },
-  [Chains.ARBITRUM.chainId]: { chainKey: "arbitrum" },
-  [Chains.OPTIMISM.chainId]: { chainKey: "optimism" },
-  [Chains.MOONRIVER.chainId]: { chainKey: "moonriver" },
-  [Chains.AURORA.chainId]: { chainKey: "aurora" },
-  [Chains.CRONOS.chainId]: {
-    chainKey: "cronos",
-    nativeAsset: "0x0000000000000000000000000000000000000000",
-  },
-  [Chains.HARMONY_SHARD_0.chainId]: { chainKey: "harmony" },
-  [Chains.KAVA.chainId]: { chainKey: "kava" },
-  [Chains.METIS_ANDROMEDA.chainId]: {
-    chainKey: "metis",
-    nativeAsset: "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
-  },
-  [Chains.CELO.chainId]: {
-    chainKey: "celo",
-    nativeAsset: "0x471ece3750da237f93b8e339c536989b8978a438",
-  },
-  [Chains.POLYGON_ZKEVM.chainId]: { chainKey: "polygon_zkevm" },
-  [Chains.ONTOLOGY.chainId]: { chainKey: "ontvm" },
-  [Chains.GNOSIS.chainId]: {
-    chainKey: "xdai",
-    nativeAsset: "0x0000000000000000000000000000000000000000",
-  },
-  [Chains.opBNB.chainId]: { chainKey: "opbnb" },
-  [Chains.BLAST.chainId]: { chainKey: "blast" },
-  [Chains.ROOTSTOCK.chainId]: { chainKey: "rootstock" },
-  [Chains.MODE.chainId]: { chainKey: "mode" },
-  [chains.sonic.id]: { chainKey: "sonic" },
-  [chains.berachain.id]: { chainKey: "berachain" },
-  [chains.hyperEvm.id]: {
-    chainKey: "hyperevm",
-    nativeAsset: "0x0000000000000000000000000000000000000000",
-  },
-  [chains.unichain.id]: { chainKey: "unichain" }, // fix gas price
-  [chains.tac.id]: { chainKey: "tac" }, // fix gas price
-  [chains.plasma.id]: { chainKey: "plasma" },
-  [chains.monad.id]: { chainKey: "monad" },
-}
+const SUPPORTED_CHAINS = aggregatorChainSettings("open-ocean")
 
 const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {
   name: "Open Ocean",
@@ -129,8 +65,9 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
     })
     const gasPriceGwei = Number.parseFloat(formatUnits(gasPrice, 9))
     const amount = formatUnits(order.sellAmount, sellTokenDataResult.decimals)
-    const { nativeAsset } = SUPPORTED_CHAINS[chainId]
-    const native = nativeAsset ?? Addresses.NATIVE_TOKEN
+    const settings = SUPPORTED_CHAINS[chainId]
+    const native =
+      settings === true ? Addresses.NATIVE_TOKEN : settings.nativeAsset
     const queryParams = {
       inTokenAddress: isSameAddress(sellToken, Addresses.NATIVE_TOKEN)
         ? native

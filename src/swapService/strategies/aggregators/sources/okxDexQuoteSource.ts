@@ -1,9 +1,9 @@
 import crypto from "node:crypto"
+import { aggregatorChains } from "@/swapService/config/chains"
 import {
   type Address,
   Addresses,
   type ChainId,
-  Chains,
   type IFetchService,
   type TimeString,
   Uint,
@@ -19,42 +19,14 @@ import type {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/types"
 import { failed } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import * as chains from "viem/chains"
 
 // https://www.okx.com/web3/build/docs/waas/okx-waas-supported-networks
-const SUPPORTED_CHAINS = [
-  Chains.ETHEREUM,
-  Chains.OPTIMISM,
-  Chains.POLYGON,
-  Chains.BNB_CHAIN,
-  Chains.OKC,
-  Chains.AVALANCHE,
-  Chains.FANTOM,
-  Chains.ARBITRUM,
-  Chains.LINEA,
-  Chains.BASE,
-  Chains.SCROLL,
-  Chains.BLAST,
-  Chains.POLYGON_ZKEVM,
-  Chains.FANTOM,
-  Chains.MANTLE,
-  Chains.METIS_ANDROMEDA,
-  Chains.ZK_SYNC_ERA,
-  Chains.SONIC,
-  {
-    chainId: chains.unichain.id,
-    name: "Unichain",
-  },
-  {
-    chainId: chains.plasma.id,
-    name: "Plasma",
-  },
-]
+const SUPPORTED_CHAINS = aggregatorChains("okx-dex")
 
 const OKX_DEX_METADATA: QuoteSourceMetadata<OKXDexSupport> = {
   name: "OKX Dex",
   supports: {
-    chains: SUPPORTED_CHAINS.map(({ chainId }) => chainId),
+    chains: SUPPORTED_CHAINS,
     swapAndTransfer: true,
     buyOrders: false,
   },

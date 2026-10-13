@@ -1,3 +1,4 @@
+import { aggregatorChains } from "@/swapService/config/chains"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -12,31 +13,15 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import * as chains from "viem/chains"
 
 // Supported chains verified against https://docs.nordstern.finance/en/latest/usage.html#supported-chains
 // and https://api.nordstern.finance/chains for the chains currently used by this router.
-const SUPPORTED_CHAINS = [
-  chains.mainnet.id,
-  chains.base.id,
-  chains.avalanche.id,
-  chains.bsc.id,
-  chains.arbitrum.id,
-  chains.linea.id,
-  chains.sonic.id,
-  chains.hyperEvm.id,
-  chains.unichain.id,
-  chains.berachain.id,
-  chains.bob.id,
-  chains.plasma.id,
-  chains.monad.id,
-  chains.tac.id,
-] as const
+const SUPPORTED_CHAINS = aggregatorChains("nordstern")
 
 const NORDSTERN_METADATA: QuoteSourceMetadata<NordsternSupport> = {
   name: "Nordstern",
   supports: {
-    chains: [...SUPPORTED_CHAINS],
+    chains: SUPPORTED_CHAINS,
     swapAndTransfer: true,
     buyOrders: false,
   },

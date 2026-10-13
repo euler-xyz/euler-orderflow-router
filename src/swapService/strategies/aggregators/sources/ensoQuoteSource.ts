@@ -1,4 +1,4 @@
-import { Chains } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
 import type {
   BuildTxParams,
   IQuoteSource,
@@ -14,27 +14,11 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import * as chains from "viem/chains"
 
 const ENSO_METADATA: QuoteSourceMetadata<EnsoSupport> = {
   name: "Enso",
   supports: {
-    chains: [
-      Chains.ETHEREUM.chainId,
-      Chains.OPTIMISM.chainId,
-      Chains.BNB_CHAIN.chainId,
-      Chains.GNOSIS.chainId,
-      Chains.POLYGON.chainId,
-      Chains.BASE.chainId,
-      Chains.ARBITRUM.chainId,
-      Chains.AVALANCHE.chainId,
-      Chains.SONIC.chainId,
-      chains.hyperEvm.id,
-      chains.berachain.id,
-      chains.unichain.id,
-      chains.plasma.id,
-      chains.monad.id,
-    ],
+    chains: aggregatorChains("enso"),
     swapAndTransfer: false,
     buyOrders: false,
   },

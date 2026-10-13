@@ -1,8 +1,7 @@
+import { aggregatorChainSettings } from "@/swapService/config/chains"
 import {
   type Address,
   Addresses,
-  type ChainId,
-  Chains,
   type TimeString,
   calculateDeadline,
   isSameAddress,
@@ -20,34 +19,8 @@ import {
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
-import * as chains from "viem/chains"
 
-const SUPPORTED_CHAINS: Record<ChainId, string> = {
-  [Chains.ARBITRUM.chainId]: "arbitrum",
-  [Chains.AURORA.chainId]: "aurora",
-  [Chains.AVALANCHE.chainId]: "avalanche",
-  [Chains.BNB_CHAIN.chainId]: "bsc",
-  [Chains.BIT_TORRENT.chainId]: "bttc",
-  [Chains.CRONOS.chainId]: "cronos",
-  [Chains.ETHEREUM.chainId]: "ethereum",
-  [Chains.FANTOM.chainId]: "fantom",
-  [Chains.OASIS_EMERALD.chainId]: "oasis",
-  [Chains.POLYGON.chainId]: "polygon",
-  [Chains.VELAS.chainId]: "velas",
-  [Chains.OPTIMISM.chainId]: "optimism",
-  [Chains.LINEA.chainId]: "linea",
-  [Chains.BASE.chainId]: "base",
-  [Chains.POLYGON_ZKEVM.chainId]: "polygon-zkevm",
-  [Chains.SCROLL.chainId]: "scroll",
-  [Chains.BLAST.chainId]: "blast",
-  [Chains.MANTLE.chainId]: "mantle",
-  [Chains.SONIC.chainId]: "sonic",
-  [Chains.ZK_SYNC_ERA.chainId]: "zksync",
-  [chains.hyperEvm.id]: "hyperevm",
-  [chains.unichain.id]: "unichain",
-  [chains.plasma.id]: "plasma",
-  [chains.monad.id]: "monad",
-}
+const SUPPORTED_CHAINS = aggregatorChainSettings("kyberswap")
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {
   name: "Kyberswap",
@@ -90,7 +63,7 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
   }: QuoteParams<KyberswapSupport>): Promise<
     SourceQuoteResponse<KyberswapData>
   > {
-    const chainKey = SUPPORTED_CHAINS[chainId]
+    const { chainKey } = SUPPORTED_CHAINS[chainId]
     const headers = config.referrer?.name
       ? { "x-client-id": "llamaswap" } //TODO FIX //config.referrer?.name }
       : undefined
@@ -150,7 +123,7 @@ export class CustomKyberswapQuoteSource extends AlwaysValidConfigAndContextSourc
     KyberswapConfig,
     KyberswapData
   >): Promise<SourceQuoteTransaction> {
-    const chainKey = SUPPORTED_CHAINS[chainId]
+    const { chainKey } = SUPPORTED_CHAINS[chainId]
     const headers = config.referrer?.name
       ? { "x-client-id": config.referrer?.name }
       : undefined

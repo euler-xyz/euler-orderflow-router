@@ -1,4 +1,5 @@
-import { Chains, calculateDeadline } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
+import { calculateDeadline } from "@balmy/sdk"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -17,19 +18,7 @@ import qs from "qs"
 const PARASWAP_METADATA: QuoteSourceMetadata<ParaswapSupport> = {
   name: "Velora",
   supports: {
-    chains: [
-      Chains.ETHEREUM.chainId,
-      Chains.POLYGON.chainId,
-      Chains.BNB_CHAIN.chainId,
-      Chains.AVALANCHE.chainId,
-      Chains.FANTOM.chainId,
-      Chains.ARBITRUM.chainId,
-      Chains.OPTIMISM.chainId,
-      Chains.POLYGON_ZKEVM.chainId,
-      Chains.BASE.chainId,
-      Chains.GNOSIS.chainId,
-      130, // unichain
-    ],
+    chains: aggregatorChains("paraswap"),
     swapAndTransfer: true,
     buyOrders: true,
   },

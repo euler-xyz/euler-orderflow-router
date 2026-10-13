@@ -1,4 +1,5 @@
 import crypto from "node:crypto"
+import { aggregatorChains } from "@/swapService/config/chains"
 import {
   Addresses,
   type ChainId,
@@ -26,9 +27,7 @@ const BINANCE_WALLET_BASE_URL = "https://web3.binance.com"
 const BINANCE_WALLET_QUOTE_PATH = "/build/api/v1/dex/aggregator/quote"
 const BINANCE_WALLET_SWAP_PATH = "/build/api/v1/dex/aggregator/swap"
 
-const DEFAULT_SUPPORTED_CHAINS = [
-  1, 10, 56, 137, 42161, 43114, 8453,
-] satisfies ChainId[]
+const SUPPORTED_CHAINS = aggregatorChains("binance-wallet")
 
 type BinanceWalletSupport = { buyOrders: false; swapAndTransfer: false }
 type BinanceWalletConfig = {
@@ -70,7 +69,7 @@ export class CustomBinanceWalletQuoteSource
     return {
       name: "Binance Wallet",
       supports: {
-        chains: DEFAULT_SUPPORTED_CHAINS,
+        chains: SUPPORTED_CHAINS,
         swapAndTransfer: false,
         buyOrders: false,
       },

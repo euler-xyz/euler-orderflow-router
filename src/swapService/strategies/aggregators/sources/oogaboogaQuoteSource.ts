@@ -1,4 +1,4 @@
-import type { ChainId } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
 import type {
   BuildTxParams,
   IQuoteSource,
@@ -14,12 +14,10 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
 
-const BERA_CHAIN_ID = 80094 as ChainId
-
 export const OOGABOOGA_METADATA: QuoteSourceMetadata<OogaboogaSupport> = {
   name: "Ooga Booga",
   supports: {
-    chains: [BERA_CHAIN_ID],
+    chains: aggregatorChains("oogabooga"),
     swapAndTransfer: true,
     buyOrders: false,
   },

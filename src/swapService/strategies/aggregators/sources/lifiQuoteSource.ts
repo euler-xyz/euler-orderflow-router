@@ -1,4 +1,4 @@
-import { Chains } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
 import { Addresses } from "@balmy/sdk"
 import { isSameAddress } from "@balmy/sdk"
 import type { TokenAddress } from "@balmy/sdk"
@@ -19,38 +19,7 @@ import {
 const LI_FI_METADATA: QuoteSourceMetadata<LiFiSupport> = {
   name: "LI.FI",
   supports: {
-    chains: [
-      Chains.ETHEREUM.chainId,
-      Chains.POLYGON.chainId,
-      Chains.BNB_CHAIN.chainId,
-      Chains.GNOSIS.chainId,
-      Chains.FANTOM.chainId,
-      Chains.OKC.chainId,
-      Chains.AVALANCHE.chainId,
-      Chains.ARBITRUM.chainId,
-      Chains.OPTIMISM.chainId,
-      Chains.MOONRIVER.chainId,
-      Chains.MOONBEAM.chainId,
-      Chains.CELO.chainId,
-      Chains.FUSE.chainId,
-      Chains.CRONOS.chainId,
-      Chains.VELAS.chainId,
-      Chains.AURORA.chainId,
-      Chains.EVMOS.chainId,
-      Chains.POLYGON_ZKEVM.chainId,
-      Chains.BASE.chainId,
-      Chains.ROOTSTOCK.chainId,
-      Chains.MODE.chainId,
-      Chains.LINEA.chainId,
-      Chains.BOBA.chainId,
-      Chains.METIS_ANDROMEDA.chainId,
-      Chains.SCROLL.chainId,
-      Chains.BLAST.chainId,
-      Chains.MANTLE.chainId,
-      999, // hyperevm
-      80094, // berachain
-      130, // unichain
-    ],
+    chains: aggregatorChains("li-fi"),
     swapAndTransfer: true,
     buyOrders: true,
   },

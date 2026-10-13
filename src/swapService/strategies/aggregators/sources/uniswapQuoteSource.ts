@@ -1,4 +1,5 @@
-import { Chains, getChainByKey } from "@balmy/sdk"
+import { aggregatorChainSettings } from "@/swapService/config/chains"
+import { getChainByKey } from "@balmy/sdk"
 import type { ChainId, TokenAddress } from "@balmy/sdk"
 import { Addresses } from "@balmy/sdk"
 import { isSameAddress, subtractPercentage, timeToSeconds } from "@balmy/sdk"
@@ -18,25 +19,12 @@ import {
 import qs from "qs"
 import { encodeFunctionData, parseAbi } from "viem"
 
-const ROUTER_ADDRESS: Record<ChainId, string> = {
-  [Chains.ETHEREUM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.OPTIMISM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.POLYGON.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.ARBITRUM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.CELO.chainId]: "0x5615CDAb10dc425a742d643d949a7F474C01abc4",
-  [Chains.ETHEREUM_GOERLI.chainId]:
-    "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.POLYGON_MUMBAI.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.BNB_CHAIN.chainId]: "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
-  [Chains.BASE.chainId]: "0x2626664c2603336E57B271c5C0b26F421741e481",
-  [Chains.AVALANCHE.chainId]: "0xbb00FF08d01D300023C629E8fFfFcb65A5a578cE",
-  [130]: "0x73855d06de49d0fe4a9c42636ba96c62da12ff9c",
-}
+const SUPPORTED_CHAINS = aggregatorChainSettings("uniswap")
 
 const UNISWAP_METADATA: QuoteSourceMetadata<UniswapSupport> = {
   name: "Uniswap",
   supports: {
-    chains: Object.keys(ROUTER_ADDRESS).map(Number),
+    chains: Object.keys(SUPPORTED_CHAINS).map(Number),
     swapAndTransfer: true,
     buyOrders: true,
   },
@@ -79,7 +67,7 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
       // some of it and then return the extra native token to the caller
       throw new Error("Uniswap does not support buy orders with native token")
     }
-    const router = ROUTER_ADDRESS[chainId]
+    const { router } = SUPPORTED_CHAINS[chainId]
     recipient = recipient ?? takeFrom
 
     const queryParams = {

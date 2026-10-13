@@ -1,4 +1,5 @@
-import { Chains, isSameAddress } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
+import { isSameAddress } from "@balmy/sdk"
 import type {
   BuildTxParams,
   IQuoteSource,
@@ -18,20 +19,7 @@ import qs from "qs"
 export const ONE_INCH_METADATA: QuoteSourceMetadata<OneInchSupport> = {
   name: "1inch",
   supports: {
-    chains: [
-      Chains.ETHEREUM.chainId,
-      Chains.AURORA.chainId,
-      Chains.BNB_CHAIN.chainId,
-      Chains.POLYGON.chainId,
-      Chains.OPTIMISM.chainId,
-      Chains.ARBITRUM.chainId,
-      Chains.GNOSIS.chainId,
-      Chains.AVALANCHE.chainId,
-      Chains.FANTOM.chainId,
-      Chains.KAIA.chainId,
-      Chains.AURORA.chainId,
-      Chains.BASE.chainId,
-    ],
+    chains: aggregatorChains("1inch"),
     swapAndTransfer: true,
     buyOrders: false,
   },

@@ -1,7 +1,7 @@
+import { aggregatorChainSettings } from "@/swapService/config/chains"
 import {
   type Address,
   Addresses,
-  type ChainId,
   type GasPrice,
   type TimeString,
   type TokenAddress,
@@ -30,12 +30,7 @@ import {
   parseUnits,
 } from "viem"
 
-const CHAINS: Record<ChainId, Record<string, string>> = {
-  [60808]: {
-    key: "bob",
-    permit2Adapter: "0x867c17C297083cD7d73B39C89e4602878C4Caa65",
-  },
-}
+const CHAINS = aggregatorChainSettings("oku")
 
 const OKU_METADATA: QuoteSourceMetadata<OkuSupport> = {
   name: "Oku",
@@ -64,22 +59,16 @@ export class CustomOkuQuoteSource extends AlwaysValidConfigAndContextSource<
 > {
   private market: string
   private marketName: string
-  private chains: number[] | undefined
 
-  constructor(market = "usor", marketName = "Uniswap", chains?: number[]) {
+  constructor(market = "usor", marketName = "Uniswap") {
     super()
     this.market = market
     this.marketName = marketName
-    this.chains = chains
   }
   getMetadata() {
     return {
       ...OKU_METADATA,
       name: `${OKU_METADATA.name} ${this.marketName}`,
-      supports: {
-        ...OKU_METADATA.supports,
-        chains: this.chains || OKU_METADATA.supports.chains,
-      },
     }
   }
 
@@ -115,7 +104,7 @@ export class CustomOkuQuoteSource extends AlwaysValidConfigAndContextSource<
     ])
 
     const body = {
-      chain: CHAINS[chainId].key,
+      chain: CHAINS[chainId].chainKey,
       account:
         this.market === "usor" ? CHAINS[chainId].permit2Adapter : takeFrom,
       gasPrice: Number(eip1159ToLegacy(gasPrice)),

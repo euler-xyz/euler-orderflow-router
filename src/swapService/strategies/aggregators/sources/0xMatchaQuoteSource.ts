@@ -1,4 +1,5 @@
-import { Addresses, Chains } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
+import { Addresses } from "@balmy/sdk"
 import type {
   BuildTxParams,
   IQuoteSource,
@@ -12,31 +13,14 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import * as chains from "viem/chains"
 
 // Supported Networks: https://0x.org/docs/0x-swap-api/introduction#supported-networks
-const SUPPORTED_CHAINS = [
-  Chains.ETHEREUM,
-  Chains.ARBITRUM,
-  Chains.AVALANCHE,
-  Chains.BASE,
-  Chains.BLAST,
-  Chains.BNB_CHAIN,
-  Chains.LINEA,
-  Chains.MANTLE,
-  Chains.MODE,
-  Chains.OPTIMISM,
-  Chains.POLYGON,
-  Chains.SCROLL,
-  { chainId: chains.linea.id },
-  { chainId: chains.unichain.id },
-  { chainId: chains.plasma.id },
-]
+const SUPPORTED_CHAINS = aggregatorChains("0x")
 
 const ZRX_METADATA: QuoteSourceMetadata<ZRXSupport> = {
   name: "0x/Matcha",
   supports: {
-    chains: SUPPORTED_CHAINS.map((chain) => chain.chainId),
+    chains: SUPPORTED_CHAINS,
     swapAndTransfer: false,
     buyOrders: false,
   },

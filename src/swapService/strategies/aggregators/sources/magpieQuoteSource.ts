@@ -1,10 +1,5 @@
-import {
-  Addresses,
-  type ChainId,
-  Chains,
-  type TokenAddress,
-  isSameAddress,
-} from "@balmy/sdk"
+import { aggregatorChainSettings } from "@/swapService/config/chains"
+import { Addresses, type TokenAddress, isSameAddress } from "@balmy/sdk"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -19,27 +14,8 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
-import * as chains from "viem/chains"
 
-const SUPPORTED_CHAINS: Record<ChainId, string> = {
-  [Chains.ARBITRUM.chainId]: "arbitrum",
-  [Chains.AVALANCHE.chainId]: "avalanche",
-  [Chains.BNB_CHAIN.chainId]: "bsc",
-  [Chains.ETHEREUM.chainId]: "ethereum",
-  [Chains.POLYGON.chainId]: "polygon",
-  [Chains.OPTIMISM.chainId]: "optimism",
-  [Chains.BASE.chainId]: "base",
-  [Chains.POLYGON_ZKEVM.chainId]: "polygonzk",
-  [Chains.BLAST.chainId]: "blast",
-  [Chains.SCROLL.chainId]: "scroll",
-  [Chains.METIS_ANDROMEDA.chainId]: "metis",
-  [Chains.FANTOM.chainId]: "fantom",
-  [Chains.SONIC.chainId]: "sonic",
-  [chains.berachain.id]: "berachain",
-  [chains.unichain.id]: "unichain",
-  [chains.plasma.id]: "plasma",
-  [chains.monad.id]: "monad",
-}
+const SUPPORTED_CHAINS = aggregatorChainSettings("magpie")
 
 const MAGPIE_METADATA: QuoteSourceMetadata<MagpieSupport> = {
   name: "Fly",
@@ -77,7 +53,7 @@ export class CustomMagpieQuoteSource extends AlwaysValidConfigAndContextSource<
     SourceQuoteResponse<MagpieData>
   > {
     const quoteQueryParams = {
-      network: SUPPORTED_CHAINS[chainId],
+      network: SUPPORTED_CHAINS[chainId].network,
       fromTokenAddress: mapToken(sellToken),
       toTokenAddress: mapToken(buyToken),
       sellAmount: order.sellAmount.toString(),

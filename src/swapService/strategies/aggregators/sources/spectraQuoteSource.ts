@@ -1,5 +1,6 @@
 import { logWarn } from "@/common/utils/logs"
 import type { TokenListItem } from "@/common/utils/tokenList"
+import { aggregatorChainSettings } from "@/swapService/config/chains"
 import { findToken } from "@/swapService/utils"
 import { Chains, type IFetchService } from "@balmy/sdk"
 import type {
@@ -17,20 +18,8 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
 import { type Address, getAddress, isAddressEqual } from "viem"
-import { arbitrum, avalanche, base, bsc, mainnet, optimism } from "viem/chains"
 
-const SUPPORTED_CHAINS: Record<string, string> = {
-  [mainnet.id]: "mainnet",
-  [base.id]: "base",
-  [optimism.id]: "optimism",
-  [arbitrum.id]: "arbitrum",
-  [avalanche.id]: "avalanche",
-  [bsc.id]: "bsc",
-  [999]: "hyperevm",
-  [747474]: "katana",
-  [146]: "sonic",
-  [43111]: "hemi",
-}
+const SUPPORTED_CHAINS = aggregatorChainSettings("spectra")
 
 export const SPECTRA_METADATA: QuoteSourceMetadata<SpectraSupport> = {
   name: "Spectra",
@@ -228,5 +217,5 @@ export class CustomSpectraQuoteSource
 }
 
 function getUrl(chainId: number) {
-  return `https://app.spectra.finance/api/v1/${SUPPORTED_CHAINS[chainId]}`
+  return `https://app.spectra.finance/api/v1/${SUPPORTED_CHAINS[chainId].network}`
 }

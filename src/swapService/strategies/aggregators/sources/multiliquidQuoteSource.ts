@@ -1,6 +1,6 @@
 import contractBook from "@/common/utils/contractBook"
 import { RPC_URLS } from "@/common/utils/viemClients"
-import { Chains } from "@balmy/sdk"
+import { aggregatorChains } from "@/swapService/config/chains"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
 import type {
   BuildTxParams,
@@ -29,7 +29,7 @@ import { mainnet as viemMainnet } from "viem/chains"
 const MULTILIQUID_METADATA: QuoteSourceMetadata<MultiliquidSupport> = {
   name: "Multiliquid",
   supports: {
-    chains: [Chains.ETHEREUM.chainId],
+    chains: aggregatorChains("multiliquid"),
     swapAndTransfer: false,
     buyOrders: true,
   },
