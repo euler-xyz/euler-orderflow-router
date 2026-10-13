@@ -57,4 +57,4 @@ Pendle's current `/core/v2/markets/all?chainId={chainId}&limit=100&skip=0` API r
 
 The present runtime still uses the V3-only cache with the custom overlay. A broader automatic fallback requires contract-verified decimals on every input and inner-token lookup, including the aggregator metadata source. A failed RPC read must reject quoting rather than use a list value or assume 18 decimals. The two Midas payment-token calculations that default missing decimals to 18 also need attention in that refactor.
 
-The eight Sonic snapshot PTs all need their market mappings checked against live provider data before adopting automatic enrichment; some returned mappings differ from the recorded snapshot market. A symbol prefix is not sufficient proof of a PT or its market.
+Five of the eight Sonic snapshot PT-to-market mappings match the provider response. The remaining three PT addresses are absent from that response, so this source does not establish full routing parity. The Berachain snapshot PT-to-market mapping matches. A symbol prefix is not sufficient proof of a PT or its market.
