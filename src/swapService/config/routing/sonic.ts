@@ -1,5 +1,5 @@
-import type { ChainRoutingConfig } from "../interface"
-import { StrategyAggregators, StrategyERC4626Wrapper } from "../strategies"
+import type { ChainRoutingConfig } from "../../interface"
+import { StrategyAggregators, StrategyERC4626Wrapper } from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 const WSTKSCUSD_SONIC = "0x9fb76f7ce5FCeAA2C42887ff441D46095E494206"
 const WSTKSCETH_SONIC = "0xE8a41c62BB4d5863C6eadC96792cFE90A1f37C47"

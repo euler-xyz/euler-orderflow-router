@@ -1,5 +1,5 @@
-import type { ChainRoutingConfig } from "../interface"
-import { StrategyAggregators, StrategyMidas } from "../strategies"
+import type { ChainRoutingConfig } from "../../interface"
+import { StrategyAggregators, StrategyMidas } from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 
 const baseRoutingConfig: ChainRoutingConfig = [

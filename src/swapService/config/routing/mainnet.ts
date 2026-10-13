@@ -1,4 +1,4 @@
-import { type ChainRoutingConfig, SwapperMode } from "../interface"
+import { type ChainRoutingConfig, SwapperMode } from "../../interface"
 import {
   StrategyAggregators,
   StrategyCombinedUniswap,
@@ -9,7 +9,7 @@ import {
   StrategyMidas,
   StrategyRedirectDepositWrapper,
   StrategyStrata,
-} from "../strategies"
+} from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 
 const SUSDS_MAINNET = "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"

@@ -1,9 +1,9 @@
-import type { ChainRoutingConfig } from "../interface"
+import type { ChainRoutingConfig } from "../../interface"
 import {
   StrategyAggregators,
   StrategyERC4626Wrapper,
   StrategyElixir,
-} from "../strategies"
+} from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 
 // const SAVUSD_AVALANCHE = "a0x06d47F3fb376649c3A9Dafe069B3D6E35572219E"

@@ -1,5 +1,5 @@
-import type { ChainRoutingConfig } from "../interface"
-import { StrategyAggregators, StrategyERC4626Wrapper } from "../strategies"
+import type { ChainRoutingConfig } from "../../interface"
+import { StrategyAggregators, StrategyERC4626Wrapper } from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 
 const SNECT_BERACHAIN = "0x597877Ccf65be938BD214C4c46907669e3E62128"

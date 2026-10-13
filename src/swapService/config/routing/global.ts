@@ -1,8 +1,8 @@
-import { type ChainRoutingConfig, SwapperMode } from "../interface"
+import { type ChainRoutingConfig, SwapperMode } from "../../interface"
 import {
   StrategyRedirectTransferReceiver,
   StrategyRepayWrapper,
-} from "../strategies"
+} from "../../strategies"
 
 export const globalRoutingWrappers: ChainRoutingConfig = [
   {

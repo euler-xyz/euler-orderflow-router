@@ -1,11 +1,11 @@
-import type { ChainRoutingConfig } from "../interface"
+import type { ChainRoutingConfig } from "../../interface"
 import {
   StrategyAggregators,
   StrategyElixir,
   StrategyMidas,
   StrategyPendleLP,
   StrategyRedirectDepositWrapper,
-} from "../strategies"
+} from "../../strategies"
 import { globalRoutingWrappers } from "./global"
 
 const ELIXIR_USDT_VAULT = "0x3799251bD81925cfcCF2992F10Af27A4e62Bf3F7"
