@@ -119,11 +119,11 @@ The workflow signs in to AWS with GitHub OIDC; there are no stored keys. A repos
    - on the swap API repository: `ecr:BatchCheckLayerAvailability`, `ecr:BatchGetImage`, `ecr:GetDownloadUrlForLayer`, `ecr:InitiateLayerUpload`, `ecr:UploadLayerPart`, `ecr:CompleteLayerUpload` and `ecr:PutImage`
    - on the base image repository: `ecr:BatchCheckLayerAvailability`, `ecr:BatchGetImage` and `ecr:GetDownloadUrlForLayer`
 3. **ECR repository.** Use the one the swap API stack deploys from. Set its tags to immutable: each tag is a commit SHA and never changes.
-4. **Repository variables**, under Settings → Secrets and variables → Actions → Variables:
+4. **Repository secret** `AWS_ROLE_ARN`, the ARN of the role from step 2, under Settings → Secrets and variables → Actions → Secrets. It's a secret, not a variable, so the account ID in it stays masked in this public repository's Actions logs.
+5. **Repository variables**, under Settings → Secrets and variables → Actions → Variables:
 
    | Variable | Value |
    |---|---|
-   | `AWS_ROLE_ARN` | ARN of the role from step 2 |
    | `AWS_REGION` | region of the ECR registry |
    | `ECR_REPOSITORY` | name of the repository from step 3 |
    | `NODE_BASE_REPO` | the base image repository URI, without a tag, as passed to `docker build --build-arg` |

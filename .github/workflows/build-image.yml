@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Check repository variables
         env:
-          AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
+          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
           AWS_REGION: ${{ vars.AWS_REGION }}
           ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
           NODE_BASE_REPO: ${{ vars.NODE_BASE_REPO }}
@@ -43,7 +43,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@ec61189d14ec14c8efccab744f656cffd0e33f37 # v6.1.0
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
           mask-aws-account-id: true
 
