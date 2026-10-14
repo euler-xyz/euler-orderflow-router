@@ -37,7 +37,6 @@ Notes:
 - **Pendle.** Pendle sources are not listed here. `pnpm run generate-config` writes `pendleAggregators.json` from Pendle's API, and the image build runs it.
 - **balmy SDK.** The quote service looks up the chain with `getChainByKeyOrFail` whenever a source reports a gas estimate. On a chain `@balmy/sdk` doesn't know, every such quote fails. Chains it lacks are added in `patches/@balmy__sdk@0.9.0.patch`; Unichain, Monad, TAC, HyperEVM, Plasma and BOB are there. To add one, run `pnpm patch @balmy/sdk@0.9.0`, add the entry to `dist/chains.js`, then run `pnpm patch-commit <printed dir>`.
 - **`.env.template`.** Add `RPC_URL_<id>=""`. A test fails if the template's RPC names differ from the registered chains.
-- **Tests.** `src/__tests__/chainWiring.test.ts` pins the chain IDs, each aggregator's chains and the per-chain settings. Update the expected values in the same PR.
 
 Then run the checks:
 
