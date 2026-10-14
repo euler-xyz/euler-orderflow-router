@@ -41,14 +41,18 @@ export const rpcUrlEnvName = (chainId: number) => `RPC_URL_${chainId}`
 
 export function aggregatorChainSettings<Id extends AggregatorId>(
   aggregator: Id,
+  configs: readonly ChainConfig[] = chainConfigs,
 ): Record<number, AggregatorChainSettings[Id]> {
   return Object.fromEntries(
-    chainConfigs.flatMap(({ chain, aggregators }) => {
+    configs.flatMap(({ chain, aggregators }) => {
       const settings = aggregators[aggregator]
       return settings === undefined ? [] : [[chain.id, settings]]
     }),
   )
 }
 
-export const aggregatorChains = (aggregator: AggregatorId): number[] =>
-  Object.keys(aggregatorChainSettings(aggregator)).map(Number)
+export const aggregatorChains = (
+  aggregator: AggregatorId,
+  configs: readonly ChainConfig[] = chainConfigs,
+): number[] =>
+  Object.keys(aggregatorChainSettings(aggregator, configs)).map(Number)
