@@ -64,3 +64,19 @@ Five of the eight Sonic snapshot PT-to-market mappings match the provider respon
 The built loader completed discovery for all 14 active configured chains. Sonic and Berachain used 104 and 78 normalized DefiLlama entries respectively; native zero-address placeholders were excluded. TAC and BOB completed initialization with empty catalogs and resolved requested tokens on-chain.
 
 All three Monad wrapper exceptions resolved through the configured public RPC with their actual symbols and six decimals. BOB WETH and a TAC ERC-20 also resolved through RPC without usable catalogs. These checks validate metadata discovery and decimal reads, not signed swap execution.
+
+## Sonic PT routing checks (2026-10-15)
+
+Pendle's `/core/v1/assets/all?chainId=146&type=PT` response explicitly classifies the three PTs absent from the market catalog:
+
+| PT | Address | Contract decimals |
+| --- | --- | ---: |
+| PT-wstkscETH-18DEC2025 | `0x7e52f587f5B870D4C2cac8559ac4c49742D31a28` | 18 |
+| PT-wstkscUSD-18DEC2025 | `0x0Fb682C9692AddCc1769f4D4d938c54420D54fA3` | 6 |
+| PT-stS-18DEC2025 | `0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d` | 18 |
+
+The runtime supplements market-derived metadata with these authoritative PT classifications. It retains known market mappings and leaves the market address unset for asset-only records. Generic token names and symbols cannot establish PT status. Asset-source failures preserve successful market discovery and cached asset-only PT classifications.
+
+The updated loader resolved all three PTs using public Sonic RPC decimal reads, and the actual Pendle quote source returned positive output amounts and transaction calldata for each PT-to-underlying conversion. Each quote used one whole PT in its verified decimal units. All three transactions target Pendle's router at `0x888888888889758F76e7103c6CbF23ABbF58F946`.
+
+These checks establish classification and quote construction for the three missing Sonic routes. They do not establish missing market mappings or signed swap execution.

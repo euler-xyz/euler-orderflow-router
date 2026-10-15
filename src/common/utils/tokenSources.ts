@@ -189,6 +189,56 @@ export function fetchPendleMetadata(chainId: number) {
       skip += data.results.length
       if (skip >= Number(data.total)) break
     }
+
+    try {
+      const url = new URL(
+        process.env.PENDLE_ASSETS_URL ||
+          "https://api-v2.pendle.finance/core/v1/assets/all",
+      )
+      url.searchParams.set("chainId", String(chainId))
+      url.searchParams.set("type", "PT")
+      // Omitting limit requests the full asset catalog, including unlisted markets.
+      const response = await fetch(url.toString(), { signal })
+      if (!response.ok)
+        throw new Error(`Pendle assets returned ${response.status}`)
+      const data = (await response.json()) as { assets?: unknown[] } | null
+      if (!Array.isArray(data?.assets))
+        throw new Error("Invalid Pendle asset response")
+      for (const raw of data.assets) {
+        if (!raw || typeof raw !== "object") continue
+        const asset = raw as {
+          chainId?: number
+          address?: unknown
+          tags?: unknown
+        }
+        if (
+          asset.chainId !== chainId ||
+          typeof asset.address !== "string" ||
+          !isAddress(asset.address) ||
+          asset.address.toLowerCase() === zeroAddress ||
+          !Array.isArray(asset.tags) ||
+          !asset.tags.includes("PT")
+        )
+          continue
+        const address = asset.address.toLowerCase()
+        if (!metadata.has(address))
+          metadata.set(address, { isPendlePT: true, isPendleLP: false })
+      }
+    } catch (error) {
+      logWarn({
+        name: `Pendle asset discovery failed for chain ${chainId}`,
+        error,
+      })
+      for (const [address, previous] of cached?.metadata ?? []) {
+        if (
+          previous.isPendlePT &&
+          !previous.pendleMarket &&
+          !metadata.has(address)
+        )
+          metadata.set(address, previous)
+      }
+    }
+
     pendleCache.set(chainId, { metadata, timestamp: Date.now() })
     return metadata
   })()

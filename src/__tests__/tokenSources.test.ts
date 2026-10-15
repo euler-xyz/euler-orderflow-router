@@ -92,6 +92,14 @@ describe("automatic token discovery", () => {
 })
 
 describe("authoritative Pendle market discovery", () => {
+  const stubMarkets = (
+    fetchMock: (url: string, init?: RequestInit) => Promise<unknown>,
+  ) =>
+    vi.stubGlobal("fetch", (url: string, init?: RequestInit) =>
+      new URL(url).pathname.endsWith("/assets/all")
+        ? Promise.resolve(response({ assets: [] }))
+        : fetchMock(url, init),
+    )
   const market = {
     chainId: 146,
     address: "0x0000000000000000000000000000000000000002",
@@ -107,7 +115,7 @@ describe("authoritative Pendle market discovery", () => {
       .fn()
       .mockResolvedValueOnce(response({ results: [market], total: 2, skip: 0 }))
       .mockResolvedValueOnce(response({ results: [second], total: 2, skip: 1 }))
-    vi.stubGlobal("fetch", fetchMock)
+    stubMarkets(fetchMock)
     const metadata = await (await load()).fetchPendleMetadata(146)
     expect(metadata.get(token.address)).toMatchObject({
       isPendlePT: true,
@@ -123,8 +131,7 @@ describe("authoritative Pendle market discovery", () => {
     )
   })
   it("does not invent a market when a PT appears in different markets", async () => {
-    vi.stubGlobal(
-      "fetch",
+    stubMarkets(
       vi.fn().mockResolvedValue(
         response({
           results: [
@@ -144,8 +151,7 @@ describe("authoritative Pendle market discovery", () => {
     ).toBeUndefined()
   })
   it("rejects incomplete pages without publishing partial metadata", async () => {
-    vi.stubGlobal(
-      "fetch",
+    stubMarkets(
       vi
         .fn()
         .mockResolvedValueOnce(response({ results: [market], total: 2 }))
@@ -154,8 +160,7 @@ describe("authoritative Pendle market discovery", () => {
     expect((await (await load()).fetchPendleMetadata(146)).size).toBe(0)
   })
   it("filters records from other chains and chain-prefixed PT identities", async () => {
-    vi.stubGlobal(
-      "fetch",
+    stubMarkets(
       vi.fn().mockResolvedValue(
         response({
           results: [
@@ -172,8 +177,7 @@ describe("authoritative Pendle market discovery", () => {
   })
   it("retains the previous market map on a later provider failure", async () => {
     vi.useFakeTimers()
-    vi.stubGlobal(
-      "fetch",
+    stubMarkets(
       vi
         .fn()
         .mockResolvedValueOnce(response({ results: [market], total: 1 }))
@@ -183,5 +187,101 @@ describe("authoritative Pendle market discovery", () => {
     const first = await source.fetchPendleMetadata(146)
     await vi.advanceTimersByTimeAsync(300_001)
     expect(await source.fetchPendleMetadata(146)).toBe(first)
+  })
+})
+
+describe("authoritative Pendle asset discovery", () => {
+  const asset = { chainId: 146, address: token.address, tags: ["PT"] }
+  const market = {
+    chainId: 146,
+    address: "0x0000000000000000000000000000000000000002",
+    pt: `146-${token.address}`,
+  }
+  const unlisted = "0x0000000000000000000000000000000000000003"
+
+  it("supplements market metadata only with valid PT assets on the requested chain", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (input: string) =>
+        new URL(input).pathname.endsWith("/assets/all")
+          ? response({
+              assets: [
+                asset,
+                { ...asset, address: unlisted },
+                {
+                  ...asset,
+                  chainId: 1,
+                  address: "0x0000000000000000000000000000000000000004",
+                },
+                {
+                  ...asset,
+                  tags: ["YT"],
+                  symbol: "PT-lookalike",
+                  address: "0x0000000000000000000000000000000000000005",
+                },
+                {
+                  ...asset,
+                  tags: "PT",
+                  address: "0x0000000000000000000000000000000000000006",
+                },
+                { ...asset, address: "invalid" },
+                {
+                  ...asset,
+                  address: "0x0000000000000000000000000000000000000000",
+                },
+                { ...asset, address: 42 },
+                null,
+              ],
+            })
+          : response({ results: [market], total: 1 }),
+      ),
+    )
+    const metadata = await (await load()).fetchPendleMetadata(146)
+    expect(metadata.size).toBe(3)
+    expect(metadata.get(token.address)?.pendleMarket).toBe(market.address)
+    expect(metadata.get(market.address)?.isPendleLP).toBe(true)
+    expect(metadata.get(unlisted)).toEqual({
+      isPendlePT: true,
+      isPendleLP: false,
+    })
+  })
+
+  it.each([{ ok: false, status: 503 }, response({ assets: null })])(
+    "keeps market discovery available when the asset source fails: %j",
+    async (failure) => {
+      vi.stubGlobal(
+        "fetch",
+        vi.fn(async (input: string) =>
+          new URL(input).pathname.endsWith("/assets/all")
+            ? failure
+            : response({ results: [market], total: 1 }),
+        ),
+      )
+      const metadata = await (await load()).fetchPendleMetadata(146)
+      expect(metadata.size).toBe(2)
+      expect(metadata.get(token.address)?.pendleMarket).toBe(market.address)
+    },
+  )
+
+  it("retains cached PT classification during an asset-source outage", async () => {
+    vi.useFakeTimers()
+    const assets = vi
+      .fn()
+      .mockResolvedValueOnce(response({ assets: [asset] }))
+      .mockResolvedValueOnce({ ok: false, status: 503 })
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (input: string) =>
+        new URL(input).pathname.endsWith("/assets/all")
+          ? assets()
+          : response({ results: [], total: 0 }),
+      ),
+    )
+    const source = await load()
+    const first = await source.fetchPendleMetadata(146)
+    expect(first.get(token.address)?.isPendlePT).toBe(true)
+    await vi.advanceTimersByTimeAsync(300_001)
+    expect(await source.fetchPendleMetadata(146)).toEqual(first)
+    expect(assets).toHaveBeenCalledTimes(2)
   })
 })

@@ -170,8 +170,8 @@ Startup waits for the initial discovery attempts. List outages do not prevent st
 
 Before quoting, both input tokens and inner routing assets use contract-verified decimals, memoized by chain and address for the process. Failed or invalid reads reject token resolution; list decimals and an assumed 18 are not used as substitutes. ERC-20 metadata reads have a 10-second RPC timeout and support string or bytes32 name/symbol responses.
 
-Protocol routing metadata comes from V3. For tokens absent from that catalog, the router can identify Pendle PT and LP addresses from Pendle's paginated market API. It does not classify tokens from their symbols or accept protocol flags from generic lists. A missing or ambiguous market mapping does not produce a fabricated market address.
+Protocol routing metadata comes from V3. For tokens absent from that catalog, the router identifies Pendle PT and LP addresses from Pendle's paginated market API and supplements PT classification from its asset API. Asset records must match the requested chain and carry Pendle's explicit PT tag; they do not supply a market mapping. It does not classify tokens from their symbols or accept protocol flags from generic lists. A missing or ambiguous market mapping does not produce a fabricated market address.
 
-Optional source overrides are `DEFILLAMA_TOKEN_LIST_URL` (per-chain list base), `UNISWAP_TOKEN_LIST_URL` (global published list) and `PENDLE_MARKETS_URL` (paginated market endpoint). The default Uniswap source is its official npm publication; `tokens.uniswap.org` currently serves HTML.
+Optional source overrides are `DEFILLAMA_TOKEN_LIST_URL` (per-chain list base), `UNISWAP_TOKEN_LIST_URL` (global published list), `PENDLE_MARKETS_URL` (paginated market endpoint), and `PENDLE_ASSETS_URL` (full asset catalog endpoint). The default Uniswap source is its official npm publication; `tokens.uniswap.org` currently serves HTML.
 
 See [token-list coverage](./docs/token-list-coverage.md) for the source audit and protocol coverage limits.
