@@ -2,7 +2,6 @@ import { spawn } from "node:child_process"
 import { once } from "node:events"
 import { type Server, createServer } from "node:http"
 import type { AddressInfo } from "node:net"
-import dotenv from "dotenv"
 import {
   type EulerSDK,
   type SubAccount,
@@ -12,8 +11,10 @@ import {
   type VaultEntity,
   buildEulerSDK,
   decodeSmartContractErrors,
+  flattenBatchEntries,
   getSubAccountAddress,
-} from "euler-v2-sdk"
+} from "@eulerxyz/euler-v2-sdk"
+import dotenv from "dotenv"
 import {
   http,
   type Address,
@@ -138,14 +139,13 @@ describe.sequential("mainnet live swap flows", () => {
 
     process.env.RPC_URL_1 = anvilUrl
 
-    const [{ buildCache }, { refreshContractBookAddresses }, { app }] =
-      await Promise.all([
-        import("@/common/utils/tokenList"),
-        import("@/common/utils/contractBook"),
-        import("@/server"),
-      ])
+    const [{ buildCache }, { loadDeployments }, { app }] = await Promise.all([
+      import("@/common/utils/tokenList"),
+      import("@/common/utils/deployments"),
+      import("@/server"),
+    ])
 
-    await refreshContractBookAddresses().catch(() => undefined)
+    await loadDeployments()
     await buildCache()
 
     appServer = createServer(app)
@@ -154,7 +154,9 @@ describe.sequential("mainnet live swap flows", () => {
     swapApiUrl = `http://127.0.0.1:${(appServer.address() as AddressInfo).port}`
 
     sdk = await buildEulerSDK({
-      rpcUrls: { [CHAIN_ID]: anvilUrl },
+      config: {
+        rpcUrls: { [CHAIN_ID]: anvilUrl },
+      },
       swapServiceConfig: {
         swapApiUrl,
       },
@@ -227,7 +229,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterDeposit)
 
     const collateralQuote = pickQuote(
-      await sdk.swapService.getDepositQuote({
+      await sdk.swapService.fetchDepositQuote({
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         toVault: WSTETH_VAULT,
@@ -283,7 +285,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterBorrow)
 
     const repayQuote = pickQuote(
-      await sdk.swapService.getRepayQuotes({
+      await sdk.swapService.fetchRepayQuotes({
         chainId: CHAIN_ID,
         fromVault: WSTETH_VAULT,
         fromAsset: WSTETH_ADDRESS,
@@ -362,7 +364,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterBorrow)
 
     const repayQuote = pickQuote(
-      await sdk.swapService.getRepayQuotes({
+      await sdk.swapService.fetchRepayQuotes({
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         fromAsset: USDC_ADDRESS,
@@ -405,7 +407,7 @@ describe.sequential("mainnet live swap flows", () => {
         const assetDecimals = await readDecimals(route.asset)
         const vaultDecimals = await readDecimals(route.vault)
 
-        const depositQuotes = await sdk.swapService.getDepositQuote({
+        const depositQuotes = await sdk.swapService.fetchDepositQuote({
           chainId: CHAIN_ID,
           fromVault: zeroAddress,
           toVault: route.vault,
@@ -422,7 +424,7 @@ describe.sequential("mainnet live swap flows", () => {
 
         expect(depositQuotes.length).toBeGreaterThan(0)
 
-        const redeemQuotes = await sdk.swapService.getSwapQuotes({
+        const redeemQuotes = await sdk.swapService.fetchSwapQuotes({
           chainId: CHAIN_ID,
           tokenIn: route.vault,
           tokenOut: route.asset,
@@ -532,8 +534,9 @@ async function executePlan(plan: TransactionPlanItem[]) {
       if (item.type !== "evcBatch") continue
 
       const deployment = sdk.deploymentService.getDeployment(CHAIN_ID)
-      const batchData = sdk.executionService.encodeBatch(item.items)
-      const totalValue = item.items.reduce((sum, batchItem) => {
+      const batchItems = flattenBatchEntries(item.items)
+      const batchData = sdk.executionService.encodeBatch(batchItems)
+      const totalValue = batchItems.reduce((sum, batchItem) => {
         return sum + batchItem.value
       }, 0n)
 

@@ -1,4 +1,4 @@
-import contractBook from "@/common/utils/contractBook"
+import { getSwapperAddress } from "@/common/utils/deployments"
 import { RPC_URLS } from "@/common/utils/viemClients"
 import { Chains } from "@balmy/sdk"
 import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
@@ -17,13 +17,7 @@ import {
   createMultiliquidClient,
   mainnet as multiliquidMainnet,
 } from "@uniformlabs/multiliquid-evm-sdk"
-import {
-  http,
-  type Address,
-  type Hex,
-  createPublicClient,
-  getAddress,
-} from "viem"
+import { http, type Address, type Hex, createPublicClient } from "viem"
 import { mainnet as viemMainnet } from "viem/chains"
 
 const MULTILIQUID_METADATA: QuoteSourceMetadata<MultiliquidSupport> = {
@@ -144,12 +138,6 @@ export class CustomMultiliquidQuoteSource extends AlwaysValidConfigAndContextSou
 
 function getAssetInfo(token: Address): AssetInfo | undefined {
   return ASSET_BY_TOKEN.get(token.toLowerCase())
-}
-
-function getSwapperAddress(chainId: number): Address {
-  const swapper = contractBook.swapper.address[chainId]
-  if (!swapper) throw new Error(`Missing swapper address for chain ${chainId}`)
-  return getAddress(swapper)
 }
 
 async function quoteAndBuildTx({

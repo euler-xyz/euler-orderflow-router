@@ -20,6 +20,9 @@ importers:
       '@berachain-foundation/berancer-sdk':
         specifier: 1.1.7
         version: 1.1.7(viem@2.49.3(typescript@5.9.3)(zod@3.23.8))
+      '@eulerxyz/euler-v2-sdk':
+        specifier: 1.1.1
+        version: 1.1.1(typescript@5.9.3)(zod@3.23.8)
       '@uniformlabs/multiliquid-evm-sdk':
         specifier: 0.1.1
         version: 0.1.1(typescript@5.9.3)(zod@3.23.8)
@@ -96,9 +99,6 @@ importers:
       '@types/swagger-ui-express':
         specifier: ^4.1.7
         version: 4.1.8
-      euler-v2-sdk:
-        specifier: 0.0.1-alpha
-        version: 0.0.1-alpha(typescript@5.9.3)(zod@3.23.8)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -851,6 +851,10 @@ packages:
 
   '@ethersproject/wordlists@5.7.0':
     resolution: {integrity: sha512-S2TFNJNfHWVHNE6cNDjbVlZ6MgE17MIxMbMg2zv3wn+3XSJGosL1m9ZVv3GXCf/2ymSsQ+hRI5IzoMJTG6aoVA==}
+
+  '@eulerxyz/euler-v2-sdk@1.1.1':
+    resolution: {integrity: sha512-TxZbzD3hghLr7Fp/U2IpXe5LU+GKpAzPhxMyUReSD9G0IjTlEuhWvtdTuBaBgTqchq0J4gzfivZTzeUBjSH9vw==}
+    engines: {node: '>=18'}
 
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
@@ -1916,11 +1920,6 @@ packages:
   ethjs-unit@0.1.6:
     resolution: {integrity: sha512-/Sn9Y0oKl0uqQuvgFk/zQgR7aw1g36qX/jzSQ5lSwlO0GigPymk4eGQfeNTD03w1dPOqfz8V77Cy43jH56pagw==}
     engines: {node: '>=6.5.0', npm: '>=3'}
-
-  euler-v2-sdk@0.0.1-alpha:
-    resolution: {integrity: sha512-LzQaee1xVuQEEVqbmlHUssyN/aVojzF6L0YjW6VbE1Ke1U/Gr1OnbNKn2M9yr5kq+NyemFIlafJ4nlzZZWHNFw==}
-    engines: {node: '>=18'}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
@@ -3120,6 +3119,14 @@ packages:
       typescript:
         optional: true
 
+  viem@2.48.8:
+    resolution: {integrity: sha512-Xj3Nrt66SKtn06kczU91ELn9Difr84ZM5A62BTlaisT5lpgt058i2mBkfMZCXHGb1ocOLjzC2ztPhD0Lvky7uQ==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   viem@2.49.3:
     resolution: {integrity: sha512-FlIXd2kRygDxJtvjtPp74vjmyOKMjKlXXgTNdMxr8h3kcDrQ4bYb9q1MpSWyCVa3L2NJc9gSv+u8HcHYIZQUkw==}
     peerDependencies:
@@ -4132,6 +4139,15 @@ snapshots:
       '@ethersproject/logger': 5.7.0
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
+
+  '@eulerxyz/euler-v2-sdk@1.1.1(typescript@5.9.3)(zod@3.23.8)':
+    dependencies:
+      viem: 2.48.8(typescript@5.9.3)(zod@3.23.8)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
 
   '@fastify/busboy@2.1.1': {}
 
@@ -5431,15 +5447,6 @@ snapshots:
       bn.js: 4.11.6
       number-to-bn: 1.7.0
 
-  euler-v2-sdk@0.0.1-alpha(typescript@5.9.3)(zod@3.23.8):
-    dependencies:
-      viem: 2.49.3(typescript@5.9.3)(zod@3.23.8)
-    transitivePeerDependencies:
-      - bufferutil
-      - typescript
-      - utf-8-validate
-      - zod
-
   eventemitter3@5.0.1: {}
 
   eventemitter3@5.0.4: {}
@@ -6711,6 +6718,23 @@ snapshots:
       isows: 1.0.6(ws@8.18.1)
       ox: 0.6.9(typescript@5.9.3)(zod@3.23.8)
       ws: 8.18.1
+    optionalDependencies:
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+      - zod
+
+  viem@2.48.8(typescript@5.9.3)(zod@3.23.8):
+    dependencies:
+      '@noble/curves': 1.9.1
+      '@noble/hashes': 1.8.0
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
+      abitype: 1.2.3(typescript@5.9.3)(zod@3.23.8)
+      isows: 1.0.7(ws@8.18.3)
+      ox: 0.14.20(typescript@5.9.3)(zod@3.23.8)
+      ws: 8.18.3
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:

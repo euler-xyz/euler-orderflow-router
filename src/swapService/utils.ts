@@ -1,6 +1,10 @@
-import contractBook from "@/common/utils/contractBook"
+import {
+  getSwapVerifierAddress,
+  getSwapperAddress,
+} from "@/common/utils/deployments"
 import { logDev } from "@/common/utils/logs"
 import { type TokenListItem, getOrFetchToken } from "@/common/utils/tokenList"
+import { swapVerifierAbi, swapperAbi } from "@eulerxyz/euler-v2-sdk"
 import { StatusCodes } from "http-status-codes"
 import {
   type Address,
@@ -144,7 +148,7 @@ export function buildApiResponseVerifySkimMin(
   const verifierAddress = getVerifier(chainId)
 
   const verifierData = encodeFunctionData({
-    abi: contractBook.swapVerifier.abi,
+    abi: swapVerifierAbi,
     functionName: "verifyAmountMinAndSkim",
     args: [vault, account, amountMin, BigInt(deadline)],
   })
@@ -169,7 +173,7 @@ export function buildApiResponseVerifyTransferMin(
   const verifierAddress = getVerifier(chainId)
 
   const verifierData = encodeFunctionData({
-    abi: contractBook.swapVerifier.abi,
+    abi: swapVerifierAbi,
     functionName: "verifyAmountMinAndTransfer",
     args: [tokenOut, receiver, amountMin, BigInt(deadline)],
   })
@@ -204,7 +208,7 @@ export function buildApiResponseVerifyDebtMax(
   const verifierAddress = getVerifier(chainId)
 
   const verifierData = encodeFunctionData({
-    abi: contractBook.swapVerifier.abi,
+    abi: swapVerifierAbi,
     functionName: "verifyDebtMax",
     args: [vault, account, amountMax, BigInt(deadline)],
   })
@@ -224,7 +228,7 @@ export function buildApiResponseSwap(
   multicallItems: SwapApiResponseMulticallItem[],
 ): SwapApiResponseSwap {
   const swapperData = encodeFunctionData({
-    abi: contractBook.swapper.abi,
+    abi: swapperAbi,
     functionName: "multicall",
     args: [multicallItems.map((i) => i.data)],
   })
@@ -374,17 +378,13 @@ export const entriesBigintToString = (
 }
 
 export const encodeSwapMulticallItem = (
-  params: ContractFunctionArgs<
-    typeof contractBook.swapper.abi,
-    "nonpayable",
-    "swap"
-  >[0],
+  params: ContractFunctionArgs<typeof swapperAbi, "nonpayable", "swap">[0],
 ): SwapApiResponseMulticallItem => {
   return {
     functionName: "swap",
     args: [entriesBigintToString(params)],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "swap",
       args: [params],
     }),
@@ -401,7 +401,7 @@ export const encodeDepositMulticallItem = (
     functionName: "deposit",
     args: [token, vault, String(amountMin), account],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "deposit",
       args: [token, vault, amountMin, account],
     }),
@@ -417,7 +417,7 @@ export const encodeTransferMulticallItem = (
     functionName: "transfer",
     args: [token, String(amountMin), receiver],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "transfer",
       args: [token, amountMin, receiver],
     }),
@@ -433,7 +433,7 @@ export const encodeSweepMulticallItem = (
     functionName: "sweep",
     args: [token, String(amountMin), to],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "sweep",
       args: [token, amountMin, to],
     }),
@@ -450,7 +450,7 @@ export const encodeRepayAndDepositMulticallItem = (
     functionName: "repayAndDeposit",
     args: [token, vault, String(repayAmount), account],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "repayAndDeposit",
       args: [token, vault, repayAmount, account],
     }),
@@ -467,7 +467,7 @@ export const encodeRepayMulticallItem = (
     functionName: "repay",
     args: [token, vault, String(repayAmount), account],
     data: encodeFunctionData({
-      abi: contractBook.swapper.abi,
+      abi: swapperAbi,
       functionName: "repay",
       args: [token, vault, repayAmount, account],
     }),
@@ -502,7 +502,7 @@ export const encodeApproveMulticallItem = (
 
   return encodeSwapMulticallItem({
     handler: SWAPPER_HANDLER_GENERIC,
-    mode: SwapperMode.EXACT_IN,
+    mode: BigInt(SwapperMode.EXACT_IN),
     account: zeroAddress,
     tokenIn: zeroAddress,
     tokenOut: zeroAddress,
@@ -514,20 +514,8 @@ export const encodeApproveMulticallItem = (
   })
 }
 
-export const getSwapper = (chainId: number) => {
-  const swapper = contractBook.swapper.address[chainId] || ""
-  if (!swapper) {
-    throw new Error("Swapper contract not found for chainId")
-  }
-  return swapper
-}
-export const getVerifier = (chainId: number) => {
-  const verifier = contractBook.swapVerifier.address[chainId] || ""
-  if (!verifier) {
-    throw new Error("Verifier contract not found for chainId")
-  }
-  return verifier
-}
+export const getSwapper = (chainId: number) => getSwapperAddress(chainId)
+export const getVerifier = (chainId: number) => getSwapVerifierAddress(chainId)
 
 export function encodeERC20TransferMulticallItem(
   token: Address,

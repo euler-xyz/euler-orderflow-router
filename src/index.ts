@@ -1,20 +1,11 @@
 import { app, logger } from "@/server"
-import {
-  initContractBookCache,
-  refreshContractBookAddresses,
-} from "./common/utils/contractBook"
+import { loadDeployments } from "./common/utils/deployments"
 import { initTokenlistCache } from "./common/utils/tokenList"
 
 async function main() {
-  await refreshContractBookAddresses().catch((error) => {
-    logger.warn(
-      { error },
-      "Failed to refresh contractBook addresses on startup",
-    )
-  })
+  await loadDeployments()
 
   const tokenlistRefreshTimer = await initTokenlistCache()
-  initContractBookCache()
 
   const server = app.listen(process.env.PORT, () => {
     const { NODE_ENV, PORT } = process.env
