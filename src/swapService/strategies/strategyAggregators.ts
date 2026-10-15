@@ -22,6 +22,7 @@ import {
   isAddressEqual,
   parseAbiParameters,
   parseUnits,
+  zeroAddress,
 } from "viem"
 import { BINARY_SEARCH_TIMEOUT_SECONDS } from "../config/constants"
 import { type SwapApiResponseMulticallItem, SwapperMode } from "../interface"
@@ -577,11 +578,10 @@ export class StrategyAggregators {
     const sources = this.sdk.quoteService.supportedSources()
     const shouldTransferToReceiver =
       !sources[sdkQuote.source.id].supports.swapAndTransfer
-    const allowanceTarget =
-      isAddress(sdkQuote.source.allowanceTarget) &&
-      !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
-        ? getAddress(sdkQuote.source.allowanceTarget)
-        : undefined
+    const allowanceTarget = getAllowanceTarget(
+      sdkQuote.source.allowanceTarget,
+      sdkQuote.tx.to as Hex,
+    )
 
     return {
       swapParams,
@@ -599,6 +599,23 @@ export class StrategyAggregators {
       estimatedGas: sdkQuote.gas?.estimatedGas,
     }
   }
+}
+
+// The Swapper approves the swap target itself. Sources return the zero address
+// when no other contract pulls the tokens, so only a different, non-zero
+// address needs its own approve step.
+export function getAllowanceTarget(
+  allowanceTarget: string,
+  swapTarget: Hex,
+): Address | undefined {
+  if (
+    !isAddress(allowanceTarget) ||
+    isAddressEqual(allowanceTarget, zeroAddress) ||
+    isAddressEqual(allowanceTarget, swapTarget)
+  ) {
+    return undefined
+  }
+  return getAddress(allowanceTarget)
 }
 
 function combinePublicAndPrivateRPCs() {
