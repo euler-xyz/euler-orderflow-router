@@ -35,6 +35,34 @@ pnpm run lint       # check
 pnpm run lint:fix   # fix 
 ```
 
+## Tests
+
+Run unit tests without RPC endpoints or provider credentials:
+
+```sh
+pnpm run test:unit
+```
+
+`pnpm test` runs the live mainnet fork suite and requires Anvil and the RPC/provider configuration used by the test cases.
+
+## Docker and CI
+
+The [Build workflow](./.github/workflows/build.yml) runs on pull requests, pushes to `master` and `development`, and manual dispatch. It uses Node 24 and the pnpm version pinned in `package.json`, runs lint, unit tests, and the production build, and builds the Linux AMD64 runtime image. The image check loads the server with production dependencies as a nonroot user with networking disabled. Images are built for validation without being pushed to a registry.
+
+Build locally with the public base images used by CI:
+
+```sh
+docker build \
+  --build-arg NODE_BUILD_IMAGE=node:24-trixie-slim \
+  --build-arg NODE_RUNTIME_IMAGE=gcr.io/distroless/nodejs24-debian13:nonroot \
+  -t euler-orderflow-router .
+docker run --rm --env-file .env -e PORT=3002 -p 3002:3002 euler-orderflow-router
+```
+
+Deployment builds can supply `--build-arg NODE_BASE_REPO=<repository>` to use that repository's `24-slim` and `24-distroless` tags. `NODE_BUILD_IMAGE` and `NODE_RUNTIME_IMAGE` override those defaults individually.
+
+Docker builds use the committed Pendle aggregator configuration. Refresh it with `pnpm run generate-config`, review the generated JSON, and commit it before building an image that needs updated provider coverage.
+
 ## Swagger API docs
 
 Swagger UI is served at the root, it is also available at [swap.euler.finance](https://swap.euler.finance). Request and response schemas are also available [here](./src/api/routes/swap/swapModel.ts)
@@ -121,6 +149,8 @@ const evcBatch = encodeFunctionData({
 ```
 
 ## Configuration
+
+Use the [chain onboarding checklist](./docs/adding-a-chain.md) when registering a network, configuring contracts and providers, or disabling chain support.
 
 To handle an incoming swap request, the API processes the query through a series of strategies until one of them provides a valid response. The strategy pipelines are defined per chain in `/swapService/config` folder. The strategies can handle requests in multiple ways. The basic one is the balmy SDK strategy, which queries multiple DEXes and aggregators for a swap quote and picks the best one. Strategies can themselves run the pipelines recursively. ERC4626 wrapper can be configured for assets which are vault shares and are not supported by aggregators. The strategy will deposit or redeem vault shares and run the pipeline again, this time using the underlying asset of the vault. For a list of available strategies see `swapService/strategies` folder.
 
