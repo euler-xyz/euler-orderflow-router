@@ -78,7 +78,6 @@ const SUPPORTED_CHAINS: Record<
     chainKey: "hyperevm",
     nativeAsset: "0x0000000000000000000000000000000000000000",
   },
-  [chains.swellchain.id]: { chainKey: "swell" },
   [chains.unichain.id]: { chainKey: "unichain" }, // fix gas price
   [chains.tac.id]: { chainKey: "tac" }, // fix gas price
   [chains.plasma.id]: { chainKey: "plasma" },

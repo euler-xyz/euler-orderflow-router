@@ -1,6 +1,7 @@
 import type { Address } from "viem"
 import * as chains from "viem/chains"
 import { logWarn } from "./logs"
+import { RPC_URLS } from "./viemClients"
 
 type Deployment = {
   chainId: number
@@ -26,7 +27,6 @@ const contractBook: any = {
       [chains.polygon.id]: "0x65E0aBbf3F3Fd06dBd01D6B9D28d0ea7A2f2Dccf",
       [chains.avalanche.id]: "0x065D7B495D25436E492fE57116665894Bfe17157",
       [chains.bsc.id]: "0x8e39500a6672D701616ED4943a5Cc5C79Ab38643",
-      [chains.swellchain.id]: "0x7212F011bbB3d1a04F20a548b0048cEad4dA9f42",
       [chains.sonic.id]: "0x2cb79cdA6Bb09A901177D5227b4aA1584Dbcfc9B",
       [chains.hyperEvm.id]: "0xdb45C54E8100073DFB87d3D51F917A14fa565Fb0",
       [chains.berachain.id]: "0x83Ee58fE951bb0133F4E30D61863988378CD665E",
@@ -47,7 +47,6 @@ const contractBook: any = {
       [chains.polygon.id]: "0xF86a955d82f83E2412A9902Cc3Fd15b750cFD992",
       [chains.avalanche.id]: "0x768B74A19115316c1A782fFa335FdfBb66278174",
       [chains.bsc.id]: "0xc0126DE6e1615479b357e2Fef6d423FB2FBEe502",
-      [chains.swellchain.id]: "0x605280f2F939255Ab36FaFdBC654dE3cfbD5c616",
       [chains.sonic.id]: "0x84354221A6C432a9907F4D0777d8e794646206da",
       [chains.hyperEvm.id]: "0x2F6e6Ea234a4dEcA25249252cd21D258Bb1651b8",
       [chains.berachain.id]: "0xE5cca51c93BF775cc176A45e28487026da777800",
@@ -89,6 +88,7 @@ export async function refreshContractBookAddresses() {
     )
 
     for (const deployment of deployments) {
+      if (!(deployment.chainId in RPC_URLS)) continue
       const peripheryAddrs = deployment.addresses?.peripheryAddrs
       if (peripheryAddrs?.swapper) {
         contractBook.swapper.address[deployment.chainId] =

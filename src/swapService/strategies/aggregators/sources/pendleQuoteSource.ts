@@ -104,8 +104,8 @@ export class CustomPendleQuoteSource
     },
     config,
   }: QuoteParams<PendleSupport, PendleConfig>) {
-    const tokenIn = findToken(chainId, getAddress(sellToken))
-    const tokenOut = findToken(chainId, getAddress(buyToken))
+    const tokenIn = await findToken(chainId, getAddress(sellToken))
+    const tokenOut = await findToken(chainId, getAddress(buyToken))
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
     if (
       !tokenIn.metadata?.isPendleLP &&

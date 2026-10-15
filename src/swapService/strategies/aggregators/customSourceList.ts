@@ -15,7 +15,6 @@ import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomMultiliquidQuoteSource } from "./sources/multiliquidQuoteSource"
-import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
 import { CustomNordsternQuoteSource } from "./sources/nordsternQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
 import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
@@ -38,7 +37,6 @@ const customSources = {
   "1inch": new CustomOneInchQuoteSource(),
   "li-fi": new CustomLiFiQuoteSource(),
   "open-ocean": new CustomOpenOceanQuoteSource(),
-  neptune: new CustomNeptuneQuoteSource(),
   nordstern: new CustomNordsternQuoteSource(),
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),

@@ -82,7 +82,10 @@ export class StrategyConnect2 {
   }
 
   async exactIn(swapParams: SwapParams): Promise<SwapApiResponse[]> {
-    const connectorToken = findToken(swapParams.chainId, this.config.connector)
+    const connectorToken = await findToken(
+      swapParams.chainId,
+      this.config.connector,
+    )
     if (!connectorToken) throw new Error("Connector token not found")
 
     const toConnectorSwapParams = {

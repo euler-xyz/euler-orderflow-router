@@ -10,7 +10,6 @@ import defaultRoutingConfig from "./default"
 import mainnetRoutingConfig from "./mainnet"
 import plasmaRoutingConfig from "./plasma"
 import sonicRoutingConfig from "./sonic"
-import swellRoutingConfig from "./swell"
 import unichainRoutingConfig from "./unichain"
 
 export const routingConfig: RoutingConfig = {
@@ -19,7 +18,6 @@ export const routingConfig: RoutingConfig = {
   [chains.avalanche.id]: avalancheRoutingConfig,
   [chains.bsc.id]: bscRoutingConfig,
   [chains.arbitrum.id]: arbitrumRoutingConfig,
-  [chains.swellchain.id]: swellRoutingConfig,
   [chains.berachain.id]: berachainRoutingConfig,
   [chains.bob.id]: bobRoutingConfig,
   [chains.sonic.id]: sonicRoutingConfig,

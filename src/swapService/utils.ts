@@ -1,11 +1,7 @@
 import contractBook from "@/common/utils/contractBook"
 import { logDev } from "@/common/utils/logs"
-import {
-  type TokenListItem,
-  findTokenInCache,
-  getOrFetchToken,
-} from "@/common/utils/tokenList"
-import type { StatusCodes } from "http-status-codes"
+import { type TokenListItem, getOrFetchToken } from "@/common/utils/tokenList"
+import { StatusCodes } from "http-status-codes"
 import {
   type Address,
   type ContractFunctionArgs,
@@ -41,8 +37,14 @@ export const SWAPPER_HANDLER_UNISWAP_V3 = stringToHex("UniswapV3", {
   size: 32,
 })
 
-export const findToken = (chainId: number, tokenAddress: Address) => {
-  return findTokenInCache(chainId, tokenAddress)
+export const findToken = async (chainId: number, tokenAddress: Address) => {
+  const token = await getOrFetchToken(chainId, tokenAddress)
+  if (!token)
+    throw new ApiError(
+      StatusCodes.SERVICE_UNAVAILABLE,
+      "Unable to resolve verified token metadata",
+    )
+  return token
 }
 
 export const findOrFetchToken = (chainId: number, tokenAddress: Address) =>
