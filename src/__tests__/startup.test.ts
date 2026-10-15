@@ -69,7 +69,10 @@ describe("server startup", () => {
     await vi.waitFor(() => expect(exit).toHaveBeenCalledWith(1))
     expect(mocks.tokenInit).not.toHaveBeenCalled()
     expect(mocks.listen).not.toHaveBeenCalled()
-    expect(mocks.error).toHaveBeenCalledWith({ error }, "Server startup failed")
+    expect(mocks.error).toHaveBeenCalledWith(
+      { err: error },
+      "Server startup failed",
+    )
   })
 
   it("exits without listening when initial token loading fails", async () => {
@@ -81,6 +84,9 @@ describe("server startup", () => {
     await import("../index")
     await vi.waitFor(() => expect(exit).toHaveBeenCalledWith(1))
     expect(mocks.listen).not.toHaveBeenCalled()
-    expect(mocks.error).toHaveBeenCalledWith({ error }, "Server startup failed")
+    expect(mocks.error).toHaveBeenCalledWith(
+      { err: error },
+      "Server startup failed",
+    )
   })
 })

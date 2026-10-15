@@ -27,6 +27,6 @@ async function main() {
 }
 
 void main().catch((error) => {
-  logger.error({ error }, "Server startup failed")
+  logger.error({ err: error }, "Server startup failed")
   process.exit(1)
 })
