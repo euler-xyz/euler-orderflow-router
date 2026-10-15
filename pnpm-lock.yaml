@@ -21,8 +21,8 @@ importers:
         specifier: 1.1.7
         version: 1.1.7(viem@2.49.3(typescript@5.9.3)(zod@3.23.8))
       '@eulerxyz/euler-v2-sdk':
-        specifier: 1.1.1
-        version: 1.1.1(typescript@5.9.3)(zod@3.23.8)
+        specifier: 4.2.0
+        version: 4.2.0(typescript@5.9.3)(zod@3.23.8)
       '@uniformlabs/multiliquid-evm-sdk':
         specifier: 0.1.1
         version: 0.1.1(typescript@5.9.3)(zod@3.23.8)
@@ -852,8 +852,8 @@ packages:
   '@ethersproject/wordlists@5.7.0':
     resolution: {integrity: sha512-S2TFNJNfHWVHNE6cNDjbVlZ6MgE17MIxMbMg2zv3wn+3XSJGosL1m9ZVv3GXCf/2ymSsQ+hRI5IzoMJTG6aoVA==}
 
-  '@eulerxyz/euler-v2-sdk@1.1.1':
-    resolution: {integrity: sha512-TxZbzD3hghLr7Fp/U2IpXe5LU+GKpAzPhxMyUReSD9G0IjTlEuhWvtdTuBaBgTqchq0J4gzfivZTzeUBjSH9vw==}
+  '@eulerxyz/euler-v2-sdk@4.2.0':
+    resolution: {integrity: sha512-8rfp+xwnGJAUGkKWlDrvCeJ7xsvHCdfdyne4II5u14CqrLMf6uzV2vhEf6qJD+aHPCwrHUshaSwQslEYjqG9Uw==}
     engines: {node: '>=18'}
 
   '@fastify/busboy@2.1.1':
@@ -4140,7 +4140,7 @@ snapshots:
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
 
-  '@eulerxyz/euler-v2-sdk@1.1.1(typescript@5.9.3)(zod@3.23.8)':
+  '@eulerxyz/euler-v2-sdk@4.2.0(typescript@5.9.3)(zod@3.23.8)':
     dependencies:
       viem: 2.48.8(typescript@5.9.3)(zod@3.23.8)
     transitivePeerDependencies:
