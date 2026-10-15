@@ -186,7 +186,7 @@ describe("authoritative Pendle market discovery", () => {
     const source = await load()
     const first = await source.fetchPendleMetadata(146)
     await vi.advanceTimersByTimeAsync(300_001)
-    expect(await source.fetchPendleMetadata(146)).toBe(first)
+    expect(await source.fetchPendleMetadata(146)).toEqual(first)
   })
 })
 
@@ -284,4 +284,138 @@ describe("authoritative Pendle asset discovery", () => {
     expect(await source.fetchPendleMetadata(146)).toEqual(first)
     expect(assets).toHaveBeenCalledTimes(2)
   })
+})
+
+describe("independent Pendle discovery sources", () => {
+  const asset = { chainId: 146, address: token.address, tags: ["PT"] }
+  const market = {
+    chainId: 146,
+    address: "0x0000000000000000000000000000000000000002",
+    pt: `146-${token.address}`,
+  }
+
+  it.each([
+    ["HTTP failure", async () => ({ ok: false, status: 503 })],
+    [
+      "network failure",
+      async () => {
+        throw new Error("Network unavailable")
+      },
+    ],
+    ["malformed catalog", async () => response({ results: null, total: 1 })],
+    [
+      "incomplete pagination",
+      async (url: string) =>
+        new URL(url).searchParams.get("skip") === "0"
+          ? response({ results: [market], total: 2, skip: 0 })
+          : response({ results: [], total: 2, skip: 1 }),
+    ],
+  ] as const)(
+    "uses healthy PT assets after a market %s on a cold cache",
+    async (_, fetchMarkets) => {
+      const assets = vi.fn(async () => response({ assets: [asset] }))
+      vi.stubGlobal(
+        "fetch",
+        vi.fn(async (url: string) =>
+          new URL(url).pathname.endsWith("/assets/all")
+            ? assets()
+            : fetchMarkets(url),
+        ),
+      )
+      const metadata = await (await load()).fetchPendleMetadata(146)
+      expect(assets).toHaveBeenCalledTimes(1)
+      expect([...metadata]).toEqual([
+        [token.address, { isPendlePT: true, isPendleLP: false }],
+      ])
+    },
+  )
+
+  it("starts asset discovery while markets are pending and keeps it after a market timeout", async () => {
+    let rejectMarkets!: (reason: Error) => void
+    let startedMarkets!: () => void
+    const marketsStarted = new Promise<void>((resolve) => {
+      startedMarkets = resolve
+    })
+    const assets = vi.fn(async () => response({ assets: [asset] }))
+    const signals: AbortSignal[] = []
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((url: string, init: RequestInit) => {
+        signals.push(init.signal as AbortSignal)
+        if (new URL(url).pathname.endsWith("/assets/all")) return assets()
+        startedMarkets()
+        return new Promise((_, reject) => {
+          rejectMarkets = reject
+        })
+      }),
+    )
+    const source = await load()
+    const pending = source.fetchPendleMetadata(146)
+    await marketsStarted
+    const assetsStartedBeforeFailure = assets.mock.calls.length
+    rejectMarkets(new DOMException("Market request timed out", "TimeoutError"))
+    const metadata = await pending
+    expect(assetsStartedBeforeFailure).toBe(1)
+    expect(signals[0]).not.toBe(signals[1])
+    expect(metadata.get(token.address)?.isPendlePT).toBe(true)
+  })
+
+  it("keeps cached markets and refreshes asset classifications during a market outage", async () => {
+    vi.useFakeTimers()
+    const previousAsset = "0x0000000000000000000000000000000000000003"
+    const newAsset = "0x0000000000000000000000000000000000000004"
+    const markets = vi
+      .fn()
+      .mockResolvedValueOnce(response({ results: [market], total: 1 }))
+      .mockResolvedValueOnce({ ok: false, status: 503 })
+    const assets = vi
+      .fn()
+      .mockResolvedValueOnce(
+        response({ assets: [{ ...asset, address: previousAsset }] }),
+      )
+      .mockResolvedValueOnce(
+        response({ assets: [asset, { ...asset, address: newAsset }] }),
+      )
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) =>
+        new URL(url).pathname.endsWith("/assets/all") ? assets() : markets(),
+      ),
+    )
+    const source = await load()
+    const first = await source.fetchPendleMetadata(146)
+    expect(first.has(previousAsset)).toBe(true)
+    await vi.advanceTimersByTimeAsync(300_001)
+    const refreshed = await source.fetchPendleMetadata(146)
+    expect(refreshed.get(token.address)?.pendleMarket).toBe(market.address)
+    expect(refreshed.get(market.address)?.isPendleLP).toBe(true)
+    expect(refreshed.get(newAsset)).toEqual({
+      isPendlePT: true,
+      isPendleLP: false,
+    })
+    expect(refreshed.has(previousAsset)).toBe(false)
+  })
+
+  it.each([false, true])(
+    "handles failure of both sources with a warm cache=%s",
+    async (warm) => {
+      vi.useFakeTimers()
+      let available = warm
+      vi.stubGlobal(
+        "fetch",
+        vi.fn(async (url: string) => {
+          if (!available) return { ok: false, status: 503 }
+          return new URL(url).pathname.endsWith("/assets/all")
+            ? response({ assets: [asset] })
+            : response({ results: [], total: 0 })
+        }),
+      )
+      const source = await load()
+      const first = await source.fetchPendleMetadata(146)
+      expect(first.size).toBe(warm ? 1 : 0)
+      available = false
+      await vi.advanceTimersByTimeAsync(300_001)
+      expect(await source.fetchPendleMetadata(146)).toEqual(first)
+    },
+  )
 })

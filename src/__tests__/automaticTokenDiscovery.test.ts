@@ -122,8 +122,13 @@ describe("Sonic PTs absent from the market catalog", () => {
     },
   ] as const
 
-  it.each(pts)(
-    "quotes $symbol using authoritative asset classification",
+  it.each(
+    pts.flatMap((pt) => [
+      { ...pt, marketsAvailable: true },
+      { ...pt, marketsAvailable: false },
+    ]),
+  )(
+    "quotes $symbol using authoritative assets with marketsAvailable=$marketsAvailable",
     async (pt) => {
       mocks.read.mockImplementation(
         async ({ functionName }: { functionName: string }) =>
@@ -141,7 +146,9 @@ describe("Sonic PTs absent from the market catalog", () => {
             return response({ assets: [{ ...pt, chainId: 146, tags: ["PT"] }] })
           }
           if (url.pathname === "/core/v2/markets/all")
-            return response({ results: [], total: 0 })
+            return pt.marketsAvailable
+              ? response({ results: [], total: 0 })
+              : { ok: false, status: 503 }
           if (url.hostname === "unpkg.com") return response({ tokens: [] })
           if (url.pathname.includes("tokenlists-")) return response({})
           return { ok: false, status: 404 }

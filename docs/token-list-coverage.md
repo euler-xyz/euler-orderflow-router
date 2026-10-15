@@ -75,8 +75,10 @@ Pendle's `/core/v1/assets/all?chainId=146&type=PT` response explicitly classifie
 | PT-wstkscUSD-18DEC2025 | `0x0Fb682C9692AddCc1769f4D4d938c54420D54fA3` | 6 |
 | PT-stS-18DEC2025 | `0xE2BC30A4896Ff4c52ADCb180213666d2D6B21c6d` | 18 |
 
-The runtime supplements market-derived metadata with these authoritative PT classifications. It retains known market mappings and leaves the market address unset for asset-only records. Generic token names and symbols cannot establish PT status. Asset-source failures preserve successful market discovery and cached asset-only PT classifications.
+The runtime supplements market-derived metadata with these authoritative PT classifications. It retains known market mappings and leaves the market address unset for asset-only records. Generic token names and symbols cannot establish PT status. Market and asset discovery run independently. Each source retains its own successful snapshot during failures, and healthy asset discovery can classify PTs on a cold cache even when the market catalog fails.
 
 The updated loader resolved all three PTs using public Sonic RPC decimal reads, and the actual Pendle quote source returned positive output amounts and transaction calldata for each PT-to-underlying conversion. Each quote used one whole PT in its verified decimal units. All three transactions target Pendle's router at `0x888888888889758F76e7103c6CbF23ABbF58F946`.
+
+A fault-injection check forces the market catalog to return HTTP 503 while using the live asset catalog, public Sonic RPC and Pendle quote endpoint. All three PTs still resolve their classification on a cold cache and return positive output amounts with transaction calldata.
 
 These checks establish classification and quote construction for the three missing Sonic routes. They do not establish missing market mappings or signed swap execution.

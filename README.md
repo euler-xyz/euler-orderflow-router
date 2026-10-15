@@ -172,6 +172,8 @@ Before quoting, both input tokens and inner routing assets use contract-verified
 
 Protocol routing metadata comes from V3. For tokens absent from that catalog, the router identifies Pendle PT and LP addresses from Pendle's paginated market API and supplements PT classification from its asset API. Asset records must match the requested chain and carry Pendle's explicit PT tag; they do not supply a market mapping. It does not classify tokens from their symbols or accept protocol flags from generic lists. A missing or ambiguous market mapping does not produce a fabricated market address.
 
+Pendle's market and asset sources load concurrently with separate timeouts and cached snapshots. A failed source retains its last successful data while the healthy source refreshes. Market records take precedence when both sources identify the same token.
+
 Optional source overrides are `DEFILLAMA_TOKEN_LIST_URL` (per-chain list base), `UNISWAP_TOKEN_LIST_URL` (global published list), `PENDLE_MARKETS_URL` (paginated market endpoint), and `PENDLE_ASSETS_URL` (full asset catalog endpoint). The default Uniswap source is its official npm publication; `tokens.uniswap.org` currently serves HTML.
 
 See [token-list coverage](./docs/token-list-coverage.md) for the source audit and protocol coverage limits.

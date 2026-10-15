@@ -118,9 +118,116 @@ type RoutingMetadata = NonNullable<TokenListItem["metadata"]>
 type PendleMarket = { chainId?: number; address?: string; pt?: string }
 const pendleCache = new Map<
   number,
-  { metadata: Map<string, RoutingMetadata>; timestamp: number }
+  {
+    metadata: Map<string, RoutingMetadata>
+    markets: Map<string, RoutingMetadata>
+    assets: Map<string, RoutingMetadata>
+    timestamp: number
+  }
 >()
 const pendlePromises = new Map<number, Promise<Map<string, RoutingMetadata>>>()
+
+async function fetchPendleMarkets(chainId: number) {
+  const metadata = new Map<string, RoutingMetadata>()
+  let skip = 0
+  const signal = AbortSignal.timeout(TIMEOUT_MS)
+  while (true) {
+    const url = new URL(
+      process.env.PENDLE_MARKETS_URL ||
+        "https://api-v2.pendle.finance/core/v2/markets/all",
+    )
+    url.searchParams.set("chainId", String(chainId))
+    url.searchParams.set("limit", "100")
+    url.searchParams.set("skip", String(skip))
+    const response = await fetch(url.toString(), { signal })
+    if (!response.ok)
+      throw new Error(`Pendle markets returned ${response.status}`)
+    const data = (await response.json()) as {
+      total?: number
+      skip?: number
+      results?: PendleMarket[]
+    }
+    if (
+      !Array.isArray(data.results) ||
+      !Number.isInteger(data.total) ||
+      Number(data.total) < 0 ||
+      (data.skip !== undefined && data.skip !== skip)
+    )
+      throw new Error("Invalid Pendle market response")
+    if (!data.results.length && skip < Number(data.total))
+      throw new Error("Incomplete Pendle market response")
+    for (const market of data.results) {
+      if (
+        market.chainId !== chainId ||
+        !market.address ||
+        !isAddress(market.address) ||
+        market.address.toLowerCase() === zeroAddress
+      )
+        continue
+      const pt = market.pt?.startsWith(`${chainId}-`)
+        ? market.pt.slice(String(chainId).length + 1)
+        : undefined
+      if (pt && isAddress(pt) && pt.toLowerCase() !== zeroAddress) {
+        const previous = metadata.get(pt.toLowerCase())
+        const pendleMarket =
+          previous && previous.pendleMarket !== market.address
+            ? undefined
+            : market.address
+        metadata.set(pt.toLowerCase(), {
+          isPendlePT: true,
+          isPendleLP: false,
+          ...(pendleMarket ? { pendleMarket } : {}),
+        })
+      }
+      metadata.set(market.address.toLowerCase(), {
+        isPendlePT: false,
+        isPendleLP: true,
+        pendleMarket: market.address,
+      })
+    }
+    skip += data.results.length
+    if (skip >= Number(data.total)) break
+  }
+  return metadata
+}
+
+async function fetchPendleAssets(chainId: number) {
+  const metadata = new Map<string, RoutingMetadata>()
+  const signal = AbortSignal.timeout(TIMEOUT_MS)
+  const url = new URL(
+    process.env.PENDLE_ASSETS_URL ||
+      "https://api-v2.pendle.finance/core/v1/assets/all",
+  )
+  url.searchParams.set("chainId", String(chainId))
+  url.searchParams.set("type", "PT")
+  // Omitting limit requests the full asset catalog, including unlisted markets.
+  const response = await fetch(url.toString(), { signal })
+  if (!response.ok) throw new Error(`Pendle assets returned ${response.status}`)
+  const data = (await response.json()) as { assets?: unknown[] } | null
+  if (!Array.isArray(data?.assets))
+    throw new Error("Invalid Pendle asset response")
+  for (const raw of data.assets) {
+    if (!raw || typeof raw !== "object") continue
+    const asset = raw as {
+      chainId?: number
+      address?: unknown
+      tags?: unknown
+    }
+    if (
+      asset.chainId !== chainId ||
+      typeof asset.address !== "string" ||
+      !isAddress(asset.address) ||
+      asset.address.toLowerCase() === zeroAddress ||
+      !Array.isArray(asset.tags) ||
+      !asset.tags.includes("PT")
+    )
+      continue
+    const address = asset.address.toLowerCase()
+    if (!metadata.has(address))
+      metadata.set(address, { isPendlePT: true, isPendleLP: false })
+  }
+  return metadata
+}
 
 export function fetchPendleMetadata(chainId: number) {
   const cached = pendleCache.get(chainId)
@@ -129,131 +236,40 @@ export function fetchPendleMetadata(chainId: number) {
   const pending = pendlePromises.get(chainId)
   if (pending) return pending
   const promise = (async () => {
-    const metadata = new Map<string, RoutingMetadata>()
-    let skip = 0
-    const signal = AbortSignal.timeout(TIMEOUT_MS)
-    while (true) {
-      const url = new URL(
-        process.env.PENDLE_MARKETS_URL ||
-          "https://api-v2.pendle.finance/core/v2/markets/all",
-      )
-      url.searchParams.set("chainId", String(chainId))
-      url.searchParams.set("limit", "100")
-      url.searchParams.set("skip", String(skip))
-      const response = await fetch(url.toString(), { signal })
-      if (!response.ok)
-        throw new Error(`Pendle markets returned ${response.status}`)
-      const data = (await response.json()) as {
-        total?: number
-        skip?: number
-        results?: PendleMarket[]
-      }
-      if (
-        !Array.isArray(data.results) ||
-        !Number.isInteger(data.total) ||
-        Number(data.total) < 0 ||
-        (data.skip !== undefined && data.skip !== skip)
-      )
-        throw new Error("Invalid Pendle market response")
-      if (!data.results.length && skip < Number(data.total))
-        throw new Error("Incomplete Pendle market response")
-      for (const market of data.results) {
-        if (
-          market.chainId !== chainId ||
-          !market.address ||
-          !isAddress(market.address) ||
-          market.address.toLowerCase() === zeroAddress
-        )
-          continue
-        const pt = market.pt?.startsWith(`${chainId}-`)
-          ? market.pt.slice(String(chainId).length + 1)
-          : undefined
-        if (pt && isAddress(pt) && pt.toLowerCase() !== zeroAddress) {
-          const previous = metadata.get(pt.toLowerCase())
-          const pendleMarket =
-            previous && previous.pendleMarket !== market.address
-              ? undefined
-              : market.address
-          metadata.set(pt.toLowerCase(), {
-            isPendlePT: true,
-            isPendleLP: false,
-            ...(pendleMarket ? { pendleMarket } : {}),
-          })
-        }
-        metadata.set(market.address.toLowerCase(), {
-          isPendlePT: false,
-          isPendleLP: true,
-          pendleMarket: market.address,
+    const [marketResult, assetResult] = await Promise.allSettled([
+      fetchPendleMarkets(chainId),
+      fetchPendleAssets(chainId),
+    ])
+    for (const [source, result] of [
+      ["market", marketResult],
+      ["asset", assetResult],
+    ] as const) {
+      if (result.status === "rejected")
+        logWarn({
+          name: `Pendle ${source} discovery failed for chain ${chainId}`,
+          error: result.reason,
         })
-      }
-      skip += data.results.length
-      if (skip >= Number(data.total)) break
     }
-
-    try {
-      const url = new URL(
-        process.env.PENDLE_ASSETS_URL ||
-          "https://api-v2.pendle.finance/core/v1/assets/all",
-      )
-      url.searchParams.set("chainId", String(chainId))
-      url.searchParams.set("type", "PT")
-      // Omitting limit requests the full asset catalog, including unlisted markets.
-      const response = await fetch(url.toString(), { signal })
-      if (!response.ok)
-        throw new Error(`Pendle assets returned ${response.status}`)
-      const data = (await response.json()) as { assets?: unknown[] } | null
-      if (!Array.isArray(data?.assets))
-        throw new Error("Invalid Pendle asset response")
-      for (const raw of data.assets) {
-        if (!raw || typeof raw !== "object") continue
-        const asset = raw as {
-          chainId?: number
-          address?: unknown
-          tags?: unknown
-        }
-        if (
-          asset.chainId !== chainId ||
-          typeof asset.address !== "string" ||
-          !isAddress(asset.address) ||
-          asset.address.toLowerCase() === zeroAddress ||
-          !Array.isArray(asset.tags) ||
-          !asset.tags.includes("PT")
-        )
-          continue
-        const address = asset.address.toLowerCase()
-        if (!metadata.has(address))
-          metadata.set(address, { isPendlePT: true, isPendleLP: false })
-      }
-    } catch (error) {
-      logWarn({
-        name: `Pendle asset discovery failed for chain ${chainId}`,
-        error,
-      })
-      for (const [address, previous] of cached?.metadata ?? []) {
-        if (
-          previous.isPendlePT &&
-          !previous.pendleMarket &&
-          !metadata.has(address)
-        )
-          metadata.set(address, previous)
-      }
-    }
-
-    pendleCache.set(chainId, { metadata, timestamp: Date.now() })
+    const markets =
+      marketResult.status === "fulfilled"
+        ? marketResult.value
+        : (cached?.markets ?? new Map<string, RoutingMetadata>())
+    const assets =
+      assetResult.status === "fulfilled"
+        ? assetResult.value
+        : (cached?.assets ?? new Map<string, RoutingMetadata>())
+    // Market records retain known mappings and ambiguity over asset-only flags.
+    const metadata = new Map([...assets, ...markets])
+    pendleCache.set(chainId, {
+      metadata,
+      markets,
+      assets,
+      timestamp: Date.now(),
+    })
     return metadata
-  })()
-    .catch((error) => {
-      logWarn({
-        name: `Pendle token discovery failed for chain ${chainId}`,
-        error,
-      })
-      const metadata = cached?.metadata ?? new Map<string, RoutingMetadata>()
-      pendleCache.set(chainId, { metadata, timestamp: Date.now() })
-      return metadata
-    })
-    .finally(() => {
-      pendlePromises.delete(chainId)
-    })
+  })().finally(() => {
+    pendlePromises.delete(chainId)
+  })
   pendlePromises.set(chainId, promise)
   return promise
 }
