@@ -100,6 +100,9 @@ describe.sequential("mainnet live swap flows", () => {
         "--fork-url",
         forkRpcUrl,
         "--auto-impersonate",
+        // Match mainnet: some aggregator routes use Osaka opcodes (CLZ).
+        "--hardfork",
+        "osaka",
         "--host",
         ANVIL_HOST,
         "--port",
