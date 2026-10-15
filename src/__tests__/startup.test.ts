@@ -3,18 +3,21 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 const mocks = vi.hoisted(() => ({
   listen: vi.fn(() => ({ close: vi.fn() })),
   error: vi.fn(),
+  warn: vi.fn(),
   tokenInit: vi.fn(),
   loadDeployments: vi.fn(),
+  initContractBookCache: vi.fn(),
 }))
 vi.mock("../server", () => ({
   app: { listen: mocks.listen },
-  logger: { warn: vi.fn(), info: vi.fn(), error: mocks.error },
+  logger: { warn: mocks.warn, info: vi.fn(), error: mocks.error },
 }))
 vi.mock("../common/utils/tokenList", () => ({
   initTokenlistCache: mocks.tokenInit,
 }))
 vi.mock("../common/utils/deployments", () => ({
   loadDeployments: mocks.loadDeployments,
+  initContractBookCache: mocks.initContractBookCache,
 }))
 
 beforeEach(() => {
@@ -59,19 +62,21 @@ describe("server startup", () => {
     await vi.waitFor(() => expect(mocks.listen).toHaveBeenCalledOnce())
   })
 
-  it("exits without initializing tokens or listening when deployments fail to load", async () => {
+  it("warns and starts with fallback addresses when deployments fail to load", async () => {
     const error = new Error("Deployments unavailable")
     mocks.loadDeployments.mockRejectedValue(error)
     const exit = vi
       .spyOn(process, "exit")
       .mockImplementation(() => undefined as never)
     await import("../index")
-    await vi.waitFor(() => expect(exit).toHaveBeenCalledWith(1))
-    expect(mocks.tokenInit).not.toHaveBeenCalled()
-    expect(mocks.listen).not.toHaveBeenCalled()
-    expect(mocks.error).toHaveBeenCalledWith(
+    await vi.waitFor(() => expect(mocks.listen).toHaveBeenCalledOnce())
+    expect(mocks.tokenInit).toHaveBeenCalledOnce()
+    expect(mocks.initContractBookCache).toHaveBeenCalledOnce()
+    expect(exit).not.toHaveBeenCalled()
+    expect(mocks.error).not.toHaveBeenCalled()
+    expect(mocks.warn).toHaveBeenCalledWith(
       { err: error },
-      "Server startup failed",
+      "Failed to refresh contractBook addresses on startup",
     )
   })
 

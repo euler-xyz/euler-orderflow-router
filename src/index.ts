@@ -1,11 +1,20 @@
 import { app, logger } from "@/server"
-import { loadDeployments } from "./common/utils/deployments"
+import {
+  initContractBookCache,
+  loadDeployments,
+} from "./common/utils/deployments"
 import { initTokenlistCache } from "./common/utils/tokenList"
 
 async function main() {
-  await loadDeployments()
+  await loadDeployments().catch((error) => {
+    logger.warn(
+      { err: error },
+      "Failed to refresh contractBook addresses on startup",
+    )
+  })
 
   const tokenlistRefreshTimer = await initTokenlistCache()
+  const contractBookRefreshTimer = initContractBookCache()
 
   const server = app.listen(process.env.PORT, () => {
     const { NODE_ENV, PORT } = process.env
@@ -15,6 +24,7 @@ async function main() {
   const onCloseSignal = () => {
     logger.info("sigint received, shutting down")
     clearInterval(tokenlistRefreshTimer)
+    clearInterval(contractBookRefreshTimer)
     server.close(() => {
       logger.info("server closed")
       process.exit()
