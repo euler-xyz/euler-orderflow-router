@@ -55,8 +55,8 @@ const EULER_PRIME_USDT_VAULT = getAddress(
 )
 const WSTETH_VAULT = getAddress("0xbC4B4AC47582c3E38Ce5940B80Da65401F4628f1")
 
-const USDC_WHALE = getAddress("0xb7cD010b53D23a794d754886C3b928BE6a3315dC")
-const USDT_WHALE = getAddress("0x83A32a54D31Ee4f1f9dFFAd2A63A6d214e469eC3")
+const USDC_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
+const USDT_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
 const WETH_WHALE = getAddress("0x4a18a50a8328b42773268B4b436254056b7d70CE")
 
 let anvilProcess: ReturnType<typeof spawn> | undefined
@@ -156,6 +156,9 @@ describe.sequential("mainnet live swap flows", () => {
     sdk = await buildEulerSDK({
       config: {
         rpcUrls: { [CHAIN_ID]: anvilUrl },
+        // Read fresh fork state after transactions and snapshot reverts.
+        accountServiceAdapter: "onchain",
+        queryCacheEnabled: false,
       },
       swapServiceConfig: {
         swapApiUrl,
@@ -526,7 +529,8 @@ async function executePlan(plan: TransactionPlanItem[]) {
             data: resolved.data,
           })
 
-          await publicClient.waitForTransactionReceipt({ hash })
+          const receipt = await publicClient.waitForTransactionReceipt({ hash })
+          expect(receipt.status).toBe("success")
         }
         continue
       }
@@ -556,12 +560,20 @@ async function executePlan(plan: TransactionPlanItem[]) {
         gas: (gas * 120n) / 100n,
       })
 
-      await publicClient.waitForTransactionReceipt({ hash })
+      const receipt = await publicClient.waitForTransactionReceipt({ hash })
+      expect(receipt.status).toBe("success")
     }
   } catch (error) {
     const decodedErrors = await decodeSmartContractErrors(error)
     if (decodedErrors.length > 0) {
-      throw new Error(JSON.stringify(decodedErrors, null, 2))
+      throw new Error(
+        JSON.stringify(
+          decodedErrors,
+          (_, value) => (typeof value === "bigint" ? value.toString() : value),
+          2,
+        ),
+        { cause: error },
+      )
     }
     throw error
   }
@@ -621,7 +633,7 @@ async function initBalances() {
     USDC_WHALE,
     USDC_ADDRESS,
     account.address,
-    parseUnits("100000", 6),
+    parseUnits("10000", 6),
   )
   await transferTokenFromWhale(
     USDT_WHALE,
@@ -643,6 +655,17 @@ async function transferTokenFromWhale(
   recipient: Address,
   amount: bigint,
 ) {
+  const balance = await publicClient.readContract({
+    address: token,
+    abi: erc20Abi,
+    functionName: "balanceOf",
+    args: [whale],
+  })
+  expect(
+    balance,
+    `Insufficient fork funding for token ${token} from ${whale}`,
+  ).toBeGreaterThanOrEqual(amount)
+
   const whaleWallet = createWalletClient({
     account: whale,
     chain: mainnet,
@@ -656,7 +679,8 @@ async function transferTokenFromWhale(
     args: [recipient, amount],
   })
 
-  await publicClient.waitForTransactionReceipt({ hash })
+  const receipt = await publicClient.waitForTransactionReceipt({ hash })
+  expect(receipt.status).toBe("success")
 }
 
 async function waitForRpc(url: string, retries = 60) {
