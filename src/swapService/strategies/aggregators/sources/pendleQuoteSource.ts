@@ -15,7 +15,7 @@ import {
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
 import { getAddress } from "viem"
-import pendleAggregators from "./pendle/pendleAggregators.json"
+import { getPendleAggregators } from "./pendle/pendleAggregatorConfig"
 
 // const soldOutCoolOff: Record<string, number> = {}
 
@@ -43,14 +43,13 @@ export class CustomPendleQuoteSource
     this.aggregator = _aggregator
   }
   getMetadata() {
+    const pendleAggregators = getPendleAggregators()
     const metadata = {
       name: `Pendle ${AGGREGATOR_NAMES[this.aggregator] || this.aggregator}`,
       supports: {
         chains: Object.keys(pendleAggregators)
           .filter((chainId) =>
-            pendleAggregators[
-              chainId as keyof typeof pendleAggregators
-            ].includes(this.aggregator),
+            pendleAggregators[Number(chainId)].includes(this.aggregator),
           )
           .map(Number),
         swapAndTransfer: true,
@@ -104,8 +103,8 @@ export class CustomPendleQuoteSource
     },
     config,
   }: QuoteParams<PendleSupport, PendleConfig>) {
-    const tokenIn = findToken(chainId, getAddress(sellToken))
-    const tokenOut = findToken(chainId, getAddress(buyToken))
+    const tokenIn = await findToken(chainId, getAddress(sellToken))
+    const tokenOut = await findToken(chainId, getAddress(buyToken))
     if (!tokenIn || !tokenOut) throw new Error("Missing token in or out")
     if (
       !tokenIn.metadata?.isPendleLP &&

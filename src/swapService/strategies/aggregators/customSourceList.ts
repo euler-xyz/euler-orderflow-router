@@ -10,13 +10,11 @@ import type {
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
 import { CustomZRXQuoteSource } from "./sources/0xMatchaQuoteSource"
 import { CustomBinanceWalletQuoteSource } from "./sources/binanceWalletQuoteSource"
-import { CustomCoWQuoteSource } from "./sources/cowQuoteSource"
 import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
 import { CustomMultiliquidQuoteSource } from "./sources/multiliquidQuoteSource"
-import { CustomNeptuneQuoteSource } from "./sources/neptuneQuoteSource"
 import { CustomNordsternQuoteSource } from "./sources/nordsternQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
 import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
@@ -28,7 +26,7 @@ import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
 import { CustomSpectraQuoteSource } from "./sources/spectraQuoteSource"
 import { CustomUniswapQuoteSource } from "./sources/uniswapQuoteSource"
 
-import pendleAggregators from "./sources/pendle/pendleAggregators.json"
+import { getPendleAggregators } from "./sources/pendle/pendleAggregatorConfig"
 
 type ConstructorParameters = {
   providerService: IProviderService
@@ -39,7 +37,6 @@ const customSources = {
   "1inch": new CustomOneInchQuoteSource(),
   "li-fi": new CustomLiFiQuoteSource(),
   "open-ocean": new CustomOpenOceanQuoteSource(),
-  neptune: new CustomNeptuneQuoteSource(),
   nordstern: new CustomNordsternQuoteSource(),
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
@@ -50,7 +47,6 @@ const customSources = {
   "okx-dex": new CustomOKXDexQuoteSource(),
   paraswap: new CustomParaswapQuoteSource(),
   "0x": new CustomZRXQuoteSource(),
-  // cow: new CustomCoWQuoteSource(),
   spectra: new CustomSpectraQuoteSource(),
   oku_bob_icecreamswap: new CustomOkuQuoteSource(
     "icecreamswap",
@@ -65,7 +61,7 @@ export class CustomSourceList extends LocalSourceList {
     super({ providerService, fetchService })
 
     const allPendleAggregators = [
-      ...new Set(Object.values(pendleAggregators).flat()),
+      ...new Set(Object.values(getPendleAggregators()).flat()),
     ]
     const pendleSources = Object.fromEntries(
       allPendleAggregators.map((aggregator) => [

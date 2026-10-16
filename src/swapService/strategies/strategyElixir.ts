@@ -229,7 +229,7 @@ export class StrategyElixir {
     )
 
     const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
 
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -330,7 +330,7 @@ export class StrategyElixir {
     swapParams: SwapParams,
   ): Promise<SwapApiResponse[]> {
     const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
-    const tokenOut = findToken(swapParams.chainId, vaultData.asset)
+    const tokenOut = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,
@@ -452,7 +452,7 @@ export class StrategyElixir {
   ): Promise<SwapApiResponse[]> {
     // TODO expects dust out - add to dust list
     const vaultData = this.getSupportedVault(swapParams.tokenIn.address)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,
@@ -576,7 +576,7 @@ export class StrategyElixir {
     const vaultData = this.getSupportedVault(swapParams.tokenOut.address)
 
     const mintAmount = adjustForInterest(swapParams.amount)
-    const tokenIn = findToken(swapParams.chainId, vaultData.asset)
+    const tokenIn = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenIn) throw new Error("Inner token in not found")
     const mintSwapParams = {
       ...swapParams,
@@ -602,7 +602,7 @@ export class StrategyElixir {
       mintData,
     )
 
-    const tokenOut = findToken(swapParams.chainId, vaultData.asset)
+    const tokenOut = await findToken(swapParams.chainId, vaultData.asset)
     if (!tokenOut) throw new Error("Inner token not found")
     const innerSwapParams = {
       ...swapParams,

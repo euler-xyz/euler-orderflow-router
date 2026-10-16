@@ -2,7 +2,7 @@ diff --git a/dist/chains.js b/dist/chains.js
 index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1013f70fe 100644
 --- a/dist/chains.js
 +++ b/dist/chains.js
-@@ -566,6 +566,69 @@ exports.Chains = {
+@@ -566,6 +566,60 @@ exports.Chains = {
          explorer: 'https://goerli.basescan.org/',
          testnet: true,
      },
@@ -32,15 +32,6 @@ index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1
 +        wToken: '0xB63B9f0eb4A6E6f191529D71d4D88cc8900Df2C9',
 +        publicRPCs: ['https://rpc.ankr.com/tac', 'https://rpc.tac.build'],
 +        explorer: 'https://explorer.tac.build/',
-+    },
-+    SWELL: {
-+        chainId: 1923,
-+        name: 'Swellchain',
-+        ids: ['swell'],
-+        nativeCurrency: { symbol: 'ETH', name: 'Ethereum' },
-+        wToken: '0x4200000000000000000000000000000000000006',
-+        publicRPCs: ['https://rpc.ankr.com/swell'],
-+        explorer: 'https://explorer.swellnetwork.io/',
 +    },
 +    HYPEREVM: {
 +        chainId: 999,

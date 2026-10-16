@@ -22,6 +22,7 @@ import {
   isAddressEqual,
   parseAbiParameters,
   parseUnits,
+  zeroAddress,
 } from "viem"
 import { BINARY_SEARCH_TIMEOUT_SECONDS } from "../config/constants"
 import { type SwapApiResponseMulticallItem, SwapperMode } from "../interface"
@@ -41,7 +42,7 @@ import {
   quoteToRoute,
 } from "../utils"
 import { CustomSourceList } from "./aggregators/customSourceList"
-import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
+import { getPendleAggregators } from "./aggregators/sources/pendle/pendleAggregatorConfig"
 import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
 import { StubPriceSource } from "./aggregators/stubPriceSource"
 import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
@@ -91,7 +92,7 @@ export class StrategyAggregators {
 
   constructor(match = {}, config?: BalmyStrategyConfig, provider?: string) {
     const allPendleAggregators = [
-      ...new Set(Object.values(pendleAggregators).flat()),
+      ...new Set(Object.values(getPendleAggregators()).flat()),
     ]
 
     let configClone = structuredClone(config)
@@ -217,8 +218,7 @@ export class StrategyAggregators {
   async supports(swapParams: SwapParams) {
     return (
       !isExactInRepay(swapParams) &&
-      (this.sdk.quoteService.supportedChains().includes(swapParams.chainId) ||
-        swapParams.chainId === 1923) && // TODO fix!
+      this.sdk.quoteService.supportedChains().includes(swapParams.chainId) &&
       (!this.config.sourcesFilter?.includeSources ||
         this.config.sourcesFilter.includeSources.length > 0)
     )
@@ -578,11 +578,10 @@ export class StrategyAggregators {
     const sources = this.sdk.quoteService.supportedSources()
     const shouldTransferToReceiver =
       !sources[sdkQuote.source.id].supports.swapAndTransfer
-    const allowanceTarget =
-      isAddress(sdkQuote.source.allowanceTarget) &&
-      !isAddressEqual(sdkQuote.source.allowanceTarget, sdkQuote.tx.to as Hex)
-        ? getAddress(sdkQuote.source.allowanceTarget)
-        : undefined
+    const allowanceTarget = getAllowanceTarget(
+      sdkQuote.source.allowanceTarget,
+      sdkQuote.tx.to as Hex,
+    )
 
     return {
       swapParams,
@@ -600,6 +599,23 @@ export class StrategyAggregators {
       estimatedGas: sdkQuote.gas?.estimatedGas,
     }
   }
+}
+
+// The Swapper approves the swap target itself. Sources return the zero address
+// when no other contract pulls the tokens, so only a different, non-zero
+// address needs its own approve step.
+export function getAllowanceTarget(
+  allowanceTarget: string,
+  swapTarget: Hex,
+): Address | undefined {
+  if (
+    !isAddress(allowanceTarget) ||
+    isAddressEqual(allowanceTarget, zeroAddress) ||
+    isAddressEqual(allowanceTarget, swapTarget)
+  ) {
+    return undefined
+  }
+  return getAddress(allowanceTarget)
 }
 
 function combinePublicAndPrivateRPCs() {

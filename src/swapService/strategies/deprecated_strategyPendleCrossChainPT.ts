@@ -179,7 +179,7 @@ export class StrategyPendleCrossChainPT {
     const pairedAsset = getAddress(
       swapParams.tokenIn.metadata.pendleCrossChainPTPaired,
     )
-    const tokenIn = findToken(swapParams.chainId, pairedAsset)
+    const tokenIn = await findToken(swapParams.chainId, pairedAsset)
 
     if (!tokenIn) throw new Error("Inner token not found")
     const innerSwapParams = {
@@ -280,7 +280,7 @@ export class StrategyPendleCrossChainPT {
     const pairedAsset = getAddress(
       swapParams.tokenIn.metadata.pendleCrossChainPTPaired,
     )
-    const tokenIn = findToken(swapParams.chainId, pairedAsset)
+    const tokenIn = await findToken(swapParams.chainId, pairedAsset)
     if (!tokenIn) throw new Error("Inner token not found")
 
     const innerSwapParams = {

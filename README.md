@@ -35,6 +35,34 @@ pnpm run lint       # check
 pnpm run lint:fix   # fix 
 ```
 
+## Tests
+
+Run unit tests without RPC endpoints or provider credentials:
+
+```sh
+pnpm run test:unit
+```
+
+`pnpm test` runs the live mainnet fork suite and requires Anvil and the RPC/provider configuration used by the test cases.
+
+## Docker and CI
+
+The [Build workflow](./.github/workflows/build.yml) runs on pull requests, pushes to `master` and `development`, and manual dispatch. It uses Node 24 and the pnpm version pinned in `package.json`, runs lint, unit tests, and the production build, and builds the Linux AMD64 runtime image. The image check loads the server with production dependencies as a nonroot user with networking disabled. Images are built for validation without being pushed to a registry.
+
+Build locally with the public base images used by CI:
+
+```sh
+docker build \
+  --build-arg NODE_BUILD_IMAGE=node:24-trixie-slim \
+  --build-arg NODE_RUNTIME_IMAGE=gcr.io/distroless/nodejs24-debian13:nonroot \
+  -t euler-orderflow-router .
+docker run --rm --env-file .env -e PORT=3002 -p 3002:3002 euler-orderflow-router
+```
+
+Deployment builds can supply `--build-arg NODE_BASE_REPO=<repository>` to use that repository's `24-slim` and `24-distroless` tags. `NODE_BUILD_IMAGE` and `NODE_RUNTIME_IMAGE` override those defaults individually.
+
+The router discovers Pendle aggregators at startup for configured chains, with a five-second timeout shared across discovery requests. Successful responses replace each chain's provider list; failed requests retain its committed fallback. Startup waits for discovery alongside token loading before accepting requests. Provider changes require a restart. Docker builds do not contact Pendle. Refresh the fallback with `pnpm run generate-config`, review the generated JSON, and commit it.
+
 ## Swagger API docs
 
 Swagger UI is served at the root, it is also available at [swap.euler.finance](https://swap.euler.finance). Request and response schemas are also available [here](./src/api/routes/swap/swapModel.ts)
@@ -122,6 +150,8 @@ const evcBatch = encodeFunctionData({
 
 ## Configuration
 
+Use the [chain onboarding checklist](./docs/adding-a-chain.md) when registering a network, configuring contracts and providers, or disabling chain support.
+
 To handle an incoming swap request, the API processes the query through a series of strategies until one of them provides a valid response. The strategy pipelines are defined per chain in `/swapService/config` folder. The strategies can handle requests in multiple ways. The basic one is the balmy SDK strategy, which queries multiple DEXes and aggregators for a swap quote and picks the best one. Strategies can themselves run the pipelines recursively. ERC4626 wrapper can be configured for assets which are vault shares and are not supported by aggregators. The strategy will deposit or redeem vault shares and run the pipeline again, this time using the underlying asset of the vault. For a list of available strategies see `swapService/strategies` folder.
 
 The pipeline definition consits of an array of objects, each of which designates a strategy with its configuration and an optional matching logic. In the following example, the pipeline is configured to query Pendle and LI.FI for swap of the Pendle PT tokens, and 1Inch and LI.FI for all other tokens. There's also a repay wrapper strategy, which processes a regular exact input quote to include a repay on the receiver vault.
@@ -155,10 +185,25 @@ const pipeline = [
 ]
 ```
  
-Additionally there is a script to generate auxiliary config files, executed by `pnpm run generate-config`. Currently it fetches the list of supported [Pendle aggregators](./src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json) for all chains
+`pnpm run generate-config` refreshes the committed [Pendle aggregator fallback](./src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json). Review its output and the JSON diff before committing: an upstream failure can leave the existing file unchanged. The startup loader checks configured chains from Pendle's chain list and the fallback, including known chains omitted by the chain-list endpoint.
 
 ## Selecting providers
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
 
-## Tokenlists
-The router relies on tokenlists for all swapped tokens. They can be fetched from `TOKENLIST_URL` or read from JSON files in `tokenLists` folder if the configuration is missing. Note the files are not updated currently. Please reach out on [Euler discord](https://discord.com/invite/pTTnr7b4mT) if you need access to the tokenlist endpoint.
+## Token metadata
+
+The primary token catalog defaults to `https://v3.euler.finance/v3/tokens`. `TOKENLIST_URL` overrides it; `TOKENLIST_URL_<chainId>` can override it for an individual chain. Only chains with a configured `RPC_URL_<chainId>` are loaded.
+
+If a primary catalog fails or is empty, the router supplements its last successful data with DefiLlama and the official Uniswap list. Discovery data stays in memory and refreshes every `TOKENLIST_CACHE_TIMEOUT_SECONDS` (default 300). Overlapping refreshes share one request. The timeout (`TOKENLIST_FETCH_TIMEOUT_SECONDS`, default 30) bounds each upstream load.
+
+Startup waits for the initial discovery attempts. List outages do not prevent startup: even with an empty catalog, requested ERC-20 tokens and inner routing assets can resolve their name, symbol and decimals through the configured RPC. Missing RPC configuration prevents startup. Native zero-address list placeholders are excluded.
+
+Before quoting, both input tokens and inner routing assets use contract-verified decimals, memoized by chain and address for the process. Failed or invalid reads reject token resolution; list decimals and an assumed 18 are not used as substitutes. ERC-20 metadata reads have a 10-second RPC timeout and support string or bytes32 name/symbol responses.
+
+Protocol routing metadata comes from V3. For tokens absent from that catalog, the router identifies Pendle PT and LP addresses from Pendle's paginated market API and supplements PT classification from its asset API. Asset records must match the requested chain and carry Pendle's explicit PT tag; they do not supply a market mapping. It does not classify tokens from their symbols or accept protocol flags from generic lists. A missing or ambiguous market mapping does not produce a fabricated market address.
+
+Pendle's market and asset sources load concurrently with separate timeouts and cached snapshots. A failed source retains its last successful data while the healthy source refreshes. Market records take precedence when both sources identify the same token.
+
+Optional source overrides are `DEFILLAMA_TOKEN_LIST_URL` (per-chain list base), `UNISWAP_TOKEN_LIST_URL` (global published list), `PENDLE_MARKETS_URL` (paginated market endpoint), and `PENDLE_ASSETS_URL` (full asset catalog endpoint). The default Uniswap source is its official npm publication; `tokens.uniswap.org` currently serves HTML.
+
+See [token-list coverage](./docs/token-list-coverage.md) for the source audit and protocol coverage limits.

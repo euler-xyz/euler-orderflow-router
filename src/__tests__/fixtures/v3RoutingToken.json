@@ -1,0 +1,17 @@
+{
+  "chainId": 1,
+  "address": "0x076BdA095a434a7B00733115A0D679DE6478d9f8",
+  "name": "PT Yala stablecoin 4SEP2025",
+  "symbol": "PT-YU-4SEP2025",
+  "decimals": 18,
+  "logoURI": "https://v3.euler.finance/v3/images/tokens/1/0x076BdA095a434a7B00733115A0D679DE6478d9f8?v=1f2cf30b",
+  "hasLogo": true,
+  "kind": "asset",
+  "metadata": {
+    "isPendlePT": true,
+    "isPendleLP": false,
+    "pendleMarket": "0x23f0decc26eceeafa5cc900f8b47d99ff94ddd2b"
+  },
+  "groups": ["pendle-pt"],
+  "tags": ["usd", "pt"]
+}

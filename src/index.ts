@@ -1,12 +1,20 @@
 import { app, logger } from "@/server"
 import { loadDeployments } from "./common/utils/deployments"
 import { initTokenlistCache } from "./common/utils/tokenList"
+import { RPC_URLS } from "./common/utils/viemClients"
+import { initPendleAggregators } from "./swapService/strategies/aggregators/sources/pendle/pendleAggregatorConfig"
 
 async function main() {
   await loadDeployments()
 
-  initTokenlistCache()
+  const pendleAggregatorsReady = initPendleAggregators(
+    Object.keys(RPC_URLS)
+      .map(Number)
+      .filter((chainId) => RPC_URLS[chainId]),
+  )
+  const tokenlistRefreshTimer = await initTokenlistCache()
 
+  await pendleAggregatorsReady
   const server = app.listen(process.env.PORT, () => {
     const { NODE_ENV, PORT } = process.env
     logger.info(`Server (${NODE_ENV}) running on port http://localhost:${PORT}`)
@@ -14,6 +22,7 @@ async function main() {
 
   const onCloseSignal = () => {
     logger.info("sigint received, shutting down")
+    clearInterval(tokenlistRefreshTimer)
     server.close(() => {
       logger.info("server closed")
       process.exit()
@@ -26,6 +35,6 @@ async function main() {
 }
 
 void main().catch((error) => {
-  logger.error({ error }, "Fatal: failed to load deployments on startup")
+  logger.error({ err: error }, "Server startup failed")
   process.exit(1)
 })

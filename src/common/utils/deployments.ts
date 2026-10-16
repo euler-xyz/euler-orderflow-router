@@ -1,5 +1,6 @@
 import { DeploymentService } from "@eulerxyz/euler-v2-sdk"
 import type { Address } from "viem"
+import { RPC_URLS } from "./viemClients"
 
 const DEFAULT_DEPLOYMENTS_URL =
   "https://raw.githubusercontent.com/euler-xyz/euler-interfaces/refs/heads/master/EulerChains.json"
@@ -21,7 +22,10 @@ function getPeripheryAddress(
   if (!deploymentService) {
     throw new Error("Deployments not loaded")
   }
-  if (!deploymentService.getDeploymentChainIds().includes(chainId)) {
+  if (
+    !(chainId in RPC_URLS) ||
+    !deploymentService.getDeploymentChainIds().includes(chainId)
+  ) {
     throw new Error(`${key} contract not found for chainId ${chainId}`)
   }
   const address =
