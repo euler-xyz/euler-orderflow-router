@@ -4,6 +4,8 @@ import {
   refreshContractBookAddresses,
 } from "./common/utils/contractBook"
 import { initTokenlistCache } from "./common/utils/tokenList"
+import { RPC_URLS } from "./common/utils/viemClients"
+import { initPendleAggregators } from "./swapService/strategies/aggregators/sources/pendle/pendleAggregatorConfig"
 
 async function main() {
   await refreshContractBookAddresses().catch((error) => {
@@ -13,9 +15,15 @@ async function main() {
     )
   })
 
+  const pendleAggregatorsReady = initPendleAggregators(
+    Object.keys(RPC_URLS)
+      .map(Number)
+      .filter((chainId) => RPC_URLS[chainId]),
+  )
   const tokenlistRefreshTimer = await initTokenlistCache()
   initContractBookCache()
 
+  await pendleAggregatorsReady
   const server = app.listen(process.env.PORT, () => {
     const { NODE_ENV, PORT } = process.env
     logger.info(`Server (${NODE_ENV}) running on port http://localhost:${PORT}`)

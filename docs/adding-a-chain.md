@@ -33,10 +33,10 @@ Each provider declares its own supported networks. Confirm support with the prov
 | 1inch, LI.FI, Enso, Velora, Ooga Booga, Multiliquid | Metadata `supports.chains` in `oneInchQuoteSource.ts`, `lifiQuoteSource.ts`, `ensoQuoteSource.ts`, `paraswapQuoteSource.ts`, `oogaboogaQuoteSource.ts`, `multiliquidQuoteSource.ts` |
 | Uniswap | `ROUTER_ADDRESS` in `uniswapQuoteSource.ts`; verify the installed routing SDK supports the chain |
 | Oku | `CHAINS`, market identifiers, and Permit2 adapters in `okuQuoteSource.ts`, plus per-market registrations in `customSourceList.ts` |
-| Pendle | Generated `pendle/pendleAggregators.json` consumed by `pendleQuoteSource.ts` and `customSourceList.ts` |
+| Pendle | Startup discovery in `pendle/pendleAggregatorConfig.ts`, with committed per-chain fallback in `pendle/pendleAggregators.json` |
 
 - [ ] For a new source or market, register it in [customSourceList.ts](../src/swapService/strategies/aggregators/customSourceList.ts), configure required credentials in [strategyAggregators.ts](../src/swapService/strategies/strategyAggregators.ts), and document the environment keys in `.env.template`.
-- [ ] For Pendle changes, run `pnpm run generate-config` and review and commit `pendleAggregators.json`. Docker builds consume this committed file. Check the command output as well as the diff: the generator can retain the existing file on an upstream failure.
+- [ ] Verify Pendle startup discovery for the chain. Successful responses replace its provider list; failures log a warning and retain its committed fallback. Discovery shares a five-second timeout and completes before the server listens. Restart after provider changes. Run `pnpm run generate-config` to refresh the fallback, then review and commit `pendleAggregators.json`. Check the command output as well as the diff: the generator can retain the existing file on an upstream failure. Docker builds do not contact Pendle.
 
 ## Token discovery and verification
 

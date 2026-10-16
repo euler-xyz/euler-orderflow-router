@@ -41,7 +41,7 @@ import {
   quoteToRoute,
 } from "../utils"
 import { CustomSourceList } from "./aggregators/customSourceList"
-import pendleAggregators from "./aggregators/sources/pendle/pendleAggregators.json"
+import { getPendleAggregators } from "./aggregators/sources/pendle/pendleAggregatorConfig"
 import { StubGasPriceSource } from "./aggregators/stubGasPriceSource"
 import { StubPriceSource } from "./aggregators/stubPriceSource"
 import { TokenlistMetadataSource } from "./aggregators/tokenlistMetadataSource"
@@ -91,7 +91,7 @@ export class StrategyAggregators {
 
   constructor(match = {}, config?: BalmyStrategyConfig, provider?: string) {
     const allPendleAggregators = [
-      ...new Set(Object.values(pendleAggregators).flat()),
+      ...new Set(Object.values(getPendleAggregators()).flat()),
     ]
 
     let configClone = structuredClone(config)

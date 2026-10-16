@@ -61,7 +61,7 @@ docker run --rm --env-file .env -e PORT=3002 -p 3002:3002 euler-orderflow-router
 
 Deployment builds can supply `--build-arg NODE_BASE_REPO=<repository>` to use that repository's `24-slim` and `24-distroless` tags. `NODE_BUILD_IMAGE` and `NODE_RUNTIME_IMAGE` override those defaults individually.
 
-Docker builds use the committed Pendle aggregator configuration. Refresh it with `pnpm run generate-config`, review the generated JSON, and commit it before building an image that needs updated provider coverage.
+The router discovers Pendle aggregators at startup for configured chains, with a five-second timeout shared across discovery requests. Successful responses replace each chain's provider list; failed requests retain its committed fallback. Startup waits for discovery alongside token loading before accepting requests. Provider changes require a restart. Docker builds do not contact Pendle. Refresh the fallback with `pnpm run generate-config`, review the generated JSON, and commit it.
 
 ## Swagger API docs
 
@@ -185,7 +185,7 @@ const pipeline = [
 ]
 ```
  
-Additionally there is a script to generate auxiliary config files, executed by `pnpm run generate-config`. Currently it fetches the list of supported [Pendle aggregators](./src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json) for all chains
+`pnpm run generate-config` refreshes the committed [Pendle aggregator fallback](./src/swapService/strategies/aggregators/sources/pendle/pendleAggregators.json). Review its output and the JSON diff before committing: an upstream failure can leave the existing file unchanged. The startup loader checks configured chains from Pendle's chain list and the fallback, including known chains omitted by the chain-list endpoint.
 
 ## Selecting providers
 Instead of fetching all quotes in a single call, which is as fast as the slowest provider's response, clients can send parallel requests with providers preselected in the optional `provider` query param. The endpoint `\providers` lists available providers per chain. The list is rarely updated so it can be cached on the client.
