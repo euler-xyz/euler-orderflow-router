@@ -2,7 +2,6 @@ import { spawn } from "node:child_process"
 import { once } from "node:events"
 import { type Server, createServer } from "node:http"
 import type { AddressInfo } from "node:net"
-import dotenv from "dotenv"
 import {
   type EulerSDK,
   type SubAccount,
@@ -12,8 +11,10 @@ import {
   type VaultEntity,
   buildEulerSDK,
   decodeSmartContractErrors,
+  flattenBatchEntries,
   getSubAccountAddress,
-} from "euler-v2-sdk"
+} from "@eulerxyz/euler-v2-sdk"
+import dotenv from "dotenv"
 import {
   http,
   type Address,
@@ -54,8 +55,8 @@ const EULER_PRIME_USDT_VAULT = getAddress(
 )
 const WSTETH_VAULT = getAddress("0xbC4B4AC47582c3E38Ce5940B80Da65401F4628f1")
 
-const USDC_WHALE = getAddress("0xb7cD010b53D23a794d754886C3b928BE6a3315dC")
-const USDT_WHALE = getAddress("0x83A32a54D31Ee4f1f9dFFAd2A63A6d214e469eC3")
+const USDC_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
+const USDT_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
 const WETH_WHALE = getAddress("0x4a18a50a8328b42773268B4b436254056b7d70CE")
 
 let anvilProcess: ReturnType<typeof spawn> | undefined
@@ -99,6 +100,9 @@ describe.sequential("mainnet live swap flows", () => {
         "--fork-url",
         forkRpcUrl,
         "--auto-impersonate",
+        // Match mainnet: some aggregator routes use Osaka opcodes (CLZ).
+        "--hardfork",
+        "osaka",
         "--host",
         ANVIL_HOST,
         "--port",
@@ -138,14 +142,13 @@ describe.sequential("mainnet live swap flows", () => {
 
     process.env.RPC_URL_1 = anvilUrl
 
-    const [{ buildCache }, { refreshContractBookAddresses }, { app }] =
-      await Promise.all([
-        import("@/common/utils/tokenList"),
-        import("@/common/utils/contractBook"),
-        import("@/server"),
-      ])
+    const [{ buildCache }, { loadDeployments }, { app }] = await Promise.all([
+      import("@/common/utils/tokenList"),
+      import("@/common/utils/deployments"),
+      import("@/server"),
+    ])
 
-    await refreshContractBookAddresses().catch(() => undefined)
+    await loadDeployments()
     await buildCache()
 
     appServer = createServer(app)
@@ -154,7 +157,12 @@ describe.sequential("mainnet live swap flows", () => {
     swapApiUrl = `http://127.0.0.1:${(appServer.address() as AddressInfo).port}`
 
     sdk = await buildEulerSDK({
-      rpcUrls: { [CHAIN_ID]: anvilUrl },
+      config: {
+        rpcUrls: { [CHAIN_ID]: anvilUrl },
+        // Read fresh fork state after transactions and snapshot reverts.
+        accountServiceAdapter: "onchain",
+        queryCacheEnabled: false,
+      },
       swapServiceConfig: {
         swapApiUrl,
       },
@@ -227,7 +235,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterDeposit)
 
     const collateralQuote = pickQuote(
-      await sdk.swapService.getDepositQuote({
+      await sdk.swapService.fetchDepositQuote({
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         toVault: WSTETH_VAULT,
@@ -283,7 +291,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterBorrow)
 
     const repayQuote = pickQuote(
-      await sdk.swapService.getRepayQuotes({
+      await sdk.swapService.fetchRepayQuotes({
         chainId: CHAIN_ID,
         fromVault: WSTETH_VAULT,
         fromAsset: WSTETH_ADDRESS,
@@ -362,7 +370,7 @@ describe.sequential("mainnet live swap flows", () => {
     accountData.updateSubAccounts(afterBorrow)
 
     const repayQuote = pickQuote(
-      await sdk.swapService.getRepayQuotes({
+      await sdk.swapService.fetchRepayQuotes({
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         fromAsset: USDC_ADDRESS,
@@ -405,7 +413,7 @@ describe.sequential("mainnet live swap flows", () => {
         const assetDecimals = await readDecimals(route.asset)
         const vaultDecimals = await readDecimals(route.vault)
 
-        const depositQuotes = await sdk.swapService.getDepositQuote({
+        const depositQuotes = await sdk.swapService.fetchDepositQuote({
           chainId: CHAIN_ID,
           fromVault: zeroAddress,
           toVault: route.vault,
@@ -422,7 +430,7 @@ describe.sequential("mainnet live swap flows", () => {
 
         expect(depositQuotes.length).toBeGreaterThan(0)
 
-        const redeemQuotes = await sdk.swapService.getSwapQuotes({
+        const redeemQuotes = await sdk.swapService.fetchSwapQuotes({
           chainId: CHAIN_ID,
           tokenIn: route.vault,
           tokenOut: route.asset,
@@ -524,7 +532,8 @@ async function executePlan(plan: TransactionPlanItem[]) {
             data: resolved.data,
           })
 
-          await publicClient.waitForTransactionReceipt({ hash })
+          const receipt = await publicClient.waitForTransactionReceipt({ hash })
+          expect(receipt.status).toBe("success")
         }
         continue
       }
@@ -532,8 +541,9 @@ async function executePlan(plan: TransactionPlanItem[]) {
       if (item.type !== "evcBatch") continue
 
       const deployment = sdk.deploymentService.getDeployment(CHAIN_ID)
-      const batchData = sdk.executionService.encodeBatch(item.items)
-      const totalValue = item.items.reduce((sum, batchItem) => {
+      const batchItems = flattenBatchEntries(item.items)
+      const batchData = sdk.executionService.encodeBatch(batchItems)
+      const totalValue = batchItems.reduce((sum, batchItem) => {
         return sum + batchItem.value
       }, 0n)
 
@@ -553,12 +563,20 @@ async function executePlan(plan: TransactionPlanItem[]) {
         gas: (gas * 120n) / 100n,
       })
 
-      await publicClient.waitForTransactionReceipt({ hash })
+      const receipt = await publicClient.waitForTransactionReceipt({ hash })
+      expect(receipt.status).toBe("success")
     }
   } catch (error) {
     const decodedErrors = await decodeSmartContractErrors(error)
     if (decodedErrors.length > 0) {
-      throw new Error(JSON.stringify(decodedErrors, null, 2))
+      throw new Error(
+        JSON.stringify(
+          decodedErrors,
+          (_, value) => (typeof value === "bigint" ? value.toString() : value),
+          2,
+        ),
+        { cause: error },
+      )
     }
     throw error
   }
@@ -618,7 +636,7 @@ async function initBalances() {
     USDC_WHALE,
     USDC_ADDRESS,
     account.address,
-    parseUnits("100000", 6),
+    parseUnits("10000", 6),
   )
   await transferTokenFromWhale(
     USDT_WHALE,
@@ -640,6 +658,17 @@ async function transferTokenFromWhale(
   recipient: Address,
   amount: bigint,
 ) {
+  const balance = await publicClient.readContract({
+    address: token,
+    abi: erc20Abi,
+    functionName: "balanceOf",
+    args: [whale],
+  })
+  expect(
+    balance,
+    `Insufficient fork funding for token ${token} from ${whale}`,
+  ).toBeGreaterThanOrEqual(amount)
+
   const whaleWallet = createWalletClient({
     account: whale,
     chain: mainnet,
@@ -653,7 +682,8 @@ async function transferTokenFromWhale(
     args: [recipient, amount],
   })
 
-  await publicClient.waitForTransactionReceipt({ hash })
+  const receipt = await publicClient.waitForTransactionReceipt({ hash })
+  expect(receipt.status).toBe("success")
 }
 
 async function waitForRpc(url: string, retries = 60) {
