@@ -26,7 +26,7 @@ import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
 import { CustomSpectraQuoteSource } from "./sources/spectraQuoteSource"
 import { CustomUniswapQuoteSource } from "./sources/uniswapQuoteSource"
 
-import pendleAggregators from "./sources/pendle/pendleAggregators.json"
+import { getPendleAggregators } from "./sources/pendle/pendleAggregatorConfig"
 
 type ConstructorParameters = {
   providerService: IProviderService
@@ -61,7 +61,7 @@ export class CustomSourceList extends LocalSourceList {
     super({ providerService, fetchService })
 
     const allPendleAggregators = [
-      ...new Set(Object.values(pendleAggregators).flat()),
+      ...new Set(Object.values(getPendleAggregators()).flat()),
     ]
     const pendleSources = Object.fromEntries(
       allPendleAggregators.map((aggregator) => [
