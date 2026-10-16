@@ -1,38 +1,33 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 
 vi.mock("../common/utils/viemClients", () => ({
-  RPC_URLS: { 1: "https://rpc.example", 8453: "", 42161: "", 31337: "" },
+  RPC_URLS: { 1: "https://rpc.example", 8453: "", 42161: "" },
 }))
-const mocks = vi.hoisted(() => ({ logWarn: vi.fn() }))
-vi.mock("../common/utils/logs", () => ({ logWarn: mocks.logWarn }))
 
 const swapper = "0x0000000000000000000000000000000000000001"
 const swapVerifier = "0x0000000000000000000000000000000000000002"
-const fallbackSwapper = "0x719F8b330CcA71cb6195D032A43194C7D3F9Fb45"
-const fallbackSwapVerifier = "0x786c900d7D348662703C38B46f24c1cda2C582AB"
 
 beforeEach(() => {
   vi.resetModules()
-  vi.clearAllMocks()
   vi.stubEnv("DEPLOYMENTS_URL", "")
 })
 afterEach(() => {
-  vi.useRealTimers()
   vi.unstubAllGlobals()
   vi.unstubAllEnvs()
 })
 
 describe("SDK deployments", () => {
-  it("resolves fallback addresses before loading deployments", async () => {
+  it("requires deployments to be loaded before resolving addresses", async () => {
     const deployments = await import("../common/utils/deployments")
-    expect(deployments.getSwapperAddress(1)).toBe(fallbackSwapper)
-    expect(deployments.getSwapVerifierAddress(1)).toBe(fallbackSwapVerifier)
-    expect(() => deployments.getSwapperAddress(137)).toThrow(
-      "swapper contract not found for chainId 137",
+    expect(() => deployments.getSwapperAddress(1)).toThrow(
+      "Deployments not loaded",
+    )
+    expect(() => deployments.getSwapVerifierAddress(1)).toThrow(
+      "Deployments not loaded",
     )
   })
 
-  it("refreshes supported networks without reintroducing a retired network from the feed", async () => {
+  it("resolves supported networks without reintroducing a retired network from the feed", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue(
@@ -60,7 +55,7 @@ describe("SDK deployments", () => {
     )
   })
 
-  it("retains fallbacks for chains and addresses missing from the feed", async () => {
+  it("rejects chains and contract addresses missing from the feed", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue(
@@ -73,15 +68,14 @@ describe("SDK deployments", () => {
     const deployments = await import("../common/utils/deployments")
     await deployments.loadDeployments()
     expect(deployments.getSwapperAddress(1)).toBe(swapper)
-    expect(deployments.getSwapVerifierAddress(1)).toBe(fallbackSwapVerifier)
-    expect(deployments.getSwapperAddress(8453)).toBe(
-      "0xd54d9Fc684169287f34DA6d57Aa002B424eEbC05",
+    expect(() => deployments.getSwapVerifierAddress(1)).toThrow(
+      "swapVerifier contract not found for chainId 1",
     )
-    expect(deployments.getSwapperAddress(42161)).toBe(
-      "0x4AaA129FaD81a65Dab41b1fa7e964CBB9B30C848",
+    expect(() => deployments.getSwapperAddress(8453)).toThrow(
+      "swapper contract not found for chainId 8453",
     )
-    expect(() => deployments.getSwapperAddress(31337)).toThrow(
-      "swapper contract not found for chainId 31337",
+    expect(() => deployments.getSwapperAddress(42161)).toThrow(
+      "swapper contract not found for chainId 42161",
     )
   })
 
@@ -96,104 +90,28 @@ describe("SDK deployments", () => {
     )
   })
 
-  it.each([
-    ["network error", () => Promise.reject(new Error("Feed unavailable"))],
-    [
-      "HTTP error",
-      () => Promise.resolve(new Response("Unavailable", { status: 503 })),
-    ],
-    ["invalid JSON", () => Promise.resolve(new Response("invalid JSON"))],
-    [
-      "invalid feed",
-      () => Promise.resolve(Response.json({ error: "Invalid feed" })),
-    ],
-  ])("retains fallback addresses after a %s", async (_name, fetch) => {
-    vi.stubGlobal("fetch", vi.fn(fetch))
+  it("propagates an unavailable feed instead of supplying fallback addresses", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockRejectedValue(new Error("Feed unavailable")),
+    )
     const deployments = await import("../common/utils/deployments")
-    await expect(deployments.loadDeployments()).rejects.toThrow()
-    expect(deployments.getSwapperAddress(1)).toBe(fallbackSwapper)
-    expect(deployments.getSwapVerifierAddress(1)).toBe(fallbackSwapVerifier)
-  })
-
-  it("retains refreshed addresses on failure and can retry", async () => {
-    const fetch = vi
-      .fn()
-      .mockResolvedValueOnce(
-        Response.json([
-          {
-            chainId: 1,
-            addresses: { peripheryAddrs: { swapper, swapVerifier } },
-          },
-        ]),
-      )
-      .mockRejectedValueOnce(new Error("Feed unavailable"))
-      .mockResolvedValueOnce(
-        Response.json([
-          {
-            chainId: 1,
-            addresses: { peripheryAddrs: { swapper: fallbackSwapper } },
-          },
-        ]),
-      )
-    vi.stubGlobal("fetch", fetch)
-    const deployments = await import("../common/utils/deployments")
-    await deployments.loadDeployments()
     await expect(deployments.loadDeployments()).rejects.toThrow(
       "Feed unavailable",
     )
-    expect(deployments.getSwapperAddress(1)).toBe(swapper)
-    expect(deployments.getSwapVerifierAddress(1)).toBe(swapVerifier)
-    await deployments.loadDeployments()
-    expect(deployments.getSwapperAddress(1)).toBe(fallbackSwapper)
-    expect(deployments.getSwapVerifierAddress(1)).toBe(swapVerifier)
-  })
-
-  it("shares a fetch between overlapping refreshes", async () => {
-    let resolve!: (response: Response) => void
-    const fetch = vi.fn().mockReturnValue(
-      new Promise<Response>((done) => {
-        resolve = done
-      }),
+    expect(() => deployments.getSwapperAddress(1)).toThrow(
+      "Deployments not loaded",
     )
-    vi.stubGlobal("fetch", fetch)
-    const { loadDeployments } = await import("../common/utils/deployments")
-    const first = loadDeployments()
-    const second = loadDeployments()
-    expect(fetch).toHaveBeenCalledOnce()
-    resolve(Response.json([]))
-    await Promise.all([first, second])
   })
 
-  it("retries periodic refreshes after a failed fetch", async () => {
-    vi.stubEnv("CONTRACT_BOOK_CACHE_TIMEOUT_SECONDS", "1")
-    const error = new Error("Feed unavailable")
-    const fetch = vi
-      .fn()
-      .mockRejectedValueOnce(error)
-      .mockResolvedValueOnce(
-        Response.json([
-          {
-            chainId: 1,
-            addresses: { peripheryAddrs: { swapper, swapVerifier } },
-          },
-        ]),
-      )
-    vi.stubGlobal("fetch", fetch)
-    const deployments = await import("../common/utils/deployments")
-    vi.useFakeTimers()
-    const timer = deployments.initContractBookCache()
-    try {
-      await vi.advanceTimersByTimeAsync(1000)
-      expect(deployments.getSwapperAddress(1)).toBe(fallbackSwapper)
-      expect(mocks.logWarn).toHaveBeenCalledWith({
-        name: "Error refreshing contractBook addresses",
-        error,
-      })
-      await vi.advanceTimersByTimeAsync(1000)
-      expect(deployments.getSwapperAddress(1)).toBe(swapper)
-      expect(deployments.getSwapVerifierAddress(1)).toBe(swapVerifier)
-    } finally {
-      clearInterval(timer)
-    }
+  it("rejects an invalid deployments feed", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue(Response.json({ error: "Invalid feed" })),
+    )
+    const { loadDeployments } = await import("../common/utils/deployments")
+    await expect(loadDeployments()).rejects.toThrow(
+      "Invalid deployment data format",
+    )
   })
 })
