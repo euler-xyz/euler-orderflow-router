@@ -8,10 +8,11 @@ Chain registration, deployed contracts, routing, and provider support have separ
 - [ ] Add that setting to [.env.template](../.env.template) and configure it in each deployment's environment or Doppler project. Verify `eth_chainId` against the intended chain. Token metadata and decimal verification require an explicitly configured RPC, even when viem has a public default endpoint.
 - [ ] Include the chain ID in the expected supported IDs in [viemClients.test.ts](../src/__tests__/viemClients.test.ts). The tests check client registration, transport URLs, empty overrides, and isolation between networks.
 
-## Contract addresses
+## Contract addresses from SDK deployments
 
-- [ ] Add verified `swapper.address` and `swapVerifier.address` entries to [contractBook.ts](../src/common/utils/contractBook.ts). These are the fallbacks when the deployment feed is unavailable.
-- [ ] Check the network's `addresses.peripheryAddrs.swapper` and `addresses.peripheryAddrs.swapVerifier` in the [EulerChains deployment feed](https://github.com/euler-xyz/euler-interfaces/blob/master/EulerChains.json), or the configured `DEPLOYMENTS_URL`. Startup and periodic refreshes overwrite the fallbacks with feed values. Refreshes only accept chains registered in `RPC_URLS`.
+- [ ] Add or verify the network's `chainId` entry in the [EulerChains deployment feed](https://github.com/euler-xyz/euler-interfaces/blob/master/EulerChains.json), or the feed configured by `DEPLOYMENTS_URL`. Set `addresses.peripheryAddrs.swapper` and `addresses.peripheryAddrs.swapVerifier` to the verified deployed contract addresses.
+- [ ] Confirm that `getSwapperAddress(chainId)` and `getSwapVerifierAddress(chainId)` in `src/common/utils/deployments.ts` resolve both addresses through `@eulerxyz/euler-v2-sdk`'s `DeploymentService`. The chain must be registered in `RPC_URLS` and present in the feed; missing chains or contract addresses cause lookup errors.
+- [ ] Restart the router after changing the feed or `DEPLOYMENTS_URL`. The SDK loads deployments once before the server listens. A failed deployment load stops startup and logs `Server startup failed`.
 
 ## Routing and SDK metadata
 
@@ -54,9 +55,9 @@ pnpm run build
 ```
 
 - [ ] Build the runtime image using the [Docker instructions](../README.md#docker-and-ci).
-- [ ] Start the service with the new chain's RPC and provider credentials. Check `/health-check` and `/providers?chainId=<chainId>`; verify the provider list matches the intended routing configuration.
+- [ ] Start the service with the new chain's RPC and provider credentials. Verify both SDK-resolved contract addresses, then check `/health-check` and `/providers?chainId=<chainId>`; verify the provider list matches the intended routing configuration.
 - [ ] Request representative `/swaps` quotes and simulate their returned payloads on a fork of the new chain. Include exact-input, exact-output, repay, and any specialized wrapper routes the chain enables. Check the response chain, Swapper and SwapVerifier addresses, token amounts, approvals, and recipients. The existing `pnpm test` suite exercises mainnet fork cases and requires Anvil and RPC configuration; extend it or add chain-specific coverage for the new network.
 
 ## Disabling a chain
 
-Remove its registry entry, RPC environment configuration, contract fallbacks, custom routing, and provider/market registrations. Remove a local SDK chain patch if it only serves that network. Search for the chain's name, numeric ID, and source aliases across the repository, and keep regression tests that reject its token resolution and deployment-feed updates.
+Remove its registry entry, RPC environment configuration, custom routing, and provider/market registrations. Remove a local SDK chain patch if it only serves that network. Search for the chain's name, numeric ID, and source aliases across the repository, and keep regression tests that reject its token resolution and deployment-address lookups even if the chain remains in the shared deployment feed.
