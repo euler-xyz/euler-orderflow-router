@@ -4,7 +4,7 @@ API for fetching swap quotes and payloads from multiple DEX aggregators for use 
 
 ## Instalation
 
-Install npm packages
+Use Node 24.22.1 from `.nvmrc`, then install npm packages.
 ```
 pnpm i
 ```
@@ -47,19 +47,19 @@ pnpm run test:unit
 
 ## Docker and CI
 
-The [Build workflow](./.github/workflows/build.yml) runs on pull requests, pushes to `master` and `development`, and manual dispatch. It uses Node 24 and the pnpm version pinned in `package.json`, runs lint, unit tests, and the production build, and builds the Linux AMD64 runtime image. The image check loads the server with production dependencies as a nonroot user with networking disabled. Images are built for validation without being pushed to a registry.
+The [Build workflow](./.github/workflows/build.yml) runs on pull requests, pushes to `master` and `development`, and manual dispatch. It uses Node 24.22.1 from `.nvmrc` and the pnpm version pinned in `package.json`, runs lint, unit tests, and the production build, and builds the Linux AMD64 runtime image. The image check loads the server with production dependencies as a nonroot user with networking disabled. Images are built for validation without being pushed to a registry.
 
 Build locally with the public base images used by CI:
 
 ```sh
 docker build \
-  --build-arg NODE_BUILD_IMAGE=node:24-trixie-slim \
+  --build-arg NODE_BUILD_IMAGE=node:24.22.1-trixie-slim \
   --build-arg NODE_RUNTIME_IMAGE=gcr.io/distroless/nodejs24-debian13:nonroot \
   -t euler-orderflow-router .
 docker run --rm --env-file .env -e PORT=3002 -p 3002:3002 euler-orderflow-router
 ```
 
-Deployment builds can supply `--build-arg NODE_BASE_REPO=<repository>` to use that repository's `24-slim` and `24-distroless` tags. `NODE_BUILD_IMAGE` and `NODE_RUNTIME_IMAGE` override those defaults individually.
+Deployment builds can supply `--build-arg NODE_BASE_REPO=<repository>` to use that repository's `24-slim` and `24-distroless` tags. `NODE_BUILD_IMAGE` and `NODE_RUNTIME_IMAGE` override those defaults individually. Both stages receive the Node 24.22.1 executable from the pinned official image; the final image verifies its version during the build.
 
 The router discovers Pendle aggregators at startup for configured chains, with a five-second timeout shared across discovery requests. Successful responses replace each chain's provider list; failed requests retain its committed fallback. Startup waits for discovery alongside token loading before accepting requests. Provider changes require a restart. Docker builds do not contact Pendle. Refresh the fallback with `pnpm run generate-config`, review the generated JSON, and commit it.
 
