@@ -2,7 +2,12 @@ ARG NODE_BASE_REPO
 ARG NODE_BUILD_IMAGE=${NODE_BASE_REPO}:24-slim
 ARG NODE_RUNTIME_IMAGE=${NODE_BASE_REPO}:24-distroless
 
+FROM node:24.22.1-trixie-slim AS patched-node
+
 FROM ${NODE_BUILD_IMAGE} AS build
+
+# Keep custom base images while selecting the security-patched Node executable.
+COPY --from=patched-node /usr/local/bin/node /usr/local/bin/node
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -21,6 +26,9 @@ RUN pnpm run build
 RUN pnpm prune --prod --ignore-scripts
 
 FROM ${NODE_RUNTIME_IMAGE} AS runtime
+
+COPY --from=patched-node /usr/local/bin/node /nodejs/bin/node
+RUN ["/nodejs/bin/node", "-e", "if (process.versions.node !== '24.22.1') throw new Error('Unexpected Node.js runtime')"]
 
 ENV NODE_ENV=production
 ENV PORT=3002
