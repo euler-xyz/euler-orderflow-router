@@ -10,6 +10,7 @@ import type {
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
 import { CustomZRXQuoteSource } from "./sources/0xMatchaQuoteSource"
 import { CustomBinanceWalletQuoteSource } from "./sources/binanceWalletQuoteSource"
+import { CustomCleaveQuoteSource } from "./sources/cleaveQuoteSource"
 import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
@@ -55,6 +56,7 @@ const customSources = {
   ),
   oku_bob_uniswap: new CustomOkuQuoteSource("usor", "Uniswap", [60808]),
   "binance-wallet": new CustomBinanceWalletQuoteSource(),
+  cleave: new CustomCleaveQuoteSource(),
 }
 export class CustomSourceList extends LocalSourceList {
   constructor({ providerService, fetchService }: ConstructorParameters) {

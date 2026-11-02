@@ -30,6 +30,7 @@ Each provider declares its own supported networks. Confirm support with the prov
 | KyberSwap, Magpie, Spectra | Chain-to-network mappings in `kyberswapQuoteSource.ts`, `magpieQuoteSource.ts`, `spectraQuoteSource.ts` |
 | OpenOcean | `SUPPORTED_CHAINS` and native-asset overrides in `openOceanQuoteSource.ts` |
 | Binance Wallet | `DEFAULT_SUPPORTED_CHAINS` in `binanceWalletQuoteSource.ts` |
+| Cleave | Metadata `supports.chains` in `cleaveQuoteSource.ts` |
 | 1inch, LI.FI, Enso, Velora, Ooga Booga, Multiliquid | Metadata `supports.chains` in `oneInchQuoteSource.ts`, `lifiQuoteSource.ts`, `ensoQuoteSource.ts`, `paraswapQuoteSource.ts`, `oogaboogaQuoteSource.ts`, `multiliquidQuoteSource.ts` |
 | Uniswap | `ROUTER_ADDRESS` in `uniswapQuoteSource.ts`; verify the installed routing SDK supports the chain |
 | Oku | `CHAINS`, market identifiers, and Permit2 adapters in `okuQuoteSource.ts`, plus per-market registrations in `customSourceList.ts` |

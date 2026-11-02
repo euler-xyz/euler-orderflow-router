@@ -180,6 +180,9 @@ export class StrategyAggregators {
               apiKey: process.env.BINANCE_WALLET_API_KEY,
               secretKey: process.env.BINANCE_WALLET_SECRET_KEY,
             },
+            cleave: {
+              apiKey: process.env.CLEAVE_API_KEY,
+            },
           },
         },
       },
