@@ -30,6 +30,7 @@ import {
   parseAbiParameters,
   parseEther,
   parseUnits,
+  stringToHex,
   zeroAddress,
 } from "viem"
 import { privateKeyToAccount } from "viem/accounts"
@@ -198,137 +199,151 @@ describe.sequential("mainnet live swap flows", () => {
     }
   })
 
-  it("opens a position with exact input swap, then fully closes debt with target debt", async () => {
-    const subAccountId = 1
-    const subAccountAddress = getSubAccountAddress(
-      account.address,
-      subAccountId,
-    )
-    const depositAmount = parseUnits("1500", 6)
-    const collateralSwapAmount = parseUnits("1000", 6)
-    const borrowAmount = parseUnits("100", 6)
+  it.each(["full", "partial"] as const)(
+    "repays %s debt with a combined exact-output swap",
+    async (repayMode) => {
+      const subAccountId = 1
+      const subAccountAddress = getSubAccountAddress(
+        account.address,
+        subAccountId,
+      )
+      const depositAmount = parseUnits("1500", 6)
+      const collateralSwapAmount = parseUnits("1000", 6)
+      const borrowAmount = parseUnits("100", 6)
 
-    const accountData = (
-      await sdk.accountService.fetchAccount(CHAIN_ID, account.address, {
-        populateVaults: false,
+      const accountData = (
+        await sdk.accountService.fetchAccount(CHAIN_ID, account.address, {
+          populateVaults: false,
+        })
+      ).result
+
+      const depositPlan = await sdk.executionService.resolveRequiredApprovals({
+        plan: sdk.executionService.planDeposit({
+          account: accountData,
+          vault: EULER_PRIME_USDC_VAULT,
+          amount: depositAmount,
+          receiver: subAccountAddress,
+          asset: USDC_ADDRESS,
+          enableCollateral: true,
+        }),
+        chainId: CHAIN_ID,
+        account: account.address,
+        usePermit2: false,
+        unlimitedApproval: false,
       })
-    ).result
 
-    const depositPlan = await sdk.executionService.resolveRequiredApprovals({
-      plan: sdk.executionService.planDeposit({
-        account: accountData,
-        vault: EULER_PRIME_USDC_VAULT,
-        amount: depositAmount,
-        receiver: subAccountAddress,
-        asset: USDC_ADDRESS,
-        enableCollateral: true,
-      }),
-      chainId: CHAIN_ID,
-      account: account.address,
-      usePermit2: false,
-      unlimitedApproval: false,
-    })
+      await executePlan(depositPlan)
 
-    await executePlan(depositPlan)
+      const afterDeposit = await fetchSubAccount(subAccountAddress, [
+        EULER_PRIME_USDC_VAULT,
+        WSTETH_VAULT,
+      ])
+      expect(getAssets(afterDeposit, EULER_PRIME_USDC_VAULT)).toBeGreaterThan(
+        0n,
+      )
 
-    const afterDeposit = await fetchSubAccount(subAccountAddress, [
-      EULER_PRIME_USDC_VAULT,
-      WSTETH_VAULT,
-    ])
-    expect(getAssets(afterDeposit, EULER_PRIME_USDC_VAULT)).toBeGreaterThan(0n)
+      accountData.updateSubAccounts(afterDeposit)
 
-    accountData.updateSubAccounts(afterDeposit)
+      const collateralQuote = pickQuote(
+        await sdk.swapService.fetchDepositQuote({
+          provider: process.env.LIVE_SWAP_PROVIDER,
+          chainId: CHAIN_ID,
+          fromVault: EULER_PRIME_USDC_VAULT,
+          toVault: WSTETH_VAULT,
+          fromAccount: subAccountAddress,
+          toAccount: subAccountAddress,
+          fromAsset: USDC_ADDRESS,
+          toAsset: WSTETH_ADDRESS,
+          amount: collateralSwapAmount,
+          origin: account.address,
+          slippage: 0.5,
+          deadline: getDeadline(),
+        }),
+      )
 
-    const collateralQuote = pickQuote(
-      await sdk.swapService.fetchDepositQuote({
-        provider: process.env.LIVE_SWAP_PROVIDER,
+      await executePlan(
+        sdk.executionService.planSwapCollateral({
+          account: accountData,
+          swapQuote: collateralQuote,
+        }),
+      )
+
+      const afterSwap = await fetchSubAccount(subAccountAddress, [
+        EULER_PRIME_USDC_VAULT,
+        WSTETH_VAULT,
+      ])
+      expect(getAssets(afterSwap, WSTETH_VAULT)).toBeGreaterThan(0n)
+
+      accountData.updateSubAccounts(afterSwap)
+
+      const borrowPlan = await sdk.executionService.resolveRequiredApprovals({
+        plan: sdk.executionService.planBorrow({
+          account: accountData,
+          vault: EULER_PRIME_USDT_VAULT,
+          amount: borrowAmount,
+          borrowAccount: subAccountAddress,
+          receiver: account.address,
+        }),
         chainId: CHAIN_ID,
-        fromVault: EULER_PRIME_USDC_VAULT,
-        toVault: WSTETH_VAULT,
-        fromAccount: subAccountAddress,
-        toAccount: subAccountAddress,
-        fromAsset: USDC_ADDRESS,
-        toAsset: WSTETH_ADDRESS,
-        amount: collateralSwapAmount,
-        origin: account.address,
-        slippage: 0.5,
-        deadline: getDeadline(),
-      }),
-    )
+        account: account.address,
+        usePermit2: false,
+        unlimitedApproval: false,
+      })
 
-    await executePlan(
-      sdk.executionService.planSwapCollateral({
-        account: accountData,
-        swapQuote: collateralQuote,
-      }),
-    )
+      await executePlan(borrowPlan)
 
-    const afterSwap = await fetchSubAccount(subAccountAddress, [
-      EULER_PRIME_USDC_VAULT,
-      WSTETH_VAULT,
-    ])
-    expect(getAssets(afterSwap, WSTETH_VAULT)).toBeGreaterThan(0n)
+      const afterBorrow = await fetchSubAccount(subAccountAddress, [
+        WSTETH_VAULT,
+        EULER_PRIME_USDT_VAULT,
+      ])
+      const currentDebt = getBorrowed(afterBorrow, EULER_PRIME_USDT_VAULT)
+      expect(currentDebt).toBeGreaterThan(0n)
 
-    accountData.updateSubAccounts(afterSwap)
+      accountData.updateSubAccounts(afterBorrow)
 
-    const borrowPlan = await sdk.executionService.resolveRequiredApprovals({
-      plan: sdk.executionService.planBorrow({
-        account: accountData,
-        vault: EULER_PRIME_USDT_VAULT,
-        amount: borrowAmount,
-        borrowAccount: subAccountAddress,
-        receiver: account.address,
-      }),
-      chainId: CHAIN_ID,
-      account: account.address,
-      usePermit2: false,
-      unlimitedApproval: false,
-    })
+      const repayQuote = pickQuote(
+        await sdk.swapService.fetchRepayQuotes({
+          provider: process.env.LIVE_SWAP_PROVIDER,
+          chainId: CHAIN_ID,
+          fromVault: WSTETH_VAULT,
+          fromAsset: WSTETH_ADDRESS,
+          fromAccount: subAccountAddress,
+          liabilityVault: EULER_PRIME_USDT_VAULT,
+          liabilityAsset: USDT_ADDRESS,
+          liabilityAmount:
+            repayMode === "full" ? currentDebt : currentDebt / 2n,
+          currentDebt,
+          toAccount: subAccountAddress,
+          origin: account.address,
+          swapperMode: SwapperMode.TARGET_DEBT,
+          slippage: 0.5,
+          deadline: getDeadline(),
+        }),
+      )
 
-    await executePlan(borrowPlan)
+      const targetDebt =
+        repayMode === "full" ? 0n : currentDebt - currentDebt / 2n
+      assertCombinedRepayQuote(repayQuote, targetDebt)
 
-    const afterBorrow = await fetchSubAccount(subAccountAddress, [
-      WSTETH_VAULT,
-      EULER_PRIME_USDT_VAULT,
-    ])
-    const currentDebt = getBorrowed(afterBorrow, EULER_PRIME_USDT_VAULT)
-    expect(currentDebt).toBeGreaterThan(0n)
+      await executePlan(
+        sdk.executionService.planRepayWithSwap({
+          account: accountData,
+          swapQuote: repayQuote,
+        }),
+      )
 
-    accountData.updateSubAccounts(afterBorrow)
+      const afterRepay = await fetchSubAccount(subAccountAddress, [
+        WSTETH_VAULT,
+        EULER_PRIME_USDT_VAULT,
+      ])
 
-    const repayQuote = pickQuote(
-      await sdk.swapService.fetchRepayQuotes({
-        provider: process.env.LIVE_SWAP_PROVIDER,
-        chainId: CHAIN_ID,
-        fromVault: WSTETH_VAULT,
-        fromAsset: WSTETH_ADDRESS,
-        fromAccount: subAccountAddress,
-        liabilityVault: EULER_PRIME_USDT_VAULT,
-        liabilityAsset: USDT_ADDRESS,
-        liabilityAmount: currentDebt,
-        currentDebt,
-        toAccount: subAccountAddress,
-        origin: account.address,
-        swapperMode: SwapperMode.TARGET_DEBT,
-        slippage: 0.5,
-        deadline: getDeadline(),
-      }),
-    )
-
-    await executePlan(
-      sdk.executionService.planRepayWithSwap({
-        account: accountData,
-        swapQuote: repayQuote,
-      }),
-    )
-
-    const afterRepay = await fetchSubAccount(subAccountAddress, [
-      WSTETH_VAULT,
-      EULER_PRIME_USDT_VAULT,
-    ])
-
-    expect(getBorrowed(afterRepay, EULER_PRIME_USDT_VAULT)).toBe(0n)
-  }, 180_000)
+      const remainingDebt = getBorrowed(afterRepay, EULER_PRIME_USDT_VAULT)
+      expect(remainingDebt).toBeLessThanOrEqual(targetDebt)
+      if (repayMode === "full") expect(remainingDebt).toBe(0n)
+      else expect(remainingDebt).toBeGreaterThan(0n)
+    },
+    180_000,
+  )
 
   it("repays debt with exact input collateral swap", async () => {
     const subAccountId = 2
@@ -491,6 +506,42 @@ function pickQuote(quotes: SwapQuote[]) {
     ).toBe(true)
   }
   return filtered
+}
+
+function assertCombinedRepayQuote(quote: SwapQuote, targetDebt: bigint) {
+  const swaps = quote.swap.multicallItems
+    .filter((item) => item.functionName === "swap")
+    .map(
+      (item) =>
+        item.args[0] as {
+          handler: Hex
+          mode: string
+          amountOut: string
+          data: Hex
+        },
+    )
+
+  // A single-swap fallback does not exercise the combined strategy.
+  expect(swaps).toHaveLength(2)
+  expect(swaps[0].handler).toBe(stringToHex("Generic", { size: 32 }))
+  expect(BigInt(swaps[0].mode)).toBe(BigInt(SwapperMode.EXACT_IN))
+  expect([
+    stringToHex("UniswapV2", { size: 32 }),
+    stringToHex("UniswapV3", { size: 32 }),
+  ]).toContain(swaps[1].handler)
+  expect(BigInt(swaps[1].mode)).toBe(BigInt(SwapperMode.TARGET_DEBT))
+  expect(BigInt(swaps[1].amountOut)).toBe(targetDebt)
+
+  if (process.env.LIVE_SWAP_PROVIDER === "uniswap") {
+    const [target, calldata] = decodeAbiParameters(
+      parseAbiParameters("address, bytes"),
+      swaps[0].data,
+    )
+    expect(target.toLowerCase()).toBe(
+      "0x02e5be68d46dac0b524905bff209cf47ee6db2a9",
+    )
+    expect(calldata.slice(0, 10)).toBe("0x2894adf9")
+  }
 }
 
 function hasZeroApproveTarget(quote: SwapQuote) {
