@@ -16,6 +16,8 @@ pnpm run doppler:syncstg # staging
 pnpm run doppler:syncprd # production 
 ```
 
+The Uniswap source requires `UNISWAP_API_KEY` from the [Uniswap Developer Dashboard](https://developers.uniswap.org/dashboard). Set it in the server environment (or Doppler configuration) before enabling the source. It uses the Trading API for V2/V3/V4 swaps with direct ERC-20 approvals; no Permit2 signature is required. Exact-output quotes require the output recipient to equal the taker because the Trading API sends unused input to that recipient.
+
 ## Running
 
 Dev server
@@ -44,6 +46,15 @@ pnpm run test:unit
 ```
 
 `pnpm test` runs the live mainnet fork suite and requires Anvil and the RPC/provider configuration used by the test cases.
+
+Test the Uniswap integration with `UNISWAP_API_KEY`, `RPC_URL_1`, and Anvil on `PATH` (`ANVIL_BIN` can override its location):
+
+```sh
+pnpm exec vitest run src/__tests__/live/uniswap.live.test.ts
+LIVE_SWAP_PROVIDER=uniswap pnpm exec vitest run src/__tests__/live/swaps.live.test.ts -t 'opens a position|repays debt with exact input'
+```
+
+The first suite checks quotes and approval targets on every advertised Uniswap chain, then executes exact-input, exact-output, and native-token swaps on a local mainnet fork. The second pins Uniswap in the Euler position and debt-repayment flows. All execution stays on the local fork.
 
 ## Docker and CI
 

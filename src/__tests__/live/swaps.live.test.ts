@@ -55,8 +55,8 @@ const EULER_PRIME_USDT_VAULT = getAddress(
 )
 const WSTETH_VAULT = getAddress("0xbC4B4AC47582c3E38Ce5940B80Da65401F4628f1")
 
-const USDC_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
-const USDT_WHALE = getAddress("0x28C6c06298d514Db089934071355E5743bf21d60")
+const USDC_WHALE = getAddress("0xbcca60bb61934080951369a648fb03df4f96263c")
+const USDT_WHALE = getAddress("0x23878914efe38d27c4d67ab83ed1b93a74d4086a")
 const WETH_WHALE = getAddress("0x4a18a50a8328b42773268B4b436254056b7d70CE")
 
 let anvilProcess: ReturnType<typeof spawn> | undefined
@@ -95,7 +95,7 @@ describe.sequential("mainnet live swap flows", () => {
     anvilUrl = `http://${ANVIL_HOST}:${anvilPort}`
 
     const anvil = spawn(
-      "/Users/dariusz/.foundry/bin/anvil",
+      process.env.ANVIL_BIN || "anvil",
       [
         "--fork-url",
         forkRpcUrl,
@@ -121,7 +121,7 @@ describe.sequential("mainnet live swap flows", () => {
 
     await waitForRpc(anvilUrl).catch((error) => {
       throw new Error(
-        `Anvil failed to start on ${anvilUrl}: ${error}\n${anvilErrors.join("")}`,
+        `Anvil failed to start on ${anvilUrl}: ${error}\n${anvilErrors.join("").replaceAll(forkRpcUrl, "<fork RPC>")}`,
       )
     })
 
@@ -187,9 +187,14 @@ describe.sequential("mainnet live swap flows", () => {
       })
     }
 
-    if (anvilProcess && !anvilProcess.killed) {
+    if (
+      anvilProcess &&
+      anvilProcess.exitCode === null &&
+      !anvilProcess.killed
+    ) {
+      const exited = once(anvilProcess, "exit")
       anvilProcess.kill("SIGTERM")
-      await once(anvilProcess, "exit").catch(() => undefined)
+      await exited.catch(() => undefined)
     }
   })
 
@@ -236,6 +241,7 @@ describe.sequential("mainnet live swap flows", () => {
 
     const collateralQuote = pickQuote(
       await sdk.swapService.fetchDepositQuote({
+        provider: process.env.LIVE_SWAP_PROVIDER,
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         toVault: WSTETH_VAULT,
@@ -292,6 +298,7 @@ describe.sequential("mainnet live swap flows", () => {
 
     const repayQuote = pickQuote(
       await sdk.swapService.fetchRepayQuotes({
+        provider: process.env.LIVE_SWAP_PROVIDER,
         chainId: CHAIN_ID,
         fromVault: WSTETH_VAULT,
         fromAsset: WSTETH_ADDRESS,
@@ -371,6 +378,7 @@ describe.sequential("mainnet live swap flows", () => {
 
     const repayQuote = pickQuote(
       await sdk.swapService.fetchRepayQuotes({
+        provider: process.env.LIVE_SWAP_PROVIDER,
         chainId: CHAIN_ID,
         fromVault: EULER_PRIME_USDC_VAULT,
         fromAsset: USDC_ADDRESS,
@@ -477,6 +485,11 @@ function pickQuote(quotes: SwapQuote[]) {
     throw new Error("No swap quote returned")
   }
 
+  if (process.env.LIVE_SWAP_PROVIDER === "uniswap") {
+    expect(
+      filtered.route.some((route) => route.providerName === "Uniswap"),
+    ).toBe(true)
+  }
   return filtered
 }
 

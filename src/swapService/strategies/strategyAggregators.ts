@@ -144,6 +144,9 @@ export class StrategyAggregators {
             referrer: this.config.referrer,
           },
           custom: {
+            uniswap: {
+              apiKey: process.env.UNISWAP_API_KEY,
+            },
             "1inch": {
               apiKey: String(process.env.ONEINCH_API_KEY),
             },
