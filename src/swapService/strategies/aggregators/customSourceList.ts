@@ -14,6 +14,7 @@ import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
 import { CustomMagpieQuoteSource } from "./sources/magpieQuoteSource"
+import { CustomMooseQuoteSource } from "./sources/mooseQuoteSource"
 import { CustomMultiliquidQuoteSource } from "./sources/multiliquidQuoteSource"
 import { CustomNordsternQuoteSource } from "./sources/nordsternQuoteSource"
 import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
@@ -41,6 +42,7 @@ const customSources = {
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
   magpie: new CustomMagpieQuoteSource(),
+  moose: new CustomMooseQuoteSource(),
   multiliquid: new CustomMultiliquidQuoteSource(),
   kyberswap: new CustomKyberswapQuoteSource(),
   enso: new CustomEnsoQuoteSource(),

@@ -26,7 +26,7 @@ Each provider declares its own supported networks. Confirm support with the prov
 
 | Provider | Configuration to review |
 | --- | --- |
-| 0x, OKX, Nordstern | `SUPPORTED_CHAINS` in `0xMatchaQuoteSource.ts`, `okxDexQuoteSource.ts`, `nordsternQuoteSource.ts` |
+| 0x, OKX, Nordstern, Moose | `SUPPORTED_CHAINS` in `0xMatchaQuoteSource.ts`, `okxDexQuoteSource.ts`, `nordsternQuoteSource.ts`, `mooseQuoteSource.ts` |
 | KyberSwap, Magpie, Spectra | Chain-to-network mappings in `kyberswapQuoteSource.ts`, `magpieQuoteSource.ts`, `spectraQuoteSource.ts` |
 | OpenOcean | `SUPPORTED_CHAINS` and native-asset overrides in `openOceanQuoteSource.ts` |
 | Binance Wallet | `DEFAULT_SUPPORTED_CHAINS` in `binanceWalletQuoteSource.ts` |
