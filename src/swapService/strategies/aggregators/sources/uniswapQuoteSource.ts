@@ -1,55 +1,86 @@
-import { Chains, getChainByKey } from "@balmy/sdk"
-import type { ChainId, TokenAddress } from "@balmy/sdk"
-import { Addresses } from "@balmy/sdk"
-import { isSameAddress, subtractPercentage, timeToSeconds } from "@balmy/sdk"
-import { AlwaysValidConfigAndContextSource } from "@balmy/sdk/dist/services/quotes/quote-sources/base/always-valid-source"
+import { Addresses, Chains, calculateDeadline, isSameAddress } from "@balmy/sdk"
 import type {
   BuildTxParams,
+  IQuoteSource,
   QuoteParams,
   QuoteSourceMetadata,
   SourceQuoteResponse,
   SourceQuoteTransaction,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/types"
 import {
-  addQuoteSlippage,
   calculateAllowanceTarget,
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
-import qs from "qs"
-import { encodeFunctionData, parseAbi } from "viem"
+import { getAddress, isAddress, zeroAddress } from "viem"
+import { z } from "zod"
 
-const ROUTER_ADDRESS: Record<ChainId, string> = {
-  [Chains.ETHEREUM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.OPTIMISM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.POLYGON.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.ARBITRUM.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.CELO.chainId]: "0x5615CDAb10dc425a742d643d949a7F474C01abc4",
-  [Chains.ETHEREUM_GOERLI.chainId]:
-    "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.POLYGON_MUMBAI.chainId]: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-  [Chains.BNB_CHAIN.chainId]: "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
-  [Chains.BASE.chainId]: "0x2626664c2603336E57B271c5C0b26F421741e481",
-  [Chains.AVALANCHE.chainId]: "0xbb00FF08d01D300023C629E8fFfFcb65A5a578cE",
-  [130]: "0x73855d06de49d0fe4a9c42636ba96c62da12ff9c",
-}
-
+const API_URL = "https://trade-api.gateway.uniswap.org/v1"
 const UNISWAP_METADATA: QuoteSourceMetadata<UniswapSupport> = {
   name: "Uniswap",
   supports: {
-    chains: Object.keys(ROUTER_ADDRESS).map(Number),
+    chains: [
+      Chains.ETHEREUM.chainId,
+      Chains.OPTIMISM.chainId,
+      Chains.POLYGON.chainId,
+      Chains.ARBITRUM.chainId,
+      Chains.CELO.chainId,
+      Chains.BNB_CHAIN.chainId,
+      Chains.BASE.chainId,
+      Chains.AVALANCHE.chainId,
+      130, // Unichain
+    ],
     swapAndTransfer: true,
     buyOrders: true,
   },
   logoURI: "ipfs://QmNa3YBYAYS5qSCLuXataV5XCbtxP9ZB4rHUfomRxrpRhJ",
 }
+
 type UniswapSupport = { buyOrders: true; swapAndTransfer: true }
-type UniswapConfig = object
+type UniswapConfig = { apiKey: string }
 type UniswapData = { tx: SourceQuoteTransaction }
-export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
-  UniswapSupport,
-  UniswapConfig,
-  UniswapData
-> {
+
+const addressSchema = z.string().refine((value) => isAddress(value))
+const amountSchema = z.string().regex(/^[0-9]+$/)
+const quoteSchema = z.object({
+  routing: z.literal("CLASSIC"),
+  permitData: z.null(),
+  quote: z
+    .object({
+      chainId: z.number(),
+      swapper: addressSchema,
+      tradeType: z.enum(["EXACT_INPUT", "EXACT_OUTPUT"]),
+      input: z
+        .object({
+          token: addressSchema,
+          amount: amountSchema,
+          maximumAmount: amountSchema,
+        })
+        .passthrough(),
+      output: z
+        .object({
+          token: addressSchema,
+          recipient: addressSchema,
+          amount: amountSchema,
+          minimumAmount: amountSchema,
+        })
+        .passthrough(),
+      gasUseEstimate: amountSchema.optional(),
+    })
+    .passthrough(),
+})
+const swapSchema = z.object({
+  swap: z.object({
+    to: addressSchema.refine((value) => !isSameAddress(value, zeroAddress)),
+    from: addressSchema,
+    chainId: z.number(),
+    data: z.string().regex(/^0x(?:[0-9a-fA-F]{2}){4,}$/),
+    value: z.string().regex(/^(?:[0-9]+|0x[0-9a-fA-F]+)$/),
+  }),
+})
+
+export class CustomUniswapQuoteSource
+  implements IQuoteSource<UniswapSupport, UniswapConfig, UniswapData>
+{
   getMetadata() {
     return UNISWAP_METADATA
   }
@@ -62,110 +93,137 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
       buyToken,
       order,
       config: { slippagePercentage, timeout, txValidFor },
-      accounts: { takeFrom, recipient },
+      accounts: { takeFrom, recipient = takeFrom },
     },
-  }: QuoteParams<UniswapSupport>): Promise<SourceQuoteResponse<UniswapData>> {
-    const amount = order.type === "sell" ? order.sellAmount : order.buyAmount
-    const isSellTokenNativeToken = isSameAddress(
-      sellToken,
-      Addresses.NATIVE_TOKEN,
-    )
-    const isBuyTokenNativeToken = isSameAddress(
-      buyToken,
-      Addresses.NATIVE_TOKEN,
-    )
-    if (isSellTokenNativeToken && order.type === "buy") {
-      // We do this because it's very hard and expensive to wrap native to wToken, spend only
-      // some of it and then return the extra native token to the caller
+    config,
+  }: QuoteParams<UniswapSupport, UniswapConfig>): Promise<
+    SourceQuoteResponse<UniswapData>
+  > {
+    if (!this.isConfigAndContextValidForQuoting(config)) {
+      throw new Error("Uniswap requires an API key")
+    }
+    const nativeInput = isSameAddress(sellToken, Addresses.NATIVE_TOKEN)
+    if (nativeInput && order.type === "buy") {
       throw new Error("Uniswap does not support buy orders with native token")
     }
-    const router = ROUTER_ADDRESS[chainId]
-    recipient = recipient ?? takeFrom
-
-    const queryParams = {
-      protocols: "v2,v3,mixed",
-      tokenInAddress: mapToWTokenIfNecessary(chainId, sellToken),
-      tokenInChainId: chainId,
-      tokenOutAddress: mapToWTokenIfNecessary(chainId, buyToken),
-      tokenOutChainId: chainId,
-      amount: amount.toString(),
-      type: order.type === "sell" ? "exactIn" : "exactOut",
-      recipient: isBuyTokenNativeToken ? router : recipient,
-      deadline: timeToSeconds(txValidFor ?? "3h"),
-      slippageTolerance: slippagePercentage,
+    // The Trading API sweeps unused exact-output input to the output recipient.
+    // Keep refunds with the Swapper so Euler can return them to the input vault.
+    if (order.type === "buy" && !isSameAddress(recipient, takeFrom)) {
+      throw new Error(
+        "Uniswap buy orders require the recipient to be the taker",
+      )
     }
-
-    const queryString = qs.stringify(queryParams, {
-      skipNulls: true,
-      arrayFormat: "comma",
-    })
-
-    // These are needed so that the API allows us to make the call
+    const tokenIn = mapNativeToken(sellToken)
+    const tokenOut = mapNativeToken(buyToken)
+    const amount = order.type === "sell" ? order.sellAmount : order.buyAmount
+    const type = order.type === "sell" ? "EXACT_INPUT" : "EXACT_OUTPUT"
+    // Trading API accepts two decimal places; never loosen the caller's limit.
+    const roundedSlippage = Number(slippagePercentage.toFixed(2))
+    const slippageTolerance =
+      roundedSlippage > slippagePercentage
+        ? Number((roundedSlippage - 0.01).toFixed(2))
+        : roundedSlippage
     const headers = {
-      origin: "https://app.uniswap.org",
-      referer: "https://app.uniswap.org/",
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "x-api-key": config.apiKey,
+      "x-universal-router-version": "2.1.2",
+      // Euler's Swapper approves the target directly and cannot sign Permit2 messages.
+      "x-permit2-disabled": "true",
     }
-    const url = `https://api.uniswap.org/v1/quote?${queryString}`
-    const response = await fetchService.fetch(url, { headers, timeout })
-    if (!response.ok) {
-      failed(
-        UNISWAP_METADATA,
-        chainId,
-        sellToken,
-        buyToken,
-        await response.text(),
-      )
-    }
-    let {
-      quote: quoteAmount,
-      methodParameters: { calldata },
-      gasUseEstimate,
-    } = await response.json()
-
-    const sellAmount =
-      order.type === "sell" ? order.sellAmount : BigInt(quoteAmount)
-    const buyAmount =
-      order.type === "sell" ? BigInt(quoteAmount) : order.buyAmount
-    const value = isSellTokenNativeToken ? sellAmount : undefined
-
-    if (isBuyTokenNativeToken) {
-      // Use multicall to unwrap wToken
-      const minBuyAmount = calculateMinBuyAmount(
-        order.type,
-        buyAmount,
-        slippagePercentage,
-      )
-      const unwrapData = encodeFunctionData({
-        abi: ROUTER_ABI,
-        functionName: "unwrapWETH9",
-        args: [minBuyAmount, recipient],
+    const post = async (path: "quote" | "swap", body: object) => {
+      const response = await fetchService.fetch(`${API_URL}/${path}`, {
+        method: "POST",
+        headers,
+        timeout,
+        body: JSON.stringify(body),
       })
-      const multicallData = encodeFunctionData({
-        abi: ROUTER_ABI,
-        functionName: "multicall",
-        args: [[calldata, unwrapData]],
-      })
-
-      // Update calldata and gas estimate
-      calldata = multicallData!
-      gasUseEstimate = BigInt(gasUseEstimate) + 12_500n
+      if (!response.ok) {
+        await response.text()
+        failed(
+          UNISWAP_METADATA,
+          chainId,
+          sellToken,
+          buyToken,
+          `Trading API /${path} returned HTTP ${response.status}`,
+        )
+      }
+      return response.json()
     }
 
-    const quote = {
+    const { quote } = quoteSchema.parse(
+      await post("quote", {
+        type,
+        amount: amount.toString(),
+        tokenInChainId: chainId,
+        tokenOutChainId: chainId,
+        tokenIn,
+        tokenOut,
+        swapper: getAddress(takeFrom),
+        recipient: getAddress(recipient),
+        slippageTolerance,
+        // UniswapX orders need signatures and cannot execute in an Euler batch.
+        protocols: ["V2", "V3", "V4"],
+      }),
+    )
+    const sellAmount = BigInt(quote.input.amount)
+    const buyAmount = BigInt(quote.output.amount)
+    const maxSellAmount = BigInt(quote.input.maximumAmount)
+    const minBuyAmount = BigInt(quote.output.minimumAmount)
+    if (
+      quote.chainId !== chainId ||
+      quote.tradeType !== type ||
+      !isSameAddress(quote.swapper, takeFrom) ||
+      !isSameAddress(quote.input.token, tokenIn) ||
+      !isSameAddress(quote.output.token, tokenOut) ||
+      !isSameAddress(quote.output.recipient, recipient) ||
+      sellAmount <= 0n ||
+      buyAmount <= 0n ||
+      maxSellAmount < sellAmount ||
+      minBuyAmount <= 0n ||
+      minBuyAmount > buyAmount ||
+      (order.type === "sell"
+        ? sellAmount !== amount || maxSellAmount !== amount
+        : buyAmount !== amount || minBuyAmount !== amount)
+    ) {
+      throw new Error("Uniswap returned a quote inconsistent with the request")
+    }
+
+    // Always build with the requested lifetime. Quotes can omit swapTransaction
+    // when simulation sees an unfunded Swapper; funds arrive in the Euler batch.
+    const { swap } = swapSchema.parse(
+      await post("swap", {
+        quote,
+        deadline: calculateDeadline(txValidFor ?? "3h"),
+        simulateTransaction: false,
+        refreshGasPrice: false,
+        safetyMode: "SAFE",
+      }),
+    )
+    const value = BigInt(swap.value)
+    if (
+      swap.chainId !== chainId ||
+      !isSameAddress(swap.from, takeFrom) ||
+      value !== (nativeInput ? sellAmount : 0n)
+    ) {
+      throw new Error("Uniswap returned an inconsistent swap transaction")
+    }
+
+    return {
+      type: order.type,
       sellAmount,
       buyAmount,
-      estimatedGas: BigInt(gasUseEstimate),
-      allowanceTarget: calculateAllowanceTarget(sellToken, router),
+      // Use the API's bounds, which match its calldata and rounding exactly.
+      maxSellAmount,
+      minBuyAmount,
+      estimatedGas: quote.gasUseEstimate
+        ? BigInt(quote.gasUseEstimate)
+        : undefined,
+      allowanceTarget: calculateAllowanceTarget(sellToken, swap.to),
       customData: {
-        tx: {
-          to: router,
-          calldata,
-          value,
-        },
+        tx: { to: swap.to, calldata: swap.data, value },
       },
     }
-
-    return addQuoteSlippage(quote, order.type, slippagePercentage)
   }
 
   async buildTx({
@@ -176,28 +234,22 @@ export class CustomUniswapQuoteSource extends AlwaysValidConfigAndContextSource<
   >): Promise<SourceQuoteTransaction> {
     return request.customData.tx
   }
+
+  isConfigAndContextValidForQuoting(
+    config: Partial<UniswapConfig> | undefined,
+  ): config is UniswapConfig {
+    return typeof config?.apiKey === "string" && config.apiKey.trim().length > 0
+  }
+
+  isConfigAndContextValidForTxBuilding(
+    config: Partial<UniswapConfig> | undefined,
+  ): config is UniswapConfig {
+    return this.isConfigAndContextValidForQuoting(config)
+  }
 }
 
-function calculateMinBuyAmount(
-  type: "sell" | "buy",
-  buyAmount: bigint,
-  slippagePercentage: number,
-) {
-  return type === "sell"
-    ? BigInt(subtractPercentage(buyAmount, slippagePercentage, "up"))
-    : buyAmount
+function mapNativeToken(token: string) {
+  return isSameAddress(token, Addresses.NATIVE_TOKEN)
+    ? zeroAddress
+    : getAddress(token)
 }
-
-function mapToWTokenIfNecessary(chainId: ChainId, address: TokenAddress) {
-  const chain = getChainByKey(chainId)
-  return chain && isSameAddress(address, Addresses.NATIVE_TOKEN)
-    ? chain.wToken
-    : address
-}
-
-const ROUTER_HUMAN_READABLE_ABI = [
-  "function unwrapWETH9(uint256 amountMinimum, address recipient) payable",
-  "function multicall(bytes[] data) payable returns (bytes[] memory results)",
-]
-
-const ROUTER_ABI = parseAbi(ROUTER_HUMAN_READABLE_ABI)
