@@ -10,6 +10,7 @@ import type {
 import { LocalSourceList } from "@balmy/sdk/dist/services/quotes/source-lists/local-source-list"
 import { CustomZRXQuoteSource } from "./sources/0xMatchaQuoteSource"
 import { CustomBinanceWalletQuoteSource } from "./sources/binanceWalletQuoteSource"
+import { CustomDe1QuoteSource } from "./sources/de1QuoteSource"
 import { CustomEnsoQuoteSource } from "./sources/ensoQuoteSource"
 import { CustomKyberswapQuoteSource } from "./sources/kyberswapQuoteSource"
 import { CustomLiFiQuoteSource } from "./sources/lifiQuoteSource"
@@ -21,7 +22,6 @@ import { CustomOkuQuoteSource } from "./sources/okuQuoteSource"
 import { CustomOKXDexQuoteSource } from "./sources/okxDexQuoteSource"
 import { CustomOneInchQuoteSource } from "./sources/oneInchQuoteSource"
 import { CustomOogaboogaQuoteSource } from "./sources/oogaboogaQuoteSource"
-import { CustomOpenOceanQuoteSource } from "./sources/openOceanQuoteSource"
 import { CustomParaswapQuoteSource } from "./sources/paraswapQuoteSource"
 import { CustomPendleQuoteSource } from "./sources/pendleQuoteSource"
 import { CustomSpectraQuoteSource } from "./sources/spectraQuoteSource"
@@ -37,7 +37,7 @@ type ConstructorParameters = {
 const customSources = {
   "1inch": new CustomOneInchQuoteSource(),
   "li-fi": new CustomLiFiQuoteSource(),
-  "open-ocean": new CustomOpenOceanQuoteSource(),
+  de1: new CustomDe1QuoteSource(),
   nordstern: new CustomNordsternQuoteSource(),
   oogabooga: new CustomOogaboogaQuoteSource(),
   uniswap: new CustomUniswapQuoteSource(),
