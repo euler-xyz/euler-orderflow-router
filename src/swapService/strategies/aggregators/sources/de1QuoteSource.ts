@@ -23,7 +23,7 @@ import qs from "qs"
 import { formatUnits, publicActions } from "viem"
 import * as chains from "viem/chains"
 
-// https://docs.openocean.finance/dev/supported-chains
+// https://docs.de1.exchange/docs/overview/supported-chains
 const SUPPORTED_CHAINS: Record<
   ChainId,
   { chainKey: string; nativeAsset?: Address }
@@ -46,14 +46,11 @@ const SUPPORTED_CHAINS: Record<
   },
   [Chains.ARBITRUM.chainId]: { chainKey: "arbitrum" },
   [Chains.OPTIMISM.chainId]: { chainKey: "optimism" },
-  [Chains.MOONRIVER.chainId]: { chainKey: "moonriver" },
-  [Chains.AURORA.chainId]: { chainKey: "aurora" },
   [Chains.CRONOS.chainId]: {
     chainKey: "cronos",
     nativeAsset: "0x0000000000000000000000000000000000000000",
   },
   [Chains.HARMONY_SHARD_0.chainId]: { chainKey: "harmony" },
-  [Chains.KAVA.chainId]: { chainKey: "kava" },
   [Chains.METIS_ANDROMEDA.chainId]: {
     chainKey: "metis",
     nativeAsset: "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
@@ -68,10 +65,7 @@ const SUPPORTED_CHAINS: Record<
     chainKey: "xdai",
     nativeAsset: "0x0000000000000000000000000000000000000000",
   },
-  [Chains.opBNB.chainId]: { chainKey: "opbnb" },
-  [Chains.BLAST.chainId]: { chainKey: "blast" },
   [Chains.ROOTSTOCK.chainId]: { chainKey: "rootstock" },
-  [Chains.MODE.chainId]: { chainKey: "mode" },
   [chains.sonic.id]: { chainKey: "sonic" },
   [chains.berachain.id]: { chainKey: "berachain" },
   [chains.hyperEvm.id]: {
@@ -79,13 +73,12 @@ const SUPPORTED_CHAINS: Record<
     nativeAsset: "0x0000000000000000000000000000000000000000",
   },
   [chains.unichain.id]: { chainKey: "unichain" }, // fix gas price
-  [chains.tac.id]: { chainKey: "tac" }, // fix gas price
   [chains.plasma.id]: { chainKey: "plasma" },
   [chains.monad.id]: { chainKey: "monad" },
 }
 
-const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {
-  name: "Open Ocean",
+const DE1_METADATA: QuoteSourceMetadata<De1Support> = {
+  name: "DE1",
   supports: {
     chains: Object.keys(SUPPORTED_CHAINS).map(Number),
     swapAndTransfer: true,
@@ -93,16 +86,16 @@ const OPEN_OCEAN_METADATA: QuoteSourceMetadata<OpenOceanSupport> = {
   },
   logoURI: "ipfs://QmP7bVENjMmobmjJcPFX6VbFTmj6pKmFNqv7Qkyqui44dT",
 }
-type OpenOceanSupport = { buyOrders: false; swapAndTransfer: true }
-type OpenOceanConfig = { sourceAllowlist?: string[]; apiKey?: string }
-type OpenOceanData = { tx: SourceQuoteTransaction }
-export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSource<
-  OpenOceanSupport,
-  OpenOceanConfig,
-  OpenOceanData
+type De1Support = { buyOrders: false; swapAndTransfer: true }
+type De1Config = { sourceAllowlist?: string[]; apiKey?: string }
+type De1Data = { tx: SourceQuoteTransaction }
+export class CustomDe1QuoteSource extends AlwaysValidConfigAndContextSource<
+  De1Support,
+  De1Config,
+  De1Data
 > {
   getMetadata() {
-    return OPEN_OCEAN_METADATA
+    return DE1_METADATA
   }
 
   async quote({
@@ -117,8 +110,8 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       external,
     },
     config,
-  }: QuoteParams<OpenOceanSupport, OpenOceanConfig>): Promise<
-    SourceQuoteResponse<OpenOceanData>
+  }: QuoteParams<De1Support, De1Config>): Promise<
+    SourceQuoteResponse<De1Data>
   > {
     const { sellToken: sellTokenDataResult } =
       await external.tokenData.request()
@@ -142,10 +135,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       slippage: slippagePercentage,
       gasPrice: gasPriceGwei,
       account: recipient ?? takeFrom,
-      referrer:
-        chainId === 239
-          ? process.env.OPENOCEAN_TAC_REFERRER
-          : config.referrer?.address,
+      referrer: config.referrer?.address,
       enabledDexIds: config.sourceAllowlist,
       disableRfq: true,
     }
@@ -153,7 +143,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
       skipNulls: true,
       arrayFormat: "comma",
     })
-    const url = `https://open-api-pro.openocean.finance/v3/${chainId}/swap_quote?${queryString}`
+    const url = `https://open-api-pro.de1.exchange/v3/${chainId}/swap_quote?${queryString}`
     const headers: Record<string, string> = {}
     if (config.apiKey) {
       headers["apikey"] = config.apiKey
@@ -162,13 +152,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
     const response = await fetchService.fetch(url, { timeout, headers })
 
     if (!response.ok) {
-      failed(
-        OPEN_OCEAN_METADATA,
-        chainId,
-        sellToken,
-        buyToken,
-        await response.text(),
-      )
+      failed(DE1_METADATA, chainId, sellToken, buyToken, await response.text())
     }
 
     const {
@@ -184,13 +168,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
     } = await response.json()
 
     if (Number(rfqDeadline) > 0) {
-      failed(
-        OPEN_OCEAN_METADATA,
-        chainId,
-        sellToken,
-        buyToken,
-        "RFQ not allowed",
-      )
+      failed(DE1_METADATA, chainId, sellToken, buyToken, "RFQ not allowed")
     }
 
     return {
@@ -213,10 +191,7 @@ export class CustomOpenOceanQuoteSource extends AlwaysValidConfigAndContextSourc
 
   async buildTx({
     request,
-  }: BuildTxParams<
-    OpenOceanConfig,
-    OpenOceanData
-  >): Promise<SourceQuoteTransaction> {
+  }: BuildTxParams<De1Config, De1Data>): Promise<SourceQuoteTransaction> {
     return request.customData.tx
   }
 }

@@ -153,8 +153,8 @@ export class StrategyAggregators {
             "li-fi": {
               apiKey: String(process.env.LIFI_API_KEY),
             },
-            "open-ocean": {
-              apiKey: String(process.env.OPENOCEAN_API_KEY),
+            de1: {
+              apiKey: process.env.DE1_API_KEY || process.env.OPENOCEAN_API_KEY,
             },
             "okx-dex": {
               apiKey: String(process.env.OKX_API_KEY),
