@@ -47,6 +47,7 @@ const SUPPORTED_CHAINS: Record<ChainId, string> = {
   [chains.unichain.id]: "unichain",
   [chains.plasma.id]: "plasma",
   [chains.monad.id]: "monad",
+  [chains.arc.id]: "arc",
 }
 
 const KYBERSWAP_METADATA: QuoteSourceMetadata<KyberswapSupport> = {

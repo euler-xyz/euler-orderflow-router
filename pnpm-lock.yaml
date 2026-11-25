@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@balmy/sdk@0.9.0': 6f51c6c31ad06ac928ad87d11c175ab53b664f8a1b9f3be532be496e09c8e81d
+  '@balmy/sdk@0.9.0': 416a1e2f156464a7db32b21393460fc8390ac534b981af558a9fb16474faff69
 
 importers:
 
@@ -16,10 +16,10 @@ importers:
         version: 7.2.0(zod@3.23.8)
       '@balmy/sdk':
         specifier: 0.9.0
-        version: 0.9.0(patch_hash=6f51c6c31ad06ac928ad87d11c175ab53b664f8a1b9f3be532be496e09c8e81d)(typescript@5.9.3)(zod@3.23.8)
+        version: 0.9.0(patch_hash=416a1e2f156464a7db32b21393460fc8390ac534b981af558a9fb16474faff69)(typescript@5.9.3)(zod@3.23.8)
       '@berachain-foundation/berancer-sdk':
         specifier: 1.1.7
-        version: 1.1.7(viem@2.49.3(typescript@5.9.3)(zod@3.23.8))
+        version: 1.1.7(viem@2.58.6(typescript@5.9.3)(zod@3.23.8))
       '@eulerxyz/euler-v2-sdk':
         specifier: 4.2.0
         version: 4.2.0(typescript@5.9.3)(zod@3.23.8)
@@ -75,8 +75,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(express@5.2.1)
       viem:
-        specifier: ^2.41.2
-        version: 2.49.3(typescript@5.9.3)(zod@3.23.8)
+        specifier: ^2.57.4
+        version: 2.58.6(typescript@5.9.3)(zod@3.23.8)
       zod:
         specifier: 3.23.8
         version: 3.23.8
@@ -2514,6 +2514,14 @@ packages:
       typescript:
         optional: true
 
+  ox@0.14.67:
+    resolution: {integrity: sha512-6v6UlwgsmiyTujZp0aVDuN8uIBAtl/QZadBADFRZ2zp1+CM9TqDzd+rPKJ5PYvWPlCvz8JvoO9dTr42+1PhBhA==}
+    peerDependencies:
+      typescript: '>=5.4.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   ox@0.6.9:
     resolution: {integrity: sha512-wi5ShvzE4eOcTwQVsIPdFr+8ycyX+5le/96iAJutaZAvCes1J0+RvpEPg5QDPDiaR0XQQAvZVl7AwqQcINuUug==}
     peerDependencies:
@@ -3126,6 +3134,17 @@ packages:
       typescript:
         optional: true
 
+  viem@2.58.6:
+    resolution: {integrity: sha512-dBxl7nsHrENzD3HR/wOeeH2NcfXSwoEibTSZKJR7kcQOyqIDa50O27H2JU2ZMAQqS1QrEojaYCy6dLWIsdb9cA==}
+    peerDependencies:
+      mppx: '>=0.17.0'
+      typescript: '>=5.0.4'
+    peerDependenciesMeta:
+      mppx:
+        optional: true
+      typescript:
+        optional: true
+
   vite-node@2.1.9:
     resolution: {integrity: sha512-AM9aQ/IPrW/6ENLQg3AGY4K1N2TGZdR5e4gu/MmmR2xR3Ll1+dib+nook92g4TV3PXVyeyxdWwtaCAiUL0hMxA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3289,6 +3308,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.21.0:
+    resolution: {integrity: sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
@@ -3326,7 +3357,7 @@ snapshots:
       openapi3-ts: 4.5.0
       zod: 3.23.8
 
-  '@balmy/sdk@0.9.0(patch_hash=6f51c6c31ad06ac928ad87d11c175ab53b664f8a1b9f3be532be496e09c8e81d)(typescript@5.9.3)(zod@3.23.8)':
+  '@balmy/sdk@0.9.0(patch_hash=416a1e2f156464a7db32b21393460fc8390ac534b981af558a9fb16474faff69)(typescript@5.9.3)(zod@3.23.8)':
     dependencies:
       cross-fetch: 3.1.5
       crypto-js: 4.2.0
@@ -3342,10 +3373,10 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@berachain-foundation/berancer-sdk@1.1.7(viem@2.49.3(typescript@5.9.3)(zod@3.23.8))':
+  '@berachain-foundation/berancer-sdk@1.1.7(viem@2.58.6(typescript@5.9.3)(zod@3.23.8))':
     dependencies:
       decimal.js-light: 2.5.1
-      viem: 2.49.3(typescript@5.9.3)(zod@3.23.8)
+      viem: 2.58.6(typescript@5.9.3)(zod@3.23.8)
 
   '@biomejs/biome@1.9.4':
     optionalDependencies:
@@ -5765,6 +5796,10 @@ snapshots:
     dependencies:
       ws: 8.18.3
 
+  isows@1.0.7(ws@8.21.0):
+    dependencies:
+      ws: 8.21.0
+
   joycon@3.1.1: {}
 
   js-sha3@0.8.0: {}
@@ -6045,14 +6080,29 @@ snapshots:
     transitivePeerDependencies:
       - zod
 
+  ox@0.14.67(typescript@5.9.3)(zod@3.23.8):
+    dependencies:
+      '@adraffy/ens-normalize': 1.11.1
+      '@noble/ciphers': 1.3.0
+      '@noble/curves': 1.9.1
+      '@noble/hashes': 1.8.0
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
+      abitype: 1.2.3(typescript@5.9.3)(zod@3.23.8)
+      eventemitter3: 5.0.1
+    optionalDependencies:
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - zod
+
   ox@0.6.9(typescript@5.9.3)(zod@3.23.8):
     dependencies:
       '@adraffy/ens-normalize': 1.11.1
-      '@noble/curves': 1.8.2
-      '@noble/hashes': 1.7.2
-      '@scure/bip32': 1.6.2
-      '@scure/bip39': 1.5.4
-      abitype: 1.0.8(typescript@5.9.3)(zod@3.23.8)
+      '@noble/curves': 1.9.1
+      '@noble/hashes': 1.8.0
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
+      abitype: 1.2.3(typescript@5.9.3)(zod@3.23.8)
       eventemitter3: 5.0.1
     optionalDependencies:
       typescript: 5.9.3
@@ -6713,6 +6763,23 @@ snapshots:
       - utf-8-validate
       - zod
 
+  viem@2.58.6(typescript@5.9.3)(zod@3.23.8):
+    dependencies:
+      '@noble/curves': 1.9.1
+      '@noble/hashes': 1.8.0
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
+      abitype: 1.2.3(typescript@5.9.3)(zod@3.23.8)
+      isows: 1.0.7(ws@8.21.0)
+      ox: 0.14.67(typescript@5.9.3)(zod@3.23.8)
+      ws: 8.21.0
+    optionalDependencies:
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+      - zod
+
   vite-node@2.1.9(@types/node@25.8.0):
     dependencies:
       cac: 6.7.14
@@ -6843,6 +6910,8 @@ snapshots:
   ws@8.18.1: {}
 
   ws@8.18.3: {}
+
+  ws@8.21.0: {}
 
   y18n@5.0.8: {}
 

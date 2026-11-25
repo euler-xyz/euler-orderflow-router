@@ -50,6 +50,7 @@ const LI_FI_METADATA: QuoteSourceMetadata<LiFiSupport> = {
       999, // hyperevm
       80094, // berachain
       130, // unichain
+      5042, // arc
     ],
     swapAndTransfer: true,
     buyOrders: true,
