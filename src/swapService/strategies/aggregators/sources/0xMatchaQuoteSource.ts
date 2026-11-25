@@ -31,6 +31,7 @@ const SUPPORTED_CHAINS = [
   { chainId: chains.linea.id },
   { chainId: chains.unichain.id },
   { chainId: chains.plasma.id },
+  { chainId: chains.arc.id },
 ]
 
 const ZRX_METADATA: QuoteSourceMetadata<ZRXSupport> = {

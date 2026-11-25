@@ -25,6 +25,7 @@ export const SUPPORTED_CHAINS = [
   chains.tac,
   chains.plasma,
   chains.monad,
+  chains.arc,
 ] as const satisfies readonly Chain[]
 
 export const RPC_URLS: Record<number, string> = Object.fromEntries(

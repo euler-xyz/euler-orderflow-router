@@ -75,6 +75,10 @@ const SUPPORTED_CHAINS: Record<
   [chains.unichain.id]: { chainKey: "unichain" }, // fix gas price
   [chains.plasma.id]: { chainKey: "plasma" },
   [chains.monad.id]: { chainKey: "monad" },
+  [chains.arc.id]: {
+    chainKey: "arc",
+    nativeAsset: "0x0000000000000000000000000000000000000000",
+  },
 }
 
 const DE1_METADATA: QuoteSourceMetadata<De1Support> = {

@@ -13,6 +13,7 @@ import {
   failed,
 } from "@balmy/sdk/dist/services/quotes/quote-sources/utils"
 import qs from "qs"
+import * as chains from "viem/chains"
 
 // Supported networks: https://docs.1inch.io/docs/aggregation-protocol/introduction/#supported-networkschains
 export const ONE_INCH_METADATA: QuoteSourceMetadata<OneInchSupport> = {
@@ -31,6 +32,7 @@ export const ONE_INCH_METADATA: QuoteSourceMetadata<OneInchSupport> = {
       Chains.KAIA.chainId,
       Chains.AURORA.chainId,
       Chains.BASE.chainId,
+      chains.arc.id,
     ],
     swapAndTransfer: true,
     buyOrders: false,

@@ -2,7 +2,7 @@ diff --git a/dist/chains.js b/dist/chains.js
 index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1013f70fe 100644
 --- a/dist/chains.js
 +++ b/dist/chains.js
-@@ -566,6 +566,60 @@ exports.Chains = {
+@@ -566,6 +566,70 @@ exports.Chains = {
          explorer: 'https://goerli.basescan.org/',
          testnet: true,
      },
@@ -59,6 +59,16 @@ index 0a19a60a58c3c1d73a2204248d9bf130a3fd68c4..a955401e65eb28f7c21d92a0520dbdb1
 +        wToken: '0x4200000000000000000000000000000000000006',
 +        publicRPCs: ['https://bob.drpc.org', 'https://rpc.gobob.xyz'],
 +        explorer: 'https://explorer.gobob.xyz/',
++    },
++    ARC: {
++        chainId: 5042,
++        name: 'Arc',
++        ids: ['arc'],
++        nativeCurrency: { symbol: 'USDC', name: 'USDC' },
++        // Arc has no wrapped native token; native USDC's ERC-20 interface holds the same balance.
++        wToken: '0x3600000000000000000000000000000000000000',
++        publicRPCs: ['https://rpc.mainnet.arc.io', 'https://rpc.drpc.mainnet.arc.io'],
++        explorer: 'https://explorer.arc.io/',
 +    },
  };
  function getAllChains() {

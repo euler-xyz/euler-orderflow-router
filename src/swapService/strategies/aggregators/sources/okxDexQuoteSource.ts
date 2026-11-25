@@ -49,6 +49,10 @@ const SUPPORTED_CHAINS = [
     chainId: chains.plasma.id,
     name: "Plasma",
   },
+  {
+    chainId: chains.arc.id,
+    name: "Arc",
+  },
 ]
 
 const OKX_DEX_METADATA: QuoteSourceMetadata<OKXDexSupport> = {

@@ -28,6 +28,7 @@ const UNISWAP_METADATA: QuoteSourceMetadata<UniswapSupport> = {
       Chains.BASE.chainId,
       Chains.AVALANCHE.chainId,
       130, // Unichain
+      5042, // Arc
     ],
     swapAndTransfer: true,
     buyOrders: true,
